@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Exam Practice</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Physics Exam Practice</h1>
+    </header>
+
+    <main>
+        <!-- Topic Selection View -->
+        <section id="topic-selection" class="view active">
+            <h2>Select a Topic</h2>
+            <div id="topic-buttons" class="topic-grid"></div>
+        </section>
+
+        <!-- Subtopic Selection View -->
+        <section id="subtopic-selection" class="view">
+            <button id="back-to-topics" class="back-btn">&larr; Back to Topics</button>
+            <h2 id="selected-main-topic-title"></h2>
+            <div id="subtopic-buttons" class="subtopic-grid"></div>
+            <p id="no-subtopics-message" class="hidden">No subtopics available yet.</p>
+        </section>
+
+        <!-- Question Selection View -->
+        <section id="question-selection" class="view">
+            <button id="back-to-subtopics" class="back-btn">&larr; Back to Subtopics</button>
+            <h2 id="selected-topic-title"></h2>
+            <div id="question-list"></div>
+        </section>
+
+        <!-- Question View -->
+        <section id="question-view" class="view">
+            <button id="back-to-questions" class="back-btn">&larr; Back to Questions</button>
+            <div id="question-container"></div>
+            <button id="submit-btn" class="submit-btn">Lock answers and mark</button>
+
+            <!-- Marking Summary (shown after submit) -->
+            <div id="marking-summary" class="marking-summary hidden">
+                <h3>Total Score</h3>
+                <p><span id="total-score">0</span> / <span id="max-score">0</span> marks</p>
+                <button id="try-another" class="try-another-btn">Try Another Question</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
