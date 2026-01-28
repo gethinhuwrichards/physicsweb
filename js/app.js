@@ -134,9 +134,12 @@ function renderQuestion() {
     `;
 
     currentQuestion.parts.forEach((part, index) => {
-        const partText = part.type === 'fill-in-blank'
-            ? renderFillInBlankText(part.text, index)
-            : part.text;
+        let partText;
+        if (part.type === 'fill-in-blank') {
+            partText = renderFillInBlankWithOptions(part, index);
+        } else {
+            partText = part.text;
+        }
 
         html += `
             <div class="question-part" data-part-index="${index}">
@@ -156,6 +159,23 @@ function renderQuestion() {
 
     questionContainer.innerHTML = html;
     renderMath();
+}
+
+// Render fill-in-blank with options box
+function renderFillInBlankWithOptions(part, partIndex) {
+    const optionsHtml = part.options
+        ? part.options.map(opt => `<strong>${opt}</strong>`).join('&nbsp;&nbsp;&nbsp;')
+        : '';
+
+    const sentenceHtml = renderFillInBlankText(part.text, partIndex);
+
+    return `
+        <p class="fill-blank-header">Complete the sentence. Choose answers from the box.</p>
+        <div class="fill-blank-options-box">
+            ${optionsHtml}
+        </div>
+        <p class="fill-blank-sentence">${sentenceHtml}</p>
+    `;
 }
 
 // Render fill-in-blank text with inline inputs

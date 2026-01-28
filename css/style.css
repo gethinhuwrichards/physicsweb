@@ -478,6 +478,32 @@ header h1 {
 }
 
 /* Fill in the Blank */
+.fill-blank-header {
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #2d3748;
+}
+
+.fill-blank-options-box {
+    border: 2px solid #2c5282;
+    padding: 15px 20px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    background: #f7fafc;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.fill-blank-options-box strong {
+    margin-right: 20px;
+    color: #1a365d;
+}
+
+.fill-blank-sentence {
+    margin-top: 10px;
+    line-height: 2;
+}
+
 .fill-blank-input {
     display: inline-block;
     width: 150px;

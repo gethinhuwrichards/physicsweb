@@ -11,7 +11,7 @@
         {
           "partLabel": "a",
           "type": "fill-in-blank",
-          "text": "The diagram shows a cyclist riding along a flat road.\n\nAs the cyclist accelerates, the ___ energy store in the cyclist's body decreases and the ___ energy of the cyclist increases.",
+          "text": "Choose from: chemical, elastic potential, gravitational potential, kinetic.\n\nThe diagram shows a cyclist riding along a flat road.\n\n\nAs the cyclist accelerates, the ___ energy store in the cyclist’s body decreases and the ___ energy of the cyclist increases.",
           "marks": 2,
           "markScheme": [
             "1 mark: chemical",
@@ -19,7 +19,6 @@
             "1 mark: in this order only"
           ],
           "diagram": "q1a-cyclist.png",
-          "options": ["chemical", "elastic potential", "gravitational potential", "kinetic"],
           "correctAnswers": [
             "chemical",
             "kinetic"
@@ -78,7 +77,7 @@
         {
           "partLabel": "a",
           "type": "fill-in-blank",
-          "text": "The figure shows a boy bouncing on a trampoline.\n\nThe boy falls from the position shown towards the trampoline.\n\nAs the boy falls, there is a decrease in his ___ energy.\nAs the boy falls, there is an increase in his ___ energy.",
+          "text": "Choose from: chemical, elastic potential, gravitational potential, kinetic, nuclear.\n\nThe figure shows a boy bouncing on a trampoline.\n\n\nAs the boy falls, there is a decrease in his ___ energy.\nAs the boy falls, there is an increase in his ___ energy.",
           "marks": 2,
           "markScheme": [
             "1 mark: gravitational potential",
@@ -86,7 +85,6 @@
             "1 mark: this order only"
           ],
           "diagram": "q2a-trampoline.png",
-          "options": ["chemical", "elastic potential", "gravitational potential", "kinetic", "nuclear"],
           "correctAnswers": [
             "gravitational potential",
             "kinetic"
@@ -154,7 +152,7 @@
         {
           "partLabel": "a",
           "type": "fill-in-blank",
-          "text": "Water has a high specific heat capacity.\n\nThe specific heat capacity of a substance is the energy needed to raise the temperature of 1 ___ of the substance by 1 ___.",
+          "text": "Choose from: $^{\\circ}\\text{C}$, J, kg, s, W.\n\nWater has a high specific heat capacity.\n\n\nThe specific heat capacity of a substance is the energy needed to raise the temperature of 1 ___ of the substance by 1 ___.",
           "marks": 2,
           "markScheme": [
             "1 mark: kg allow kilogram",
@@ -162,7 +160,6 @@
             "1 mark: (b)"
           ],
           "diagram": null,
-          "options": ["°C", "J", "kg", "s", "W"],
           "correctAnswers": [
             "kg",
             "°C"
@@ -323,7 +320,7 @@
         {
           "partLabel": "a",
           "type": "fill-in-blank",
-          "text": "The figure shows a diver about to dive off a diving board.\n\nAs the diver falls towards the water there is a decrease in her ___ energy.\nAs the diver falls towards the water there is an increase in her ___ energy.",
+          "text": "Choose from: elastic potential, gravitational potential, kinetic, nuclear.\n\nThe figure shows a diver about to dive off a diving board.\n\n\nAs the diver falls towards the water there is a decrease in her ___ energy.\nAs the diver falls towards the water there is an increase in her ___ energy.",
           "marks": 2,
           "markScheme": [
             "1 mark: gravitational potential",
@@ -331,7 +328,6 @@
             "1 mark: kinetic"
           ],
           "diagram": "q5a-diver.png",
-          "options": ["elastic potential", "gravitational potential", "kinetic", "nuclear"],
           "correctAnswers": [
             "gravitational potential",
             "kinetic"
@@ -510,7 +506,7 @@
         {
           "partLabel": "a",
           "type": "fill-in-blank",
-          "text": "The image shows a battery-powered drone.\n\nAs the drone accelerates upwards its ___ energy increases and its ___ energy increases.\nThe ___ energy store of the battery decreases.",
+          "text": "Choose from: chemical, elastic potential, gravitational potential, kinetic, nuclear.\n\nThe image shows a battery-powered drone.\n\n\nAs the drone accelerates upwards its ___ energy increases and its ___ energy increases.\nThe ___ energy store of the battery decreases.",
           "marks": 3,
           "markScheme": [
             "1 mark: gravitational potential",
@@ -518,7 +514,6 @@
             "1 mark: chemical"
           ],
           "diagram": "q8a-drone.png",
-          "options": ["chemical", "elastic potential", "gravitational potential", "kinetic", "nuclear"],
           "correctAnswers": [
             "gravitational potential",
             "kinetic",
@@ -768,13 +763,12 @@
         {
           "partLabel": "b",
           "type": "fill-in-blank",
-          "text": "As the aeroplane moves upwards through the air there is a decrease in the ___ energy of the aeroplane.",
+          "text": "Complete the sentence.\n\nAs the aeroplane moves upwards through the air there is a decrease in the ___ energy of the aeroplane.",
           "marks": 1,
           "markScheme": [
             "1 mark: kinetic"
           ],
           "diagram": null,
-          "options": ["elastic potential", "gravitational potential", "kinetic", "thermal"],
           "correctAnswers": [
             "kinetic"
           ]
