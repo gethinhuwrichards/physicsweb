@@ -10,6 +10,42 @@
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
 </head>
 <body>
+    <!-- Feedback Modal -->
+    <div id="feedback-modal" class="feedback-overlay hidden">
+        <div class="feedback-box">
+            <h2>Please provide your feedback on the site</h2>
+
+            <form id="feedback-form" action="https://formspree.io/f/xbdyjvok" method="POST">
+                <div class="feedback-question">
+                    <label for="feedback-rating">How would you rate the usefulness of the website?</label>
+                    <select id="feedback-rating" name="rating" class="rating-dropdown" required>
+                        <option value="">Select a rating...</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+
+                <div class="feedback-question">
+                    <label for="feedback-suggestions">Please include any suggestions which you think would make the site better</label>
+                    <textarea id="feedback-suggestions" name="suggestions" rows="5" placeholder="Your suggestions..."></textarea>
+                </div>
+
+                <div class="feedback-buttons">
+                    <button type="submit" id="feedback-submit" class="feedback-submit-btn">Submit Feedback</button>
+                    <button type="button" id="feedback-skip" class="feedback-skip-btn">Skip for now</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <header>
         <h1>Physics Exam Practice</h1>
     </header>

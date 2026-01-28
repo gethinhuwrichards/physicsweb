@@ -463,5 +463,92 @@ document.getElementById('try-another').addEventListener('click', () => {
 // Make updateScore available globally
 window.updateScore = updateScore;
 
+// ============================================
+// Feedback Modal
+// ============================================
+
+const feedbackModal = document.getElementById('feedback-modal');
+const feedbackForm = document.getElementById('feedback-form');
+const feedbackRating = document.getElementById('feedback-rating');
+const feedbackSkipBtn = document.getElementById('feedback-skip');
+
+// Track visits and show modal on second visit
+function initFeedbackModal() {
+    // Increment visit count
+    let visitCount = parseInt(localStorage.getItem('visitCount') || '0');
+    visitCount++;
+    localStorage.setItem('visitCount', visitCount.toString());
+
+    // Show modal only on 3rd+ visit AND if not already submitted/skipped
+    if (visitCount >= 3 && !localStorage.getItem('feedbackCompleted')) {
+        feedbackModal.classList.remove('hidden');
+    } else {
+        feedbackModal.classList.add('hidden');
+    }
+}
+
+// Close feedback modal
+function closeFeedbackModal() {
+    feedbackModal.classList.add('hidden');
+    localStorage.setItem('feedbackCompleted', 'true');
+}
+
+// Handle form submission via Formspree
+feedbackForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const submitBtn = document.getElementById('feedback-submit');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    try {
+        const response = await fetch(feedbackForm.action, {
+            method: 'POST',
+            body: new FormData(feedbackForm),
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            alert('Thank you for your feedback!');
+            closeFeedbackModal();
+        } else {
+            alert('There was a problem submitting your feedback. Please try again.');
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Submit Feedback';
+        }
+    } catch (error) {
+        alert('There was a problem submitting your feedback. Please try again.');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Submit Feedback';
+    }
+});
+
+// Handle skip
+feedbackSkipBtn.addEventListener('click', closeFeedbackModal);
+
+// Update dropdown background color when selection changes (pastel palette)
+feedbackRating.addEventListener('change', function() {
+    const colors = {
+        '': '',
+        '1': '#f8b4b4',
+        '2': '#f9c4a8',
+        '3': '#fad4a0',
+        '4': '#fbe4a0',
+        '5': '#fcf4a0',
+        '6': '#e8f5a0',
+        '7': '#d4eca0',
+        '8': '#c0e8a8',
+        '9': '#a8e4b0',
+        '10': '#a0e0b0'
+    };
+    this.style.backgroundColor = colors[this.value] || '';
+    this.style.color = '#333';
+});
+
+// Initialize feedback modal on load
+initFeedbackModal();
+
 // Initialize on load
 init();
