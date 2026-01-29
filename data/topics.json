@@ -4,7 +4,7 @@
       "id": "energy",
       "name": "Energy",
       "subtopics": [
-        { "id": "energy-stores", "name": "Energy Stores", "file": "energy/questions_energy_v4.json" }
+        { "id": "energy-stores", "name": "Energy Stores", "file": "energy/questions_energy_v4.json", "questionCount": 12 }
       ]
     },
     { "id": "electricity", "name": "Electricity", "subtopics": [] },

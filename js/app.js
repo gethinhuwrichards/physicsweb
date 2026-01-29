@@ -7,6 +7,45 @@ let currentQuestion = null;
 let isMarkingMode = false;
 let partScores = {};
 
+// Cookie Helpers
+function setCookie(name, value, days) {
+    const d = new Date();
+    d.setTime(d.getTime() + days * 24 * 60 * 60 * 1000);
+    document.cookie = name + '=' + encodeURIComponent(JSON.stringify(value))
+        + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
+}
+
+function getCookie(name) {
+    const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    if (match) {
+        try { return JSON.parse(decodeURIComponent(match[2])); }
+        catch (e) { return null; }
+    }
+    return null;
+}
+
+// Score Storage
+function getQuestionScores() {
+    return getCookie('questionScores') || {};
+}
+
+function saveQuestionScore(questionId, score, maxScore, subtopicId) {
+    const scores = getQuestionScores();
+    scores[questionId] = { score: score, max: maxScore, subtopic: subtopicId };
+    setCookie('questionScores', scores, 365);
+}
+
+function countAnsweredForSubtopic(subtopicId) {
+    const scores = getQuestionScores();
+    return Object.values(scores).filter(s => s.subtopic === subtopicId).length;
+}
+
+function clearQuestionScore(questionId) {
+    const scores = getQuestionScores();
+    delete scores[questionId];
+    setCookie('questionScores', scores, 365);
+}
+
 // DOM Elements
 const topicSelection = document.getElementById('topic-selection');
 const subtopicSelection = document.getElementById('subtopic-selection');
@@ -27,6 +66,7 @@ async function init() {
         const response = await fetch('data/topics.json');
         topicsData = await response.json();
         renderMainTopics();
+        showView('landing-page');
     } catch (error) {
         console.error('Failed to load topics:', error);
         topicButtons.innerHTML = '<p>Failed to load topics. Please refresh the page.</p>';
@@ -37,13 +77,19 @@ async function init() {
 function showView(viewId) {
     document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
     document.getElementById(viewId).classList.add('active');
+
+    // Toggle landing page body class for header/background
+    if (viewId === 'landing-page') {
+        document.body.classList.add('landing-active');
+        runLandingAnimation();
+    } else {
+        document.body.classList.remove('landing-active');
+    }
 }
 
 // Render Main Topics
 function renderMainTopics() {
-    topicButtons.innerHTML = topicsData.mainTopics.map(topic =>
-        `<button class="topic-btn" data-topic-id="${topic.id}">${topic.name}</button>`
-    ).join('');
+    rerenderTopicButtons();
 
     topicButtons.addEventListener('click', (e) => {
         const btn = e.target.closest('.topic-btn');
@@ -51,6 +97,18 @@ function renderMainTopics() {
             showSubtopicList(btn.dataset.topicId);
         }
     });
+}
+
+function rerenderTopicButtons() {
+    topicButtons.innerHTML = topicsData.mainTopics.map(topic => {
+        const totalQs = topic.subtopics.reduce((sum, s) => sum + (s.questionCount || 0), 0);
+        const answeredQs = topic.subtopics.reduce((sum, s) => sum + countAnsweredForSubtopic(s.id), 0);
+        const counterText = totalQs > 0 ? `${answeredQs} / ${totalQs} answered` : '';
+        return `<button class="topic-btn" data-topic-id="${topic.id}">
+            <span class="btn-name">${topic.name}</span>
+            ${counterText ? `<span class="btn-counter">${counterText}</span>` : ''}
+        </button>`;
+    }).join('');
 }
 
 // Show Subtopic List
@@ -67,14 +125,23 @@ function showSubtopicList(mainTopicId) {
         noSubtopicsMsg.classList.remove('hidden');
     } else {
         noSubtopicsMsg.classList.add('hidden');
-        subtopicButtons.innerHTML = currentMainTopic.subtopics.map(sub =>
-            `<button class="subtopic-btn" data-subtopic-id="${sub.id}" data-file="${sub.file}">
-                ${sub.name}
-            </button>`
-        ).join('');
+        rerenderSubtopicButtons();
     }
 
     showView('subtopic-selection');
+}
+
+function rerenderSubtopicButtons() {
+    if (!currentMainTopic) return;
+    subtopicButtons.innerHTML = currentMainTopic.subtopics.map(sub => {
+        const totalQs = sub.questionCount || 0;
+        const answeredQs = countAnsweredForSubtopic(sub.id);
+        const counterText = totalQs > 0 ? `${answeredQs} / ${totalQs} answered` : '';
+        return `<button class="subtopic-btn" data-subtopic-id="${sub.id}" data-file="${sub.file}">
+            <span class="btn-name">${sub.name}</span>
+            ${counterText ? `<span class="btn-counter">${counterText}</span>` : ''}
+        </button>`;
+    }).join('');
 }
 
 // Load Subtopic Questions
@@ -86,25 +153,73 @@ async function loadSubtopicQuestions(subtopicId, filePath) {
         const data = await response.json();
         subtopicQuestions = data.questions;
 
+        // Backfill subtopic ID on any old cookie entries missing it
+        const scores = getQuestionScores();
+        let updated = false;
+        subtopicQuestions.forEach(q => {
+            if (scores[q.id] && !scores[q.id].subtopic) {
+                scores[q.id].subtopic = subtopicId;
+                updated = true;
+            }
+        });
+        if (updated) {
+            setCookie('questionScores', scores, 365);
+            rerenderTopicButtons();
+            rerenderSubtopicButtons();
+        }
+
         // Update heading using subtopic field from JSON
         document.getElementById('selected-topic-title').textContent = data.subtopic;
 
         // Render question list
-        questionList.innerHTML = subtopicQuestions.map(q => {
-            const totalMarks = q.parts.reduce((sum, p) => sum + p.marks, 0);
-            return `
-                <div class="question-item" data-id="${q.id}">
-                    <span>${q.title}</span>
-                    <span class="marks">${totalMarks} marks</span>
-                </div>
-            `;
-        }).join('');
+        rerenderQuestionList();
 
         showView('question-selection');
     } catch (error) {
         console.error('Failed to load subtopic questions:', error);
         alert('Failed to load questions. Please try again.');
     }
+}
+
+// Render Question List with Progress Bars
+function rerenderQuestionList() {
+    const scores = getQuestionScores();
+    questionList.innerHTML = subtopicQuestions.map(q => {
+        const totalMarks = q.parts.reduce((sum, p) => sum + p.marks, 0);
+        const saved = scores[q.id];
+
+        let progressHtml;
+        if (saved) {
+            const pct = Math.round((saved.score / saved.max) * 100);
+            progressHtml = `
+                <div class="question-progress">
+                    <div class="question-progress-fill" style="width: ${pct}%"></div>
+                    <span class="question-progress-text">${saved.score} / ${saved.max}</span>
+                </div>
+                <button class="question-reset-btn" data-reset-id="${q.id}">Reset</button>
+            `;
+        } else {
+            progressHtml = `
+                <div class="question-progress">
+                    <span class="question-progress-text">&ndash;</span>
+                </div>
+                <button class="question-reset-btn" style="visibility: hidden">Reset</button>
+            `;
+        }
+
+        return `
+            <div class="question-item" data-id="${q.id}">
+                <span class="question-item-title">${q.title}</span>
+                <div class="question-item-right">
+                    <span class="marks">${totalMarks} marks</span>
+                    ${progressHtml}
+                </div>
+            </div>
+        `;
+    }).join('');
+
+    // Hide reset confirm dialog when list re-renders
+    document.getElementById('reset-confirm').classList.add('hidden');
 }
 
 // Load Question
@@ -426,6 +541,16 @@ function updateTotalScore() {
 }
 
 // Event Listeners
+// Landing page - Physics subject button
+document.getElementById('subject-physics').addEventListener('click', () => {
+    showView('topic-selection');
+});
+
+// Back to landing from topic selection
+document.getElementById('back-to-landing').addEventListener('click', () => {
+    showView('landing-page');
+});
+
 document.getElementById('back-to-topics').addEventListener('click', () => {
     showView('topic-selection');
 });
@@ -446,18 +571,52 @@ subtopicButtons.addEventListener('click', (e) => {
     }
 });
 
-// Question list click handler
+// Question list click handler (includes reset button)
+let pendingResetId = null;
+
 questionList.addEventListener('click', (e) => {
+    const resetBtn = e.target.closest('.question-reset-btn');
+    if (resetBtn) {
+        e.stopPropagation();
+        pendingResetId = resetBtn.dataset.resetId;
+        const confirmEl = document.getElementById('reset-confirm');
+        confirmEl.classList.remove('hidden');
+        confirmEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        return;
+    }
+
     const item = e.target.closest('.question-item');
     if (item) {
         loadQuestion(item.dataset.id);
     }
 });
 
+// Reset confirm dialog handlers
+document.getElementById('reset-confirm-ok').addEventListener('click', () => {
+    if (pendingResetId) {
+        clearQuestionScore(pendingResetId);
+        pendingResetId = null;
+        rerenderQuestionList();
+        rerenderTopicButtons();
+        rerenderSubtopicButtons();
+    }
+});
+
+document.getElementById('reset-confirm-cancel').addEventListener('click', () => {
+    pendingResetId = null;
+    document.getElementById('reset-confirm').classList.add('hidden');
+});
+
 submitBtn.addEventListener('click', submitAnswers);
 
-document.getElementById('try-another').addEventListener('click', () => {
+document.getElementById('bank-score').addEventListener('click', () => {
+    const total = Object.values(partScores).reduce((sum, s) => sum + s, 0);
+    const maxTotal = currentQuestion.parts.reduce((sum, p) => sum + p.marks, 0);
+    saveQuestionScore(currentQuestion.id, total, maxTotal, currentSubtopic.id);
     showView('question-selection');
+    rerenderQuestionList();
+    rerenderTopicButtons();
+    rerenderSubtopicButtons();
 });
 
 // Make updateScore available globally
@@ -549,6 +708,28 @@ feedbackRating.addEventListener('change', function() {
 
 // Initialize feedback modal on load
 initFeedbackModal();
+
+// ============================================
+// Landing Page Animation
+// ============================================
+
+function runLandingAnimation() {
+    const strapline = document.querySelector('.landing-strapline');
+    const subjects = document.querySelector('.landing-subjects');
+    const content = document.querySelector('.landing-content');
+    const explainer = document.getElementById('landing-explainer');
+
+    // Reset animation state
+    strapline.classList.remove('fade-in');
+    subjects.classList.remove('fade-in');
+    content.classList.remove('slid-up');
+    explainer.classList.remove('fade-in');
+
+    setTimeout(() => strapline.classList.add('fade-in'), 400);
+    setTimeout(() => subjects.classList.add('fade-in'), 900);
+    setTimeout(() => content.classList.add('slid-up'), 1800);
+    setTimeout(() => explainer.classList.add('fade-in'), 2400);
+}
 
 // Initialize on load
 init();

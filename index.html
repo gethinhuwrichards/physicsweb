@@ -51,8 +51,29 @@
     </header>
 
     <main>
+        <!-- Landing Page View -->
+        <section id="landing-page" class="view active">
+            <div class="landing-content">
+                <h1 class="landing-title">PRACTICE PAPERS</h1>
+                <p class="landing-strapline">Get really ready for your exams</p>
+                <div class="landing-subjects">
+                    <p class="landing-choose">Choose your subject</p>
+                    <button class="landing-subject-btn" id="subject-physics">Physics</button>
+                </div>
+                <div class="landing-explainer" id="landing-explainer">
+                    <h3>First time?</h3>
+                    <ul>
+                        <li>Browse questions by topic</li>
+                        <li>Lock in your answers</li>
+                        <li>Check the mark scheme and see how you have done</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
         <!-- Topic Selection View -->
-        <section id="topic-selection" class="view active">
+        <section id="topic-selection" class="view">
+            <button id="back-to-landing" class="back-btn">&larr; Back</button>
             <h2>Select a Topic</h2>
             <div id="topic-buttons" class="topic-grid"></div>
         </section>
@@ -70,6 +91,13 @@
             <button id="back-to-subtopics" class="back-btn">&larr; Back to Subtopics</button>
             <h2 id="selected-topic-title"></h2>
             <div id="question-list"></div>
+            <div id="reset-confirm" class="reset-confirm hidden">
+                <p>Are you sure you want to reset this question? Your saved score will be cleared.</p>
+                <div class="reset-confirm-buttons">
+                    <button id="reset-confirm-ok" class="reset-confirm-ok">OK</button>
+                    <button id="reset-confirm-cancel" class="reset-confirm-cancel">Cancel</button>
+                </div>
+            </div>
         </section>
 
         <!-- Question View -->
@@ -82,7 +110,7 @@
             <div id="marking-summary" class="marking-summary hidden">
                 <h3>Total Score</h3>
                 <p><span id="total-score">0</span> / <span id="max-score">0</span> marks</p>
-                <button id="try-another" class="try-another-btn">Try Another Question</button>
+                <button id="bank-score" class="bank-score-btn">Bank Score</button>
             </div>
         </section>
     </main>
