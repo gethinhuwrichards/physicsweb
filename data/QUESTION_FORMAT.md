@@ -26,7 +26,7 @@ Questions are stored in `questions.json` with this top-level structure:
 
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
-| `id` | string | Yes | Unique identifier (e.g., "mech1", "elec2") |
+| `id` | string | Yes | **Globally unique** identifier — see ID rules below |
 | `topic` | string | Yes | Must match a value in the `topics` array |
 | `title` | string | Yes | Display title for the question |
 | `parts` | Part[] | Yes | Array of question parts (minimum 1) |
