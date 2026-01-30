@@ -1,0 +1,801 @@
+{
+  "topics": ["Mechanics", "Electricity", "Waves", "Energy stores"],
+  "questions": [
+    {
+      "id": "mech1",
+      "topic": "Mechanics",
+      "title": "Projectile Motion",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "numerical",
+          "text": "A ball is thrown horizontally from a cliff of height $h = 45\\,\\text{m}$ with an initial velocity of $v_0 = 20\\,\\text{m/s}$. Calculate the time taken for the ball to reach the ground. Take $g = 10\\,\\text{m/s}^2$.",
+          "marks": 3,
+          "correctAnswer": 3,
+          "markScheme": [
+            "1 mark: Uses $h = \\frac{1}{2}gt^2$ or equivalent",
+            "1 mark: Correct substitution $45 = \\frac{1}{2} \\times 10 \\times t^2$",
+            "1 mark: Correct answer $t = 3\\,\\text{s}$"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "numerical",
+          "text": "Calculate the horizontal distance travelled by the ball.",
+          "marks": 2,
+          "correctAnswer": 60,
+          "markScheme": [
+            "1 mark: Uses $d = v_0 \\times t$",
+            "1 mark: Correct answer $d = 20 \\times 3 = 60\\,\\text{m}$"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "multiple-choice",
+          "text": "If air resistance is taken into account, the horizontal distance would be:",
+          "marks": 1,
+          "options": [
+            "Greater than 60 m",
+            "Exactly 60 m",
+            "Less than 60 m"
+          ],
+          "correctAnswer": 2,
+          "markScheme": ["Answer: C - Air resistance opposes motion, reducing horizontal velocity and therefore horizontal distance"],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "mech2",
+      "topic": "Mechanics",
+      "title": "Newton's Laws",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "written",
+          "text": "State Newton's Second Law of Motion.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: The resultant/net force on an object is proportional to the rate of change of momentum",
+            "1 mark: Or $F = ma$ with correct definition of terms"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "numerical",
+          "text": "A car of mass $m = 1200\\,\\text{kg}$ accelerates from rest to $v = 24\\,\\text{m/s}$ in $t = 8\\,\\text{s}$. Calculate the resultant force acting on the car.",
+          "marks": 3,
+          "correctAnswer": 3600,
+          "markScheme": [
+            "1 mark: Calculates acceleration $a = \\frac{v-u}{t} = \\frac{24}{8} = 3\\,\\text{m/s}^2$",
+            "1 mark: Uses $F = ma$",
+            "1 mark: Correct answer $F = 1200 \\times 3 = 3600\\,\\text{N}$"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "elec1",
+      "topic": "Electricity",
+      "title": "Ohm's Law and Circuits",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "written",
+          "text": "State Ohm's Law and give the conditions under which it applies.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: $V = IR$ or current is proportional to potential difference",
+            "1 mark: At constant temperature / for an ohmic conductor"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "numerical",
+          "text": "A resistor of resistance $R = 50\\,\\Omega$ is connected to a power supply of emf $\\varepsilon = 12\\,\\text{V}$ and internal resistance $r = 2\\,\\Omega$. Calculate the current in the circuit. Give your answer to 2 decimal places.",
+          "marks": 3,
+          "correctAnswer": 0.23,
+          "markScheme": [
+            "1 mark: Uses $\\varepsilon = I(R + r)$ or equivalent",
+            "1 mark: Substitution $12 = I(50 + 2)$",
+            "1 mark: Correct answer $I = 0.23\\,\\text{A}$ (or 12/52 A)"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "multiple-choice",
+          "text": "If a second identical resistor is connected in parallel with the first, the current from the power supply will:",
+          "marks": 1,
+          "options": [
+            "Halve",
+            "Stay the same",
+            "Increase but not double"
+          ],
+          "correctAnswer": 2,
+          "markScheme": ["Answer: C - Parallel resistors reduce total external resistance, increasing current, but internal resistance limits the increase"],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "wave1",
+      "topic": "Waves",
+      "title": "Wave Properties",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "multiple-choice",
+          "text": "Which of the following is an example of a transverse wave?",
+          "marks": 1,
+          "options": [
+            "Sound wave in air",
+            "Light wave",
+            "Ultrasound wave"
+          ],
+          "correctAnswer": 1,
+          "markScheme": ["Answer: B - Light is an electromagnetic wave, which is transverse"],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "numerical",
+          "text": "A wave has frequency $f = 500\\,\\text{Hz}$ and wavelength $\\lambda = 0.68\\,\\text{m}$. Calculate the speed of the wave.",
+          "marks": 2,
+          "correctAnswer": 340,
+          "markScheme": [
+            "1 mark: Uses $v = f\\lambda$",
+            "1 mark: Correct answer $v = 500 \\times 0.68 = 340\\,\\text{m/s}$"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "written",
+          "text": "Explain why this wave could be a sound wave travelling in air at room temperature.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Speed of sound in air at room temperature is approximately 340 m/s",
+            "1 mark: Frequency of 500 Hz is within audible range (20 Hz - 20 kHz)"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "energy1",
+      "topic": "Energy stores",
+      "title": "Cyclist energy stores",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "written",
+          "text": "The diagram shows a cyclist riding along a flat road.\n\nComplete the sentence (choose from: chemical, elastic potential, gravitational potential, kinetic).\n\nAs the cyclist accelerates, the _______________________ energy store in the cyclist's body decreases and the _______________________ energy of the cyclist increases.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: chemical",
+            "1 mark: kinetic"
+          ],
+          "diagram": "q1a-cyclist.png"
+        },
+        {
+          "partLabel": "b",
+          "type": "written",
+          "text": "The mass of the cyclist is $80\\,\\text{kg}$. The speed of the cyclist is $12\\,\\text{m/s}$.\n\nCalculate the kinetic energy of the cyclist.\n\nUse $E_k = 0.5\\,m v^2$.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Ek = 0.5 × 80 × 12²",
+            "1 mark: Ek = 5760 J"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "written",
+          "text": "When the cyclist uses the brakes, the bicycle slows down. This causes the temperature of the brake pads to increase by $50\\,^{\\circ}\\text{C}$.\n\nThe mass of the brake pads is $0.040\\,\\text{kg}$.\nThe specific heat capacity of the brake pads is $480\\,\\text{J/kg}\\,^{\\circ}\\text{C}$.\n\nCalculate the change in thermal energy of the brake pads.\n\nUse $\\Delta E = mc\\Delta \\theta$.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: E = 0.040 × 480 × 50",
+            "1 mark: E = 960 J"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "d",
+          "type": "written",
+          "text": "How is the internal energy of the particles in the brake pads affected by the increase in temperature?\n\nTick one box:\n- Decreased\n- Increased\n- Not affected",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Increased"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "energy2",
+      "topic": "Energy stores",
+      "title": "Trampoline energy stores",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "written",
+          "text": "The figure shows a boy bouncing on a trampoline.\n\nThe boy falls from the position shown towards the trampoline. Complete the sentences (choose from: chemical, elastic potential, gravitational potential, kinetic, nuclear).\n\nAs the boy falls, there is a decrease in his _______________ energy.\nAs the boy falls, there is an increase in his ______________ energy.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: gravitational potential",
+            "1 mark: kinetic"
+          ],
+          "diagram": "q2a-trampoline.png"
+        },
+        {
+          "partLabel": "b",
+          "type": "written",
+          "text": "As the boy lands on the trampoline, each spring stretches $0.015\\,\\text{m}$.\n\nSpring constant of each spring: $k = 120\\,000\\,\\text{N/m}$.\n\nCalculate the energy stored by each spring.\n\nUse $E_e = 0.5\\,k e^2$.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Ee = 0.5 × 120000 × 0.015²",
+            "1 mark: Ee = 13.5 J"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "written",
+          "text": "There are 40 springs on the trampoline.\n\nCalculate the total energy stored by the 40 springs when each spring is stretched by $0.015\\,\\text{m}$.\n\nUse your answer from part (b).",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: E = 540 J (allow their answer from part (b) × 40)"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "d",
+          "type": "written",
+          "text": "The kinetic energy of the boy as he lands on the trampoline is $600\\,\\text{J}$.\n\nThe maximum kinetic energy of the boy after he bounces is 45% of his kinetic energy as he lands.\n\nCalculate the maximum kinetic energy of the boy after he bounces.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Ek = 0.45 × 600",
+            "1 mark: Ek = 270 J"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "e",
+          "type": "written",
+          "text": "Why is the kinetic energy of the boy after he bounces less than his kinetic energy as he lands?\n\nTick one box:\n- Energy is not conserved.\n- Energy is transferred to the surroundings.\n- The springs transfer energy to the boy.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Energy is transferred to the surroundings"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "energy3",
+      "topic": "Energy stores",
+      "title": "Kettle heating",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "written",
+          "text": "Water has a high specific heat capacity.\n\nComplete the sentence (choose from: $^{\\circ}\\text{C}$, J, kg, s, W).\n\nThe specific heat capacity of a substance is the energy needed to raise the temperature of 1 __________ of the substance by 1 __________.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: kg",
+            "1 mark: °C"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "written",
+          "text": "The kettle circuit contains a thermistor which is used to switch the kettle off when the water reaches $100\\,^{\\circ}\\text{C}$.\n\nWhat is the correct symbol for a thermistor? (Tick one box.)",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: See diagram for correct thermistor symbol"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "written",
+          "text": "The resistance of the heating element is $15\\,\\Omega$.\nThe current in the heating element is $12\\,\\text{A}$.\n\nCalculate the power of the heating element.\n\nUse $P = I^2 R$.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: P = 12² × 15",
+            "1 mark: P = 2160 W"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "d",
+          "type": "written",
+          "text": "The student investigated how quickly the kettle could increase the temperature of $0.50\\,\\text{kg}$ of water. The graph shows the results.\n\nThe temperature of the water did not start to increase until 10 seconds after the kettle was switched on.\n\nWhat is the reason for this? (Tick one box.)\n- Energy is transferred from the surroundings to the kettle.\n- The charge flows slowly through the kettle circuit.\n- The heating element in the kettle takes time to heat up.\n- The power output of the kettle increases slowly.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: The heating element in the kettle takes time to heat up"
+          ],
+          "diagram": "q3d-kettle-graph.png"
+        },
+        {
+          "partLabel": "e",
+          "type": "written",
+          "text": "Describe a method the student could have used to obtain the results shown in the graph.",
+          "marks": 6,
+          "markScheme": [
+            "Level 3 (5-6 marks): The method would lead to the production of a valid outcome. All key steps are identified and logically sequenced.",
+            "Level 2 (3-4 marks): The method would not necessarily lead to a valid outcome. Most steps are identified, but the method is not fully logically sequenced.",
+            "Level 1 (1-2 marks): The method would not lead to a valid outcome. Some relevant steps are identified, but links are not made clear.",
+            "Indicative content: measure mass/volume of water, measure initial temperature, pour water into kettle, put temperature probe/thermometer in water, switch kettle on, record temperature at intervals (e.g. every 5 seconds), measure time with stopclock"
+          ],
+          "diagram": "q3d-kettle-graph.png"
+        },
+        {
+          "partLabel": "f",
+          "type": "written",
+          "text": "The mass of water in the kettle was $0.50\\,\\text{kg}$.\nThe temperature increased from $20\\,^{\\circ}\\text{C}$ to $100\\,^{\\circ}\\text{C}$.\nSpecific heat capacity of water: $4200\\,\\text{J/kg}/^{\\circ}\\text{C}$.\n\nCalculate the energy transferred to the water. Use $\\Delta E = mc\\Delta \\theta$.",
+          "marks": 3,
+          "markScheme": [
+            "1 mark: Δθ = 80 °C",
+            "1 mark: E = 0.50 × 4200 × 80",
+            "1 mark: E = 168000 J"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "g",
+          "type": "written",
+          "text": "The water in the kettle boiled for a short time before the kettle switched off. During this time $5.0\\,\\text{g}$ of water changed to steam.\n\nSpecific latent heat of vaporisation of water: $L_v = 2\\,260\\,000\\,\\text{J/kg}$.\n\nCalculate the energy transferred to change the water to steam. Use $E = mL$.",
+          "marks": 3,
+          "markScheme": [
+            "1 mark: m = 0.005 kg",
+            "1 mark: E = 0.005 × 2260000",
+            "1 mark: E = 11300 J"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "energy4",
+      "topic": "Energy stores",
+      "title": "AquaShute slide",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "written",
+          "text": "The photograph shows a theme park ride called AquaShute.\n\nRiders sit on a sled and move down a slide. There is a layer of water between the sled and the slide.\n\nHow does the layer of water affect the friction between the sled and the slide? (Tick one box.)\n- The friction is decreased.\n- The friction is increased.\n- The friction is not affected.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: The friction is decreased"
+          ],
+          "diagram": "q4a-aquashute.png"
+        },
+        {
+          "partLabel": "b",
+          "type": "written",
+          "text": "Mass of rider: $62.5\\,\\text{kg}$.\nHeight of slide: $16.0\\,\\text{m}$.\nGravitational field strength: $g = 9.8\\,\\text{N/kg}$.\n\nCalculate the gravitational potential energy at the top.\n\nUse $E_p = mgh$.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Ep = 62.5 × 9.8 × 16.0",
+            "1 mark: Ep = 9800 J"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "written",
+          "text": "At the bottom of the slide the speed is $12\\,\\text{m/s}$ and the mass is $62.5\\,\\text{kg}$.\n\nCalculate the kinetic energy at the bottom.\n\nUse $E_k = 0.5\\,mv^2$.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Ek = 0.5 × 62.5 × 12²",
+            "1 mark: Ek = 4500 J"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "d",
+          "type": "written",
+          "text": "When a rider reaches the bottom of the slide, the sled decelerates and stops.\n\nGive two factors that affect how far the sled will move before it stops.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark each for any two from: speed (at bottom of slide), friction (between sled and ground), mass/weight of rider, surface type, air resistance"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "energy5",
+      "topic": "Energy stores",
+      "title": "Diver energy changes",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "written",
+          "text": "The figure shows a diver about to dive off a diving board.\n\nComplete the sentences (choose from: elastic potential, gravitational potential, kinetic, nuclear).\n\nAs the diver falls towards the water there is a decrease in her _____________________________________ energy.\nAs the diver falls towards the water there is an increase in her _____________________________________ energy.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: gravitational potential",
+            "1 mark: kinetic"
+          ],
+          "diagram": "q5a-diver.png"
+        },
+        {
+          "partLabel": "b",
+          "type": "written",
+          "text": "Write down the equation which links kinetic energy $E_k$, mass $m$ and speed $v$.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Ek = ½mv² or kinetic energy = 0.5 × mass × speed²"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "written",
+          "text": "At the instant the diver hits the water, the kinetic energy is $5040\\,\\text{J}$ and the speed is $12\\,\\text{m/s}$.\n\nCalculate the mass of the diver.",
+          "marks": 3,
+          "markScheme": [
+            "1 mark: 5040 = 0.5 × m × 12²",
+            "1 mark: Rearrangement to solve for m",
+            "1 mark: m = 70 kg"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "d",
+          "type": "written",
+          "text": "Most of the kinetic energy of the diver is transferred to the water.\n\nHow does this affect the thermal energy of the water? (Tick one box.)\n- The thermal energy decreases.\n- The thermal energy stays the same.\n- The thermal energy increases.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: The thermal energy increases"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "energy6",
+      "topic": "Energy stores",
+      "title": "Electric motor efficiency",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "written",
+          "text": "In an electric motor, electrical energy is transferred into other types of energy. Some of this energy is useful and the rest is wasted.\n\n(i) Name the useful energy output from the electric motor.\n(ii) What eventually happens to the wasted energy?",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: (i) kinetic energy (allow gravitational potential energy)",
+            "1 mark: (ii) transferred to surroundings / dissipated as heat"
+          ],
+          "diagram": "q6a-motor.png"
+        },
+        {
+          "partLabel": "b",
+          "type": "written",
+          "text": "The graph shows the input energy the motor needs to lift different loads by one metre.\n\nWhat can you conclude about the relationship between the load lifted and the input energy needed?",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Energy required increases with load",
+            "1 mark: Further detail e.g. increases slowly at first then increases rapidly"
+          ],
+          "diagram": "q6b-motor-graph.png"
+        },
+        {
+          "partLabel": "c",
+          "type": "written",
+          "text": "Escalators use electric motors. When the shop is not busy, some escalators are turned off to save energy.\n\n(i) Each escalator motor has average power $4000\\,\\text{W}$. It is on for 8 hours each day, 6 days each week. Electricity costs 15 pence per kWh. Calculate the weekly cost to run one escalator.\n(ii) Give one environmental advantage to turning off electrical appliances when they are not being used.",
+          "marks": 4,
+          "markScheme": [
+            "1 mark: Time = 48 hours or power = 4 kW",
+            "1 mark: Energy = 4 × 48 = 192 kWh",
+            "1 mark: Cost = 192 × 15 = 2880 pence = £28.80",
+            "1 mark: (ii) Reduces CO₂ emissions / reduces use of fossil fuels / conserves resources"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "energy7",
+      "topic": "Energy stores",
+      "title": "Bouncing ball velocity-time graph",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "written",
+          "text": "A child drops a ball. The ball hits the ground and bounces. The graph shows the velocity-time graph from when the ball is dropped until it reaches the top of its first bounce. Air resistance is ignored.\n\nDescribe the motion of the ball between points A and B on the graph.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Uniform/constant acceleration",
+            "1 mark: Or velocity/speed is increasing (at a constant rate)"
+          ],
+          "diagram": "q7a-velocity-time-graph.png"
+        },
+        {
+          "partLabel": "b",
+          "type": "written",
+          "text": "What direction is the ball moving between points C and D on the graph?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Upwards"
+          ],
+          "diagram": "q7a-velocity-time-graph.png"
+        },
+        {
+          "partLabel": "c",
+          "type": "written",
+          "text": "The ball and the Earth form a system. What is meant by 'a system'? (Tick one box.)\n- A group of objects that interact.\n- Objects with big differences in mass.\n- Objects with gravitational potential energy.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: A group of objects that interact"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "d",
+          "type": "written",
+          "text": "When the ball hits the ground, energy is transferred from the ball to the Earth.\n\nExplain how the data in the graph shows this energy transfer.",
+          "marks": 4,
+          "markScheme": [
+            "1 mark: Velocity just after bounce is less than just before bounce",
+            "1 mark: So the ball has lost energy",
+            "1 mark: Reference to loss of kinetic energy or reduced gravitational potential energy",
+            "1 mark: Total energy of ball and Earth is constant / energy is conserved"
+          ],
+          "diagram": "q7a-velocity-time-graph.png"
+        }
+      ]
+    },
+    {
+      "id": "energy8",
+      "topic": "Energy stores",
+      "title": "Drone battery energy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "written",
+          "text": "The image shows a battery-powered drone.\n\nComplete the sentences (choose from: chemical, elastic potential, gravitational potential, kinetic, nuclear).\n\nAs the drone accelerates upwards its ____________________ energy increases and its ____________________ energy increases.\nThe ____________________ energy store of the battery decreases.",
+          "marks": 3,
+          "markScheme": [
+            "1 mark: gravitational potential",
+            "1 mark: kinetic",
+            "1 mark: chemical"
+          ],
+          "diagram": "q8a-drone.png"
+        },
+        {
+          "partLabel": "b",
+          "type": "written",
+          "text": "In the USA, drones are not allowed to be flown too high above the ground.\n\nSuggest one possible risk of flying a drone too high above the ground.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark for any sensible suggestion: flying drones may damage aircraft, falling drones may injure people, damage buildings/vehicles"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "written",
+          "text": "Write down the equation that links energy transferred, power and time.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Energy transferred = power × time or E = Pt"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "d",
+          "type": "written",
+          "text": "The drone can fly for 25 minutes before the battery needs recharging. The power output is $65.0\\,\\text{W}$.\n\nCalculate the maximum energy stored by the battery.",
+          "marks": 3,
+          "markScheme": [
+            "1 mark: t = 25 × 60 = 1500 s",
+            "1 mark: E = 65 × 1500",
+            "1 mark: E = 97500 J"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "energy9",
+      "topic": "Energy stores",
+      "title": "Baby bouncer spring",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "written",
+          "text": "A baby bouncer is a harness attached to a spring that hangs from a door frame. The figure shows the baby in two positions.\n\nThe bouncer should not be used with babies with mass greater than $12\\,\\text{kg}$. Suggest one reason why.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Spring may become permanently extended, or harness/spring/chain may break, or extension may be too great"
+          ],
+          "diagram": "q9a-baby-bouncer.png"
+        },
+        {
+          "partLabel": "b",
+          "type": "written",
+          "text": "In positions A and B the baby is stationary.\n\nDescribe the energy transfers as the baby moves from position A to position B.",
+          "marks": 3,
+          "markScheme": [
+            "1 mark: In position A the baby has gravitational potential energy",
+            "1 mark: This is transferred to kinetic energy as the baby moves down",
+            "1 mark: Then to elastic potential energy of the spring (in position B all energy is elastic potential energy)"
+          ],
+          "diagram": "q9a-baby-bouncer.png"
+        },
+        {
+          "partLabel": "c",
+          "type": "written",
+          "text": "In one position the extension of the spring is $8.0\\,\\text{cm}$. The elastic potential energy stored is $4.0\\,\\text{J}$.\n\nCalculate the spring constant of the spring.",
+          "marks": 4,
+          "markScheme": [
+            "1 mark: e = 0.080 m",
+            "1 mark: 4.0 = ½ × k × 0.080²",
+            "1 mark: Rearrangement to solve for k",
+            "1 mark: k = 1250 N/m"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "energy10",
+      "topic": "Energy stores",
+      "title": "Handbrake and motion graphs",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "written",
+          "text": "Figure 1 shows the handbrake lever in a car.\n\nThe driver applies the force shown. The force produces a moment about the pivot.\n\nHow could the driver increase the moment about the pivot without increasing the size of the force?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Apply the force further away from the pivot"
+          ],
+          "diagram": "q10a-figure1-handbrake.png"
+        },
+        {
+          "partLabel": "b",
+          "type": "written",
+          "text": "The driver releases the handbrake. Figure 2 shows how the velocity changes during the first 5 seconds of a journey.\n\nAfter 3 seconds, the momentum of the car is $24\\,000\\,\\text{kg m/s}$.\n\nCalculate the mass of the car.",
+          "marks": 4,
+          "markScheme": [
+            "1 mark: v = 15 m/s (from graph at t = 3s)",
+            "1 mark: 24000 = m × 15",
+            "1 mark: Rearrangement",
+            "1 mark: m = 1600 kg"
+          ],
+          "diagram": "q10b-figure2-velocity-graph.png"
+        },
+        {
+          "partLabel": "c",
+          "type": "written",
+          "text": "Determine the distance travelled by the car during the first 5 seconds of the journey. Use Figure 2.",
+          "marks": 3,
+          "markScheme": [
+            "1 mark: Distance during first 3 seconds = ½ × 3 × 15 = 22.5 m",
+            "1 mark: Distance during last 2 seconds = 15 × 2 = 30 m",
+            "1 mark: Total distance = 52.5 m"
+          ],
+          "diagram": "q10b-figure2-velocity-graph.png"
+        },
+        {
+          "partLabel": "d",
+          "type": "written",
+          "text": "In an emergency the driver needs to apply the brakes suddenly to stop quickly. The driver is distracted.\n\nExplain why the distraction will increase the stopping distance.",
+          "marks": 3,
+          "markScheme": [
+            "1 mark: Stopping distance includes thinking distance",
+            "1 mark: There is an additional time before the driver applies the brakes / reaction time increases",
+            "1 mark: So the thinking distance will increase"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "e",
+          "type": "written",
+          "text": "Explain why the temperature of the brakes increases as they are used.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Work is done due to friction in the brakes",
+            "1 mark: Causing an increase in internal/thermal energy of the brakes"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "energy11",
+      "topic": "Energy stores",
+      "title": "Power on stairs",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "written",
+          "text": "The figure shows a girl determining her power output by running up stairs.\n\nMass $= 60.0\\,\\text{kg}$, height $= 175\\,\\text{cm}$, time $= 1.40\\,\\text{s}$, $g = 9.8\\,\\text{N/kg}$.\n\nCalculate the power output of the girl.",
+          "marks": 5,
+          "markScheme": [
+            "1 mark: h = 1.75 m",
+            "1 mark: Ep = 60 × 9.8 × 1.75",
+            "1 mark: Ep = 1029 J",
+            "1 mark: P = 1029 / 1.40",
+            "1 mark: P = 735 W"
+          ],
+          "diagram": "q11a-stairs.png"
+        },
+        {
+          "partLabel": "b",
+          "type": "written",
+          "text": "The total power output of the girl was greater than your answer to part (a).\n\nSuggest two reasons why.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Girl increases her kinetic energy as well as gravitational potential energy",
+            "1 mark: Some energy is wasted in her muscles / transferred as thermal energy to surroundings"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "written",
+          "text": "A boy took more than $1.40\\,\\text{s}$ to run up the same stairs. The boy's power output was the same as the girl's power output.\n\nWhat conclusion can be made about the boy's mass? (Tick one box.)\n- The boy's mass was greater than the girl's mass.\n- The boy's mass was lower than the girl's mass.\n- The boy's mass was the same as the girl's mass.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: The boy's mass was greater than the girl's mass"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "energy12",
+      "topic": "Energy stores",
+      "title": "Toy aeroplane spring launcher",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "written",
+          "text": "The figure shows a student launching a toy aeroplane using a spring.\n\nJust before release, extension $e = 0.12\\,\\text{m}$.\nMass of aeroplane $= 0.020\\,\\text{kg}$.\nSpring constant $k = 50\\,\\text{N/m}$.\n\nCalculate the maximum speed of the aeroplane just after launch. Give the unit.",
+          "marks": 6,
+          "markScheme": [
+            "1 mark: Ee = 0.5 × 50 × 0.12²",
+            "1 mark: Ee = 0.36 J",
+            "1 mark: 0.36 = 0.5 × 0.020 × v²",
+            "1 mark: Rearrangement v² = 36",
+            "1 mark: Speed = 6.0",
+            "1 mark: m/s"
+          ],
+          "diagram": "q12a-toy-aeroplane.png"
+        },
+        {
+          "partLabel": "b",
+          "type": "written",
+          "text": "Complete the sentence.\n\nAs the aeroplane moves upwards through the air there is a decrease in the ____________________ energy of the aeroplane.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: kinetic"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "written",
+          "text": "Give one factor which would increase the distance the toy aeroplane travels horizontally before hitting the ground.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Increasing the extension of the spring, or more elastic potential energy, or increase angle of release"
+          ],
+          "diagram": null
+        }
+      ]
+    }
+  ]
+}
