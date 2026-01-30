@@ -31,6 +31,23 @@ Questions are stored in `questions.json` with this top-level structure:
 | `title` | string | Yes | Display title for the question |
 | `parts` | Part[] | Yes | Array of question parts (minimum 1) |
 
+### Question ID Rules
+
+**IDs must be globally unique across ALL question files in the entire project**, not just within a single file. The app stores student scores in a single cookie keyed by question ID — if two questions share the same ID (even in different files), their scores will collide and overwrite each other.
+
+**Naming convention:** Use a short subtopic prefix followed by a number.
+
+| Subtopic | Prefix | Example IDs |
+|----------|--------|-------------|
+| Energy Stores | `energy-stores` | `energy-stores1`, `energy-stores2` |
+| Energy Resources | `energy-res` | `energy-res1`, `energy-res2` |
+| Series and Parallel Circuits | `sp-circuits` | `sp-circuits1`, `sp-circuits2` |
+| Newton's Laws | `newton` | `newton1`, `newton2` |
+
+**Do NOT** use generic prefixes like `energy1`, `elec1`, etc. — these are too likely to collide with questions from other subtopics within the same main topic.
+
+Before assigning IDs, check existing question files to ensure no duplicates.
+
 ### Part Object (Common Fields)
 
 | Field | Type | Required | Description |
@@ -172,7 +189,7 @@ Each string in `markScheme` should describe one marking point:
 
 ```json
 {
-  "id": "energy1",
+  "id": "energy-stores1",
   "topic": "Energy stores",
   "title": "Cyclist energy stores",
   "parts": [
@@ -232,7 +249,7 @@ Each string in `markScheme` should describe one marking point:
 ## Validation Rules
 
 1. Every `topic` value in questions must exist in the `topics` array
-2. All `id` values must be unique
+2. **All `id` values must be globally unique across every question file in the project** (see ID Rules above). Use subtopic-specific prefixes to prevent collisions.
 3. `partLabel` values should be sequential within a question (a, b, c or i, ii, iii)
 4. `marks` must be a positive integer between 1 and 6
 5. For `multiple-choice`: `correctAnswer` must be 0, 1, or 2; `options` must have exactly 3 strings

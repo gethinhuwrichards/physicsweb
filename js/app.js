@@ -4,8 +4,6 @@ let currentMainTopic = null;
 let currentSubtopic = null;
 let subtopicQuestions = [];
 let currentQuestion = null;
-let isMarkingMode = false;
-let partScores = {};
 
 // Cookie Helpers
 function setCookie(name, value, days) {
@@ -55,10 +53,6 @@ const topicButtons = document.getElementById('topic-buttons');
 const subtopicButtons = document.getElementById('subtopic-buttons');
 const questionList = document.getElementById('question-list');
 const questionContainer = document.getElementById('question-container');
-const submitBtn = document.getElementById('submit-btn');
-const markingSummary = document.getElementById('marking-summary');
-const totalScoreEl = document.getElementById('total-score');
-const maxScoreEl = document.getElementById('max-score');
 
 // Initialize
 async function init() {
@@ -222,322 +216,34 @@ function rerenderQuestionList() {
     document.getElementById('reset-confirm').classList.add('hidden');
 }
 
-// Load Question
+// Load Question — mount React component
 function loadQuestion(questionId) {
     currentQuestion = subtopicQuestions.find(q => q.id === questionId);
     if (!currentQuestion) return;
 
-    isMarkingMode = false;
-    partScores = {};
-    submitBtn.disabled = false;
-    submitBtn.classList.remove('hidden');
-    markingSummary.classList.add('hidden');
+    if (typeof window.mountQuestionView !== 'function') {
+        console.error('mountQuestionView not loaded. Check that dist/question-view.iife.js is served.');
+        questionContainer.innerHTML = '<p style="color:red;padding:20px;">Failed to load question viewer. Please refresh the page.</p>';
+        showView('question-view');
+        return;
+    }
 
-    renderQuestion();
+    window.mountQuestionView(questionContainer, currentQuestion, {
+        onBankScore: (score, maxScore) => {
+            saveQuestionScore(currentQuestion.id, score, maxScore, currentSubtopic.id);
+            window.unmountQuestionView();
+            showView('question-selection');
+            rerenderQuestionList();
+            rerenderTopicButtons();
+            rerenderSubtopicButtons();
+        },
+        onReset: () => {
+            window.unmountQuestionView();
+            loadQuestion(currentQuestion.id);
+        },
+    });
+
     showView('question-view');
-}
-
-// Render Question
-function renderQuestion() {
-    const totalMarks = currentQuestion.parts.reduce((sum, p) => sum + p.marks, 0);
-
-    let html = `
-        <div class="question-header">
-            <h2>${currentQuestion.title}</h2>
-            <p class="total-marks">Total: ${totalMarks} marks</p>
-        </div>
-    `;
-
-    currentQuestion.parts.forEach((part, index) => {
-        let partText;
-        if (part.type === 'fill-in-blank') {
-            partText = renderFillInBlankWithOptions(part, index);
-        } else {
-            partText = part.text;
-        }
-
-        html += `
-            <div class="question-part" data-part-index="${index}">
-                <div class="part-label">(${part.partLabel})</div>
-                <div class="part-text">${partText}</div>
-                ${part.diagram ? `<img src="images/${part.diagram}" alt="Diagram" class="part-diagram">` : ''}
-                <div class="part-marks">[${part.marks} mark${part.marks > 1 ? 's' : ''}]</div>
-                ${renderAnswerInput(part, index)}
-                <div class="mark-scheme hidden" id="mark-scheme-${index}">
-                    <h4>Mark Scheme</h4>
-                    <ul>${part.markScheme.map(m => `<li>${m}</li>`).join('')}</ul>
-                </div>
-                <div class="self-mark-container" id="self-mark-${index}"></div>
-            </div>
-        `;
-    });
-
-    questionContainer.innerHTML = html;
-    renderMath();
-}
-
-// Render fill-in-blank with options box
-function renderFillInBlankWithOptions(part, partIndex) {
-    const optionsHtml = part.options
-        ? part.options.map(opt => `<strong>${opt}</strong>`).join('&nbsp;&nbsp;&nbsp;')
-        : '';
-
-    const sentenceHtml = renderFillInBlankText(part.text, partIndex);
-
-    return `
-        <p class="fill-blank-header">Complete the sentence. Choose answers from the box.</p>
-        <div class="fill-blank-options-box">
-            ${optionsHtml}
-        </div>
-        <p class="fill-blank-sentence">${sentenceHtml}</p>
-    `;
-}
-
-// Render fill-in-blank text with inline inputs
-function renderFillInBlankText(text, partIndex) {
-    let blankIndex = 0;
-    return text.replace(/___/g, () => {
-        const input = `<input type="text" class="fill-blank-input" id="blank-${partIndex}-${blankIndex}" data-blank-index="${blankIndex}">`;
-        blankIndex++;
-        return input;
-    });
-}
-
-// Render Answer Input based on type
-function renderAnswerInput(part, index) {
-    switch (part.type) {
-        case 'multiple-choice':
-            return renderMultipleChoice(part, index);
-        case 'numerical':
-            return renderNumerical(part, index);
-        case 'fill-in-blank':
-            // Input is inline in the text, no separate answer box
-            return '';
-        case 'written':
-        default:
-            return `<textarea class="answer-textarea" id="answer-${index}" placeholder="Enter your answer here..."></textarea>`;
-    }
-}
-
-// Render Multiple Choice (3 options)
-function renderMultipleChoice(part, index) {
-    const optionLetters = ['A', 'B', 'C'];
-    return `
-        <div class="mc-options" id="mc-options-${index}">
-            ${part.options.slice(0, 3).map((opt, i) => `
-                <label class="mc-option" data-option-index="${i}">
-                    <input type="radio" name="mc-${index}" value="${i}">
-                    <span><strong>${optionLetters[i]}.</strong> ${opt}</span>
-                </label>
-            `).join('')}
-        </div>
-    `;
-}
-
-// Render Numerical Answer
-function renderNumerical(part, index) {
-    return `
-        <div class="numerical-answer" id="numerical-${index}">
-            <label>Working out:</label>
-            <textarea class="working-out" id="working-${index}" placeholder="Show your working here..."></textarea>
-            <div class="final-answer-row">
-                <label>Final answer:</label>
-                <input type="number" class="final-answer-input" id="final-answer-${index}" step="any" placeholder="0">
-            </div>
-            <p class="numerical-note">If your final answer is correct, you will be awarded all ${part.marks} marks.</p>
-        </div>
-    `;
-}
-
-// Render Math with KaTeX
-function renderMath() {
-    if (typeof renderMathInElement !== 'undefined') {
-        renderMathInElement(questionContainer, {
-            delimiters: [
-                {left: '$$', right: '$$', display: true},
-                {left: '$', right: '$', display: false}
-            ],
-            throwOnError: false
-        });
-    }
-}
-
-// Submit Answers
-function submitAnswers() {
-    isMarkingMode = true;
-    submitBtn.disabled = true;
-
-    currentQuestion.parts.forEach((part, index) => {
-        // Show mark scheme
-        document.getElementById(`mark-scheme-${index}`).classList.remove('hidden');
-
-        // Show marking input
-        const selfMarkContainer = document.getElementById(`self-mark-${index}`);
-
-        switch (part.type) {
-            case 'multiple-choice':
-                markMultipleChoice(part, index, selfMarkContainer);
-                break;
-            case 'numerical':
-                markNumerical(part, index, selfMarkContainer);
-                break;
-            case 'fill-in-blank':
-                markFillInBlank(part, index, selfMarkContainer);
-                break;
-            case 'written':
-            default:
-                markWritten(part, index, selfMarkContainer);
-                break;
-        }
-    });
-
-    // Show marking summary
-    markingSummary.classList.remove('hidden');
-    updateTotalScore();
-    renderMath();
-}
-
-// Mark Multiple Choice
-function markMultipleChoice(part, index, container) {
-    // Disable inputs
-    document.querySelectorAll(`#mc-options-${index} input`).forEach(input => {
-        input.disabled = true;
-    });
-
-    const selected = document.querySelector(`#mc-options-${index} input:checked`);
-    const selectedIndex = selected ? parseInt(selected.value) : -1;
-    const isCorrect = selectedIndex === part.correctAnswer;
-    const score = isCorrect ? part.marks : 0;
-    partScores[index] = score;
-
-    // Highlight correct/incorrect
-    document.querySelectorAll(`#mc-options-${index} .mc-option`).forEach((opt, i) => {
-        if (i === part.correctAnswer) {
-            opt.classList.add('correct');
-        } else if (i === selectedIndex && !isCorrect) {
-            opt.classList.add('incorrect');
-        }
-    });
-
-    container.innerHTML = `
-        <div class="auto-mark-result ${isCorrect ? 'correct' : 'incorrect'}">
-            ${isCorrect ? 'Correct!' : 'Incorrect'} - ${score}/${part.marks} mark${part.marks > 1 ? 's' : ''}
-        </div>
-    `;
-}
-
-// Mark Numerical
-function markNumerical(part, index, container) {
-    // Disable inputs
-    const workingTextarea = document.getElementById(`working-${index}`);
-    const finalAnswerInput = document.getElementById(`final-answer-${index}`);
-    if (workingTextarea) workingTextarea.disabled = true;
-    if (finalAnswerInput) finalAnswerInput.disabled = true;
-
-    const userAnswer = parseFloat(finalAnswerInput.value);
-    const correctAnswer = part.correctAnswer;
-
-    // Check if answer is correct (with small tolerance for floating point)
-    const tolerance = Math.abs(correctAnswer) * 0.001 || 0.001;
-    const isCorrect = !isNaN(userAnswer) && Math.abs(userAnswer - correctAnswer) <= tolerance;
-
-    const score = isCorrect ? part.marks : 0;
-    partScores[index] = score;
-
-    // Style the input
-    finalAnswerInput.classList.add(isCorrect ? 'correct' : 'incorrect');
-
-    if (isCorrect) {
-        container.innerHTML = `
-            <div class="auto-mark-result correct">
-                Correct! All ${part.marks} marks awarded.
-            </div>
-        `;
-    } else {
-        // If incorrect, allow self-marking for partial credit
-        partScores[index] = 0;
-        container.innerHTML = `
-            <div class="auto-mark-result incorrect">
-                Final answer incorrect. (Correct answer: ${correctAnswer})
-            </div>
-            <div class="self-mark">
-                <label>Award marks for working:</label>
-                <input type="number"
-                       id="score-${index}"
-                       min="0"
-                       max="${part.marks}"
-                       value="0"
-                       onchange="updateScore(${index}, this.value, ${part.marks})">
-                <span class="max-marks">/ ${part.marks}</span>
-            </div>
-        `;
-    }
-}
-
-// Mark Fill in Blank
-function markFillInBlank(part, index, container) {
-    const blanks = document.querySelectorAll(`[id^="blank-${index}-"]`);
-    let correctCount = 0;
-
-    blanks.forEach((input, i) => {
-        input.disabled = true;
-        const userAnswer = input.value.trim().toLowerCase();
-        const correctAnswer = part.correctAnswers[i].toLowerCase();
-
-        if (userAnswer === correctAnswer) {
-            input.classList.add('correct');
-            correctCount++;
-        } else {
-            input.classList.add('incorrect');
-        }
-    });
-
-    // Award 1 mark per correct blank (up to total marks)
-    const score = Math.min(correctCount, part.marks);
-    partScores[index] = score;
-
-    container.innerHTML = `
-        <div class="auto-mark-result ${score === part.marks ? 'correct' : 'incorrect'}">
-            ${correctCount}/${blanks.length} blanks correct - ${score}/${part.marks} mark${part.marks > 1 ? 's' : ''}
-        </div>
-    `;
-}
-
-// Mark Written (self-mark)
-function markWritten(part, index, container) {
-    const textarea = document.getElementById(`answer-${index}`);
-    if (textarea) textarea.disabled = true;
-
-    partScores[index] = 0;
-    container.innerHTML = `
-        <div class="self-mark">
-            <label>Marks awarded:</label>
-            <input type="number"
-                   id="score-${index}"
-                   min="0"
-                   max="${part.marks}"
-                   value="0"
-                   onchange="updateScore(${index}, this.value, ${part.marks})">
-            <span class="max-marks">/ ${part.marks}</span>
-        </div>
-    `;
-}
-
-// Update Score for a Part
-function updateScore(index, value, maxMarks) {
-    let score = parseInt(value) || 0;
-    score = Math.max(0, Math.min(score, maxMarks));
-    document.getElementById(`score-${index}`).value = score;
-    partScores[index] = score;
-    updateTotalScore();
-}
-
-// Update Total Score
-function updateTotalScore() {
-    const total = Object.values(partScores).reduce((sum, s) => sum + s, 0);
-    const maxTotal = currentQuestion.parts.reduce((sum, p) => sum + p.marks, 0);
-    totalScoreEl.textContent = total;
-    maxScoreEl.textContent = maxTotal;
 }
 
 // Event Listeners
@@ -560,6 +266,7 @@ document.getElementById('back-to-subtopics').addEventListener('click', () => {
 });
 
 document.getElementById('back-to-questions').addEventListener('click', () => {
+    window.unmountQuestionView();
     showView('question-selection');
 });
 
@@ -606,21 +313,6 @@ document.getElementById('reset-confirm-cancel').addEventListener('click', () => 
     pendingResetId = null;
     document.getElementById('reset-confirm').classList.add('hidden');
 });
-
-submitBtn.addEventListener('click', submitAnswers);
-
-document.getElementById('bank-score').addEventListener('click', () => {
-    const total = Object.values(partScores).reduce((sum, s) => sum + s, 0);
-    const maxTotal = currentQuestion.parts.reduce((sum, p) => sum + p.marks, 0);
-    saveQuestionScore(currentQuestion.id, total, maxTotal, currentSubtopic.id);
-    showView('question-selection');
-    rerenderQuestionList();
-    rerenderTopicButtons();
-    rerenderSubtopicButtons();
-});
-
-// Make updateScore available globally
-window.updateScore = updateScore;
 
 // ============================================
 // Feedback Modal

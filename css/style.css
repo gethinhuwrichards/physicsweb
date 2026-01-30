@@ -516,6 +516,264 @@ header h1 {
     background: #1a365d;
 }
 
+.marking-summary-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.reset-question-btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+    background: #e2e8f0;
+    color: #4a5568;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.reset-question-btn:hover {
+    background: #cbd5e0;
+}
+
+/* ============================================
+   Marking Mode - Part States
+   ============================================ */
+
+.question-part.marking-dimmed {
+    opacity: 0.35;
+    transition: opacity 0.3s ease;
+}
+
+.question-part.marking-active {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.question-part.marking-done {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.question-part.marking-alt {
+    background: #f7fafc;
+    border-radius: 6px;
+    padding: 15px;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+/* ============================================
+   Mark Scheme Drawer (slides from right)
+   ============================================ */
+
+.mark-scheme-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 400px;
+    max-width: 90vw;
+    height: 100vh;
+    background: white;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+    transform: translateX(100%);
+    transition: transform 0.35s ease;
+    z-index: 950;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.mark-scheme-drawer.open {
+    transform: translateX(0);
+}
+
+#question-container.drawer-open,
+.drawer-open {
+    margin-right: 420px;
+    transition: margin-right 0.35s ease;
+}
+
+.drawer-header {
+    padding: 20px 24px 12px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.drawer-header h3 {
+    color: #2c5282;
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.drawer-counter {
+    font-size: 0.85rem;
+    color: #718096;
+}
+
+.drawer-instruction {
+    font-size: 0.85rem;
+    color: #4a5568;
+    margin-top: 6px;
+    font-style: italic;
+}
+
+.drawer-body {
+    padding: 16px 24px;
+    flex: 1;
+}
+
+/* ============================================
+   Marking Point Rows (tick / cross)
+   ============================================ */
+
+.marking-point-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 14px 12px;
+    border-bottom: 1px solid #edf2f7;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    transition: opacity 0.2s;
+}
+
+.marking-point-row.decided {
+    opacity: 0.55;
+}
+
+.marking-point-row.locked {
+    opacity: 0.7;
+}
+
+.marking-point-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #718096;
+    font-weight: 600;
+}
+
+.marking-point-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.marking-point-text {
+    flex: 1;
+    font-size: 0.95rem;
+    color: #2d3748;
+    line-height: 1.4;
+}
+
+.marking-point-buttons {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.mark-tick,
+.mark-cross {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mark-tick {
+    border: 2px solid #48bb78;
+    background: white;
+    color: #48bb78;
+}
+
+.mark-tick:hover:not(:disabled) {
+    background: #c6f6d5;
+}
+
+.mark-tick.selected {
+    background: #48bb78;
+    color: white;
+}
+
+.mark-cross {
+    border: 2px solid #fc8181;
+    background: white;
+    color: #fc8181;
+}
+
+.mark-cross:hover:not(:disabled) {
+    background: #fed7d7;
+}
+
+.mark-cross.selected {
+    background: #fc8181;
+    color: white;
+}
+
+.mark-tick:disabled,
+.mark-cross:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+}
+
+.marking-point-locked-note {
+    font-size: 0.8rem;
+    color: #c53030;
+    font-style: italic;
+    margin-top: 2px;
+}
+
+/* ============================================
+   Final Score Panel
+   ============================================ */
+
+.final-score-panel {
+    margin-top: 25px;
+    padding: 25px;
+    background: white;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.final-score-panel h3 {
+    color: #2c5282;
+    margin-bottom: 10px;
+}
+
+.final-score-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2d3748;
+}
+
+.final-score-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.reset-inline-confirm {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.reset-inline-confirm span {
+    font-size: 0.9rem;
+    color: #4a5568;
+}
+
 /* Numerical Answer */
 .numerical-answer {
     background: #f7fafc;
@@ -965,5 +1223,14 @@ body.landing-active header {
     .question-progress {
         flex: 1;
         max-width: 120px;
+    }
+
+    .mark-scheme-drawer {
+        width: 100vw;
+    }
+
+    #question-container.drawer-open,
+    .drawer-open {
+        margin-right: 0;
     }
 }
