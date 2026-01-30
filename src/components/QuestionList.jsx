@@ -6,14 +6,18 @@ export default function QuestionList({
   scores,
   onSelectQuestion,
   onResetQuestion,
-  onBack,
+  onResetAll,
 }) {
   const [pendingResetId, setPendingResetId] = useState(null);
+  const [showResetAll, setShowResetAll] = useState(false);
   const confirmRef = useRef(null);
+
+  const hasAnyScores = questions.some((q) => scores[q.id]);
 
   const handleResetClick = (e, questionId) => {
     e.stopPropagation();
     setPendingResetId(questionId);
+    setShowResetAll(false);
     setTimeout(() => {
       confirmRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }, 0);
@@ -32,10 +36,42 @@ export default function QuestionList({
 
   return (
     <section>
-      <button className="back-btn" onClick={onBack}>
-        &larr; Back to Subtopics
-      </button>
-      <h2>{title}</h2>
+      {hasAnyScores && (
+        <div className="section-header-row reset-only">
+          <button
+            className="reset-all-btn"
+            onClick={() => {
+              setShowResetAll(true);
+              setPendingResetId(null);
+            }}
+          >
+            Reset all
+          </button>
+        </div>
+      )}
+
+      {showResetAll && (
+        <div className="reset-confirm" ref={confirmRef}>
+          <p>Are you sure? All questions in {title} will be reset.</p>
+          <div className="reset-confirm-buttons">
+            <button
+              className="reset-confirm-ok"
+              onClick={() => {
+                onResetAll();
+                setShowResetAll(false);
+              }}
+            >
+              OK
+            </button>
+            <button
+              className="reset-confirm-cancel"
+              onClick={() => setShowResetAll(false)}
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      )}
 
       <div>
         {questions.map((q) => {

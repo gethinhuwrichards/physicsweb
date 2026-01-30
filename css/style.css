@@ -108,6 +108,89 @@ header h1 {
 }
 
 /* ============================================
+   Breadcrumb Navigation
+   ============================================ */
+
+.breadcrumb-nav {
+    margin-bottom: 20px;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 6px;
+}
+
+.breadcrumb-nav > .back-btn {
+    margin-bottom: 0;
+}
+
+.breadcrumb-link {
+    background: none;
+    border: none;
+    color: var(--accent-blue);
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+}
+
+.breadcrumb-link:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb-sep {
+    margin: 0 10px;
+    color: var(--text-tertiary);
+    font-size: 1.1rem;
+}
+
+.breadcrumb-current {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* ============================================
+   Section Header Row (title + reset all)
+   ============================================ */
+
+.section-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.section-header-row.reset-only {
+    justify-content: flex-end;
+    margin-bottom: 12px;
+}
+
+.section-header-row h2 {
+    margin: 0;
+}
+
+.reset-all-btn {
+    background: none;
+    border: 1px solid var(--border-default);
+    border-radius: 4px;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.reset-all-btn:hover {
+    background: var(--color-incorrect-bg);
+    border-color: var(--color-incorrect-border);
+    color: var(--color-incorrect-text);
+}
+
+/* ============================================
    Topic Selection
    ============================================ */
 
@@ -594,7 +677,6 @@ header h1 {
 }
 
 .bank-score-btn {
-    margin-top: 20px;
     padding: 12px 30px;
     font-size: 1rem;
     background: var(--accent-blue);
@@ -619,16 +701,17 @@ header h1 {
 .reset-question-btn {
     padding: 12px 30px;
     font-size: 1rem;
-    background: var(--bg-surface-raised);
-    color: var(--text-secondary);
-    border: none;
+    background: #2e3650;
+    color: #a8b0c4;
+    border: 1px solid var(--border-default);
     border-radius: 6px;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: background 0.2s, border-color 0.2s;
 }
 
 .reset-question-btn:hover {
-    background: var(--bg-surface-alt);
+    background: #364060;
+    border-color: var(--text-tertiary);
 }
 
 /* ============================================
@@ -1514,6 +1597,16 @@ body.landing-active header {
 }
 
 @media (max-width: 600px) {
+    .breadcrumb-link,
+    .breadcrumb-current {
+        font-size: 1rem;
+    }
+
+    .breadcrumb-sep {
+        margin: 0 6px;
+        font-size: 0.9rem;
+    }
+
     .landing-title {
         font-size: 2.5rem;
     }

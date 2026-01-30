@@ -5,6 +5,7 @@ import TopicSelection from './components/TopicSelection';
 import SubtopicSelection from './components/SubtopicSelection';
 import QuestionList from './components/QuestionList';
 import FeedbackModal from './components/FeedbackModal';
+import Breadcrumb from './components/Breadcrumb';
 import QuestionView from './QuestionView';
 import {
   getQuestionScores,
@@ -15,6 +16,8 @@ import {
   loadQuestionAnswers,
   setCookie,
   countAnsweredForSubtopic,
+  clearScoresForSubtopic,
+  clearAllScoresAndAnswers,
 } from './utils/storage';
 
 export default function App() {
@@ -99,32 +102,19 @@ export default function App() {
     [questions]
   );
 
-  const goBack = useCallback(() => {
-    switch (view) {
-      case 'topics':
-        setView('landing');
-        break;
-      case 'subtopics':
-        setView('topics');
-        break;
-      case 'questions':
-        setView('subtopics');
-        break;
-      case 'question':
-        setView('questions');
-        break;
-    }
-  }, [view]);
-
   // Question callbacks
-  const handleBankScore = useCallback(
+  const handleScoreReady = useCallback(
     (score, maxScore) => {
       saveQuestionScore(currentQuestion.id, score, maxScore, subtopic.id);
       refreshScores();
-      setView('questions');
     },
     [currentQuestion, subtopic, refreshScores]
   );
+
+  const handleBankScore = useCallback(() => {
+    refreshScores();
+    setView('questions');
+  }, [refreshScores]);
 
   const handleReset = useCallback(() => {
     clearQuestionAnswers(currentQuestion.id);
@@ -150,11 +140,45 @@ export default function App() {
     [refreshScores]
   );
 
+  // Bulk reset handlers
+  const handleResetAllSubtopic = useCallback(() => {
+    questions.forEach((q) => {
+      clearQuestionAnswers(q.id);
+      clearQuestionScore(q.id);
+    });
+    refreshScores();
+  }, [questions, refreshScores]);
+
+  const handleResetAllTopic = useCallback(() => {
+    if (!mainTopic) return;
+    mainTopic.subtopics.forEach((sub) => {
+      clearScoresForSubtopic(sub.id);
+    });
+    refreshScores();
+  }, [mainTopic, refreshScores]);
+
+  const handleResetAll = useCallback(() => {
+    clearAllScoresAndAnswers();
+    refreshScores();
+  }, [refreshScores]);
+
+  // Breadcrumb items
+  const breadcrumbItems = [];
+  if (view === 'subtopics' && mainTopic) {
+    breadcrumbItems.push({ label: mainTopic.name });
+  } else if (view === 'questions' && mainTopic && subtopic) {
+    breadcrumbItems.push({ label: mainTopic.name, onClick: () => setView('subtopics') });
+    breadcrumbItems.push({ label: subtopic.name });
+  } else if (view === 'question' && mainTopic && subtopic) {
+    breadcrumbItems.push({ label: mainTopic.name, onClick: () => setView('subtopics') });
+    breadcrumbItems.push({ label: subtopic.name, onClick: () => setView('questions') });
+  }
+
   return (
     <ErrorBoundary>
       <FeedbackModal />
 
-      {view !== 'landing' && view !== 'question' && (
+      {view !== 'landing' && (
         <header>
           <h1>Physics Exam Practice</h1>
         </header>
@@ -169,34 +193,39 @@ export default function App() {
             scores={scores}
             onSelectTopic={selectTopic}
             onBack={() => setView('landing')}
+            onResetAll={handleResetAll}
           />
         )}
 
         {view === 'subtopics' && mainTopic && (
-          <SubtopicSelection
-            mainTopic={mainTopic}
-            scores={scores}
-            onSelectSubtopic={selectSubtopic}
-            onBack={() => setView('topics')}
-          />
+          <>
+            <Breadcrumb items={breadcrumbItems} onBack={() => setView('topics')} />
+            <SubtopicSelection
+              mainTopic={mainTopic}
+              scores={scores}
+              onSelectSubtopic={selectSubtopic}
+              onResetAll={handleResetAllTopic}
+            />
+          </>
         )}
 
         {view === 'questions' && (
-          <QuestionList
-            title={subtopic?.name || ''}
-            questions={questions}
-            scores={scores}
-            onSelectQuestion={selectQuestion}
-            onResetQuestion={handleResetFromList}
-            onBack={() => setView('subtopics')}
-          />
+          <>
+            <Breadcrumb items={breadcrumbItems} onBack={() => setView('subtopics')} />
+            <QuestionList
+              title={subtopic?.name || ''}
+              questions={questions}
+              scores={scores}
+              onSelectQuestion={selectQuestion}
+              onResetQuestion={handleResetFromList}
+              onResetAll={handleResetAllSubtopic}
+            />
+          </>
         )}
 
         {view === 'question' && currentQuestion && (
           <>
-            <button className="back-btn" onClick={goBack}>
-              &larr; Back to Questions
-            </button>
+            <Breadcrumb items={breadcrumbItems} onBack={() => setView('questions')} />
             <div id="question-container">
               <QuestionView
                 key={questionKey}
@@ -204,6 +233,7 @@ export default function App() {
                 onBankScore={handleBankScore}
                 onReset={handleReset}
                 onSaveAnswers={handleSaveAnswers}
+                onScoreReady={handleScoreReady}
                 savedState={savedState}
               />
             </div>

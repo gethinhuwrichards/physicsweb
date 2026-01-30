@@ -9,6 +9,18 @@ import { parseMarkScheme } from './utils/parseMarkScheme';
 
 function initState({ question, savedState }) {
   if (savedState) {
+    if (savedState.phase === 'answering') {
+      return {
+        phase: 'answering',
+        answers: savedState.answers || {},
+        partScores: {},
+        autoMarkResults: {},
+        selfMarkParts: [],
+        currentSelfMarkIdx: 0,
+        markingDecisions: {},
+        lockedPoints: {},
+      };
+    }
     return {
       phase: 'complete',
       answers: savedState.answers,
@@ -158,9 +170,11 @@ function reducer(state, action) {
   }
 }
 
-export default function QuestionView({ question, onBankScore, onReset, onSaveAnswers, savedState }) {
+export default function QuestionView({ question, onBankScore, onReset, onSaveAnswers, onScoreReady, savedState }) {
   const [state, dispatch] = useReducer(reducer, { question, savedState }, initState);
   const containerRef = useRef(null);
+  const stateRef = useRef(state);
+  stateRef.current = state;
 
   const totalMarks = question.parts.reduce((sum, p) => sum + p.marks, 0);
 
@@ -189,17 +203,30 @@ export default function QuestionView({ question, onBankScore, onReset, onSaveAns
   }, []);
 
   useEffect(() => {
-    if (state.phase === 'score' && onSaveAnswers) {
-      onSaveAnswers({
-        answers: state.answers,
-        partScores: state.partScores,
-        autoMarkResults: state.autoMarkResults,
-        selfMarkParts: state.selfMarkParts,
-        markingDecisions: state.markingDecisions,
-        lockedPoints: state.lockedPoints,
-      });
+    if (state.phase === 'score') {
+      if (onScoreReady) onScoreReady(totalScore, totalMarks);
+      if (onSaveAnswers) {
+        onSaveAnswers({
+          answers: state.answers,
+          partScores: state.partScores,
+          autoMarkResults: state.autoMarkResults,
+          selfMarkParts: state.selfMarkParts,
+          markingDecisions: state.markingDecisions,
+          lockedPoints: state.lockedPoints,
+        });
+      }
     }
   }, [state.phase]);
+
+  // Save partial answers when unmounting during answering phase
+  useEffect(() => {
+    return () => {
+      const s = stateRef.current;
+      if (s.phase === 'answering' && Object.keys(s.answers).length > 0 && onSaveAnswers) {
+        onSaveAnswers({ phase: 'answering', answers: s.answers });
+      }
+    };
+  }, []);
 
   const allPartsFullyDecided = state.selfMarkParts.every(partIdx => {
     const d = state.markingDecisions[partIdx];

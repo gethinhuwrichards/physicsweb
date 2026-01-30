@@ -1,13 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { countAnsweredForSubtopic } from '../utils/storage';
 
-export default function SubtopicSelection({ mainTopic, scores, onSelectSubtopic, onBack }) {
+export default function SubtopicSelection({ mainTopic, scores, onSelectSubtopic, onResetAll }) {
+  const [showConfirm, setShowConfirm] = useState(false);
+
+  const hasAnyScores = mainTopic.subtopics.some(
+    (sub) => countAnsweredForSubtopic(sub.id) > 0
+  );
+
   return (
     <section>
-      <button className="back-btn" onClick={onBack}>
-        &larr; Back to Topics
-      </button>
-      <h2>{mainTopic.name}</h2>
+      {hasAnyScores && (
+        <div className="section-header-row reset-only">
+          <button
+            className="reset-all-btn"
+            onClick={() => setShowConfirm(true)}
+          >
+            Reset all
+          </button>
+        </div>
+      )}
+
+      {showConfirm && (
+        <div className="reset-confirm">
+          <p>
+            Are you sure? All questions in {mainTopic.name} will be reset.
+          </p>
+          <div className="reset-confirm-buttons">
+            <button
+              className="reset-confirm-ok"
+              onClick={() => {
+                onResetAll();
+                setShowConfirm(false);
+              }}
+            >
+              OK
+            </button>
+            <button
+              className="reset-confirm-cancel"
+              onClick={() => setShowConfirm(false)}
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      )}
 
       {mainTopic.subtopics.length === 0 ? (
         <p

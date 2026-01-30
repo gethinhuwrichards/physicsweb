@@ -62,3 +62,29 @@ export function loadQuestionAnswers(questionId) {
 export function clearQuestionAnswers(questionId) {
   localStorage.removeItem('answers_' + questionId);
 }
+
+// Bulk reset: clear all scores + answers for a given subtopic
+export function clearScoresForSubtopic(subtopicId) {
+  const scores = getQuestionScores();
+  const idsToRemove = Object.keys(scores).filter(
+    (id) => scores[id].subtopic === subtopicId
+  );
+  idsToRemove.forEach((id) => {
+    delete scores[id];
+    localStorage.removeItem('answers_' + id);
+  });
+  setCookie('questionScores', scores, 365);
+}
+
+// Bulk reset: clear every score + answer
+export function clearAllScoresAndAnswers() {
+  setCookie('questionScores', {}, 365);
+  const keysToRemove = [];
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    if (key && key.startsWith('answers_')) {
+      keysToRemove.push(key);
+    }
+  }
+  keysToRemove.forEach((key) => localStorage.removeItem(key));
+}
