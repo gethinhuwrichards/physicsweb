@@ -44,6 +44,22 @@ function clearQuestionScore(questionId) {
     setCookie('questionScores', scores, 365);
 }
 
+// Answer Persistence (localStorage)
+function saveQuestionAnswers(questionId, stateToSave) {
+    localStorage.setItem('answers_' + questionId, JSON.stringify(stateToSave));
+}
+
+function loadQuestionAnswers(questionId) {
+    try {
+        const raw = localStorage.getItem('answers_' + questionId);
+        return raw ? JSON.parse(raw) : null;
+    } catch (e) { return null; }
+}
+
+function clearQuestionAnswers(questionId) {
+    localStorage.removeItem('answers_' + questionId);
+}
+
 // DOM Elements
 const topicSelection = document.getElementById('topic-selection');
 const subtopicSelection = document.getElementById('subtopic-selection');
@@ -228,6 +244,8 @@ function loadQuestion(questionId) {
         return;
     }
 
+    const savedState = loadQuestionAnswers(currentQuestion.id);
+
     window.mountQuestionView(questionContainer, currentQuestion, {
         onBankScore: (score, maxScore) => {
             saveQuestionScore(currentQuestion.id, score, maxScore, currentSubtopic.id);
@@ -238,9 +256,15 @@ function loadQuestion(questionId) {
             rerenderSubtopicButtons();
         },
         onReset: () => {
+            clearQuestionAnswers(currentQuestion.id);
+            clearQuestionScore(currentQuestion.id);
             window.unmountQuestionView();
             loadQuestion(currentQuestion.id);
         },
+        onSaveAnswers: (stateToSave) => {
+            saveQuestionAnswers(currentQuestion.id, stateToSave);
+        },
+        savedState: savedState,
     });
 
     showView('question-view');
@@ -301,6 +325,7 @@ questionList.addEventListener('click', (e) => {
 // Reset confirm dialog handlers
 document.getElementById('reset-confirm-ok').addEventListener('click', () => {
     if (pendingResetId) {
+        clearQuestionAnswers(pendingResetId);
         clearQuestionScore(pendingResetId);
         pendingResetId = null;
         rerenderQuestionList();

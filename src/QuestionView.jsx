@@ -1,12 +1,25 @@
-import React, { useReducer, useRef, useCallback } from 'react';
+import React, { useReducer, useRef, useCallback, useEffect } from 'react';
 import QuestionHeader from './components/QuestionHeader';
 import QuestionPart from './components/QuestionPart';
 import SelfMarkingView from './components/marking/SelfMarkingView';
 import FinalScorePanel from './components/marking/FinalScorePanel';
+import ScorePage from './components/marking/ScorePage';
 import { autoMarkSingleChoice, autoMarkMultiChoice, autoMarkGapFill } from './utils/autoMark';
 import { parseMarkScheme } from './utils/parseMarkScheme';
 
-function initState(question) {
+function initState({ question, savedState }) {
+  if (savedState) {
+    return {
+      phase: 'complete',
+      answers: savedState.answers,
+      partScores: savedState.partScores,
+      autoMarkResults: savedState.autoMarkResults,
+      selfMarkParts: savedState.selfMarkParts || [],
+      currentSelfMarkIdx: 0,
+      markingDecisions: savedState.markingDecisions || {},
+      lockedPoints: savedState.lockedPoints || {},
+    };
+  }
   return {
     phase: 'answering',
     answers: {},
@@ -78,7 +91,7 @@ function reducer(state, action) {
 
       return {
         ...state,
-        phase: noSelfMark ? 'complete' : 'marking',
+        phase: noSelfMark ? 'score' : 'marking',
         partScores,
         autoMarkResults,
         selfMarkParts,
@@ -133,6 +146,10 @@ function reducer(state, action) {
     }
 
     case 'SUBMIT_MARKS': {
+      return { ...state, phase: 'score' };
+    }
+
+    case 'REVIEW_QUESTION': {
       return { ...state, phase: 'complete' };
     }
 
@@ -141,8 +158,8 @@ function reducer(state, action) {
   }
 }
 
-export default function QuestionView({ question, onBankScore, onReset }) {
-  const [state, dispatch] = useReducer(reducer, question, initState);
+export default function QuestionView({ question, onBankScore, onReset, onSaveAnswers, savedState }) {
+  const [state, dispatch] = useReducer(reducer, { question, savedState }, initState);
   const containerRef = useRef(null);
 
   const totalMarks = question.parts.reduce((sum, p) => sum + p.marks, 0);
@@ -166,6 +183,23 @@ export default function QuestionView({ question, onBankScore, onReset }) {
   const handleSubmitMarks = useCallback(() => {
     dispatch({ type: 'SUBMIT_MARKS' });
   }, []);
+
+  const handleReview = useCallback(() => {
+    dispatch({ type: 'REVIEW_QUESTION' });
+  }, []);
+
+  useEffect(() => {
+    if (state.phase === 'score' && onSaveAnswers) {
+      onSaveAnswers({
+        answers: state.answers,
+        partScores: state.partScores,
+        autoMarkResults: state.autoMarkResults,
+        selfMarkParts: state.selfMarkParts,
+        markingDecisions: state.markingDecisions,
+        lockedPoints: state.lockedPoints,
+      });
+    }
+  }, [state.phase]);
 
   const allPartsFullyDecided = state.selfMarkParts.every(partIdx => {
     const d = state.markingDecisions[partIdx];
@@ -226,6 +260,16 @@ export default function QuestionView({ question, onBankScore, onReset }) {
           onNavigate={handleNavigate}
           onSubmitMarks={handleSubmitMarks}
           allPartsFullyDecided={allPartsFullyDecided}
+        />
+      )}
+
+      {state.phase === 'score' && (
+        <ScorePage
+          score={totalScore}
+          maxScore={totalMarks}
+          onTryAnother={onBankScore}
+          onReview={handleReview}
+          onReset={onReset}
         />
       )}
     </>
