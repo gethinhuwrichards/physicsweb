@@ -1,0 +1,148 @@
+{
+  "subtopic": "Series and Parallel Circuits",
+  "mainTopic": "Electricity",
+  "questionCount": 3,
+  "questions": [
+    {
+      "id": "sp-circuits1",
+      "topic": "Series and parallel circuits",
+      "title": "Current and potential difference in series circuits",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "single-choice",
+          "text": "In a series circuit, how is the current distributed through the components?",
+          "marks": 1,
+          "options": [
+            "It splits between components",
+            "It is the same through all components",
+            "It depends on the resistance of each component",
+            "It is zero after the first component"
+          ],
+          "correctAnswer": 1,
+          "markScheme": [
+            "Answer: B \u2013 The current is the same at all points in a series circuit"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "Explain why the current is the same at all points in a series circuit.",
+          "marks": 3,
+          "markScheme": [
+            "1 mark: Current is the **rate of flow of charge**",
+            "1 mark: Charge is **not lost or gained** in components",
+            "1 mark: Therefore the **same charge per second** flows through each component"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "sp-circuits2",
+      "topic": "Series and parallel circuits",
+      "title": "Potential difference in parallel circuits",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "multi-choice",
+          "text": "Which two statements about a parallel circuit are correct?",
+          "marks": 2,
+          "options": [
+            "The current is the same in all branches",
+            "The potential difference is the same across each branch",
+            "The total resistance is greater than any individual branch",
+            "Components operate independently",
+            "The current decreases after each branch"
+          ],
+          "correctAnswers": [
+            1,
+            3
+          ],
+          "selectCount": 2,
+          "scoring": "all-or-nothing",
+          "markScheme": [
+            "1 mark: Same potential difference across each branch",
+            "1 mark: Components operate independently"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "Explain why adding an extra branch to a parallel circuit decreases the total resistance of the circuit.",
+          "marks": 4,
+          "markScheme": [
+            "1 mark: Adding a branch provides an **additional path** for current",
+            "1 mark: More charge can flow for the same potential difference",
+            "1 mark: This increases the **total current** drawn from the supply",
+            "1 mark: Since $R = \\\\frac{V}{I}$, increasing current **reduces total resistance**"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "sp-circuits3",
+      "topic": "Series and parallel circuits",
+      "title": "Comparing series and parallel circuits",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "gap-fill",
+          "text": "Complete the sentences using words from the box.",
+          "marks": 3,
+          "segments": [
+            "In a series circuit, the total potential difference is ",
+            {
+              "blank": 0
+            },
+            " between components, whereas in a parallel circuit the potential difference across each branch is ",
+            {
+              "blank": 1
+            },
+            ". If one component fails in a series circuit, ",
+            {
+              "blank": 2
+            },
+            "."
+          ],
+          "wordBank": [
+            "shared",
+            "the same",
+            "the circuit breaks",
+            "independent",
+            "zero"
+          ],
+          "correctAnswers": [
+            "shared",
+            "the same",
+            "the circuit breaks"
+          ],
+          "markScheme": [
+            "1 mark: shared",
+            "1 mark: the same",
+            "1 mark: the circuit breaks"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "A lighting circuit in a house is always wired in parallel rather than series. Explain why.",
+          "marks": 6,
+          "markScheme": [
+            "1 mark: Each appliance receives the **same potential difference**",
+            "1 mark: Lights operate at their **rated brightness**",
+            "1 mark: Components work **independently** of each other",
+            "1 mark: If one light fails, **others remain on**",
+            "1 mark: Total resistance is **lower**, allowing sufficient current",
+            "1 mark: Reasoned explanation linking circuit behaviour to practical use"
+          ],
+          "diagram": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "mainTopics": [
+    {
+      "id": "energy",
+      "name": "Energy",
+      "subtopics": [
+        { "id": "energy-stores", "name": "Energy Stores", "file": "energy/energy-stores-new.json", "questionCount": 2 },
+        { "id": "energy-resources", "name": "Energy Resources", "file": "energy/energy-resources.json", "questionCount": 3 }
+      ]
+    },
+    { "id": "electricity", "name": "Electricity", "subtopics": [
+        { "id": "sp-circuits", "name": "Series and Parallel Circuits", "file": "electricity/series-parallel-circuits.json", "questionCount": 3 }] },
+    { "id": "particle-model", "name": "Particle Model", "subtopics": [] },
+    { "id": "atomic-structure", "name": "Atomic Structure", "subtopics": [] },
+    { "id": "forces", "name": "Forces", "subtopics": [] },
+    { "id": "waves", "name": "Waves", "subtopics": [] },
+    { "id": "magnetism", "name": "Magnetism", "subtopics": [] },
+    { "id": "space", "name": "Space", "subtopics": [] }
+  ]
+}

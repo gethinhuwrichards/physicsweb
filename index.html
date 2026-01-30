@@ -7,117 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
 </head>
 <body>
-    <!-- Feedback Modal -->
-    <div id="feedback-modal" class="feedback-overlay hidden">
-        <div class="feedback-box">
-            <h2>Please provide your feedback on the site</h2>
-
-            <form id="feedback-form" action="https://formspree.io/f/xbdyjvok" method="POST">
-                <div class="feedback-question">
-                    <label for="feedback-rating">How would you rate the usefulness of the website?</label>
-                    <select id="feedback-rating" name="rating" class="rating-dropdown" required>
-                        <option value="">Select a rating...</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select>
-                </div>
-
-                <div class="feedback-question">
-                    <label for="feedback-suggestions">Please include any suggestions which you think would make the site better</label>
-                    <textarea id="feedback-suggestions" name="suggestions" rows="5" placeholder="Your suggestions..."></textarea>
-                </div>
-
-                <div class="feedback-buttons">
-                    <button type="submit" id="feedback-submit" class="feedback-submit-btn">Submit Feedback</button>
-                    <button type="button" id="feedback-skip" class="feedback-skip-btn">Skip for now</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <header>
-        <h1>Physics Exam Practice</h1>
-    </header>
-
-    <main>
-        <!-- Landing Page View -->
-        <section id="landing-page" class="view active">
-            <div class="landing-content">
-                <p class="landing-tagline">Master. Practice. Excel.</p>
-                <h1 class="landing-title">Ace Your <span class="landing-highlight">Exams</span></h1>
-                <p class="landing-strapline">Exam-style questions with instant marking and detailed mark schemes.</p>
-                <div class="landing-subjects">
-                    <button class="landing-cta-btn" id="subject-physics">Get Started</button>
-                </div>
-                <div class="landing-features" id="landing-explainer">
-                    <div class="landing-feature-card">
-                        <h3>Browse by Topic</h3>
-                        <p>Questions organised by topic and subtopic for targeted revision.</p>
-                    </div>
-                    <div class="landing-feature-card">
-                        <h3>Lock &amp; Mark</h3>
-                        <p>Lock in your answers, then mark against the official mark scheme.</p>
-                    </div>
-                    <div class="landing-feature-card">
-                        <h3>Track Progress</h3>
-                        <p>See your scores per question and track how you improve over time.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Topic Selection View -->
-        <section id="topic-selection" class="view">
-            <button id="back-to-landing" class="back-btn">&larr; Back</button>
-            <h2>Select a Topic</h2>
-            <div id="topic-buttons" class="topic-grid"></div>
-        </section>
-
-        <!-- Subtopic Selection View -->
-        <section id="subtopic-selection" class="view">
-            <button id="back-to-topics" class="back-btn">&larr; Back to Topics</button>
-            <h2 id="selected-main-topic-title"></h2>
-            <div id="subtopic-buttons" class="subtopic-grid"></div>
-            <p id="no-subtopics-message" class="hidden">No subtopics available yet.</p>
-        </section>
-
-        <!-- Question Selection View -->
-        <section id="question-selection" class="view">
-            <button id="back-to-subtopics" class="back-btn">&larr; Back to Subtopics</button>
-            <h2 id="selected-topic-title"></h2>
-            <div id="question-list"></div>
-            <div id="reset-confirm" class="reset-confirm hidden">
-                <p>Are you sure you want to reset this question? Your saved score will be cleared.</p>
-                <div class="reset-confirm-buttons">
-                    <button id="reset-confirm-ok" class="reset-confirm-ok">OK</button>
-                    <button id="reset-confirm-cancel" class="reset-confirm-cancel">Cancel</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Question View -->
-        <section id="question-view" class="view">
-            <button id="back-to-questions" class="back-btn">&larr; Back to Questions</button>
-            <div id="question-container"></div>
-        </section>
-    </main>
-
-   <!-- <script src="dist/question-view.iife.js"></script>-->
+    <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <script src="js/app.js"></script>
 </body>
 </html>
