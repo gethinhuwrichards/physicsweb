@@ -15,7 +15,6 @@ Self Marking
 - At the end we should return to the question page where each question has a clear mark. the total is displayed clearly at the bottom.
 - a rough mockup of what this will look like is provided in the design inspo folder (writtenanswermockup.png) though it will vary slightly by question type
 
-
 TYPE 4: Extended Written Answers
 - Answer is shown in full on the left.  if answer is too long for box user can scroll to see what is written.
 - all marking points for the question should be queried.
