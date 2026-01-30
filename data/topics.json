@@ -4,12 +4,12 @@
       "id": "energy",
       "name": "Energy",
       "subtopics": [
-        { "id": "energy-stores", "name": "Energy Stores", "file": "energy/questions_energy_v5.json", "questionCount": 12 },
-        { "id": "energy-resources", "name": "Energy Resources", "file": "energy/questions_energy_resources.json", "questionCount": 5 }
+        { "id": "energy-stores", "name": "Energy Stores", "file": "energy/energy-stores-new.json" },
+        { "id": "energy-resources", "name": "Energy Resources", "file": "energy/energy-resources.json", "questionCount": 5 }
       ]
     },
     { "id": "electricity", "name": "Electricity", "subtopics": [
-        { "id": "sp-circuits", "name": "Series and Parallel Circuits", "file": "electricity/questions_electricity_seriesparallel.json", "questionCount": 6 }] },
+        { "id": "sp-circuits", "name": "Series and Parallel Circuits", "file": "electricity/series-parallel-circuits.json", "questionCount": 6 }] },
     { "id": "particle-model", "name": "Particle Model", "subtopics": [] },
     { "id": "atomic-structure", "name": "Atomic Structure", "subtopics": [] },
     { "id": "forces", "name": "Forces", "subtopics": [] },

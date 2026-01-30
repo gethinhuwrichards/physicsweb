@@ -36,7 +36,7 @@ Questions are organized hierarchically:
 4. User selects subtopic → questions loaded from subtopic JSON file
 5. Question parts rendered with appropriate input types
 6. "Lock answers and mark" triggers marking mode (inputs disabled, mark schemes shown)
-7. Auto-marking for multiple-choice, numerical, and fill-in-blank; self-marking for written
+7. All question types are fully auto-marked
 
 ### Key Files
 - `js/app.js` - All application logic and state management
@@ -49,10 +49,9 @@ Questions are organized hierarchically:
 
 | Type | Input | Marking |
 |------|-------|---------|
-| `written` | Textarea | Self-marked by student |
-| `multiple-choice` | 3 radio buttons (A, B, C) | Auto-marked |
-| `numerical` | Working textarea + final answer input | Auto-marked if correct; else self-mark working |
-| `fill-in-blank` | Inline inputs within question text | Auto-marked (case-insensitive) |
+| `single-choice` | Radio buttons (A, B, C or A, B, C, D) | Auto-marked |
+| `multi-choice` | Checkboxes with selection limit | Auto-marked (all-or-nothing or partial) |
+| `gap-fill` | Inline `<select>` dropdowns with word bank | Auto-marked (case-insensitive) |
 
 ### LaTeX Support
 Use `$...$` for inline math and `$$...$$` for block math in question text and mark schemes.
@@ -77,52 +76,51 @@ Use `$...$` for inline math and `$$...$$` for block math in question text and ma
 ### Question Part Examples
 See `data/QUESTION_FORMAT.md` for complete schema. Quick examples:
 
-**Written:**
+**Single choice (3 or 4 options):**
 ```json
 {
   "partLabel": "a",
-  "type": "written",
-  "text": "Explain why...",
-  "marks": 2,
-  "markScheme": ["1 mark: Reason 1", "1 mark: Reason 2"],
-  "diagram": null
-}
-```
-
-**Multiple choice (3 options):**
-```json
-{
-  "partLabel": "b",
-  "type": "multiple-choice",
+  "type": "single-choice",
   "text": "Which is correct?",
   "marks": 1,
-  "options": ["Option A", "Option B", "Option C"],
+  "options": ["Option A", "Option B", "Option C", "Option D"],
   "correctAnswer": 2,
   "markScheme": ["Answer: C - explanation"],
   "diagram": null
 }
 ```
 
-**Numerical:**
+**Multi choice (multiple correct):**
 ```json
 {
-  "partLabel": "c",
-  "type": "numerical",
-  "text": "Calculate the energy...",
-  "marks": 3,
-  "correctAnswer": 5760,
-  "markScheme": ["1 mark: Formula", "1 mark: Substitution", "1 mark: Answer"],
+  "partLabel": "b",
+  "type": "multi-choice",
+  "text": "Which two are renewable?",
+  "marks": 2,
+  "options": ["Coal", "Wind", "Oil", "Solar", "Gas"],
+  "correctAnswers": [1, 3],
+  "selectCount": 2,
+  "scoring": "all-or-nothing",
+  "markScheme": ["1 mark: Wind", "1 mark: Solar"],
   "diagram": null
 }
 ```
 
-**Fill-in-blank:**
+**Gap fill (dropdown word bank):**
 ```json
 {
-  "partLabel": "d",
-  "type": "fill-in-blank",
-  "text": "The ___ energy decreases and ___ energy increases.",
+  "partLabel": "c",
+  "type": "gap-fill",
+  "text": "Complete the sentence using words from the box.",
   "marks": 2,
+  "segments": [
+    "The ",
+    { "blank": 0 },
+    " energy decreases and ",
+    { "blank": 1 },
+    " energy increases."
+  ],
+  "wordBank": ["chemical", "kinetic", "nuclear", "elastic potential"],
   "correctAnswers": ["chemical", "kinetic"],
   "markScheme": ["1 mark: chemical", "1 mark: kinetic"],
   "diagram": null

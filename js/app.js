@@ -383,19 +383,13 @@ feedbackSkipBtn.addEventListener('click', closeFeedbackModal);
 feedbackRating.addEventListener('change', function() {
     const colors = {
         '': '',
-        '1': '#f8b4b4',
-        '2': '#f9c4a8',
-        '3': '#fad4a0',
-        '4': '#fbe4a0',
-        '5': '#fcf4a0',
-        '6': '#e8f5a0',
-        '7': '#d4eca0',
-        '8': '#c0e8a8',
-        '9': '#a8e4b0',
-        '10': '#a0e0b0'
+        '1': '#3b1c1c', '2': '#3b2a1c', '3': '#3b351c',
+        '4': '#33361c', '5': '#2b361c', '6': '#1f3322',
+        '7': '#1a3328', '8': '#16332e', '9': '#123330',
+        '10': '#0d3326'
     };
     this.style.backgroundColor = colors[this.value] || '';
-    this.style.color = '#333';
+    this.style.color = '#e8eaf0';
 });
 
 // Initialize feedback modal on load

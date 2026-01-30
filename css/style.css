@@ -1,3 +1,49 @@
+/* ============================================
+   CSS Custom Properties — Dark Theme Palette
+   ============================================ */
+
+:root {
+    --bg-body: #0f1219;
+    --bg-surface: #161b26;
+    --bg-surface-alt: #1c2333;
+    --bg-surface-raised: #232b3e;
+    --bg-input: #1c2333;
+    --bg-input-focus: #232b3e;
+
+    --text-primary: #e8eaf0;
+    --text-secondary: #8b92a5;
+    --text-tertiary: #5a6178;
+    --text-on-accent: #ffffff;
+
+    --accent-blue: #4B7BF5;
+    --accent-blue-hover: #3A66D9;
+    --accent-blue-muted: #2a3f6e;
+
+    --color-correct: #34D399;
+    --color-correct-bg: #0d3326;
+    --color-correct-border: #28a77a;
+    --color-correct-text: #6ee7b7;
+    --color-incorrect: #F87171;
+    --color-incorrect-bg: #3b1c1c;
+    --color-incorrect-border: #dc5656;
+    --color-incorrect-text: #fca5a5;
+
+    --color-progress-fill: #34D399;
+    --color-progress-track: #232b3e;
+    --color-mark-scheme-bg: #1f2636;
+    --color-mark-scheme-border: #d4a843;
+    --color-mark-scheme-text: #e8c96b;
+
+    --border-default: #2a3042;
+    --border-subtle: #1f2636;
+    --border-input: #2a3042;
+    --border-input-focus: #4B7BF5;
+}
+
+/* ============================================
+   Global
+   ============================================ */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,24 +51,42 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f5f5f5;
+    color: var(--text-primary);
+    background-color: var(--bg-body);
     padding: 20px;
     max-width: 900px;
     margin: 0 auto;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-body);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-default);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-tertiary);
 }
 
 header {
     text-align: center;
     margin-bottom: 30px;
     padding-bottom: 20px;
-    border-bottom: 2px solid #2c5282;
+    border-bottom: 2px solid var(--accent-blue);
 }
 
 header h1 {
-    color: #2c5282;
+    color: var(--accent-blue);
 }
 
 /* Views */
@@ -38,7 +102,10 @@ header h1 {
     display: none !important;
 }
 
-/* Topic Selection */
+/* ============================================
+   Topic Selection
+   ============================================ */
+
 .topic-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -49,16 +116,16 @@ header h1 {
 .topic-btn {
     padding: 20px;
     font-size: 1.1rem;
-    background: #2c5282;
-    color: white;
+    background: var(--accent-blue);
+    color: var(--text-on-accent);
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     cursor: pointer;
     transition: background 0.2s, transform 0.1s;
 }
 
 .topic-btn:hover {
-    background: #1a365d;
+    background: var(--accent-blue-hover);
     transform: translateY(-2px);
 }
 
@@ -73,7 +140,10 @@ header h1 {
     margin-top: 4px;
 }
 
-/* Subtopic Selection */
+/* ============================================
+   Subtopic Selection
+   ============================================ */
+
 .subtopic-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -84,16 +154,17 @@ header h1 {
 .subtopic-btn {
     padding: 15px;
     font-size: 1rem;
-    background: #4a5568;
-    color: white;
-    border: none;
-    border-radius: 6px;
+    background: var(--bg-surface-alt);
+    color: var(--text-primary);
+    border: 1px solid var(--border-default);
+    border-radius: 12px;
     cursor: pointer;
-    transition: background 0.2s, transform 0.1s;
+    transition: background 0.2s, transform 0.1s, border-color 0.2s;
 }
 
 .subtopic-btn:hover {
-    background: #2d3748;
+    background: var(--bg-surface-raised);
+    border-color: var(--accent-blue-muted);
     transform: translateY(-2px);
 }
 
@@ -101,15 +172,18 @@ header h1 {
     margin-top: 20px;
     padding: 30px;
     text-align: center;
-    color: #718096;
-    background: #f7fafc;
+    color: var(--text-secondary);
+    background: var(--bg-surface);
     border-radius: 8px;
     font-style: italic;
 }
 
-/* Question List */
+/* ============================================
+   Question List
+   ============================================ */
+
 .question-item {
-    background: white;
+    background: var(--bg-surface);
     padding: 15px 20px;
     margin-bottom: 10px;
     border-radius: 8px;
@@ -117,20 +191,22 @@ header h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: box-shadow 0.2s;
+    border: 1px solid var(--border-default);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.2s, border-color 0.2s;
 }
 
 .question-item:hover {
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    border-color: var(--accent-blue-muted);
 }
 
 .question-item .marks {
-    background: #e2e8f0;
+    background: var(--bg-surface-raised);
     padding: 5px 12px;
     border-radius: 20px;
     font-size: 0.9rem;
-    color: #4a5568;
+    color: var(--text-secondary);
 }
 
 .question-item-title {
@@ -148,7 +224,7 @@ header h1 {
 .question-progress {
     width: 100px;
     height: 24px;
-    background: #e2e8f0;
+    background: var(--color-progress-track);
     border-radius: 12px;
     overflow: hidden;
     position: relative;
@@ -156,7 +232,7 @@ header h1 {
 
 .question-progress-fill {
     height: 100%;
-    background: #48bb78;
+    background: var(--color-progress-fill);
     border-radius: 12px;
     transition: width 0.3s ease;
 }
@@ -172,38 +248,38 @@ header h1 {
     justify-content: center;
     font-size: 0.8rem;
     font-weight: 600;
-    color: #2d3748;
+    color: var(--text-primary);
 }
 
 .question-reset-btn {
     background: none;
-    border: 1px solid #cbd5e0;
+    border: 1px solid var(--border-default);
     border-radius: 4px;
     padding: 4px 8px;
     font-size: 0.75rem;
-    color: #718096;
+    color: var(--text-secondary);
     cursor: pointer;
     white-space: nowrap;
 }
 
 .question-reset-btn:hover {
-    background: #fed7d7;
-    border-color: #fc8181;
-    color: #c53030;
+    background: var(--color-incorrect-bg);
+    border-color: var(--color-incorrect-border);
+    color: var(--color-incorrect-text);
 }
 
 .reset-confirm {
     margin-top: 16px;
     padding: 16px 20px;
-    background: #fff5f5;
-    border: 1px solid #fc8181;
+    background: var(--color-incorrect-bg);
+    border: 1px solid var(--color-incorrect-border);
     border-radius: 8px;
     text-align: center;
 }
 
 .reset-confirm p {
     margin-bottom: 12px;
-    color: #2d3748;
+    color: var(--text-primary);
     font-size: 0.95rem;
 }
 
@@ -215,35 +291,38 @@ header h1 {
 
 .reset-confirm-ok {
     padding: 8px 24px;
-    background: #e53e3e;
-    color: white;
+    background: var(--color-incorrect);
+    color: var(--text-on-accent);
     border: none;
     border-radius: 6px;
     cursor: pointer;
 }
 
 .reset-confirm-ok:hover {
-    background: #c53030;
+    background: var(--color-incorrect-border);
 }
 
 .reset-confirm-cancel {
     padding: 8px 24px;
-    background: #e2e8f0;
-    color: #4a5568;
+    background: var(--bg-surface-raised);
+    color: var(--text-secondary);
     border: none;
     border-radius: 6px;
     cursor: pointer;
 }
 
 .reset-confirm-cancel:hover {
-    background: #cbd5e0;
+    background: var(--bg-surface-alt);
 }
 
-/* Back Button */
+/* ============================================
+   Back Button
+   ============================================ */
+
 .back-btn {
     background: none;
     border: none;
-    color: #2c5282;
+    color: var(--accent-blue);
     font-size: 1rem;
     cursor: pointer;
     margin-bottom: 20px;
@@ -254,35 +333,42 @@ header h1 {
     text-decoration: underline;
 }
 
-/* Question Display */
+/* ============================================
+   Question Display
+   ============================================ */
+
 #question-container {
-    background: white;
+    background: var(--bg-surface);
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 1px solid var(--border-default);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .question-header {
     margin-bottom: 25px;
     padding-bottom: 15px;
-    border-bottom: 1px solid #e2e8f0;
+    border-bottom: 1px solid var(--border-subtle);
 }
 
 .question-header h2 {
-    color: #2c5282;
+    color: var(--accent-blue);
     margin-bottom: 5px;
 }
 
 .question-header .total-marks {
-    color: #718096;
+    color: var(--text-secondary);
     font-size: 0.95rem;
 }
 
-/* Question Parts */
+/* ============================================
+   Question Parts
+   ============================================ */
+
 .question-part {
     margin-bottom: 30px;
     padding-bottom: 25px;
-    border-bottom: 1px solid #e2e8f0;
+    border-bottom: 1px solid var(--border-subtle);
 }
 
 .question-part:last-child {
@@ -292,7 +378,7 @@ header h1 {
 
 .part-label {
     font-weight: 600;
-    color: #2c5282;
+    color: var(--accent-blue);
     font-size: 1.1rem;
     margin-bottom: 10px;
 }
@@ -302,7 +388,7 @@ header h1 {
 }
 
 .part-marks {
-    color: #718096;
+    color: var(--text-secondary);
     font-size: 0.9rem;
     margin-bottom: 15px;
 }
@@ -310,33 +396,15 @@ header h1 {
 .part-diagram {
     max-width: 100%;
     margin-bottom: 15px;
-    border-radius: 4px;
-}
-
-/* Answer Input */
-.answer-textarea {
-    width: 100%;
-    min-height: 100px;
-    padding: 12px;
-    border: 2px solid #e2e8f0;
     border-radius: 6px;
-    font-family: inherit;
-    font-size: 1rem;
-    resize: vertical;
-    transition: border-color 0.2s;
+    background: #fff;
+    padding: 8px;
 }
 
-.answer-textarea:focus {
-    outline: none;
-    border-color: #2c5282;
-}
+/* ============================================
+   Multiple Choice / Single Choice
+   ============================================ */
 
-.answer-textarea:disabled {
-    background: #f7fafc;
-    color: #4a5568;
-}
-
-/* Multiple Choice */
 .mc-options {
     display: flex;
     flex-direction: column;
@@ -347,66 +415,76 @@ header h1 {
     display: flex;
     align-items: center;
     padding: 12px 15px;
-    background: #f7fafc;
-    border: 2px solid #e2e8f0;
+    background: var(--bg-input);
+    border: 2px solid var(--border-input);
     border-radius: 6px;
     cursor: pointer;
     transition: border-color 0.2s, background 0.2s;
 }
 
 .mc-option:hover {
-    border-color: #cbd5e0;
+    border-color: var(--accent-blue-muted);
+    background: var(--bg-input-focus);
 }
 
-.mc-option input[type="radio"] {
+.mc-option input[type="radio"],
+.mc-option input[type="checkbox"] {
     margin-right: 12px;
     width: 18px;
     height: 18px;
+    accent-color: var(--accent-blue);
 }
 
-.mc-option input[type="radio"]:disabled {
+.mc-option input[type="radio"]:disabled,
+.mc-option input[type="checkbox"]:disabled {
     cursor: not-allowed;
 }
 
 .mc-option.correct {
-    background: #c6f6d5;
-    border-color: #48bb78;
+    background: var(--color-correct-bg);
+    border-color: var(--color-correct-border);
 }
 
 .mc-option.incorrect {
-    background: #fed7d7;
-    border-color: #fc8181;
+    background: var(--color-incorrect-bg);
+    border-color: var(--color-incorrect-border);
 }
 
 .mc-option.selected {
-    border-color: #2c5282;
+    border-color: var(--accent-blue);
 }
 
-/* Mark Scheme */
+/* ============================================
+   Mark Scheme (inline box)
+   ============================================ */
+
 .mark-scheme {
     margin-top: 20px;
     padding: 15px;
-    background: #fffaf0;
-    border: 1px solid #ecc94b;
+    background: var(--color-mark-scheme-bg);
+    border: 1px solid var(--color-mark-scheme-border);
     border-radius: 6px;
 }
 
 .mark-scheme h4 {
-    color: #744210;
+    color: var(--color-mark-scheme-text);
     margin-bottom: 10px;
     font-size: 0.95rem;
 }
 
 .mark-scheme ul {
     margin-left: 20px;
-    color: #744210;
+    color: var(--color-mark-scheme-text);
 }
 
 .mark-scheme li {
     margin-bottom: 5px;
 }
 
-/* Self Marking */
+/* ============================================
+   Self Marking
+   ============================================ */
+
 .self-mark {
     margin-top: 15px;
     display: flex;
@@ -416,25 +494,27 @@ header h1 {
 
 .self-mark label {
     font-weight: 500;
-    color: #4a5568;
+    color: var(--text-secondary);
 }
 
 .self-mark input[type="number"] {
     width: 60px;
     padding: 8px;
-    border: 2px solid #e2e8f0;
+    border: 2px solid var(--border-input);
     border-radius: 4px;
     font-size: 1rem;
     text-align: center;
+    background: var(--bg-input);
+    color: var(--text-primary);
 }
 
 .self-mark input[type="number"]:focus {
     outline: none;
-    border-color: #2c5282;
+    border-color: var(--border-input-focus);
 }
 
 .self-mark .max-marks {
-    color: #718096;
+    color: var(--text-secondary);
 }
 
 .auto-mark-result {
@@ -445,16 +525,19 @@ header h1 {
 }
 
 .auto-mark-result.correct {
-    background: #c6f6d5;
-    color: #276749;
+    background: var(--color-correct-bg);
+    color: var(--color-correct-text);
 }
 
 .auto-mark-result.incorrect {
-    background: #fed7d7;
-    color: #c53030;
+    background: var(--color-incorrect-bg);
+    color: var(--color-incorrect-text);
 }
 
-/* Submit Button */
+/* ============================================
+   Submit Button
+   ============================================ */
+
 .submit-btn {
     display: block;
     width: 100%;
@@ -462,8 +545,8 @@ header h1 {
     margin-top: 20px;
     font-size: 1.1rem;
     font-weight: 600;
-    background: #48bb78;
-    color: white;
+    background: var(--accent-blue);
+    color: var(--text-on-accent);
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -471,41 +554,46 @@ header h1 {
 }
 
 .submit-btn:hover {
-    background: #38a169;
+    background: var(--accent-blue-hover);
 }
 
 .submit-btn:disabled {
-    background: #a0aec0;
+    background: var(--bg-surface-raised);
+    color: var(--text-tertiary);
     cursor: not-allowed;
 }
 
-/* Marking Summary */
+/* ============================================
+   Marking Summary
+   ============================================ */
+
 .marking-summary {
     margin-top: 25px;
     padding: 25px;
-    background: white;
+    background: var(--bg-surface);
     border-radius: 8px;
     text-align: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 1px solid var(--border-default);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .marking-summary h3 {
-    color: #2c5282;
+    color: var(--accent-blue);
     margin-bottom: 10px;
 }
 
 .marking-summary p {
     font-size: 2rem;
     font-weight: 700;
-    color: #2d3748;
+    color: var(--text-primary);
 }
 
 .bank-score-btn {
     margin-top: 20px;
     padding: 12px 30px;
     font-size: 1rem;
-    background: #2c5282;
-    color: white;
+    background: var(--accent-blue);
+    color: var(--text-on-accent);
     border: none;
     border-radius: 6px;
     cursor: pointer;
@@ -513,7 +601,7 @@ header h1 {
 }
 
 .bank-score-btn:hover {
-    background: #1a365d;
+    background: var(--accent-blue-hover);
 }
 
 .marking-summary-buttons {
@@ -526,8 +614,8 @@ header h1 {
 .reset-question-btn {
     padding: 12px 30px;
     font-size: 1rem;
-    background: #e2e8f0;
-    color: #4a5568;
+    background: var(--bg-surface-raised);
+    color: var(--text-secondary);
     border: none;
     border-radius: 6px;
     cursor: pointer;
@@ -535,11 +623,11 @@ header h1 {
 }
 
 .reset-question-btn:hover {
-    background: #cbd5e0;
+    background: var(--bg-surface-alt);
 }
 
 /* ============================================
-   Marking Mode - Part States
+   Marking Mode — Part States
    ============================================ */
 
 .question-part.marking-dimmed {
@@ -558,7 +646,7 @@ header h1 {
 }
 
 .question-part.marking-alt {
-    background: #f7fafc;
+    background: var(--bg-surface-alt);
     border-radius: 6px;
     padding: 15px;
     margin-left: -15px;
@@ -566,62 +654,241 @@ header h1 {
 }
 
 /* ============================================
-   Mark Scheme Drawer (slides from right)
+   Extended Written Textarea
    ============================================ */
 
-.mark-scheme-drawer {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 400px;
-    max-width: 90vw;
-    height: 100vh;
-    background: white;
-    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
-    transform: translateX(100%);
-    transition: transform 0.35s ease;
-    z-index: 950;
-    overflow-y: auto;
+.ew-container {
     display: flex;
     flex-direction: column;
 }
 
-.mark-scheme-drawer.open {
-    transform: translateX(0);
+.ew-textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 12px 14px;
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background: var(--bg-input);
+    border: 2px solid var(--border-input);
+    border-radius: 6px;
+    resize: vertical;
+    transition: border-color 0.2s;
 }
 
-#question-container.drawer-open,
-.drawer-open {
-    margin-right: 420px;
-    transition: margin-right 0.35s ease;
+.ew-textarea:focus {
+    outline: none;
+    border-color: var(--border-input-focus);
+    background: var(--bg-input-focus);
 }
 
-.drawer-header {
-    padding: 20px 24px 12px;
-    border-bottom: 1px solid #e2e8f0;
+.ew-textarea:read-only,
+.ew-textarea:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    background: var(--bg-surface-alt);
 }
 
-.drawer-header h3 {
-    color: #2c5282;
-    font-size: 1.1rem;
-    margin-bottom: 4px;
+.ew-textarea::placeholder {
+    color: var(--text-tertiary);
 }
 
-.drawer-counter {
-    font-size: 0.85rem;
-    color: #718096;
+.ew-char-counter {
+    text-align: right;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-top: 4px;
 }
 
-.drawer-instruction {
-    font-size: 0.85rem;
-    color: #4a5568;
-    margin-top: 6px;
-    font-style: italic;
+.ew-char-counter.near-limit {
+    color: var(--color-incorrect);
+    font-weight: 600;
 }
 
-.drawer-body {
+/* ============================================
+   Self-Marking Overlay (full page split panel)
+   ============================================ */
+
+.self-marking-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 950;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-body);
+}
+
+.self-marking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 16px 24px;
+    background: var(--bg-surface);
+    border-bottom: 1px solid var(--border-default);
+    flex-shrink: 0;
+}
+
+.self-marking-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--accent-blue);
+}
+
+.self-marking-counter {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.self-marking-panels {
     flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    overflow: hidden;
+}
+
+.self-marking-left,
+.self-marking-right {
+    padding: 24px;
+    overflow-y: auto;
+}
+
+.self-marking-left {
+    border-right: 1px solid var(--border-default);
+    background: var(--bg-surface);
+}
+
+.self-marking-right {
+    background: var(--bg-surface-alt);
+}
+
+.self-marking-panel-heading {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 16px;
+}
+
+.self-marking-question-text {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+.self-marking-answer-display {
+    font-size: 1rem;
+    color: var(--text-primary);
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background: var(--bg-surface-alt);
+    border-radius: 6px;
+    padding: 14px 16px;
+    border: 1px solid var(--border-subtle);
+}
+
+.self-marking-no-answer {
+    font-style: italic;
+    color: var(--text-tertiary);
+}
+
+.self-marking-points {
+    display: flex;
+    flex-direction: column;
+}
+
+.self-marking-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 24px;
+    background: var(--bg-surface);
+    border-top: 1px solid var(--border-default);
+    flex-shrink: 0;
+}
+
+.self-marking-nav-btn {
+    padding: 10px 24px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    background: var(--bg-surface-raised);
+    border: 1px solid var(--border-default);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.self-marking-nav-btn:hover:not(:disabled) {
+    background: var(--bg-surface-alt);
+    color: var(--text-primary);
+}
+
+.self-marking-nav-btn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.self-marking-submit {
+    padding: 12px 36px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-on-accent);
+    background: var(--accent-blue);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.self-marking-submit:hover:not(:disabled) {
+    background: var(--accent-blue-hover);
+}
+
+.self-marking-submit:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* ============================================
+   Part Score Badge (complete phase)
+   ============================================ */
+
+.part-score-badge {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.part-score-badge.score-full {
+    background: var(--color-correct-bg);
+    color: var(--color-correct-text);
+    border: 1px solid var(--color-correct-border);
+}
+
+.part-score-badge.score-zero {
+    background: var(--color-incorrect-bg);
+    color: var(--color-incorrect-text);
+    border: 1px solid var(--color-incorrect-border);
+}
+
+.part-score-badge.score-partial {
+    background: var(--accent-blue-muted);
+    color: var(--accent-blue);
+    border: 1px solid var(--accent-blue);
+}
+
+/* Bold keywords in marking points */
+.marking-point-text strong {
+    color: var(--accent-blue);
+    font-weight: 700;
 }
 
 /* ============================================
@@ -633,7 +900,7 @@ header h1 {
     flex-direction: column;
     gap: 6px;
     padding: 14px 12px;
-    border-bottom: 1px solid #edf2f7;
+    border-bottom: 1px solid var(--border-subtle);
     border-radius: 6px;
     margin-bottom: 8px;
     transition: opacity 0.2s;
@@ -651,7 +918,7 @@ header h1 {
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: #718096;
+    color: var(--text-secondary);
     font-weight: 600;
 }
 
@@ -665,7 +932,7 @@ header h1 {
 .marking-point-text {
     flex: 1;
     font-size: 0.95rem;
-    color: #2d3748;
+    color: var(--text-primary);
     line-height: 1.4;
 }
 
@@ -689,33 +956,33 @@ header h1 {
 }
 
 .mark-tick {
-    border: 2px solid #48bb78;
-    background: white;
-    color: #48bb78;
+    border: 2px solid var(--color-correct);
+    background: var(--bg-surface);
+    color: var(--color-correct);
 }
 
 .mark-tick:hover:not(:disabled) {
-    background: #c6f6d5;
+    background: var(--color-correct-bg);
 }
 
 .mark-tick.selected {
-    background: #48bb78;
-    color: white;
+    background: var(--color-correct);
+    color: var(--text-on-accent);
 }
 
 .mark-cross {
-    border: 2px solid #fc8181;
-    background: white;
-    color: #fc8181;
+    border: 2px solid var(--color-incorrect);
+    background: var(--bg-surface);
+    color: var(--color-incorrect);
 }
 
 .mark-cross:hover:not(:disabled) {
-    background: #fed7d7;
+    background: var(--color-incorrect-bg);
 }
 
 .mark-cross.selected {
-    background: #fc8181;
-    color: white;
+    background: var(--color-incorrect);
+    color: var(--text-on-accent);
 }
 
 .mark-tick:disabled,
@@ -726,7 +993,7 @@ header h1 {
 
 .marking-point-locked-note {
     font-size: 0.8rem;
-    color: #c53030;
+    color: var(--color-incorrect);
     font-style: italic;
     margin-top: 2px;
 }
@@ -738,21 +1005,22 @@ header h1 {
 .final-score-panel {
     margin-top: 25px;
     padding: 25px;
-    background: white;
+    background: var(--bg-surface);
     border-radius: 8px;
     text-align: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-default);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .final-score-panel h3 {
-    color: #2c5282;
+    color: var(--accent-blue);
     margin-bottom: 10px;
 }
 
 .final-score-value {
     font-size: 2rem;
     font-weight: 700;
-    color: #2d3748;
+    color: var(--text-primary);
 }
 
 .final-score-buttons {
@@ -771,162 +1039,124 @@ header h1 {
 
 .reset-inline-confirm span {
     font-size: 0.9rem;
-    color: #4a5568;
+    color: var(--text-secondary);
 }
 
-/* Numerical Answer */
-.numerical-answer {
-    background: #f7fafc;
-    padding: 15px;
-    border-radius: 6px;
-    border: 2px solid #e2e8f0;
-}
+/* ============================================
+   Multi-Choice Selection Info
+   ============================================ */
 
-.numerical-answer label {
-    display: block;
+.mc-selection-info {
     font-weight: 500;
-    color: #4a5568;
-    margin-bottom: 8px;
-}
-
-.numerical-answer .working-out {
-    width: 100%;
-    min-height: 80px;
-    padding: 10px;
-    border: 1px solid #cbd5e0;
-    border-radius: 4px;
-    font-family: inherit;
-    font-size: 1rem;
-    resize: vertical;
-    margin-bottom: 15px;
-}
-
-.numerical-answer .working-out:focus {
-    outline: none;
-    border-color: #2c5282;
-}
-
-.numerical-answer .working-out:disabled {
-    background: #edf2f7;
-}
-
-.numerical-answer .final-answer-row {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.numerical-answer .final-answer-input {
-    width: 120px;
-    padding: 10px;
-    border: 2px solid #2c5282;
-    border-radius: 4px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    text-align: center;
-}
-
-.numerical-answer .final-answer-input:focus {
-    outline: none;
-    border-color: #1a365d;
-}
-
-.numerical-answer .final-answer-input:disabled {
-    background: #edf2f7;
-}
-
-.numerical-answer .final-answer-input.correct {
-    border-color: #48bb78;
-    background: #c6f6d5;
-}
-
-.numerical-answer .final-answer-input.incorrect {
-    border-color: #fc8181;
-    background: #fed7d7;
-}
-
-.numerical-note {
-    margin-top: 10px;
-    font-size: 0.85rem;
-    color: #718096;
-    font-style: italic;
-}
-
-/* Fill in the Blank */
-.fill-blank-header {
-    font-weight: 500;
+    color: var(--text-secondary);
     margin-bottom: 10px;
-    color: #2d3748;
+    font-size: 0.95rem;
 }
 
-.fill-blank-options-box {
-    border: 2px solid #2c5282;
+.mc-selection-remaining {
+    color: var(--text-tertiary);
+    font-weight: 400;
+}
+
+/* ============================================
+   Gap Fill
+   ============================================ */
+
+.gf-word-bank {
+    border: 2px solid var(--accent-blue-muted);
     padding: 15px 20px;
     border-radius: 6px;
     margin-bottom: 15px;
-    background: #f7fafc;
+    background: var(--bg-surface-alt);
     font-size: 1.05rem;
     line-height: 1.8;
+    color: var(--text-primary);
 }
 
-.fill-blank-options-box strong {
+.gf-word-bank strong {
     margin-right: 20px;
-    color: #1a365d;
+    color: var(--accent-blue);
 }
 
-.fill-blank-sentence {
+.gf-sentence {
     margin-top: 10px;
-    line-height: 2;
+    line-height: 2.4;
 }
 
-.fill-blank-input {
+.gf-blank-wrapper {
+    display: inline;
+}
+
+.gf-dropdown {
     display: inline-block;
-    width: 150px;
     padding: 4px 8px;
     margin: 0 4px;
     border: none;
-    border-bottom: 2px solid #2c5282;
+    border-bottom: 2px solid var(--accent-blue);
     background: transparent;
     font-family: inherit;
     font-size: inherit;
-    text-align: center;
+    color: var(--text-primary);
+    cursor: pointer;
     vertical-align: baseline;
+    appearance: auto;
 }
 
-.fill-blank-input:focus {
+.gf-dropdown:focus {
     outline: none;
-    border-bottom-color: #1a365d;
-    background: #ebf8ff;
+    border-bottom-color: var(--accent-blue-hover);
+    background: var(--bg-input-focus);
 }
 
-.fill-blank-input:disabled {
-    background: #edf2f7;
-    border-bottom-style: solid;
+.gf-dropdown:disabled {
+    background: var(--bg-surface-alt);
+    cursor: not-allowed;
+    color: var(--text-tertiary);
 }
 
-.fill-blank-input.correct {
-    border-bottom-color: #48bb78;
-    background: #c6f6d5;
+.gf-dropdown option {
+    background: var(--bg-surface-raised);
+    color: var(--text-primary);
 }
 
-.fill-blank-input.incorrect {
-    border-bottom-color: #fc8181;
-    background: #fed7d7;
+.gf-dropdown.correct {
+    border-bottom-color: var(--color-correct);
+    background: var(--color-correct-bg);
 }
 
-/* KaTeX overrides */
+.gf-dropdown.incorrect {
+    border-bottom-color: var(--color-incorrect);
+    background: var(--color-incorrect-bg);
+}
+
+.gf-correct-answer {
+    display: inline-block;
+    margin-left: 4px;
+    font-size: 0.85rem;
+    color: var(--color-correct-text);
+    font-weight: 600;
+}
+
+/* ============================================
+   KaTeX overrides
+   ============================================ */
+
 .katex {
     font-size: 1.1em;
+    color: var(--text-primary);
 }
 
-/* Feedback Modal */
+/* ============================================
+   Feedback Modal
+   ============================================ */
+
 .feedback-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.75);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -938,17 +1168,17 @@ header h1 {
 }
 
 .feedback-box {
-    background: white;
+    background: var(--bg-surface-raised);
     padding: 30px 40px;
     border-radius: 12px;
-    border: 3px dashed #48bb78;
+    border: 2px solid var(--accent-blue);
     max-width: 500px;
     width: 90%;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
 
 .feedback-box h2 {
-    color: #2c5282;
+    color: var(--accent-blue);
     margin-bottom: 25px;
     text-align: center;
     font-size: 1.3rem;
@@ -961,7 +1191,7 @@ header h1 {
 .feedback-question label {
     display: block;
     font-weight: 500;
-    color: #2d3748;
+    color: var(--text-primary);
     margin-bottom: 8px;
 }
 
@@ -969,43 +1199,43 @@ header h1 {
     width: 100%;
     padding: 12px;
     font-size: 1rem;
-    border: 2px solid #e2e8f0;
+    border: 2px solid var(--border-input);
     border-radius: 6px;
     cursor: pointer;
-    background: white;
+    background: var(--bg-input);
+    color: var(--text-primary);
 }
 
 .rating-dropdown:focus {
     outline: none;
-    border-color: #2c5282;
+    border-color: var(--border-input-focus);
 }
 
-/* Rating dropdown option colors - pastel red to green gradient */
-.rating-dropdown option[value="1"] { background: #f8b4b4; color: #333; }
-.rating-dropdown option[value="2"] { background: #f9c4a8; color: #333; }
-.rating-dropdown option[value="3"] { background: #fad4a0; color: #333; }
-.rating-dropdown option[value="4"] { background: #fbe4a0; color: #333; }
-.rating-dropdown option[value="5"] { background: #fcf4a0; color: #333; }
-.rating-dropdown option[value="6"] { background: #e8f5a0; color: #333; }
-.rating-dropdown option[value="7"] { background: #d4eca0; color: #333; }
-.rating-dropdown option[value="8"] { background: #c0e8a8; color: #333; }
-.rating-dropdown option[value="9"] { background: #a8e4b0; color: #333; }
-.rating-dropdown option[value="10"] { background: #a0e0b0; color: #333; }
+.rating-dropdown option {
+    background: var(--bg-surface-raised);
+    color: var(--text-primary);
+}
 
 .feedback-question textarea {
     width: 100%;
     padding: 12px;
     font-size: 1rem;
     font-family: inherit;
-    border: 2px solid #e2e8f0;
+    border: 2px solid var(--border-input);
     border-radius: 6px;
     resize: vertical;
     min-height: 100px;
+    background: var(--bg-input);
+    color: var(--text-primary);
 }
 
 .feedback-question textarea:focus {
     outline: none;
-    border-color: #2c5282;
+    border-color: var(--border-input-focus);
+}
+
+.feedback-question textarea::placeholder {
+    color: var(--text-tertiary);
 }
 
 .feedback-buttons {
@@ -1019,8 +1249,8 @@ header h1 {
     padding: 12px 20px;
     font-size: 1rem;
     font-weight: 600;
-    background: #48bb78;
-    color: white;
+    background: var(--accent-blue);
+    color: var(--text-on-accent);
     border: none;
     border-radius: 6px;
     cursor: pointer;
@@ -1028,15 +1258,15 @@ header h1 {
 }
 
 .feedback-submit-btn:hover {
-    background: #38a169;
+    background: var(--accent-blue-hover);
 }
 
 .feedback-skip-btn {
     flex: 1;
     padding: 12px 20px;
     font-size: 1rem;
-    background: #e2e8f0;
-    color: #4a5568;
+    background: var(--bg-surface-alt);
+    color: var(--text-secondary);
     border: none;
     border-radius: 6px;
     cursor: pointer;
@@ -1044,7 +1274,7 @@ header h1 {
 }
 
 .feedback-skip-btn:hover {
-    background: #cbd5e0;
+    background: var(--bg-surface-raised);
 }
 
 /* ============================================
@@ -1068,57 +1298,96 @@ header h1 {
     width: 100%;
 }
 
+.landing-tagline {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent-blue);
+    margin-bottom: 12px;
+}
+
 .landing-title {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 700;
-    color: #000;
-    letter-spacing: 0.08em;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
     margin-bottom: 16px;
     line-height: 1.1;
 }
 
+.landing-highlight {
+    color: var(--accent-blue);
+}
+
 .landing-strapline {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1.4rem;
-    color: #555;
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+}
+
+.landing-subjects {
     margin-bottom: 60px;
-    font-style: italic;
 }
 
-.landing-choose {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1rem;
-    color: #888;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-}
-
-.landing-subject-btn {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1.5rem;
-    color: #000;
-    background: none;
-    border: 2px solid #000;
+.landing-cta-btn {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-on-accent);
+    background: var(--accent-blue);
+    border: none;
     padding: 14px 48px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background 0.2s, color 0.2s;
-    letter-spacing: 0.03em;
+    transition: background 0.2s, transform 0.1s;
+    letter-spacing: 0.02em;
 }
 
-.landing-subject-btn:hover {
-    background: #000;
-    color: #fff;
+.landing-cta-btn:hover {
+    background: var(--accent-blue-hover);
+    transform: translateY(-2px);
 }
 
-/* Hide header and set white bg on landing page */
+/* Hide header and set dark bg on landing page */
 body.landing-active {
-    background-color: #fff;
+    background-color: var(--bg-body);
 }
 
 body.landing-active header {
     display: none;
+}
+
+/* ============================================
+   Landing Page — Feature Cards
+   ============================================ */
+
+.landing-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.landing-feature-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-default);
+    border-radius: 12px;
+    padding: 24px 20px;
+    text-align: left;
+}
+
+.landing-feature-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.landing-feature-card p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
 }
 
 /* ============================================
@@ -1127,14 +1396,14 @@ body.landing-active header {
 
 .landing-strapline,
 .landing-subjects,
-.landing-explainer {
+.landing-features {
     opacity: 0;
     transition: opacity 0.8s ease;
 }
 
 .landing-strapline.fade-in,
 .landing-subjects.fade-in,
-.landing-explainer.fade-in {
+.landing-features.fade-in {
     opacity: 1;
 }
 
@@ -1147,43 +1416,14 @@ body.landing-active header {
 }
 
 /* ============================================
-   Explainer Box
+   Responsive
    ============================================ */
 
-.landing-explainer {
-    margin-top: 40px;
-    border: 2px dashed #1a6b3c;
-    border-radius: 8px;
-    padding: 24px 32px;
-    text-align: left;
-    max-width: 420px;
-    margin-left: auto;
-    margin-right: auto;
+@media (max-width: 768px) {
+    .landing-features {
+        grid-template-columns: 1fr 1fr;
+    }
 }
-
-.landing-explainer h3 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1.2rem;
-    color: #1a6b3c;
-    margin-bottom: 12px;
-}
-
-.landing-explainer ul {
-    list-style: disc;
-    padding-left: 20px;
-}
-
-.landing-explainer li {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1rem;
-    color: #333;
-    margin-bottom: 6px;
-    line-height: 1.5;
-}
-
-/* ============================================
-   Responsive - Landing Page
-   ============================================ */
 
 @media (max-width: 600px) {
     .landing-title {
@@ -1191,17 +1431,17 @@ body.landing-active header {
     }
 
     .landing-strapline {
-        font-size: 1.1rem;
-        margin-bottom: 40px;
+        font-size: 1rem;
+        margin-bottom: 30px;
     }
 
-    .landing-subject-btn {
-        font-size: 1.2rem;
+    .landing-cta-btn {
+        font-size: 1rem;
         padding: 12px 36px;
     }
 
-    .landing-explainer {
-        padding: 18px 20px;
+    .landing-features {
+        grid-template-columns: 1fr;
         max-width: 320px;
     }
 
@@ -1225,12 +1465,17 @@ body.landing-active header {
         max-width: 120px;
     }
 
-    .mark-scheme-drawer {
-        width: 100vw;
+    .self-marking-panels {
+        grid-template-columns: 1fr;
     }
 
-    #question-container.drawer-open,
-    .drawer-open {
-        margin-right: 0;
+    .self-marking-left {
+        max-height: 40vh;
+        border-right: none;
+        border-bottom: 1px solid var(--border-default);
+    }
+
+    .self-marking-right {
+        flex: 1;
     }
 }
