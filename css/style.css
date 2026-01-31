@@ -889,6 +889,31 @@ header h1 {
     flex-direction: column;
 }
 
+.self-marking-tally {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 70px;
+    font-weight: 700;
+    color: var(--text-primary);
+    border-top: 1px solid var(--border-subtle);
+    margin-top: 8px;
+    letter-spacing: -0.02em;
+}
+
+.self-marking-tally.tally-full {
+    color: var(--color-correct);
+}
+
+.self-marking-tally.tally-zero {
+    color: var(--color-incorrect);
+}
+
+.self-marking-tally.tally-partial {
+    color: var(--color-partial);
+}
+
 .self-marking-nav {
     display: flex;
     justify-content: space-between;
@@ -919,6 +944,18 @@ header h1 {
 .self-marking-nav-btn:disabled {
     opacity: 0.35;
     cursor: not-allowed;
+}
+
+.self-marking-nav-btn.ready-pulse {
+    animation: readyPulse 1.5s ease-in-out infinite;
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+    background: var(--accent-blue-muted);
+}
+
+@keyframes readyPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(75, 123, 245, 0.4); }
+    50% { box-shadow: 0 0 12px 4px rgba(75, 123, 245, 0.25); }
 }
 
 .self-marking-submit {
@@ -995,7 +1032,7 @@ header h1 {
 }
 
 .marking-point-row.decided {
-    opacity: 0.55;
+    opacity: 1;
 }
 
 .marking-point-row.locked {
@@ -1058,6 +1095,11 @@ header h1 {
     color: var(--text-on-accent);
 }
 
+.mark-tick.selected:hover {
+    background: var(--color-correct);
+    color: var(--text-on-accent);
+}
+
 .mark-cross {
     border: 2px solid var(--color-incorrect);
     background: var(--bg-surface);
@@ -1069,6 +1111,11 @@ header h1 {
 }
 
 .mark-cross.selected {
+    background: var(--color-incorrect);
+    color: var(--text-on-accent);
+}
+
+.mark-cross.selected:hover {
     background: var(--color-incorrect);
     color: var(--text-on-accent);
 }

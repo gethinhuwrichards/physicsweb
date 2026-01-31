@@ -253,8 +253,8 @@ Student enters a numeric final answer and optionally shows working (formula sele
   ],
   "requiresRearrangement": true,
   "markScheme": [
-    "1 mark: Correct rearrangement: $v = \\sqrt{\\frac{2 E_k}{m}}$",
     "1 mark: Correct substitution: $v = \\sqrt{\\frac{2 \\times 450000}{1000}}$",
+    "1 mark: Correct rearrangement: $v = \\sqrt{\\frac{2 E_k}{m}}$",
     "1 mark: Final answer: **30 m/s**"
   ],
   "diagram": null

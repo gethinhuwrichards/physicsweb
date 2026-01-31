@@ -23,8 +23,8 @@
           ],
           "requiresRearrangement": true,
           "markScheme": [
-            "1 mark: Correct rearrangement: $I = \\\\frac{V}{R}$",
-            "1 mark: Correct substitution: $I = \\\\frac{12}{6}$",
+            "1 mark: Correct substitution: $I = \\frac{12}{6}$",
+            "1 mark: Correct rearrangement: $I = \\frac{V}{R}$",
             "1 mark: Final answer: **2 A**"
           ],
           "diagram": null
@@ -52,7 +52,7 @@
           ],
           "requiresRearrangement": false,
           "markScheme": [
-            "1 mark: Correct substitution: $P = 10 \\\\times 0.50$",
+            "1 mark: Correct substitution: $P = 10 \\times 0.50$",
             "1 mark: Final answer: **5 W**"
           ],
           "diagram": null

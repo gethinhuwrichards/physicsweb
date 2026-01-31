@@ -1,0 +1,77 @@
+{
+  "subtopic": "Electrical Work and Power",
+  "mainTopic": "Electricity",
+  "questions": [
+    {
+      "id": "elec-work-power2",
+      "topic": "Electricity",
+      "title": "Electrical work and power",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "short-numerical",
+          "text": "A charge of 5.0 C flows through a component with a potential difference of 8.0 V. Calculate the electrical work done.",
+          "marks": 2,
+          "correctAnswer": 40,
+          "tolerance": 0.01,
+          "unit": "J",
+          "showUnit": true,
+          "formulas": [
+            "$E = Q V$",
+            "$P = V I$",
+            "$E = P t$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct substitution: $E = 5.0 \\times 8.0$",
+            "1 mark: Final answer: **40 J**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "short-numerical",
+          "text": "An electrical appliance operates at a potential difference of 12 V and a current of 3.0 A. Calculate the power of the appliance.",
+          "marks": 2,
+          "correctAnswer": 36,
+          "tolerance": 0.01,
+          "unit": "W",
+          "showUnit": true,
+          "formulas": [
+            "$P = V I$",
+            "$E = Q V$",
+            "$P = \\frac{E}{t}$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct substitution: $P = 12 \\times 3.0$",
+            "1 mark: Final answer: **36 W**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "short-numerical",
+          "text": "A device transfers 600 J of electrical energy in 50 s. Calculate the power of the device.",
+          "marks": 3,
+          "correctAnswer": 12,
+          "tolerance": 0.01,
+          "unit": "W",
+          "showUnit": true,
+          "formulas": [
+            "$P = \\frac{E}{t}$",
+            "$E = P t$",
+            "$P = V I$"
+          ],
+          "requiresRearrangement": true,
+          "markScheme": [
+            "1 mark: Correct substitution: $P = \\frac{600}{50}$",
+            "1 mark: Correct rearrangement: $P = \\frac{E}{t}$",
+            "1 mark: Final answer: **12 W**"
+          ],
+          "diagram": null
+        }
+      ]
+    }
+  ]
+}

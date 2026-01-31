@@ -31,7 +31,10 @@ export default function NumericalInput({ part, value, onChange, disabled, autoMa
   const handleCalc = useCallback(() => {
     const result = safeEval(calcExpr);
     setCalcResult(result);
-  }, [calcExpr]);
+    if (result !== null) {
+      onChange({ ...answer, finalAnswer: String(result) });
+    }
+  }, [calcExpr, answer, onChange]);
 
   const handleCalcKeyDown = useCallback((e) => {
     if (e.key === 'Enter') {

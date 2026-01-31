@@ -24,13 +24,13 @@ export default function MarkingPointRow({ point, decision, onDecide, locked }) {
         <div className="marking-point-buttons">
           <button
             className={`mark-tick${decision === true ? ' selected' : ''}`}
-            onClick={() => onDecide(true)}
+            onClick={() => onDecide(decision === true ? null : true)}
             disabled={isLocked}
             aria-label="Award"
           >&#10003;</button>
           <button
             className={`mark-cross${decision === false ? ' selected' : ''}`}
-            onClick={() => onDecide(false)}
+            onClick={() => onDecide(decision === false ? null : false)}
             disabled={isLocked}
             aria-label="Deny"
           >&#10007;</button>

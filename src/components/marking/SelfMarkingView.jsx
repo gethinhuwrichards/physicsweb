@@ -36,6 +36,13 @@ export default function SelfMarkingView({
   }, [part, partIndex, answers]);
 
   const currentAllDecided = decisions.every(d => d !== null);
+  const currentTally = decisions.reduce((sum, d, i) => {
+    if (d === true && points[i]) return sum + points[i].marks;
+    return sum;
+  }, 0);
+  const tallyColorClass = currentAllDecided
+    ? (currentTally === 0 ? 'tally-zero' : currentTally >= part.marks ? 'tally-full' : 'tally-partial')
+    : '';
   const isFirst = currentSelfMarkIdx === 0;
   const isLast = currentSelfMarkIdx === selfMarkParts.length - 1;
 
@@ -57,16 +64,15 @@ export default function SelfMarkingView({
           />
           {part.type === 'short-numerical' ? (
             <div className="numerical-display">
-              {renderedSelectedFormula && (
+              {(renderedSelectedFormula || answers[partIndex]?.substitution) && (
                 <div className="numerical-display-section">
-                  <div className="numerical-display-label">Formula:</div>
-                  <div className="numerical-display-value" dangerouslySetInnerHTML={{ __html: renderedSelectedFormula }} />
-                </div>
-              )}
-              {(answers[partIndex]?.substitution) && (
-                <div className="numerical-display-section">
-                  <div className="numerical-display-label">Substitution:</div>
-                  <div className="numerical-display-value">{answers[partIndex].substitution}</div>
+                  <div className="numerical-display-label">Formula &amp; Substitution:</div>
+                  {renderedSelectedFormula && (
+                    <div className="numerical-display-value" dangerouslySetInnerHTML={{ __html: renderedSelectedFormula }} />
+                  )}
+                  {(answers[partIndex]?.substitution) && (
+                    <div className="numerical-display-value">{answers[partIndex].substitution}</div>
+                  )}
                 </div>
               )}
               {part.requiresRearrangement && (answers[partIndex]?.rearrangement) && (
@@ -108,6 +114,9 @@ export default function SelfMarkingView({
               />
             ))}
           </div>
+          <div className={`self-marking-tally ${tallyColorClass}`}>
+            {currentTally} / {part.marks} mark{part.marks !== 1 ? 's' : ''}
+          </div>
         </div>
       </div>
 
@@ -127,9 +136,9 @@ export default function SelfMarkingView({
           Submit Marks
         </button>
         <button
-          className="self-marking-nav-btn"
+          className={`self-marking-nav-btn${currentAllDecided && !isLast ? ' ready-pulse' : ''}`}
           onClick={() => onNavigate('next')}
-          disabled={isLast || !currentAllDecided}
+          disabled={isLast}
         >
           Next &rarr;
         </button>

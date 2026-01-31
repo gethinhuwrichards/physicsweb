@@ -131,38 +131,32 @@ function reducer(state, action) {
     }
 
     case 'DECIDE_POINT': {
-      const { partIndex, pointIndex, decision, pointMarks, question } = action;
+      const { partIndex, pointIndex, decision, question } = action;
       const part = question.parts[partIndex];
       const prevDecisions = state.markingDecisions[partIndex] || [];
       const nextDecisions = [...prevDecisions];
       nextDecisions[pointIndex] = decision;
 
-      const nextMarkingDecisions = { ...state.markingDecisions, [partIndex]: nextDecisions };
-
-      // Check if all points for this part are decided (non-null)
-      const allDecided = nextDecisions.every(d => d !== null);
-
-      if (allDecided) {
-        // Calculate score for this part
-        const points = parseMarkScheme(part.markScheme);
-        let score = 0;
-        nextDecisions.forEach((d, i) => {
-          if (d === true) score += points[i].marks;
-        });
-        score = Math.min(score, part.marks);
-
-        const nextPartScores = { ...state.partScores, [partIndex]: score };
-
-        return {
-          ...state,
-          markingDecisions: nextMarkingDecisions,
-          partScores: nextPartScores,
-        };
+      // Dependency logic for 3-mark numerical with rearrangement
+      // After reorder: index 0 = substitution, index 1 = rearrangement, index 2 = final answer
+      if (part.type === 'short-numerical' && part.requiresRearrangement && nextDecisions.length === 3) {
+        if (pointIndex === 0 && decision === false) {
+          // Substitution wrong → rearrangement must also be wrong
+          nextDecisions[1] = false;
+        }
+        if (pointIndex === 0 && decision === null) {
+          // Substitution toggled off → rearrangement must also reset
+          nextDecisions[1] = null;
+        }
+        if (pointIndex === 1 && decision === true) {
+          // Rearrangement correct → substitution must also be correct
+          nextDecisions[0] = true;
+        }
       }
 
       return {
         ...state,
-        markingDecisions: nextMarkingDecisions,
+        markingDecisions: { ...state.markingDecisions, [partIndex]: nextDecisions },
       };
     }
 
@@ -175,7 +169,21 @@ function reducer(state, action) {
     }
 
     case 'SUBMIT_MARKS': {
-      return { ...state, phase: 'score' };
+      const { question } = action;
+      const nextPartScores = { ...state.partScores };
+
+      state.selfMarkParts.forEach(partIdx => {
+        const part = question.parts[partIdx];
+        const decisions = state.markingDecisions[partIdx] || [];
+        const points = parseMarkScheme(part.markScheme);
+        let score = 0;
+        decisions.forEach((d, i) => {
+          if (d === true) score += points[i].marks;
+        });
+        nextPartScores[partIdx] = Math.min(score, part.marks);
+      });
+
+      return { ...state, phase: 'score', partScores: nextPartScores };
     }
 
     case 'REVIEW_QUESTION': {
@@ -212,8 +220,8 @@ export default function QuestionView({ question, onBankScore, onReset, onSaveAns
   }, []);
 
   const handleSubmitMarks = useCallback(() => {
-    dispatch({ type: 'SUBMIT_MARKS' });
-  }, []);
+    dispatch({ type: 'SUBMIT_MARKS', question });
+  }, [question]);
 
   const handleReview = useCallback(() => {
     dispatch({ type: 'REVIEW_QUESTION' });
