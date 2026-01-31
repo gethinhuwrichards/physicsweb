@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ConfirmModal from '../ConfirmModal';
 
 export default function FinalScorePanel({ score, maxScore, onDone, onReset }) {
   const [showConfirm, setShowConfirm] = useState(false);
@@ -9,16 +10,15 @@ export default function FinalScorePanel({ score, maxScore, onDone, onReset }) {
       <p className="final-score-value">{score} / {maxScore} marks</p>
       <div className="final-score-buttons">
         <button className="bank-score-btn" onClick={() => onDone(score, maxScore)}>Done</button>
-        {!showConfirm ? (
-          <button className="reset-question-btn" onClick={() => setShowConfirm(true)}>Reset</button>
-        ) : (
-          <div className="reset-inline-confirm">
-            <span>Are you sure?</span>
-            <button className="reset-confirm-ok" onClick={onReset}>OK</button>
-            <button className="reset-confirm-cancel" onClick={() => setShowConfirm(false)}>Cancel</button>
-          </div>
-        )}
+        <button className="reset-question-btn" onClick={() => setShowConfirm(true)}>Reset</button>
       </div>
+      {showConfirm && (
+        <ConfirmModal
+          message="Are you sure you want to reset this question?"
+          onConfirm={onReset}
+          onCancel={() => setShowConfirm(false)}
+        />
+      )}
     </div>
   );
 }

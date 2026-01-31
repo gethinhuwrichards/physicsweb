@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ConfirmModal from '../ConfirmModal';
 
 export default function ScorePage({ score, maxScore, onTryAnother, onReview, onReset }) {
+  const [showConfirm, setShowConfirm] = useState(false);
+
   let colorClass = 'score-color-partial';
   if (score === maxScore) colorClass = 'score-color-full';
   else if (score === 0) colorClass = 'score-color-zero';
@@ -18,10 +21,17 @@ export default function ScorePage({ score, maxScore, onTryAnother, onReview, onR
         <button className="score-page-btn-primary" onClick={onReview}>
           Review answer
         </button>
-        <button className="score-page-btn-secondary" onClick={onReset}>
+        <button className="score-page-btn-secondary" onClick={() => setShowConfirm(true)}>
           Reset question
         </button>
       </div>
+      {showConfirm && (
+        <ConfirmModal
+          message="Are you sure you want to reset this question?"
+          onConfirm={onReset}
+          onCancel={() => setShowConfirm(false)}
+        />
+      )}
     </div>
   );
 }

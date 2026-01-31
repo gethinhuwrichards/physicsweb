@@ -55,6 +55,10 @@
     padding: 0;
 }
 
+html {
+    overflow-y: scroll;
+}
+
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
@@ -88,6 +92,7 @@ header {
     margin-bottom: 30px;
     padding-bottom: 20px;
     border-bottom: 2px solid var(--accent-blue);
+    min-height: 60px;
 }
 
 header h1 {
@@ -112,6 +117,7 @@ header h1 {
    ============================================ */
 
 .breadcrumb-nav {
+    min-height: 32px;
     margin-bottom: 20px;
 }
 
@@ -122,18 +128,23 @@ header h1 {
     margin-bottom: 6px;
 }
 
-.breadcrumb-nav > .back-btn {
-    margin-bottom: 0;
+.breadcrumb-link,
+.breadcrumb-current {
+    font-family: inherit;
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.4;
+    display: inline;
+    vertical-align: baseline;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
 }
 
 .breadcrumb-link {
-    background: none;
-    border: none;
     color: var(--accent-blue);
-    font-size: 1.3rem;
-    font-weight: 600;
     cursor: pointer;
-    padding: 0;
 }
 
 .breadcrumb-link:hover {
@@ -144,11 +155,10 @@ header h1 {
     margin: 0 10px;
     color: var(--text-tertiary);
     font-size: 1.1rem;
+    line-height: 1.4;
 }
 
 .breadcrumb-current {
-    font-size: 1.3rem;
-    font-weight: 600;
     color: var(--text-primary);
 }
 
@@ -320,9 +330,20 @@ header h1 {
 
 .question-progress-fill {
     height: 100%;
-    background: var(--color-progress-fill);
     border-radius: 12px;
     transition: width 0.3s ease;
+}
+
+.question-progress-fill.progress-full {
+    background: var(--color-correct);
+}
+
+.question-progress-fill.progress-zero {
+    background: var(--color-incorrect);
+}
+
+.question-progress-fill.progress-partial {
+    background: var(--color-partial);
 }
 
 .question-progress-text {
@@ -356,69 +377,96 @@ header h1 {
     color: var(--color-incorrect-text);
 }
 
-.reset-confirm {
-    margin-top: 16px;
-    padding: 16px 20px;
-    background: var(--color-incorrect-bg);
-    border: 1px solid var(--color-incorrect-border);
-    border-radius: 8px;
-    text-align: center;
-}
+/* ============================================
+   Confirm Modal Overlay
+   ============================================ */
 
-.reset-confirm p {
-    margin-bottom: 12px;
-    color: var(--text-primary);
-    font-size: 0.95rem;
-}
-
-.reset-confirm-buttons {
+.confirm-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
     display: flex;
-    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+}
+
+.confirm-box {
+    background: var(--bg-surface-raised);
+    border: 1px solid var(--border-default);
+    border-radius: 12px;
+    padding: 32px 40px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+.confirm-message {
+    color: var(--text-primary);
+    font-size: 1rem;
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+.confirm-buttons {
+    display: flex;
+    gap: 12px;
     justify-content: center;
 }
 
-.reset-confirm-ok {
-    padding: 8px 24px;
+.confirm-ok {
+    padding: 10px 32px;
     background: var(--color-incorrect);
     color: var(--text-on-accent);
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
     cursor: pointer;
+    transition: background 0.2s;
 }
 
-.reset-confirm-ok:hover {
+.confirm-ok:hover {
     background: var(--color-incorrect-border);
 }
 
-.reset-confirm-cancel {
-    padding: 8px 24px;
-    background: var(--bg-surface-raised);
+.confirm-cancel {
+    padding: 10px 32px;
+    background: var(--bg-surface);
     color: var(--text-secondary);
-    border: none;
-    border-radius: 6px;
+    border: 1px solid var(--border-default);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
     cursor: pointer;
+    transition: background 0.2s;
 }
 
-.reset-confirm-cancel:hover {
+.confirm-cancel:hover {
     background: var(--bg-surface-alt);
 }
 
 /* ============================================
-   Back Button
+   Fixed Back Button (bottom left)
    ============================================ */
 
-.back-btn {
-    background: none;
-    border: none;
+.back-btn-fixed {
+    display: block;
+    margin-top: 24px;
+    background: var(--bg-surface-raised);
+    border: 1px solid var(--border-default);
     color: var(--accent-blue);
     font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
-    margin-bottom: 20px;
-    padding: 5px 0;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background 0.2s, border-color 0.2s;
 }
 
-.back-btn:hover {
-    text-decoration: underline;
+.back-btn-fixed:hover {
+    background: var(--bg-surface-alt);
+    border-color: var(--accent-blue);
 }
 
 /* ============================================
@@ -1188,17 +1236,6 @@ header h1 {
     margin-top: 20px;
 }
 
-.reset-inline-confirm {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-}
-
-.reset-inline-confirm span {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-}
-
 /* ============================================
    Multi-Choice Selection Info
    ============================================ */
@@ -1745,15 +1782,6 @@ header h1 {
     width: 100%;
 }
 
-.landing-tagline {
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: var(--accent-blue);
-    margin-bottom: 12px;
-}
-
 .landing-title {
     font-size: 3.5rem;
     font-weight: 700;
@@ -1770,7 +1798,22 @@ header h1 {
 .landing-strapline {
     font-size: 1.2rem;
     color: var(--text-secondary);
-    margin-bottom: 40px;
+    margin-bottom: 32px;
+}
+
+.landing-select-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.landing-select-label.fade-in {
+    opacity: 1;
 }
 
 .landing-subjects {

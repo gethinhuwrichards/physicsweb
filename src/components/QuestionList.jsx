@@ -1,4 +1,5 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
+import ConfirmModal from './ConfirmModal';
 
 export default function QuestionList({
   title,
@@ -10,7 +11,6 @@ export default function QuestionList({
 }) {
   const [pendingResetId, setPendingResetId] = useState(null);
   const [showResetAll, setShowResetAll] = useState(false);
-  const confirmRef = useRef(null);
 
   const hasAnyScores = questions.some((q) => scores[q.id]);
 
@@ -18,9 +18,6 @@ export default function QuestionList({
     e.stopPropagation();
     setPendingResetId(questionId);
     setShowResetAll(false);
-    setTimeout(() => {
-      confirmRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }, 0);
   };
 
   const handleConfirmReset = () => {
@@ -28,10 +25,6 @@ export default function QuestionList({
       onResetQuestion(pendingResetId);
       setPendingResetId(null);
     }
-  };
-
-  const handleCancelReset = () => {
-    setPendingResetId(null);
   };
 
   return (
@@ -50,33 +43,16 @@ export default function QuestionList({
         </div>
       )}
 
-      {showResetAll && (
-        <div className="reset-confirm" ref={confirmRef}>
-          <p>Are you sure? All questions in {title} will be reset.</p>
-          <div className="reset-confirm-buttons">
-            <button
-              className="reset-confirm-ok"
-              onClick={() => {
-                onResetAll();
-                setShowResetAll(false);
-              }}
-            >
-              OK
-            </button>
-            <button
-              className="reset-confirm-cancel"
-              onClick={() => setShowResetAll(false)}
-            >
-              Cancel
-            </button>
-          </div>
-        </div>
-      )}
-
       <div>
         {questions.map((q) => {
           const totalMarks = q.parts.reduce((sum, p) => sum + p.marks, 0);
           const saved = scores[q.id];
+
+          let progressClass = '';
+          if (saved) {
+            const pct = saved.max > 0 ? saved.score / saved.max : 0;
+            progressClass = pct >= 1 ? 'progress-full' : pct === 0 ? 'progress-zero' : 'progress-partial';
+          }
 
           return (
             <div
@@ -91,7 +67,7 @@ export default function QuestionList({
                   <>
                     <div className="question-progress">
                       <div
-                        className="question-progress-fill"
+                        className={`question-progress-fill ${progressClass}`}
                         style={{
                           width: `${Math.round((saved.score / saved.max) * 100)}%`,
                         }}
@@ -126,24 +102,23 @@ export default function QuestionList({
         })}
       </div>
 
+      {showResetAll && (
+        <ConfirmModal
+          message={`Are you sure? All questions in ${title} will be reset.`}
+          onConfirm={() => {
+            onResetAll();
+            setShowResetAll(false);
+          }}
+          onCancel={() => setShowResetAll(false)}
+        />
+      )}
+
       {pendingResetId !== null && (
-        <div className="reset-confirm" ref={confirmRef}>
-          <p>
-            Are you sure you want to reset this question? Your saved score will
-            be cleared.
-          </p>
-          <div className="reset-confirm-buttons">
-            <button className="reset-confirm-ok" onClick={handleConfirmReset}>
-              OK
-            </button>
-            <button
-              className="reset-confirm-cancel"
-              onClick={handleCancelReset}
-            >
-              Cancel
-            </button>
-          </div>
-        </div>
+        <ConfirmModal
+          message="Are you sure you want to reset this question? Your saved score will be cleared."
+          onConfirm={handleConfirmReset}
+          onCancel={() => setPendingResetId(null)}
+        />
       )}
     </section>
   );

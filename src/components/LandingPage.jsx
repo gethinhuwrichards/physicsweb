@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 
 export default function LandingPage({ onStart }) {
   const straplineRef = useRef(null);
+  const selectLabelRef = useRef(null);
   const subjectsRef = useRef(null);
   const contentRef = useRef(null);
   const explainerRef = useRef(null);
@@ -10,7 +11,10 @@ export default function LandingPage({ onStart }) {
     document.body.classList.add('landing-active');
 
     // Run animation
-    const t1 = setTimeout(() => straplineRef.current?.classList.add('fade-in'), 400);
+    const t1 = setTimeout(() => {
+      straplineRef.current?.classList.add('fade-in');
+      selectLabelRef.current?.classList.add('fade-in');
+    }, 400);
     const t2 = setTimeout(() => subjectsRef.current?.classList.add('fade-in'), 900);
     const t3 = setTimeout(() => contentRef.current?.classList.add('slid-up'), 1800);
     const t4 = setTimeout(() => explainerRef.current?.classList.add('fade-in'), 2400);
@@ -34,16 +38,16 @@ export default function LandingPage({ onStart }) {
       }}
     >
       <div className="landing-content" ref={contentRef}>
-        <p className="landing-tagline">Master. Practice. Excel.</p>
         <h1 className="landing-title">
-          Ace Your <span className="landing-highlight">Exams</span>
+          Practice <span className="landing-highlight">Papers</span>
         </h1>
         <p className="landing-strapline" ref={straplineRef}>
           Exam-style questions with instant marking and detailed mark schemes.
         </p>
+        <p className="landing-select-label" ref={selectLabelRef}>Select a topic</p>
         <div className="landing-subjects" ref={subjectsRef}>
           <button className="landing-cta-btn" onClick={onStart}>
-            Get Started
+            Physics
           </button>
         </div>
         <div className="landing-features" ref={explainerRef}>

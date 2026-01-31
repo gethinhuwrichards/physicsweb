@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { countAnsweredForSubtopic } from '../utils/storage';
+import ConfirmModal from './ConfirmModal';
 
 export default function SubtopicSelection({ mainTopic, scores, onSelectSubtopic, onResetAll }) {
   const [showConfirm, setShowConfirm] = useState(false);
@@ -22,28 +23,14 @@ export default function SubtopicSelection({ mainTopic, scores, onSelectSubtopic,
       )}
 
       {showConfirm && (
-        <div className="reset-confirm">
-          <p>
-            Are you sure? All questions in {mainTopic.name} will be reset.
-          </p>
-          <div className="reset-confirm-buttons">
-            <button
-              className="reset-confirm-ok"
-              onClick={() => {
-                onResetAll();
-                setShowConfirm(false);
-              }}
-            >
-              OK
-            </button>
-            <button
-              className="reset-confirm-cancel"
-              onClick={() => setShowConfirm(false)}
-            >
-              Cancel
-            </button>
-          </div>
-        </div>
+        <ConfirmModal
+          message={`Are you sure? All questions in ${mainTopic.name} will be reset.`}
+          onConfirm={() => {
+            onResetAll();
+            setShowConfirm(false);
+          }}
+          onCancel={() => setShowConfirm(false)}
+        />
       )}
 
       {mainTopic.subtopics.length === 0 ? (

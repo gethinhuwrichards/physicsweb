@@ -47,6 +47,16 @@ export default function App() {
   // Navigation
   const goToTopics = useCallback(() => setView('topics'), []);
 
+  const handleBack = useCallback(() => {
+    switch (view) {
+      case 'topics': setView('landing'); break;
+      case 'subtopics': setView('topics'); break;
+      case 'questions': setView('subtopics'); break;
+      case 'question': setView('questions'); break;
+      default: break;
+    }
+  }, [view]);
+
   const selectTopic = useCallback(
     (topicId) => {
       const topic = topicsData.mainTopics.find((t) => t.id === topicId);
@@ -180,7 +190,7 @@ export default function App() {
 
       {view !== 'landing' && (
         <header>
-          <h1>Physics Exam Practice</h1>
+          <h1>Physics &mdash; Exam Questions by Topic</h1>
         </header>
       )}
 
@@ -188,18 +198,20 @@ export default function App() {
         {view === 'landing' && <LandingPage onStart={goToTopics} />}
 
         {view === 'topics' && topicsData && (
-          <TopicSelection
-            topics={topicsData.mainTopics}
-            scores={scores}
-            onSelectTopic={selectTopic}
-            onBack={() => setView('landing')}
-            onResetAll={handleResetAll}
-          />
+          <>
+            <Breadcrumb items={[]} />
+            <TopicSelection
+              topics={topicsData.mainTopics}
+              scores={scores}
+              onSelectTopic={selectTopic}
+              onResetAll={handleResetAll}
+            />
+          </>
         )}
 
         {view === 'subtopics' && mainTopic && (
           <>
-            <Breadcrumb items={breadcrumbItems} onBack={() => setView('topics')} />
+            <Breadcrumb items={breadcrumbItems} />
             <SubtopicSelection
               mainTopic={mainTopic}
               scores={scores}
@@ -211,7 +223,7 @@ export default function App() {
 
         {view === 'questions' && (
           <>
-            <Breadcrumb items={breadcrumbItems} onBack={() => setView('subtopics')} />
+            <Breadcrumb items={breadcrumbItems} />
             <QuestionList
               title={subtopic?.name || ''}
               questions={questions}
@@ -225,7 +237,7 @@ export default function App() {
 
         {view === 'question' && currentQuestion && (
           <>
-            <Breadcrumb items={breadcrumbItems} onBack={() => setView('questions')} />
+            <Breadcrumb items={breadcrumbItems} />
             <div id="question-container">
               <QuestionView
                 key={questionKey}
@@ -238,6 +250,11 @@ export default function App() {
               />
             </div>
           </>
+        )}
+        {view !== 'landing' && (
+          <button className="back-btn-fixed" onClick={handleBack}>
+            &larr; Back
+          </button>
         )}
       </main>
     </ErrorBoundary>

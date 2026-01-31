@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Breadcrumb({ items, onBack }) {
+export default function Breadcrumb({ items }) {
   return (
     <nav className="breadcrumb-nav">
       <div className="breadcrumb">
@@ -17,11 +17,6 @@ export default function Breadcrumb({ items, onBack }) {
           </React.Fragment>
         ))}
       </div>
-      {onBack && (
-        <button className="back-btn" onClick={onBack}>
-          &larr; Back
-        </button>
-      )}
     </nav>
   );
 }
