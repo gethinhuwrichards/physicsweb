@@ -1,0 +1,63 @@
+{
+  "subtopic": "Simple Circuits",
+  "mainTopic": "Electricity",
+  "questions": [
+    {
+      "id": "simple-circuits1",
+      "topic": "Electricity",
+      "title": "Current in a resistor",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "short-numerical",
+          "text": "A resistor has a resistance of 6 \u03a9 and a potential difference of 12 V across it. Calculate the current in the resistor.",
+          "marks": 3,
+          "correctAnswer": 2,
+          "tolerance": 0.01,
+          "unit": "A",
+          "showUnit": true,
+          "formulas": [
+            "$V = I R$",
+            "$P = V I$",
+            "$E = Q V$"
+          ],
+          "requiresRearrangement": true,
+          "markScheme": [
+            "1 mark: Correct rearrangement: $I = \\\\frac{V}{R}$",
+            "1 mark: Correct substitution: $I = \\\\frac{12}{6}$",
+            "1 mark: Final answer: **2 A**"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "simple-circuits2",
+      "topic": "Electricity",
+      "title": "Power of an electrical device",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "short-numerical",
+          "text": "An electrical device operates with a potential difference of 10 V and a current of 0.50 A. Calculate the power of the device.",
+          "marks": 2,
+          "correctAnswer": 5,
+          "tolerance": 0.01,
+          "unit": "W",
+          "showUnit": true,
+          "formulas": [
+            "$P = V I$",
+            "$V = I R$",
+            "$E = P t$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct substitution: $P = 10 \\\\times 0.50$",
+            "1 mark: Final answer: **5 W**"
+          ],
+          "diagram": null
+        }
+      ]
+    }
+  ]
+}

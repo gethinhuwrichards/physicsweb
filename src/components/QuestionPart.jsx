@@ -4,6 +4,7 @@ import SingleChoiceInput from './inputs/SingleChoiceInput';
 import MultiChoiceInput from './inputs/MultiChoiceInput';
 import GapFillInput from './inputs/GapFillInput';
 import ExtendedWrittenInput from './inputs/ExtendedWrittenInput';
+import NumericalInput from './inputs/NumericalInput';
 
 export default function QuestionPart({
   part,
@@ -57,6 +58,16 @@ export default function QuestionPart({
             value={answer}
             onChange={val => onAnswer(partIndex, val)}
             disabled={disabled}
+          />
+        );
+      case 'short-numerical':
+        return (
+          <NumericalInput
+            part={part}
+            value={answer}
+            onChange={val => onAnswer(partIndex, val)}
+            disabled={disabled}
+            autoMarkResult={autoMarkResult}
           />
         );
       default:

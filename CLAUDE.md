@@ -27,10 +27,10 @@ python -m http.server 8000
 Questions are organized hierarchically:
 - **8 Main Topics**: Energy, Electricity, Particle Model, Atomic Structure, Forces, Waves, Magnetism, Space
 - **Subtopics**: Each main topic has subtopics (e.g., Energy → Energy Stores)
-- **Separate JSON files**: Each subtopic has its own JSON file in `data/<topic>/<subtopic>.json`
+- **Separate JSON files**: Each subtopic has its own JSON file in `public/data/<topic>/<subtopic>.json`
 
 ### Data Flow
-1. `data/topics.json` loaded on page init (contains topic/subtopic index)
+1. `public/data/topics.json` loaded on page init (contains topic/subtopic index)
 2. Main topics rendered as buttons on splash page
 3. User selects main topic → subtopics displayed
 4. User selects subtopic → questions loaded from subtopic JSON file
@@ -41,9 +41,9 @@ Questions are organized hierarchically:
 ### Key Files
 - `js/app.js` - All application logic and state management
 - `css/style.css` - All styling
-- `data/topics.json` - Index of all topics and subtopics with file paths
-- `data/<topic>/<subtopic>.json` - Question files (e.g., `data/energy/energy-stores.json`)
-- `data/QUESTION_FORMAT.md` - Full schema documentation for LLM parsing
+- `public/data/topics.json` - Index of all topics and subtopics with file paths
+- `public/data/<topic>/<subtopic>.json` - Question files (e.g., `public/data/energy/energy-stores.json`)
+- `public/data/QUESTION_FORMAT.md` - Full schema documentation for LLM parsing
 
 ### Question Types
 
@@ -59,12 +59,12 @@ Use `$...$` for inline math and `$$...$$` for block math in question text and ma
 ## Adding Questions
 
 ### Adding a New Subtopic
-1. Add entry to `data/topics.json` under the appropriate main topic:
+1. Add entry to `public/data/topics.json` under the appropriate main topic:
 ```json
 { "id": "energy-transfers", "name": "Energy Transfers", "file": "energy/energy-transfers.json" }
 ```
 
-2. Create the subtopic JSON file (e.g., `data/energy/energy-transfers.json`):
+2. Create the subtopic JSON file (e.g., `public/data/energy/energy-transfers.json`):
 ```json
 {
   "subtopic": "Energy Transfers",
@@ -74,7 +74,7 @@ Use `$...$` for inline math and `$$...$$` for block math in question text and ma
 ```
 
 ### Question Part Examples
-See `data/QUESTION_FORMAT.md` for complete schema. Quick examples:
+See `public/data/QUESTION_FORMAT.md` for complete schema. Quick examples:
 
 **Single choice (3 or 4 options):**
 ```json

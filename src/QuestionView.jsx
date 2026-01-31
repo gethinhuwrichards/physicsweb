@@ -4,7 +4,7 @@ import QuestionPart from './components/QuestionPart';
 import SelfMarkingView from './components/marking/SelfMarkingView';
 import FinalScorePanel from './components/marking/FinalScorePanel';
 import ScorePage from './components/marking/ScorePage';
-import { autoMarkSingleChoice, autoMarkMultiChoice, autoMarkGapFill } from './utils/autoMark';
+import { autoMarkSingleChoice, autoMarkMultiChoice, autoMarkGapFill, autoMarkNumerical } from './utils/autoMark';
 import { parseMarkScheme } from './utils/parseMarkScheme';
 
 function initState({ question, savedState }) {
@@ -79,6 +79,16 @@ function reducer(state, action) {
             autoMarkResults[i] = result;
             break;
           }
+          case 'short-numerical': {
+            const result = autoMarkNumerical(part, answer || {});
+            autoMarkResults[i] = result;
+            if (result.isCorrect) {
+              partScores[i] = result.score;
+            } else {
+              selfMarkParts.push(i);
+            }
+            break;
+          }
           case 'extended-written': {
             selfMarkParts.push(i);
             break;
@@ -97,6 +107,13 @@ function reducer(state, action) {
         const points = parseMarkScheme(part.markScheme);
         markingDecisions[i] = points.map(() => null);
         lockedPoints[i] = points.map(() => false);
+
+        // For incorrect short-numerical: lock the last point (final answer) as false
+        if (part.type === 'short-numerical' && points.length > 0) {
+          const lastIdx = points.length - 1;
+          markingDecisions[i][lastIdx] = false;
+          lockedPoints[i][lastIdx] = true;
+        }
       });
 
       const noSelfMark = selfMarkParts.length === 0;
@@ -281,6 +298,7 @@ export default function QuestionView({ question, onBankScore, onReset, onSaveAns
           selfMarkParts={state.selfMarkParts}
           currentSelfMarkIdx={state.currentSelfMarkIdx}
           answers={state.answers}
+          autoMarkResults={state.autoMarkResults}
           markingDecisions={state.markingDecisions}
           lockedPoints={state.lockedPoints}
           onDecide={handleDecide}

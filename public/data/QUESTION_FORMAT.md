@@ -4,7 +4,7 @@ This document defines the JSON format for exam questions. Use this specification
 
 ## File Structure
 
-Each subtopic has its own JSON file in `data/<topic>/<subtopic>.json`:
+Each subtopic has its own JSON file in `public/data/<topic>/<subtopic>.json`:
 
 ```json
 {
@@ -55,7 +55,7 @@ Before assigning IDs, check existing question files to ensure no duplicates.
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `partLabel` | string | Yes | Part identifier (e.g., "a", "b", "c", "i", "ii") |
-| `type` | string | Yes | One of: `"single-choice"`, `"multi-choice"`, `"gap-fill"`, `"extended-written"` |
+| `type` | string | Yes | One of: `"single-choice"`, `"multi-choice"`, `"gap-fill"`, `"extended-written"`, `"short-numerical"` |
 | `text` | string | Yes | The question text (supports LaTeX) |
 | `marks` | integer | Yes | Number of marks (1-6) |
 | `markScheme` | string[] | Yes | Array of marking criteria |
@@ -63,7 +63,7 @@ Before assigning IDs, check existing question files to ensure no duplicates.
 
 ## Part Types
 
-Types 1-3 are fully auto-marked. Type 4 (extended-written) is self-marked by the student using a split-panel marking UI.
+Types 1-3 are fully auto-marked. Type 4 (extended-written) is self-marked by the student using a split-panel marking UI. Type 5 (short-numerical) auto-marks the final answer; if incorrect, the student self-marks method points.
 
 ### 1. Single Choice (`type: "single-choice"`)
 
@@ -187,6 +187,80 @@ The character limit for the textarea is derived at render time: `marks * 400` (~
 }
 ```
 
+### 5. Short Numerical (`type: "short-numerical"`)
+
+Student enters a numeric final answer and optionally shows working (formula selection, substitution, rearrangement). The final answer is auto-marked using relative tolerance. If correct, all marks are awarded. If incorrect, the student self-marks method points via the split-panel marking UI, with the final answer point locked as incorrect.
+
+**Additional fields:**
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `correctAnswer` | number | Yes | The expected numeric answer |
+| `tolerance` | number | No | Relative tolerance for comparison (default `0.01` = 1%) |
+| `unit` | string | No | Unit label (e.g., "J", "m/s") |
+| `showUnit` | boolean | No | Whether to display the unit beside the input (default `false`) |
+| `formulas` | string[] | No | LaTeX formula strings for the formula selector (includes distractors) |
+| `requiresRearrangement` | boolean | No | Show rearrangement field in working section (default `false`) |
+
+**Marking behaviour:**
+- Final answer compared using relative tolerance: `|userAnswer - correctAnswer| / |correctAnswer| <= tolerance`
+- If correct: all marks awarded automatically, no self-marking needed
+- If incorrect: enters self-marking mode. The **last** `markScheme` entry (final answer point) is auto-locked as incorrect. Student self-marks remaining method points (formula, substitution, etc.)
+- The last entry in `markScheme` **must** always be the final answer point
+
+**2-mark example:**
+
+```json
+{
+  "partLabel": "b",
+  "type": "short-numerical",
+  "text": "Calculate the kinetic energy of a 1500 kg car travelling at 30 m/s.",
+  "marks": 2,
+  "correctAnswer": 675000,
+  "tolerance": 0.01,
+  "unit": "J",
+  "showUnit": true,
+  "formulas": [
+    "$E_k = \\frac{1}{2} m v^2$",
+    "$E_p = m g h$",
+    "$W = F d$"
+  ],
+  "requiresRearrangement": false,
+  "markScheme": [
+    "1 mark: Correct substitution: $E_k = \\frac{1}{2} \\times 1500 \\times 30^2$",
+    "1 mark: Final answer: **675 000 J**"
+  ],
+  "diagram": null
+}
+```
+
+**3-mark example (with rearrangement):**
+
+```json
+{
+  "partLabel": "c",
+  "type": "short-numerical",
+  "text": "A car has a kinetic energy of 450 000 J and a mass of 1000 kg. Calculate the speed of the car.",
+  "marks": 3,
+  "correctAnswer": 30,
+  "tolerance": 0.01,
+  "unit": "m/s",
+  "showUnit": true,
+  "formulas": [
+    "$E_k = \\frac{1}{2} m v^2$",
+    "$v = \\sqrt{\\frac{2 E_k}{m}}$",
+    "$F = m a$"
+  ],
+  "requiresRearrangement": true,
+  "markScheme": [
+    "1 mark: Correct rearrangement: $v = \\sqrt{\\frac{2 E_k}{m}}$",
+    "1 mark: Correct substitution: $v = \\sqrt{\\frac{2 \\times 450000}{1000}}$",
+    "1 mark: Final answer: **30 m/s**"
+  ],
+  "diagram": null
+}
+```
+
 ## LaTeX Formatting
 
 Use LaTeX delimiters in `text`, `segments`, `options`, and `markScheme` fields:
@@ -283,5 +357,6 @@ Each string in `markScheme` should describe one marking point:
 5. For `multi-choice`: `correctAnswers` must be an array of valid indices; `options` must have 4+ strings; `selectCount` must be a positive integer; `scoring` must be `"all-or-nothing"` or `"partial"` (defaults to `"all-or-nothing"`)
 6. For `gap-fill`: `segments` must alternate between text strings and `{ "blank": N }` objects; `correctAnswers` length must match the number of blanks; all `wordBank` entries should be distinct
 7. For `extended-written`: no additional fields beyond common ones; `markScheme` entries may use `**keyword**` for bold rendering; `marks` determines textarea character limit (`marks * 400`)
-8. `diagram` filenames should not include path (just the filename)
-9. LaTeX backslashes must be escaped as `\\` in JSON strings
+8. For `short-numerical`: `correctAnswer` must be a number; `tolerance` defaults to `0.01` (1% relative); `formulas` is an optional array of LaTeX strings; `requiresRearrangement` is optional boolean; the **last** entry in `markScheme` must be the final answer point; `unit` and `showUnit` are optional
+9. `diagram` filenames should not include path (just the filename)
+10. LaTeX backslashes must be escaped as `\\` in JSON strings

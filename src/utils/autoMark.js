@@ -44,3 +44,24 @@ export function autoMarkGapFill(part, userAnswers) {
     results,
   };
 }
+
+export function autoMarkNumerical(part, answer) {
+  const raw = answer && answer.finalAnswer != null ? String(answer.finalAnswer).trim() : '';
+  const parsed = parseFloat(raw);
+  const correct = part.correctAnswer;
+  const tolerance = part.tolerance || 0.01;
+
+  let isCorrect = false;
+  if (!isNaN(parsed) && correct !== 0) {
+    isCorrect = Math.abs((parsed - correct) / correct) <= tolerance;
+  } else if (!isNaN(parsed) && correct === 0) {
+    isCorrect = Math.abs(parsed) <= tolerance;
+  }
+
+  return {
+    score: isCorrect ? part.marks : 0,
+    isCorrect,
+    userAnswer: raw,
+    correctAnswer: correct,
+  };
+}

@@ -21,3 +21,14 @@ TYPE 4: Extended Written Answers
 - a specific mock up can be found in design inspo folder (writtenanswermockup.png). 
 - Each marking point is scored independently
 - Keywords which must be included by student are highlighted in bold
+
+TYPE 5: Short numerical questions
+- Answer is shown in full on the left.  
+- all marking points for the question should be queried.
+- use a similar style to extended written answers except equations/formula should be rendered in latex
+- Each marking point is scored independently
+- Marking points are:
+    correct substitution
+    correct rearrangement (only for rearrangement)
+    final answer (always wrong in marking mode, just show for clarity)
+    

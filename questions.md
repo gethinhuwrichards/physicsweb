@@ -74,5 +74,21 @@ Student task
 Marking
 -Self marked by student in marking mode
 
+TYPE 5: Short numerical questions
+A numerical question requiring a numerical answer and someway of demonstrating working. Usually 2 or 3 marks (3 when rearrangement required)
+Examples
+-Calculate using the formula
+-Show that..
+UI
+-Final answer entry: a plain numeric input (plus optional unit handling, can be toggled on/off in JSON).
+-Working entry: a guided workflow that lets students show method without us “giving hints” in the prompt. Students can:
+--choose a formula
+--substitute values
+--optionally rearrange
+--use an in-built calculator to compute.
+--This working area exists to award method marks. It should be structured enough to mark, but not so “tutorial” that it spoon-feeds.
+Marking
+-Self marked by student in marking mode for each marking point
+-If final numerical answer correct award all marks, no need for self-marking
 
 
