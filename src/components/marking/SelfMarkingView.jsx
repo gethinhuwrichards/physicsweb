@@ -1,10 +1,15 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import { renderLatex } from '../../utils/renderLatex';
 import { parseMarkScheme } from '../../utils/parseMarkScheme';
 import MarkingPointRow from './MarkingPointRow';
+import SingleChoiceInput from '../inputs/SingleChoiceInput';
+import MultiChoiceInput from '../inputs/MultiChoiceInput';
+import GapFillInput from '../inputs/GapFillInput';
+import NumericalInput from '../inputs/NumericalInput';
 
 export default function SelfMarkingView({
   question,
+  reviewParts,
   selfMarkParts,
   currentSelfMarkIdx,
   answers,
@@ -16,11 +21,13 @@ export default function SelfMarkingView({
   onSubmitMarks,
   allPartsFullyDecided,
 }) {
-  const partIndex = selfMarkParts[currentSelfMarkIdx];
+  const partIndex = reviewParts[currentSelfMarkIdx];
   const part = question.parts[partIndex];
   const points = useMemo(() => parseMarkScheme(part.markScheme), [part.markScheme]);
   const decisions = markingDecisions[partIndex] || [];
   const locked = lockedPoints[partIndex] || [];
+
+  const isAutoMarked = !selfMarkParts.includes(partIndex);
 
   const renderedQuestion = useMemo(() => renderLatex(part.text), [part.text]);
   const studentAnswer = answers[partIndex] || '';
@@ -44,14 +51,149 @@ export default function SelfMarkingView({
     ? (currentTally === 0 ? 'tally-zero' : currentTally >= part.marks ? 'tally-full' : 'tally-partial')
     : '';
   const isFirst = currentSelfMarkIdx === 0;
-  const isLast = currentSelfMarkIdx === selfMarkParts.length - 1;
+  const isLast = currentSelfMarkIdx === reviewParts.length - 1;
+
+  // Delayed pulse for auto-marked parts
+  const [delayedPulse, setDelayedPulse] = useState(false);
+  useEffect(() => {
+    setDelayedPulse(false);
+    if (isAutoMarked && !isLast) {
+      const timer = setTimeout(() => setDelayedPulse(true), 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [currentSelfMarkIdx, isAutoMarked, isLast]);
+
+  const nextPulse = isAutoMarked
+    ? (delayedPulse && !isLast)
+    : (currentAllDecided && !isLast);
+
+  function renderAutoMarkedAnswer() {
+    const result = autoMarkResults[partIndex];
+    switch (part.type) {
+      case 'single-choice':
+        return (
+          <div className="auto-marked-answer">
+            <SingleChoiceInput
+              part={part}
+              value={answers[partIndex]}
+              onChange={() => {}}
+              disabled={true}
+              autoMarkResult={result}
+            />
+          </div>
+        );
+      case 'multi-choice':
+        return (
+          <div className="auto-marked-answer">
+            <MultiChoiceInput
+              part={part}
+              value={answers[partIndex] || []}
+              onChange={() => {}}
+              disabled={true}
+              autoMarkResult={result}
+            />
+          </div>
+        );
+      case 'gap-fill':
+        return (
+          <div className="auto-marked-answer">
+            <GapFillInput
+              part={part}
+              value={answers[partIndex] || []}
+              onChange={() => {}}
+              disabled={true}
+              autoMarkResult={result}
+            />
+          </div>
+        );
+      case 'short-numerical':
+        // Correct numerical — show as correct
+        return (
+          <div className="numerical-display">
+            {(renderedSelectedFormula || answers[partIndex]?.substitution) && (
+              <div className="numerical-display-section">
+                <div className="numerical-display-label">Formula &amp; Substitution:</div>
+                {renderedSelectedFormula && (
+                  <div className="numerical-display-value" dangerouslySetInnerHTML={{ __html: renderedSelectedFormula }} />
+                )}
+                {(answers[partIndex]?.substitution) && (
+                  <div className="numerical-display-value">{answers[partIndex].substitution}</div>
+                )}
+              </div>
+            )}
+            {part.requiresRearrangement && (answers[partIndex]?.rearrangement) && (
+              <div className="numerical-display-section">
+                <div className="numerical-display-label">Rearrangement:</div>
+                <div className="numerical-display-value">{answers[partIndex].rearrangement}</div>
+              </div>
+            )}
+            <div className="numerical-display-section">
+              <div className="numerical-display-label">Final answer:</div>
+              <div className="numerical-display-value">
+                <span className="numerical-display-answer correct">
+                  {numericalResult?.userAnswer || 'No answer'}
+                  {part.showUnit && part.unit ? ` ${part.unit}` : ''}
+                </span>
+              </div>
+            </div>
+          </div>
+        );
+      default:
+        return null;
+    }
+  }
+
+  function renderSelfMarkedAnswer() {
+    if (part.type === 'short-numerical') {
+      return (
+        <div className="numerical-display">
+          {(renderedSelectedFormula || answers[partIndex]?.substitution) && (
+            <div className="numerical-display-section">
+              <div className="numerical-display-label">Formula &amp; Substitution:</div>
+              {renderedSelectedFormula && (
+                <div className="numerical-display-value" dangerouslySetInnerHTML={{ __html: renderedSelectedFormula }} />
+              )}
+              {(answers[partIndex]?.substitution) && (
+                <div className="numerical-display-value">{answers[partIndex].substitution}</div>
+              )}
+            </div>
+          )}
+          {part.requiresRearrangement && (answers[partIndex]?.rearrangement) && (
+            <div className="numerical-display-section">
+              <div className="numerical-display-label">Rearrangement:</div>
+              <div className="numerical-display-value">{answers[partIndex].rearrangement}</div>
+            </div>
+          )}
+          <div className="numerical-display-section">
+            <div className="numerical-display-label">Final answer:</div>
+            <div className="numerical-display-value">
+              <span className="numerical-display-answer incorrect">
+                {numericalResult?.userAnswer || 'No answer'}
+                {part.showUnit && part.unit ? ` ${part.unit}` : ''}
+              </span>
+            </div>
+            <div className="numerical-correct-answer">
+              Correct answer: {numericalResult?.correctAnswer}{part.showUnit && part.unit ? ` ${part.unit}` : ''}
+            </div>
+          </div>
+        </div>
+      );
+    }
+    return (
+      <div className="self-marking-answer-display">
+        {studentAnswer || <span className="self-marking-no-answer">No answer provided</span>}
+      </div>
+    );
+  }
 
   return (
     <div className="self-marking-overlay">
-      <div className="self-marking-header">
-        <span className="self-marking-title">Self Marking</span>
+      <div className={`self-marking-header${isAutoMarked ? ' auto-marked-header' : ''}`}>
+        <span className="self-marking-title">
+          {isAutoMarked ? 'Review \u2014 Auto Marked' : 'Self Marking \u2014 Mark Your Answer'}
+        </span>
         <span className="self-marking-counter">
-          Part ({part.partLabel}) &mdash; {currentSelfMarkIdx + 1} of {selfMarkParts.length}
+          Part ({part.partLabel}) &mdash; {currentSelfMarkIdx + 1} of {reviewParts.length}
         </span>
       </div>
 
@@ -62,57 +204,27 @@ export default function SelfMarkingView({
             className="self-marking-question-text"
             dangerouslySetInnerHTML={{ __html: renderedQuestion }}
           />
-          {part.type === 'short-numerical' ? (
-            <div className="numerical-display">
-              {(renderedSelectedFormula || answers[partIndex]?.substitution) && (
-                <div className="numerical-display-section">
-                  <div className="numerical-display-label">Formula &amp; Substitution:</div>
-                  {renderedSelectedFormula && (
-                    <div className="numerical-display-value" dangerouslySetInnerHTML={{ __html: renderedSelectedFormula }} />
-                  )}
-                  {(answers[partIndex]?.substitution) && (
-                    <div className="numerical-display-value">{answers[partIndex].substitution}</div>
-                  )}
-                </div>
-              )}
-              {part.requiresRearrangement && (answers[partIndex]?.rearrangement) && (
-                <div className="numerical-display-section">
-                  <div className="numerical-display-label">Rearrangement:</div>
-                  <div className="numerical-display-value">{answers[partIndex].rearrangement}</div>
-                </div>
-              )}
-              <div className="numerical-display-section">
-                <div className="numerical-display-label">Final answer:</div>
-                <div className="numerical-display-value">
-                  <span className="numerical-display-answer incorrect">
-                    {numericalResult?.userAnswer || 'No answer'}
-                    {part.showUnit && part.unit ? ` ${part.unit}` : ''}
-                  </span>
-                </div>
-                <div className="numerical-correct-answer">
-                  Correct answer: {numericalResult?.correctAnswer}{part.showUnit && part.unit ? ` ${part.unit}` : ''}
-                </div>
-              </div>
-            </div>
-          ) : (
-            <div className="self-marking-answer-display">
-              {studentAnswer || <span className="self-marking-no-answer">No answer provided</span>}
-            </div>
-          )}
+          {isAutoMarked ? renderAutoMarkedAnswer() : renderSelfMarkedAnswer()}
         </div>
 
         <div className="self-marking-right">
           <h3 className="self-marking-panel-heading">Mark Scheme</h3>
           <div className="self-marking-points">
-            {points.map((point, i) => (
-              <MarkingPointRow
-                key={i}
-                point={point}
-                decision={decisions[i] ?? null}
-                onDecide={(val) => onDecide(partIndex, i, val, point.marks)}
-                locked={locked[i] === true}
-              />
-            ))}
+            {points.map((point, i) => {
+              const isRearrangement = part.type === 'short-numerical'
+                && part.requiresRearrangement && points.length === 3 && i === 1;
+              return (
+                <MarkingPointRow
+                  key={i}
+                  point={point}
+                  decision={decisions[i] ?? null}
+                  onDecide={(val) => onDecide(partIndex, i, val, point.marks)}
+                  locked={locked[i] === true}
+                  pointNumber={i + 1}
+                  dependencyNote={isRearrangement ? '(depends on substitution marking point)' : null}
+                />
+              );
+            })}
           </div>
           <div className={`self-marking-tally ${tallyColorClass}`}>
             {currentTally} / {part.marks} mark{part.marks !== 1 ? 's' : ''}
@@ -136,7 +248,7 @@ export default function SelfMarkingView({
           Submit Marks
         </button>
         <button
-          className={`self-marking-nav-btn${currentAllDecided && !isLast ? ' ready-pulse' : ''}`}
+          className={`self-marking-nav-btn${nextPulse ? ' ready-pulse' : ''}`}
           onClick={() => onNavigate('next')}
           disabled={isLast}
         >

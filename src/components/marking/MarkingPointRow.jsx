@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import { renderLatex } from '../../utils/renderLatex';
 import { renderMarkdownBold } from '../../utils/renderMarkdownBold';
 
-export default function MarkingPointRow({ point, decision, onDecide, locked }) {
+export default function MarkingPointRow({ point, decision, onDecide, locked, pointNumber, dependencyNote }) {
   const renderedText = useMemo(
     () => renderLatex(renderMarkdownBold(point.text)),
     [point.text]
@@ -11,9 +11,16 @@ export default function MarkingPointRow({ point, decision, onDecide, locked }) {
   const isLocked = locked === true;
   const decided = decision !== null && decision !== undefined;
 
+  const label = isLocked && decided
+    ? `Marking Point ${pointNumber} \u2014 ${decision ? 'Awarded' : 'Not awarded'}`
+    : `Marking Point ${pointNumber}`;
+
   return (
     <div className={`marking-point-row${decided ? ' decided' : ''}${isLocked ? ' locked' : ''}`}>
-      <div className="marking-point-label">Award this marking point?</div>
+      <div className="marking-point-label">
+        {label}
+        {dependencyNote && <em className="marking-point-dep-note"> {dependencyNote}</em>}
+      </div>
       <div className="marking-point-content">
         <span
           className="marking-point-text"
@@ -36,7 +43,7 @@ export default function MarkingPointRow({ point, decision, onDecide, locked }) {
           >&#10007;</button>
         </div>
       </div>
-      {isLocked && <div className="marking-point-locked-note">Final answer incorrect</div>}
+      {isLocked && decision === false && <div className="marking-point-locked-note">Marking point not earned</div>}
     </div>
   );
 }

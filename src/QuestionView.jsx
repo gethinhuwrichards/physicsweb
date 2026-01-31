@@ -16,6 +16,7 @@ function initState({ question, savedState }) {
         partScores: {},
         autoMarkResults: {},
         selfMarkParts: [],
+        reviewParts: [],
         currentSelfMarkIdx: 0,
         markingDecisions: {},
         lockedPoints: {},
@@ -27,6 +28,7 @@ function initState({ question, savedState }) {
       partScores: savedState.partScores,
       autoMarkResults: savedState.autoMarkResults,
       selfMarkParts: savedState.selfMarkParts || [],
+      reviewParts: savedState.reviewParts || [],
       currentSelfMarkIdx: 0,
       markingDecisions: savedState.markingDecisions || {},
       lockedPoints: savedState.lockedPoints || {},
@@ -38,6 +40,7 @@ function initState({ question, savedState }) {
     partScores: {},
     autoMarkResults: {},
     selfMarkParts: [],
+    reviewParts: [],
     currentSelfMarkIdx: 0,
     markingDecisions: {},
     lockedPoints: {},
@@ -102,6 +105,7 @@ function reducer(state, action) {
       const markingDecisions = {};
       const lockedPoints = {};
 
+      // Self-marked parts: interactive tick/cross
       selfMarkParts.forEach(i => {
         const part = question.parts[i];
         const points = parseMarkScheme(part.markScheme);
@@ -116,14 +120,50 @@ function reducer(state, action) {
         }
       });
 
-      const noSelfMark = selfMarkParts.length === 0;
+      // Auto-marked parts: pre-fill locked decisions for review
+      question.parts.forEach((part, i) => {
+        if (selfMarkParts.includes(i)) return;
+        const points = parseMarkScheme(part.markScheme);
+        const result = autoMarkResults[i];
+
+        switch (part.type) {
+          case 'single-choice':
+            markingDecisions[i] = points.map(() => result.isCorrect);
+            break;
+          case 'multi-choice': {
+            const selected = result.selectedIndices || [];
+            if (part.scoring === 'partial') {
+              markingDecisions[i] = part.correctAnswers.map((ci, idx) =>
+                idx < points.length ? selected.includes(ci) : false
+              );
+            } else {
+              markingDecisions[i] = points.map(() => result.isCorrect);
+            }
+            break;
+          }
+          case 'gap-fill':
+            markingDecisions[i] = (result.results || []).map(r => r.isCorrect);
+            break;
+          case 'short-numerical':
+            // Only reaches here if correct (incorrect goes to selfMarkParts)
+            markingDecisions[i] = points.map(() => true);
+            break;
+          default:
+            markingDecisions[i] = points.map(() => false);
+            break;
+        }
+        lockedPoints[i] = points.map(() => true);
+      });
+
+      const reviewParts = question.parts.map((_, i) => i);
 
       return {
         ...state,
-        phase: noSelfMark ? 'score' : 'marking',
+        phase: 'marking',
         partScores,
         autoMarkResults,
         selfMarkParts,
+        reviewParts,
         currentSelfMarkIdx: 0,
         markingDecisions,
         lockedPoints,
@@ -164,7 +204,7 @@ function reducer(state, action) {
       const nextIdx = action.direction === 'next'
         ? state.currentSelfMarkIdx + 1
         : state.currentSelfMarkIdx - 1;
-      if (nextIdx < 0 || nextIdx >= state.selfMarkParts.length) return state;
+      if (nextIdx < 0 || nextIdx >= state.reviewParts.length) return state;
       return { ...state, currentSelfMarkIdx: nextIdx };
     }
 
@@ -236,6 +276,7 @@ export default function QuestionView({ question, onBankScore, onReset, onSaveAns
           partScores: state.partScores,
           autoMarkResults: state.autoMarkResults,
           selfMarkParts: state.selfMarkParts,
+          reviewParts: state.reviewParts,
           markingDecisions: state.markingDecisions,
           lockedPoints: state.lockedPoints,
         });
@@ -303,6 +344,7 @@ export default function QuestionView({ question, onBankScore, onReset, onSaveAns
       {state.phase === 'marking' && (
         <SelfMarkingView
           question={question}
+          reviewParts={state.reviewParts}
           selfMarkParts={state.selfMarkParts}
           currentSelfMarkIdx={state.currentSelfMarkIdx}
           answers={state.answers}

@@ -823,6 +823,10 @@ header h1 {
     color: var(--accent-blue);
 }
 
+.auto-marked-header .self-marking-title {
+    color: var(--color-correct);
+}
+
 .self-marking-counter {
     font-size: 0.9rem;
     color: var(--text-secondary);
@@ -912,6 +916,16 @@ header h1 {
 
 .self-marking-tally.tally-partial {
     color: var(--color-partial);
+}
+
+.auto-marked-answer {
+    pointer-events: none;
+    opacity: 0.95;
+}
+
+.numerical-display-answer.correct {
+    color: var(--color-correct);
+    font-weight: 600;
 }
 
 .self-marking-nav {
@@ -1045,6 +1059,14 @@ header h1 {
     letter-spacing: 0.05em;
     color: var(--text-secondary);
     font-weight: 600;
+}
+
+.marking-point-dep-note {
+    text-transform: none;
+    font-weight: 400;
+    letter-spacing: normal;
+    color: var(--text-muted);
+    font-size: 0.7rem;
 }
 
 .marking-point-content {
