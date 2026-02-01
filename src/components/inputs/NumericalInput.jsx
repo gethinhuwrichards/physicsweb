@@ -7,13 +7,16 @@ function safeEval(expr) {
   if (!/^[\d+\-*/().e\s*]+$/.test(sanitised)) return null;
   try {
     const result = Function('"use strict"; return (' + sanitised + ')')();
-    if (typeof result !== 'number' || !isFinite(result)) return null;
-    // Round to 12 significant figures to eliminate floating-point noise
-    // e.g. 85/0.68 gives 124.99999999999999 instead of 125
-    return parseFloat(result.toPrecision(12));
+    return typeof result === 'number' && isFinite(result) ? result : null;
   } catch {
     return null;
   }
+}
+
+// Round to 12 significant figures to eliminate floating-point noise
+// e.g. 85/0.68 gives 124.99999999999999 instead of 125
+function cleanResult(n) {
+  return parseFloat(n.toPrecision(12));
 }
 
 export default function NumericalInput({ part, value, onChange, disabled, autoMarkResult }) {
@@ -32,11 +35,11 @@ export default function NumericalInput({ part, value, onChange, disabled, autoMa
   }, [part.formulas]);
 
   const handleCalc = useCallback(() => {
-    const result = safeEval(calcExpr);
+    const raw = safeEval(calcExpr);
+    if (raw === null) { setCalcResult(null); return; }
+    const result = cleanResult(raw);
     setCalcResult(result);
-    if (result !== null) {
-      onChange({ ...answer, finalAnswer: String(result) });
-    }
+    onChange({ ...answer, finalAnswer: String(result) });
   }, [calcExpr, answer, onChange]);
 
   const handleCalcKeyDown = useCallback((e) => {
