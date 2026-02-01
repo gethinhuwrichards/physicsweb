@@ -21,18 +21,19 @@ export default function FeedbackModal() {
   const formRef = useRef(null);
 
   useEffect(() => {
+    if (localStorage.getItem('feedbackSubmitted')) return;
+
     let visitCount = parseInt(localStorage.getItem('visitCount') || '0');
     visitCount++;
     localStorage.setItem('visitCount', visitCount.toString());
 
-    if (visitCount >= 3 && !localStorage.getItem('feedbackCompleted')) {
+    if (visitCount % 3 === 0) {
       setVisible(true);
     }
   }, []);
 
   const close = () => {
     setVisible(false);
-    localStorage.setItem('feedbackCompleted', 'true');
   };
 
   const handleSubmit = async (e) => {
@@ -48,6 +49,7 @@ export default function FeedbackModal() {
 
       if (response.ok) {
         alert('Thank you for your feedback!');
+        localStorage.setItem('feedbackSubmitted', 'true');
         close();
       } else {
         alert('There was a problem submitting your feedback. Please try again.');
