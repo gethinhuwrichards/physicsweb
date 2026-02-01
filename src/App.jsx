@@ -254,6 +254,8 @@ export default function App() {
                 onSaveAnswers={handleSaveAnswers}
                 onScoreReady={handleScoreReady}
                 savedState={savedState}
+                subtopicName={subtopic?.name || ''}
+                mainTopicName={mainTopic?.name || ''}
               />
             </div>
           </>

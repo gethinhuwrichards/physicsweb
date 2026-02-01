@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import ConfirmModal from '../ConfirmModal';
+import BugReportModal from '../BugReportModal';
 
-export default function ScorePage({ score, maxScore, onTryAnother, onReview, onReset }) {
+export default function ScorePage({ score, maxScore, onTryAnother, onReview, onReset, questionTitle, questionId, subtopicName, mainTopicName }) {
   const [showConfirm, setShowConfirm] = useState(false);
+  const [bugReportOpen, setBugReportOpen] = useState(false);
 
   let colorClass = 'score-color-partial';
   if (score === maxScore) colorClass = 'score-color-full';
@@ -24,6 +26,9 @@ export default function ScorePage({ score, maxScore, onTryAnother, onReview, onR
         <button className="score-page-btn-secondary" onClick={() => setShowConfirm(true)}>
           Reset question
         </button>
+        <button className="bug-report-btn" onClick={() => setBugReportOpen(true)}>
+          Report Bug
+        </button>
       </div>
       {showConfirm && (
         <ConfirmModal
@@ -32,6 +37,14 @@ export default function ScorePage({ score, maxScore, onTryAnother, onReview, onR
           onCancel={() => setShowConfirm(false)}
         />
       )}
+      <BugReportModal
+        visible={bugReportOpen}
+        onClose={() => setBugReportOpen(false)}
+        questionTitle={questionTitle}
+        questionId={questionId}
+        subtopicName={subtopicName}
+        mainTopicName={mainTopicName}
+      />
     </div>
   );
 }
