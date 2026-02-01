@@ -524,7 +524,8 @@ header h1 {
    ============================================ */
 
 .part-text table,
-.mark-scheme table {
+.mark-scheme table,
+.self-marking-question-text table {
     width: 100%;
     border-collapse: collapse;
     margin: 12px 0;
@@ -532,7 +533,8 @@ header h1 {
 }
 
 .part-text th,
-.mark-scheme th {
+.mark-scheme th,
+.self-marking-question-text th {
     background: var(--bg-surface-raised);
     color: var(--text-primary);
     font-weight: 600;
@@ -542,19 +544,22 @@ header h1 {
 }
 
 .part-text td,
-.mark-scheme td {
+.mark-scheme td,
+.self-marking-question-text td {
     padding: 8px 14px;
     border: 1px solid var(--border-default);
     color: var(--text-primary);
 }
 
 .part-text tr:nth-child(even),
-.mark-scheme tr:nth-child(even) {
+.mark-scheme tr:nth-child(even),
+.self-marking-question-text tr:nth-child(even) {
     background: var(--bg-surface-alt);
 }
 
 .part-text tr:nth-child(odd),
-.mark-scheme tr:nth-child(odd) {
+.mark-scheme tr:nth-child(odd),
+.self-marking-question-text tr:nth-child(odd) {
     background: var(--bg-surface);
 }
 

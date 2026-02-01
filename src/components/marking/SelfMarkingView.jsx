@@ -264,7 +264,7 @@ export default function SelfMarkingView({
         <button
           className={`self-marking-nav-btn${nextPulse ? ' ready-pulse' : ''}`}
           onClick={() => onNavigate('next')}
-          disabled={isLast}
+          disabled={isLast || !currentAllDecided}
         >
           Next &rarr;
         </button>

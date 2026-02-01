@@ -7,7 +7,10 @@ function safeEval(expr) {
   if (!/^[\d+\-*/().e\s*]+$/.test(sanitised)) return null;
   try {
     const result = Function('"use strict"; return (' + sanitised + ')')();
-    return typeof result === 'number' && isFinite(result) ? result : null;
+    if (typeof result !== 'number' || !isFinite(result)) return null;
+    // Round to 12 significant figures to eliminate floating-point noise
+    // e.g. 85/0.68 gives 124.99999999999999 instead of 125
+    return parseFloat(result.toPrecision(12));
   } catch {
     return null;
   }
