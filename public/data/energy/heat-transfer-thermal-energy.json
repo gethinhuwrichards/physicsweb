@@ -1,0 +1,641 @@
+{
+  "subtopic": "Heat transfer and thermal energy",
+  "mainTopic": "Energy",
+  "questions": [
+    {
+      "id": "heat-thermal1",
+      "topic": "Thermal energy and insulation",
+      "title": "Thermometer readings and insulation thickness",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "single-choice",
+          "text": "A student investigated the insulating properties of two different materials. The same thickness of each material was used. Figure 2 shows readings on two different thermometers.<br><br>(a) What is the resolution of thermometer B?",
+          "marks": 1,
+          "options": [
+            "0.1 °C",
+            "0.4 °C",
+            "67.0 °C",
+            "67.4 °C"
+          ],
+          "correctAnswer": 0,
+          "markScheme": [
+            "Answer: A — Resolution = **0.1 °C**"
+          ],
+          "diagram": "heat-thermal1_fig2.jpeg"
+        },
+        {
+          "partLabel": "b",
+          "type": "gap-fill",
+          "text": "(b) Complete the sentence. Choose the answer from the box.",
+          "marks": 1,
+          "segments": [
+            "Thermometer A has ",
+            {
+              "blank": 0
+            },
+            " chance of being misread than thermometer B."
+          ],
+          "wordBank": [
+            "a smaller",
+            "the same",
+            "a bigger"
+          ],
+          "correctAnswers": [
+            "a bigger"
+          ],
+          "markScheme": [
+            "1 mark: **a bigger**"
+          ],
+          "diagram": "heat-thermal1_fig2.jpeg"
+        },
+        {
+          "partLabel": "c",
+          "type": "single-choice",
+          "text": "Another student investigated how the thickness of the insulation affected the rate of cooling of hot water (Figure 4). How would using thick insulation affect the rate of cooling compared with using thin insulation?",
+          "marks": 1,
+          "options": [
+            "The rate of cooling would be higher.",
+            "The rate of cooling would be lower.",
+            "The rate of cooling would not change."
+          ],
+          "correctAnswer": 1,
+          "markScheme": [
+            "Answer: B — Thick insulation reduces the rate of energy transfer, so cooling is slower."
+          ],
+          "diagram": "heat-thermal1_fig4.jpeg"
+        },
+        {
+          "partLabel": "d",
+          "type": "single-choice",
+          "text": "Predict how using thick insulation would affect the temperature of the water after 10 minutes compared with using thin insulation.",
+          "marks": 1,
+          "options": [
+            "The temperature would be higher.",
+            "The temperature would be lower.",
+            "The temperature would be the same."
+          ],
+          "correctAnswer": 0,
+          "markScheme": [
+            "Answer: A — With less cooling, the water stays at a higher temperature after 10 minutes."
+          ],
+          "diagram": "heat-thermal1_fig4.jpeg"
+        }
+      ]
+    },
+    {
+      "id": "heat-thermal2",
+      "topic": "Specific heat capacity practical",
+      "title": "Heating water safely and measuring mass/temperature",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "single-choice",
+          "text": "A student carried out an experiment to determine the specific heat capacity of water (Figure 1). Why did the student insulate the beaker of water?",
+          "marks": 1,
+          "options": [
+            "To increase energy transfer to the surroundings.",
+            "To reduce energy transfer to the surroundings.",
+            "To stop energy transfer to the surroundings."
+          ],
+          "correctAnswer": 1,
+          "markScheme": [
+            "Answer: B — Insulation reduces energy transfer to the surroundings."
+          ],
+          "diagram": "heat-thermal2_fig1.jpeg"
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "One hazard in this experiment is the hot water. Give one risk to the student caused by this hazard.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Risk of **burning/scalding** skin from hot water."
+          ],
+          "diagram": "heat-thermal2_fig1.jpeg"
+        },
+        {
+          "partLabel": "c",
+          "type": "single-choice",
+          "text": "Figure 2 shows the thermometer used. What is the resolution of the thermometer?",
+          "marks": 1,
+          "options": [
+            "1 °C",
+            "3 °C",
+            "19 °C"
+          ],
+          "correctAnswer": 0,
+          "markScheme": [
+            "Answer: A — Resolution = **1 °C**."
+          ],
+          "diagram": "heat-thermal2_fig2.jpeg"
+        },
+        {
+          "partLabel": "d",
+          "type": "single-choice",
+          "text": "Figure 3 shows the beaker of water on a balance. The mass of the water was 0.20 kg. What was the mass of the beaker?",
+          "marks": 1,
+          "options": [
+            "0.06 kg",
+            "0.20 kg",
+            "0.26 kg",
+            "0.46 kg"
+          ],
+          "correctAnswer": 0,
+          "markScheme": [
+            "Answer: A — Mass of beaker = **0.06 kg**."
+          ],
+          "diagram": "heat-thermal2_fig3.jpeg"
+        }
+      ]
+    },
+    {
+      "id": "heat-thermal3",
+      "topic": "Energy transfer and specific heat capacity",
+      "title": "Can-chiller energy transfer and cooling fins",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "short-numerical",
+          "text": "A ‘can-chiller’ is used to make a can of drink colder (Figure 1). The can-chiller decreases the temperature of the liquid in the can by 15 °C. The mass of liquid is 0.33 kg. The specific heat capacity of the liquid is 4200 J/kg °C. Calculate the energy transferred from the liquid as it cools.",
+          "marks": 2,
+          "correctAnswer": 20790,
+          "tolerance": 0.01,
+          "unit": "J",
+          "showUnit": true,
+          "formulas": [
+            "$E = m c \\Delta \\theta$",
+            "$P = \\frac{E}{t}$",
+            "$E = P t$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct substitution: $E = 0.33 \\times 4200 \\times 15$",
+            "1 mark: Final answer: **20 790 J**"
+          ],
+          "diagram": "heat-thermal3_fig1.png"
+        },
+        {
+          "partLabel": "b",
+          "type": "gap-fill",
+          "text": "Complete the sentence.",
+          "marks": 1,
+          "segments": [
+            "The specific heat capacity of a substance is the amount of energy required to change the ",
+            {
+              "blank": 0
+            },
+            " of one kilogram of the substance by one degree Celsius."
+          ],
+          "wordBank": [
+            "temperature",
+            "mass",
+            "power",
+            "density"
+          ],
+          "correctAnswers": [
+            "temperature"
+          ],
+          "markScheme": [
+            "1 mark: **temperature**"
+          ],
+          "diagram": "heat-thermal3_fig1.png"
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "To calculate the specific heat capacity of a material, the mass of the material needs to be measured. State the name of a measuring instrument used to measure mass.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **(top-pan) balance** / **scales**."
+          ],
+          "diagram": "heat-thermal3_fig1.png"
+        },
+        {
+          "partLabel": "d",
+          "type": "gap-fill",
+          "text": "The back of the can-chiller has cooling fins (Figure 2). Complete the sentences.",
+          "marks": 2,
+          "segments": [
+            "The cooling fins are a ",
+            {
+              "blank": 0
+            },
+            " colour because that makes them good emitters of infrared radiation. The large surface area of the cooling fins allows the air around the can-chiller to gain energy quickly and rise, transferring energy by ",
+            {
+              "blank": 1
+            },
+            "."
+          ],
+          "wordBank": [
+            "black",
+            "white",
+            "conduction",
+            "convection",
+            "radiation"
+          ],
+          "correctAnswers": [
+            "black",
+            "convection"
+          ],
+          "markScheme": [
+            "1 mark: **black** (or dark)",
+            "1 mark: **convection**"
+          ],
+          "diagram": "heat-thermal3_fig2.png"
+        },
+        {
+          "partLabel": "e",
+          "type": "gap-fill",
+          "text": "Complete the sentences.",
+          "marks": 2,
+          "segments": [
+            "Energy can be transferred usefully, stored or dissipated, but cannot be ",
+            {
+              "blank": 0
+            },
+            " or destroyed. The temperature of the air around the cooling fins ",
+            {
+              "blank": 1
+            },
+            "."
+          ],
+          "wordBank": [
+            "created",
+            "destroyed",
+            "increases",
+            "decreases",
+            "stays the same"
+          ],
+          "correctAnswers": [
+            "created",
+            "increases"
+          ],
+          "markScheme": [
+            "1 mark: **created**",
+            "1 mark: Air temperature **increases**"
+          ],
+          "diagram": "heat-thermal3_fig2.png"
+        }
+      ]
+    },
+    {
+      "id": "heat-thermal4",
+      "topic": "Specific heat capacity and electrical heating",
+      "title": "Kettle heating and power",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "gap-fill",
+          "text": "Water has a high specific heat capacity. Complete the sentence using answers from the box.",
+          "marks": 2,
+          "segments": [
+            "The specific heat capacity of a substance is the energy needed to raise the temperature of 1 ",
+            {
+              "blank": 0
+            },
+            " of the substance by 1 ",
+            {
+              "blank": 1
+            },
+            "."
+          ],
+          "wordBank": [
+            "°C",
+            "J",
+            "kg",
+            "s",
+            "W"
+          ],
+          "correctAnswers": [
+            "kg",
+            "°C"
+          ],
+          "markScheme": [
+            "1 mark: **kg**",
+            "1 mark: **°C**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "short-numerical",
+          "text": "The resistance of the heating element in the kettle is 15 $\\Omega$. The current in the heating element is 12 A. Calculate the power using $P = I^2 R$.",
+          "marks": 2,
+          "correctAnswer": 2160,
+          "tolerance": 0.01,
+          "unit": "W",
+          "showUnit": true,
+          "formulas": [
+            "$P = I^2 R$",
+            "$P = V I$",
+            "$E = P t$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct substitution: $P = 12^2 \\times 15$",
+            "1 mark: Final answer: **2160 W**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "single-choice",
+          "text": "The graph shows how the temperature of the water changed after the kettle was switched on. The temperature did not start to increase until 10 seconds after switching on. What is the reason for this?",
+          "marks": 1,
+          "options": [
+            "Energy is transferred from the surroundings to the kettle.",
+            "The charge flows slowly through the kettle circuit.",
+            "The heating element in the kettle takes time to heat up.",
+            "The power output of the kettle increases slowly."
+          ],
+          "correctAnswer": 2,
+          "markScheme": [
+            "Answer: C — The heating element takes time to heat up before transferring energy to the water."
+          ],
+          "diagram": "heat-thermal4_graph.jpeg"
+        }
+      ]
+    },
+    {
+      "id": "heat-thermal5",
+      "topic": "Power and energy transfer",
+      "title": "Laptop-powered mug heater",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "single-choice",
+          "text": "A heater uses energy from a laptop computer to keep a drink hot (image). The laptop is operating on battery power. How would connecting the heater affect the time the laptop would operate for before needing to be recharged?",
+          "marks": 1,
+          "options": [
+            "It would decrease the time.",
+            "It would not affect the time.",
+            "It would increase the time."
+          ],
+          "correctAnswer": 0,
+          "markScheme": [
+            "Answer: A — Extra power demand drains the battery faster."
+          ],
+          "diagram": "heat-thermal5_mug.png"
+        },
+        {
+          "partLabel": "b",
+          "type": "short-numerical",
+          "text": "The power output from the heater is 12 W. Calculate the energy transferred to the metal mug in 60 seconds.",
+          "marks": 2,
+          "correctAnswer": 720,
+          "tolerance": 0.01,
+          "unit": "J",
+          "showUnit": true,
+          "formulas": [
+            "$E = P t$",
+            "$P = \\frac{E}{t}$",
+            "$E = m c \\Delta \\theta$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct substitution: $E = 12 \\times 60$",
+            "1 mark: Final answer: **720 J**"
+          ],
+          "diagram": "heat-thermal5_mug.png"
+        },
+        {
+          "partLabel": "c",
+          "type": "multi-choice",
+          "text": "The table lists changes that may affect the energy transfer per second from the heater to the liquid. Select the three changes that would decrease the energy transfer per second to the liquid.",
+          "marks": 3,
+          "options": [
+            "Use a mug with a smaller base",
+            "Use a lower power heater",
+            "Use a plastic mug instead of a metal mug",
+            "Use a mug with a larger base",
+            "Use a higher power heater"
+          ],
+          "correctAnswers": [
+            0,
+            1,
+            2
+          ],
+          "selectCount": 3,
+          "scoring": "all-or-nothing",
+          "markScheme": [
+            "1 mark: Use a mug with a smaller base (less contact area)",
+            "1 mark: Use a lower power heater (less energy per second)",
+            "1 mark: Use a plastic mug instead of a metal mug (poorer conduction)"
+          ],
+          "diagram": "heat-thermal5_mug.png"
+        }
+      ]
+    },
+    {
+      "id": "heat-thermal6",
+      "topic": "Work done",
+      "title": "Units for force, distance and work done",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "gap-fill",
+          "text": "When you transfer energy to a shopping trolley, the amount of work done depends on the force used and the distance moved. Complete the statements using units from the box.",
+          "marks": 3,
+          "segments": [
+            "Force is measured in ",
+            {
+              "blank": 0
+            },
+            ". Distance moved is measured in ",
+            {
+              "blank": 1
+            },
+            ". Work done is measured in ",
+            {
+              "blank": 2
+            },
+            "."
+          ],
+          "wordBank": [
+            "joule (J)",
+            "metre (m)",
+            "newton (N)"
+          ],
+          "correctAnswers": [
+            "newton (N)",
+            "metre (m)",
+            "joule (J)"
+          ],
+          "markScheme": [
+            "1 mark: **newton (N)**",
+            "1 mark: **metre (m)**",
+            "1 mark: **joule (J)**"
+          ],
+          "diagram": "heat-thermal6_trolley.png"
+        }
+      ]
+    },
+    {
+      "id": "heat-thermal7",
+      "topic": "Solar heating",
+      "title": "Measuring solar power with water heating",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "single-choice",
+          "text": "A student put an insulated pan of water in direct sunlight (figure) and measured the time it took for the temperature to increase by 0.6 °C. Choose the most appropriate resolution for the thermometer.",
+          "marks": 1,
+          "options": [
+            "0.1 °C",
+            "0.5 °C",
+            "1.0 °C"
+          ],
+          "correctAnswer": 0,
+          "markScheme": [
+            "Answer: A — **0.1 °C** is most appropriate for a 0.6 °C change."
+          ],
+          "diagram": "heat-thermal7_solar.png"
+        },
+        {
+          "partLabel": "b",
+          "type": "equation-choice",
+          "text": "Write down the equation which links energy transferred, power and time.",
+          "marks": 1,
+          "markScheme": [
+            "Answer: A – $E = P t$"
+          ],
+          "diagram": "heat-thermal7_solar.png",
+          "options": [
+            "$E = P t$",
+            "$E_p = m g h$",
+            "$E_k = \\tfrac{1}{2} m v^2$",
+            "$E_e = \\tfrac{1}{2} k e^2$"
+          ],
+          "correctAnswer": 0
+        }
+      ]
+    },
+    {
+      "id": "heat-thermal8",
+      "topic": "Heating and insulation",
+      "title": "Room temperature reaches a steady value",
+      "difficulty": "hard",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "The graph shows how the temperature of a room changes during the 1½ hours that an electric heater is used. After 1 hour, the temperature of the room becomes constant, even though the heater is still switched on. Explain why.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: The room is losing thermal energy to the surroundings.",
+            "1 mark: The rate of heat loss equals the rate of heat supplied (so temperature stays constant)."
+          ],
+          "diagram": "heat-thermal8_graph.png"
+        }
+      ]
+    },
+    {
+      "id": "heat-thermal9",
+      "topic": "Specific heat capacity practical",
+      "title": "Heating an iron block",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "Figure 1 shows equipment used to determine the specific heat capacity of iron. The student left the thermometer in the iron block for a few minutes before recording the initial temperature. Suggest why.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: To allow the thermometer to reach the **same temperature** as the iron block (thermal equilibrium)."
+          ],
+          "diagram": "heat-thermal9_fig1.jpeg"
+        },
+        {
+          "partLabel": "b",
+          "type": "multi-choice",
+          "text": "The student repeated the investigation but wrapped insulation around the iron block. What effect will adding insulation have had on the investigation? Select 2.",
+          "marks": 2,
+          "options": [
+            "The calculated specific heat capacity will be more accurate.",
+            "The iron block will transfer thermal energy to the surroundings at a lower rate.",
+            "The power output of the heater will be lower than expected.",
+            "The temperature of the iron block will increase more slowly than expected.",
+            "The uncertainty in the temperature measurement will be greater."
+          ],
+          "correctAnswers": [
+            0,
+            1
+          ],
+          "selectCount": 2,
+          "scoring": "all-or-nothing",
+          "markScheme": [
+            "1 mark: The calculated specific heat capacity will be more accurate.",
+            "1 mark: The iron block will transfer thermal energy to the surroundings at a lower rate."
+          ],
+          "diagram": "heat-thermal9_fig1.jpeg"
+        }
+      ]
+    },
+    {
+      "id": "heat-thermal10",
+      "topic": "Specific heat capacity",
+      "title": "Meaning of specific heat capacity",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "What is meant by specific heat capacity?",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Energy required to raise the temperature of a substance by **1 °C**.",
+            "1 mark: Per **1 kg** of the substance (unit mass)."
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "heat-thermal11",
+      "topic": "Insulation and cooling",
+      "title": "Identifying variables and thermometer errors",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "A student investigated the insulating properties of different materials. Figure 1 shows some of the equipment used.<br><br>This is the method used:<br><br>1. Wrap insulating material around the can.<br>2. Put a fixed volume of boiling water in the can.<br>3. Place the lid on the top of the can.<br>4. Measure the time taken for the temperature of the water to decrease by a fixed amount.<br>5. Repeat steps 1–4 using the same thickness of different insulating materials.<br><br>Identify the independent variable and the dependent variable in this investigation.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Independent variable: (type of) **insulation/material**.",
+            "1 mark: Dependent variable: **time** taken for the temperature to decrease by a fixed amount."
+          ],
+          "diagram": "heat-thermal11_fig1.jpeg"
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "The student used two different types of thermometer to measure the temperature changes (Figure 2). What is the resolution of thermometer B?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **0.1 °C**"
+          ],
+          "diagram": "heat-thermal11_fig2.jpeg"
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "Thermometer A is more likely to be misread. Give one reason why.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Viewing angle affects measurement (e.g. **parallax error**) / judgement needed between scale markings."
+          ],
+          "diagram": "heat-thermal11_fig2.jpeg"
+        }
+      ]
+    }
+  ]
+}

@@ -91,4 +91,23 @@ Marking
 -Self marked by student in marking mode for each marking point
 -If final numerical answer correct award all marks, no need for self-marking
 
+TYPE 6: Write down the correct equation
+Students choose an equation
+Examples
+-Write down the equation for...
+UI
+-Select equation from four options (radio buttons)
+Marking
+-Automarked
+
+Type 7: Tick the boxes
+Student tick boxes in a table. 
+Examples
+Put a tick in each row...
+UI
+-Radio boxes for each row so only one is selectable per row
+- Radio boxes are contained in a table - left side shows information - right side two radio boxes. options are indicated by the header.
+Marking
+-Auto marked
+-Strictly one mark per row. 
 

@@ -6,6 +6,7 @@
       "id": "simple-circuits1",
       "topic": "Electricity",
       "title": "Current in a resistor",
+      "difficulty": "medium",
       "parts": [
         {
           "partLabel": "a",
@@ -35,6 +36,7 @@
       "id": "simple-circuits2",
       "topic": "Electricity",
       "title": "Power of an electrical device",
+      "difficulty": "easy",
       "parts": [
         {
           "partLabel": "a",

@@ -4,8 +4,9 @@
       "id": "energy",
       "name": "Energy",
       "subtopics": [
-        { "id": "energy-stores", "name": "Energy Stores", "file": "energy/energy-stores-new.json", "questionCount": 2 },
-        { "id": "energy-resources", "name": "Energy Resources", "file": "energy/energy-resources.json", "questionCount": 3 }
+        { "id": "energy-stores", "name": "Energy Stores", "file": "energy/energy-stores.json", "questionCount": 10 },
+        { "id": "energy-resources", "name": "Energy Resources", "file": "energy/energy-resources.json", "questionCount": 9 },
+        { "id": "thermal-energy", "name": "Heat Transfer and Thermal Energy", "file": "energy/heat-transfer-thermal-energy.json", "questionCount": 11 }
       ]
     },
     { "id": "electricity", "name": "Electricity", "subtopics": [
@@ -13,10 +14,25 @@
         { "id": "simple-circuits", "name": "Simple Circuits", "file": "electricity/simple-circuits.json", "questionCount": 2 },
         { "id": "electrical-power", "name": "Electrical Power", "file": "electricity/electrical-work-and-power.json", "questionCount": 1 }
       ] },
-    { "id": "particle-model", "name": "Particle Model", "subtopics": [] },
-    { "id": "atomic-structure", "name": "Atomic Structure", "subtopics": [] },
-    { "id": "forces", "name": "Forces", "subtopics": [] },
-    { "id": "waves", "name": "Waves", "subtopics": [] },
+    { "id": "particle-model", "name": "Particle Model", "subtopics": [
+        { "id": "pressure-gas", "name": "Pressure in a Gas", "file": "particle-model/pressure-in-a-gas.json", "questionCount": 8 },
+        { "id": "density-cs", "name": "Density and Changes of State", "file": "particle-model/density-and-changes-of-state.json", "questionCount": 11 }
+    ] },
+    { "id": "atomic-structure", "name": "Atomic Structure", "subtopics": [
+        { "id": "atomic-struct", "name": "Atomic Structure", "file": "atomic-structure/atomic-structure.json", "questionCount": 10 },
+        { "id": "nuclear-radiation", "name": "Nuclear Radiation", "file": "atomic-structure/nuclear-radiation.json", "questionCount": 17 },
+        { "id": "nuc-fission-fusion", "name": "Nuclear Fission and Fusion", "file": "atomic-structure/nuclear-fission-and-fusion.json", "questionCount": 12 }
+    ] },
+    { "id": "forces", "name": "Forces", "subtopics": [
+        { "id": "scalar-vector", "name": "Scalars and Vectors", "file": "/forces/scalars-and-vectors.json", "questionCount": 4},
+        { "id": "types-of-forces", "name": "Types of Forces", "file": "/forces/types-of-forces.json", "questionCount": 4},
+        { "id": "resolving-forces", "name": "Resolving Forces", "file": "/forces/types-of-forces.json", "questionCount": 6},
+        { "id": "forces-motion", "name": "Forces and Motion", "file": "forces/forces-and-motion.json", "questionCount": 15}
+    ] },
+    { "id": "waves", "name": "Waves", "subtopics": [
+        { "id": "basic-waves", "name": "Basic Properties of Waves", "file": "waves/basic-properties-of-waves.json", "questionCount": 13 },
+        { "id": "em-waves", "name": "Electromagnetic Waves", "file": "waves/electromagnetic-waves.json", "questionCount": 14 }
+    ] },
     { "id": "magnetism", "name": "Magnetism", "subtopics": [] },
     { "id": "space", "name": "Space", "subtopics": [] }
   ]

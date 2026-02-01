@@ -191,10 +191,16 @@ async function loadSubtopicQuestions(subtopicId, filePath) {
     }
 }
 
+// Difficulty sort order
+const difficultyOrder = { easy: 0, medium: 1, hard: 2 };
+
 // Render Question List with Progress Bars
 function rerenderQuestionList() {
     const scores = getQuestionScores();
-    questionList.innerHTML = subtopicQuestions.map(q => {
+    const sorted = [...subtopicQuestions].sort((a, b) =>
+        (difficultyOrder[a.difficulty] ?? 1) - (difficultyOrder[b.difficulty] ?? 1)
+    );
+    questionList.innerHTML = sorted.map(q => {
         const totalMarks = q.parts.reduce((sum, p) => sum + p.marks, 0);
         const saved = scores[q.id];
 
@@ -217,9 +223,11 @@ function rerenderQuestionList() {
             `;
         }
 
+        const diffLabel = q.difficulty || 'medium';
+
         return `
             <div class="question-item" data-id="${q.id}">
-                <span class="question-item-title">${q.title}</span>
+                <span class="question-item-title">${q.title} <span class="difficulty-label difficulty-${diffLabel}">(${diffLabel})</span></span>
                 <div class="question-item-right">
                     <span class="marks">${totalMarks} marks</span>
                     ${progressHtml}

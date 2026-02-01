@@ -470,6 +470,28 @@ header h1 {
 }
 
 /* ============================================
+   Difficulty Labels (inline after title)
+   ============================================ */
+
+.difficulty-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.difficulty-easy {
+    color: var(--color-correct-text);
+}
+
+.difficulty-medium {
+    color: var(--color-partial-text);
+}
+
+.difficulty-hard {
+    color: var(--color-incorrect-text);
+}
+
+/* ============================================
    Question Display
    ============================================ */
 
@@ -495,6 +517,45 @@ header h1 {
 .question-header .total-marks {
     color: var(--text-secondary);
     font-size: 0.95rem;
+}
+
+/* ============================================
+   Tables in Question Text
+   ============================================ */
+
+.part-text table,
+.mark-scheme table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 0.95rem;
+}
+
+.part-text th,
+.mark-scheme th {
+    background: var(--bg-surface-raised);
+    color: var(--text-primary);
+    font-weight: 600;
+    text-align: left;
+    padding: 10px 14px;
+    border: 1px solid var(--border-default);
+}
+
+.part-text td,
+.mark-scheme td {
+    padding: 8px 14px;
+    border: 1px solid var(--border-default);
+    color: var(--text-primary);
+}
+
+.part-text tr:nth-child(even),
+.mark-scheme tr:nth-child(even) {
+    background: var(--bg-surface-alt);
+}
+
+.part-text tr:nth-child(odd),
+.mark-scheme tr:nth-child(odd) {
+    background: var(--bg-surface);
 }
 
 /* ============================================
@@ -1109,6 +1170,14 @@ header h1 {
     font-weight: 600;
 }
 
+.marking-point-awarded {
+    color: #4caf50;
+}
+
+.marking-point-not-awarded {
+    color: #f44336;
+}
+
 .marking-point-dep-note {
     text-transform: none;
     font-weight: 400;
@@ -1329,6 +1398,71 @@ header h1 {
     font-size: 0.85rem;
     color: var(--color-correct-text);
     font-weight: 600;
+}
+
+/* ============================================
+   Tick Box Table
+   ============================================ */
+
+.tick-box-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 0.95rem;
+}
+
+.tick-box-table th,
+.tick-box-table td {
+    padding: 10px 14px;
+    border: 1px solid var(--border-default);
+    color: var(--text-primary);
+}
+
+.tick-box-table thead th {
+    background: var(--bg-surface-raised);
+    font-weight: 600;
+    text-align: center;
+}
+
+.tick-box-table thead th:first-child {
+    text-align: left;
+}
+
+.tick-box-row-label {
+    text-align: left;
+    font-weight: 500;
+}
+
+.tick-box-cell {
+    text-align: center;
+    width: 120px;
+}
+
+.tick-box-cell input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--accent-blue);
+    cursor: pointer;
+}
+
+.tick-box-cell input[type="radio"]:disabled {
+    cursor: not-allowed;
+}
+
+.tick-box-table tbody tr:nth-child(even) {
+    background: var(--bg-surface-alt);
+}
+
+.tick-box-table tbody tr:nth-child(odd) {
+    background: var(--bg-surface);
+}
+
+.tick-box-table tbody tr.correct {
+    background: var(--color-correct-bg);
+}
+
+.tick-box-table tbody tr.incorrect {
+    background: var(--color-incorrect-bg);
 }
 
 /* ============================================

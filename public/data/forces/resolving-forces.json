@@ -1,0 +1,214 @@
+{
+  "subtopic": "Resolving forces",
+  "mainTopic": "Forces",
+  "questions": [
+    {
+      "id": "rf-1",
+      "topic": "Resultant force and work done",
+      "title": "Pushing a trolley at constant speed",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "single-choice",
+          "text": "Which term means the same as total force?",
+          "marks": 1,
+          "options": [
+            "answer force",
+            "mean force",
+            "resultant force"
+          ],
+          "correctAnswer": 2,
+          "markScheme": [
+            "Answer: resultant force."
+          ],
+          "diagram": "trolley.png"
+        },
+        {
+          "partLabel": "b",
+          "type": "short-numerical",
+          "text": "The trolley is pushed at a constant speed for 80 m with a total force of 50 N. Calculate the work done.",
+          "marks": 2,
+          "correctAnswer": 4000,
+          "tolerance": 0.0,
+          "unit": "J",
+          "showUnit": true,
+          "formulas": [
+            "$W = F d$",
+            "$E = P t$",
+            "$E_k = \\tfrac{1}{2} m v^2$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Substitution: $W = 50 \\times 80$",
+            "1 mark: Final answer: **4000 J**"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "rf-2",
+      "topic": "Balanced and unbalanced forces",
+      "title": "Sky-diver in free fall",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "gap-fill",
+          "text": "Complete the sentences by choosing the correct cause.",
+          "marks": 2,
+          "segments": [
+            "Force X is caused by ",
+            {
+              "blank": 0
+            },
+            ".<br>",
+            "Force Y is caused by ",
+            {
+              "blank": 1
+            },
+            "."
+          ],
+          "wordBank": [
+            "air resistance",
+            "gravity",
+            "magnetism"
+          ],
+          "correctAnswers": [
+            "air resistance",
+            "gravity"
+          ],
+          "markScheme": [
+            "1 mark: **air resistance**",
+            "1 mark: **gravity**"
+          ],
+          "diagram": "skydiver.png"
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "Describe the motion of the sky-diver when force X is equal to force Y.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Constant speed / terminal velocity / zero acceleration."
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "rf-3",
+      "topic": "Resultant force and motion",
+      "title": "Car motion from force diagrams",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "Describe the motion of the car at points A, B and C shown in the force diagrams.",
+          "marks": 3,
+          "markScheme": [
+            "1 mark: A: **constant speed**.",
+            "1 mark: B: **accelerating** (speeding up).",
+            "1 mark: C: **decelerating** (slowing down)."
+          ],
+          "diagram": "car-forces.png"
+        }
+      ]
+    },
+    {
+      "id": "rf-4",
+      "topic": "Resultant force in fluids",
+      "title": "Forces on a swimmer",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "The swimmer moves at constant speed. If force T is 120 N, what is the size of force D?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **120 N** (forces are balanced at constant speed)."
+          ],
+          "diagram": "swimmer.png"
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "Explain why the resultant force decreases to zero even though force T is kept constant.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: As speed increases, **drag/water resistance increases**.",
+            "1 mark: Until drag equals thrust so **forces balance**."
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "rf-5",
+      "topic": "Forces and motion states",
+      "title": "Forces on a van",
+      "difficulty": "hard",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "tick-box-table",
+          "text": "Compare the sizes of force A and force E for each motion of the van.",
+          "marks": 3,
+          "columnHeaders": [
+            "A < E",
+            "A = E",
+            "A > E"
+          ],
+          "rows": [
+            {
+              "label": "Speeding up",
+              "correctColumn": 2
+            },
+            {
+              "label": "Constant speed",
+              "correctColumn": 1
+            },
+            {
+              "label": "Slowing down",
+              "correctColumn": 0
+            }
+          ],
+          "markScheme": [
+            "1 mark: Speeding up — A > E",
+            "1 mark: Constant speed — A = E",
+            "1 mark: Slowing down — A < E"
+          ],
+          "diagram": "van-forces.png"
+        }
+      ]
+    },
+    {
+      "id": "rf-6",
+      "topic": "Resultant force and acceleration",
+      "title": "Aircraft acceleration on runway",
+      "difficulty": "hard",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "equation-choice",
+          "text": "Write down the equation which links resultant force, mass and acceleration.",
+          "marks": 1,
+          "options": [
+            "$F = m a$",
+            "$E = P t$",
+            "$E_k = \\tfrac{1}{2} m v^2$",
+            "$W = F d$"
+          ],
+          "correctAnswer": 0,
+          "markScheme": [
+            "Answer: A — $F = m a$."
+          ],
+          "diagram": "aircraft.png"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,427 @@
+{
+  "subtopic": "Atomic Structure",
+  "mainTopic": "Atomic Structure",
+  "questions": [
+    {
+      "id": "atomic-struct1",
+      "topic": "Atomic Structure",
+      "title": "Helium atom particles",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "single-choice",
+          "text": "A helium atom contains two protons, two neutrons and two electrons. Which particle in the helium atom is not charged?",
+          "marks": 1,
+          "options": ["Electron", "Neutron", "Proton"],
+          "correctAnswer": 1,
+          "markScheme": ["Answer: B - Neutrons have no charge"],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "gap-fill",
+          "text": "Complete the sentence using a word from the box.",
+          "marks": 1,
+          "segments": [
+            "The difference between an alpha particle and a helium atom is that the alpha particle does not have any ",
+            { "blank": 0 },
+            "."
+          ],
+          "wordBank": ["electrons", "neutrons", "protons"],
+          "correctAnswers": ["electrons"],
+          "markScheme": ["1 mark: electrons"],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "single-choice",
+          "text": "Which is a property of alpha particles? Tick one box.",
+          "marks": 1,
+          "options": ["Have a long range in air", "Are highly ionising", "Will pass through metals"],
+          "correctAnswer": 1,
+          "markScheme": ["Answer: B - Alpha particles are highly ionising"],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "atomic-struct2",
+      "topic": "Atomic Structure",
+      "title": "Lithium atom",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "single-choice",
+          "text": "A lithium atom has 3 protons and 4 neutrons. What is the mass number of this lithium atom? Tick one box.",
+          "marks": 1,
+          "options": ["3", "4", "7", "10"],
+          "correctAnswer": 2,
+          "markScheme": ["Answer: C - Mass number = protons + neutrons = 3 + 4 = 7"],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "single-choice",
+          "text": "What is the atomic number of a lithium atom? Tick one box.",
+          "marks": 1,
+          "options": ["3", "4", "7", "10"],
+          "correctAnswer": 0,
+          "markScheme": ["Answer: A - Atomic number = number of protons = 3"],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "gap-fill",
+          "text": "Complete the sentence using a word from the box.",
+          "marks": 1,
+          "segments": [
+            "The electrons in an atom orbit in different energy ",
+            { "blank": 0 },
+            "."
+          ],
+          "wordBank": ["circles", "levels", "rings"],
+          "correctAnswers": ["levels"],
+          "markScheme": ["1 mark: levels"],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "atomic-struct3",
+      "topic": "Atomic Structure",
+      "title": "Particles in the atom",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "single-choice",
+          "text": "Which of the following correctly describes the particles found in the nucleus of an atom?",
+          "marks": 1,
+          "options": ["Electrons and neutrons", "Electrons and protons", "Neutrons and protons"],
+          "correctAnswer": 2,
+          "markScheme": ["Answer: C - The nucleus contains neutrons and protons"],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "gap-fill",
+          "text": "Complete the sentence using words from the box.",
+          "marks": 2,
+          "segments": [
+            "An atom that loses an electron is called an ",
+            { "blank": 0 },
+            " and has an overall ",
+            { "blank": 1 },
+            " charge."
+          ],
+          "wordBank": ["ion", "isotope", "molecule", "negative", "neutral", "positive"],
+          "correctAnswers": ["ion", "positive"],
+          "markScheme": ["1 mark: ion", "1 mark: positive"],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "A neutral atom has no overall charge. Explain why, in terms of its particles.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: The total **positive** charge (from protons) equals the total **negative** charge (from electrons)",
+            "1 mark: The number of **protons** equals the number of **electrons**"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "atomic-struct4",
+      "topic": "Atomic Structure",
+      "title": "Atomic discoveries",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "single-choice",
+          "text": "The table shows four discoveries about atoms.<table><tr><th>Discovery</th><th>Description</th></tr><tr><td>A</td><td>Atoms contain a small, dense, positively charged nucleus</td></tr><tr><td>B</td><td>Atoms contain electrons</td></tr><tr><td>C</td><td>Atoms contain neutrons</td></tr><tr><td>D</td><td>Electrons orbit the nucleus at specific distances</td></tr></table>Which discovery was the earliest?",
+          "marks": 1,
+          "options": ["A", "B", "C", "D"],
+          "correctAnswer": 1,
+          "markScheme": ["Answer: B - The electron was discovered by J.J. Thomson in 1897, before the other discoveries"],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "single-choice",
+          "text": "Which discovery in the table above was the most recent?",
+          "marks": 1,
+          "options": ["A", "B", "C", "D"],
+          "correctAnswer": 2,
+          "markScheme": ["Answer: C - The neutron was discovered by Chadwick in 1932, after the other discoveries"],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "single-choice",
+          "text": "The results of the alpha particle scattering experiment were reproducible. What does reproducible mean?",
+          "marks": 1,
+          "options": [
+            "Other scientists can repeat the experiment and get the same results",
+            "The experiment can be done at a larger scale",
+            "The results prove the theory is correct",
+            "The equipment can be used for other experiments"
+          ],
+          "correctAnswer": 0,
+          "markScheme": ["Answer: A - Reproducible means other scientists can repeat the experiment and obtain the same results"],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "atomic-struct5",
+      "topic": "Atomic Structure",
+      "title": "Plum pudding and nuclear models",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "single-choice",
+          "text": "In the plum pudding model of the atom, negative particles are embedded in a sphere of positive charge. What are these negative particles called?",
+          "marks": 1,
+          "options": ["Electrons", "Neutrons", "Protons"],
+          "correctAnswer": 0,
+          "markScheme": ["Answer: A - The negative particles embedded in the plum pudding model are electrons"],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "single-choice",
+          "text": "Which statement gives a reason why scientists decided that a scientific model of the atom needed replacing?",
+          "marks": 1,
+          "options": [
+            "The model was difficult to understand",
+            "The model was over 100 years old",
+            "New experimental evidence contradicted the model"
+          ],
+          "correctAnswer": 2,
+          "markScheme": ["Answer: C - Models are replaced when new experimental evidence does not fit the existing model"],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "gap-fill",
+          "text": "Complete the sentences about atomic particles using words from the box.",
+          "marks": 3,
+          "segments": [
+            "The particle with relative mass 1 and relative charge +1 is the ",
+            { "blank": 0 },
+            ". The particle with very small relative mass and relative charge \u22121 is the ",
+            { "blank": 1 },
+            ". The particle with relative mass 1 and relative charge 0 is the ",
+            { "blank": 2 },
+            "."
+          ],
+          "wordBank": ["electron", "neutron", "proton"],
+          "correctAnswers": ["proton", "electron", "neutron"],
+          "markScheme": [
+            "1 mark: proton (relative mass 1, relative charge +1)",
+            "1 mark: electron (very small relative mass, relative charge \u22121)",
+            "1 mark: neutron (relative mass 1, relative charge 0)"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "atomic-struct6",
+      "topic": "Atomic Structure",
+      "title": "Alpha particle scattering",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "gap-fill",
+          "text": "In the alpha particle scattering experiment, alpha particles were fired at a thin gold foil. Alpha particles and gold nuclei are both positively charged. Complete the sentences using words from the box.",
+          "marks": 3,
+          "segments": [
+            "The gold nucleus ",
+            { "blank": 0 },
+            " the alpha particles. As an alpha particle gets closer to the gold nucleus, the electric field strength experienced by the alpha particle ",
+            { "blank": 1 },
+            ". As an alpha particle gets closer to the gold nucleus, the force experienced by the alpha particle ",
+            { "blank": 2 },
+            "."
+          ],
+          "wordBank": ["attracts", "decreases", "does not change", "increases", "reflects", "repels"],
+          "correctAnswers": ["repels", "increases", "increases"],
+          "markScheme": [
+            "1 mark: repels",
+            "1 mark: increases (electric field strength)",
+            "1 mark: increases (force)"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "single-choice",
+          "text": "In the alpha particle scattering experiment, most alpha particles passed straight through the gold foil. A small number were deflected slightly, and very few were deflected back. What can be deduced about the atom from the fact that most alpha particles passed straight through?",
+          "marks": 1,
+          "options": [
+            "The atom contains a nucleus",
+            "The atom contains protons, neutrons and electrons",
+            "The atom is mostly empty space"
+          ],
+          "correctAnswer": 2,
+          "markScheme": ["Answer: C - Most alpha particles pass straight through because the atom is mostly empty space"],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "atomic-struct7",
+      "topic": "Atomic Structure",
+      "title": "Isotopes",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "Three atoms are shown below.<table><tr><th>Atom</th><th>Protons</th><th>Neutrons</th><th>Electrons</th></tr><tr><td>A</td><td>6</td><td>6</td><td>6</td></tr><tr><td>B</td><td>7</td><td>7</td><td>7</td></tr><tr><td>C</td><td>6</td><td>7</td><td>6</td></tr></table>Two of the atoms are from the same element. Which of A, B and C is an atom of a different element? Give one reason for your answer.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: **B** is a different element",
+            "1 mark: B has a different number of **protons** (or a different atomic number)"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "Two of the atoms A, B and C shown in the table above are isotopes of the same element. Which two are isotopes? Explain your answer.",
+          "marks": 3,
+          "markScheme": [
+            "1 mark: **A** and **C** are isotopes",
+            "1 mark: They have the same number of **protons** (same atomic number / same element)",
+            "1 mark: They have a different number of **neutrons** (different mass numbers)"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "atomic-struct8",
+      "topic": "Atomic Structure",
+      "title": "Half-life and radiation risk",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "Doctors use nuclear radiation to diagnose illness. The table below gives data about three radiation sources. Each emits beta radiation.<table><tr><th>Radiation source</th><th>Half-life</th></tr><tr><td>Carbon-11</td><td>20 minutes</td></tr><tr><td>Nitrogen-13</td><td>10 minutes</td></tr><tr><td>Oxygen-15</td><td>2 minutes</td></tr></table>Explain why oxygen-15 is likely to pose the least risk to a patient.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Oxygen-15 has the **shortest half-life** of the three sources",
+            "1 mark: So the patient is exposed to **radiation** for a shorter time / the source decays most quickly"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "single-choice",
+          "text": "Radiation may be used to treat a patient if the risk from the radiation is...",
+          "marks": 1,
+          "options": [
+            "Much bigger than the possible benefit",
+            "About the same as the possible benefit",
+            "Much smaller than the possible benefit"
+          ],
+          "correctAnswer": 2,
+          "markScheme": ["Answer: C - Radiation is used when the risk is much smaller than the possible benefit"],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "Treating an illness with radiation may also harm a patient. State the risk from treating a patient with radiation.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: The radiation may **damage** / destroy / kill / mutate / ionise healthy body cells"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "atomic-struct9",
+      "topic": "Atomic Structure",
+      "title": "Comparing atomic models",
+      "difficulty": "hard",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "In the early 20th century, scientists used the 'plum pudding' model of the atom. Following the alpha particle scattering experiments by Rutherford and Marsden, the 'nuclear' model was suggested. Describe the differences between the plum pudding model and the nuclear model of the atom.",
+          "marks": 4,
+          "markScheme": [
+            "1 mark: In the nuclear model, the **mass is concentrated** at the centre in a small nucleus",
+            "1 mark: In the plum pudding model, mass is **spread evenly** throughout the atom",
+            "1 mark: In the nuclear model, **electrons orbit** the nucleus at a distance",
+            "1 mark: In the plum pudding model, electrons are **embedded** in the sphere of positive charge"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "How is the Bohr model of the atom different from the nuclear model of the atom?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: In the Bohr model, electrons orbit at **specific distances** (fixed energy levels / shells), whereas in the nuclear model electrons can orbit at **any distance**"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "atomic-struct10",
+      "topic": "Atomic Structure",
+      "title": "Alpha scattering and energy levels",
+      "difficulty": "hard",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "In the alpha particle scattering experiment, alpha particles were directed at a thin gold foil. Most passed straight through, but some were deflected through large angles. Explain why some alpha particles are deflected through large angles.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Both the alpha particle and the gold **nucleus** are **positively** charged",
+            "1 mark: So they **repel** each other, deflecting the alpha particle"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "Two alpha particles, B and C, pass near a gold nucleus. Alpha particle B passes closer to the nucleus than alpha particle C. Explain why alpha particle B is deflected more than alpha particle C.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Alpha particle B passes **closer** to the (positively charged) nucleus",
+            "1 mark: So it experiences a **stronger** repulsive (electrostatic) force"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "Electrons in an atom can move between energy levels. Explain how an electron moves to a higher energy level and how it moves to a lower energy level.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: To move to a higher energy level, an electron must **absorb** electromagnetic radiation (or a specific amount of energy / a photon)",
+            "1 mark: To move to a lower energy level, an electron **emits** electromagnetic radiation (or releases energy as a photon)"
+          ],
+          "diagram": null
+        }
+      ]
+    }
+  ]
+}

@@ -6,6 +6,7 @@ import SingleChoiceInput from '../inputs/SingleChoiceInput';
 import MultiChoiceInput from '../inputs/MultiChoiceInput';
 import GapFillInput from '../inputs/GapFillInput';
 import NumericalInput from '../inputs/NumericalInput';
+import TickBoxTableInput from '../inputs/TickBoxTableInput';
 
 export default function SelfMarkingView({
   question,
@@ -71,6 +72,7 @@ export default function SelfMarkingView({
     const result = autoMarkResults[partIndex];
     switch (part.type) {
       case 'single-choice':
+      case 'equation-choice':
         return (
           <div className="auto-marked-answer">
             <SingleChoiceInput
@@ -98,6 +100,18 @@ export default function SelfMarkingView({
         return (
           <div className="auto-marked-answer">
             <GapFillInput
+              part={part}
+              value={answers[partIndex] || []}
+              onChange={() => {}}
+              disabled={true}
+              autoMarkResult={result}
+            />
+          </div>
+        );
+      case 'tick-box-table':
+        return (
+          <div className="auto-marked-answer">
+            <TickBoxTableInput
               part={part}
               value={answers[partIndex] || []}
               onChange={() => {}}

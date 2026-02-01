@@ -4,7 +4,7 @@ import QuestionPart from './components/QuestionPart';
 import SelfMarkingView from './components/marking/SelfMarkingView';
 import FinalScorePanel from './components/marking/FinalScorePanel';
 import ScorePage from './components/marking/ScorePage';
-import { autoMarkSingleChoice, autoMarkMultiChoice, autoMarkGapFill, autoMarkNumerical } from './utils/autoMark';
+import { autoMarkSingleChoice, autoMarkMultiChoice, autoMarkGapFill, autoMarkNumerical, autoMarkTickBoxTable } from './utils/autoMark';
 import { parseMarkScheme } from './utils/parseMarkScheme';
 
 function initState({ question, savedState }) {
@@ -64,7 +64,8 @@ function reducer(state, action) {
       question.parts.forEach((part, i) => {
         const answer = state.answers[i];
         switch (part.type) {
-          case 'single-choice': {
+          case 'single-choice':
+          case 'equation-choice': {
             const result = autoMarkSingleChoice(part, answer ?? -1);
             partScores[i] = result.score;
             autoMarkResults[i] = result;
@@ -78,6 +79,12 @@ function reducer(state, action) {
           }
           case 'gap-fill': {
             const result = autoMarkGapFill(part, answer || []);
+            partScores[i] = result.score;
+            autoMarkResults[i] = result;
+            break;
+          }
+          case 'tick-box-table': {
+            const result = autoMarkTickBoxTable(part, answer || []);
             partScores[i] = result.score;
             autoMarkResults[i] = result;
             break;
@@ -128,6 +135,7 @@ function reducer(state, action) {
 
         switch (part.type) {
           case 'single-choice':
+          case 'equation-choice':
             markingDecisions[i] = points.map(() => result.isCorrect);
             break;
           case 'multi-choice': {
@@ -141,9 +149,20 @@ function reducer(state, action) {
             }
             break;
           }
-          case 'gap-fill':
-            markingDecisions[i] = (result.results || []).map(r => r.isCorrect);
+          case 'gap-fill': {
+            const gapResults = result.results || [];
+            markingDecisions[i] = points.map((_, idx) =>
+              idx < gapResults.length ? gapResults[idx].isCorrect : false
+            );
             break;
+          }
+          case 'tick-box-table': {
+            const tbtResults = result.results || [];
+            markingDecisions[i] = points.map((_, idx) =>
+              idx < tbtResults.length ? tbtResults[idx].isCorrect : false
+            );
+            break;
+          }
           case 'short-numerical':
             // Only reaches here if correct (incorrect goes to selfMarkParts)
             markingDecisions[i] = points.map(() => true);

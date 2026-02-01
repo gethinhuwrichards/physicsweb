@@ -7,6 +7,7 @@
       "id": "sp-circuits1",
       "topic": "Series and parallel circuits",
       "title": "Current and potential difference in series circuits",
+      "difficulty": "easy",
       "parts": [
         {
           "partLabel": "a",
@@ -43,6 +44,7 @@
       "id": "sp-circuits2",
       "topic": "Series and parallel circuits",
       "title": "Potential difference in parallel circuits",
+      "difficulty": "medium",
       "parts": [
         {
           "partLabel": "a",
@@ -87,6 +89,7 @@
       "id": "sp-circuits3",
       "topic": "Series and parallel circuits",
       "title": "Comparing series and parallel circuits",
+      "difficulty": "hard",
       "parts": [
         {
           "partLabel": "a",

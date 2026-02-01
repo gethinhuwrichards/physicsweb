@@ -108,6 +108,10 @@ export default function App() {
       setCurrentQuestion(q);
       setSavedState(loadQuestionAnswers(q.id));
       setView('question');
+      requestAnimationFrame(() => {
+        const el = document.getElementById('question-content-inner');
+        if (el) el.scrollIntoView({ behavior: 'instant' });
+      });
     },
     [questions]
   );
@@ -228,6 +232,7 @@ export default function App() {
               title={subtopic?.name || ''}
               questions={questions}
               scores={scores}
+              scrollToId={currentQuestion?.id}
               onSelectQuestion={selectQuestion}
               onResetQuestion={handleResetFromList}
               onResetAll={handleResetAllSubtopic}

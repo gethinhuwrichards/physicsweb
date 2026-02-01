@@ -5,6 +5,7 @@ import MultiChoiceInput from './inputs/MultiChoiceInput';
 import GapFillInput from './inputs/GapFillInput';
 import ExtendedWrittenInput from './inputs/ExtendedWrittenInput';
 import NumericalInput from './inputs/NumericalInput';
+import TickBoxTableInput from './inputs/TickBoxTableInput';
 
 export default function QuestionPart({
   part,
@@ -22,6 +23,7 @@ export default function QuestionPart({
   function renderInput() {
     switch (part.type) {
       case 'single-choice':
+      case 'equation-choice':
         return (
           <SingleChoiceInput
             part={part}
@@ -63,6 +65,16 @@ export default function QuestionPart({
       case 'short-numerical':
         return (
           <NumericalInput
+            part={part}
+            value={answer}
+            onChange={val => onAnswer(partIndex, val)}
+            disabled={disabled}
+            autoMarkResult={autoMarkResult}
+          />
+        );
+      case 'tick-box-table':
+        return (
+          <TickBoxTableInput
             part={part}
             value={answer}
             onChange={val => onAnswer(partIndex, val)}

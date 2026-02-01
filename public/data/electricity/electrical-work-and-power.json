@@ -6,6 +6,7 @@
       "id": "elec-work-power2",
       "topic": "Electricity",
       "title": "Electrical work and power",
+      "difficulty": "medium",
       "parts": [
         {
           "partLabel": "a",

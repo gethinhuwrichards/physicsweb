@@ -45,6 +45,16 @@ export function autoMarkGapFill(part, userAnswers) {
   };
 }
 
+export function autoMarkTickBoxTable(part, selections) {
+  const sel = selections || [];
+  const results = part.rows.map((row, i) => {
+    const isCorrect = sel[i] === row.correctColumn;
+    return { isCorrect, selected: sel[i] ?? null, correctColumn: row.correctColumn };
+  });
+  const score = Math.min(results.filter(r => r.isCorrect).length, part.marks);
+  return { score, results };
+}
+
 export function autoMarkNumerical(part, answer) {
   const raw = answer && answer.finalAnswer != null ? String(answer.finalAnswer).trim() : '';
   const parsed = parseFloat(raw);

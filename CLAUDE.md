@@ -28,6 +28,7 @@ Questions are organized hierarchically:
 - **8 Main Topics**: Energy, Electricity, Particle Model, Atomic Structure, Forces, Waves, Magnetism, Space
 - **Subtopics**: Each main topic has subtopics (e.g., Energy → Energy Stores)
 - **Separate JSON files**: Each subtopic has its own JSON file in `public/data/<topic>/<subtopic>.json`
+- **Difficulty**: Every question has a `difficulty` field (`"easy"`, `"medium"`, or `"hard"`). Questions are sorted easy → hard in the question list.
 
 ### Data Flow
 1. `public/data/topics.json` loaded on page init (contains topic/subtopic index)
@@ -52,6 +53,8 @@ Questions are organized hierarchically:
 | `single-choice` | Radio buttons (A, B, C or A, B, C, D) | Auto-marked |
 | `multi-choice` | Checkboxes with selection limit | Auto-marked (all-or-nothing or partial) |
 | `gap-fill` | Inline `<select>` dropdowns with word bank | Auto-marked (case-insensitive) |
+| `equation-choice` | Radio buttons with 4 LaTeX equations | Auto-marked |
+| `tick-box-table` | Table with radio buttons per row (2 columns) | Auto-marked (1 mark per row) |
 
 ### LaTeX Support
 Use `$...$` for inline math and `$$...$$` for block math in question text and mark schemes.

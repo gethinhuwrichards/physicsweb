@@ -1,0 +1,387 @@
+{
+  "subtopic": "Pressure in a Gas",
+  "mainTopic": "Particle Model",
+  "questions": [
+    {
+      "id": "gas-pressure1",
+      "topic": "Pressure in a Gas",
+      "title": "Syringe pressure investigation",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "single-choice",
+          "text": "A student investigated how the pressure of a gas varied with the volume of the gas. The mass and temperature of the gas were constant.<br><br>What is the range of the syringe?",
+          "marks": 1,
+          "options": ["0 to 1 cm³", "0 to 5 cm³", "0 to 20 cm³", "0 to 25 cm³"],
+          "correctAnswer": 3,
+          "markScheme": ["Answer: D – 0 to 25 cm³"],
+          "diagram": "gas-pressure-syringe-gauge.jpeg"
+        },
+        {
+          "partLabel": "b",
+          "type": "single-choice",
+          "text": "What type of variable was the mass of gas?",
+          "marks": 1,
+          "options": ["Control", "Dependent", "Independent"],
+          "correctAnswer": 0,
+          "markScheme": ["Answer: A – Control"],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "gap-fill",
+          "text": "Complete the sentences. Choose the answers from the box. Each answer may be used once, more than once or not at all.",
+          "marks": 3,
+          "segments": [
+            "When the gas is compressed, the volume of gas in the syringe ",
+            {"blank": 0},
+            ".<br><br>So the number of collisions each second between the gas particles inside the syringe and the inside surface of the syringe ",
+            {"blank": 1},
+            ".<br><br>This means the force exerted on the inside surface of the container walls ",
+            {"blank": 2},
+            "."
+          ],
+          "wordBank": ["decreases", "increases", "remains the same"],
+          "correctAnswers": ["decreases", "increases", "increases"],
+          "markScheme": ["1 mark: **decreases**", "1 mark: **increases**", "1 mark: **increases**"],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "gas-pressure2",
+      "topic": "Pressure in a Gas",
+      "title": "Syringe compression effects",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "single-choice",
+          "text": "A student investigated how the pressure in a fixed mass of air varies with the volume of the air. When the plunger was pushed slowly into the syringe, the temperature of the air stayed the same.<br><br>How did pushing the plunger in affect the volume of air in the syringe?",
+          "marks": 1,
+          "options": ["The volume decreased.", "The volume stayed the same.", "The volume increased."],
+          "correctAnswer": 0,
+          "markScheme": ["Answer: A – The volume decreased"],
+          "diagram": "gas-pressure-syringe-plunger.jpeg"
+        },
+        {
+          "partLabel": "b",
+          "type": "single-choice",
+          "text": "How did pushing the plunger in affect the distance between the air particles in the syringe?",
+          "marks": 1,
+          "options": ["The distance decreased.", "The distance stayed the same.", "The distance increased."],
+          "correctAnswer": 0,
+          "markScheme": ["Answer: A – The distance decreased"],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "single-choice",
+          "text": "How did pushing the plunger in affect the frequency of collisions between the air particles and the syringe walls?",
+          "marks": 1,
+          "options": ["The frequency of collisions decreased.", "The frequency of collisions stayed the same.", "The frequency of collisions increased."],
+          "correctAnswer": 2,
+          "markScheme": ["Answer: C – The frequency of collisions increased"],
+          "diagram": null
+        },
+        {
+          "partLabel": "d",
+          "type": "single-choice",
+          "text": "How did pushing the plunger in affect the air pressure in the syringe?",
+          "marks": 1,
+          "options": ["The air pressure decreased.", "The air pressure stayed the same.", "The air pressure increased."],
+          "correctAnswer": 2,
+          "markScheme": ["Answer: C – The air pressure increased"],
+          "diagram": null
+        },
+        {
+          "partLabel": "e",
+          "type": "single-choice",
+          "text": "A fire piston is a special type of syringe that can be used to start fires. The plunger is pushed quickly downwards and compresses the air. When the air is compressed quickly, the temperature of the air increases.<br><br>How does an increase in temperature affect the mean speed of the air particles inside the syringe?",
+          "marks": 1,
+          "options": ["The mean speed of the particles decreases.", "The mean speed of the particles does not change.", "The mean speed of the particles increases."],
+          "correctAnswer": 2,
+          "markScheme": ["Answer: C – The mean speed of the particles increases"],
+          "diagram": "gas-pressure-fire-piston.jpeg"
+        }
+      ]
+    },
+    {
+      "id": "gas-pressure3",
+      "topic": "Pressure in a Gas",
+      "title": "Pressure-volume relationship",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "gap-fill",
+          "text": "A teacher demonstrated the relationship between the pressure and the volume of a fixed mass of gas at a constant temperature.<br><br>Complete the sentences. Choose the answer from the box for each sentence.",
+          "marks": 2,
+          "segments": [
+            "Particles in a gas move in ",
+            {"blank": 0},
+            ".<br><br>Particles in a gas move with ",
+            {"blank": 1},
+            "."
+          ],
+          "wordBank": ["circular paths", "random directions", "the same direction", "a constant speed", "a constant velocity", "a range of speeds"],
+          "correctAnswers": ["random directions", "a range of speeds"],
+          "markScheme": ["1 mark: **random directions**", "1 mark: **a range of speeds**"],
+          "diagram": "gas-pressure-tube-equipment.jpeg"
+        },
+        {
+          "partLabel": "b",
+          "type": "short-numerical",
+          "text": "The relationship between the pressure and the volume of a gas is given by the equation:<br><br>$$\\text{pressure} \\times \\text{volume} = \\text{constant}$$<br><br>The table below shows some of the results.<table><tr><th>Pressure in kPa</th><th>Volume in cm³</th></tr><tr><td>300</td><td>10</td></tr><tr><td>200</td><td>15</td></tr><tr><td>150</td><td>20</td></tr><tr><td>120</td><td>25</td></tr><tr><td>100</td><td>30</td></tr></table>Calculate the constant when the pressure of the gas was 300 kPa.",
+          "marks": 2,
+          "correctAnswer": 3000,
+          "tolerance": 0.01,
+          "unit": "kPa cm³",
+          "showUnit": true,
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct substitution: $300 \\times 10$",
+            "1 mark: Final answer: **3000 kPa cm³**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "tick-box-table",
+          "text": "When the volume of the gas increases, the pressure in the gas decreases. The temperature of the gas stays the same.<br><br>How does increasing the volume affect each of the following quantities? Tick one box in each row.",
+          "marks": 3,
+          "columnHeaders": ["Decreases", "Stays the same", "Increases"],
+          "rows": [
+            {"label": "Mean time between collisions of the particles with the tube", "correctColumn": 2},
+            {"label": "Mean distance between the particles", "correctColumn": 2},
+            {"label": "Mean speed of the particles", "correctColumn": 1}
+          ],
+          "markScheme": [
+            "1 mark: Mean time between collisions — Increases",
+            "1 mark: Mean distance between particles — Increases",
+            "1 mark: Mean speed of particles — Stays the same"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "gas-pressure4",
+      "topic": "Pressure in a Gas",
+      "title": "Helium balloon density",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "single-choice",
+          "text": "The figure below shows a balloon filled with helium gas.<br><br>What name is given to the total kinetic energy and potential energy of all the particles of helium gas in the balloon?",
+          "marks": 1,
+          "options": ["External energy", "Internal energy", "Movement energy"],
+          "correctAnswer": 1,
+          "markScheme": ["Answer: B – Internal energy"],
+          "diagram": "gas-pressure-helium-balloon.png"
+        },
+        {
+          "partLabel": "b",
+          "type": "equation-choice",
+          "text": "Write down the equation which links density, mass and volume.",
+          "marks": 1,
+          "options": [
+            "$\\rho = \\frac{m}{V}$",
+            "$\\rho = m \\times V$",
+            "$\\rho = \\frac{V}{m}$",
+            "$P = \\frac{F}{A}$"
+          ],
+          "correctAnswer": 0,
+          "markScheme": ["Answer: A – $\\rho = \\frac{m}{V}$"],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "single-choice",
+          "text": "The helium in the balloon has a mass of 0.00254 kg and a volume of 0.0141 m³.<br><br>Choose the correct unit for density.",
+          "marks": 1,
+          "options": ["$\\text{m}^3 \\, / \\, \\text{kg}$", "$\\text{kg} \\, / \\, \\text{m}^3$", "$\\text{kg} \\, \\text{m}^3$"],
+          "correctAnswer": 1,
+          "markScheme": ["Answer: B – kg / m³"],
+          "diagram": null
+        },
+        {
+          "partLabel": "d",
+          "type": "short-numerical",
+          "text": "Calculate the density of helium.<br><br>Mass of helium = 0.00254 kg<br>Volume of balloon = 0.0141 m³",
+          "marks": 2,
+          "correctAnswer": 0.18,
+          "tolerance": 0.03,
+          "unit": "kg/m³",
+          "showUnit": true,
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct substitution: $\\rho = \\frac{0.00254}{0.0141}$",
+            "1 mark: Final answer: **0.18 kg/m³**"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "gas-pressure5",
+      "topic": "Pressure in a Gas",
+      "title": "Balloon compression",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "multi-choice",
+          "text": "The photograph below shows a balloon filled with helium gas.<br><br>Which statements describe the movement of the gas particles in the balloon?",
+          "marks": 2,
+          "options": [
+            "The particles all move in a predictable way.",
+            "The particles move at the same speed.",
+            "The particles move in circular paths.",
+            "The particles move in random directions.",
+            "The particles move with a range of speeds.",
+            "The particles vibrate about fixed positions."
+          ],
+          "correctAnswers": [3, 4],
+          "selectCount": 2,
+          "scoring": "all-or-nothing",
+          "markScheme": [
+            "1 mark: The particles move in random directions",
+            "1 mark: The particles move with a range of speeds"
+          ],
+          "diagram": "gas-pressure-red-balloon.jpeg"
+        },
+        {
+          "partLabel": "b",
+          "type": "short-numerical",
+          "text": "The pressure of the helium in the balloon is 100 000 Pa. The volume of the balloon is 0.030 m³.<br><br>The balloon is compressed at a constant temperature causing the volume to decrease to 0.025 m³. No helium leaves the balloon.<br><br>Calculate the new pressure in the balloon.",
+          "marks": 3,
+          "correctAnswer": 120000,
+          "tolerance": 0.01,
+          "unit": "Pa",
+          "showUnit": true,
+          "formulas": [
+            "$P_1 V_1 = P_2 V_2$",
+            "$P = \\frac{F}{A}$",
+            "$\\Delta E = m \\, c \\, \\Delta \\theta$"
+          ],
+          "requiresRearrangement": true,
+          "markScheme": [
+            "1 mark: Correct substitution: $100\\,000 \\times 0.030 = P_2 \\times 0.025$",
+            "1 mark: Correct rearrangement: $P_2 = \\frac{100\\,000 \\times 0.030}{0.025}$",
+            "1 mark: Final answer: **120 000 Pa**"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "gas-pressure6",
+      "topic": "Pressure in a Gas",
+      "title": "Syringe with weights",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "A teacher demonstrated the relationship between the pressure in a gas and the volume of the gas. This is the method used:<br><br>1. Record the initial volume of gas in the syringe and the pressure reading before any weights are attached.<br>2. Attach a 2.0 N weight to the syringe.<br>3. Record the volume of the gas and the reading on the pressure gauge.<br>4. Repeat steps 2 and 3 until a weight of 12.0 N is attached to the syringe.<br><br>What was the range of force used?",
+          "marks": 1,
+          "markScheme": ["1 mark: **0 N to 12 N** (accept 2 N to 12 N)"],
+          "diagram": "gas-pressure-syringe-weights.jpeg"
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "Give one control variable in the investigation.",
+          "marks": 1,
+          "markScheme": ["1 mark: **Mass of gas** in the syringe (or **temperature** of the gas)"],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "short-numerical",
+          "text": "When the volume of gas in the syringe was 45 cm³, the pressure gauge showed a value of 60 kPa.<br><br>Calculate the pressure in the gas when the volume of gas in the syringe was 40 cm³.",
+          "marks": 3,
+          "correctAnswer": 67.5,
+          "tolerance": 0.01,
+          "unit": "kPa",
+          "showUnit": true,
+          "formulas": [
+            "$P_1 V_1 = P_2 V_2$",
+            "$P = \\frac{F}{A}$",
+            "$\\rho = \\frac{m}{V}$"
+          ],
+          "requiresRearrangement": true,
+          "markScheme": [
+            "1 mark: Correct substitution: $60 \\times 45 = P \\times 40$",
+            "1 mark: Correct rearrangement: $P = \\frac{60 \\times 45}{40}$",
+            "1 mark: Final answer: **67.5 kPa**"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "gas-pressure7",
+      "topic": "Pressure in a Gas",
+      "title": "Fire piston temperature change",
+      "difficulty": "hard",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "short-numerical",
+          "text": "A fire piston is a special type of syringe. When the plunger is pushed quickly, the air is compressed and its temperature increases. When the air is hot enough, a small piece of cotton wool catches fire.<br><br>The energy transferred to the air in the piston is 0.0130 J.<br>The mass of air in the piston is $2.60 \\times 10^{-8}$ kg.<br>Specific heat capacity of air = 1010 J/kg °C<br><br>Calculate the temperature change of the air.",
+          "marks": 3,
+          "correctAnswer": 495,
+          "tolerance": 0.02,
+          "unit": "°C",
+          "showUnit": true,
+          "formulas": [
+            "$\\Delta E = m \\, c \\, \\Delta \\theta$",
+            "$E = m \\, L$",
+            "$P_1 V_1 = P_2 V_2$"
+          ],
+          "requiresRearrangement": true,
+          "markScheme": [
+            "1 mark: Correct substitution: $0.0130 = 2.60 \\times 10^{-8} \\times 1010 \\times \\Delta \\theta$",
+            "1 mark: Correct rearrangement: $\\Delta \\theta = \\frac{0.0130}{2.60 \\times 10^{-8} \\times 1010}$",
+            "1 mark: Final answer: **495 °C**"
+          ],
+          "diagram": "gas-pressure-fire-piston.jpeg"
+        }
+      ]
+    },
+    {
+      "id": "gas-pressure8",
+      "topic": "Pressure in a Gas",
+      "title": "Gas pressure-volume calculation",
+      "difficulty": "hard",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "short-numerical",
+          "text": "A student investigated how the pressure exerted by a gas varied with the volume of the gas.<br><br>One of the student's results is given below.<br>Pressure = $1.6 \\times 10^5$ Pa<br>Volume = 9.0 cm³<br><br>Calculate the volume of the gas when the pressure was $1.8 \\times 10^5$ Pa. The temperature of the gas was constant.",
+          "marks": 3,
+          "correctAnswer": 8.0,
+          "tolerance": 0.01,
+          "unit": "cm³",
+          "showUnit": true,
+          "formulas": [
+            "$P_1 V_1 = P_2 V_2$",
+            "$P = \\frac{F}{A}$",
+            "$\\rho = \\frac{m}{V}$"
+          ],
+          "requiresRearrangement": true,
+          "markScheme": [
+            "1 mark: Correct substitution: $1.6 \\times 10^5 \\times 9.0 = 1.8 \\times 10^5 \\times V$",
+            "1 mark: Correct rearrangement: $V = \\frac{1.6 \\times 10^5 \\times 9.0}{1.8 \\times 10^5}$",
+            "1 mark: Final answer: **8.0 cm³**"
+          ],
+          "diagram": null
+        }
+      ]
+    }
+  ]
+}

@@ -31,4 +31,10 @@ TYPE 5: Short numerical questions
     correct substitution
     correct rearrangement (only for rearrangement)
     final answer (always wrong in marking mode, just show for clarity)
-    
+
+TYPE 6: Write down the correct equation
+- Automarked
+
+Type 7: Tick the boxes
+- Auto marked
+- Strictly one mark per row (must include this in question-format for llm to parse correctly)

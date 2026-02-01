@@ -1,0 +1,738 @@
+{
+  "subtopic": "Forces and Motion",
+  "mainTopic": "Forces",
+  "questions": [
+    {
+      "id": "forces-motion1",
+      "topic": "Forces and Motion",
+      "title": "Resultant forces",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "single-choice",
+          "text": "The diagram shows two forces acting on an object: 6 N to the right and 2 N to the left. What is the resultant force?",
+          "marks": 1,
+          "options": ["8 N to the right", "8 N to the left", "4 N to the right", "4 N to the left"],
+          "correctAnswer": 2,
+          "markScheme": ["Answer: C – The resultant force is 6 − 2 = 4 N to the right"],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "gap-fill",
+          "text": "Complete the sentences using words from the box.",
+          "marks": 2,
+          "segments": [
+            "A BASE jumper accelerates forwards when force A is ",
+            { "blank": 0 },
+            " force B. The BASE jumper falls at constant speed when force C is ",
+            { "blank": 1 },
+            " force D."
+          ],
+          "wordBank": ["bigger than", "equal to", "smaller than"],
+          "correctAnswers": ["bigger than", "equal to"],
+          "markScheme": [
+            "1 mark: bigger than",
+            "1 mark: equal to"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "forces-motion2",
+      "topic": "Forces and Motion",
+      "title": "Speed, velocity and acceleration basics",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "gap-fill",
+          "text": "Complete the sentence using words from the box.",
+          "marks": 1,
+          "segments": [
+            "From B to C the car moves at constant velocity. The forward driving force is ",
+            { "blank": 0 },
+            " the backward resistive force."
+          ],
+          "wordBank": ["equal to", "greater than", "less than"],
+          "correctAnswers": ["equal to"],
+          "markScheme": [
+            "1 mark: equal to"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "What word is used to describe the motion of an object that is slowing down?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **Deceleration** (or decelerate)"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "How is velocity different from speed?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Velocity includes **direction** (speed does not)"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "forces-motion3",
+      "topic": "Forces and Motion",
+      "title": "Newton's third law and typical speeds",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "gap-fill",
+          "text": "Complete the sentence using words from the box.",
+          "marks": 1,
+          "segments": [
+            "The force from the athlete pushing backwards on the starting blocks is ",
+            { "blank": 0 },
+            " the force from the starting blocks pushing forwards on the athlete."
+          ],
+          "wordBank": ["equal to", "greater than", "less than"],
+          "correctAnswers": ["equal to"],
+          "markScheme": [
+            "1 mark: equal to"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "single-choice",
+          "text": "What is the average running speed of a typical person?",
+          "marks": 1,
+          "options": ["1.5 m/s", "3.0 m/s", "4.5 m/s", "6.0 m/s"],
+          "correctAnswer": 1,
+          "markScheme": ["Answer: B – The typical running speed of a person is approximately 3.0 m/s"],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "short-numerical",
+          "text": "An athlete runs 100 m in 12.5 s. Calculate the average speed.",
+          "marks": 2,
+          "correctAnswer": 8,
+          "tolerance": 0.02,
+          "unit": "m/s",
+          "showUnit": true,
+          "formulas": [
+            "$v = \\frac{d}{t}$",
+            "$d = v \\times t$",
+            "$a = \\frac{\\Delta v}{t}$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct substitution: $v = \\frac{100}{12.5}$",
+            "1 mark: Final answer: **8.0 m/s**"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "forces-motion4",
+      "topic": "Forces and Motion",
+      "title": "Parachutes and air resistance",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "A BASE jumper opens a parachute. What effect does opening the parachute have on the speed of the falling BASE jumper? Give a reason for your answer.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: **Reduces** the speed",
+            "1 mark: Opening the parachute increases **air resistance** / drag (or parachute has a large surface area)"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "single-choice",
+          "text": "A ball and the Earth form a system. What is meant by 'a system'?",
+          "marks": 1,
+          "options": ["A group of objects that interact", "Objects with big differences in mass", "Objects with gravitational potential energy"],
+          "correctAnswer": 0,
+          "markScheme": ["Answer: A – A system is a group of objects that interact"],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "forces-motion5",
+      "topic": "Forces and Motion",
+      "title": "Weight and pressure calculations",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "short-numerical",
+          "text": "Calculate the weight of water when the mass is 25 000 kg. Gravitational field strength = 9.8 N/kg.",
+          "marks": 2,
+          "correctAnswer": 245000,
+          "tolerance": 0.01,
+          "unit": "N",
+          "showUnit": true,
+          "formulas": [
+            "$W = m \\times g$",
+            "$F = m \\times a$",
+            "$p = \\frac{F}{A}$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct substitution: $W = 25{,}000 \\times 9.8$",
+            "1 mark: Final answer: **245 000 N**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "short-numerical",
+          "text": "The weight of the water is 1 960 000 N and the bottom area is 49 m$^2$. Calculate the pressure at the bottom.",
+          "marks": 2,
+          "correctAnswer": 40000,
+          "tolerance": 0.01,
+          "unit": "Pa",
+          "showUnit": true,
+          "formulas": [
+            "$p = \\frac{F}{A}$",
+            "$F = p \\times A$",
+            "$p = h \\rho g$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct substitution: $p = \\frac{1{,}960{,}000}{49}$",
+            "1 mark: Final answer: **40 000 Pa**"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "forces-motion6",
+      "topic": "Forces and Motion",
+      "title": "Acceleration calculations",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "short-numerical",
+          "text": "A child swimming at 0.70 m/s accelerates for 5.0 s to reach 1.3 m/s. Calculate the acceleration.",
+          "marks": 2,
+          "correctAnswer": 0.12,
+          "tolerance": 0.05,
+          "unit": "m/s\u00b2",
+          "showUnit": true,
+          "formulas": [
+            "$a = \\frac{v - u}{t}$",
+            "$v = u + at$",
+            "$F = ma$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct substitution: $a = \\frac{1.3 - 0.70}{5.0}$",
+            "1 mark: Final answer: **0.12 m/s\u00b2**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "single-choice",
+          "text": "Which is the unit for acceleration?",
+          "marks": 1,
+          "options": ["J/s", "m/s", "m/s\u00b2", "Nm"],
+          "correctAnswer": 2,
+          "markScheme": ["Answer: C – The unit for acceleration is m/s\u00b2"],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "gap-fill",
+          "text": "Complete the sentence using words from the box.",
+          "marks": 1,
+          "segments": [
+            "The velocity of the athlete is the ",
+            { "blank": 0 },
+            " of the athlete in a given direction."
+          ],
+          "wordBank": ["acceleration", "displacement", "distance", "speed"],
+          "correctAnswers": ["speed"],
+          "markScheme": [
+            "1 mark: speed"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "forces-motion7",
+      "topic": "Forces and Motion",
+      "title": "Momentum and go-karts",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "Suggest two changes that could be made to the design of an electric go-kart to increase its top speed.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Make the shape/body more **streamlined** (or lower the seating position)",
+            "1 mark: **Increase** the power of the engine, or **reduce** the mass/weight of the go-kart"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "short-numerical",
+          "text": "A go-kart travels at 13 m/s. The total mass of the go-kart and driver is 140 kg. Calculate the momentum.",
+          "marks": 2,
+          "correctAnswer": 1820,
+          "tolerance": 0.01,
+          "unit": "kg m/s",
+          "showUnit": true,
+          "formulas": [
+            "$p = m \\times v$",
+            "$F = m \\times a$",
+            "$W = F \\times d$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct substitution: $p = 140 \\times 13$",
+            "1 mark: Final answer: **1820 kg m/s**"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "forces-motion8",
+      "topic": "Forces and Motion",
+      "title": "Force, mass and acceleration",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "equation-choice",
+          "text": "Write the equation that links acceleration, mass and resultant force.",
+          "marks": 1,
+          "options": [
+            "$F = m \\times a$",
+            "$a = m \\times F$",
+            "$F = \\frac{m}{a}$",
+            "$m = F \\times a$"
+          ],
+          "correctAnswer": 0,
+          "markScheme": ["Answer: A \u2013 $F = m \\times a$"],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "short-numerical",
+          "text": "A cyclist and bicycle have total mass 80 kg and accelerate at 1.2 m/s\u00b2. Calculate the resultant force.",
+          "marks": 2,
+          "correctAnswer": 96,
+          "tolerance": 0.01,
+          "unit": "N",
+          "showUnit": true,
+          "formulas": [
+            "$F = m \\times a$",
+            "$W = m \\times g$",
+            "$p = m \\times v$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct substitution: $F = 80 \\times 1.2$",
+            "1 mark: Final answer: **96 N**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "short-numerical",
+          "text": "A trolley has forces of 2.7 N to the right and 1.5 N to the left. The trolley has a mass of 0.75 kg. Calculate the acceleration.",
+          "marks": 3,
+          "correctAnswer": 1.6,
+          "tolerance": 0.02,
+          "unit": "m/s\u00b2",
+          "showUnit": true,
+          "formulas": [
+            "$F = m \\times a$",
+            "$a = \\frac{F}{m}$",
+            "$W = m \\times g$"
+          ],
+          "requiresRearrangement": true,
+          "markScheme": [
+            "1 mark: Correct substitution: $2.7 - 1.5 = 0.75 \\times a$",
+            "1 mark: Correct rearrangement: $a = \\frac{1.2}{0.75}$",
+            "1 mark: Final answer: **1.6 m/s\u00b2**"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "forces-motion9",
+      "topic": "Forces and Motion",
+      "title": "Motorbike forces and acceleration",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "A diagram shows horizontal forces acting on a moving motorbike. Force A acts backwards (resistive force) and force B acts forwards (driving force). Describe the movement of the motorbike when force A equals force B.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: **Constant speed** (not accelerating)",
+            "1 mark: In a **straight line** (accept any reference to direction; 'constant velocity' scores both marks)"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "What happens to the speed of the motorbike if force B (driving force) becomes smaller than force A (resistive force)?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: The motorbike **slows down**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "equation-choice",
+          "text": "Write down the equation that links acceleration, change in velocity and time taken.",
+          "marks": 1,
+          "options": [
+            "$a = \\frac{\\Delta v}{t}$",
+            "$v = a \\times t$",
+            "$a = v \\times t$",
+            "$\\Delta v = \\frac{a}{t}$"
+          ],
+          "correctAnswer": 0,
+          "markScheme": ["Answer: A \u2013 $a = \\frac{\\Delta v}{t}$"],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "forces-motion10",
+      "topic": "Forces and Motion",
+      "title": "Stopping distances and braking",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "A graph shows how the stopping distance of a car depends on speed. Describe what happens to the stopping distance when the speed doubles.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: The stopping distance **increases**",
+            "1 mark: By **more than double**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "A car is travelling on an icy road. Describe and explain what might happen when the brakes are applied.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: The vehicle may **skid** / slide (or loss of control / brakes lock)",
+            "1 mark: Due to reduced **friction** between tyres and road"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "Name three factors, other than weather conditions, that would increase the overall stopping distance of a vehicle.",
+          "marks": 3,
+          "markScheme": [
+            "1 mark: Increased **speed**",
+            "1 mark: Slower driver **reactions** (e.g. tiredness, alcohol, drugs, distraction)",
+            "1 mark: Poor vehicle maintenance (e.g. worn **brakes** / worn **tyres**) or increased mass"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "forces-motion11",
+      "topic": "Forces and Motion",
+      "title": "Hooke's law and springs",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "equation-choice",
+          "text": "Write the equation that links extension, force and spring constant.",
+          "marks": 1,
+          "options": [
+            "$F = k \\times e$",
+            "$k = F \\times e$",
+            "$e = F \\times k$",
+            "$F = \\frac{e}{k}$"
+          ],
+          "correctAnswer": 0,
+          "markScheme": ["Answer: A \u2013 $F = k \\times e$"],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "short-numerical",
+          "text": "The force on a spring is 336 N and the extension is 0.21 m. Calculate the spring constant.",
+          "marks": 3,
+          "correctAnswer": 1600,
+          "tolerance": 0.01,
+          "unit": "N/m",
+          "showUnit": true,
+          "formulas": [
+            "$F = k \\times e$",
+            "$k = \\frac{F}{e}$",
+            "$W = F \\times d$"
+          ],
+          "requiresRearrangement": true,
+          "markScheme": [
+            "1 mark: Correct substitution: $336 = k \\times 0.21$",
+            "1 mark: Correct rearrangement: $k = \\frac{336}{0.21}$",
+            "1 mark: Final answer: **1600 N/m**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "short-numerical",
+          "text": "The original length of the spring is 0.84 m. When a child stands on it, the length decreases by 0.21 m. Calculate the percentage change in length.",
+          "marks": 2,
+          "correctAnswer": 25,
+          "tolerance": 0.01,
+          "unit": "%",
+          "showUnit": true,
+          "formulas": [],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct substitution: $\\frac{0.21}{0.84} \\times 100$",
+            "1 mark: Final answer: **25%**"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "forces-motion12",
+      "topic": "Forces and Motion",
+      "title": "Weight, work and braking force",
+      "difficulty": "hard",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "short-numerical",
+          "text": "A parachutist has a mass of 75 kg. Calculate the weight. (g = 10 N/kg)",
+          "marks": 2,
+          "correctAnswer": 750,
+          "tolerance": 0.01,
+          "unit": "N",
+          "showUnit": true,
+          "formulas": [
+            "$W = m \\times g$",
+            "$F = m \\times a$",
+            "$p = m \\times v$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct substitution: $W = 75 \\times 10$",
+            "1 mark: Final answer: **750 N**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "short-numerical",
+          "text": "A bus has 500 000 J of kinetic energy and stops in 25 m. Calculate the braking force.",
+          "marks": 2,
+          "correctAnswer": 20000,
+          "tolerance": 0.01,
+          "unit": "N",
+          "showUnit": true,
+          "formulas": [
+            "$W = F \\times d$",
+            "$F = m \\times a$",
+            "$E_k = \\frac{1}{2}mv^2$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct substitution: $500{,}000 = F \\times 25$",
+            "1 mark: Final answer: **20 000 N**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "What happens to the kinetic energy of the bus as it is braking?",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Kinetic energy is transferred by **heating**",
+            "1 mark: To the **brakes**"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "forces-motion13",
+      "topic": "Forces and Motion",
+      "title": "Velocity-time graphs and energy",
+      "difficulty": "hard",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "A ball is dropped, hits the ground and bounces. A velocity-time graph shows: section AB where the ball falls with increasing velocity, then after the bounce section CD where the ball moves upward. Describe the motion of the ball between A and B.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: The velocity/speed is **increasing**",
+            "1 mark: The acceleration is **uniform** / constant / steady"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "When the ball hits the ground, energy is transferred. The velocity-time graph shows the velocity just after the bounce is less than just before. Explain how this shows energy transfer from ball to Earth.",
+          "marks": 4,
+          "markScheme": [
+            "1 mark: Velocity just after bounce is **less than** velocity just before bounce",
+            "1 mark: So the ball has **lost energy**",
+            "1 mark: The ball has lost **kinetic energy** (or has reduced gravitational potential energy at top of bounce)",
+            "1 mark: Total energy of ball and Earth system is **conserved** / constant"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "forces-motion14",
+      "topic": "Forces and Motion",
+      "title": "Emergency stop calculations",
+      "difficulty": "hard",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "short-numerical",
+          "text": "A car driver sees a dog. The thinking time is 0.7 s and the car travels at 24 m/s. Calculate the thinking distance.",
+          "marks": 2,
+          "correctAnswer": 16.8,
+          "tolerance": 0.02,
+          "unit": "m",
+          "showUnit": true,
+          "formulas": [
+            "$d = v \\times t$",
+            "$v = \\frac{d}{t}$",
+            "$a = \\frac{\\Delta v}{t}$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct substitution: $d = 24 \\times 0.7$",
+            "1 mark: Final answer: **16.8 m**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "short-numerical",
+          "text": "The car decelerates from 24 m/s to 0 in 4 s after braking. Calculate the acceleration.",
+          "marks": 2,
+          "correctAnswer": 6,
+          "tolerance": 0.01,
+          "unit": "m/s\u00b2",
+          "showUnit": true,
+          "formulas": [
+            "$a = \\frac{v - u}{t}$",
+            "$F = m \\times a$",
+            "$v = u + at$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct substitution: $a = \\frac{24 - 0}{4}$",
+            "1 mark: Final answer: **6 m/s\u00b2**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "short-numerical",
+          "text": "The car has mass 800 kg and decelerates at 6 m/s\u00b2. Calculate the braking force.",
+          "marks": 2,
+          "correctAnswer": 4800,
+          "tolerance": 0.01,
+          "unit": "N",
+          "showUnit": true,
+          "formulas": [
+            "$F = m \\times a$",
+            "$W = F \\times d$",
+            "$p = m \\times v$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct substitution: $F = 800 \\times 6$",
+            "1 mark: Final answer: **4800 N**"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "forces-motion15",
+      "topic": "Forces and Motion",
+      "title": "Falling objects and SUVAT",
+      "difficulty": "hard",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "short-numerical",
+          "text": "A child steps off a diving board. Initial velocity = 0 m/s, acceleration = 9.8 m/s\u00b2, distance fallen = 0.95 m. Using $v^2 = u^2 + 2as$, calculate the final velocity to 2 significant figures.",
+          "marks": 3,
+          "correctAnswer": 4.3,
+          "tolerance": 0.02,
+          "unit": "m/s",
+          "showUnit": true,
+          "formulas": [
+            "$v^2 = u^2 + 2as$",
+            "$s = ut + \\frac{1}{2}at^2$",
+            "$v = u + at$"
+          ],
+          "requiresRearrangement": true,
+          "markScheme": [
+            "1 mark: Correct substitution: $v^2 = 0 + 2 \\times 9.8 \\times 0.95$",
+            "1 mark: Correct rearrangement: $v = \\sqrt{18.62}$",
+            "1 mark: Final answer: **4.3 m/s** (to 2 significant figures)"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "Explain why the data for a cyclist has been shown as a line graph instead of a bar chart.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Both velocity and time are **continuous** variables (not categoric)"
+          ],
+          "diagram": null
+        }
+      ]
+    }
+  ]
+}

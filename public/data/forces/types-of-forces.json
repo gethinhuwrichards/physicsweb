@@ -1,0 +1,396 @@
+{
+  "subtopic": "Types of forces",
+  "mainTopic": "Forces",
+  "questions": [
+    {
+      "id": "forces-1",
+      "topic": "Forces and terminal velocity",
+      "title": "Hailstones: weight, drag and terminal velocity",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "single-choice",
+          "text": "Hailstones form in clouds and fall to the ground. Which force causes the hailstones to fall to the ground?",
+          "marks": 1,
+          "options": [
+            "Air resistance",
+            "Gravitational force",
+            "Magnetic force",
+            "Tension"
+          ],
+          "correctAnswer": 1,
+          "markScheme": [
+            "Answer: B — gravitational force."
+          ],
+          "diagram": "q1_hailstones_fig1.jpeg"
+        },
+        {
+          "partLabel": "b",
+          "type": "single-choice",
+          "text": "As the hailstones begin to fall they accelerate. Which force increases as the hailstones accelerate?",
+          "marks": 1,
+          "options": [
+            "Air resistance",
+            "Gravitational force",
+            "Magnetic force",
+            "Tension"
+          ],
+          "correctAnswer": 0,
+          "markScheme": [
+            "Answer: A — air resistance increases with speed."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "single-choice",
+          "text": "After a short time hailstones fall at terminal velocity. Which statement is true at terminal velocity?",
+          "marks": 1,
+          "options": [
+            "The hailstones begin to slow down.",
+            "The mass of the hailstones increases.",
+            "The resultant force on the hailstones is zero."
+          ],
+          "correctAnswer": 2,
+          "markScheme": [
+            "Answer: C — resultant force is zero at terminal velocity."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "d",
+          "type": "short-numerical",
+          "text": "A scientist investigated how terminal velocity varies with diameter (graph). Estimate the terminal velocity for a hailstone with a diameter of 80 mm.",
+          "marks": 2,
+          "correctAnswer": 46,
+          "tolerance": 0.05,
+          "unit": "m/s",
+          "showUnit": true,
+          "formulas": [],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct method: extrapolate the best-fit line to 80 mm on the graph.",
+            "1 mark: Terminal velocity ≈ **46 m/s** (accept 44–48 m/s if consistent with the line)."
+          ],
+          "diagram": "q1_terminal_velocity_graph.jpeg"
+        },
+        {
+          "partLabel": "e",
+          "type": "single-choice",
+          "text": "Give one reason why a hailstone with a large diameter has a greater terminal velocity than a hailstone with a smaller diameter.",
+          "marks": 1,
+          "options": [
+            "It has a greater power.",
+            "It has a greater pressure.",
+            "It has a greater temperature.",
+            "It has a greater weight."
+          ],
+          "correctAnswer": 3,
+          "markScheme": [
+            "Answer: D — greater weight."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "f",
+          "type": "single-choice",
+          "text": "Figure shows the forces acting on a hailstone at the moment it hits the ground. What is the magnitude of the resultant force?",
+          "marks": 1,
+          "options": [
+            "0.15 N",
+            "0.48 N",
+            "0.63 N",
+            "0.78 N"
+          ],
+          "correctAnswer": 1,
+          "markScheme": [
+            "Answer: B — 0.48 N."
+          ],
+          "diagram": "q1_hailstone_forces.jpeg"
+        },
+        {
+          "partLabel": "g",
+          "type": "extended-written",
+          "text": "What is the direction of the resultant force on the hailstone in the figure?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **Upwards**."
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "forces-2",
+      "topic": "Forces, moments and motion",
+      "title": "Cyclist: balanced forces, moments and acceleration",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "single-choice",
+          "text": "A cyclist is moving at a constant velocity. Arrows A and B represent the horizontal forces acting on the bicycle and cyclist. What is force A?",
+          "marks": 1,
+          "options": [
+            "Air resistance",
+            "Friction",
+            "Tension",
+            "Upthrust"
+          ],
+          "correctAnswer": 1,
+          "markScheme": [
+            "Answer: B — friction."
+          ],
+          "diagram": "q2_cyclist_forces.jpeg"
+        },
+        {
+          "partLabel": "b",
+          "type": "single-choice",
+          "text": "What is force B?",
+          "marks": 1,
+          "options": [
+            "Air resistance",
+            "Magnetic",
+            "Tension",
+            "Upthrust"
+          ],
+          "correctAnswer": 0,
+          "markScheme": [
+            "Answer: A — air resistance."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "single-choice",
+          "text": "What is the relationship between force A and force B when the cyclist travels at a constant velocity?",
+          "marks": 1,
+          "options": [
+            "A = B",
+            "A > B",
+            "A < B"
+          ],
+          "correctAnswer": 0,
+          "markScheme": [
+            "Answer: A — forces balance at constant velocity."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "d",
+          "type": "short-numerical",
+          "text": "The cyclist applies a force of 150 N to a pedal. The distance from the pivot is 0.24 m (Figure 2). Calculate the moment about the pivot.",
+          "marks": 2,
+          "correctAnswer": 36,
+          "tolerance": 0.0,
+          "unit": "N m",
+          "showUnit": true,
+          "formulas": [
+            "moment = force × distance",
+            "$W = F d$",
+            "$a = \\frac{\\Delta v}{t}$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Substitution: moment = 150 × 0.24",
+            "1 mark: Moment = **36 N m**"
+          ],
+          "diagram": "q2_pedal_distance.jpeg"
+        },
+        {
+          "partLabel": "e",
+          "type": "gap-fill",
+          "text": "Complete the sentence. Choose the answer from the box.",
+          "marks": 1,
+          "segments": [
+            "The force from the cyclist pushing down on the pedal is transmitted to the back wheel by the ",
+            {
+              "blank": 0
+            },
+            "."
+          ],
+          "wordBank": [
+            "axle",
+            "chain",
+            "cog"
+          ],
+          "correctAnswers": [
+            "chain"
+          ],
+          "markScheme": [
+            "1 mark: **chain**"
+          ],
+          "diagram": "q2_chain_drive.jpeg"
+        },
+        {
+          "partLabel": "f",
+          "type": "single-choice",
+          "text": "Figure 4 shows how the velocity of the cyclist changes during a journey. What is the change in velocity in the first 20 seconds?",
+          "marks": 1,
+          "options": [
+            "5.2 m/s",
+            "5.4 m/s",
+            "5.6 m/s",
+            "5.8 m/s"
+          ],
+          "correctAnswer": 3,
+          "markScheme": [
+            "Answer: D — 5.8 m/s."
+          ],
+          "diagram": "q2_velocity_time_graph.jpeg"
+        },
+        {
+          "partLabel": "g",
+          "type": "short-numerical",
+          "text": "Determine the acceleration of the cyclist during the first 20 seconds. Use your answer from part (f) and the equation $a = \\Delta v / t$.",
+          "marks": 2,
+          "correctAnswer": 0.29,
+          "tolerance": 0.03,
+          "unit": "m/s^2",
+          "showUnit": true,
+          "formulas": [
+            "$a = \\frac{\\Delta v}{t}$",
+            "$W = F d$",
+            "$v = \\frac{d}{t}$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Substitution: $a = 5.8 / 20$",
+            "1 mark: $a = **0.29\\,\\text{m/s}^2**$"
+          ],
+          "diagram": "q2_equation_snip.jpeg"
+        },
+        {
+          "partLabel": "h",
+          "type": "gap-fill",
+          "text": "Complete the sentence. Choose the answer from the box.",
+          "marks": 1,
+          "segments": [
+            "Between 30 and 40 seconds the cyclist moves with a constant ",
+            {
+              "blank": 0
+            },
+            "."
+          ],
+          "wordBank": [
+            "deceleration",
+            "speed",
+            "velocity"
+          ],
+          "correctAnswers": [
+            "deceleration"
+          ],
+          "markScheme": [
+            "1 mark: **deceleration**"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "forces-3",
+      "topic": "Forces and units",
+      "title": "Gravity, newtons and balanced forces",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "gap-fill",
+          "text": "Choose words from the list to complete the sentences.",
+          "marks": 3,
+          "segments": [
+            "When you drop something it falls. This is because it is pulled to the Earth by ",
+            {
+              "blank": 0
+            },
+            ".<br>We measure forces in units called ",
+            {
+              "blank": 1
+            },
+            ".<br>When a falling object reaches the ground, it stops moving. This means that the forces acting on it are now ",
+            {
+              "blank": 2
+            },
+            "."
+          ],
+          "wordBank": [
+            "balanced",
+            "electricity",
+            "gravity",
+            "joules",
+            "magnetism",
+            "newtons"
+          ],
+          "correctAnswers": [
+            "gravity",
+            "newtons",
+            "balanced"
+          ],
+          "markScheme": [
+            "1 mark: **gravity**",
+            "1 mark: **newtons**",
+            "1 mark: **balanced**"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "forces-4",
+      "topic": "Centripetal force and stability",
+      "title": "Car around a bend and preventing rollover",
+      "difficulty": "hard",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "single-choice",
+          "text": "A car travels around a bend at constant speed. In which direction (A, B, C or D) does the centripetal force act on the car?",
+          "marks": 1,
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "correctAnswer": 3,
+          "markScheme": [
+            "Answer: D."
+          ],
+          "diagram": "q5_bend_directions.png"
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "State the name of the force that provides the centripetal force.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **Friction** (between tyres and road)."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "State two factors that affect the size of the centripetal force acting on the car.",
+          "marks": 2,
+          "markScheme": [
+            "Any two: **speed/velocity**, **radius of bend** (distance from centre), **mass**."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "d",
+          "type": "extended-written",
+          "text": "The racing car should not roll over when racing. State two features of the car that make it difficult for the car to roll over.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: **Wide base / wide wheelbase**.",
+            "1 mark: **Low centre of mass/centre of gravity**."
+          ],
+          "diagram": "q5_racing_car.png"
+        }
+      ]
+    }
+  ]
+}

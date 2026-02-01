@@ -1,0 +1,214 @@
+{
+  "subtopic": "Scalars and vectors",
+  "mainTopic": "Forces",
+  "questions": [
+    {
+      "id": "sv-1",
+      "topic": "Forces and work done",
+      "title": "Crate pushed at constant speed",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "A worker uses a constant force of 60 N to push a crate across the floor. The crate moves at a constant speed in a straight line.\n\nState the size of the friction force acting on the moving crate and give the reason for your answer.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Friction force = **60 N**.",
+            "1 mark: At constant speed, resultant force is zero so forces balance."
+          ],
+          "diagram": "crate-push-diagram.png"
+        },
+        {
+          "partLabel": "b",
+          "type": "short-numerical",
+          "text": "Calculate the work done by the worker to push the crate 28 m. Give the unit.",
+          "marks": 2,
+          "correctAnswer": 1680,
+          "tolerance": 0.0,
+          "unit": "J",
+          "showUnit": true,
+          "formulas": [
+            "$W = F d$",
+            "$E = P t$",
+            "$E_k = \\tfrac{1}{2} m v^2$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct substitution: $W = 60 \\times 28$",
+            "1 mark: Final answer: **1680 J**"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "sv-2",
+      "topic": "Scalars, vectors and momentum",
+      "title": "Vector quantities and momentum basics",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "How is a vector quantity different from a scalar quantity?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: A vector has **magnitude and direction** (a scalar has magnitude only)."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "Name another vector quantity.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Any one, e.g. **velocity**, **force**, **weight**, **acceleration**, **displacement**."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "Give the definition of momentum.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Momentum = **mass × velocity**."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "d",
+          "type": "extended-written",
+          "text": "What is the unit of momentum?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **kg m/s** (accept **N s**)."
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "sv-3",
+      "topic": "Circular motion",
+      "title": "London Eye: acceleration at steady speed",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "The capsules on the London Eye move in a circular path. Explain how the wheel can move at a steady speed and the capsules accelerate at the same time.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: The **direction** of the capsule’s velocity is changing.",
+            "1 mark: Acceleration is the **rate of change of velocity**, and velocity includes direction."
+          ],
+          "diagram": "london-eye.jpeg"
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "In which direction is the resultant force on each capsule?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **Towards the centre** of the wheel."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "Name one other factor (besides speed of rotation and total mass) that affects the resultant force on each capsule, and state what effect it has.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **Radius** (or diameter): a larger radius gives a **smaller** resultant force."
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "sv-4",
+      "topic": "Scalars and vectors",
+      "title": "Classifying quantities",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "gap-fill",
+          "text": "Complete the sentence using the words in the box.",
+          "marks": 2,
+          "segments": [
+            "Velocity is ",
+            {
+              "blank": 0
+            },
+            " in a given ",
+            {
+              "blank": 1
+            },
+            "."
+          ],
+          "wordBank": [
+            "acceleration",
+            "direction",
+            "distance",
+            "speed",
+            "time"
+          ],
+          "correctAnswers": [
+            "speed",
+            "direction"
+          ],
+          "markScheme": [
+            "1 mark: **speed**",
+            "1 mark: **direction**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "tick-box-table",
+          "text": "Put a tick in each row to show whether each quantity is a scalar or a vector.",
+          "marks": 5,
+          "columnHeaders": [
+            "Scalar",
+            "Vector"
+          ],
+          "rows": [
+            {
+              "label": "Momentum",
+              "correctColumn": 1
+            },
+            {
+              "label": "Acceleration",
+              "correctColumn": 1
+            },
+            {
+              "label": "Distance",
+              "correctColumn": 0
+            },
+            {
+              "label": "Force",
+              "correctColumn": 1
+            },
+            {
+              "label": "Time",
+              "correctColumn": 0
+            }
+          ],
+          "markScheme": [
+            "1 mark: Momentum — Vector",
+            "1 mark: Acceleration — Vector",
+            "1 mark: Distance — Scalar",
+            "1 mark: Force — Vector",
+            "1 mark: Time — Scalar"
+          ],
+          "diagram": null
+        }
+      ]
+    }
+  ]
+}

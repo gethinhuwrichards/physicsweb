@@ -1,0 +1,833 @@
+{
+  "subtopic": "Electromagnetic Waves",
+  "mainTopic": "Waves",
+  "questions": [
+    {
+      "id": "em-waves1",
+      "topic": "Electromagnetic Waves",
+      "title": "Infrared and microwaves",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "The diagram shows the positions of infrared and microwaves within part of the electromagnetic spectrum. Name one type of electromagnetic radiation which has more energy than infrared.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Any one from: **(visible) light**, **ultraviolet**, **X-rays**, **gamma rays**"
+          ],
+          "diagram": "em-q3-em-spectrum-ir-microwaves.png"
+        },
+        {
+          "partLabel": "b",
+          "type": "gap-fill",
+          "text": "Use the correct answer from the box to complete each sentence. Each answer may be used once, more than once or not at all.",
+          "marks": 3,
+          "segments": [
+            "The wavelength of infrared is ",
+            { "blank": 0 },
+            " the wavelength of microwaves.<br>The frequency of microwaves is ",
+            { "blank": 1 },
+            " the frequency of infrared.<br>The speed of microwaves in a vacuum is ",
+            { "blank": 2 },
+            " the speed of infrared in a vacuum."
+          ],
+          "wordBank": ["greater than", "less than", "the same as"],
+          "correctAnswers": ["less than", "less than", "the same as"],
+          "markScheme": [
+            "1 mark: **less than**",
+            "1 mark: **less than**",
+            "1 mark: **the same as**"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "em-waves2",
+      "topic": "Electromagnetic Waves",
+      "title": "Electromagnetic spectrum sections",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "gap-fill",
+          "text": "The diagram shows a small part of the electromagnetic spectrum divided into seven sections A\u2013G, with wavelength increasing from A to G. The different properties of the waves in each section make them useful in different ways. Choose from A, B, C, D, E, F or G.",
+          "marks": 4,
+          "segments": [
+            "Used to send a signal to a satellite in space: ",
+            { "blank": 0 },
+            "<br>Used to communicate with a submarine under the water: ",
+            { "blank": 1 },
+            "<br>Used by a radio station to broadcast programmes around the world: ",
+            { "blank": 2 },
+            "<br>The waves with the shortest wavelength: ",
+            { "blank": 3 }
+          ],
+          "wordBank": ["A", "B", "C", "D", "E", "F", "G"],
+          "correctAnswers": ["B", "G", "D", "A"],
+          "markScheme": [
+            "1 mark: **B**",
+            "1 mark: **G**",
+            "1 mark: **D**",
+            "1 mark: **A**"
+          ],
+          "diagram": "em-q8-em-spectrum-sections.png"
+        }
+      ]
+    },
+    {
+      "id": "em-waves3",
+      "topic": "Electromagnetic Waves",
+      "title": "Oscilloscope wave traces",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "gap-fill",
+          "text": "The diagram shows oscilloscope traces of four waves, A, B, C and D. All four waves are drawn to the same scale. Identify which wave has each property.",
+          "marks": 3,
+          "segments": [
+            "The wave with the longest wavelength: ",
+            { "blank": 0 },
+            "<br>The wave with the greatest amplitude: ",
+            { "blank": 1 },
+            "<br>The wave with the highest frequency: ",
+            { "blank": 2 }
+          ],
+          "wordBank": ["A", "B", "C", "D"],
+          "correctAnswers": ["D", "C", "B"],
+          "markScheme": [
+            "1 mark: **D**",
+            "1 mark: **C**",
+            "1 mark: **B**"
+          ],
+          "diagram": "em-q19-oscilloscope-traces.png"
+        }
+      ]
+    },
+    {
+      "id": "em-waves4",
+      "topic": "Electromagnetic Waves",
+      "title": "Electromagnetic spectrum wavelengths",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "The figure shows the wavelengths of some types of electromagnetic radiation. Suggest one piece of equipment that can be used to detect infrared radiation.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **Infrared camera** (accept thermometer, thermal imaging camera, night vision goggles)"
+          ],
+          "diagram": "em-q1-em-spectrum-wavelengths.jpeg"
+        },
+        {
+          "partLabel": "b",
+          "type": "single-choice",
+          "text": "Which of the following values is a wavelength of red light?",
+          "marks": 1,
+          "options": ["320 nm", "410 nm", "690 nm", "750 nm"],
+          "correctAnswer": 2,
+          "markScheme": ["Answer: C \u2013 **690 nm**"],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "gap-fill",
+          "text": "Complete the sentences. Choose the answers from the box.",
+          "marks": 2,
+          "segments": [
+            "When sunlight shines on a red flower, the red light is ",
+            { "blank": 0 },
+            ".<br>All other colours of light shining on the red flower are ",
+            { "blank": 1 },
+            "."
+          ],
+          "wordBank": ["absorbed", "emitted", "reflected", "refracted"],
+          "correctAnswers": ["reflected", "absorbed"],
+          "markScheme": [
+            "1 mark: **reflected**",
+            "1 mark: **absorbed**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "d",
+          "type": "single-choice",
+          "text": "A gardener looks at a red flower through a green filter. How does the flower appear to the gardener?",
+          "marks": 1,
+          "options": ["Black", "Green", "Red", "White"],
+          "correctAnswer": 0,
+          "markScheme": ["Answer: A \u2013 **Black**"],
+          "diagram": null
+        },
+        {
+          "partLabel": "e",
+          "type": "extended-written",
+          "text": "The leaves of the plant reflect light. The leaves have a rough surface. What type of reflection happens at the leaf surface?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **Diffuse** (reflection)"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "em-waves5",
+      "topic": "Electromagnetic Waves",
+      "title": "Electromagnetic waves and communication",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "Figure 1 shows a transmitter emitting two electromagnetic waves, J and K. Wave J is reflected by a layer in the atmosphere called the ionosphere. What is the name given to the dashed line in Figure 1?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **Normal**"
+          ],
+          "diagram": "em-q2-transmitter-ionosphere.png"
+        },
+        {
+          "partLabel": "b",
+          "type": "single-choice",
+          "text": "Figure 2 shows a transmitter sending a signal to a satellite orbiting the Earth. Which type of electromagnetic wave is used to send a signal to a satellite?",
+          "marks": 1,
+          "options": ["Gamma", "Microwave", "Ultraviolet"],
+          "correctAnswer": 1,
+          "markScheme": ["Answer: B \u2013 **Microwave**"],
+          "diagram": "em-q2-satellite-signal.png"
+        },
+        {
+          "partLabel": "c",
+          "type": "single-choice",
+          "text": "What name is given to the process that occurs as wave L passes into the ionosphere?",
+          "marks": 1,
+          "options": ["Diffraction", "Reflection", "Refraction"],
+          "correctAnswer": 2,
+          "markScheme": ["Answer: C \u2013 **Refraction**"],
+          "diagram": null
+        },
+        {
+          "partLabel": "d",
+          "type": "multi-choice",
+          "text": "Waves J, K and L are electromagnetic waves. What are two properties of all electromagnetic waves?",
+          "marks": 2,
+          "options": [
+            "All electromagnetic waves are longitudinal.",
+            "All electromagnetic waves are transverse.",
+            "All electromagnetic waves are mechanical.",
+            "All electromagnetic waves have the same speed in a vacuum.",
+            "All electromagnetic waves have the same frequency."
+          ],
+          "correctAnswers": [1, 3],
+          "selectCount": 2,
+          "scoring": "all-or-nothing",
+          "markScheme": [
+            "1 mark: All electromagnetic waves are **transverse**",
+            "1 mark: All electromagnetic waves have the **same speed in a vacuum**"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "em-waves6",
+      "topic": "Electromagnetic Waves",
+      "title": "Electromagnetic wave properties and radio waves",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "single-choice",
+          "text": "Which one of the following is not an electromagnetic wave?",
+          "marks": 1,
+          "options": ["Gamma rays", "Sound", "Ultraviolet", "X-rays"],
+          "correctAnswer": 1,
+          "markScheme": ["Answer: B \u2013 **Sound**"],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "What type of electromagnetic wave do our eyes detect?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **(Visible) light**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "single-choice",
+          "text": "What is a practical use for infrared waves?",
+          "marks": 1,
+          "options": ["Cooking food", "Energy efficient lamps", "Medical imaging", "Satellite communications"],
+          "correctAnswer": 0,
+          "markScheme": ["Answer: A \u2013 **Cooking food**"],
+          "diagram": null
+        },
+        {
+          "partLabel": "d",
+          "type": "single-choice",
+          "text": "Scientists have detected radio waves emitted from a distant galaxy. Some of the radio waves have a frequency of 1 200 000 000 hertz. Which is the same as 1 200 000 000 hertz?",
+          "marks": 1,
+          "options": ["1.2 gigahertz", "1.2 kilohertz", "1.2 megahertz", "1.2 millihertz"],
+          "correctAnswer": 0,
+          "markScheme": ["Answer: A \u2013 **1.2 gigahertz**"],
+          "diagram": null
+        },
+        {
+          "partLabel": "e",
+          "type": "single-choice",
+          "text": "Radio waves travel through space at 300 000 kilometres per second (km/s). How is 300 000 km/s converted to metres per second (m/s)?",
+          "marks": 1,
+          "options": [
+            "300 000 \u00f7 1000 = 300 m/s",
+            "300 000 \u00d7 1000 = 300 000 000 m/s",
+            "300 000 + 1000 = 301 000 m/s",
+            "300 000 \u2013 1000 = 299 000 m/s"
+          ],
+          "correctAnswer": 1,
+          "markScheme": ["Answer: B \u2013 **300 000 \u00d7 1000 = 300 000 000 m/s**"],
+          "diagram": null
+        },
+        {
+          "partLabel": "f",
+          "type": "extended-written",
+          "text": "Write the equation which links frequency, wavelength and wave speed.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **wave speed = frequency \u00d7 wavelength** (accept $v = f \\lambda$)"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "g",
+          "type": "short-numerical",
+          "text": "Calculate the wavelength of the radio waves emitted from the distant galaxy. Give your answer in metres.",
+          "marks": 3,
+          "correctAnswer": 0.25,
+          "tolerance": 0.01,
+          "unit": "m",
+          "showUnit": true,
+          "formulas": [
+            "$v = f \\times \\lambda$",
+            "$\\lambda = \\frac{v}{f}$",
+            "$f = \\frac{v}{\\lambda}$"
+          ],
+          "requiresRearrangement": true,
+          "markScheme": [
+            "1 mark: Correct substitution: $300\\,000\\,000 = 1\\,200\\,000\\,000 \\times \\lambda$",
+            "1 mark: Correct rearrangement: $\\lambda = \\frac{v}{f}$",
+            "1 mark: Final answer: **0.25 m**"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "em-waves7",
+      "topic": "Electromagnetic Waves",
+      "title": "X-ray image of a skull",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "gap-fill",
+          "text": "Use the correct answers from the box to complete the sentence about X-rays entering the human body.",
+          "marks": 2,
+          "segments": [
+            "When X-rays enter the human body, soft tissue ",
+            { "blank": 0 },
+            " X-rays and bone ",
+            { "blank": 1 },
+            " X-rays."
+          ],
+          "wordBank": ["absorbs", "ionises", "reflects", "transmits"],
+          "correctAnswers": ["transmits", "absorbs"],
+          "markScheme": [
+            "1 mark: **transmits**",
+            "1 mark: **absorbs**"
+          ],
+          "diagram": "em-q6-xray-skull.jpeg"
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "Complete the following sentence: The X-rays affect photographic film in the same way that _______ does.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **Light** (accept ultraviolet, UV, infrared, IR, gamma)"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "short-numerical",
+          "text": "The table below shows the total dose of X-rays received by the human body when different parts are X-rayed.<table><tr><th>Part of body X-rayed</th><th>Dose (arbitrary units)</th></tr><tr><td>Head</td><td>3</td></tr><tr><td>Chest</td><td>4</td></tr><tr><td>Pelvis</td><td>60</td></tr></table>Calculate the number of head X-rays that are equal in dose to one pelvis X-ray.",
+          "marks": 2,
+          "correctAnswer": 20,
+          "tolerance": 0.01,
+          "showUnit": false,
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct working: $60 \\div 3$",
+            "1 mark: Final answer: **20**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "d",
+          "type": "single-choice",
+          "text": "Which one of the following is another use of X-rays?",
+          "marks": 1,
+          "options": ["Cleaning stained teeth", "Killing cancer cells", "Scanning of unborn babies"],
+          "correctAnswer": 1,
+          "markScheme": ["Answer: B \u2013 **Killing cancer cells**"],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "em-waves8",
+      "topic": "Electromagnetic Waves",
+      "title": "Visible light spectrum and glass",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "gap-fill",
+          "text": "The visible light spectrum has a range of frequencies. The frequency increases from red light to violet light. Use the correct answers from the box to complete the sentence.",
+          "marks": 2,
+          "segments": [
+            "As the frequency of the light waves increases, the wavelength of the light waves ",
+            { "blank": 0 },
+            " and the energy of the light waves ",
+            { "blank": 1 },
+            "."
+          ],
+          "wordBank": ["decreases", "stays the same", "increases"],
+          "correctAnswers": ["decreases", "increases"],
+          "markScheme": [
+            "1 mark: **decreases**",
+            "1 mark: **increases**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "Bottled beer will spoil if the intensity of the light passing through the glass bottle into the beer is too high. The graph shows the intensity of the light that is transmitted through three different pieces of glass (clear, green and brown). The pieces of glass all had the same thickness. Suggest why.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Intensity / absorption depends on **thickness** (accept: to enable a valid comparison, it is a control variable)"
+          ],
+          "diagram": "em-q7-glass-transmission-graph.png"
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "Bottles made of brown glass are suitable for storing beer. Suggest why.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Brown glass **transmits the least light** (accept: absorbs the most light)"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "em-waves9",
+      "topic": "Electromagnetic Waves",
+      "title": "Transverse wave properties",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "single-choice",
+          "text": "Figure 1 represents a transverse wave with four labelled arrows A\u2013D. Which arrow represents the amplitude of the wave?",
+          "marks": 1,
+          "options": ["A", "B", "C", "D"],
+          "correctAnswer": 2,
+          "markScheme": ["Answer: C"],
+          "diagram": "em-q10-transverse-wave-arrows.jpeg"
+        },
+        {
+          "partLabel": "b",
+          "type": "single-choice",
+          "text": "Which arrow represents the wavelength of the wave?",
+          "marks": 1,
+          "options": ["A", "B", "C", "D"],
+          "correctAnswer": 1,
+          "markScheme": ["Answer: B"],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "short-numerical",
+          "text": "A wave has a frequency of 5000 Hz. Calculate the period of the wave.",
+          "marks": 2,
+          "correctAnswer": 0.0002,
+          "tolerance": 0.01,
+          "unit": "s",
+          "showUnit": true,
+          "formulas": [
+            "$T = \\frac{1}{f}$",
+            "$f = \\frac{1}{T}$",
+            "$v = f \\times \\lambda$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct substitution: $T = \\frac{1}{5000}$",
+            "1 mark: Final answer: **0.0002 s**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "d",
+          "type": "extended-written",
+          "text": "Give one example of a transverse wave that can travel through a vacuum.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Any named **electromagnetic wave** (e.g. light, radio waves, microwaves, infrared, ultraviolet, X-rays, gamma rays)"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "em-waves10",
+      "topic": "Electromagnetic Waves",
+      "title": "Longitudinal waves and sound",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "single-choice",
+          "text": "Figure 2 represents a longitudinal wave. Which point is at the centre of a rarefaction?",
+          "marks": 1,
+          "options": ["E", "F", "G"],
+          "correctAnswer": 1,
+          "markScheme": ["Answer: B \u2013 **F**"],
+          "diagram": "em-q10-longitudinal-wave.jpeg"
+        },
+        {
+          "partLabel": "b",
+          "type": "short-numerical",
+          "text": "A sound wave has a frequency of 750 Hz. The speed of sound in air is 330 m/s. Calculate the wavelength of the sound wave.",
+          "marks": 2,
+          "correctAnswer": 0.44,
+          "tolerance": 0.01,
+          "unit": "m",
+          "showUnit": true,
+          "formulas": [
+            "$v = f \\times \\lambda$",
+            "$\\lambda = \\frac{v}{f}$",
+            "$f = \\frac{v}{\\lambda}$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct substitution: $\\lambda = \\frac{330}{750}$",
+            "1 mark: Final answer: **0.44 m**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "gap-fill",
+          "text": "When a sound wave moves from air into water, the speed of the wave increases. The frequency of the sound wave does not change. Complete the sentence. Choose the answer from the box.",
+          "marks": 1,
+          "segments": [
+            "When a sound wave moves from air into water its wavelength ",
+            { "blank": 0 },
+            "."
+          ],
+          "wordBank": ["decreases", "stays the same", "increases"],
+          "correctAnswers": ["increases"],
+          "markScheme": [
+            "1 mark: **increases**"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "em-waves11",
+      "topic": "Electromagnetic Waves",
+      "title": "Wave speed equation and calculation",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "equation-choice",
+          "text": "Write down the equation which links frequency, wavelength and wave speed.",
+          "marks": 1,
+          "options": [
+            "$v = f \\times \\lambda$",
+            "$v = \\frac{f}{\\lambda}$",
+            "$v = \\frac{\\lambda}{f}$",
+            "$f = v \\times \\lambda$"
+          ],
+          "correctAnswer": 0,
+          "markScheme": ["Answer: A \u2013 $v = f \\times \\lambda$"],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "short-numerical",
+          "text": "Calculate the speed of a sound wave with a frequency of 250 Hz and a wavelength of 1.3 m.",
+          "marks": 2,
+          "correctAnswer": 325,
+          "tolerance": 0.01,
+          "unit": "m/s",
+          "showUnit": true,
+          "formulas": [
+            "$v = f \\times \\lambda$",
+            "$\\lambda = \\frac{v}{f}$",
+            "$f = \\frac{v}{\\lambda}$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct substitution: $v = 250 \\times 1.3$",
+            "1 mark: Final answer: **325 m/s**"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "em-waves12",
+      "topic": "Electromagnetic Waves",
+      "title": "Infrared radiation and temperature",
+      "difficulty": "hard",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "single-choice",
+          "text": "Figure 1 shows the position of three types of wave in the electromagnetic spectrum.<table><tr><th>A</th><th>Microwaves</th><th>B</th><th>Visible light</th><th>C</th><th>D</th><th>Gamma rays</th></tr></table>Which letter represents infrared in the electromagnetic spectrum?",
+          "marks": 1,
+          "options": ["A", "B", "C", "D"],
+          "correctAnswer": 1,
+          "markScheme": ["Answer: B"],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "single-choice",
+          "text": "What is infrared used for?",
+          "marks": 1,
+          "options": ["Electrical heating", "Energy efficient lamps", "Satellite communications", "Sun tanning"],
+          "correctAnswer": 0,
+          "markScheme": ["Answer: A \u2013 **Electrical heating**"],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "gap-fill",
+          "text": "An infrared camera produces a colour image. Different colours show different temperatures. The diagram shows the colour scale from red (32 \u00b0C) through orange (36 \u00b0C) to yellow (40 \u00b0C). Complete the sentence. Choose the answer from the box.",
+          "marks": 1,
+          "segments": [
+            "The image produced by an infrared camera of a person with a body temperature of 37 \u00b0C is mainly ",
+            { "blank": 0 },
+            "."
+          ],
+          "wordBank": ["orange", "red", "yellow"],
+          "correctAnswers": ["orange"],
+          "markScheme": [
+            "1 mark: **orange**"
+          ],
+          "diagram": "em-q14-ir-camera-scale.jpeg"
+        },
+        {
+          "partLabel": "d",
+          "type": "extended-written",
+          "text": "Rescue workers use infrared cameras to search for people trapped under rubble after an earthquake. How does the image of a trapped person change if the person's body temperature drops from 37 \u00b0C to 33 \u00b0C?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Becomes (more) **red** (accept: changes from mainly orange to mainly red)"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "e",
+          "type": "gap-fill",
+          "text": "A student investigated how the type of surface affects the amount of infrared the surface radiates. The diagram shows the equipment used. Complete the sentence. Choose the answer from the box.",
+          "marks": 1,
+          "segments": [
+            "In this investigation the type of surface is ",
+            { "blank": 0 },
+            " variable."
+          ],
+          "wordBank": ["a control", "the dependent", "the independent"],
+          "correctAnswers": ["the independent"],
+          "markScheme": [
+            "1 mark: **the independent**"
+          ],
+          "diagram": "em-q14-ir-equipment.jpeg"
+        },
+        {
+          "partLabel": "f",
+          "type": "single-choice",
+          "text": "The table below shows the results from the investigation.<table><tr><th>Type of surface</th><th>Temperature in \u00b0C</th></tr><tr><td>Matt black</td><td>68.0</td></tr><tr><td>Matt white</td><td>65.5</td></tr><tr><td>Shiny black</td><td>66.3</td></tr><tr><td>Shiny silver</td><td>28.0</td></tr></table>What is the resolution of the infrared detector?",
+          "marks": 1,
+          "options": ["0.1 \u00b0C", "1.0 \u00b0C", "1.7 \u00b0C", "68.0 \u00b0C"],
+          "correctAnswer": 0,
+          "markScheme": ["Answer: A \u2013 **0.1 \u00b0C**"],
+          "diagram": null
+        },
+        {
+          "partLabel": "g",
+          "type": "extended-written",
+          "text": "Give one conclusion that can be made from the results in the table above.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: (Matt) **black** is the best **emitter** (accept: shiny silver is the worst emitter; accept an answer in terms of highest/lowest temperature)"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "em-waves13",
+      "topic": "Electromagnetic Waves",
+      "title": "Infrared radiation emission",
+      "difficulty": "hard",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "gap-fill",
+          "text": "Infrared waves are transverse waves. Complete the sentence. Choose the answer from the box.",
+          "marks": 1,
+          "segments": [
+            "In a transverse wave, the direction of oscillation is ",
+            { "blank": 0 },
+            " to the direction of energy transfer by the wave."
+          ],
+          "wordBank": ["parallel", "perpendicular", "at an angle"],
+          "correctAnswers": ["perpendicular"],
+          "markScheme": [
+            "1 mark: **perpendicular**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "single-choice",
+          "text": "A student investigated how the colour of a surface affects the rate at which the surface emits infrared radiation using a silver-coloured flask and a black-coloured flask filled with hot water, cooling over 10 minutes. When will the flasks emit infrared radiation at the greatest rate?",
+          "marks": 1,
+          "options": ["During the 1st minute", "During the 5th minute", "During the 9th minute"],
+          "correctAnswer": 0,
+          "markScheme": ["Answer: A \u2013 **During the 1st minute**"],
+          "diagram": "em-q17-flasks.jpeg"
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "Give a reason for your answer to the previous part.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: There is the greatest **temperature difference** (between the hot water and the surroundings)"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "d",
+          "type": "extended-written",
+          "text": "Another student investigated the absorption of infrared radiation by different surface colours. The student filled four hollow metal cubes with cold water. Each cube was the same size but had a different surface colour. The cubes were then placed the same distance from an infrared heater. After 10 minutes, the student measured the temperature increase of the water inside each cube. What was the dependent variable in this investigation?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: The **temperature** (increase / change after 10 minutes)"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "em-waves14",
+      "topic": "Electromagnetic Waves",
+      "title": "Electromagnetic spectrum properties",
+      "difficulty": "hard",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "gap-fill",
+          "text": "The diagram shows the electromagnetic spectrum with an arrow pointing from radio waves towards gamma rays.<table><tr><td>Radio waves</td><td>Microwaves</td><td>Infrared</td><td>Visible light</td><td>Ultraviolet</td><td>X-rays</td><td>Gamma rays</td></tr></table>Use the correct answers from the box to complete the sentence.",
+          "marks": 2,
+          "segments": [
+            "The arrow in the diagram is in the direction of increasing ",
+            { "blank": 0 },
+            " and decreasing ",
+            { "blank": 1 },
+            "."
+          ],
+          "wordBank": ["amplitude", "frequency", "speed", "wavelength"],
+          "correctAnswers": ["frequency", "wavelength"],
+          "markScheme": [
+            "1 mark: **frequency**",
+            "1 mark: **wavelength**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "single-choice",
+          "text": "The range of wavelengths for waves in the electromagnetic spectrum is approximately:",
+          "marks": 1,
+          "options": [
+            "$10^{-15}$ to $10^{4}$ metres",
+            "$10^{-4}$ to $10^{4}$ metres",
+            "$10^{4}$ to $10^{15}$ metres"
+          ],
+          "correctAnswer": 0,
+          "markScheme": ["Answer: A \u2013 $10^{-15}$ to $10^{4}$ metres"],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "short-numerical",
+          "text": "The wavelength of a radio wave is 1500 m. The speed of radio waves is $3.0 \\times 10^{8}$ m/s. Calculate the frequency of the radio wave.",
+          "marks": 3,
+          "correctAnswer": 200000,
+          "tolerance": 0.01,
+          "unit": "Hz",
+          "showUnit": true,
+          "formulas": [
+            "$v = f \\times \\lambda$",
+            "$f = \\frac{v}{\\lambda}$",
+            "$\\lambda = \\frac{v}{f}$"
+          ],
+          "requiresRearrangement": true,
+          "markScheme": [
+            "1 mark: Correct substitution: $3.0 \\times 10^{8} = f \\times 1500$",
+            "1 mark: Correct rearrangement: $f = \\frac{v}{\\lambda}$",
+            "1 mark: Final answer: **200 000 Hz** (accept $2.0 \\times 10^{5}$ Hz)"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "d",
+          "type": "extended-written",
+          "text": "State one hazard of exposure to infrared radiation.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: (Skin) **burns**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "e",
+          "type": "extended-written",
+          "text": "State one hazard of exposure to ultraviolet radiation.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **Skin cancer** (accept blindness)"
+          ],
+          "diagram": null
+        }
+      ]
+    }
+  ]
+}

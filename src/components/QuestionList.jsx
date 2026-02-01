@@ -1,16 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ConfirmModal from './ConfirmModal';
 
 export default function QuestionList({
   title,
   questions,
   scores,
+  scrollToId,
   onSelectQuestion,
   onResetQuestion,
   onResetAll,
 }) {
   const [pendingResetId, setPendingResetId] = useState(null);
   const [showResetAll, setShowResetAll] = useState(false);
+
+  useEffect(() => {
+    if (!scrollToId) return;
+    requestAnimationFrame(() => {
+      const el = document.querySelector(`[data-question-id="${scrollToId}"]`);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  }, [scrollToId]);
+
+  const difficultyOrder = { easy: 0, medium: 1, hard: 2 };
+  const sorted = [...questions].sort(
+    (a, b) => (difficultyOrder[a.difficulty] ?? 1) - (difficultyOrder[b.difficulty] ?? 1)
+  );
 
   const hasAnyScores = questions.some((q) => scores[q.id]);
 
@@ -44,7 +58,7 @@ export default function QuestionList({
       )}
 
       <div>
-        {questions.map((q) => {
+        {sorted.map((q) => {
           const totalMarks = q.parts.reduce((sum, p) => sum + p.marks, 0);
           const saved = scores[q.id];
 
@@ -57,10 +71,16 @@ export default function QuestionList({
           return (
             <div
               key={q.id}
+              data-question-id={q.id}
               className="question-item"
               onClick={() => onSelectQuestion(q.id)}
             >
-              <span className="question-item-title">{q.title}</span>
+              <span className="question-item-title">
+                {q.title}{' '}
+                <span className={`difficulty-label difficulty-${q.difficulty || 'medium'}`}>
+                  ({q.difficulty || 'medium'})
+                </span>
+              </span>
               <div className="question-item-right">
                 <span className="marks">{totalMarks} marks</span>
                 {saved ? (

@@ -1,0 +1,1115 @@
+{
+  "subtopic": "Basic properties of waves",
+  "mainTopic": "Waves",
+  "questions": [
+    {
+      "id": "waves-prop1",
+      "topic": "Water wave type and properties",
+      "title": "Water wave: type, movement and speed",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "single-choice",
+          "text": "Figure 1 shows a water wave. What type of wave is a water wave?",
+          "marks": 1,
+          "options": [
+            "Electromagnetic",
+            "Longitudinal",
+            "Transverse"
+          ],
+          "correctAnswer": 2,
+          "markScheme": [
+            "Answer: C — **transverse**."
+          ],
+          "diagram": "waves-q3-water-wave.jpeg"
+        },
+        {
+          "partLabel": "b",
+          "type": "single-choice",
+          "text": "Which statement describes the movement of the water at point X?",
+          "marks": 1,
+          "options": [
+            "The water at point X does not move.",
+            "The water at point X moves to the left and right.",
+            "The water at point X moves up and down."
+          ],
+          "correctAnswer": 2,
+          "markScheme": [
+            "Answer: C — The water at point X moves **up and down**."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "short-numerical",
+          "text": "The wave has a frequency of 2.0 hertz. The wavelength is 0.032 metres. Calculate the wave speed.",
+          "marks": 2,
+          "correctAnswer": 0.064,
+          "tolerance": 0.01,
+          "unit": "m/s",
+          "showUnit": true,
+          "formulas": [
+            "$v = f \\lambda$",
+            "$T = \\frac{1}{f}$",
+            "$v = \\frac{d}{t}$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct substitution: $v = 2.0 \\times 0.032$",
+            "1 mark: Final answer: **0.064 m/s**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "d",
+          "type": "single-choice",
+          "text": "What is transferred by all waves?",
+          "marks": 1,
+          "options": [
+            "Energy",
+            "Information",
+            "Water"
+          ],
+          "correctAnswer": 0,
+          "markScheme": [
+            "Answer: A — **Energy**."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "e",
+          "type": "single-choice",
+          "text": "Figure 2 shows four water waves drawn to the same scale. The waves all travel at the same speed. Which wave has the longest wavelength?",
+          "marks": 1,
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "correctAnswer": 3,
+          "markScheme": [
+            "Answer: D — Wave D has the **longest wavelength**."
+          ],
+          "diagram": "waves-q3-four-waves.jpeg"
+        },
+        {
+          "partLabel": "f",
+          "type": "single-choice",
+          "text": "Which wave has the highest frequency?",
+          "marks": 1,
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "correctAnswer": 1,
+          "markScheme": [
+            "Answer: B — Wave B has the **shortest wavelength** and therefore the **highest frequency**."
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "waves-prop2",
+      "topic": "Sound properties and pitch",
+      "title": "Sound production, pitch and ultrasound",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "Complete the following sentence: Sound is produced when an object ___",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **vibrates** (or oscillates)."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "gap-fill",
+          "text": "Choose words from the list to complete the following sentences.",
+          "marks": 2,
+          "segments": [
+            "If the frequency is increased, the pitch of the sound becomes ",
+            {
+              "blank": 0
+            },
+            ".<br>If its amplitude is increased, the sound becomes ",
+            {
+              "blank": 1
+            },
+            "."
+          ],
+          "wordBank": [
+            "higher",
+            "louder",
+            "lower",
+            "quieter"
+          ],
+          "correctAnswers": [
+            "higher",
+            "louder"
+          ],
+          "markScheme": [
+            "1 mark: **higher**",
+            "1 mark: **louder**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "The diagram shows a pre-natal scan. What type of waves are used for pre-natal scanning?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **Ultrasound** (accept ultrasonic)."
+          ],
+          "diagram": "waves-q4-prenatal-scan.jpeg"
+        },
+        {
+          "partLabel": "d",
+          "type": "extended-written",
+          "text": "Explain why we cannot hear the waves used for pre-natal scanning.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: The frequency is **different from / higher than** the audible range.",
+            "1 mark: The frequency is **above 20 000 Hz** (above the upper limit of human hearing)."
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "waves-prop3",
+      "topic": "Electromagnetic wave properties",
+      "title": "Transverse wave: wavelength, amplitude and microwaves",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "single-choice",
+          "text": "The figure below represents a transverse wave. Which of the following gives the wavelength of the transverse wave?",
+          "marks": 1,
+          "options": [
+            "wavelength = Q",
+            "wavelength = 2 Q",
+            "wavelength = Q / 2"
+          ],
+          "correctAnswer": 0,
+          "markScheme": [
+            "Answer: A — wavelength = **Q**."
+          ],
+          "diagram": "waves-q5-transverse-wave.jpeg"
+        },
+        {
+          "partLabel": "b",
+          "type": "single-choice",
+          "text": "Which of the following gives the amplitude of the transverse wave?",
+          "marks": 1,
+          "options": [
+            "amplitude = R",
+            "amplitude = 2 R",
+            "amplitude = R / 2"
+          ],
+          "correctAnswer": 0,
+          "markScheme": [
+            "Answer: A — amplitude = **R**."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "single-choice",
+          "text": "Microwaves are electromagnetic waves used for mobile phone communications. Which other type of electromagnetic wave is also used for communications?",
+          "marks": 1,
+          "options": [
+            "Radio waves",
+            "Ultraviolet",
+            "X-rays"
+          ],
+          "correctAnswer": 0,
+          "markScheme": [
+            "Answer: A — **Radio waves**."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "d",
+          "type": "short-numerical",
+          "text": "Microwaves from a mobile phone take 0.000 009 s to reach a mobile phone mast. Speed of microwaves = 300 000 000 m/s. Calculate the distance between the mobile phone and the mobile phone mast.",
+          "marks": 2,
+          "correctAnswer": 2700,
+          "tolerance": 0.01,
+          "unit": "m",
+          "showUnit": true,
+          "formulas": [
+            "$s = v t$",
+            "$v = f \\lambda$",
+            "$T = \\frac{1}{f}$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct substitution: $s = 300\\,000\\,000 \\times 0.000\\,009$",
+            "1 mark: Final answer: **2700 m**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "e",
+          "type": "extended-written",
+          "text": "Mobile phone communications is only one of the uses for microwaves. Give one other use of microwaves.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Any valid use, e.g. **cooking/heating food**, **satellite communications**, **WiFi**."
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "waves-prop4",
+      "topic": "Transverse wave properties",
+      "title": "Transverse wave: amplitude, wavelength and sound speed",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "single-choice",
+          "text": "Figure 1 represents a transverse wave. Which arrow represents the amplitude of the wave?",
+          "marks": 1,
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "correctAnswer": 2,
+          "markScheme": [
+            "Answer: C — Arrow C shows the **amplitude** (equilibrium to peak/trough)."
+          ],
+          "diagram": "waves-q1-transverse-wave.jpeg"
+        },
+        {
+          "partLabel": "b",
+          "type": "single-choice",
+          "text": "Which arrow represents the wavelength of the wave?",
+          "marks": 1,
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "correctAnswer": 1,
+          "markScheme": [
+            "Answer: B — Arrow B shows the **wavelength** (one complete cycle, peak to peak)."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "short-numerical",
+          "text": "A wave has a frequency of 5000 Hz. Calculate the period of the wave.",
+          "marks": 2,
+          "correctAnswer": 0.0002,
+          "tolerance": 0.01,
+          "unit": "s",
+          "showUnit": true,
+          "formulas": [
+            "$T = \\frac{1}{f}$",
+            "$v = f \\lambda$",
+            "$v = \\frac{d}{t}$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct substitution: $T = \\frac{1}{5000}$",
+            "1 mark: Final answer: **0.0002 s**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "d",
+          "type": "extended-written",
+          "text": "Give one example of a transverse wave that can travel through a vacuum.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Any named **electromagnetic wave**, e.g. **light**, **radio waves**, **microwaves**, **infrared**, **ultraviolet**, **X-rays**, **gamma rays**."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "e",
+          "type": "single-choice",
+          "text": "Figure 2 represents a longitudinal wave. Which point is at the centre of a rarefaction?",
+          "marks": 1,
+          "options": [
+            "E",
+            "F",
+            "G"
+          ],
+          "correctAnswer": 1,
+          "markScheme": [
+            "Answer: B — Point **F** is at the centre of a rarefaction (where particles are most spread out)."
+          ],
+          "diagram": "waves-q1-longitudinal-wave.jpeg"
+        },
+        {
+          "partLabel": "f",
+          "type": "short-numerical",
+          "text": "A sound wave has a frequency of 750 Hz. Speed of sound in air = 330 m/s. Calculate the wavelength of the sound wave.",
+          "marks": 2,
+          "correctAnswer": 0.44,
+          "tolerance": 0.03,
+          "unit": "m",
+          "showUnit": true,
+          "formulas": [
+            "$\\lambda = \\frac{v}{f}$",
+            "$v = f \\lambda$",
+            "$T = \\frac{1}{f}$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct substitution: $\\lambda = \\frac{330}{750}$",
+            "1 mark: Final answer: **0.44 m**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "g",
+          "type": "extended-written",
+          "text": "Describe a method that could be used to determine the speed of sound in air.",
+          "marks": 4,
+          "markScheme": [
+            "1 mark: Method of making a sound, e.g. **clapping**, cymbals, starting pistol.",
+            "1 mark: Measuring the **distance** between sound source and detector (e.g. using tape measure, trundle wheel).",
+            "1 mark: Measuring the **time** for the sound to travel (e.g. stopwatch, data logger, oscilloscope).",
+            "1 mark: Using the equation $\\text{speed} = \\frac{\\text{distance}}{\\text{time}}$ (or dividing time by 2 for echo method)."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "h",
+          "type": "gap-fill",
+          "text": "When a sound wave moves from air into water, the speed of the wave increases. The frequency of the sound wave does not change. Complete the sentence.",
+          "marks": 1,
+          "segments": [
+            "When a sound wave moves from air into water its wavelength ",
+            {
+              "blank": 0
+            },
+            "."
+          ],
+          "wordBank": [
+            "decreases",
+            "stays the same",
+            "increases"
+          ],
+          "correctAnswers": [
+            "increases"
+          ],
+          "markScheme": [
+            "1 mark: **increases**"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "waves-prop5",
+      "topic": "Longitudinal and transverse waves",
+      "title": "Differences between longitudinal and transverse waves",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "Waves may be longitudinal or transverse. Describe the differences between longitudinal waves and transverse waves.",
+          "marks": 3,
+          "markScheme": [
+            "1 mark: A wave is caused by **oscillations/vibrations**.",
+            "1 mark: For a transverse wave, oscillations are **perpendicular** to the direction of energy transfer.",
+            "1 mark: For a longitudinal wave, oscillations are **parallel** to the direction of energy transfer."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "Radio waves are electromagnetic waves. Describe how radio waves are different from sound waves.",
+          "marks": 4,
+          "markScheme": [
+            "1 mark: Radio waves are **transverse** (sound waves are longitudinal).",
+            "1 mark: Radio waves travel at the **speed of light** / much faster.",
+            "1 mark: Radio waves have **higher frequencies** than sound.",
+            "1 mark: Radio waves can travel through a **vacuum** (sound cannot)."
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "waves-prop6",
+      "topic": "Wave quantities and diffraction",
+      "title": "Comparing waves and ripple tank speed",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "Diagram 1 shows two waves. Name one wave quantity that is the same for the two waves.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **Wavelength** (accept frequency or speed)."
+          ],
+          "diagram": "waves-q6-two-waves.png"
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "Name one wave quantity that is different for the two waves.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **Amplitude** (accept energy)."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "single-choice",
+          "text": "The waves in Diagram 1 are transverse. Which one of the following types of wave is not a transverse wave?",
+          "marks": 1,
+          "options": [
+            "Gamma rays",
+            "Sound",
+            "Visible light"
+          ],
+          "correctAnswer": 1,
+          "markScheme": [
+            "Answer: B — **Sound** is a longitudinal wave."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "d",
+          "type": "short-numerical",
+          "text": "Diagram 2 shows water waves in a ripple tank moving towards and passing through a gap in a barrier. Every second, 8 waves pass through the gap in the barrier. The waves have a wavelength of 0.015 metres. Calculate the speed of the water waves.",
+          "marks": 2,
+          "correctAnswer": 0.12,
+          "tolerance": 0.01,
+          "unit": "m/s",
+          "showUnit": true,
+          "formulas": [
+            "$v = f \\lambda$",
+            "$T = \\frac{1}{f}$",
+            "$s = v t$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct substitution: $v = 8 \\times 0.015$",
+            "1 mark: Final answer: **0.12 m/s**"
+          ],
+          "diagram": "waves-q6-ripple-tank.png"
+        }
+      ]
+    },
+    {
+      "id": "waves-prop7",
+      "topic": "Ultrasound and sonar",
+      "title": "Submarine ultrasound and sea floor distance",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "single-choice",
+          "text": "Ultrasound is sound above the maximum frequency that humans can hear. What is the maximum frequency that humans can hear?",
+          "marks": 1,
+          "options": [
+            "20 Hz",
+            "2000 Hz",
+            "20 000 Hz"
+          ],
+          "correctAnswer": 2,
+          "markScheme": [
+            "Answer: C — **20 000 Hz**."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "short-numerical",
+          "text": "A submarine sends a pulse of ultrasound to the sea floor. The pulse takes 0.25 seconds to travel from the submarine to the sea floor. The speed of sound in water is 1600 m/s. Calculate the distance from the submarine to the sea floor.",
+          "marks": 2,
+          "correctAnswer": 400,
+          "tolerance": 0.01,
+          "unit": "m",
+          "showUnit": true,
+          "formulas": [
+            "$s = v t$",
+            "$v = f \\lambda$",
+            "$T = \\frac{1}{f}$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct substitution: $s = 1600 \\times 0.25$",
+            "1 mark: Final answer: **400 m**"
+          ],
+          "diagram": "waves-q7-submarine.png"
+        },
+        {
+          "partLabel": "c",
+          "type": "gap-fill",
+          "text": "The ultrasound is reflected from the sea floor back to the submarine. Use the correct answer from the box to complete the sentence.",
+          "marks": 1,
+          "segments": [
+            "The total distance the ultrasound pulse travelled is ",
+            {
+              "blank": 0
+            },
+            " the distance to the sea floor."
+          ],
+          "wordBank": [
+            "half",
+            "the same as",
+            "twice"
+          ],
+          "correctAnswers": [
+            "twice"
+          ],
+          "markScheme": [
+            "1 mark: **twice**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "d",
+          "type": "extended-written",
+          "text": "The submarine moves through the sea and every few seconds sends a pulse of ultrasound to check the distance to the sea floor. The table shows the time taken for five ultrasound pulses to travel from the submarine to the sea floor.<table><tr><th>Pulse number</th><th>Time for pulse (s)</th></tr><tr><td>1</td><td>0.50</td></tr><tr><td>2</td><td>0.45</td></tr><tr><td>3</td><td>0.38</td></tr><tr><td>4</td><td>0.40</td></tr><tr><td>5</td><td>0.48</td></tr></table>Describe how the distance from the submarine to the sea floor changed over these five pulses.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: From pulse 1 to pulse 3, the distance to the sea floor **decreased** (the sea got shallower / submarine went deeper).",
+            "1 mark: From pulse 3 to pulse 5, the distance to the sea floor **increased** (the sea got deeper / submarine rose)."
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "waves-prop8",
+      "topic": "Ultrasound applications",
+      "title": "Ultrasound: frequency, uses and oscilloscope",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "gap-fill",
+          "text": "Complete the sentence by choosing the correct number from the box.",
+          "marks": 1,
+          "segments": [
+            "The upper limit for hearing in humans is a frequency of ",
+            {
+              "blank": 0
+            },
+            " Hz."
+          ],
+          "wordBank": [
+            "20",
+            "2000",
+            "20 000",
+            "200 000"
+          ],
+          "correctAnswers": [
+            "20 000"
+          ],
+          "markScheme": [
+            "1 mark: **20 000**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "An electronic system produces ultrasound with a frequency of 500 kHz. What does the symbol kHz stand for?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **kilohertz** (accept '1000 hertz' or '1000 Hz')."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "State one industrial use for ultrasound.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Any valid industrial use, e.g. **cleaning** (delicate objects), **quality control / flaw detection**, **sonar**."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "d",
+          "type": "extended-written",
+          "text": "State one medical use for ultrasound.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **Pre-natal scanning** (accept destruction of kidney stones or cleaning teeth)."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "e",
+          "type": "extended-written",
+          "text": "An ultrasound detector is connected to an oscilloscope. The diagram shows centimetre squares on an oscilloscope screen. Each horizontal division represents 2 microseconds. Calculate the time, in microseconds, between one peak of one ultrasound pulse and the peak of the next.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **8 microseconds** (4 divisions × 2 microseconds)."
+          ],
+          "diagram": "waves-q9-oscilloscope.png"
+        },
+        {
+          "partLabel": "f",
+          "type": "extended-written",
+          "text": "Ultrasound waves are partially reflected when they reach a boundary between two different media. The time taken for the reflection from the boundary to reach the detector can be seen from the oscilloscope screen. What can be calculated from this time interval?",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: The **distance** (to the boundary).",
+            "1 mark: Between the **boundary and the detector/source**."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "g",
+          "type": "extended-written",
+          "text": "Explain what action scientists should take if they find evidence that ultrasonic waves may be harmful to human health.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: **Publish / share** their evidence/results/data with doctors/the public.",
+            "1 mark: **Carry out more research/tests** to check reliability (or stop using them / restrict to industrial purposes only)."
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "waves-prop9",
+      "topic": "Ultrasound explanation",
+      "title": "Ultrasound: definition, cleaning and safety",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "Explain what an ultrasound wave is.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: A **sound / mechanical / longitudinal** wave.",
+            "1 mark: With a frequency **above 20 000 Hz / 20 kHz** (above the audible range / cannot be heard by humans)."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "Ultrasound waves can be used to clean jewellery. One method is to put the jewellery in a bath of cleaning fluid which contains an electronic oscillator. The electronic oscillator generates ultrasound waves in the cleaning fluid. Suggest how these waves clean the jewellery.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Particles/molecules/fluid **vibrate** (or by the process of **cavitation** / formation and collapse of tiny bubbles).",
+            "1 mark: Which **knocks particles of dirt off** the jewellery / breaks up dirt from the surface."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "Ultrasound is used for pre-natal scanning. This is much safer than using X-rays. However, doctors were only sure it was safe after experiments on mice. Explain whether or not you think that these experiments were justified.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: A valid point, e.g. other mammals are **similar to humans** / unethical to experiment on humans / knowledge will **benefit humans**.",
+            "1 mark: An appropriate qualification/expansion, e.g. so results are appropriate / it is better to experiment on mice / ultrasound has proved **useful**."
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "waves-prop10",
+      "topic": "Bat echolocation and sound waves",
+      "title": "Bat sound wave speed and longitudinal waves",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "single-choice",
+          "text": "Bats use the reflection of high pitched sound waves to determine the position of objects. What determines the pitch of a sound wave?",
+          "marks": 1,
+          "options": [
+            "Amplitude",
+            "Frequency",
+            "Speed"
+          ],
+          "correctAnswer": 1,
+          "markScheme": [
+            "Answer: B — **Frequency**."
+          ],
+          "diagram": "waves-q11-bat-insect.png"
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "State the name given to reflected sound waves.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **Echo(es)**."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "short-numerical",
+          "text": "The bat emits a sound wave with a frequency of 25.0 kHz and a wavelength of 0.0136 metres. Calculate the speed of this sound wave.",
+          "marks": 2,
+          "correctAnswer": 340,
+          "tolerance": 0.01,
+          "unit": "m/s",
+          "showUnit": true,
+          "formulas": [
+            "$v = f \\lambda$",
+            "$T = \\frac{1}{f}$",
+            "$s = v t$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct substitution: $v = 25\\,000 \\times 0.0136$",
+            "1 mark: Final answer: **340 m/s**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "d",
+          "type": "extended-written",
+          "text": "Sound waves are longitudinal. Describe a longitudinal sound wave.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Oscillations are **parallel** to the direction of energy transfer.",
+            "1 mark: Causing areas of **compression and rarefaction**."
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "waves-prop11",
+      "topic": "Oscilloscope traces and ultrasound",
+      "title": "Musical notes, hearing limits and ultrasound at boundaries",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "The diagrams show oscilloscope traces for the same musical note played on two different instruments. The oscilloscope settings are not changed. How can you tell, from the diagrams, that it is the same musical note?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Same **frequency / period / pitch / wavelength**."
+          ],
+          "diagram": "waves-q12-oscilloscope-traces.jpeg"
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "How can you tell, from the diagrams, that the musical note has been played on different instruments?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Differences in **waveform / shape / quality** (the diagrams are not identical)."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "Approximately what is the highest frequency that humans can hear? State the number and the unit.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **20 000 Hz** (accept 20 kHz)."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "d",
+          "type": "extended-written",
+          "text": "Ultrasound waves are partially reflected when they meet a boundary between two different media. What does the word 'media' mean when it is used in this context?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **Materials / substances** (through which sound travels)."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "e",
+          "type": "extended-written",
+          "text": "What happens to the ultrasound which reaches the boundary between two different media and is not reflected?",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: It is **absorbed** (energy transferred as thermal energy).",
+            "1 mark: It is **transmitted** (accept refracted / changes speed)."
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "waves-prop12",
+      "topic": "Sound wave properties and equations",
+      "title": "Sound: wavelength, frequency, period and loudspeakers",
+      "difficulty": "hard",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "gap-fill",
+          "text": "Sound travels as longitudinal waves. Complete the sentences. Choose the answers from the box.",
+          "marks": 2,
+          "segments": [
+            "The distance between the centre of one compression of a sound wave and the centre of the next compression is called the ",
+            {
+              "blank": 0
+            },
+            ".<br>The number of waves passing a point each second is called the ",
+            {
+              "blank": 1
+            },
+            "."
+          ],
+          "wordBank": [
+            "amplitude",
+            "frequency",
+            "speed",
+            "wavelength"
+          ],
+          "correctAnswers": [
+            "wavelength",
+            "frequency"
+          ],
+          "markScheme": [
+            "1 mark: **wavelength**",
+            "1 mark: **frequency**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "gap-fill",
+          "text": "Complete the sentence. Choose the answer from the box.",
+          "marks": 1,
+          "segments": [
+            "In a longitudinal wave, the oscillations are ",
+            {
+              "blank": 0
+            },
+            " to the direction of energy transfer."
+          ],
+          "wordBank": [
+            "opposite",
+            "perpendicular",
+            "parallel"
+          ],
+          "correctAnswers": [
+            "parallel"
+          ],
+          "markScheme": [
+            "1 mark: **parallel**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "single-choice",
+          "text": "A sound wave has a frequency of 8.0 kHz. Which of the following is the same as 8.0 kHz?",
+          "marks": 1,
+          "options": [
+            "0.0080 Hz",
+            "8.0 Hz",
+            "8000 Hz",
+            "800 000 Hz"
+          ],
+          "correctAnswer": 2,
+          "markScheme": [
+            "Answer: C — **8000 Hz**."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "d",
+          "type": "short-numerical",
+          "text": "Calculate the period of a sound wave with a frequency of 8.0 kHz (8000 Hz).",
+          "marks": 2,
+          "correctAnswer": 0.000125,
+          "tolerance": 0.01,
+          "unit": "s",
+          "showUnit": true,
+          "formulas": [
+            "$T = \\frac{1}{f}$",
+            "$v = f \\lambda$",
+            "$s = v t$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct substitution: $T = \\frac{1}{8000}$",
+            "1 mark: Final answer: **0.000125 s** (accept 1.25 × 10⁻⁴ s)"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "e",
+          "type": "short-numerical",
+          "text": "Calculate the wavelength of a sound wave with a frequency of 6600 Hz. Speed of sound = 330 m/s.",
+          "marks": 3,
+          "correctAnswer": 0.05,
+          "tolerance": 0.01,
+          "unit": "m",
+          "showUnit": true,
+          "formulas": [
+            "$v = f \\lambda$",
+            "$\\lambda = \\frac{v}{f}$",
+            "$T = \\frac{1}{f}$",
+            "$s = v t$"
+          ],
+          "requiresRearrangement": true,
+          "markScheme": [
+            "1 mark: Correct substitution: $\\lambda = \\frac{330}{6600}$",
+            "1 mark: Correct rearrangement: $\\lambda = \\frac{v}{f}$ (from $v = f\\lambda$)",
+            "1 mark: Final answer: **0.05 m** (accept 0.050 m)"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "f",
+          "type": "equation-choice",
+          "text": "Write down the equation which links distance (s), speed (v) and time (t).",
+          "marks": 1,
+          "options": [
+            "$s = v t$",
+            "$v = f \\lambda$",
+            "$T = \\frac{1}{f}$",
+            "$F = m a$"
+          ],
+          "correctAnswer": 0,
+          "markScheme": [
+            "Answer: A — $s = v t$"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "g",
+          "type": "short-numerical",
+          "text": "The figure shows the arrangement of two loudspeakers at a concert venue. Distance A on the diagram is 13.2 m. Speed of sound = 330 m/s. Calculate the time taken for the sound to travel from loudspeaker A to the technician.",
+          "marks": 3,
+          "correctAnswer": 0.04,
+          "tolerance": 0.01,
+          "unit": "s",
+          "showUnit": true,
+          "formulas": [
+            "$s = v t$",
+            "$t = \\frac{s}{v}$",
+            "$v = f \\lambda$",
+            "$T = \\frac{1}{f}$"
+          ],
+          "requiresRearrangement": true,
+          "markScheme": [
+            "1 mark: Correct substitution: $13.2 = 330 \\times t$",
+            "1 mark: Correct rearrangement: $t = \\frac{s}{v}$ (from $s = vt$)",
+            "1 mark: Final answer: **0.04 s** (accept 0.040 s)"
+          ],
+          "diagram": "waves-q8-loudspeakers.jpeg"
+        },
+        {
+          "partLabel": "h",
+          "type": "extended-written",
+          "text": "The sound from each loudspeaker travels at the same speed. For the sound technician to hear the song clearly, the sound from loudspeaker B should be emitted slightly before the sound from loudspeaker A. Explain why.",
+          "marks": 3,
+          "markScheme": [
+            "1 mark: Loudspeaker B is **further** from the technician than speaker A.",
+            "1 mark: So the sound from B takes **more time** to travel to the technician.",
+            "1 mark: Emitting B first means sound from both speakers arrives at the technician at the **same time**."
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "waves-prop13",
+      "topic": "Ultrasound and crack detection",
+      "title": "Loudspeaker frequency and ultrasound bolt inspection",
+      "difficulty": "hard",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "The diagram shows a microphone being used to detect the output from a loudspeaker. The oscilloscope trace shows the wave pattern produced by the loudspeaker. The total time shown on the screen is 0.0001 s. How many waves are produced by the loudspeaker in 0.0001 seconds?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **3** waves."
+          ],
+          "diagram": "waves-q13-loudspeaker-mic.png"
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "How many waves are produced by the loudspeaker every second? Assume the input to the loudspeaker does not change.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **30 000** waves per second (3 waves in 0.0001 s → 3 / 0.0001 = 30 000)."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "A person with normal hearing cannot hear the sound produced by the loudspeaker. Explain why.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: The frequency is **above 20 000 Hz** (the frequency is 30 000 Hz).",
+            "1 mark: This is above the **upper limit of the audible range** / it is **ultrasound**."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "d",
+          "type": "extended-written",
+          "text": "The diagram shows how a very high frequency sound wave can be used to check for internal cracks in a large steel bolt. The oscilloscope trace shows that the bolt does have an internal crack. Explain what happens to produce pulse A and pulse B.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: The wave is **partially reflected** at the crack to produce pulse A.",
+            "1 mark: And reflected at the **end of the bolt** to produce pulse B."
+          ],
+          "diagram": "waves-q13-steel-bolt.png"
+        },
+        {
+          "partLabel": "e",
+          "type": "short-numerical",
+          "text": "Use the information in the diagram to calculate the distance from the head of the bolt to the internal crack. The time between the transmitted pulse and pulse A on the oscilloscope is 0.000025 s (round-trip). Speed of sound through steel = 6000 m/s.",
+          "marks": 3,
+          "correctAnswer": 0.075,
+          "tolerance": 0.02,
+          "unit": "m",
+          "showUnit": true,
+          "formulas": [
+            "$s = v t$",
+            "$v = f \\lambda$",
+            "$T = \\frac{1}{f}$",
+            "$t = \\frac{s}{v}$"
+          ],
+          "requiresRearrangement": true,
+          "markScheme": [
+            "1 mark: Correct substitution: time from diagram = $0.000\\,025$ s",
+            "1 mark: Correct rearrangement: one-way time = $\\frac{0.000\\,025}{2} = 0.000\\,012\\,5$ s",
+            "1 mark: Final answer: $s = 6000 \\times 0.000\\,012\\,5 =$ **0.075 m**"
+          ],
+          "diagram": null
+        }
+      ]
+    }
+  ]
+}

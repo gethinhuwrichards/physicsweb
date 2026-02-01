@@ -1,0 +1,469 @@
+{
+  "subtopic": "Nuclear Fission and Fusion",
+  "mainTopic": "Atomic Structure",
+  "questions": [
+    {
+      "id": "nuc-ff1",
+      "topic": "Nuclear Fission and Fusion",
+      "title": "Nuclear fusion basics",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "single-choice",
+          "text": "Where does nuclear fusion happen naturally?",
+          "marks": 1,
+          "options": ["Inside the Earth", "Inside a nuclear power station", "Inside the Sun"],
+          "correctAnswer": 2,
+          "markScheme": ["Answer: C - Nuclear fusion occurs naturally inside the Sun"],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "gap-fill",
+          "text": "Complete the sentence using a word from the box.",
+          "marks": 1,
+          "segments": [
+            "The process of joining two atomic nuclei to form a different nucleus is called nuclear ",
+            { "blank": 0 },
+            "."
+          ],
+          "wordBank": ["fission", "force", "fusion"],
+          "correctAnswers": ["fusion"],
+          "markScheme": ["1 mark: fusion"],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "single-choice",
+          "text": "What is released during nuclear fusion?",
+          "marks": 1,
+          "options": ["Charge", "Energy", "Force"],
+          "correctAnswer": 1,
+          "markScheme": ["Answer: B - Energy is released during nuclear fusion"],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "nuc-ff2",
+      "topic": "Nuclear Fission and Fusion",
+      "title": "Nuclear fission process",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "gap-fill",
+          "text": "Complete the sentences about nuclear fission.",
+          "marks": 3,
+          "segments": [
+            "During the process of nuclear fission, a uranium ",
+            { "blank": 0 },
+            " absorbs a ",
+            { "blank": 1 },
+            ". Electromagnetic radiation is released in the form of ",
+            { "blank": 2 },
+            "."
+          ],
+          "wordBank": ["gamma rays", "light rays", "proton", "neutron", "nucleus", "X-rays"],
+          "correctAnswers": ["nucleus", "neutron", "gamma rays"],
+          "markScheme": ["1 mark: nucleus", "1 mark: neutron", "1 mark: gamma rays"],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "State two environmental issues caused by generating electricity using nuclear power stations.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Any valid issue, e.g. **radioactive** waste / waste has a long **half-life** / risk of catastrophic **accidents**",
+            "1 mark: Any second valid issue, e.g. fuel is **non-renewable** / waste is **toxic** / waste needs to be **buried**"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "nuc-ff3",
+      "topic": "Nuclear Fission and Fusion",
+      "title": "Fission and fusion comparison",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "Explain briefly the difference between nuclear fission and nuclear fusion.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Nuclear **fission** is the splitting of a large atomic **nucleus**",
+            "1 mark: Nuclear **fusion** is the joining of two atomic **nuclei** to form a larger one"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "single-choice",
+          "text": "What is released during both nuclear fission and nuclear fusion?",
+          "marks": 1,
+          "options": ["Electrons", "Energy", "Neutrons", "Protons"],
+          "correctAnswer": 1,
+          "markScheme": ["Answer: B - Both fission and fusion release energy"],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "Plutonium-239 is used as fuel in some nuclear reactors. Name another substance used as fuel in nuclear reactors.",
+          "marks": 1,
+          "markScheme": ["1 mark: **Uranium** (accept U-235, thorium, MOX)"],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "nuc-ff4",
+      "topic": "Nuclear Fission and Fusion",
+      "title": "Fission, fusion and their fuels",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "gap-fill",
+          "text": "Complete the sentences using words from the box.",
+          "marks": 2,
+          "segments": [
+            "Nuclear fission takes place within a ",
+            { "blank": 0 },
+            ". Nuclear fusion takes place within a ",
+            { "blank": 1 },
+            "."
+          ],
+          "wordBank": ["Geiger counter", "nuclear reactor", "star"],
+          "correctAnswers": ["nuclear reactor", "star"],
+          "markScheme": ["1 mark: nuclear reactor", "1 mark: star"],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "State one way in which the process of nuclear fusion differs from the process of nuclear fission.",
+          "marks": 1,
+          "markScheme": ["1 mark: In fusion, **nuclei** are **joined** (not split)"],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "nuc-ff5",
+      "topic": "Nuclear Fission and Fusion",
+      "title": "Atomic particles and isotopes",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "Explain why an atom has no overall electrical charge.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Equal numbers of **protons** and **electrons**",
+            "1 mark: Protons and electrons have **equal** but **opposite** charge (+1 and -1)"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "Uranium-235 is used as fuel in a nuclear reactor. How is the structure of an atom of uranium-235 different from uranium-238?",
+          "marks": 1,
+          "markScheme": ["1 mark: (3) fewer **neutrons** (or lower mass number)"],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "The nucleus of a uranium-235 atom must absorb a particle before it can split. What type of particle is absorbed?",
+          "marks": 1,
+          "markScheme": ["1 mark: **Neutron**"],
+          "diagram": null
+        },
+        {
+          "partLabel": "d",
+          "type": "extended-written",
+          "text": "What name is given to the process where a nucleus splits into smaller parts?",
+          "marks": 1,
+          "markScheme": ["1 mark: Nuclear **fission**"],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "nuc-ff6",
+      "topic": "Nuclear Fission and Fusion",
+      "title": "Nuclear fission in power stations",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "gap-fill",
+          "text": "Complete the sentences about nuclear fission in power stations.",
+          "marks": 3,
+          "segments": [
+            "In nuclear power stations, energy is released from uranium ",
+            { "blank": 0 },
+            ". The uranium splits into two parts and releases three ",
+            { "blank": 1 },
+            ". The process releases electromagnetic radiation in the form of ",
+            { "blank": 2 },
+            "."
+          ],
+          "wordBank": ["electrons", "gamma rays", "neutrons", "nuclei", "protons"],
+          "correctAnswers": ["nuclei", "neutrons", "gamma rays"],
+          "markScheme": ["1 mark: nuclei", "1 mark: neutrons", "1 mark: gamma rays"],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "equation-choice",
+          "text": "Write down the equation that links energy, power and time.",
+          "marks": 1,
+          "options": [
+            "$E = P \\times t$",
+            "$P = E \\times t$",
+            "$E = \\frac{P}{t}$",
+            "$t = E \\times P$"
+          ],
+          "correctAnswer": 0,
+          "markScheme": ["Answer: A - $E = P \\times t$"],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "short-numerical",
+          "text": "A nuclear power station has a power output of 500 MW. Calculate the energy output in 3600 s. Give your answer in J. (Note: 500 MW = 500 000 000 W)",
+          "marks": 2,
+          "correctAnswer": 1800000000000,
+          "tolerance": 0.01,
+          "unit": "J",
+          "showUnit": true,
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct substitution: $E = 500{,}000{,}000 \\times 3600$",
+            "1 mark: Final answer: **$1.8 \\times 10^{12}$ J**"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "nuc-ff7",
+      "topic": "Nuclear Fission and Fusion",
+      "title": "Nuclear fusion challenges",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "Describe the process of nuclear fusion.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Two **nuclei** (of light elements) **join**",
+            "1 mark: Forming a **larger** / heavier nucleus"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "Suggest one reason why nuclear fusion reactors are not currently used to produce energy in power stations.",
+          "marks": 1,
+          "markScheme": ["1 mark: Any valid reason, e.g. still only **experimental** / reaction does not last long enough / use more **energy** than they produce"],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "Suggest one reason why scientists continue to try to develop a practical nuclear fusion reactor.",
+          "marks": 1,
+          "markScheme": ["1 mark: Any valid reason, e.g. would give another source of **energy** / unlimited fuel / would not produce **radioactive waste**"],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "nuc-ff8",
+      "topic": "Nuclear Fission and Fusion",
+      "title": "Radioactive waste and power generation",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "Radioactive waste from nuclear power stations has a long half-life. Suggest one precaution taken to reduce the hazard caused by radioactive waste.",
+          "marks": 1,
+          "markScheme": ["1 mark: Any valid precaution, e.g. **bury** the waste / store in **concrete** / transport in secure vessels / put in cooling ponds"],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "short-numerical",
+          "text": "A nuclear power station generated electricity for 92% of a year. One year = 365 days. Calculate the number of days it generated electricity.",
+          "marks": 2,
+          "correctAnswer": 335.8,
+          "tolerance": 0.02,
+          "unit": "days",
+          "showUnit": true,
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct substitution: $0.92 \\times 365$",
+            "1 mark: Final answer: **335.8 days** (accept 335 or 336)"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "Although nuclear fuels are relatively cheap, the total cost of generating electricity using nuclear fuels is expensive. Why?",
+          "marks": 1,
+          "markScheme": ["1 mark: Cost of **building** and **decommissioning** is very high (or cost of reprocessing/storage of nuclear waste)"],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "nuc-ff9",
+      "topic": "Nuclear Fission and Fusion",
+      "title": "Chain reactions and nuclear fission",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "Explain what is meant by nuclear fission.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: A large **nucleus** is hit by a **neutron**",
+            "1 mark: It **splits** into smaller nuclei (and neutrons and energy are released)"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "How does nuclear fission lead to a chain reaction?",
+          "marks": 1,
+          "markScheme": ["1 mark: Additional **neutrons** released collide with other nuclei causing **further fission**"],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "short-numerical",
+          "text": "The UK needs at least 25 000 000 kW of electrical power. A nuclear power station has an output of 2 400 000 kW. Calculate how many nuclear power stations are needed. (Round up to a whole number.)",
+          "marks": 2,
+          "correctAnswer": 11,
+          "tolerance": 0.05,
+          "unit": "",
+          "showUnit": false,
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: Correct substitution: $\\frac{25{,}000{,}000}{2{,}400{,}000} = 10.4...$",
+            "1 mark: Final answer: **11** (must round up)"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "nuc-ff10",
+      "topic": "Nuclear Fission and Fusion",
+      "title": "Alpha and gamma radiation",
+      "difficulty": "hard",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "Uranium-234 decays to thorium-230. Both transitions show a loss of 2 protons and 2 neutrons. How does this show that uranium-234 and thorium-230 emit alpha particles?",
+          "marks": 1,
+          "markScheme": ["1 mark: Both lose **2 protons** and **2 neutrons** (which is the composition of an alpha particle)"],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "What makes uranium and thorium different elements?",
+          "marks": 1,
+          "markScheme": ["1 mark: Different number of **protons** in the nucleus (or different atomic number)"],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "Explain why the emission of gamma radiation does not cause a new element to be formed.",
+          "marks": 1,
+          "markScheme": ["1 mark: Gamma involves no change in the number of **protons** in the nucleus (or gamma is a wave, not a particle)"],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "nuc-ff11",
+      "topic": "Nuclear Fission and Fusion",
+      "title": "Plutonium isotopes and Rutherford's experiment",
+      "difficulty": "hard",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "There are many isotopes of plutonium. What do the nuclei of different plutonium isotopes have in common?",
+          "marks": 1,
+          "markScheme": ["1 mark: Same number of **protons** (or same atomic number)"],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "Rutherford and Marsden aimed a beam of alpha particles at a thin sheet of gold. Explain how the results of this experiment led to a new model of the atom.",
+          "marks": 3,
+          "markScheme": [
+            "1 mark: Most alpha particles passed **straight through** (suggesting atom is mostly **empty space**)",
+            "1 mark: A few particles were **deflected** through large angles",
+            "1 mark: Suggesting a concentrated, small **nucleus** that is **positively** charged (repelling positive alpha particles)"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "nuc-ff12",
+      "topic": "Nuclear Fission and Fusion",
+      "title": "Half-life calculation",
+      "difficulty": "hard",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "Calder Hall nuclear power station is next to the Sellafield reprocessing plant. Suggest an advantage of having the two plants close together.",
+          "marks": 1,
+          "markScheme": ["1 mark: Reduces risk of radioactive **leak** during transport (or cheaper transport)"],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "short-numerical",
+          "text": "Iodine-138 has a half-life of 6 seconds. A sample contains 2000 atoms of iodine-138. How long will it take for the number of atoms to decrease to 125?",
+          "marks": 3,
+          "correctAnswer": 24,
+          "tolerance": 0.01,
+          "unit": "s",
+          "showUnit": true,
+          "requiresRearrangement": true,
+          "markScheme": [
+            "1 mark: Correct substitution: $2000 \\to 1000 \\to 500 \\to 250 \\to 125$ = 4 half-lives",
+            "1 mark: Correct rearrangement: $4 \\times 6$",
+            "1 mark: Final answer: **24 seconds**"
+          ],
+          "diagram": null
+        }
+      ]
+    }
+  ]
+}

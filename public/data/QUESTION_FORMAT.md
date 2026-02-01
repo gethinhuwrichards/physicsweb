@@ -31,7 +31,20 @@ Each subtopic has its own JSON file in `public/data/<topic>/<subtopic>.json`:
 | `id` | string | Yes | **Globally unique** identifier — see ID rules below |
 | `topic` | string | Yes | Topic name |
 | `title` | string | Yes | Display title for the question |
+| `difficulty` | string | Yes | One of: `"easy"`, `"medium"`, `"hard"` |
 | `parts` | Part[] | Yes | Array of question parts (minimum 1) |
+
+### Difficulty Classification
+
+Every question **must** have a `difficulty` field. Questions are displayed in the question list ordered from easy → medium → hard.
+
+| Difficulty | Criteria |
+|------------|----------|
+| `"easy"` | Recall-based or single-step. Typically 1–3 total marks. Uses simple question types (single-choice, basic gap-fill). No calculations or only trivial ones. |
+| `"medium"` | Requires some application or multi-step reasoning. Typically 3–5 total marks. May include straightforward calculations, multi-choice with reasoning, or moderate extended-written answers. |
+| `"hard"` | Requires evaluation, multi-step calculations, or extended analysis. Typically 5+ total marks. Includes complex extended-written (evaluate/discuss), calculations with rearrangement, or questions combining several concepts. |
+
+These are guidelines — use judgement. A 2-mark question requiring tricky reasoning can be `"medium"`, and a 6-mark question with simple recall points can still be `"medium"`.
 
 ### Question ID Rules
 
@@ -55,7 +68,7 @@ Before assigning IDs, check existing question files to ensure no duplicates.
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `partLabel` | string | Yes | Part identifier (e.g., "a", "b", "c", "i", "ii") |
-| `type` | string | Yes | One of: `"single-choice"`, `"multi-choice"`, `"gap-fill"`, `"extended-written"`, `"short-numerical"` |
+| `type` | string | Yes | One of: `"single-choice"`, `"multi-choice"`, `"gap-fill"`, `"extended-written"`, `"short-numerical"`, `"equation-choice"`, `"tick-box-table"` |
 | `text` | string | Yes | The question text (supports LaTeX) |
 | `marks` | integer | Yes | Number of marks (1-6) |
 | `markScheme` | string[] | Yes | Array of marking criteria |
@@ -63,7 +76,7 @@ Before assigning IDs, check existing question files to ensure no duplicates.
 
 ## Part Types
 
-Types 1-3 are fully auto-marked. Type 4 (extended-written) is self-marked by the student using a split-panel marking UI. Type 5 (short-numerical) auto-marks the final answer; if incorrect, the student self-marks method points.
+Types 1-3, 6 and 7 are fully auto-marked. Type 4 (extended-written) is self-marked by the student using a split-panel marking UI. Type 5 (short-numerical) auto-marks the final answer; if incorrect, the student self-marks method points.
 
 ### 1. Single Choice (`type: "single-choice"`)
 
@@ -200,15 +213,21 @@ Student enters a numeric final answer and optionally shows working (formula sele
 | `unit` | string | No | Unit label (e.g., "J", "m/s") |
 | `showUnit` | boolean | No | Whether to display the unit beside the input (default `false`) |
 | `formulas` | string[] | No | LaTeX formula strings for the formula selector (includes distractors) |
-| `requiresRearrangement` | boolean | No | Show rearrangement field in working section (default `false`) |
+| `requiresRearrangement` | boolean | Yes | `false` for 2-mark questions, `true` for 3-mark questions |
 
-**Marking behaviour:**
-- Final answer compared using relative tolerance: `|userAnswer - correctAnswer| / |correctAnswer| <= tolerance`
-- If correct: all marks awarded automatically, no self-marking needed
-- If incorrect: enters self-marking mode. The **last** `markScheme` entry (final answer point) is auto-locked as incorrect. Student self-marks remaining method points (formula, substitution, etc.)
-- The last entry in `markScheme` **must** always be the final answer point
+**STRICT RULES — only two formats are allowed:**
 
-**2-mark example:**
+Short numerical questions **must** be exactly **2 marks** or **3 marks**. No other mark value is permitted. The `markScheme` array **must** follow one of the two fixed structures below exactly. Do not add, remove, or reorder marking points.
+
+#### Format A: 2-mark (no rearrangement)
+
+Use when the student can substitute directly into the standard form of the equation.
+
+- `marks`: **2**
+- `requiresRearrangement`: **false**
+- `markScheme` must have **exactly 2 entries** in this order:
+  1. Substitution point
+  2. Final answer point
 
 ```json
 {
@@ -234,7 +253,16 @@ Student enters a numeric final answer and optionally shows working (formula sele
 }
 ```
 
-**3-mark example (with rearrangement):**
+#### Format B: 3-mark (with rearrangement)
+
+Use when the student must rearrange the equation before substituting.
+
+- `marks`: **3**
+- `requiresRearrangement`: **true**
+- `markScheme` must have **exactly 3 entries** in this order:
+  1. Substitution point
+  2. Rearrangement point
+  3. Final answer point
 
 ```json
 {
@@ -261,6 +289,89 @@ Student enters a numeric final answer and optionally shows working (formula sele
 }
 ```
 
+**Marking behaviour:**
+- Final answer compared using relative tolerance: `|userAnswer - correctAnswer| / |correctAnswer| <= tolerance`
+- If correct: all marks awarded automatically, no self-marking needed
+- If incorrect: enters self-marking mode. The **last** `markScheme` entry (final answer point) is auto-locked as incorrect. Student self-marks remaining method points.
+- The app has dependency logic for 3-mark questions: if substitution is marked wrong, rearrangement is automatically marked wrong too.
+
+### 6. Equation Choice (`type: "equation-choice"`)
+
+Student selects the correct equation from 4 options (radio buttons). Auto-marked. Used for "Write down the equation for..." style questions that appear frequently in GCSE physics.
+
+**Additional fields:**
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `options` | string[] | Yes | Exactly 4 LaTeX equation strings |
+| `correctAnswer` | integer | Yes | 0-based index of the correct option |
+
+All options **must** be LaTeX equations wrapped in `$...$` delimiters. The question is always worth 1 mark.
+
+```json
+{
+  "partLabel": "a",
+  "type": "equation-choice",
+  "text": "Write down the equation that links kinetic energy, mass and speed.",
+  "marks": 1,
+  "options": [
+    "$E_k = \\frac{1}{2} m v^2$",
+    "$E_p = m g h$",
+    "$W = F d$",
+    "$P = \\frac{E}{t}$"
+  ],
+  "correctAnswer": 0,
+  "markScheme": ["Answer: A – $E_k = \\frac{1}{2} m v^2$"],
+  "diagram": null
+}
+```
+
+### 7. Tick Box Table (`type: "tick-box-table"`)
+
+Student ticks one box per row in a table. Each row has a label on the left and radio buttons under two column headers on the right. Auto-marked. Strictly **1 mark per row**.
+
+**Additional fields:**
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `columnHeaders` | string[] | Yes | 2 or more column header labels (e.g., `["Renewable", "Non-renewable"]`) |
+| `rows` | object[] | Yes | Array of row objects (see below) |
+
+**Row object:**
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `label` | string | Yes | Text shown on the left side of the row (supports LaTeX) |
+| `correctColumn` | integer | Yes | 0-based index of the correct column |
+
+**Rules:**
+- `marks` **must** equal the number of rows (1 mark per row, no exceptions).
+- `columnHeaders` must have at least **2** entries.
+- `markScheme` must have one entry per row describing the correct answer.
+
+```json
+{
+  "partLabel": "a",
+  "type": "tick-box-table",
+  "text": "Put a tick in each row to show whether each energy source is renewable or non-renewable.",
+  "marks": 4,
+  "columnHeaders": ["Renewable", "Non-renewable"],
+  "rows": [
+    { "label": "Wind", "correctColumn": 0 },
+    { "label": "Coal", "correctColumn": 1 },
+    { "label": "Solar", "correctColumn": 0 },
+    { "label": "Natural gas", "correctColumn": 1 }
+  ],
+  "markScheme": [
+    "1 mark: Wind — Renewable",
+    "1 mark: Coal — Non-renewable",
+    "1 mark: Solar — Renewable",
+    "1 mark: Natural gas — Non-renewable"
+  ],
+  "diagram": null
+}
+```
+
 ## LaTeX Formatting
 
 Use LaTeX delimiters in `text`, `segments`, `options`, and `markScheme` fields:
@@ -278,6 +389,47 @@ Common patterns:
 - Superscripts: `$x^2$`, `$10^{-3}$`
 - Degrees: `$50\\,^{\\circ}\\text{C}$`
 
+## Tables
+
+Tables are supported in the `text` field using **inline HTML**. The app renders question text as HTML, so `<table>`, `<tr>`, `<th>`, and `<td>` tags work directly. The app applies dark-theme styling (borders, alternating row colours) automatically.
+
+### Rules for tables in JSON
+
+1. The entire table HTML must be a **single line** inside the JSON string (JSON does not allow literal newlines in strings).
+2. Do **not** add `class`, `style`, or other attributes — the app's CSS handles all styling.
+3. Use `<th>` for header cells and `<td>` for data cells.
+4. LaTeX math works inside table cells (e.g., `<td>$F = ma$</td>`).
+5. Keep tables simple: no `colspan`, `rowspan`, or nested tables.
+
+### Example: table in a question `text` field
+
+```json
+{
+  "partLabel": "a",
+  "type": "single-choice",
+  "text": "The table shows the speed of a car at different times.<table><tr><th>Time (s)</th><th>Speed (m/s)</th></tr><tr><td>0</td><td>0</td></tr><tr><td>5</td><td>15</td></tr><tr><td>10</td><td>15</td></tr><tr><td>15</td><td>5</td></tr></table>During which time interval was the car decelerating?",
+  "marks": 1,
+  "options": ["0 – 5 s", "5 – 10 s", "10 – 15 s", "0 – 10 s"],
+  "correctAnswer": 2,
+  "markScheme": ["Answer: C – Speed decreases from 15 to 5 m/s between 10 and 15 s"],
+  "diagram": null
+}
+```
+
+This renders as a styled table with header row and alternating row colours, followed by the question text below it.
+
+### Common table patterns
+
+**Results table:**
+```
+<table><tr><th>Variable</th><th>Value</th></tr><tr><td>Mass</td><td>$2.5\\,\\text{kg}$</td></tr><tr><td>Height</td><td>$4.0\\,\\text{m}$</td></tr></table>
+```
+
+**Comparison table:**
+```
+<table><tr><th>Property</th><th>Series</th><th>Parallel</th></tr><tr><td>Current</td><td>Same everywhere</td><td>Splits between branches</td></tr></table>
+```
+
 ## Mark Scheme Guidelines
 
 Each string in `markScheme` should describe one marking point:
@@ -294,6 +446,7 @@ Each string in `markScheme` should describe one marking point:
   "id": "energy-stores1",
   "topic": "Energy stores",
   "title": "Cyclist energy stores",
+  "difficulty": "easy",
   "parts": [
     {
       "partLabel": "a",
@@ -351,12 +504,15 @@ Each string in `markScheme` should describe one marking point:
 ## Validation Rules
 
 1. **All `id` values must be globally unique across every question file in the project** (see ID Rules above). Use subtopic-specific prefixes to prevent collisions.
-2. `partLabel` values should be sequential within a question (a, b, c or i, ii, iii)
-3. `marks` must be a positive integer between 1 and 6
-4. For `single-choice`: `correctAnswer` must be a valid index (0 to options.length - 1); `options` must have 3 or 4 strings
-5. For `multi-choice`: `correctAnswers` must be an array of valid indices; `options` must have 4+ strings; `selectCount` must be a positive integer; `scoring` must be `"all-or-nothing"` or `"partial"` (defaults to `"all-or-nothing"`)
-6. For `gap-fill`: `segments` must alternate between text strings and `{ "blank": N }` objects; `correctAnswers` length must match the number of blanks; all `wordBank` entries should be distinct
-7. For `extended-written`: no additional fields beyond common ones; `markScheme` entries may use `**keyword**` for bold rendering; `marks` determines textarea character limit (`marks * 400`)
-8. For `short-numerical`: `correctAnswer` must be a number; `tolerance` defaults to `0.01` (1% relative); `formulas` is an optional array of LaTeX strings; `requiresRearrangement` is optional boolean; the **last** entry in `markScheme` must be the final answer point; `unit` and `showUnit` are optional
-9. `diagram` filenames should not include path (just the filename)
-10. LaTeX backslashes must be escaped as `\\` in JSON strings
+2. `difficulty` must be one of `"easy"`, `"medium"`, or `"hard"`. Questions within a subtopic file should be ordered easy → medium → hard.
+3. `partLabel` values should be sequential within a question (a, b, c or i, ii, iii)
+4. `marks` must be a positive integer between 1 and 6
+5. For `single-choice`: `correctAnswer` must be a valid index (0 to options.length - 1); `options` must have 3 or 4 strings
+6. For `multi-choice`: `correctAnswers` must be an array of valid indices; `options` must have 4+ strings; `selectCount` must be a positive integer; `scoring` must be `"all-or-nothing"` or `"partial"` (defaults to `"all-or-nothing"`)
+7. For `gap-fill`: `segments` must alternate between text strings and `{ "blank": N }` objects; `correctAnswers` length must match the number of blanks; all `wordBank` entries should be distinct
+8. For `extended-written`: no additional fields beyond common ones; `markScheme` entries may use `**keyword**` for bold rendering; `marks` determines textarea character limit (`marks * 400`)
+9. For `short-numerical`: `marks` must be **2** or **3** (no other value). If `marks` is 2: `requiresRearrangement` must be `false` and `markScheme` must have exactly 2 entries (substitution, final answer). If `marks` is 3: `requiresRearrangement` must be `true` and `markScheme` must have exactly 3 entries (substitution, rearrangement, final answer). The last `markScheme` entry must always be the final answer point. `tolerance` defaults to `0.01` (1% relative). `formulas` is an optional array of LaTeX strings. `unit` and `showUnit` are optional
+10. For `equation-choice`: `options` must have exactly 4 LaTeX equation strings; `correctAnswer` must be a valid index (0-3); `marks` must be 1
+11. For `tick-box-table`: `columnHeaders` must have at least 2 strings; `rows` must be an array of objects each with `label` (string) and `correctColumn` (0-based index into columnHeaders); `marks` must equal the number of rows (1 mark per row); `markScheme` must have one entry per row
+12. `diagram` filenames should not include path (just the filename)
+13. LaTeX backslashes must be escaped as `\\` in JSON strings

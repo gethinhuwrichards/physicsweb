@@ -1,0 +1,658 @@
+{
+  "subtopic": "Energy stores",
+  "mainTopic": "Energy",
+  "questions": [
+    {
+      "id": "energy-stores1",
+      "topic": "Energy stores and transfers",
+      "title": "Bungee jump energy changes",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "The image shows a student before and after a bungee jump. The bungee cord has an unstretched length of 20 m.\n\nFor safety reasons, it is important that the bungee cord used is appropriate for the student’s weight. Give two reasons why.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: The bungee cord might **snap** / extension could be too great.",
+            "1 mark: The student might **hit the river/ground** if the cord extends too much."
+          ],
+          "diagram": "bungee-before-after.png"
+        },
+        {
+          "partLabel": "b",
+          "type": "gap-fill",
+          "text": "Complete the sentences to describe the energy stores involved. Use answers from the box.",
+          "marks": 3,
+          "segments": [
+            "Before the student jumps from the bridge, the student has a store of ",
+            {
+              "blank": 0
+            },
+            " energy. When falling, the student's store of ",
+            {
+              "blank": 1
+            },
+            " energy increases. When the bungee cord is stretched, the cord stores energy as ",
+            {
+              "blank": 2
+            },
+            " energy."
+          ],
+          "wordBank": [
+            "elastic potential",
+            "gravitational potential",
+            "kinetic",
+            "sound",
+            "thermal"
+          ],
+          "correctAnswers": [
+            "gravitational potential",
+            "kinetic",
+            "elastic potential"
+          ],
+          "markScheme": [
+            "1 mark: gravitational potential",
+            "1 mark: kinetic",
+            "1 mark: elastic potential (correct order)"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "short-numerical",
+          "text": "At the lowest point in the jump the student is stationary. The extension of the bungee cord is 35 m. The bungee cord behaves like a spring with spring constant 40 N/m. Calculate the energy stored in the stretched bungee cord.",
+          "marks": 2,
+          "correctAnswer": 24500,
+          "tolerance": 0.02,
+          "unit": "J",
+          "showUnit": true,
+          "formulas": [
+            "$E_e = \\tfrac{1}{2} k e^2$",
+            "$F = k e$",
+            "$E_k = \\tfrac{1}{2} m v^2$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: $E_e = 0.5 \\times 40 \\times 35^2$",
+            "1 mark: $E_e = 24\\,500\\,\\text{J}$ (accept ~25,000 J)"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "energy-stores2",
+      "topic": "Energy stores and transfers",
+      "title": "Energy stores during a bungee jump",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "single-choice",
+          "text": "In position B, the student is moving towards the river and the bungee cord is stretching. Compared with position A, how does the student’s gravitational potential energy change?",
+          "marks": 1,
+          "options": [
+            "Less than at A",
+            "The same as at A",
+            "More than at A"
+          ],
+          "correctAnswer": 0,
+          "markScheme": [
+            "Answer: Less than at A."
+          ],
+          "diagram": "bungee-positions-diagram.jpeg"
+        },
+        {
+          "partLabel": "b",
+          "type": "single-choice",
+          "text": "Compared with position A, how does the student’s kinetic energy change at position B?",
+          "marks": 1,
+          "options": [
+            "Less than at A",
+            "The same as at A",
+            "More than at A"
+          ],
+          "correctAnswer": 2,
+          "markScheme": [
+            "Answer: More than at A."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "single-choice",
+          "text": "Compared with position A, how does the bungee cord’s elastic potential energy change at position B?",
+          "marks": 1,
+          "options": [
+            "Less than at A",
+            "The same as at A",
+            "More than at A"
+          ],
+          "correctAnswer": 2,
+          "markScheme": [
+            "Answer: More than at A."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "d",
+          "type": "short-numerical",
+          "text": "The bungee cord behaves like a spring with spring constant 78.4 N/m. The extension is 25 m. Calculate the elastic potential energy stored by the bungee cord.",
+          "marks": 2,
+          "correctAnswer": 24500,
+          "tolerance": 0.02,
+          "unit": "J",
+          "showUnit": true,
+          "formulas": [
+            "$E_e = \\tfrac{1}{2} k e^2$",
+            "$F = k e$",
+            "$E_k = \\tfrac{1}{2} m v^2$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: $E_e = 0.5 \\times 78.4 \\times 25^2$",
+            "1 mark: $E_e = 24\\,500\\,\\text{J}$"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "e",
+          "type": "extended-written",
+          "text": "Bungee cord C will have a smaller extension than A or B for any bungee jumper. Give the reason why.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: It has the **greatest spring constant** (needs the largest force per metre to stretch)."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "f",
+          "type": "single-choice",
+          "text": "Which bungee cord would be safest to use for a person with a large weight?",
+          "marks": 1,
+          "options": [
+            "A",
+            "B",
+            "C"
+          ],
+          "correctAnswer": 0,
+          "markScheme": [
+            "Answer: A."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "g",
+          "type": "extended-written",
+          "text": "Give a reason for your answer.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: It has the **greatest maximum extension before snapping**."
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "energy-stores3",
+      "topic": "Gravitational potential and kinetic energy",
+      "title": "Theme park slide energy changes",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "single-choice",
+          "text": "There is a layer of water between the sled and the slide. How does the layer of water affect the friction between the sled and the slide?",
+          "marks": 1,
+          "options": [
+            "The friction is decreased.",
+            "The friction is increased.",
+            "The friction is not affected."
+          ],
+          "correctAnswer": 0,
+          "markScheme": [
+            "Answer: The friction is decreased."
+          ],
+          "diagram": "aquashute-ride.jpeg"
+        },
+        {
+          "partLabel": "b",
+          "type": "short-numerical",
+          "text": "The mass of one rider is 62.5 kg. The height of the slide is 16.0 m. Gravitational field strength = 9.8 N/kg. Calculate the gravitational potential energy at the top of the slide.",
+          "marks": 2,
+          "correctAnswer": 9800,
+          "tolerance": 0.02,
+          "unit": "J",
+          "showUnit": true,
+          "formulas": [
+            "$E_p = m g h$",
+            "$E_k = \\tfrac{1}{2} m v^2$",
+            "$E = P t$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: $E_p = 62.5 \\times 9.8 \\times 16.0$",
+            "1 mark: $E_p = 9800\\,\\text{J}$"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "short-numerical",
+          "text": "At the bottom of the slide the speed is 12 m/s. The mass is 62.5 kg. Calculate the kinetic energy at the bottom of the slide.",
+          "marks": 2,
+          "correctAnswer": 4500,
+          "tolerance": 0.03,
+          "unit": "J",
+          "showUnit": true,
+          "formulas": [
+            "$E_k = \\tfrac{1}{2} m v^2$",
+            "$E_p = m g h$",
+            "$E = P t$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: $E_k = 0.5 \\times 62.5 \\times 12^2$",
+            "1 mark: $E_k = 4500\\,\\text{J}$"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "d",
+          "type": "extended-written",
+          "text": "When a rider reaches the bottom of the slide, the sled decelerates and stops. Give two factors that will affect how far the sled will move before it stops.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Any relevant factor, e.g. **speed at bottom** / **mass** / **friction** / **air resistance**.",
+            "1 mark: Second different relevant factor."
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "energy-stores4",
+      "topic": "Gravitational potential energy",
+      "title": "Zip wire and gravitational potential energy",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "The figure shows a person sliding down a zip wire. Describe how the vertical height of the tower could be measured accurately.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Use a tape measure/metre rule/laser measure.",
+            "1 mark: Ensure vertical (e.g. set square/plumb line) or two people top/bottom or repeat and take a mean."
+          ],
+          "diagram": "zipwire-tower.jpeg"
+        },
+        {
+          "partLabel": "b",
+          "type": "short-numerical",
+          "text": "The person moved through a vertical height of 2.0 m. Mass = 45 kg. Gravitational field strength = 9.8 N/kg. Calculate the change in gravitational potential energy.",
+          "marks": 2,
+          "correctAnswer": 882,
+          "tolerance": 0.02,
+          "unit": "J",
+          "showUnit": true,
+          "formulas": [
+            "$\\Delta E_p = m g h$",
+            "$E_p = m g h$",
+            "$E_k = \\tfrac{1}{2} m v^2$",
+            "$E = P t$"
+          ],
+          "requiresRearrangement": false,
+          "markScheme": [
+            "1 mark: $E_p = 45 \\times 9.8 \\times 2.0$",
+            "1 mark: $E_p \\approx 880\\,\\text{J}$ (accept 882 J)"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "Give three factors that affected the kinetic energy of the person as she reached the bottom of the zip wire.",
+          "marks": 3,
+          "markScheme": [
+            "1 mark: Any relevant factor, e.g. change in vertical **height**.",
+            "1 mark: Second factor, e.g. **mass/weight** / **speed**.",
+            "1 mark: Third factor, e.g. **air resistance/drag** / **friction**."
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "energy-stores5",
+      "topic": "Energy stores and equations",
+      "title": "Diver energy changes",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "gap-fill",
+          "text": "Complete the sentences using answers from the box.",
+          "marks": 2,
+          "segments": [
+            "As the diver falls towards the water there is a decrease in her ",
+            {
+              "blank": 0
+            },
+            " energy. As the diver falls towards the water there is an increase in her ",
+            {
+              "blank": 1
+            },
+            " energy."
+          ],
+          "wordBank": [
+            "elastic potential",
+            "gravitational potential",
+            "kinetic",
+            "nuclear"
+          ],
+          "correctAnswers": [
+            "gravitational potential",
+            "kinetic"
+          ],
+          "markScheme": [
+            "1 mark: gravitational potential (in this order)",
+            "1 mark: kinetic"
+          ],
+          "diagram": "diver-board.jpeg"
+        },
+        {
+          "partLabel": "b",
+          "type": "equation-choice",
+          "text": "Write down the equation which links kinetic energy ($E_k$), mass ($m$) and speed ($v$).",
+          "marks": 1,
+          "markScheme": [
+            "Answer: A – $E_k = \\tfrac{1}{2} m v^2$"
+          ],
+          "diagram": null,
+          "options": [
+            "$E_k = \\tfrac{1}{2} m v^2$",
+            "$E_p = m g h$",
+            "$W = F d$",
+            "$P = \\frac{E}{t}$"
+          ],
+          "correctAnswer": 0
+        },
+        {
+          "partLabel": "c",
+          "type": "short-numerical",
+          "text": "At the instant the diver hits the water, the kinetic energy is 5040 J and the speed is 12 m/s. Calculate the mass of the diver.",
+          "marks": 3,
+          "correctAnswer": 70,
+          "tolerance": 0.02,
+          "unit": "kg",
+          "showUnit": true,
+          "formulas": [
+            "$E_k = \\tfrac{1}{2} m v^2$",
+            "$E_p = m g h$",
+            "$E = P t$"
+          ],
+          "requiresRearrangement": true,
+          "markScheme": [
+            "1 mark: Correct substitution: $5040 = 0.5 \\times m \\times 12^2$",
+            "1 mark: Correct rearrangement: $m = \\frac{2E_k}{v^2}$",
+            "1 mark: Final answer: **70 kg**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "d",
+          "type": "single-choice",
+          "text": "Most of the kinetic energy of the diver is transferred to the water. How does this affect the thermal energy of the water?",
+          "marks": 1,
+          "options": [
+            "The thermal energy decreases.",
+            "The thermal energy stays the same.",
+            "The thermal energy increases."
+          ],
+          "correctAnswer": 2,
+          "markScheme": [
+            "Answer: The thermal energy increases."
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "energy-stores6",
+      "topic": "Energy transfers in a system",
+      "title": "Bouncing ball velocity-time graph",
+      "difficulty": "hard",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "The graph shows velocity against time for a ball that is dropped and then bounces (air resistance ignored). Describe the motion of the ball between points A and B.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: The ball is **accelerating** (speed increasing).",
+            "1 mark: The acceleration is **uniform/constant** (straight line on v-t graph)."
+          ],
+          "diagram": "velocity-time-bounce.jpeg"
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "What direction is the ball moving between points C and D on the graph?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Upwards."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "single-choice",
+          "text": "The ball and the Earth form a system. What is meant by ‘a system’?",
+          "marks": 1,
+          "options": [
+            "A group of objects that interact.",
+            "Objects with big differences in mass.",
+            "Objects with gravitational potential energy."
+          ],
+          "correctAnswer": 0,
+          "markScheme": [
+            "Answer: A group of objects that interact."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "d",
+          "type": "extended-written",
+          "text": "When the ball hits the ground, energy is transferred from the ball to the Earth. Explain how the data in the graph shows this energy transfer.",
+          "marks": 4,
+          "markScheme": [
+            "1 mark: Velocity just after the bounce is **less** than just before.",
+            "1 mark: So the ball has **lost energy**.",
+            "1 mark: Reference to loss of **kinetic energy** / reduced GPE.",
+            "1 mark: Total energy of the ball\u2013Earth system is **conserved**."
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "energy-stores7",
+      "topic": "Energy stores and power",
+      "title": "Drone energy stores and hazards",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "gap-fill",
+          "text": "Complete the sentences using the answers from the box.",
+          "marks": 3,
+          "segments": [
+            "As the drone accelerates upwards, its ",
+            {
+              "blank": 0
+            },
+            " energy increases and its ",
+            {
+              "blank": 1
+            },
+            " energy increases. The ",
+            {
+              "blank": 2
+            },
+            " energy store of the battery decreases."
+          ],
+          "wordBank": [
+            "chemical",
+            "elastic potential",
+            "gravitational potential",
+            "kinetic",
+            "nuclear"
+          ],
+          "correctAnswers": [
+            "gravitational potential",
+            "kinetic",
+            "chemical"
+          ],
+          "markScheme": [
+            "1 mark: gravitational potential",
+            "1 mark: kinetic",
+            "1 mark: chemical"
+          ],
+          "diagram": "drone.jpeg"
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "In the USA, drones are not allowed to be flown too high above the ground. Suggest one possible risk of flying a drone too high above the ground.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Identify a risk, e.g. **damage to aircraft** / **falling drone could injure people** / **damage buildings**.",
+            "1 mark: Explain the risk, e.g. drone could be sucked into engine / drone has more GPE at height so more damage on impact."
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "c",
+          "type": "equation-choice",
+          "text": "Write down the equation that links energy transferred, power and time.",
+          "marks": 1,
+          "markScheme": [
+            "Answer: A – $E = P t$"
+          ],
+          "diagram": null,
+          "options": [
+            "$E = P t$",
+            "$E_p = m g h$",
+            "$E_k = \\tfrac{1}{2} m v^2$",
+            "$E_e = \\tfrac{1}{2} k e^2$"
+          ],
+          "correctAnswer": 0
+        }
+      ]
+    },
+    {
+      "id": "energy-stores8",
+      "topic": "Kinetic energy of moving air",
+      "title": "Wind turbine and kinetic energy",
+      "difficulty": "hard",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "short-numerical",
+          "text": "A volume of $2.3 \\times 10^4\\,\\text{m}^3$ of air passes the blades each second. The density of air is $1.2\\,\\text{kg/m}^3$. Calculate the mass of air passing the blades per second.",
+          "marks": 3,
+          "correctAnswer": 27600,
+          "tolerance": 0.03,
+          "unit": "kg",
+          "showUnit": true,
+          "formulas": [
+            "$m = \\rho V$",
+            "$\\rho = \\frac{m}{V}$",
+            "$E_k = \\tfrac{1}{2} m v^2$"
+          ],
+          "requiresRearrangement": true,
+          "markScheme": [
+            "1 mark: Correct substitution: $m = 1.2 \\times 2.3 \\times 10^4$",
+            "1 mark: Correct rearrangement: $m = \\rho V$ (from $\\rho = m / V$)",
+            "1 mark: Final answer: **27 600 kg** (accept 28 000 kg)"
+          ],
+          "diagram": "wind-turbine.jpeg"
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "The power output is directly proportional to the kinetic energy of the air passing the blades each second. Describe the effect on the power output when the wind speed is halved.",
+          "marks": 3,
+          "markScheme": [
+            "1 mark: Mass of air per second is **halved** \u2192 KE factor 2 decrease.",
+            "1 mark: Wind speed halved \u2192 $v^2$ quartered \u2192 KE factor **4** decrease.",
+            "1 mark: Overall KE (and so power) decreases by a factor of **8**."
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "energy-stores9",
+      "topic": "Energy transfers on a zip wire",
+      "title": "Zip wire: energy losses and different speeds",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "As the person moves down the zip wire, her increase in kinetic energy is less than her decrease in gravitational potential energy. Explain why.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Work done against air resistance and/or friction (zip line and pulley).",
+            "1 mark: Energy transferred to the surroundings as thermal energy."
+          ],
+          "diagram": "zipwire-figure1.jpeg"
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "Different people have different speeds at the end of the zip wire. Explain why.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Different surface areas/body positions → different air resistance/drag.",
+            "1 mark: So energy transfer to surroundings differs, giving different final speeds."
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "energy-stores10",
+      "topic": "Elastic potential energy and transfers",
+      "title": "Baby bouncer energy transfers",
+      "difficulty": "hard",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "The baby bouncer is a harness attached to a spring that hangs from a door frame. The baby bouncer should not be used with babies that have a mass greater than 12 kg. Suggest one reason why.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: The spring may become permanently extended / may break / extension may be too great."
+          ],
+          "diagram": "baby-bouncer.jpeg"
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "In positions A and B the baby is stationary. Describe the energy transfers as the baby moves from position A to position B.",
+          "marks": 3,
+          "markScheme": [
+            "1 mark: At A the baby has gravitational potential energy.",
+            "1 mark: As the baby moves down, energy transfers to kinetic energy and then to elastic potential energy in the spring.",
+            "1 mark: At B (stationary) energy stored as elastic potential energy (ignore dissipated energy)."
+          ],
+          "diagram": null
+        }
+      ]
+    }
+  ]
+}

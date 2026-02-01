@@ -12,7 +12,7 @@ export default function MarkingPointRow({ point, decision, onDecide, locked, poi
   const decided = decision !== null && decision !== undefined;
 
   const label = isLocked && decided
-    ? `Marking Point ${pointNumber} \u2014 ${decision ? 'Awarded' : 'Not awarded'}`
+    ? <>Marking Point {pointNumber} &mdash; <span className={decision ? 'marking-point-awarded' : 'marking-point-not-awarded'}>{decision ? 'Awarded' : 'Not awarded'}</span></>
     : `Marking Point ${pointNumber}`;
 
   return (
