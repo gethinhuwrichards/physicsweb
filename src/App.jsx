@@ -5,6 +5,7 @@ import TopicSelection from './components/TopicSelection';
 import SubtopicSelection from './components/SubtopicSelection';
 import QuestionList from './components/QuestionList';
 import FeedbackModal from './components/FeedbackModal';
+import BugReportModal from './components/BugReportModal';
 import Breadcrumb from './components/Breadcrumb';
 import QuestionView from './QuestionView';
 import {
@@ -30,6 +31,7 @@ export default function App() {
   const [questionKey, setQuestionKey] = useState(0);
   const [savedState, setSavedState] = useState(null);
   const [scores, setScores] = useState(getQuestionScores);
+  const [bugReportOpen, setBugReportOpen] = useState(false);
 
   // Load topics data on mount
   useEffect(() => {
@@ -257,11 +259,29 @@ export default function App() {
           </>
         )}
         {view !== 'landing' && (
-          <button className="back-btn-fixed" onClick={handleBack}>
-            &larr; Back
-          </button>
+          <div className={`bottom-nav-row${view === 'question' ? ' has-report' : ''}`}>
+            <button className="back-btn-fixed" onClick={handleBack}>
+              &larr; Back
+            </button>
+            {view === 'question' && (
+              <button className="bug-report-btn" onClick={() => setBugReportOpen(true)}>
+                Report Bug
+              </button>
+            )}
+          </div>
         )}
       </main>
+
+      {view === 'question' && currentQuestion && (
+        <BugReportModal
+          visible={bugReportOpen}
+          onClose={() => setBugReportOpen(false)}
+          questionTitle={currentQuestion.title}
+          questionId={currentQuestion.id}
+          subtopicName={subtopic?.name || ''}
+          mainTopicName={mainTopic?.name || ''}
+        />
+      )}
     </ErrorBoundary>
   );
 }

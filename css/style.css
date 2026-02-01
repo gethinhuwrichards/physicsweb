@@ -469,6 +469,37 @@ header h1 {
     border-color: var(--accent-blue);
 }
 
+.bottom-nav-row {
+    margin-top: 24px;
+}
+
+.bottom-nav-row.has-report {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottom-nav-row .back-btn-fixed {
+    margin-top: 0;
+}
+
+.bug-report-btn {
+    background: var(--bg-surface-raised);
+    border: 1px solid var(--border-default);
+    color: var(--color-incorrect);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.bug-report-btn:hover {
+    background: var(--bg-surface-alt);
+    border-color: var(--color-incorrect);
+}
+
 /* ============================================
    Difficulty Labels (inline after title)
    ============================================ */
@@ -1897,6 +1928,138 @@ header h1 {
 }
 
 .feedback-skip-btn:hover {
+    background: var(--bg-surface-raised);
+}
+
+/* ============================================
+   Bug Report Modal
+   ============================================ */
+
+.bugreport-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.bugreport-box {
+    background: var(--bg-surface-raised);
+    padding: 30px 40px;
+    border-radius: 12px;
+    border: 2px solid var(--color-incorrect);
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.bugreport-box h2 {
+    color: var(--color-incorrect);
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.bugreport-field {
+    margin-bottom: 20px;
+}
+
+.bugreport-field label {
+    display: block;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.bugreport-field select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid var(--border-input);
+    border-radius: 6px;
+    cursor: pointer;
+    background: var(--bg-input);
+    color: var(--text-primary);
+}
+
+.bugreport-field select:focus {
+    outline: none;
+    border-color: var(--border-input-focus);
+}
+
+.bugreport-field select option {
+    background: var(--bg-surface-raised);
+    color: var(--text-primary);
+}
+
+.bugreport-field textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    border: 2px solid var(--border-input);
+    border-radius: 6px;
+    resize: vertical;
+    min-height: 100px;
+    background: var(--bg-input);
+    color: var(--text-primary);
+}
+
+.bugreport-field textarea:focus {
+    outline: none;
+    border-color: var(--border-input-focus);
+}
+
+.bugreport-field textarea::placeholder {
+    color: var(--text-tertiary);
+}
+
+.bugreport-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.bugreport-submit-btn {
+    flex: 1;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: var(--color-incorrect);
+    color: var(--text-on-accent);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.bugreport-submit-btn:hover {
+    background: #e05555;
+}
+
+.bugreport-submit-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.bugreport-cancel-btn {
+    flex: 1;
+    padding: 12px 20px;
+    font-size: 1rem;
+    background: var(--bg-surface-alt);
+    color: var(--text-secondary);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.bugreport-cancel-btn:hover {
     background: var(--bg-surface-raised);
 }
 
