@@ -7,6 +7,7 @@ import QuestionList from './components/QuestionList';
 import FeedbackModal from './components/FeedbackModal';
 import BugReportModal from './components/BugReportModal';
 import Breadcrumb from './components/Breadcrumb';
+import ThemeToggle from './components/ThemeToggle';
 import QuestionView from './QuestionView';
 import {
   getQuestionScores,
@@ -192,6 +193,7 @@ export default function App() {
 
   return (
     <ErrorBoundary>
+      <ThemeToggle />
       <FeedbackModal />
 
       {view !== 'landing' && (

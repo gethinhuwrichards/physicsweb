@@ -39,7 +39,7 @@ export default function LandingPage({ onStart }) {
     >
       <div className="landing-content" ref={contentRef}>
         <h1 className="landing-title">
-          Practice <span className="landing-highlight">Papers</span>
+          Practice Papers
         </h1>
         <p className="landing-strapline" ref={straplineRef}>
           Exam-style questions with instant marking and detailed mark schemes.

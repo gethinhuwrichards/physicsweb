@@ -29,18 +29,24 @@ export default function MarkingPointRow({ point, decision, onDecide, locked, poi
           }}
         />
         <div className="marking-point-buttons">
-          <button
-            className={`mark-tick${decision === true ? ' selected' : ''}`}
-            onClick={() => onDecide(decision === true ? null : true)}
-            disabled={isLocked}
-            aria-label="Award"
-          >&#10003;</button>
-          <button
-            className={`mark-cross${decision === false ? ' selected' : ''}`}
-            onClick={() => onDecide(decision === false ? null : false)}
-            disabled={isLocked}
-            aria-label="Deny"
-          >&#10007;</button>
+          <div className="mark-btn-wrapper">
+            <button
+              className={`mark-tick${decision === true ? ' selected' : ''}`}
+              onClick={() => onDecide(decision === true ? null : true)}
+              disabled={isLocked}
+              aria-label="Award"
+            >&#10003;</button>
+            <span className="mark-btn-label">Award</span>
+          </div>
+          <div className="mark-btn-wrapper">
+            <button
+              className={`mark-cross${decision === false ? ' selected' : ''}`}
+              onClick={() => onDecide(decision === false ? null : false)}
+              disabled={isLocked}
+              aria-label="Deny"
+            >&#10007;</button>
+            <span className="mark-btn-label">Deny</span>
+          </div>
         </div>
       </div>
       {isLocked && decision === false && <div className="marking-point-locked-note">Marking point not earned</div>}

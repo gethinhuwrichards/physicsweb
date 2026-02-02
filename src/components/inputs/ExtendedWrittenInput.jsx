@@ -7,6 +7,11 @@ export default function ExtendedWrittenInput({ part, value, onChange, disabled }
 
   return (
     <div className="ew-container">
+      {!disabled && (
+        <div className="ew-encouragement">
+          Tip: Use key scientific terms and explain your reasoning step by step. Refer to the mark allocation for how much detail is expected.
+        </div>
+      )}
       <textarea
         className="ew-textarea"
         value={value || ''}
