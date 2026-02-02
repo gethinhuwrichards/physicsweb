@@ -30,17 +30,17 @@ export function ProgressProvider({ children }) {
 
   // Load scores from Supabase when user logs in
   useEffect(() => {
-    if (user) {
+    if (user && supabase) {
       loadCloudScores();
     } else {
-      // When logged out, revert to local scores
+      // When logged out or no Supabase, use local scores
       setScores(getLocalScores());
     }
   }, [user]);
 
   // One-time migration: local scores -> Supabase on first login
   useEffect(() => {
-    if (!user || migrationDone.current) return;
+    if (!user || !supabase || migrationDone.current) return;
     migrationDone.current = true;
     migrateLocalToCloud();
   }, [user]);
@@ -53,6 +53,7 @@ export function ProgressProvider({ children }) {
   }, [migrationMessage]);
 
   const loadCloudScores = async () => {
+    if (!supabase) return;
     try {
       const { data, error } = await supabase
         .from('user_scores')
@@ -75,6 +76,7 @@ export function ProgressProvider({ children }) {
   };
 
   const migrateLocalToCloud = async () => {
+    if (!supabase) return;
     const localScores = getLocalScores();
     const localKeys = Object.keys(localScores);
     if (localKeys.length === 0) return;
@@ -128,7 +130,7 @@ export function ProgressProvider({ children }) {
   // ---- Public API (same interface as old storage.js) ----
 
   const refreshScores = useCallback(async () => {
-    if (user) {
+    if (user && supabase) {
       await loadCloudScores();
     } else {
       setScores(getLocalScores());
@@ -139,7 +141,7 @@ export function ProgressProvider({ children }) {
     // Always write to local (write-through cache)
     saveLocalScore(questionId, score, maxScore, subtopicId);
 
-    if (user) {
+    if (user && supabase) {
       try {
         // Check existing to increment attempts
         const { data: existing } = await supabase
@@ -172,7 +174,7 @@ export function ProgressProvider({ children }) {
   const clearQuestionScore = useCallback(async (questionId) => {
     clearLocalScore(questionId);
 
-    if (user) {
+    if (user && supabase) {
       try {
         await supabase
           .from('user_scores')
@@ -191,7 +193,7 @@ export function ProgressProvider({ children }) {
   const saveQuestionAnswers = useCallback(async (questionId, stateToSave) => {
     saveLocalAnswers(questionId, stateToSave);
 
-    if (user) {
+    if (user && supabase) {
       try {
         await supabase.from('saved_answers').upsert({
           user_id: user.id,
@@ -206,7 +208,7 @@ export function ProgressProvider({ children }) {
   }, [user]);
 
   const loadQuestionAnswers = useCallback(async (questionId) => {
-    if (user) {
+    if (user && supabase) {
       try {
         const { data, error } = await supabase
           .from('saved_answers')
@@ -225,7 +227,7 @@ export function ProgressProvider({ children }) {
   const clearQuestionAnswers = useCallback(async (questionId) => {
     clearLocalAnswers(questionId);
 
-    if (user) {
+    if (user && supabase) {
       try {
         await supabase
           .from('saved_answers')
@@ -241,7 +243,7 @@ export function ProgressProvider({ children }) {
   const clearScoresForSubtopic = useCallback(async (subtopicId) => {
     clearLocalSubtopic(subtopicId);
 
-    if (user) {
+    if (user && supabase) {
       try {
         await supabase
           .from('user_scores')
@@ -278,7 +280,7 @@ export function ProgressProvider({ children }) {
   const clearAllScoresAndAnswers = useCallback(async () => {
     clearLocalAll();
 
-    if (user) {
+    if (user && supabase) {
       try {
         await supabase.from('user_scores').delete().eq('user_id', user.id);
         await supabase.from('saved_answers').delete().eq('user_id', user.id);
@@ -296,7 +298,7 @@ export function ProgressProvider({ children }) {
     questionId, subtopicId, mainTopicId, score, maxScore,
     difficulty, timeSpentSeconds, partScores,
   }) => {
-    if (!user) return;
+    if (!user || !supabase) return;
 
     try {
       // Count existing attempts

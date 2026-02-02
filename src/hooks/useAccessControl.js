@@ -10,6 +10,7 @@ let cachePromise = null;
 async function fetchAccessRules() {
   if (accessCache) return accessCache;
   if (cachePromise) return cachePromise;
+  if (!supabase) { accessCache = {}; return accessCache; }
 
   cachePromise = supabase
     .from('content_access')

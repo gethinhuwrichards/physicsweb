@@ -59,7 +59,7 @@ export default function App() {
 
   // Session tracking: create session on mount, update on unload
   useEffect(() => {
-    if (!user) return;
+    if (!user || !supabase) return;
 
     let sid = null;
 

@@ -17,6 +17,7 @@ export function AuthProvider({ children }) {
 
   // Fetch profile from Supabase
   const fetchProfile = useCallback(async (userId) => {
+    if (!supabase) return null;
     const { data, error } = await supabase
       .from('profiles')
       .select('*')
@@ -30,6 +31,11 @@ export function AuthProvider({ children }) {
 
   // Initialize: restore session
   useEffect(() => {
+    if (!supabase) {
+      setLoading(false);
+      return;
+    }
+
     supabase.auth.getSession().then(({ data: { session: s } }) => {
       setSession(s);
       setUser(s?.user ?? null);
@@ -56,6 +62,7 @@ export function AuthProvider({ children }) {
 
   // Sign up with email/password
   const signUp = useCallback(async (email, password, metadata = {}) => {
+    if (!supabase) throw new Error('Supabase not configured');
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
@@ -100,6 +107,7 @@ export function AuthProvider({ children }) {
 
   // Sign in with email/password
   const signIn = useCallback(async (email, password) => {
+    if (!supabase) throw new Error('Supabase not configured');
     const { data, error } = await supabase.auth.signInWithPassword({
       email,
       password,
@@ -110,6 +118,7 @@ export function AuthProvider({ children }) {
 
   // Sign in with Google OAuth
   const signInWithGoogle = useCallback(async () => {
+    if (!supabase) throw new Error('Supabase not configured');
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
@@ -122,6 +131,7 @@ export function AuthProvider({ children }) {
 
   // Sign out
   const signOut = useCallback(async () => {
+    if (!supabase) return;
     const { error } = await supabase.auth.signOut();
     if (error) throw error;
     setUser(null);
@@ -131,6 +141,7 @@ export function AuthProvider({ children }) {
 
   // Update profile
   const updateProfile = useCallback(async (updates) => {
+    if (!supabase) throw new Error('Supabase not configured');
     if (!user) throw new Error('Not authenticated');
     const { error } = await supabase
       .from('profiles')

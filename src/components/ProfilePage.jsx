@@ -22,6 +22,7 @@ export default function ProfilePage({ onBack }) {
   }, [profile]);
 
   const loadStats = async () => {
+    if (!supabase) return;
     try {
       // Total questions attempted
       const { count: totalAttempts } = await supabase
