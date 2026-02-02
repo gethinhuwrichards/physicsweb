@@ -1,5 +1,82 @@
 import React, { useState, useEffect } from 'react';
 import ConfirmModal from './ConfirmModal';
+import LockedOverlay from './LockedOverlay';
+import { useAccessControl } from '../hooks/useAccessControl';
+
+function QuestionItem({ question, index, scores, onSelectQuestion, onResetQuestion, user, profile, subtopicId, onSignIn }) {
+  const { isLocked, reason } = useAccessControl(subtopicId, index, user, profile);
+  const totalMarks = question.parts.reduce((sum, p) => sum + p.marks, 0);
+  const saved = scores[question.id];
+
+  let progressClass = '';
+  if (saved) {
+    const pct = saved.max > 0 ? saved.score / saved.max : 0;
+    progressClass = pct >= 1 ? 'progress-full' : pct === 0 ? 'progress-zero' : 'progress-partial';
+  }
+
+  const handleClick = () => {
+    if (isLocked) {
+      if (onSignIn) onSignIn();
+      return;
+    }
+    onSelectQuestion(question.id);
+  };
+
+  return (
+    <div
+      data-question-id={question.id}
+      className={`question-item${isLocked ? ' question-locked' : ''}`}
+      onClick={handleClick}
+    >
+      <span className="question-item-title">
+        {question.title}{' '}
+        <span className={`difficulty-label difficulty-${question.difficulty || 'medium'}`}>
+          ({question.difficulty || 'medium'})
+        </span>
+      </span>
+      <div className="question-item-right">
+        <span className="marks">{totalMarks} marks</span>
+        {saved && !isLocked ? (
+          <>
+            <div className="question-progress">
+              <div
+                className={`question-progress-fill ${progressClass}`}
+                style={{
+                  width: `${Math.round((saved.score / saved.max) * 100)}%`,
+                }}
+              />
+              <span className="question-progress-text">
+                {saved.score} / {saved.max}
+              </span>
+            </div>
+            <button
+              className="question-reset-btn"
+              onClick={(e) => {
+                e.stopPropagation();
+                onResetQuestion(question.id);
+              }}
+            >
+              Reset
+            </button>
+          </>
+        ) : (
+          <>
+            <div className="question-progress">
+              <span className="question-progress-text">&ndash;</span>
+            </div>
+            <button
+              className="question-reset-btn"
+              style={{ visibility: 'hidden' }}
+            >
+              Reset
+            </button>
+          </>
+        )}
+      </div>
+      {isLocked && <LockedOverlay reason={reason} onSignIn={onSignIn} />}
+    </div>
+  );
+}
 
 export default function QuestionList({
   title,
@@ -9,6 +86,10 @@ export default function QuestionList({
   onSelectQuestion,
   onResetQuestion,
   onResetAll,
+  user,
+  profile,
+  subtopicId,
+  onSignIn,
 }) {
   const [pendingResetId, setPendingResetId] = useState(null);
   const [showResetAll, setShowResetAll] = useState(false);
@@ -28,8 +109,7 @@ export default function QuestionList({
 
   const hasAnyScores = questions.some((q) => scores[q.id]);
 
-  const handleResetClick = (e, questionId) => {
-    e.stopPropagation();
+  const handleResetClick = (questionId) => {
     setPendingResetId(questionId);
     setShowResetAll(false);
   };
@@ -58,68 +138,20 @@ export default function QuestionList({
       )}
 
       <div>
-        {sorted.map((q) => {
-          const totalMarks = q.parts.reduce((sum, p) => sum + p.marks, 0);
-          const saved = scores[q.id];
-
-          let progressClass = '';
-          if (saved) {
-            const pct = saved.max > 0 ? saved.score / saved.max : 0;
-            progressClass = pct >= 1 ? 'progress-full' : pct === 0 ? 'progress-zero' : 'progress-partial';
-          }
-
-          return (
-            <div
-              key={q.id}
-              data-question-id={q.id}
-              className="question-item"
-              onClick={() => onSelectQuestion(q.id)}
-            >
-              <span className="question-item-title">
-                {q.title}{' '}
-                <span className={`difficulty-label difficulty-${q.difficulty || 'medium'}`}>
-                  ({q.difficulty || 'medium'})
-                </span>
-              </span>
-              <div className="question-item-right">
-                <span className="marks">{totalMarks} marks</span>
-                {saved ? (
-                  <>
-                    <div className="question-progress">
-                      <div
-                        className={`question-progress-fill ${progressClass}`}
-                        style={{
-                          width: `${Math.round((saved.score / saved.max) * 100)}%`,
-                        }}
-                      />
-                      <span className="question-progress-text">
-                        {saved.score} / {saved.max}
-                      </span>
-                    </div>
-                    <button
-                      className="question-reset-btn"
-                      onClick={(e) => handleResetClick(e, q.id)}
-                    >
-                      Reset
-                    </button>
-                  </>
-                ) : (
-                  <>
-                    <div className="question-progress">
-                      <span className="question-progress-text">&ndash;</span>
-                    </div>
-                    <button
-                      className="question-reset-btn"
-                      style={{ visibility: 'hidden' }}
-                    >
-                      Reset
-                    </button>
-                  </>
-                )}
-              </div>
-            </div>
-          );
-        })}
+        {sorted.map((q, index) => (
+          <QuestionItem
+            key={q.id}
+            question={q}
+            index={index}
+            scores={scores}
+            onSelectQuestion={onSelectQuestion}
+            onResetQuestion={handleResetClick}
+            user={user}
+            profile={profile}
+            subtopicId={subtopicId}
+            onSignIn={onSignIn}
+          />
+        ))}
       </div>
 
       {showResetAll && (

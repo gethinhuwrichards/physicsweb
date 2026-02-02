@@ -254,11 +254,14 @@ function reducer(state, action) {
   }
 }
 
-export default function QuestionView({ question, onBankScore, onReset, onSaveAnswers, onScoreReady, savedState, subtopicName, mainTopicName }) {
+export default function QuestionView({ question, onBankScore, onReset, onSaveAnswers, onScoreReady, onRecordAttempt, savedState, subtopicName, subtopicId, mainTopicName, mainTopicId }) {
   const [state, dispatch] = useReducer(reducer, { question, savedState }, initState);
   const containerRef = useRef(null);
   const stateRef = useRef(state);
   stateRef.current = state;
+
+  // Time tracking
+  const startTimeRef = useRef(Date.now());
 
   const totalMarks = question.parts.reduce((sum, p) => sum + p.marks, 0);
 
@@ -298,6 +301,20 @@ export default function QuestionView({ question, onBankScore, onReset, onSaveAns
           reviewParts: state.reviewParts,
           markingDecisions: state.markingDecisions,
           lockedPoints: state.lockedPoints,
+        });
+      }
+      // Record attempt for analytics
+      if (onRecordAttempt) {
+        const timeSpent = Math.round((Date.now() - startTimeRef.current) / 1000);
+        onRecordAttempt({
+          questionId: question.id,
+          subtopicId: subtopicId || '',
+          mainTopicId: mainTopicId || '',
+          score: totalScore,
+          maxScore: totalMarks,
+          difficulty: question.difficulty || 'medium',
+          timeSpentSeconds: timeSpent,
+          partScores: state.partScores,
         });
       }
     }

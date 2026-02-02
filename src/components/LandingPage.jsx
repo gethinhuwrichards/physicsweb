@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
-export default function LandingPage({ onStart }) {
+export default function LandingPage({ onStart, onSignIn, user }) {
   const straplineRef = useRef(null);
   const selectLabelRef = useRef(null);
   const subjectsRef = useRef(null);
@@ -38,6 +38,11 @@ export default function LandingPage({ onStart }) {
       }}
     >
       <div className="landing-content" ref={contentRef}>
+        {!user && onSignIn && (
+          <div className="landing-auth-row">
+            <button className="landing-signin-btn" onClick={onSignIn}>Sign In</button>
+          </div>
+        )}
         <h1 className="landing-title">
           Practice <span className="landing-highlight">Papers</span>
         </h1>

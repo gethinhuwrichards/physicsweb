@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import ErrorBoundary from './components/ErrorBoundary';
 import LandingPage from './components/LandingPage';
 import TopicSelection from './components/TopicSelection';
@@ -8,20 +8,29 @@ import FeedbackModal from './components/FeedbackModal';
 import BugReportModal from './components/BugReportModal';
 import Breadcrumb from './components/Breadcrumb';
 import QuestionView from './QuestionView';
-import {
-  getQuestionScores,
-  saveQuestionScore,
-  clearQuestionScore,
-  clearQuestionAnswers,
-  saveQuestionAnswers,
-  loadQuestionAnswers,
-  setCookie,
-  countAnsweredForSubtopic,
-  clearScoresForSubtopic,
-  clearAllScoresAndAnswers,
-} from './utils/storage';
+import AuthModal from './components/AuthModal';
+import ProfilePage from './components/ProfilePage';
+import { useAuth } from './contexts/AuthContext';
+import { useProgress } from './contexts/ProgressContext';
+import { supabase } from './lib/supabase';
+import { setCookie, getQuestionScores } from './utils/storage';
 
 export default function App() {
+  const { user, profile, loading: authLoading, signOut } = useAuth();
+  const {
+    scores,
+    refreshScores,
+    saveQuestionScore,
+    clearQuestionScore,
+    saveQuestionAnswers,
+    loadQuestionAnswers,
+    clearQuestionAnswers,
+    clearScoresForSubtopic,
+    clearAllScoresAndAnswers,
+    recordAttempt,
+    migrationMessage,
+  } = useProgress();
+
   const [view, setView] = useState('landing');
   const [topicsData, setTopicsData] = useState(null);
   const [mainTopic, setMainTopic] = useState(null);
@@ -30,8 +39,15 @@ export default function App() {
   const [currentQuestion, setCurrentQuestion] = useState(null);
   const [questionKey, setQuestionKey] = useState(0);
   const [savedState, setSavedState] = useState(null);
-  const [scores, setScores] = useState(getQuestionScores);
   const [bugReportOpen, setBugReportOpen] = useState(false);
+
+  // Auth UI state
+  const [showAuth, setShowAuth] = useState(false);
+  const [authTab, setAuthTab] = useState('signin');
+  const [showUserMenu, setShowUserMenu] = useState(false);
+
+  // Session tracking
+  const sessionIdRef = useRef(null);
 
   // Load topics data on mount
   useEffect(() => {
@@ -41,10 +57,68 @@ export default function App() {
       .catch((err) => console.error('Failed to load topics:', err));
   }, []);
 
-  // Refresh scores from cookies
-  const refreshScores = useCallback(() => {
-    setScores(getQuestionScores());
-  }, []);
+  // Session tracking: create session on mount, update on unload
+  useEffect(() => {
+    if (!user) return;
+
+    let sid = null;
+
+    const startSession = async () => {
+      try {
+        const { data } = await supabase
+          .from('session_logs')
+          .insert({ user_id: user.id, questions_attempted: 0 })
+          .select('id')
+          .single();
+        if (data) {
+          sid = data.id;
+          sessionIdRef.current = data.id;
+        }
+      } catch {
+        // Non-critical
+      }
+    };
+
+    const endSession = () => {
+      if (!sid) return;
+      // Best-effort update on page unload
+      supabase
+        .from('session_logs')
+        .update({
+          ended_at: new Date().toISOString(),
+          duration_seconds: Math.round((Date.now() - sessionStart) / 1000),
+        })
+        .eq('id', sid)
+        .then(() => {});
+    };
+
+    const sessionStart = Date.now();
+    startSession();
+
+    window.addEventListener('beforeunload', endSession);
+    return () => {
+      window.removeEventListener('beforeunload', endSession);
+      // Also try to end session on cleanup
+      if (sid) {
+        supabase
+          .from('session_logs')
+          .update({
+            ended_at: new Date().toISOString(),
+            duration_seconds: Math.round((Date.now() - sessionStart) / 1000),
+          })
+          .eq('id', sid)
+          .then(() => {});
+      }
+    };
+  }, [user]);
+
+  // Close user menu when clicking outside
+  useEffect(() => {
+    if (!showUserMenu) return;
+    const handler = () => setShowUserMenu(false);
+    document.addEventListener('click', handler);
+    return () => document.removeEventListener('click', handler);
+  }, [showUserMenu]);
 
   // Navigation
   const goToTopics = useCallback(() => setView('topics'), []);
@@ -55,6 +129,7 @@ export default function App() {
       case 'subtopics': setView('topics'); break;
       case 'questions': setView('subtopics'); break;
       case 'question': setView('questions'); break;
+      case 'profile': setView('topics'); break;
       default: break;
     }
   }, [view]);
@@ -104,27 +179,27 @@ export default function App() {
   );
 
   const selectQuestion = useCallback(
-    (questionId) => {
+    async (questionId) => {
       const q = questions.find((q) => q.id === questionId);
       if (!q) return;
       setCurrentQuestion(q);
-      setSavedState(loadQuestionAnswers(q.id));
+      const saved = await loadQuestionAnswers(q.id);
+      setSavedState(saved);
       setView('question');
       requestAnimationFrame(() => {
         const el = document.getElementById('question-content-inner');
         if (el) el.scrollIntoView({ behavior: 'instant' });
       });
     },
-    [questions]
+    [questions, loadQuestionAnswers]
   );
 
   // Question callbacks
   const handleScoreReady = useCallback(
     (score, maxScore) => {
       saveQuestionScore(currentQuestion.id, score, maxScore, subtopic.id);
-      refreshScores();
     },
-    [currentQuestion, subtopic, refreshScores]
+    [currentQuestion, subtopic, saveQuestionScore]
   );
 
   const handleBankScore = useCallback(() => {
@@ -138,13 +213,13 @@ export default function App() {
     refreshScores();
     setSavedState(null);
     setQuestionKey((k) => k + 1);
-  }, [currentQuestion, refreshScores]);
+  }, [currentQuestion, refreshScores, clearQuestionAnswers, clearQuestionScore]);
 
   const handleSaveAnswers = useCallback(
     (stateToSave) => {
       saveQuestionAnswers(currentQuestion.id, stateToSave);
     },
-    [currentQuestion]
+    [currentQuestion, saveQuestionAnswers]
   );
 
   const handleResetFromList = useCallback(
@@ -153,7 +228,7 @@ export default function App() {
       clearQuestionScore(questionId);
       refreshScores();
     },
-    [refreshScores]
+    [refreshScores, clearQuestionAnswers, clearQuestionScore]
   );
 
   // Bulk reset handlers
@@ -163,7 +238,7 @@ export default function App() {
       clearQuestionScore(q.id);
     });
     refreshScores();
-  }, [questions, refreshScores]);
+  }, [questions, refreshScores, clearQuestionAnswers, clearQuestionScore]);
 
   const handleResetAllTopic = useCallback(() => {
     if (!mainTopic) return;
@@ -171,12 +246,30 @@ export default function App() {
       clearScoresForSubtopic(sub.id);
     });
     refreshScores();
-  }, [mainTopic, refreshScores]);
+  }, [mainTopic, refreshScores, clearScoresForSubtopic]);
 
   const handleResetAll = useCallback(() => {
     clearAllScoresAndAnswers();
     refreshScores();
-  }, [refreshScores]);
+  }, [refreshScores, clearAllScoresAndAnswers]);
+
+  // Record attempt (called from QuestionView)
+  const handleRecordAttempt = useCallback(
+    (attemptData) => {
+      recordAttempt(attemptData);
+    },
+    [recordAttempt]
+  );
+
+  // Auth helpers
+  const openSignIn = () => {
+    setAuthTab('signin');
+    setShowAuth(true);
+  };
+  const openSignUp = () => {
+    setAuthTab('signup');
+    setShowAuth(true);
+  };
 
   // Breadcrumb items
   const breadcrumbItems = [];
@@ -197,11 +290,53 @@ export default function App() {
       {view !== 'landing' && (
         <header>
           <h1>Physics &mdash; Exam Questions by Topic</h1>
+          <div className="header-auth">
+            {authLoading ? null : user ? (
+              <div className="user-menu-wrapper">
+                <button
+                  className="user-menu-btn"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setShowUserMenu((v) => !v);
+                  }}
+                >
+                  <span className="user-avatar">
+                    {(profile?.display_name || profile?.email || '?')[0].toUpperCase()}
+                  </span>
+                  <span className="user-name">{profile?.display_name || profile?.email}</span>
+                </button>
+                {showUserMenu && (
+                  <div className="user-dropdown" onClick={(e) => e.stopPropagation()}>
+                    <button onClick={() => { setView('profile'); setShowUserMenu(false); }}>
+                      Profile
+                    </button>
+                    <button onClick={() => { signOut(); setShowUserMenu(false); }}>
+                      Sign Out
+                    </button>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <button className="header-signin-btn" onClick={openSignIn}>
+                Sign In
+              </button>
+            )}
+          </div>
         </header>
       )}
 
+      {migrationMessage && (
+        <div className="migration-toast">{migrationMessage}</div>
+      )}
+
       <main>
-        {view === 'landing' && <LandingPage onStart={goToTopics} />}
+        {view === 'landing' && (
+          <LandingPage
+            onStart={goToTopics}
+            onSignIn={openSignIn}
+            user={user}
+          />
+        )}
 
         {view === 'topics' && topicsData && (
           <>
@@ -238,6 +373,10 @@ export default function App() {
               onSelectQuestion={selectQuestion}
               onResetQuestion={handleResetFromList}
               onResetAll={handleResetAllSubtopic}
+              user={user}
+              profile={profile}
+              subtopicId={subtopic?.id}
+              onSignIn={openSignIn}
             />
           </>
         )}
@@ -253,14 +392,22 @@ export default function App() {
                 onReset={handleReset}
                 onSaveAnswers={handleSaveAnswers}
                 onScoreReady={handleScoreReady}
+                onRecordAttempt={handleRecordAttempt}
                 savedState={savedState}
                 subtopicName={subtopic?.name || ''}
+                subtopicId={subtopic?.id || ''}
                 mainTopicName={mainTopic?.name || ''}
+                mainTopicId={mainTopic?.id || ''}
               />
             </div>
           </>
         )}
-        {view !== 'landing' && (
+
+        {view === 'profile' && (
+          <ProfilePage onBack={() => setView('topics')} />
+        )}
+
+        {view !== 'landing' && view !== 'profile' && (
           <div className={`bottom-nav-row${view === 'question' ? ' has-report' : ''}`}>
             <button className="back-btn-fixed" onClick={handleBack}>
               &larr; Back
@@ -284,6 +431,12 @@ export default function App() {
           mainTopicName={mainTopic?.name || ''}
         />
       )}
+
+      <AuthModal
+        visible={showAuth}
+        onClose={() => setShowAuth(false)}
+        initialTab={authTab}
+      />
     </ErrorBoundary>
   );
 }
