@@ -209,7 +209,7 @@ export default function SelfMarkingView({
                 <td style={{ textAlign: 'left' }} dangerouslySetInnerHTML={{ __html: renderLatex(row.label) }} />
                 {columnHeaders.map((_, ci) => {
                   const isSelected = userChoice === ci;
-                  const isCorrectCol = part.correctAnswers[ri] === ci;
+                  const isCorrectCol = part.rows[ri].correctColumn === ci;
                   return (
                     <td key={ci} className={isSelected ? 'review-tick-selected' : ''}>
                       {isSelected && <span className="review-tick-indicator">{isCorrect ? '\u2713' : '\u2717'}</span>}
