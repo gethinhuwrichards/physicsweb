@@ -13,12 +13,7 @@ export function autoMarkMultiChoice(part, selectedIndices) {
   const correctSet = new Set(part.correctAnswers);
 
   if (part.scoring === 'partial') {
-    let score = 0;
-    selected.forEach(i => {
-      if (correctSet.has(i)) score++;
-      else score--;
-    });
-    score = Math.max(0, Math.min(score, part.marks));
+    const score = Math.min(selected.filter(i => correctSet.has(i)).length, part.marks);
     return { score, selectedIndices: selected, correctAnswers: part.correctAnswers };
   }
 

@@ -63,7 +63,7 @@
             3
           ],
           "selectCount": 2,
-          "scoring": "all-or-nothing",
+          "scoring": "partial",
           "markScheme": [
             "1 mark: Same potential difference across each branch",
             "1 mark: Components operate independently"

@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import { renderLatex } from '../../utils/renderLatex';
 import { renderMarkdownBold } from '../../utils/renderMarkdownBold';
 
-export default function MarkingPointRow({ point, decision, onDecide, locked, pointNumber, dependencyNote }) {
+export default function MarkingPointRow({ point, decision, onDecide, locked, pointNumber, dependencyNote, sparkleAward, sparkleDeny }) {
   const renderedText = useMemo(
     () => renderLatex(renderMarkdownBold(point.text)),
     [point.text]
@@ -31,7 +31,7 @@ export default function MarkingPointRow({ point, decision, onDecide, locked, poi
         <div className="marking-point-buttons">
           <div className="mark-btn-wrapper">
             <button
-              className={`mark-tick${decision === true ? ' selected' : ''}`}
+              className={`mark-tick${decision === true ? ' selected' : ''}${sparkleAward && !decided ? ' sparkle' : ''}`}
               onClick={() => onDecide(decision === true ? null : true)}
               disabled={isLocked}
               aria-label="Award"
@@ -40,7 +40,7 @@ export default function MarkingPointRow({ point, decision, onDecide, locked, poi
           </div>
           <div className="mark-btn-wrapper">
             <button
-              className={`mark-cross${decision === false ? ' selected' : ''}`}
+              className={`mark-cross${decision === false ? ' selected' : ''}${sparkleDeny && !decided ? ' sparkle' : ''}`}
               onClick={() => onDecide(decision === false ? null : false)}
               disabled={isLocked}
               aria-label="Deny"

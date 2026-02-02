@@ -69,6 +69,23 @@ export default function SelfMarkingView({
     ? (delayedPulse && !isLast)
     : (currentAllDecided && !isLast);
 
+  // Submit button pulse when it becomes available
+  const canSubmit = allPartsFullyDecided && hasVisitedLast;
+
+  // Sparkle phase for tick/cross hint on self-marking parts
+  const [sparklePhase, setSparklePhase] = useState(null);
+  useEffect(() => {
+    setSparklePhase(null);
+    if (!isAutoMarked) {
+      const t1 = setTimeout(() => setSparklePhase('tick'), 300);
+      const t2 = setTimeout(() => setSparklePhase('cross'), 1400);
+      const t3 = setTimeout(() => setSparklePhase(null), 2500);
+      return () => { clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); };
+    }
+  }, [currentSelfMarkIdx, isAutoMarked]);
+
+  const firstUndecidedIdx = decisions.findIndex(d => d === null);
+
   // Render single/equation choice as plain text review
   function renderChoiceReview() {
     const result = autoMarkResults[partIndex];
@@ -313,6 +330,7 @@ export default function SelfMarkingView({
             {points.map((point, i) => {
               const isRearrangement = part.type === 'short-numerical'
                 && part.requiresRearrangement && points.length === 3 && i === 1;
+              const showSparkle = !isAutoMarked && i === firstUndecidedIdx;
               return (
                 <MarkingPointRow
                   key={i}
@@ -322,6 +340,8 @@ export default function SelfMarkingView({
                   locked={locked[i] === true}
                   pointNumber={i + 1}
                   dependencyNote={isRearrangement ? '(depends on substitution marking point)' : null}
+                  sparkleAward={showSparkle && sparklePhase === 'tick'}
+                  sparkleDeny={showSparkle && sparklePhase === 'cross'}
                 />
               );
             })}
@@ -341,9 +361,9 @@ export default function SelfMarkingView({
           &larr; Back
         </button>
         <button
-          className="self-marking-submit"
+          className={`self-marking-submit${canSubmit ? ' ready-pulse' : ''}`}
           onClick={onSubmitMarks}
-          disabled={!allPartsFullyDecided || !hasVisitedLast}
+          disabled={!canSubmit}
         >
           Submit Marks
         </button>

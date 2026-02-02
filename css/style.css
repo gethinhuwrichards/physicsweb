@@ -323,19 +323,31 @@ header h1 {
 }
 
 /* ============================================
+   Topic / Subtopic Selection — Layout
+   ============================================ */
+
+.topic-selection,
+.subtopic-selection {
+    min-height: calc(100vh - 280px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ============================================
    Topic Selection — Card Style
    ============================================ */
 
 .topic-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 16px;
-    margin-top: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 24px;
 }
 
 .topic-btn {
-    padding: 24px 20px;
-    font-size: 1.05rem;
+    padding: 32px 24px;
+    font-size: 1.1rem;
     background: var(--bg-surface);
     color: var(--text-primary);
     border: 1px solid var(--border-default);
@@ -346,10 +358,16 @@ header h1 {
     text-align: left;
 }
 
-.topic-btn:hover {
+.topic-btn:hover:not(:disabled) {
     box-shadow: var(--shadow-hover);
     border-color: var(--accent-blue);
     transform: translateY(-2px);
+}
+
+.topic-btn-empty {
+    opacity: 0.45;
+    cursor: default;
+    box-shadow: none;
 }
 
 .btn-name {
@@ -359,9 +377,9 @@ header h1 {
 
 .btn-counter {
     display: block;
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     color: var(--text-secondary);
-    margin-top: 6px;
+    margin-top: 10px;
 }
 
 /* ============================================
@@ -370,14 +388,14 @@ header h1 {
 
 .subtopic-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 14px;
-    margin-top: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 18px;
+    margin-top: 24px;
 }
 
 .subtopic-btn {
-    padding: 20px 16px;
-    font-size: 1rem;
+    padding: 26px 20px;
+    font-size: 1.05rem;
     background: var(--bg-surface);
     color: var(--text-primary);
     border: 1px solid var(--border-default);
@@ -1201,15 +1219,45 @@ header h1 {
     background: var(--bg-surface-alt);
 }
 
+.self-marking-right::-webkit-scrollbar {
+    width: 10px;
+}
+
+.self-marking-right::-webkit-scrollbar-track {
+    background: #e2e8f0;
+    border-radius: 10px;
+    margin: 4px;
+}
+
+.self-marking-right::-webkit-scrollbar-thumb {
+    background: #4a5568;
+    border-radius: 10px;
+}
+
+.self-marking-right::-webkit-scrollbar-thumb:hover {
+    background: #2d3748;
+}
+
+[data-theme="dark"] .self-marking-right::-webkit-scrollbar-track {
+    background: #1e2538;
+}
+
+[data-theme="dark"] .self-marking-right::-webkit-scrollbar-thumb {
+    background: #64748b;
+}
+
+[data-theme="dark"] .self-marking-right::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
 .self-marking-panel-heading {
-    font-size: 0.85rem;
+    font-size: 1.15rem;
     font-weight: 700;
-    color: var(--text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
     margin-bottom: 20px;
     padding-bottom: 10px;
-    border-bottom: 2px solid var(--border-subtle);
+    border-bottom: 2px solid var(--accent-blue);
 }
 
 .self-marking-question-text {
@@ -1364,6 +1412,24 @@ header h1 {
 .self-marking-submit:disabled {
     opacity: 0.4;
     cursor: not-allowed;
+}
+
+.self-marking-submit.ready-pulse {
+    animation: submitPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes submitPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(59, 89, 152, 0.45); }
+    50% { box-shadow: 0 0 18px 6px rgba(59, 89, 152, 0.25); }
+}
+
+[data-theme="dark"] .self-marking-submit.ready-pulse {
+    animation-name: submitPulseDark;
+}
+
+@keyframes submitPulseDark {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(107, 155, 210, 0.5); }
+    50% { box-shadow: 0 0 18px 6px rgba(107, 155, 210, 0.3); }
 }
 
 /* ============================================
@@ -1586,11 +1652,11 @@ header h1 {
 }
 
 .marking-point-label {
-    font-size: 0.78rem;
+    font-size: 0.68rem;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    color: var(--text-secondary);
-    font-weight: 700;
+    color: var(--text-tertiary);
+    font-weight: 600;
 }
 
 .marking-point-awarded {
@@ -1618,9 +1684,10 @@ header h1 {
 
 .marking-point-text {
     flex: 1;
-    font-size: 0.95rem;
+    font-size: 1rem;
+    font-weight: 500;
     color: var(--text-primary);
-    line-height: 1.5;
+    line-height: 1.55;
 }
 
 .marking-point-buttons {
@@ -1707,6 +1774,58 @@ header h1 {
     opacity: 0.4;
 }
 
+.mark-tick.sparkle {
+    animation: tickSparkle 1s ease-in-out forwards;
+}
+
+@keyframes tickSparkle {
+    0%   { box-shadow: 0 0 0 0 rgba(30, 138, 94, 0); }
+    15%  { box-shadow: 0 0 12px 4px rgba(30, 138, 94, 0.3); }
+    35%  { box-shadow: 0 0 0 0 rgba(30, 138, 94, 0); }
+    55%  { box-shadow: 0 0 12px 4px rgba(30, 138, 94, 0.3); }
+    80%  { box-shadow: 0 0 0 0 rgba(30, 138, 94, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(30, 138, 94, 0); }
+}
+
+[data-theme="dark"] .mark-tick.sparkle {
+    animation-name: tickSparkleDark;
+}
+
+@keyframes tickSparkleDark {
+    0%   { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+    15%  { box-shadow: 0 0 12px 4px rgba(52, 211, 153, 0.35); }
+    35%  { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+    55%  { box-shadow: 0 0 12px 4px rgba(52, 211, 153, 0.35); }
+    80%  { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+}
+
+.mark-cross.sparkle {
+    animation: crossSparkle 1s ease-in-out forwards;
+}
+
+@keyframes crossSparkle {
+    0%   { box-shadow: 0 0 0 0 rgba(217, 48, 37, 0); }
+    15%  { box-shadow: 0 0 12px 4px rgba(217, 48, 37, 0.3); }
+    35%  { box-shadow: 0 0 0 0 rgba(217, 48, 37, 0); }
+    55%  { box-shadow: 0 0 12px 4px rgba(217, 48, 37, 0.3); }
+    80%  { box-shadow: 0 0 0 0 rgba(217, 48, 37, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(217, 48, 37, 0); }
+}
+
+[data-theme="dark"] .mark-cross.sparkle {
+    animation-name: crossSparkleDark;
+}
+
+@keyframes crossSparkleDark {
+    0%   { box-shadow: 0 0 0 0 rgba(248, 113, 113, 0); }
+    15%  { box-shadow: 0 0 12px 4px rgba(248, 113, 113, 0.35); }
+    35%  { box-shadow: 0 0 0 0 rgba(248, 113, 113, 0); }
+    55%  { box-shadow: 0 0 12px 4px rgba(248, 113, 113, 0.35); }
+    80%  { box-shadow: 0 0 0 0 rgba(248, 113, 113, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(248, 113, 113, 0); }
+}
+
 .marking-point-locked-note {
     font-size: 0.82rem;
     color: var(--color-incorrect);
@@ -1777,6 +1896,7 @@ header h1 {
     font-size: 1.05rem;
     line-height: 1.8;
     color: var(--text-primary);
+    text-align: center;
 }
 
 .gf-word-bank strong {

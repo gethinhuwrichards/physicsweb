@@ -422,7 +422,7 @@
             2
           ],
           "selectCount": 3,
-          "scoring": "all-or-nothing",
+          "scoring": "partial",
           "markScheme": [
             "1 mark: Use a mug with a smaller base (less contact area)",
             "1 mark: Use a lower power heater (less energy per second)",
@@ -570,7 +570,7 @@
             1
           ],
           "selectCount": 2,
-          "scoring": "all-or-nothing",
+          "scoring": "partial",
           "markScheme": [
             "1 mark: The calculated specific heat capacity will be more accurate.",
             "1 mark: The iron block will transfer thermal energy to the surroundings at a lower rate."
