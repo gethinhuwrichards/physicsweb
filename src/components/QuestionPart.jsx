@@ -89,19 +89,24 @@ export default function QuestionPart({
 
   return (
     <div className={`question-part ${markingClass || ''}`} data-part-index={partIndex}>
-      <div className="part-label">({part.partLabel})</div>
       <div className="part-content">
         <div className="part-left">
           {part.type !== 'gap-fill' && (
-            <div className="part-text" dangerouslySetInnerHTML={{ __html: renderedText }} />
+            <div className="part-text">
+              <span className="part-label">({part.partLabel})</span>{' '}
+              <span dangerouslySetInnerHTML={{ __html: renderedText }} />
+            </div>
+          )}
+          {part.type === 'gap-fill' && (
+            <div className="part-label-standalone">({part.partLabel})</div>
           )}
           {part.diagram && (
             <img src={`images/${part.diagram}`} alt="Diagram" className="part-diagram" />
           )}
+          {renderInput()}
           <div className="part-marks">
             [{part.marks} mark{part.marks > 1 ? 's' : ''}]
           </div>
-          {renderInput()}
           {phase === 'complete' && partScore !== undefined && (
             <div className={`part-score-badge ${
               partScore === part.marks ? 'score-full' :
