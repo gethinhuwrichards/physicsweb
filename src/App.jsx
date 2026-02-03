@@ -73,10 +73,27 @@ export default function App() {
 
   // Navigation
   const goToTopics = useCallback(() => setView('topics'), []);
+  const goToLanding = useCallback(() => setView('landing'), []);
 
   const handleBack = useCallback(() => {
+    if (view === 'question') {
+      setView('questions');
+      return;
+    }
+    if (view === 'questions') {
+      setView('subtopics');
+      return;
+    }
+    if (view === 'subtopics') {
+      setView('topics');
+      return;
+    }
+    if (view === 'topics') {
+      setView('landing');
+      return;
+    }
     history.back();
-  }, []);
+  }, [view]);
 
   const selectTopic = useCallback(
     (topicId) => {
@@ -131,7 +148,11 @@ export default function App() {
       setView('question');
       requestAnimationFrame(() => {
         const el = document.getElementById('question-content-inner');
-        if (el) el.scrollIntoView({ behavior: 'instant' });
+        if (el) {
+          const top = el.getBoundingClientRect().top + window.pageYOffset;
+          const offset = 48;
+          window.scrollTo({ top: Math.max(top - offset, 0), behavior: 'instant' });
+        }
       });
     },
     [questions]
@@ -199,15 +220,41 @@ export default function App() {
 
   // Breadcrumb items
   const breadcrumbItems = [];
-  if (view === 'subtopics' && mainTopic) {
-    breadcrumbItems.push({ label: mainTopic.name });
-  } else if (view === 'questions' && mainTopic && subtopic) {
-    breadcrumbItems.push({ label: mainTopic.name, onClick: () => setView('subtopics') });
-    breadcrumbItems.push({ label: subtopic.name });
-  } else if (view === 'question' && mainTopic && subtopic) {
-    breadcrumbItems.push({ label: mainTopic.name, onClick: () => setView('subtopics') });
-    breadcrumbItems.push({ label: subtopic.name, onClick: () => setView('questions') });
+  if (view !== 'landing') {
+    if (view === 'topics') {
+      breadcrumbItems.push({ label: 'Subject', onClick: goToLanding });
+    } else if (view === 'subtopics') {
+      breadcrumbItems.push({ label: 'Subject', onClick: goToLanding });
+      breadcrumbItems.push({ label: 'Topics', onClick: goToTopics });
+    } else if (mainTopic) {
+      breadcrumbItems.push({ label: 'Subject', onClick: goToLanding });
+      breadcrumbItems.push({ label: 'Topics', onClick: goToTopics });
+      if (view === 'question') {
+        breadcrumbItems.push({ label: 'Subtopics', onClick: () => setView('subtopics') });
+        breadcrumbItems.push({ label: 'Questions', onClick: () => setView('questions') });
+      } else {
+        breadcrumbItems.push({ label: 'Subtopics', onClick: () => setView('subtopics') });
+      }
+    } else {
+      breadcrumbItems.push({ label: 'Subject', onClick: goToLanding });
+    }
   }
+
+  const getHeaderTitle = () => {
+    if (view === 'topics') return 'Physics';
+    if (view === 'subtopics') return mainTopic?.name || 'Choose a Subtopic';
+    if (view === 'questions') return subtopic?.name || 'Choose a Question';
+    if (view === 'question') return '';
+    return 'Physics — Exam Questions by Topic';
+  };
+
+  const getHeaderSubtitle = () => {
+    if (view === 'topics') return 'Select a topic';
+    if (view === 'subtopics') return 'Select a subtopic';
+    if (view === 'questions') return 'Select a question';
+    if (view === 'question') return '';
+    return '';
+  };
 
   return (
     <ErrorBoundary>
@@ -216,7 +263,14 @@ export default function App() {
 
       {view !== 'landing' && (
         <header>
-          <h1>Physics &mdash; Exam Questions by Topic</h1>
+          <div className="header-top-row">
+            <Breadcrumb items={breadcrumbItems} />
+            <button className="back-link" onClick={handleBack}>
+              &larr; Back
+            </button>
+          </div>
+          {getHeaderTitle() && <h1>{getHeaderTitle()}</h1>}
+          {getHeaderSubtitle() && <p className="header-subtitle">{getHeaderSubtitle()}</p>}
         </header>
       )}
 
@@ -224,72 +278,55 @@ export default function App() {
         {view === 'landing' && <LandingPage onStart={goToTopics} />}
 
         {view === 'topics' && topicsData && (
-          <>
-            <Breadcrumb items={[]} />
-            <TopicSelection
-              topics={topicsData.mainTopics}
-              scores={scores}
-              onSelectTopic={selectTopic}
-              onResetAll={handleResetAll}
-            />
-          </>
+          <TopicSelection
+            topics={topicsData.mainTopics}
+            scores={scores}
+            onSelectTopic={selectTopic}
+            onResetAll={handleResetAll}
+          />
         )}
 
         {view === 'subtopics' && mainTopic && (
-          <>
-            <Breadcrumb items={breadcrumbItems} />
-            <SubtopicSelection
-              mainTopic={mainTopic}
-              scores={scores}
-              onSelectSubtopic={selectSubtopic}
-              onResetAll={handleResetAllTopic}
-            />
-          </>
+          <SubtopicSelection
+            mainTopic={mainTopic}
+            scores={scores}
+            onSelectSubtopic={selectSubtopic}
+            onResetAll={handleResetAllTopic}
+          />
         )}
 
         {view === 'questions' && (
-          <>
-            <Breadcrumb items={breadcrumbItems} />
-            <QuestionList
-              title={subtopic?.name || ''}
-              questions={questions}
-              scores={scores}
-              scrollToId={currentQuestion?.id}
-              onSelectQuestion={selectQuestion}
-              onResetQuestion={handleResetFromList}
-              onResetAll={handleResetAllSubtopic}
-            />
-          </>
+          <QuestionList
+            title={subtopic?.name || ''}
+            questions={questions}
+            scores={scores}
+            scrollToId={currentQuestion?.id}
+            onSelectQuestion={selectQuestion}
+            onResetQuestion={handleResetFromList}
+            onResetAll={handleResetAllSubtopic}
+          />
         )}
 
         {view === 'question' && currentQuestion && (
-          <>
-            <Breadcrumb items={breadcrumbItems} />
-            <div id="question-container">
-              <QuestionView
-                key={questionKey}
-                question={currentQuestion}
-                onBankScore={handleBankScore}
-                onReset={handleReset}
-                onSaveAnswers={handleSaveAnswers}
-                onScoreReady={handleScoreReady}
-                savedState={savedState}
-                subtopicName={subtopic?.name || ''}
-                mainTopicName={mainTopic?.name || ''}
-              />
-            </div>
-          </>
+          <div id="question-container">
+            <QuestionView
+              key={questionKey}
+              question={currentQuestion}
+              onBankScore={handleBankScore}
+              onReset={handleReset}
+              onSaveAnswers={handleSaveAnswers}
+              onScoreReady={handleScoreReady}
+              savedState={savedState}
+              subtopicName={subtopic?.name || ''}
+              mainTopicName={mainTopic?.name || ''}
+            />
+          </div>
         )}
-        {view !== 'landing' && (
-          <div className={`bottom-nav-row${view === 'question' ? ' has-report' : ''}`}>
-            <button className="back-btn-fixed" onClick={handleBack}>
-              &larr; Back
+        {view === 'question' && (
+          <div className="bottom-nav-row bottom-nav-row-solo">
+            <button className="bug-report-btn" onClick={() => setBugReportOpen(true)}>
+              Report Bug
             </button>
-            {view === 'question' && (
-              <button className="bug-report-btn" onClick={() => setBugReportOpen(true)}>
-                Report Bug
-              </button>
-            )}
           </div>
         )}
       </main>
