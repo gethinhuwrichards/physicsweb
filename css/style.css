@@ -141,6 +141,11 @@ html {
     overflow-y: scroll;
 }
 
+html:has(.self-marking-overlay),
+html:has(.score-page-overlay) {
+    overflow-y: hidden;
+}
+
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.65;
