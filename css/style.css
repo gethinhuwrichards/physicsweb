@@ -1831,6 +1831,49 @@ header h1 {
     100% { box-shadow: 0 0 0 0 rgba(248, 113, 113, 0); }
 }
 
+/* Glow sweep across marking point text (first point only) */
+.marking-point-label.glow {
+    position: relative;
+    overflow: hidden;
+}
+
+.marking-point-label.glow::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -60%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(30, 138, 94, 0.12),
+        rgba(30, 138, 94, 0.18),
+        rgba(30, 138, 94, 0.12),
+        transparent
+    );
+    animation: glowSweep 2s ease-in-out forwards;
+    pointer-events: none;
+    border-radius: 6px;
+}
+
+@keyframes glowSweep {
+    0%   { left: -60%; opacity: 0; }
+    10%  { opacity: 1; }
+    100% { left: 100%; opacity: 0; }
+}
+
+[data-theme="dark"] .marking-point-label.glow::after {
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(52, 211, 153, 0.1),
+        rgba(52, 211, 153, 0.18),
+        rgba(52, 211, 153, 0.1),
+        transparent
+    );
+}
+
 .marking-point-locked-note {
     font-size: 0.82rem;
     color: var(--color-incorrect);

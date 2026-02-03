@@ -1,4 +1,4 @@
-import React, { useMemo, useState, useEffect } from 'react';
+import React, { useMemo, useState, useEffect, useRef } from 'react';
 import { renderLatex } from '../../utils/renderLatex';
 import { parseMarkScheme } from '../../utils/parseMarkScheme';
 import MarkingPointRow from './MarkingPointRow';
@@ -72,19 +72,38 @@ export default function SelfMarkingView({
   // Submit button pulse when it becomes available
   const canSubmit = allPartsFullyDecided && hasVisitedLast;
 
-  // Sparkle phase for tick/cross hint on self-marking parts
-  const [sparklePhase, setSparklePhase] = useState(null);
+  // Sparkle hint on first marking point's tick/cross (both simultaneously)
+  const [sparkleActive, setSparkleActive] = useState(false);
   useEffect(() => {
-    setSparklePhase(null);
+    setSparkleActive(false);
     if (!isAutoMarked) {
-      const t1 = setTimeout(() => setSparklePhase('tick'), 300);
-      const t2 = setTimeout(() => setSparklePhase('cross'), 1400);
-      const t3 = setTimeout(() => setSparklePhase(null), 2500);
-      return () => { clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); };
+      const t1 = setTimeout(() => setSparkleActive(true), 300);
+      const t2 = setTimeout(() => setSparkleActive(false), 1300);
+      return () => { clearTimeout(t1); clearTimeout(t2); };
     }
   }, [currentSelfMarkIdx, isAutoMarked]);
 
-  const firstUndecidedIdx = decisions.findIndex(d => d === null);
+  // Progressive reveal: show marking points one at a time for self-marked parts
+  const [maxRevealed, setMaxRevealed] = useState(1);
+  const prevPartRef = useRef(currentSelfMarkIdx);
+
+  useEffect(() => {
+    if (isAutoMarked) { setMaxRevealed(points.length); return; }
+
+    let consecutive = 0;
+    for (let i = 0; i < decisions.length; i++) {
+      if (decisions[i] !== null) consecutive++;
+      else break;
+    }
+    const reveal = Math.min(consecutive + 1, points.length);
+
+    if (prevPartRef.current !== currentSelfMarkIdx) {
+      prevPartRef.current = currentSelfMarkIdx;
+      setMaxRevealed(reveal);
+    } else {
+      setMaxRevealed(prev => Math.max(prev, reveal));
+    }
+  }, [currentSelfMarkIdx, decisions, isAutoMarked, points.length]);
 
   // Render single/equation choice as plain text review
   function renderChoiceReview() {
@@ -328,9 +347,11 @@ export default function SelfMarkingView({
           )}
           <div className="self-marking-points">
             {points.map((point, i) => {
+              if (!isAutoMarked && i >= maxRevealed) return null;
               const isRearrangement = part.type === 'short-numerical'
                 && part.requiresRearrangement && points.length === 3 && i === 1;
-              const showSparkle = !isAutoMarked && i === firstUndecidedIdx;
+              const showSparkle = !isAutoMarked && i === 0;
+              const firstUndecided = decisions[0] === null;
               return (
                 <MarkingPointRow
                   key={i}
@@ -340,8 +361,9 @@ export default function SelfMarkingView({
                   locked={locked[i] === true}
                   pointNumber={i + 1}
                   dependencyNote={isRearrangement ? '(depends on substitution marking point)' : null}
-                  sparkleAward={showSparkle && sparklePhase === 'tick'}
-                  sparkleDeny={showSparkle && sparklePhase === 'cross'}
+                  sparkleAward={showSparkle && sparkleActive && firstUndecided}
+                  sparkleDeny={showSparkle && sparkleActive && firstUndecided}
+                  glowText={showSparkle && firstUndecided}
                 />
               );
             })}

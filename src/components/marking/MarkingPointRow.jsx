@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import { renderLatex } from '../../utils/renderLatex';
 import { renderMarkdownBold } from '../../utils/renderMarkdownBold';
 
-export default function MarkingPointRow({ point, decision, onDecide, locked, pointNumber, dependencyNote, sparkleAward, sparkleDeny }) {
+export default function MarkingPointRow({ point, decision, onDecide, locked, pointNumber, dependencyNote, sparkleAward, sparkleDeny, glowText }) {
   const renderedText = useMemo(
     () => renderLatex(renderMarkdownBold(point.text)),
     [point.text]
@@ -17,7 +17,7 @@ export default function MarkingPointRow({ point, decision, onDecide, locked, poi
 
   return (
     <div className={`marking-point-row${decided ? ' decided' : ''}${isLocked ? ' locked' : ''}`}>
-      <div className="marking-point-label">
+      <div className={`marking-point-label${glowText ? ' glow' : ''}`}>
         {label}
         {dependencyNote && <em className="marking-point-dep-note"> {dependencyNote}</em>}
       </div>
