@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import ErrorBoundary from './components/ErrorBoundary';
 import LandingPage from './components/LandingPage';
 import TopicSelection from './components/TopicSelection';
@@ -33,6 +33,7 @@ export default function App() {
   const [savedState, setSavedState] = useState(null);
   const [scores, setScores] = useState(getQuestionScores);
   const [bugReportOpen, setBugReportOpen] = useState(false);
+  const isPopstate = useRef(false);
 
   // Load topics data on mount
   useEffect(() => {
@@ -41,6 +42,29 @@ export default function App() {
       .then(setTopicsData)
       .catch((err) => console.error('Failed to load topics:', err));
   }, []);
+
+  // Browser history: set initial state and listen for back/forward
+  useEffect(() => {
+    history.replaceState({ view: 'landing' }, '');
+    const handlePopState = (e) => {
+      const target = e.state?.view || 'landing';
+      isPopstate.current = true;
+      setView(target);
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  // Push history entry on view changes (skip if triggered by popstate)
+  useEffect(() => {
+    if (isPopstate.current) {
+      isPopstate.current = false;
+      return;
+    }
+    // Don't push for the initial landing view (already set via replaceState)
+    if (view === 'landing') return;
+    history.pushState({ view }, '');
+  }, [view]);
 
   // Refresh scores from cookies
   const refreshScores = useCallback(() => {
@@ -51,14 +75,8 @@ export default function App() {
   const goToTopics = useCallback(() => setView('topics'), []);
 
   const handleBack = useCallback(() => {
-    switch (view) {
-      case 'topics': setView('landing'); break;
-      case 'subtopics': setView('topics'); break;
-      case 'questions': setView('subtopics'); break;
-      case 'question': setView('questions'); break;
-      default: break;
-    }
-  }, [view]);
+    history.back();
+  }, []);
 
   const selectTopic = useCallback(
     (topicId) => {
