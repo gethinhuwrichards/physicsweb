@@ -1750,6 +1750,35 @@ header .header-top-row {
     background: var(--bg-surface-alt);
 }
 
+.marking-point-row.trace-border {
+    position: relative;
+    border-bottom-color: transparent;
+}
+
+.trace-border-svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    pointer-events: none;
+}
+
+.trace-border-svg path {
+    fill: none;
+    stroke: var(--accent-blue);
+    stroke-width: 2;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: traceDraw 2.1s linear forwards;
+}
+
+@keyframes traceDraw {
+    0%   { stroke-dashoffset: 1; opacity: 1; }
+    75%  { stroke-dashoffset: 0; opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 0; }
+}
+
 .marking-point-label {
     font-size: 0.68rem;
     text-transform: uppercase;
@@ -1871,101 +1900,6 @@ header .header-top-row {
 .mark-cross:disabled {
     cursor: not-allowed;
     opacity: 0.4;
-}
-
-.mark-tick.sparkle {
-    animation: tickSparkle 1s ease-in-out forwards;
-}
-
-@keyframes tickSparkle {
-    0%   { box-shadow: 0 0 0 0 rgba(30, 138, 94, 0); }
-    15%  { box-shadow: 0 0 12px 4px rgba(30, 138, 94, 0.3); }
-    35%  { box-shadow: 0 0 0 0 rgba(30, 138, 94, 0); }
-    55%  { box-shadow: 0 0 12px 4px rgba(30, 138, 94, 0.3); }
-    80%  { box-shadow: 0 0 0 0 rgba(30, 138, 94, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(30, 138, 94, 0); }
-}
-
-[data-theme="dark"] .mark-tick.sparkle {
-    animation-name: tickSparkleDark;
-}
-
-@keyframes tickSparkleDark {
-    0%   { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
-    15%  { box-shadow: 0 0 12px 4px rgba(52, 211, 153, 0.35); }
-    35%  { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
-    55%  { box-shadow: 0 0 12px 4px rgba(52, 211, 153, 0.35); }
-    80%  { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
-}
-
-.mark-cross.sparkle {
-    animation: crossSparkle 1s ease-in-out forwards;
-}
-
-@keyframes crossSparkle {
-    0%   { box-shadow: 0 0 0 0 rgba(217, 48, 37, 0); }
-    15%  { box-shadow: 0 0 12px 4px rgba(217, 48, 37, 0.3); }
-    35%  { box-shadow: 0 0 0 0 rgba(217, 48, 37, 0); }
-    55%  { box-shadow: 0 0 12px 4px rgba(217, 48, 37, 0.3); }
-    80%  { box-shadow: 0 0 0 0 rgba(217, 48, 37, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(217, 48, 37, 0); }
-}
-
-[data-theme="dark"] .mark-cross.sparkle {
-    animation-name: crossSparkleDark;
-}
-
-@keyframes crossSparkleDark {
-    0%   { box-shadow: 0 0 0 0 rgba(248, 113, 113, 0); }
-    15%  { box-shadow: 0 0 12px 4px rgba(248, 113, 113, 0.35); }
-    35%  { box-shadow: 0 0 0 0 rgba(248, 113, 113, 0); }
-    55%  { box-shadow: 0 0 12px 4px rgba(248, 113, 113, 0.35); }
-    80%  { box-shadow: 0 0 0 0 rgba(248, 113, 113, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(248, 113, 113, 0); }
-}
-
-/* Glow sweep across marking point text (first point only) */
-.marking-point-label.glow {
-    position: relative;
-    overflow: hidden;
-}
-
-.marking-point-label.glow::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -60%;
-    width: 60%;
-    height: 100%;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(30, 138, 94, 0.12),
-        rgba(30, 138, 94, 0.18),
-        rgba(30, 138, 94, 0.12),
-        transparent
-    );
-    animation: glowSweep 2s ease-in-out forwards;
-    pointer-events: none;
-    border-radius: 6px;
-}
-
-@keyframes glowSweep {
-    0%   { left: -60%; opacity: 0; }
-    10%  { opacity: 1; }
-    100% { left: 100%; opacity: 0; }
-}
-
-[data-theme="dark"] .marking-point-label.glow::after {
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(52, 211, 153, 0.1),
-        rgba(52, 211, 153, 0.18),
-        rgba(52, 211, 153, 0.1),
-        transparent
-    );
 }
 
 .marking-point-locked-note {
@@ -2918,10 +2852,19 @@ body.landing-active header {
 }
 
 .score-page-value {
-    font-size: 4.5rem;
+    font-size: 150px;
     font-weight: 700;
     color: var(--text-primary);
     letter-spacing: -0.02em;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0;
+}
+
+.score-page-emoji {
+    font-size: 3rem;
+    margin-top: 12px;
 }
 
 .score-page-value.score-color-full {
@@ -2937,7 +2880,7 @@ body.landing-active header {
 }
 
 .score-page-label {
-    font-size: 1.15rem;
+    font-size: 75px;
     color: var(--text-secondary);
     margin-top: 6px;
     font-weight: 500;

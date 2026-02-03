@@ -89,7 +89,7 @@ export default function QuestionList({
                       <div
                         className={`question-progress-fill ${progressClass}`}
                         style={{
-                          width: `${Math.round((saved.score / saved.max) * 100)}%`,
+                          width: `${Math.max(Math.round((saved.score / saved.max) * 100), 6)}%`,
                         }}
                       />
                       <span className="question-progress-text">

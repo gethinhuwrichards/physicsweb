@@ -7,14 +7,20 @@ export default function ScorePage({ score, maxScore, onTryAnother, onReview, onR
   const [bugReportOpen, setBugReportOpen] = useState(false);
 
   let colorClass = 'score-color-partial';
-  if (score === maxScore) colorClass = 'score-color-full';
-  else if (score === 0) colorClass = 'score-color-zero';
+  let emoji = '\u{1F642}';
+  if (score === maxScore) { colorClass = 'score-color-full'; emoji = '\u{1F973}'; }
+  else if (score === 0) { colorClass = 'score-color-zero'; emoji = '\u{1F914}'; }
 
   return (
     <div className="score-page-overlay">
       <div className="score-page-score">
-        <div className={`score-page-value ${colorClass}`}>{score} / {maxScore}</div>
+        <div className={`score-page-value ${colorClass}`}>
+          <span className="score-page-earned">{score}</span>
+          <span className="score-page-separator"> / </span>
+          <span className="score-page-total">{maxScore}</span>
+        </div>
         <div className="score-page-label">Marks</div>
+        <div className="score-page-emoji">{emoji}</div>
       </div>
       <div className="score-page-buttons">
         <button className="score-page-btn-primary" onClick={() => onTryAnother(score, maxScore)}>
