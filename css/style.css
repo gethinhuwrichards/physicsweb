@@ -1394,6 +1394,11 @@ header .header-top-row {
     box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.05);
 }
 
+.self-marking-submit-group {
+    display: inline-flex;
+    align-items: stretch;
+}
+
 .self-marking-nav-btn {
     padding: 10px 24px;
     font-size: 0.95rem;
@@ -1445,7 +1450,7 @@ header .header-top-row {
     color: var(--text-on-accent);
     background: var(--accent-blue);
     border: none;
-    border-radius: 8px;
+    border-radius: 8px 0 0 8px;
     cursor: pointer;
     transition: background 0.2s, box-shadow 0.2s;
 }
@@ -1462,6 +1467,34 @@ header .header-top-row {
 
 .self-marking-submit.ready-pulse {
     animation: submitPulse 1.5s ease-in-out infinite;
+}
+
+.self-marking-score {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-default);
+    border-left: none;
+    border-radius: 0 8px 8px 0;
+    color: var(--text-primary);
+    box-shadow: var(--shadow-sm);
+    cursor: default;
+    user-select: none;
+}
+
+.self-marking-score.score-full {
+    color: var(--color-correct);
+}
+
+.self-marking-score.score-zero {
+    color: var(--color-incorrect);
+}
+
+.self-marking-score.score-partial {
+    color: var(--color-partial);
 }
 
 @keyframes submitPulse {

@@ -72,6 +72,30 @@ export default function SelfMarkingView({
   // Submit button pulse when it becomes available
   const canSubmit = allPartsFullyDecided && hasVisitedLast;
 
+  const totalMarks = useMemo(
+    () => question.parts.reduce((sum, p) => sum + p.marks, 0),
+    [question.parts]
+  );
+
+  const totalScore = useMemo(() => {
+    return question.parts.reduce((sum, part, idx) => {
+      const partDecisions = markingDecisions[idx];
+      if (!partDecisions) return sum;
+      const partPoints = parseMarkScheme(part.markScheme);
+      let score = 0;
+      partDecisions.forEach((d, i) => {
+        if (d === true && partPoints[i]) score += partPoints[i].marks;
+      });
+      return sum + Math.min(score, part.marks);
+    }, 0);
+  }, [question.parts, markingDecisions]);
+
+  const totalScoreClass = totalScore === 0
+    ? 'score-zero'
+    : totalScore >= totalMarks
+      ? 'score-full'
+      : 'score-partial';
+
   // Sparkle hint on first marking point's tick/cross (both simultaneously)
   const [sparkleActive, setSparkleActive] = useState(false);
   useEffect(() => {
@@ -368,9 +392,6 @@ export default function SelfMarkingView({
               );
             })}
           </div>
-          <div className={`self-marking-tally ${tallyColorClass}`}>
-            {currentTally} / {part.marks} mark{part.marks !== 1 ? 's' : ''}
-          </div>
         </div>
       </div>
 
@@ -382,13 +403,18 @@ export default function SelfMarkingView({
         >
           &larr; Back
         </button>
-        <button
-          className={`self-marking-submit${canSubmit ? ' ready-pulse' : ''}`}
-          onClick={onSubmitMarks}
-          disabled={!canSubmit}
-        >
-          Submit Marks
-        </button>
+        <div className="self-marking-submit-group">
+          <button
+            className={`self-marking-submit${canSubmit ? ' ready-pulse' : ''}`}
+            onClick={onSubmitMarks}
+            disabled={!canSubmit}
+          >
+            Submit Marks
+          </button>
+          <div className={`self-marking-score ${totalScoreClass}`}>
+            Score: {totalScore} / {totalMarks}
+          </div>
+        </div>
         <button
           className={`self-marking-nav-btn${nextPulse ? ' ready-pulse' : ''}`}
           onClick={() => onNavigate('next')}
