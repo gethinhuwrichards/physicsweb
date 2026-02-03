@@ -16,6 +16,7 @@ export default function SelfMarkingView({
   onNavigate,
   onSubmitMarks,
   allPartsFullyDecided,
+  onReportBug,
 }) {
   const partIndex = reviewParts[currentSelfMarkIdx];
   const part = question.parts[partIndex];
@@ -95,6 +96,8 @@ export default function SelfMarkingView({
     : totalScore >= totalMarks
       ? 'score-full'
       : 'score-partial';
+
+  const handleReportBug = onReportBug || (() => {});
 
   // Sparkle hint on first marking point's tick/cross (both simultaneously)
   const [sparkleActive, setSparkleActive] = useState(false);
@@ -339,15 +342,24 @@ export default function SelfMarkingView({
   return (
     <div className="self-marking-overlay">
       <div className={`self-marking-header${isAutoMarked ? ' auto-marked-header' : ''}`}>
-        <span className="self-marking-title">
-          {isAutoMarked ? 'Review' : 'Self Marking'}
-          <span className={`self-mark-badge ${isAutoMarked ? 'badge-auto' : 'badge-self'}`}>
-            {isAutoMarked ? 'Auto Marked' : 'Mark Required'}
+        <div className="self-marking-header-left">
+          <span className="self-marking-title">
+            {isAutoMarked ? 'Review' : 'Self Marking'}
+            <span className={`self-mark-badge ${isAutoMarked ? 'badge-auto' : 'badge-self'}`}>
+              {isAutoMarked ? 'Auto Marked' : 'Mark Required'}
+            </span>
           </span>
-        </span>
-        <span className="self-marking-counter">
-          Part ({part.partLabel}) &mdash; {currentSelfMarkIdx + 1} of {reviewParts.length}
-        </span>
+        </div>
+        <div className="self-marking-header-center">
+          <button className="bug-report-btn self-marking-report-btn" onClick={handleReportBug}>
+            Report Bug
+          </button>
+        </div>
+        <div className="self-marking-header-right">
+          <span className="self-marking-counter">
+            Part ({part.partLabel}) &mdash; {currentSelfMarkIdx + 1} of {reviewParts.length}
+          </span>
+        </div>
       </div>
 
       <div className="self-marking-panels">

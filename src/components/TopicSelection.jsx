@@ -8,8 +8,7 @@ export default function TopicSelection({ topics, scores, onSelectTopic, onResetA
 
   return (
     <section className="topic-selection">
-      <div className="section-header-row">
-        <h2>Select a Topic</h2>
+      <div className={`section-header-row${hasAnyScores ? ' reset-only' : ''}`}>
         {hasAnyScores && (
           <button
             className="reset-all-btn"

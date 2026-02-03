@@ -309,17 +309,18 @@ export default function App() {
 
         {view === 'question' && currentQuestion && (
           <div id="question-container">
-            <QuestionView
-              key={questionKey}
-              question={currentQuestion}
-              onBankScore={handleBankScore}
-              onReset={handleReset}
-              onSaveAnswers={handleSaveAnswers}
-              onScoreReady={handleScoreReady}
-              savedState={savedState}
-              subtopicName={subtopic?.name || ''}
-              mainTopicName={mainTopic?.name || ''}
-            />
+              <QuestionView
+                key={questionKey}
+                question={currentQuestion}
+                onBankScore={handleBankScore}
+                onReset={handleReset}
+                onSaveAnswers={handleSaveAnswers}
+                onScoreReady={handleScoreReady}
+                onReportBug={() => setBugReportOpen(true)}
+                savedState={savedState}
+                subtopicName={subtopic?.name || ''}
+                mainTopicName={mainTopic?.name || ''}
+              />
           </div>
         )}
         {view === 'question' && (
