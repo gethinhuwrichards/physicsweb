@@ -1,5 +1,6 @@
 node_modules/
 dist/
 .claude/
+.env.local
 nul
 .env.local

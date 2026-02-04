@@ -254,7 +254,20 @@ function reducer(state, action) {
   }
 }
 
-export default function QuestionView({ question, onBankScore, onReset, onSaveAnswers, onScoreReady, onRecordAttempt, savedState, subtopicName, subtopicId, mainTopicName, mainTopicId }) {
+export default function QuestionView({
+  question,
+  onBankScore,
+  onReset,
+  onSaveAnswers,
+  onScoreReady,
+  onRecordAttempt,
+  onReportBug,
+  savedState,
+  subtopicName,
+  subtopicId,
+  mainTopicName,
+  mainTopicId,
+}) {
   const [state, dispatch] = useReducer(reducer, { question, savedState }, initState);
   const containerRef = useRef(null);
   const stateRef = useRef(state);
@@ -391,6 +404,7 @@ export default function QuestionView({ question, onBankScore, onReset, onSaveAns
           onNavigate={handleNavigate}
           onSubmitMarks={handleSubmitMarks}
           allPartsFullyDecided={allPartsFullyDecided}
+          onReportBug={onReportBug}
         />
       )}
 

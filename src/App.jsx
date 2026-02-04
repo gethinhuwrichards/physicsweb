@@ -40,11 +40,26 @@ export default function App() {
   const [questionKey, setQuestionKey] = useState(0);
   const [savedState, setSavedState] = useState(null);
   const [bugReportOpen, setBugReportOpen] = useState(false);
+  const isPopstate = useRef(false);
 
   // Auth UI state
   const [showAuth, setShowAuth] = useState(false);
   const [authTab, setAuthTab] = useState('signin');
   const [showUserMenu, setShowUserMenu] = useState(false);
+
+  // Theme state
+  const [dark, setDark] = useState(() => {
+    const saved = localStorage.getItem('theme');
+    if (saved) return saved === 'dark';
+    return window.matchMedia?.('(prefers-color-scheme: dark)').matches ?? false;
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+    localStorage.setItem('theme', dark ? 'dark' : 'light');
+  }, [dark]);
+
+  const toggleTheme = () => setDark(d => !d);
 
   // Session tracking
   const sessionIdRef = useRef(null);
@@ -81,7 +96,6 @@ export default function App() {
 
     const endSession = () => {
       if (!sid) return;
-      // Best-effort update on page unload
       supabase
         .from('session_logs')
         .update({
@@ -98,7 +112,6 @@ export default function App() {
     window.addEventListener('beforeunload', endSession);
     return () => {
       window.removeEventListener('beforeunload', endSession);
-      // Also try to end session on cleanup
       if (sid) {
         supabase
           .from('session_logs')
@@ -122,6 +135,7 @@ export default function App() {
 
   // Navigation
   const goToTopics = useCallback(() => setView('topics'), []);
+  const goToLanding = useCallback(() => setView('landing'), []);
 
   const handleBack = useCallback(() => {
     switch (view) {
@@ -188,7 +202,11 @@ export default function App() {
       setView('question');
       requestAnimationFrame(() => {
         const el = document.getElementById('question-content-inner');
-        if (el) el.scrollIntoView({ behavior: 'instant' });
+        if (el) {
+          const top = el.getBoundingClientRect().top + window.pageYOffset;
+          const offset = 48;
+          window.scrollTo({ top: Math.max(top - offset, 0), behavior: 'instant' });
+        }
       });
     },
     [questions, loadQuestionAnswers]
@@ -273,55 +291,99 @@ export default function App() {
 
   // Breadcrumb items
   const breadcrumbItems = [];
-  if (view === 'subtopics' && mainTopic) {
-    breadcrumbItems.push({ label: mainTopic.name });
-  } else if (view === 'questions' && mainTopic && subtopic) {
-    breadcrumbItems.push({ label: mainTopic.name, onClick: () => setView('subtopics') });
-    breadcrumbItems.push({ label: subtopic.name });
-  } else if (view === 'question' && mainTopic && subtopic) {
-    breadcrumbItems.push({ label: mainTopic.name, onClick: () => setView('subtopics') });
-    breadcrumbItems.push({ label: subtopic.name, onClick: () => setView('questions') });
+  if (view !== 'landing') {
+    if (view === 'topics') {
+      breadcrumbItems.push({ label: 'Subject', onClick: goToLanding });
+      breadcrumbItems.push({ label: 'Topics' });
+    } else if (view === 'subtopics') {
+      breadcrumbItems.push({ label: 'Subject', onClick: goToLanding });
+      breadcrumbItems.push({ label: 'Topics', onClick: goToTopics });
+      breadcrumbItems.push({ label: 'Subtopics' });
+    } else if (mainTopic) {
+      breadcrumbItems.push({ label: 'Subject', onClick: goToLanding });
+      breadcrumbItems.push({ label: 'Topics', onClick: goToTopics });
+      if (view === 'question') {
+        breadcrumbItems.push({ label: 'Subtopics', onClick: () => setView('subtopics') });
+        breadcrumbItems.push({ label: 'Questions', onClick: () => setView('questions') });
+      } else {
+        breadcrumbItems.push({ label: 'Subtopics', onClick: () => setView('subtopics') });
+        breadcrumbItems.push({ label: 'Questions' });
+      }
+    } else {
+      breadcrumbItems.push({ label: 'Subject', onClick: goToLanding });
+    }
   }
+
+  const getHeaderTitle = () => {
+    if (view === 'topics') return 'Physics';
+    if (view === 'subtopics') return mainTopic?.name || 'Choose a Subtopic';
+    if (view === 'questions') return subtopic?.name || 'Choose a Question';
+    if (view === 'question') return '';
+    return 'Physics — Exam Questions by Topic';
+  };
+
+  const getHeaderSubtitle = () => {
+    if (view === 'topics') return 'Select a subject';
+    if (view === 'subtopics') return 'Select a subtopic';
+    if (view === 'questions') return 'Select a question';
+    if (view === 'question') return '';
+    return '';
+  };
 
   return (
     <ErrorBoundary>
+      <div className="header-auth">
+        {authLoading ? null : user ? (
+          <div className="user-menu-wrapper">
+            <button
+              className="user-menu-btn"
+              onClick={(e) => {
+                e.stopPropagation();
+                setShowUserMenu((v) => !v);
+              }}
+            >
+              <span className="user-avatar">
+                {(profile?.display_name || profile?.email || '?')[0].toUpperCase()}
+              </span>
+              <span className="user-name">{profile?.display_name || profile?.email}</span>
+            </button>
+            {showUserMenu && (
+              <div className="user-dropdown" onClick={(e) => e.stopPropagation()}>
+                <button onClick={() => { setView('profile'); setShowUserMenu(false); }}>
+                  Profile
+                </button>
+                <button onClick={toggleTheme}>
+                  {dark ? '\u2600 Light' : '\u263E Dark'}
+                </button>
+                <button onClick={() => { signOut(); setShowUserMenu(false); }}>
+                  Sign Out
+                </button>
+              </div>
+            )}
+          </div>
+        ) : (
+          <>
+            <button className="header-signin-btn" onClick={openSignIn}>
+              Sign In
+            </button>
+            <button className="theme-toggle-btn" onClick={toggleTheme} aria-label={dark ? 'Switch to light mode' : 'Switch to dark mode'}>
+              {dark ? '\u2600' : '\u263E'}
+            </button>
+          </>
+        )}
+      </div>
       <FeedbackModal />
 
       {view !== 'landing' && (
         <header>
-          <h1>Physics &mdash; Exam Questions by Topic</h1>
-          <div className="header-auth">
-            {authLoading ? null : user ? (
-              <div className="user-menu-wrapper">
-                <button
-                  className="user-menu-btn"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setShowUserMenu((v) => !v);
-                  }}
-                >
-                  <span className="user-avatar">
-                    {(profile?.display_name || profile?.email || '?')[0].toUpperCase()}
-                  </span>
-                  <span className="user-name">{profile?.display_name || profile?.email}</span>
-                </button>
-                {showUserMenu && (
-                  <div className="user-dropdown" onClick={(e) => e.stopPropagation()}>
-                    <button onClick={() => { setView('profile'); setShowUserMenu(false); }}>
-                      Profile
-                    </button>
-                    <button onClick={() => { signOut(); setShowUserMenu(false); }}>
-                      Sign Out
-                    </button>
-                  </div>
-                )}
-              </div>
-            ) : (
-              <button className="header-signin-btn" onClick={openSignIn}>
-                Sign In
-              </button>
-            )}
+          <div className="header-top-row">
+            <Breadcrumb items={breadcrumbItems} />
+            <button className="back-link" onClick={handleBack}>
+              &larr; Back
+            </button>
           </div>
+          {getHeaderTitle() && <h1>{getHeaderTitle()}</h1>}
+          {getHeaderSubtitle() && <p className="header-subtitle">{getHeaderSubtitle()}</p>}
         </header>
       )}
 
@@ -339,52 +401,41 @@ export default function App() {
         )}
 
         {view === 'topics' && topicsData && (
-          <>
-            <Breadcrumb items={[]} />
-            <TopicSelection
-              topics={topicsData.mainTopics}
-              scores={scores}
-              onSelectTopic={selectTopic}
-              onResetAll={handleResetAll}
-            />
-          </>
+          <TopicSelection
+            topics={topicsData.mainTopics}
+            scores={scores}
+            onSelectTopic={selectTopic}
+            onResetAll={handleResetAll}
+          />
         )}
 
         {view === 'subtopics' && mainTopic && (
-          <>
-            <Breadcrumb items={breadcrumbItems} />
-            <SubtopicSelection
-              mainTopic={mainTopic}
-              scores={scores}
-              onSelectSubtopic={selectSubtopic}
-              onResetAll={handleResetAllTopic}
-            />
-          </>
+          <SubtopicSelection
+            mainTopic={mainTopic}
+            scores={scores}
+            onSelectSubtopic={selectSubtopic}
+            onResetAll={handleResetAllTopic}
+          />
         )}
 
         {view === 'questions' && (
-          <>
-            <Breadcrumb items={breadcrumbItems} />
-            <QuestionList
-              title={subtopic?.name || ''}
-              questions={questions}
-              scores={scores}
-              scrollToId={currentQuestion?.id}
-              onSelectQuestion={selectQuestion}
-              onResetQuestion={handleResetFromList}
-              onResetAll={handleResetAllSubtopic}
-              user={user}
-              profile={profile}
-              subtopicId={subtopic?.id}
-              onSignIn={openSignIn}
-            />
-          </>
+          <QuestionList
+            title={subtopic?.name || ''}
+            questions={questions}
+            scores={scores}
+            scrollToId={currentQuestion?.id}
+            onSelectQuestion={selectQuestion}
+            onResetQuestion={handleResetFromList}
+            onResetAll={handleResetAllSubtopic}
+            user={user}
+            profile={profile}
+            subtopicId={subtopic?.id}
+            onSignIn={openSignIn}
+          />
         )}
 
         {view === 'question' && currentQuestion && (
-          <>
-            <Breadcrumb items={breadcrumbItems} />
-            <div id="question-container">
+          <div id="question-container">
               <QuestionView
                 key={questionKey}
                 question={currentQuestion}
@@ -393,14 +444,14 @@ export default function App() {
                 onSaveAnswers={handleSaveAnswers}
                 onScoreReady={handleScoreReady}
                 onRecordAttempt={handleRecordAttempt}
+                onReportBug={() => setBugReportOpen(true)}
                 savedState={savedState}
                 subtopicName={subtopic?.name || ''}
                 subtopicId={subtopic?.id || ''}
                 mainTopicName={mainTopic?.name || ''}
                 mainTopicId={mainTopic?.id || ''}
               />
-            </div>
-          </>
+          </div>
         )}
 
         {view === 'profile' && (

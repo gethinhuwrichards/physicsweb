@@ -224,7 +224,7 @@
           ],
           "correctAnswers": [1, 3],
           "selectCount": 2,
-          "scoring": "all-or-nothing",
+          "scoring": "partial",
           "markScheme": [
             "1 mark: All electromagnetic waves are **transverse**",
             "1 mark: All electromagnetic waves have the **same speed in a vacuum**"

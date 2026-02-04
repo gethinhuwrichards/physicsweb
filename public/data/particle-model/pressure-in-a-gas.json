@@ -246,7 +246,7 @@
           ],
           "correctAnswers": [3, 4],
           "selectCount": 2,
-          "scoring": "all-or-nothing",
+          "scoring": "partial",
           "markScheme": [
             "1 mark: The particles move in random directions",
             "1 mark: The particles move with a range of speeds"

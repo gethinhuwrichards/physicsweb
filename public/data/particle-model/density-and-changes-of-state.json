@@ -305,7 +305,7 @@
           ],
           "correctAnswers": [0, 3],
           "selectCount": 2,
-          "scoring": "all-or-nothing",
+          "scoring": "partial",
           "markScheme": [
             "1 mark: Allows anomalous results to be identified and ignored",
             "1 mark: Reduces the effect of random errors when using the equipment"
@@ -595,7 +595,7 @@
           ],
           "correctAnswers": [2, 3],
           "selectCount": 2,
-          "scoring": "all-or-nothing",
+          "scoring": "partial",
           "markScheme": [
             "1 mark: To distribute the salt throughout the ice",
             "1 mark: To keep all the ice at the same temperature"

@@ -10,7 +10,7 @@ export default function SubtopicSelection({ mainTopic, scores, onSelectSubtopic,
   );
 
   return (
-    <section>
+    <section className="subtopic-selection">
       {hasAnyScores && (
         <div className="section-header-row reset-only">
           <button

@@ -7,9 +7,8 @@ export default function TopicSelection({ topics, scores, onSelectTopic, onResetA
   const hasAnyScores = Object.keys(scores).length > 0;
 
   return (
-    <section>
-      <div className="section-header-row">
-        <h2>Select a Topic</h2>
+    <section className="topic-selection">
+      <div className={`section-header-row${hasAnyScores ? ' reset-only' : ''}`}>
         {hasAnyScores && (
           <button
             className="reset-all-btn"
@@ -42,15 +41,20 @@ export default function TopicSelection({ topics, scores, onSelectTopic, onResetA
             0
           );
           const counterText = totalQs > 0 ? `${answeredQs} / ${totalQs} answered` : '';
+          const isEmpty = totalQs === 0;
 
           return (
             <button
               key={topic.id}
-              className="topic-btn"
-              onClick={() => onSelectTopic(topic.id)}
+              className={`topic-btn${isEmpty ? ' topic-btn-empty' : ''}`}
+              onClick={() => !isEmpty && onSelectTopic(topic.id)}
+              disabled={isEmpty}
             >
               <span className="btn-name">{topic.name}</span>
-              {counterText && <span className="btn-counter">{counterText}</span>}
+              {isEmpty
+                ? <span className="btn-counter">Coming soon</span>
+                : counterText && <span className="btn-counter">{counterText}</span>
+              }
             </button>
           );
         })}

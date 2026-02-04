@@ -54,7 +54,7 @@
           "options": ["Cosmic rays", "Medical X-rays", "Nuclear power stations", "Nuclear weapons testing", "Radon gas"],
           "correctAnswers": [0, 4],
           "selectCount": 2,
-          "scoring": "all-or-nothing",
+          "scoring": "partial",
           "markScheme": ["1 mark: Cosmic rays", "1 mark: Radon gas"],
           "diagram": null
         },

@@ -206,7 +206,7 @@ function rerenderQuestionList() {
 
         let progressHtml;
         if (saved) {
-            const pct = Math.round((saved.score / saved.max) * 100);
+            const pct = Math.max(Math.round((saved.score / saved.max) * 100), 6);
             progressHtml = `
                 <div class="question-progress">
                     <div class="question-progress-fill" style="width: ${pct}%"></div>
