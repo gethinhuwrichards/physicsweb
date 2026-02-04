@@ -368,10 +368,8 @@ header .header-top-row {
 
 .topic-selection,
 .subtopic-selection {
-    min-height: calc(100vh - 280px);
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
 /* ============================================

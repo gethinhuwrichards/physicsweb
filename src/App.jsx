@@ -252,7 +252,7 @@ export default function App() {
   };
 
   const getHeaderSubtitle = () => {
-    if (view === 'topics') return 'Select a topic';
+    if (view === 'topics') return 'Select a subject';
     if (view === 'subtopics') return 'Select a subtopic';
     if (view === 'questions') return 'Select a question';
     if (view === 'question') return '';

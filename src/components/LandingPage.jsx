@@ -44,7 +44,7 @@ export default function LandingPage({ onStart }) {
         <p className="landing-strapline" ref={straplineRef}>
           Exam-style questions with instant marking and detailed mark schemes.
         </p>
-        <p className="landing-select-label" ref={selectLabelRef}>Select a topic</p>
+        <p className="landing-select-label" ref={selectLabelRef}>Select a subject</p>
         <div className="landing-subjects" ref={subjectsRef}>
           <button className="landing-cta-btn" onClick={onStart}>
             Physics
