@@ -3035,4 +3035,104 @@ body.landing-active header {
         height: 38px;
         font-size: 1rem;
     }
+
+    /* Self-marking / review footer nav */
+    .self-marking-nav {
+        padding: 8px 10px;
+        gap: 6px;
+    }
+
+    .self-marking-nav-btn {
+        padding: 6px 10px;
+        font-size: 0.78rem;
+    }
+
+    .self-marking-submit {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    .self-marking-score {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+
+    .score-label-text {
+        display: none;
+    }
+
+    /* Hide title text but keep badges */
+    .self-marking-title-text {
+        display: none;
+    }
+
+    .self-mark-badge {
+        margin-left: 0;
+    }
+
+    /* Hide report bug in marking header */
+    .self-marking-report-btn {
+        display: none;
+    }
+
+    /* Hide panel headings and their dividers */
+    .self-marking-panel-heading {
+        display: none;
+    }
+
+    /* Stronger background contrast between panels */
+    .self-marking-left {
+        background: var(--bg-surface);
+    }
+
+    .self-marking-right {
+        background: var(--bg-body);
+    }
+
+    .self-marking-header {
+        padding: 12px 14px;
+    }
+
+    .self-marking-title {
+        font-size: 1rem;
+    }
+
+    .self-marking-counter {
+        font-size: 0.8rem;
+    }
+
+    .self-marking-left,
+    .self-marking-right {
+        padding: 18px 14px;
+    }
+
+    /* Score page buttons */
+    .score-page-btn-primary,
+    .score-page-btn-secondary {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    /* Marking summary buttons */
+    .marking-summary-buttons {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .bank-score-btn,
+    .reset-question-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    /* Bottom nav row (back / bug report) */
+    .back-btn-fixed {
+        padding: 8px 14px;
+        font-size: 0.88rem;
+    }
+
+    .bug-report-btn {
+        padding: 8px 14px;
+        font-size: 0.88rem;
+    }
 }

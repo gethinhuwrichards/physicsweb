@@ -332,7 +332,7 @@ export default function SelfMarkingView({
       <div className={`self-marking-header${isAutoMarked ? ' auto-marked-header' : ''}`}>
         <div className="self-marking-header-left">
           <span className="self-marking-title">
-            {isAutoMarked ? 'Review' : 'Self Marking'}
+            <span className="self-marking-title-text">{isAutoMarked ? 'Review' : 'Self Marking'}</span>
             <span className={`self-mark-badge ${isAutoMarked ? 'badge-auto' : 'badge-self'}`}>
               {isAutoMarked ? 'Auto Marked' : 'Mark Required'}
             </span>
@@ -408,7 +408,7 @@ export default function SelfMarkingView({
             Submit Marks
           </button>
           <div className={`self-marking-score ${totalScoreClass}`}>
-            Score: {totalScore} / {totalMarks}
+            <span className="score-label-text">Score: </span>{totalScore} / {totalMarks}
           </div>
         </div>
         <button
