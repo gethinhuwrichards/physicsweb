@@ -2933,6 +2933,12 @@ body.landing-active header {
    Responsive
    ============================================ */
 
+@media (min-width: 1200px) {
+    html {
+        zoom: 1.5;
+    }
+}
+
 @media (max-width: 768px) {
     .landing-features {
         grid-template-columns: 1fr 1fr;
