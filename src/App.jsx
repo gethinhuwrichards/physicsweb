@@ -223,9 +223,11 @@ export default function App() {
   if (view !== 'landing') {
     if (view === 'topics') {
       breadcrumbItems.push({ label: 'Subject', onClick: goToLanding });
+      breadcrumbItems.push({ label: 'Topics' });
     } else if (view === 'subtopics') {
       breadcrumbItems.push({ label: 'Subject', onClick: goToLanding });
       breadcrumbItems.push({ label: 'Topics', onClick: goToTopics });
+      breadcrumbItems.push({ label: 'Subtopics' });
     } else if (mainTopic) {
       breadcrumbItems.push({ label: 'Subject', onClick: goToLanding });
       breadcrumbItems.push({ label: 'Topics', onClick: goToTopics });
@@ -234,6 +236,7 @@ export default function App() {
         breadcrumbItems.push({ label: 'Questions', onClick: () => setView('questions') });
       } else {
         breadcrumbItems.push({ label: 'Subtopics', onClick: () => setView('subtopics') });
+        breadcrumbItems.push({ label: 'Questions' });
       }
     } else {
       breadcrumbItems.push({ label: 'Subject', onClick: goToLanding });
