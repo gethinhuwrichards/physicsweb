@@ -257,7 +257,7 @@
           "requiresRearrangement": false,
           "markScheme": [
             "1 mark: Substitution: $a = 5.8 / 20$",
-            "1 mark: $a = **0.29\\,\\text{m/s}^2**$"
+            "1 mark: **$a = 0.29\\,\\text{m/s}^2$**"
           ],
           "diagram": "q2_equation_snip.jpeg"
         },
