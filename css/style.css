@@ -1768,7 +1768,7 @@ header .header-top-row {
     stroke-width: 2;
     stroke-dasharray: 1;
     stroke-dashoffset: 1;
-    animation: traceDraw 2.1s linear forwards;
+    animation: traceDraw 1.575s linear forwards;
 }
 
 @keyframes traceDraw {

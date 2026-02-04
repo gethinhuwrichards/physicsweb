@@ -21,7 +21,8 @@ export default function MarkingPointRow({ point, decision, onDecide, locked, poi
 
   useLayoutEffect(() => {
     if (highlight && rowRef.current) {
-      const { width, height } = rowRef.current.getBoundingClientRect();
+      const width = rowRef.current.offsetWidth;
+      const height = rowRef.current.offsetHeight;
       setTracePath(buildTracePath(width, height, 10));
     } else {
       setTracePath('');
