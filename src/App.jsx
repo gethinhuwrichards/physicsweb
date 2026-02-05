@@ -8,6 +8,7 @@ import FeedbackModal from './components/FeedbackModal';
 import BugReportModal from './components/BugReportModal';
 import Breadcrumb from './components/Breadcrumb';
 import ThemeToggle from './components/ThemeToggle';
+import AIMarkingToggle from './components/AIMarkingToggle';
 import QuestionView from './QuestionView';
 import {
   getQuestionScores,
@@ -33,7 +34,18 @@ export default function App() {
   const [savedState, setSavedState] = useState(null);
   const [scores, setScores] = useState(getQuestionScores);
   const [bugReportOpen, setBugReportOpen] = useState(false);
+  const [aiModeEnabled, setAiModeEnabled] = useState(() => {
+    return localStorage.getItem('aiMode') === 'true';
+  });
   const isPopstate = useRef(false);
+
+  const toggleAiMode = useCallback(() => {
+    setAiModeEnabled((prev) => {
+      const next = !prev;
+      localStorage.setItem('aiMode', next ? 'true' : 'false');
+      return next;
+    });
+  }, []);
 
   // Load topics data on mount
   useEffect(() => {
@@ -262,6 +274,7 @@ export default function App() {
   return (
     <ErrorBoundary>
       <ThemeToggle />
+      <AIMarkingToggle enabled={aiModeEnabled} onToggle={toggleAiMode} />
       <FeedbackModal />
 
       {view !== 'landing' && (
@@ -323,6 +336,7 @@ export default function App() {
                 savedState={savedState}
                 subtopicName={subtopic?.name || ''}
                 mainTopicName={mainTopic?.name || ''}
+                aiModeEnabled={aiModeEnabled}
               />
           </div>
         )}

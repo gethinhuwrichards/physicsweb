@@ -4,6 +4,8 @@ import QuestionPart from './components/QuestionPart';
 import SelfMarkingView from './components/marking/SelfMarkingView';
 import FinalScorePanel from './components/marking/FinalScorePanel';
 import ScorePage from './components/marking/ScorePage';
+import AILoadingOverlay from './components/marking/AILoadingOverlay';
+import AIReviewScreen from './components/marking/AIReviewScreen';
 import { autoMarkSingleChoice, autoMarkMultiChoice, autoMarkGapFill, autoMarkNumerical, autoMarkTickBoxTable } from './utils/autoMark';
 import { parseMarkScheme } from './utils/parseMarkScheme';
 
@@ -44,6 +46,8 @@ function initState({ question, savedState }) {
     currentSelfMarkIdx: 0,
     markingDecisions: {},
     lockedPoints: {},
+    aiResults: null,
+    aiError: null,
   };
 }
 
@@ -249,6 +253,37 @@ function reducer(state, action) {
       return { ...state, phase: 'complete' };
     }
 
+    case 'REQUEST_AI_MARKING': {
+      return { ...state, phase: 'ai-loading', aiError: null };
+    }
+
+    case 'AI_MARKING_SUCCESS': {
+      return { ...state, phase: 'ai-review', aiResults: action.aiResults };
+    }
+
+    case 'AI_MARKING_FAILURE': {
+      // Fall back to standard self-marking submit
+      const { question, error } = action;
+      const nextPartScores = { ...state.partScores };
+
+      state.selfMarkParts.forEach(partIdx => {
+        const part = question.parts[partIdx];
+        const decisions = state.markingDecisions[partIdx] || [];
+        const points = parseMarkScheme(part.markScheme);
+        let score = 0;
+        decisions.forEach((d, i) => {
+          if (d === true) score += points[i].marks;
+        });
+        nextPartScores[partIdx] = Math.min(score, part.marks);
+      });
+
+      return { ...state, phase: 'score', partScores: nextPartScores, aiError: error };
+    }
+
+    case 'AI_TRY_ANOTHER': {
+      return state; // Will be handled by parent callback
+    }
+
     default:
       return state;
   }
@@ -264,6 +299,7 @@ export default function QuestionView({
   savedState,
   subtopicName,
   mainTopicName,
+  aiModeEnabled = false,
 }) {
   const [state, dispatch] = useReducer(reducer, { question, savedState }, initState);
   const containerRef = useRef(null);
@@ -295,6 +331,86 @@ export default function QuestionView({
   const handleReview = useCallback(() => {
     dispatch({ type: 'REVIEW_QUESTION' });
   }, []);
+
+  const handleCheckWithAI = useCallback(async () => {
+    console.log('[AI] Starting AI marking check');
+    console.log('[AI] selfMarkParts:', state.selfMarkParts);
+    console.log('[AI] aiModeEnabled:', aiModeEnabled);
+
+    dispatch({ type: 'REQUEST_AI_MARKING' });
+
+    try {
+      // Prepare self-marked parts data for API
+      const parts = state.selfMarkParts.map(partIdx => {
+        const part = question.parts[partIdx];
+        const answer = state.answers[partIdx];
+
+        // Format answer based on type
+        let formattedAnswer = '';
+        let markSchemeToSend = part.markScheme;
+
+        if (part.type === 'extended-written') {
+          formattedAnswer = answer || '';
+        } else if (part.type === 'short-numerical') {
+          // For incorrect short-numerical: only send working for AI to check
+          // Final answer is already known to be wrong (that's why it's in selfMarkParts)
+          const workingParts = [];
+          if (answer?.substitution) {
+            workingParts.push(`Substitution: ${answer.substitution}`);
+          }
+          if (part.requiresRearrangement && answer?.rearrangement) {
+            workingParts.push(`Rearrangement: ${answer.rearrangement}`);
+          }
+          formattedAnswer = workingParts.length > 0
+            ? workingParts.join('\n')
+            : '(No working shown)';
+
+          // Exclude the final answer mark scheme point (always the last one)
+          // Only send substitution and rearrangement points for AI to evaluate
+          markSchemeToSend = part.markScheme.slice(0, -1);
+        } else {
+          formattedAnswer = String(answer || '');
+        }
+
+        return {
+          partLabel: part.partLabel,
+          questionText: part.text,
+          answer: formattedAnswer,
+          markScheme: markSchemeToSend,
+          isNumericalWithWrongAnswer: part.type === 'short-numerical',
+        };
+      });
+
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 15000);
+
+      const response = await fetch('/api/mark', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ parts }),
+        signal: controller.signal,
+      });
+
+      clearTimeout(timeoutId);
+
+      if (!response.ok) {
+        throw new Error(`API error: ${response.status}`);
+      }
+
+      const aiResults = await response.json();
+      console.log('[AI] API response:', aiResults);
+
+      if (aiResults.error) {
+        throw new Error(aiResults.error);
+      }
+
+      console.log('[AI] Dispatching AI_MARKING_SUCCESS');
+      dispatch({ type: 'AI_MARKING_SUCCESS', aiResults });
+    } catch (error) {
+      console.error('[AI] AI marking failed:', error);
+      dispatch({ type: 'AI_MARKING_FAILURE', error: error.message || 'AI marking unavailable', question });
+    }
+  }, [state.selfMarkParts, state.answers, question]);
 
   useEffect(() => {
     if (state.phase === 'score') {
@@ -385,6 +501,22 @@ export default function QuestionView({
           onSubmitMarks={handleSubmitMarks}
           allPartsFullyDecided={allPartsFullyDecided}
           onReportBug={onReportBug}
+          aiModeEnabled={aiModeEnabled}
+          onCheckWithAI={handleCheckWithAI}
+        />
+      )}
+
+      {state.phase === 'ai-loading' && <AILoadingOverlay />}
+
+      {state.phase === 'ai-review' && (
+        <AIReviewScreen
+          question={question}
+          answers={state.answers}
+          markingDecisions={state.markingDecisions}
+          aiResults={state.aiResults}
+          selfMarkParts={state.selfMarkParts}
+          autoMarkResults={state.autoMarkResults}
+          onTryAnother={onBankScore}
         />
       )}
 

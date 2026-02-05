@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/mark.js": {
+      "maxDuration": 15
+    }
+  }
+}

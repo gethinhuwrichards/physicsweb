@@ -17,6 +17,8 @@ export default function SelfMarkingView({
   onSubmitMarks,
   allPartsFullyDecided,
   onReportBug,
+  aiModeEnabled = false,
+  onCheckWithAI,
 }) {
   const partIndex = reviewParts[currentSelfMarkIdx];
   const part = question.parts[partIndex];
@@ -402,10 +404,17 @@ export default function SelfMarkingView({
         <div className="self-marking-submit-group">
           <button
             className={`self-marking-submit${canSubmit ? ' ready-pulse' : ''}`}
-            onClick={onSubmitMarks}
+            onClick={() => {
+              console.log('[SelfMarkingView] Submit clicked, aiModeEnabled:', aiModeEnabled, 'onCheckWithAI:', !!onCheckWithAI);
+              if (aiModeEnabled && onCheckWithAI) {
+                onCheckWithAI();
+              } else {
+                onSubmitMarks();
+              }
+            }}
             disabled={!canSubmit}
           >
-            Submit Marks
+            {aiModeEnabled ? 'Check marks' : 'Submit Marks'}
           </button>
           <div className={`self-marking-score ${totalScoreClass}`}>
             <span className="score-label-text">Score:</span>&nbsp;{totalScore} / {totalMarks}
