@@ -216,9 +216,9 @@
             "amplitude = 2 R",
             "amplitude = R / 2"
           ],
-          "correctAnswer": 0,
+          "correctAnswer": 2,
           "markScheme": [
-            "Answer: A — amplitude = **R**."
+            "Answer: C — amplitude = **R / 2**."
           ],
           "diagram": null
         },

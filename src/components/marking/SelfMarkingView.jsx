@@ -408,7 +408,7 @@ export default function SelfMarkingView({
             Submit Marks
           </button>
           <div className={`self-marking-score ${totalScoreClass}`}>
-            <span className="score-label-text">Score: </span>{totalScore} / {totalMarks}
+            <span className="score-label-text">Score:</span>&nbsp;{totalScore} / {totalMarks}
           </div>
         </div>
         <button

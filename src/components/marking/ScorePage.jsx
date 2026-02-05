@@ -13,28 +13,35 @@ export default function ScorePage({ score, maxScore, onTryAnother, onReview, onR
 
   return (
     <div className="score-page-overlay">
-      <div className="score-page-score">
-        <div className={`score-page-value ${colorClass}`}>
-          <span className="score-page-earned">{score}</span>
-          <span className="score-page-separator"> / </span>
-          <span className="score-page-total">{maxScore}</span>
+      <div className="score-page-content">
+        <div className="score-page-score">
+          <div className={`score-page-value ${colorClass}`}>
+            <span className="score-page-earned">{score}</span>
+            <span className="score-page-separator"> / </span>
+            <span className="score-page-total">{maxScore}</span>
+          </div>
+          <div className="score-page-label">Marks</div>
+          <div className="score-page-emoji">{emoji}</div>
         </div>
-        <div className="score-page-label">Marks</div>
-        <div className="score-page-emoji">{emoji}</div>
-      </div>
-      <div className="score-page-buttons">
-        <button className="score-page-btn-primary" onClick={() => onTryAnother(score, maxScore)}>
-          Try another question
-        </button>
-        <button className="score-page-btn-primary" onClick={onReview}>
-          Review answer
-        </button>
-        <button className="score-page-btn-secondary" onClick={() => setShowConfirm(true)}>
-          Reset question
-        </button>
-        <button className="bug-report-btn" onClick={() => setBugReportOpen(true)}>
-          Report Bug
-        </button>
+        <div className="score-page-actions">
+          <div className="score-page-primary">
+            <button className="score-page-btn-primary" onClick={() => onTryAnother(score, maxScore)}>
+              Try another question
+            </button>
+            <button className="score-page-btn-primary" onClick={onReview}>
+              Review answer
+            </button>
+          </div>
+          <div className="score-page-secondary">
+            <button className="score-page-link" onClick={() => setShowConfirm(true)}>
+              Reset question
+            </button>
+            <span className="score-page-secondary-sep">·</span>
+            <button className="score-page-link" onClick={() => setBugReportOpen(true)}>
+              Report bug
+            </button>
+          </div>
+        </div>
       </div>
       {showConfirm && (
         <ConfirmModal
