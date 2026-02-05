@@ -14,7 +14,7 @@ export default async function handler(req) {
 
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) {
-    return new Response(JSON.stringify({ error: 'API key not configured' }), {
+    return new Response(JSON.stringify({ error: 'API key not configured. Set GEMINI_API_KEY in Vercel environment variables.' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' },
     });
@@ -85,6 +85,8 @@ function buildPrompt(parts) {
   return `You are a strict GCSE Physics examiner. Mark the following student answers against the mark schemes provided.
 
 For each marking point, determine if the student has earned the mark. Be strict but fair — the student must demonstrate the required understanding to earn each mark.
+
+IMPORTANT: In your comments, address the student directly using "you" / "your answer" (e.g. "You correctly identified..." or "Your answer does not mention..."). Never refer to "the student" in third person.
 
 IMPORTANT: Return ONLY valid JSON in this exact format (no markdown, no code blocks, just JSON):
 {

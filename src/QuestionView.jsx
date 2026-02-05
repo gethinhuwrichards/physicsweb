@@ -382,7 +382,8 @@ export default function QuestionView({
       clearTimeout(timeoutId);
 
       if (!response.ok) {
-        throw new Error(`API error: ${response.status}`);
+        const errorBody = await response.json().catch(() => ({}));
+        throw new Error(errorBody.error || `API error: ${response.status}`);
       }
 
       const aiResults = await response.json();
