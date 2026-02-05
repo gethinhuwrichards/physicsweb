@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { parseMarkScheme } from '../../utils/parseMarkScheme';
 import { renderLatex } from '../../utils/renderLatex';
+import ConfirmModal from '../ConfirmModal';
+import BugReportModal from '../BugReportModal';
 
 function getScoreClass(score, maxScore) {
   if (score === maxScore) return 'score-full';
@@ -11,6 +13,10 @@ function getScoreClass(score, maxScore) {
 function renderMarkdownBold(text) {
   if (!text) return '';
   return text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+}
+
+function renderPointText(text) {
+  return renderMarkdownBold(renderLatex(text));
 }
 
 function formatAutoMarkedAnswer(part, answer, autoResult) {
@@ -63,7 +69,7 @@ function formatAutoMarkedAnswer(part, answer, autoResult) {
                   {ans || '\u2014'}
                 </span>
                 {!isCorrect && results[i]?.correctAnswer && (
-                  <span className="ai-review-correction"> \u2192 {results[i].correctAnswer}</span>
+                  <span className="ai-review-correction"> {'\u2192'} {results[i].correctAnswer}</span>
                 )}
                 {i < gapAnswers.length - 1 ? ', ' : ''}
               </span>
@@ -78,20 +84,37 @@ function formatAutoMarkedAnswer(part, answer, autoResult) {
       const cols = part.columnHeaders || [];
       const results = autoResult?.results || [];
       return (
-        <div className="ai-review-auto-answer">
-          {part.rows?.map((row, ri) => {
-            const isCorrect = results[ri]?.isCorrect;
-            const chosen = userAnswers[ri] != null ? cols[userAnswers[ri]] : '\u2014';
-            return (
-              <div key={ri} className={isCorrect ? 'auto-correct' : 'auto-incorrect'}>
-                <span dangerouslySetInnerHTML={{ __html: renderLatex(row.label) }} />: {chosen}
-                {!isCorrect && (
-                  <span className="ai-review-correction"> \u2192 {cols[part.rows[ri].correctColumn]}</span>
-                )}
-              </div>
-            );
-          })}
-        </div>
+        <table className="review-tick-table">
+          <thead>
+            <tr>
+              <th style={{ textAlign: 'left' }}></th>
+              {cols.map((header, i) => (
+                <th key={i}>{header}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {part.rows?.map((row, ri) => {
+              const isCorrect = results[ri]?.isCorrect;
+              const userChoice = userAnswers[ri];
+              return (
+                <tr key={ri} className={isCorrect ? 'review-tick-row-correct' : 'review-tick-row-incorrect'}>
+                  <td style={{ textAlign: 'left' }} dangerouslySetInnerHTML={{ __html: renderLatex(row.label) }} />
+                  {cols.map((_, ci) => {
+                    const isSelected = userChoice === ci;
+                    const isCorrectCol = part.rows[ri].correctColumn === ci;
+                    return (
+                      <td key={ci} className={isSelected ? 'review-tick-selected' : ''}>
+                        {isSelected && <span className="review-tick-indicator">{isCorrect ? '\u2713' : '\u2717'}</span>}
+                        {!isSelected && isCorrectCol && <span style={{ color: 'var(--color-correct-text)', fontSize: '0.8rem' }}>{'\u2713'}</span>}
+                      </td>
+                    );
+                  })}
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
       );
     }
 
@@ -138,37 +161,28 @@ function formatSelfMarkedAnswer(part, answer) {
   }
 }
 
-/* Mark scheme point for AI-reviewed parts — two-column split layout */
-function AIMarkingPoint({ point, studentAwarded, aiAwarded, aiComment }) {
-  const discrepancy = studentAwarded !== aiAwarded;
-
+/* Mark scheme point for AI-reviewed parts — stacked layout with explanation below */
+function AIMarkingPoint({ point, aiAwarded, aiComment }) {
   return (
-    <div className={`ai-marking-point${discrepancy ? ' ai-discrepancy' : ''}`}>
-      <div className="ai-marking-point-split">
-        <div className="ai-marking-point-left">
-          <span className={`ai-mark-indicator ${aiAwarded ? 'awarded' : 'denied'}`}>
-            {aiAwarded ? '\u2713' : '\u2717'}
-          </span>
-          <span
-            className="ai-marking-point-text"
-            dangerouslySetInnerHTML={{ __html: renderLatex(point.text) }}
-          />
-          {discrepancy && (
-            <span className="ai-discrepancy-badge">
-              You: {studentAwarded ? '\u2713' : '\u2717'}
-            </span>
-          )}
-        </div>
-        {aiComment && (
-          <div className="ai-marking-point-right">
-            <span className="ai-comment-label">Explanation</span>
-            <p
-              className="ai-comment"
-              dangerouslySetInnerHTML={{ __html: renderMarkdownBold(aiComment) }}
-            />
-          </div>
-        )}
+    <div className="ai-marking-point">
+      <div className="ai-marking-point-header">
+        <span className={`ai-mark-indicator ${aiAwarded ? 'awarded' : 'denied'}`}>
+          {aiAwarded ? '\u2713' : '\u2717'}
+        </span>
+        <span
+          className="ai-marking-point-text"
+          dangerouslySetInnerHTML={{ __html: renderPointText(point.text) }}
+        />
       </div>
+      {aiComment && (
+        <div className="ai-explanation">
+          <span className="ai-explanation-label">AI Explanation</span>
+          <p
+            className="ai-explanation-text"
+            dangerouslySetInnerHTML={{ __html: renderMarkdownBold(aiComment) }}
+          />
+        </div>
+      )}
     </div>
   );
 }
@@ -183,7 +197,7 @@ function AutoMarkingPoint({ point, awarded }) {
         </span>
         <span
           className="ai-marking-point-text"
-          dangerouslySetInnerHTML={{ __html: renderLatex(point.text) }}
+          dangerouslySetInnerHTML={{ __html: renderPointText(point.text) }}
         />
       </div>
     </div>
@@ -191,7 +205,7 @@ function AutoMarkingPoint({ point, awarded }) {
 }
 
 /* AI-reviewed part (extended-written / incorrect numerical) */
-function AIReviewPart({ part, answer, studentDecisions, aiMarks }) {
+function AIReviewPart({ part, answer, aiMarks }) {
   const points = parseMarkScheme(part.markScheme);
   const isNumerical = part.type === 'short-numerical';
   const lastIdx = points.length - 1;
@@ -202,63 +216,73 @@ function AIReviewPart({ part, answer, studentDecisions, aiMarks }) {
         <h3 className="ai-review-part-label">Part ({part.partLabel})</h3>
         <span className="ai-review-part-badge badge-ai">AI Reviewed</span>
       </div>
-      <div
-        className="ai-review-question"
-        dangerouslySetInnerHTML={{ __html: renderLatex(part.text) }}
-      />
-      <div className="ai-review-answer">
-        <h4>Your answer</h4>
-        {formatSelfMarkedAnswer(part, answer)}
-      </div>
-      <div className="ai-review-markscheme">
-        <h4>Mark scheme</h4>
-        {points.map((point, i) => {
-          const isFinalAnswerPoint = isNumerical && i === lastIdx;
+      <div className="ai-review-part-body">
+        <div className="ai-review-part-left">
+          <div
+            className="ai-review-question"
+            dangerouslySetInnerHTML={{ __html: renderLatex(part.text) }}
+          />
+          <div className="ai-review-answer">
+            <h4>Your answer</h4>
+            {formatSelfMarkedAnswer(part, answer)}
+          </div>
+        </div>
+        <div className="ai-review-part-right">
+          <h4>Mark scheme</h4>
+          {points.map((point, i) => {
+            const isFinalAnswerPoint = isNumerical && i === lastIdx;
 
-          return (
-            <AIMarkingPoint
-              key={i}
-              point={point}
-              studentAwarded={studentDecisions?.[i] ?? false}
-              aiAwarded={isFinalAnswerPoint ? false : (aiMarks?.[i]?.awarded ?? false)}
-              aiComment={isFinalAnswerPoint
-                ? 'Final answer was incorrect (auto-marked)'
-                : (aiMarks?.[i]?.comment || '')}
-            />
-          );
-        })}
+            return (
+              <AIMarkingPoint
+                key={i}
+                point={point}
+                aiAwarded={isFinalAnswerPoint ? false : (aiMarks?.[i]?.awarded ?? false)}
+                aiComment={isFinalAnswerPoint
+                  ? 'Final answer was incorrect (auto-marked)'
+                  : (aiMarks?.[i]?.comment || '')}
+              />
+            );
+          })}
+        </div>
       </div>
     </div>
   );
 }
 
-/* Auto-marked part (single-choice, multi-choice, gap-fill, etc.) */
-function AutoMarkedPart({ part, answer, decisions, autoResult }) {
+/* Auto-marked part */
+function AutoMarkedPart({ part, answer, decisions, autoResult, deemphasize }) {
   const points = parseMarkScheme(part.markScheme);
 
   return (
-    <div className="ai-review-part ai-review-part-auto">
+    <div className={`ai-review-part${deemphasize ? ' ai-review-part-deemphasize' : ''}`}>
       <div className="ai-review-part-header">
         <h3 className="ai-review-part-label">Part ({part.partLabel})</h3>
         <span className="ai-review-part-badge badge-auto-review">Auto Marked</span>
       </div>
-      <div
-        className="ai-review-question"
-        dangerouslySetInnerHTML={{ __html: renderLatex(part.text) }}
-      />
-      <div className="ai-review-answer">
-        <h4>Your answer</h4>
-        {formatAutoMarkedAnswer(part, answer, autoResult)}
-      </div>
-      <div className="ai-review-markscheme">
-        <h4>Mark scheme</h4>
-        {points.map((point, i) => (
-          <AutoMarkingPoint
-            key={i}
-            point={point}
-            awarded={decisions?.[i] ?? false}
+      <div className="ai-review-part-body">
+        <div className="ai-review-part-left">
+          <div
+            className="ai-review-question"
+            dangerouslySetInnerHTML={{ __html: renderLatex(part.text) }}
           />
-        ))}
+          <div className="ai-review-answer">
+            <h4>Your answer</h4>
+            {formatAutoMarkedAnswer(part, answer, autoResult)}
+          </div>
+        </div>
+        <div className="ai-review-part-right">
+          <h4>Mark scheme</h4>
+          {points.map((point, i) => (
+            <AutoMarkingPoint
+              key={i}
+              point={point}
+              awarded={decisions?.[i] ?? false}
+            />
+          ))}
+          {deemphasize && (
+            <div className="ai-review-auto-note">Auto-marked &mdash; not reviewed by AI</div>
+          )}
+        </div>
       </div>
     </div>
   );
@@ -272,7 +296,17 @@ export default function AIReviewScreen({
   selfMarkParts,
   autoMarkResults,
   onTryAnother,
+  onReset,
+  onReportBug,
+  questionTitle,
+  questionId,
+  subtopicName,
+  mainTopicName,
+  isRestored = false,
 }) {
+  const [showConfirm, setShowConfirm] = useState(false);
+  const [bugReportOpen, setBugReportOpen] = useState(false);
+
   // Calculate totals across ALL parts
   let selfTotal = 0;
   let aiTotal = 0;
@@ -283,7 +317,7 @@ export default function AIReviewScreen({
     const decisions = markingDecisions[partIdx] || [];
     const isAIReviewed = selfMarkParts.includes(partIdx);
 
-    points.forEach((pt, i) => {
+    points.forEach((pt) => {
       maxMarks += pt.marks;
     });
 
@@ -314,8 +348,41 @@ export default function AIReviewScreen({
   const aiClass = getScoreClass(aiTotal, maxMarks);
 
   return (
-    <div className="ai-review-overlay">
-      <div className="ai-review-header">
+    <div className="ai-review-inline">
+      <p className="ai-review-disclaimer">
+        AI marks like a strict examiner &mdash; use any differences to spot where you can improve.
+      </p>
+
+      {question.parts.map((part, partIdx) => {
+        const isAIReviewed = selfMarkParts.includes(partIdx);
+
+        if (isAIReviewed) {
+          const aiQuestion = aiResults?.questions?.find(
+            (q) => q.partLabel === part.partLabel,
+          );
+          return (
+            <AIReviewPart
+              key={partIdx}
+              part={part}
+              answer={answers[partIdx]}
+              aiMarks={aiQuestion?.marks}
+            />
+          );
+        }
+
+        return (
+          <AutoMarkedPart
+            key={partIdx}
+            part={part}
+            answer={answers[partIdx]}
+            decisions={markingDecisions[partIdx]}
+            autoResult={autoMarkResults?.[partIdx]}
+            deemphasize={!isRestored}
+          />
+        );
+      })}
+
+      <div className="ai-review-score-bar">
         <div className="ai-review-score-left">
           <span className="ai-review-label">Your marks</span>
           <span className={`ai-review-value ${selfClass}`}>
@@ -330,46 +397,38 @@ export default function AIReviewScreen({
         </div>
       </div>
 
-      <div className="ai-review-content">
-        <p className="ai-review-disclaimer">
-          AI marks like a strict examiner &mdash; use any differences to spot where you can improve.
-        </p>
-
-        {question.parts.map((part, partIdx) => {
-          const isAIReviewed = selfMarkParts.includes(partIdx);
-
-          if (isAIReviewed) {
-            const aiQuestion = aiResults?.questions?.find(
-              (q) => q.partLabel === part.partLabel,
-            );
-            return (
-              <AIReviewPart
-                key={partIdx}
-                part={part}
-                answer={answers[partIdx]}
-                studentDecisions={markingDecisions[partIdx]}
-                aiMarks={aiQuestion?.marks}
-              />
-            );
-          }
-
-          return (
-            <AutoMarkedPart
-              key={partIdx}
-              part={part}
-              answer={answers[partIdx]}
-              decisions={markingDecisions[partIdx]}
-              autoResult={autoMarkResults?.[partIdx]}
-            />
-          );
-        })}
+      <div className="ai-review-actions">
+        <div className="ai-review-actions-primary">
+          <button className="score-page-btn-primary" onClick={onTryAnother}>
+            Try another question
+          </button>
+        </div>
+        <div className="ai-review-actions-secondary">
+          <button className="score-page-link" onClick={() => setShowConfirm(true)}>
+            Reset question
+          </button>
+          <span className="score-page-secondary-sep">&middot;</span>
+          <button className="score-page-link" onClick={() => setBugReportOpen(true)}>
+            Report bug
+          </button>
+        </div>
       </div>
 
-      <div className="ai-review-footer">
-        <button className="ai-review-btn-primary" onClick={onTryAnother}>
-          Try another question
-        </button>
-      </div>
+      {showConfirm && (
+        <ConfirmModal
+          message="Are you sure you want to reset this question?"
+          onConfirm={onReset}
+          onCancel={() => setShowConfirm(false)}
+        />
+      )}
+      <BugReportModal
+        visible={bugReportOpen}
+        onClose={() => setBugReportOpen(false)}
+        questionTitle={questionTitle}
+        questionId={questionId}
+        subtopicName={subtopicName}
+        mainTopicName={mainTopicName}
+      />
     </div>
   );
 }

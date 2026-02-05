@@ -34,6 +34,8 @@ function initState({ question, savedState }) {
       currentSelfMarkIdx: 0,
       markingDecisions: savedState.markingDecisions || {},
       lockedPoints: savedState.lockedPoints || {},
+      aiResults: savedState.aiResults || null,
+      aiError: null,
     };
   }
   return {
@@ -254,7 +256,7 @@ function reducer(state, action) {
     }
 
     case 'REQUEST_AI_MARKING': {
-      return { ...state, phase: 'ai-loading', aiError: null };
+      return { ...state, phase: 'ai-loading', aiError: null, aiReturnPhase: state.phase };
     }
 
     case 'AI_MARKING_SUCCESS': {
@@ -262,22 +264,8 @@ function reducer(state, action) {
     }
 
     case 'AI_MARKING_FAILURE': {
-      // Fall back to standard self-marking submit
-      const { question, error } = action;
-      const nextPartScores = { ...state.partScores };
-
-      state.selfMarkParts.forEach(partIdx => {
-        const part = question.parts[partIdx];
-        const decisions = state.markingDecisions[partIdx] || [];
-        const points = parseMarkScheme(part.markScheme);
-        let score = 0;
-        decisions.forEach((d, i) => {
-          if (d === true) score += points[i].marks;
-        });
-        nextPartScores[partIdx] = Math.min(score, part.marks);
-      });
-
-      return { ...state, phase: 'score', partScores: nextPartScores, aiError: error };
+      // Return to whichever phase triggered the AI request
+      return { ...state, phase: state.aiReturnPhase || 'score', aiError: action.error };
     }
 
     case 'AI_TRY_ANOTHER': {
@@ -412,20 +400,23 @@ export default function QuestionView({
     }
   }, [state.selfMarkParts, state.answers, question]);
 
+  const saveFields = {
+    answers: state.answers,
+    partScores: state.partScores,
+    autoMarkResults: state.autoMarkResults,
+    selfMarkParts: state.selfMarkParts,
+    reviewParts: state.reviewParts,
+    markingDecisions: state.markingDecisions,
+    lockedPoints: state.lockedPoints,
+  };
+
   useEffect(() => {
     if (state.phase === 'score') {
       if (onScoreReady) onScoreReady(totalScore, totalMarks);
-      if (onSaveAnswers) {
-        onSaveAnswers({
-          answers: state.answers,
-          partScores: state.partScores,
-          autoMarkResults: state.autoMarkResults,
-          selfMarkParts: state.selfMarkParts,
-          reviewParts: state.reviewParts,
-          markingDecisions: state.markingDecisions,
-          lockedPoints: state.lockedPoints,
-        });
-      }
+      if (onSaveAnswers) onSaveAnswers(saveFields);
+    }
+    if (state.phase === 'ai-review' && onSaveAnswers) {
+      onSaveAnswers({ ...saveFields, aiResults: state.aiResults });
     }
   }, [state.phase]);
 
@@ -455,20 +446,23 @@ export default function QuestionView({
       >
         <QuestionHeader title={question.title} totalMarks={totalMarks} />
 
-        {question.parts.map((part, i) => (
-          <QuestionPart
-            key={i}
-            part={part}
-            partIndex={i}
-            answer={state.answers[i]}
-            onAnswer={handleAnswer}
-            disabled={state.phase !== 'answering'}
-            markingClass={state.phase !== 'answering' ? 'marking-done' : ''}
-            autoMarkResult={state.autoMarkResults[i] || null}
-            phase={state.phase}
-            partScore={state.partScores[i]}
-          />
-        ))}
+        {/* Hide question parts when AI review is displayed (it has its own) */}
+        {state.phase !== 'ai-review' && !(state.phase === 'complete' && state.aiResults) &&
+          question.parts.map((part, i) => (
+            <QuestionPart
+              key={i}
+              part={part}
+              partIndex={i}
+              answer={state.answers[i]}
+              onAnswer={handleAnswer}
+              disabled={state.phase !== 'answering'}
+              markingClass={state.phase !== 'answering' ? 'marking-done' : ''}
+              autoMarkResult={state.autoMarkResults[i] || null}
+              phase={state.phase}
+              partScore={state.partScores[i]}
+            />
+          ))
+        }
 
         {state.phase === 'answering' && (
           <button className="submit-btn" onClick={handleEnterMarking}>
@@ -476,12 +470,33 @@ export default function QuestionView({
           </button>
         )}
 
-        {state.phase === 'complete' && (
+        {state.phase === 'complete' && !state.aiResults && (
           <FinalScorePanel
             score={totalScore}
             maxScore={totalMarks}
             onDone={onBankScore}
             onReset={onReset}
+            aiModeEnabled={aiModeEnabled}
+            onAIReview={handleCheckWithAI}
+          />
+        )}
+
+        {state.phase === 'complete' && state.aiResults && (
+          <AIReviewScreen
+            question={question}
+            answers={state.answers}
+            markingDecisions={state.markingDecisions}
+            aiResults={state.aiResults}
+            selfMarkParts={state.selfMarkParts}
+            autoMarkResults={state.autoMarkResults}
+            onTryAnother={onBankScore}
+            onReset={onReset}
+            onReportBug={onReportBug}
+            questionTitle={question.title}
+            questionId={question.id}
+            subtopicName={subtopicName}
+            mainTopicName={mainTopicName}
+            isRestored
           />
         )}
       </div>
@@ -501,8 +516,6 @@ export default function QuestionView({
           onSubmitMarks={handleSubmitMarks}
           allPartsFullyDecided={allPartsFullyDecided}
           onReportBug={onReportBug}
-          aiModeEnabled={aiModeEnabled}
-          onCheckWithAI={handleCheckWithAI}
         />
       )}
 
@@ -517,6 +530,12 @@ export default function QuestionView({
           selfMarkParts={state.selfMarkParts}
           autoMarkResults={state.autoMarkResults}
           onTryAnother={onBankScore}
+          onReset={onReset}
+          onReportBug={onReportBug}
+          questionTitle={question.title}
+          questionId={question.id}
+          subtopicName={subtopicName}
+          mainTopicName={mainTopicName}
         />
       )}
 
@@ -531,6 +550,10 @@ export default function QuestionView({
           questionId={question.id}
           subtopicName={subtopicName}
           mainTopicName={mainTopicName}
+          aiModeEnabled={aiModeEnabled}
+          onAIReview={handleCheckWithAI}
+          aiError={state.aiError}
+          hasSelfMarkParts={state.selfMarkParts.length > 0}
         />
       )}
     </>

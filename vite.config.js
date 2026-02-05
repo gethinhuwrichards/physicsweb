@@ -101,6 +101,8 @@ function buildPrompt(parts) {
 
 For each marking point, determine if the student has earned the mark. Be strict but fair — the student must demonstrate the required understanding to earn each mark.
 
+IMPORTANT: In your comments, address the student directly using "you" / "your answer" (e.g. "You correctly identified..." or "Your answer does not mention..."). Never refer to "the student" in third person.
+
 IMPORTANT: Return ONLY valid JSON in this exact format (no markdown, no code blocks, just JSON):
 {
   "questions": [
@@ -110,7 +112,7 @@ IMPORTANT: Return ONLY valid JSON in this exact format (no markdown, no code blo
         {
           "point": "the mark scheme point text",
           "awarded": true,
-          "comment": "Brief explanation (1-2 sentences) of why mark was/wasn't awarded"
+          "comment": "Brief explanation (1-2 sentences) of why mark was/wasn't awarded, addressing the student as 'you'"
         }
       ]
     }
