@@ -2,7 +2,7 @@
 AI Review mode 
 
 Plan is to integrate AI marking into the site. It will check students answers against mark scheme by making an api call to google gemini.
-API key is available here: AIzaSyDFk-lvqvCYHhoXwPE1V8yoqZJQdZSud_Q
+
 
 Lets make the AI mode toggleable for now. put it into a menu along with day night mode in top right. if toggle is off no changes to site - everything functions as is.
 
