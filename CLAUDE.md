@@ -4,21 +4,23 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-A static physics exam practice website where students answer multi-part questions, lock answers, and mark against mark schemes.
+A physics exam practice website where students answer multi-part questions, lock answers, and mark against mark schemes. Features auto-marking for objective questions and a split-panel self-marking UI for written answers.
 
 ## Technology Stack
 
-- Vanilla HTML/CSS/JavaScript (no build step required)
-- KaTeX for LaTeX math rendering (loaded from CDN)
-- Questions stored in JSON file
+- **React 19** with JSX components
+- **Vite** for development and builds
+- **KaTeX** for LaTeX math rendering (loaded from CDN)
+- **CSS** with custom properties for theming (light/dark mode)
+- Questions stored in JSON files
 
 ## Running the Project
 
-Open `index.html` in a browser. For local development with fetch API to work, use a local server:
 ```bash
-npx serve .
-# or
-python -m http.server 8000
+npm install        # Install dependencies (first time only)
+npm run dev        # Start development server
+npm run build      # Build for production
+npm run preview    # Preview production build
 ```
 
 ## Architecture
@@ -32,29 +34,47 @@ Questions are organized hierarchically:
 
 ### Data Flow
 1. `public/data/topics.json` loaded on page init (contains topic/subtopic index)
-2. Main topics rendered as buttons on splash page
-3. User selects main topic → subtopics displayed
-4. User selects subtopic → questions loaded from subtopic JSON file
-5. Question parts rendered with appropriate input types
-6. "Lock answers and mark" triggers marking mode (inputs disabled, mark schemes shown)
-7. All question types are fully auto-marked
+2. Landing page shown with subject selection
+3. Main topics rendered as cards
+4. User selects main topic → subtopics displayed
+5. User selects subtopic → questions loaded from subtopic JSON file
+6. Question parts rendered with appropriate input types
+7. "Lock answers and mark" triggers marking mode
+8. Auto-marked types show results immediately; self-marked types open split-panel UI
 
 ### Key Files
-- `js/app.js` - All application logic and state management
-- `css/style.css` - All styling
+
+**React Components (`src/`):**
+- `src/main.jsx` - Entry point
+- `src/App.jsx` - Main app component with routing/state
+- `src/QuestionView.jsx` - Question display and answering
+- `src/components/` - UI components (TopicSelection, QuestionList, Breadcrumb, etc.)
+- `src/components/inputs/` - Question type input components
+- `src/components/marking/` - Marking UI components (SelfMarkingView, ScorePage, FinalScorePanel)
+- `src/utils/` - Utility functions (autoMark, renderLatex, storage)
+
+**Styles:**
+- `css/style.css` - All styling with CSS custom properties for theming
+
+**Data:**
 - `public/data/topics.json` - Index of all topics and subtopics with file paths
 - `public/data/<topic>/<subtopic>.json` - Question files (e.g., `public/data/energy/energy-stores.json`)
 - `public/data/QUESTION_FORMAT.md` - Full schema documentation for LLM parsing
+
+**Legacy (still present but not primary):**
+- `js/app.js` - Original vanilla JS implementation
 
 ### Question Types
 
 | Type | Input | Marking |
 |------|-------|---------|
-| `single-choice` | Radio buttons (A, B, C or A, B, C, D) | Auto-marked |
+| `single-choice` | Radio buttons (3 or 4 options) | Auto-marked |
 | `multi-choice` | Checkboxes with selection limit | Auto-marked (all-or-nothing or partial) |
 | `gap-fill` | Inline `<select>` dropdowns with word bank | Auto-marked (case-insensitive) |
 | `equation-choice` | Radio buttons with 4 LaTeX equations | Auto-marked |
-| `tick-box-table` | Table with radio buttons per row (2 columns) | Auto-marked (1 mark per row) |
+| `tick-box-table` | Table with radio buttons per row | Auto-marked (1 mark per row) |
+| `extended-written` | Textarea for free-text answer | Self-marked via split-panel UI |
+| `short-numerical` | Numeric input with optional working | Auto-marks final answer; self-mark method if wrong |
 
 ### LaTeX Support
 Use `$...$` for inline math and `$$...$$` for block math in question text and mark schemes.
@@ -126,6 +146,43 @@ See `public/data/QUESTION_FORMAT.md` for complete schema. Quick examples:
   "wordBank": ["chemical", "kinetic", "nuclear", "elastic potential"],
   "correctAnswers": ["chemical", "kinetic"],
   "markScheme": ["1 mark: chemical", "1 mark: kinetic"],
+  "diagram": null
+}
+```
+
+**Extended written (self-marked):**
+```json
+{
+  "partLabel": "d",
+  "type": "extended-written",
+  "text": "Explain why the temperature increases.",
+  "marks": 3,
+  "markScheme": [
+    "1 mark: **Particles** gain kinetic energy",
+    "1 mark: Particles move **faster**",
+    "1 mark: More **collisions** occur"
+  ],
+  "diagram": null
+}
+```
+
+**Short numerical (2 or 3 marks only):**
+```json
+{
+  "partLabel": "e",
+  "type": "short-numerical",
+  "text": "Calculate the kinetic energy of a 2 kg object moving at 5 m/s.",
+  "marks": 2,
+  "correctAnswer": 25,
+  "tolerance": 0.01,
+  "unit": "J",
+  "showUnit": true,
+  "formulas": ["$E_k = \\frac{1}{2} m v^2$", "$E_p = m g h$"],
+  "requiresRearrangement": false,
+  "markScheme": [
+    "1 mark: Correct substitution: $E_k = \\frac{1}{2} \\times 2 \\times 5^2$",
+    "1 mark: Final answer: **25 J**"
+  ],
   "diagram": null
 }
 ```
