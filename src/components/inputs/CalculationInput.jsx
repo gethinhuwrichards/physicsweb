@@ -354,22 +354,41 @@ export default function CalculationInput({ part, value, onChange, disabled, auto
                   </button>
                 ))}
               </div>
-              <div className="calc-help-wrapper"><div className={`calc-help-box${helpExpanded ? ' expanded' : ''}`} onClick={() => setHelpExpanded(h => !h)}>
-                <div className="calc-help-title">How to use <span className="calc-help-toggle">{helpExpanded ? '▲' : '▼'}</span></div>
-                <ol className="calc-help-list">
-                  <li>Use the <strong>number pad</strong>, <strong>operators</strong>, and <strong>symbol buttons</strong> to type into the working step boxes. You can also type directly with your keyboard.</li>
-                  <li>Use <strong>+ Add a step</strong> and <strong>− Remove step</strong> to manage your working. Show each stage of your calculation on a separate line.</li>
-                  <li>Your final step should have the <strong>unknown symbol as the subject</strong> on the left, with a numerical expression on the right. For example:
-                    <span className="calc-help-example">P = 4.0 × 230</span>
-                    <span className="calc-help-example">I = 12 ÷ 48</span>
-                    <span className="calc-help-example">E = 0.5 × 2 × 5²</span>
-                    You can also enter a pure arithmetic expression without a symbol, e.g. <span className="calc-help-example">3 × 4</span>
-                  </li>
-                  <li>Press <strong>Evaluate</strong> to calculate the result of your last step. The answer will be placed in the final answer box above.</li>
-                </ol>
-              </div></div>
+              <button
+                type="button"
+                className="calc-help-btn"
+                onClick={() => setHelpExpanded(true)}
+              >
+                How to use
+              </button>
             </div>
           )}
+        </div>
+      )}
+
+      {helpExpanded && (
+        <div className="calc-help-overlay" onClick={() => setHelpExpanded(false)}>
+          <div className="calc-help-modal" onClick={e => e.stopPropagation()}>
+            <div className="calc-help-title">How to use</div>
+            <ol className="calc-help-list">
+              <li>Use the <strong>number pad</strong>, <strong>operators</strong>, and <strong>symbol buttons</strong> to type into the working step boxes. You can also type directly with your keyboard.</li>
+              <li>Use <strong>+ Add a step</strong> and <strong>− Remove step</strong> to manage your working. Show each stage of your calculation on a separate line.</li>
+              <li>Your final step should have the <strong>unknown symbol as the subject</strong> on the left, with a numerical expression on the right. For example:
+                <span className="calc-help-example">P = 4.0 × 230</span>
+                <span className="calc-help-example">I = 12 ÷ 48</span>
+                <span className="calc-help-example">E = 0.5 × 2 × 5²</span>
+                You can also enter a pure arithmetic expression without a symbol, e.g. <span className="calc-help-example">3 × 4</span>
+              </li>
+              <li>Press <strong>Evaluate</strong> to calculate the result of your last step. The answer will be placed in the final answer box above.</li>
+            </ol>
+            <button
+              type="button"
+              className="calc-help-ok-btn"
+              onClick={() => setHelpExpanded(false)}
+            >
+              OK
+            </button>
+          </div>
         </div>
       )}
     </div>
