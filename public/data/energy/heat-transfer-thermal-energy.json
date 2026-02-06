@@ -159,19 +159,17 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "short-numerical",
-          "text": "A ‘can-chiller’ is used to make a can of drink colder (Figure 1). The can-chiller decreases the temperature of the liquid in the can by 15 °C. The mass of liquid is 0.33 kg. The specific heat capacity of the liquid is 4200 J/kg °C. Calculate the energy transferred from the liquid as it cools.",
+          "type": "calculation",
+          "text": "A 'can-chiller' is used to make a can of drink colder (Figure 1). The can-chiller decreases the temperature of the liquid in the can by 15 °C. The mass of liquid is 0.33 kg. The specific heat capacity of the liquid is 4200 J/kg °C. Calculate the energy transferred from the liquid as it cools.",
           "marks": 2,
           "correctAnswer": 20790,
           "tolerance": 0.01,
-          "unit": "J",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$E = m c \\Delta \\theta$",
             "$P = \\frac{E}{t}$",
             "$E = P t$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $E = 0.33 \\times 4200 \\times 15$",
             "1 mark: Final answer: **20 790 J**"
@@ -323,19 +321,17 @@
         },
         {
           "partLabel": "b",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "The resistance of the heating element in the kettle is 15 $\\Omega$. The current in the heating element is 12 A. Calculate the power using $P = I^2 R$.",
           "marks": 2,
           "correctAnswer": 2160,
           "tolerance": 0.01,
-          "unit": "W",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$P = I^2 R$",
             "$P = V I$",
             "$E = P t$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $P = 12^2 \\times 15$",
             "1 mark: Final answer: **2160 W**"
@@ -385,19 +381,17 @@
         },
         {
           "partLabel": "b",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "The power output from the heater is 12 W. Calculate the energy transferred to the metal mug in 60 seconds.",
           "marks": 2,
           "correctAnswer": 720,
           "tolerance": 0.01,
-          "unit": "J",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$E = P t$",
             "$P = \\frac{E}{t}$",
             "$E = m c \\Delta \\theta$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $E = 12 \\times 60$",
             "1 mark: Final answer: **720 J**"

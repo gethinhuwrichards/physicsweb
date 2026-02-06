@@ -159,14 +159,17 @@
         },
         {
           "partLabel": "d",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "Calculate the thermal energy needed to melt 0.250 kg of ice at 0 °C.<br><br>Specific latent heat of fusion of water = 334 000 J/kg<br><br>Use the equation: $E = m \\times L$",
           "marks": 2,
           "correctAnswer": 83500,
           "tolerance": 0.01,
-          "unit": "J",
-          "showUnit": true,
-          "requiresRearrangement": false,
+          "equations": [
+            "$E = m L$",
+            "$\\Delta E = m c \\Delta \\theta$",
+            "$\\rho = \\frac{m}{V}$"
+          ],
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $E = 0.250 \\times 334\\,000$",
             "1 mark: Final answer: **83 500 J**"
@@ -247,19 +250,17 @@
         },
         {
           "partLabel": "b",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "A metal ring has a volume of 0.3 cm³. The density of this ring is 22 g/cm³.<br><br>Calculate the mass of this ring. Give your answer in grams.",
           "marks": 3,
           "correctAnswer": 6.6,
           "tolerance": 0.01,
-          "unit": "g",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$\\rho = \\frac{m}{V}$",
-            "$m = \\rho \\times V$",
-            "$V = \\frac{m}{\\rho}$"
+            "$E = m L$",
+            "$\\Delta E = m c \\Delta \\theta$"
           ],
-          "requiresRearrangement": true,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $m = 22 \\times 0.3$",
             "1 mark: Correct rearrangement: $m = \\rho \\times V$",
@@ -277,14 +278,17 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "A student investigated the density of different fruits. The student measured the volume of each fruit three times and then calculated a mean value.<br><br>The three measurements for a grape were 2.1 cm³, 2.1 cm³ and 2.4 cm³.<br><br>Calculate the mean value.",
           "marks": 2,
           "correctAnswer": 2.2,
           "tolerance": 0.01,
-          "unit": "cm³",
-          "showUnit": true,
-          "requiresRearrangement": false,
+          "equations": [
+            "$\\text{mean} = \\frac{\\text{sum of values}}{\\text{number of values}}$",
+            "$\\rho = \\frac{m}{V}$",
+            "$E = m L$"
+          ],
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $(2.1 + 2.1 + 2.4) \\div 3$",
             "1 mark: Final answer: **2.2 cm³**"
@@ -314,14 +318,17 @@
         },
         {
           "partLabel": "c",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "The mass of an apple was 84.0 g. The volume of the apple was 120 cm³.<br><br>Calculate the density of the apple. Give your answer in g/cm³.",
           "marks": 2,
           "correctAnswer": 0.70,
           "tolerance": 0.02,
-          "unit": "g/cm³",
-          "showUnit": true,
-          "requiresRearrangement": false,
+          "equations": [
+            "$\\rho = \\frac{m}{V}$",
+            "$E = m L$",
+            "$\\Delta E = m c \\Delta \\theta$"
+          ],
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $\\rho = \\frac{84.0}{120}$",
             "1 mark: Final answer: **0.70 g/cm³**"
@@ -338,14 +345,17 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "A student wanted to determine the density of a small piece of rock. The volume of the piece of rock was 18.0 cm³. The student measured the mass of the piece of rock as 48.6 g.<br><br>Calculate the density of the rock in g/cm³.",
           "marks": 2,
           "correctAnswer": 2.70,
           "tolerance": 0.01,
-          "unit": "g/cm³",
-          "showUnit": true,
-          "requiresRearrangement": false,
+          "equations": [
+            "$\\rho = \\frac{m}{V}$",
+            "$E = m L$",
+            "$\\Delta E = m c \\Delta \\theta$"
+          ],
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $\\rho = \\frac{48.6}{18.0}$",
             "1 mark: Final answer: **2.70 g/cm³**"
@@ -411,19 +421,17 @@
         },
         {
           "partLabel": "c",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "The mass of the apple was 85 g. The density of the apple was 0.68 g/cm³.<br><br>Calculate the volume of the apple. Give your answer in cm³.",
           "marks": 3,
           "correctAnswer": 125,
           "tolerance": 0.01,
-          "unit": "cm³",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$\\rho = \\frac{m}{V}$",
-            "$V = \\frac{m}{\\rho}$",
-            "$m = \\rho \\times V$"
+            "$E = m L$",
+            "$\\Delta E = m c \\Delta \\theta$"
           ],
-          "requiresRearrangement": true,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $0.68 = \\frac{85}{V}$",
             "1 mark: Correct rearrangement: $V = \\frac{m}{\\rho} = \\frac{85}{0.68}$",
@@ -460,14 +468,17 @@
         },
         {
           "partLabel": "b",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "While a kettle boils, 0.018 kg of water changes to steam.<br><br>Calculate the amount of energy required for this change.<br><br>Specific latent heat of vaporisation of water = $2.3 \\times 10^6$ J/kg",
           "marks": 2,
           "correctAnswer": 41400,
           "tolerance": 0.02,
-          "unit": "J",
-          "showUnit": true,
-          "requiresRearrangement": false,
+          "equations": [
+            "$E = m L$",
+            "$\\Delta E = m c \\Delta \\theta$",
+            "$\\rho = \\frac{m}{V}$"
+          ],
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $E = 0.018 \\times 2.3 \\times 10^6$",
             "1 mark: Final answer: **41 400 J** (accept 41 000 or $4.1 \\times 10^4$)"
@@ -518,19 +529,17 @@
         },
         {
           "partLabel": "e",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "The student determined that the density of the ring was 21 500 kg/m³. The volume of the ring was 0.44 cm³.<br><br>Calculate the mass of the ring. Give your answer in kg.<br><br><em>Note: 1 cm³ = 1 × 10⁻⁶ m³</em>",
           "marks": 3,
           "correctAnswer": 0.00946,
           "tolerance": 0.02,
-          "unit": "kg",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$\\rho = \\frac{m}{V}$",
-            "$m = \\rho \\times V$",
-            "$V = \\frac{m}{\\rho}$"
+            "$E = m L$",
+            "$\\Delta E = m c \\Delta \\theta$"
           ],
-          "requiresRearrangement": true,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $m = 21\\,500 \\times 4.4 \\times 10^{-7}$ (converting 0.44 cm³ = $4.4 \\times 10^{-7}$ m³)",
             "1 mark: Correct rearrangement: $m = \\rho \\times V$",
@@ -559,14 +568,17 @@
         },
         {
           "partLabel": "b",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "Calculate the amount of energy required to melt 15 kg of ice at 0 °C.<br><br>Specific latent heat of fusion of ice = $3.4 \\times 10^5$ J/kg",
           "marks": 2,
           "correctAnswer": 5100000,
           "tolerance": 0.02,
-          "unit": "J",
-          "showUnit": true,
-          "requiresRearrangement": false,
+          "equations": [
+            "$E = m L$",
+            "$\\Delta E = m c \\Delta \\theta$",
+            "$\\rho = \\frac{m}{V}$"
+          ],
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $E = 15 \\times 3.4 \\times 10^5$",
             "1 mark: Final answer: **$5.1 \\times 10^6$ J** (accept 5 100 000)"

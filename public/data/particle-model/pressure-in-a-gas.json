@@ -132,14 +132,17 @@
         },
         {
           "partLabel": "b",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "The relationship between the pressure and the volume of a gas is given by the equation:<br><br>$$\\text{pressure} \\times \\text{volume} = \\text{constant}$$<br><br>The table below shows some of the results.<table><tr><th>Pressure in kPa</th><th>Volume in cm³</th></tr><tr><td>300</td><td>10</td></tr><tr><td>200</td><td>15</td></tr><tr><td>150</td><td>20</td></tr><tr><td>120</td><td>25</td></tr><tr><td>100</td><td>30</td></tr></table>Calculate the constant when the pressure of the gas was 300 kPa.",
           "marks": 2,
           "correctAnswer": 3000,
           "tolerance": 0.01,
-          "unit": "kPa cm³",
-          "showUnit": true,
-          "requiresRearrangement": false,
+          "equations": [
+            "$p V = \\text{constant}$",
+            "$\\rho = \\frac{m}{V}$",
+            "$\\Delta E = m c \\Delta \\theta$"
+          ],
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $300 \\times 10$",
             "1 mark: Final answer: **3000 kPa cm³**"
@@ -209,14 +212,17 @@
         },
         {
           "partLabel": "d",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "Calculate the density of helium.<br><br>Mass of helium = 0.00254 kg<br>Volume of balloon = 0.0141 m³",
           "marks": 2,
           "correctAnswer": 0.18,
           "tolerance": 0.03,
-          "unit": "kg/m³",
-          "showUnit": true,
-          "requiresRearrangement": false,
+          "equations": [
+            "$\\rho = \\frac{m}{V}$",
+            "$p V = \\text{constant}$",
+            "$\\Delta E = m c \\Delta \\theta$"
+          ],
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $\\rho = \\frac{0.00254}{0.0141}$",
             "1 mark: Final answer: **0.18 kg/m³**"
@@ -255,19 +261,17 @@
         },
         {
           "partLabel": "b",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "The pressure of the helium in the balloon is 100 000 Pa. The volume of the balloon is 0.030 m³.<br><br>The balloon is compressed at a constant temperature causing the volume to decrease to 0.025 m³. No helium leaves the balloon.<br><br>Calculate the new pressure in the balloon.",
           "marks": 3,
           "correctAnswer": 120000,
           "tolerance": 0.01,
-          "unit": "Pa",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$P_1 V_1 = P_2 V_2$",
             "$P = \\frac{F}{A}$",
             "$\\Delta E = m \\, c \\, \\Delta \\theta$"
           ],
-          "requiresRearrangement": true,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $100\\,000 \\times 0.030 = P_2 \\times 0.025$",
             "1 mark: Correct rearrangement: $P_2 = \\frac{100\\,000 \\times 0.030}{0.025}$",
@@ -301,19 +305,17 @@
         },
         {
           "partLabel": "c",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "When the volume of gas in the syringe was 45 cm³, the pressure gauge showed a value of 60 kPa.<br><br>Calculate the pressure in the gas when the volume of gas in the syringe was 40 cm³.",
           "marks": 3,
           "correctAnswer": 67.5,
           "tolerance": 0.01,
-          "unit": "kPa",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$P_1 V_1 = P_2 V_2$",
             "$P = \\frac{F}{A}$",
             "$\\rho = \\frac{m}{V}$"
           ],
-          "requiresRearrangement": true,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $60 \\times 45 = P \\times 40$",
             "1 mark: Correct rearrangement: $P = \\frac{60 \\times 45}{40}$",
@@ -331,19 +333,17 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "A fire piston is a special type of syringe. When the plunger is pushed quickly, the air is compressed and its temperature increases. When the air is hot enough, a small piece of cotton wool catches fire.<br><br>The energy transferred to the air in the piston is 0.0130 J.<br>The mass of air in the piston is $2.60 \\times 10^{-8}$ kg.<br>Specific heat capacity of air = 1010 J/kg °C<br><br>Calculate the temperature change of the air.",
           "marks": 3,
           "correctAnswer": 495,
           "tolerance": 0.02,
-          "unit": "°C",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$\\Delta E = m \\, c \\, \\Delta \\theta$",
             "$E = m \\, L$",
             "$P_1 V_1 = P_2 V_2$"
           ],
-          "requiresRearrangement": true,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $0.0130 = 2.60 \\times 10^{-8} \\times 1010 \\times \\Delta \\theta$",
             "1 mark: Correct rearrangement: $\\Delta \\theta = \\frac{0.0130}{2.60 \\times 10^{-8} \\times 1010}$",
@@ -361,19 +361,17 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "A student investigated how the pressure exerted by a gas varied with the volume of the gas.<br><br>One of the student's results is given below.<br>Pressure = $1.6 \\times 10^5$ Pa<br>Volume = 9.0 cm³<br><br>Calculate the volume of the gas when the pressure was $1.8 \\times 10^5$ Pa. The temperature of the gas was constant.",
           "marks": 3,
           "correctAnswer": 8.0,
           "tolerance": 0.01,
-          "unit": "cm³",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$P_1 V_1 = P_2 V_2$",
             "$P = \\frac{F}{A}$",
             "$\\rho = \\frac{m}{V}$"
           ],
-          "requiresRearrangement": true,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $1.6 \\times 10^5 \\times 9.0 = 1.8 \\times 10^5 \\times V$",
             "1 mark: Correct rearrangement: $V = \\frac{1.6 \\times 10^5 \\times 9.0}{1.8 \\times 10^5}$",

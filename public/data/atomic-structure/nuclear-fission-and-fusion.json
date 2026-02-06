@@ -238,14 +238,17 @@
         },
         {
           "partLabel": "c",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "A nuclear power station has a power output of 500 MW. Calculate the energy output in 3600 s. Give your answer in J. (Note: 500 MW = 500 000 000 W)",
           "marks": 2,
           "correctAnswer": 1800000000000,
           "tolerance": 0.01,
-          "unit": "J",
-          "showUnit": true,
-          "requiresRearrangement": false,
+          "equations": [
+            "$E = P \\times t$",
+            "$P = \\frac{E}{t}$",
+            "$E = m c^2$"
+          ],
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $E = 500{,}000{,}000 \\times 3600$",
             "1 mark: Final answer: **$1.8 \\times 10^{12}$ J**"
@@ -305,14 +308,17 @@
         },
         {
           "partLabel": "b",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "A nuclear power station generated electricity for 92% of a year. One year = 365 days. Calculate the number of days it generated electricity.",
           "marks": 2,
           "correctAnswer": 335.8,
           "tolerance": 0.02,
-          "unit": "days",
-          "showUnit": true,
-          "requiresRearrangement": false,
+          "equations": [
+            "$\\text{days} = \\frac{\\text{percentage}}{100} \\times \\text{total days}$",
+            "$E = P \\times t$",
+            "$E = m c^2$"
+          ],
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $0.92 \\times 365$",
             "1 mark: Final answer: **335.8 days** (accept 335 or 336)"
@@ -356,14 +362,17 @@
         },
         {
           "partLabel": "c",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "The UK needs at least 25 000 000 kW of electrical power. A nuclear power station has an output of 2 400 000 kW. Calculate how many nuclear power stations are needed. (Round up to a whole number.)",
           "marks": 2,
           "correctAnswer": 11,
           "tolerance": 0.05,
-          "unit": "",
-          "showUnit": false,
-          "requiresRearrangement": false,
+          "equations": [
+            "$\\text{number} = \\frac{\\text{total power needed}}{\\text{power per station}}$",
+            "$E = P \\times t$",
+            "$A = Z + N$"
+          ],
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $\\frac{25{,}000{,}000}{2{,}400{,}000} = 10.4...$",
             "1 mark: Final answer: **11** (must round up)"
@@ -448,14 +457,17 @@
         },
         {
           "partLabel": "b",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "Iodine-138 has a half-life of 6 seconds. A sample contains 2000 atoms of iodine-138. How long will it take for the number of atoms to decrease to 125?",
           "marks": 3,
           "correctAnswer": 24,
           "tolerance": 0.01,
-          "unit": "s",
-          "showUnit": true,
-          "requiresRearrangement": true,
+          "equations": [
+            "$\\text{total time} = \\text{number of half-lives} \\times \\text{half-life}$",
+            "$A = Z + N$",
+            "$\\text{activity} = \\frac{\\text{count}}{\\text{time}}$"
+          ],
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $2000 \\to 1000 \\to 500 \\to 250 \\to 125$ = 4 half-lives",
             "1 mark: Correct rearrangement: $4 \\times 6$",

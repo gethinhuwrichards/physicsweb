@@ -12,7 +12,8 @@
     { "id": "electricity", "name": "Electricity", "subtopics": [
         { "id": "sp-circuits", "name": "Series and Parallel Circuits", "file": "electricity/series-parallel-circuits.json", "questionCount": 3 },
         { "id": "simple-circuits", "name": "Simple Circuits", "file": "electricity/simple-circuits.json", "questionCount": 2 },
-        { "id": "electrical-power", "name": "Electrical Power", "file": "electricity/electrical-work-and-power.json", "questionCount": 1 }
+        { "id": "electrical-power", "name": "Electrical Power", "file": "electricity/electrical-work-and-power.json", "questionCount": 1 },
+        { "id": "electrical-calc", "name": "Electrical Calculations", "file": "electricity/electrical-calculations.json", "questionCount": 5 }
       ] },
     { "id": "particle-model", "name": "Particle Model", "subtopics": [
         { "id": "pressure-gas", "name": "Pressure in a Gas", "file": "particle-model/pressure-in-a-gas.json", "questionCount": 8 },

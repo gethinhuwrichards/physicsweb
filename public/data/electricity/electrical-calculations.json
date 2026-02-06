@@ -1,0 +1,163 @@
+{
+  "subtopic": "Electrical Calculations",
+  "mainTopic": "Electricity",
+  "questions": [
+    {
+      "id": "elec-calc1",
+      "topic": "Electrical Calculations",
+      "title": "Resistance of a filament lamp",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "calculation",
+          "text": "A filament lamp has a current of 0.25 A flowing through it when connected to a 6.0 V supply. Calculate the resistance of the lamp.",
+          "marks": 2,
+          "equations": [
+            "$V = I R$",
+            "$P = I V$",
+            "$E = Q V$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 24,
+          "tolerance": 0.01,
+          "markScheme": [
+            "1 mark: Correct equation selected and correct substitution: $6.0 = 0.25 \\times R$",
+            "1 mark: Correct final answer: **24 \u03A9**"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "elec-calc2",
+      "topic": "Electrical Calculations",
+      "title": "Power of a heater",
+      "difficulty": "easy",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "calculation",
+          "text": "An electric heater draws a current of 4.0 A from a 230 V mains supply. Calculate the power of the heater.",
+          "marks": 2,
+          "equations": [
+            "$P = I V$",
+            "$V = I R$",
+            "$Q = I t$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 920,
+          "tolerance": 0.01,
+          "markScheme": [
+            "1 mark: Correct equation selected and correct substitution: $P = 4.0 \\times 230$",
+            "1 mark: Correct final answer: **920 W**"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "elec-calc3",
+      "topic": "Electrical Calculations",
+      "title": "Current through a resistor",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "calculation",
+          "text": "A 12 V battery is connected to a 48 \u03A9 resistor. Calculate the current flowing through the resistor.",
+          "marks": 3,
+          "equations": [
+            "$V = I R$",
+            "$P = I V$",
+            "$E = Q V$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 0.25,
+          "tolerance": 0.01,
+          "markScheme": [
+            "1 mark: Correct equation selected and correct substitution: $12 = I \\times 48$",
+            "1 mark: Correct rearrangement: $I = \\frac{V}{R}$",
+            "1 mark: Correct final answer: **0.25 A**"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "elec-calc4",
+      "topic": "Electrical Calculations",
+      "title": "Charge and energy in a circuit",
+      "difficulty": "medium",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "calculation",
+          "text": "A current of 0.50 A flows through a component for 120 seconds. Calculate the charge that flows.",
+          "marks": 2,
+          "equations": [
+            "$Q = I t$",
+            "$V = I R$",
+            "$P = I V$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 60,
+          "tolerance": 0.01,
+          "markScheme": [
+            "1 mark: Correct equation selected and correct substitution: $Q = 0.50 \\times 120$",
+            "1 mark: Correct final answer: **60 C**"
+          ],
+          "diagram": null
+        },
+        {
+          "partLabel": "b",
+          "type": "calculation",
+          "text": "The component in part (a) has a potential difference of 9.0 V across it. Calculate the energy transferred to the component.",
+          "marks": 2,
+          "equations": [
+            "$E = Q V$",
+            "$P = I V$",
+            "$E = P t$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 540,
+          "tolerance": 0.01,
+          "markScheme": [
+            "1 mark: Correct equation selected and correct substitution: $E = 60 \\times 9.0$",
+            "1 mark: Correct final answer: **540 J**"
+          ],
+          "diagram": null
+        }
+      ]
+    },
+    {
+      "id": "elec-calc5",
+      "topic": "Electrical Calculations",
+      "title": "Kettle energy calculation",
+      "difficulty": "hard",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "calculation",
+          "text": "A kettle is rated at 2.5 kW. It is switched on for 3 minutes. Calculate the energy transferred by the kettle. Give your answer in joules.",
+          "marks": 4,
+          "equations": [
+            "$E = P t$",
+            "$P = I V$",
+            "$Q = I t$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 450000,
+          "tolerance": 0.01,
+          "markScheme": [
+            "1 mark: Correct unit conversions: 2.5 kW = **2500 W** and 3 minutes = **180 s**",
+            "1 mark: Correct equation selected and correct substitution: $E = 2500 \\times 180$",
+            "1 mark: Correct calculation shown",
+            "1 mark: Correct final answer: **450 000 J**"
+          ],
+          "diagram": null
+        }
+      ]
+    }
+  ]
+}

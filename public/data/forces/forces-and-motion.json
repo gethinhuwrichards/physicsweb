@@ -120,19 +120,17 @@
         },
         {
           "partLabel": "c",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "An athlete runs 100 m in 12.5 s. Calculate the average speed.",
           "marks": 2,
           "correctAnswer": 8,
           "tolerance": 0.02,
-          "unit": "m/s",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$v = \\frac{d}{t}$",
             "$d = v \\times t$",
             "$a = \\frac{\\Delta v}{t}$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $v = \\frac{100}{12.5}$",
             "1 mark: Final answer: **8.0 m/s**"
@@ -178,19 +176,17 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "Calculate the weight of water when the mass is 25 000 kg. Gravitational field strength = 9.8 N/kg.",
           "marks": 2,
           "correctAnswer": 245000,
           "tolerance": 0.01,
-          "unit": "N",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$W = m \\times g$",
             "$F = m \\times a$",
             "$p = \\frac{F}{A}$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $W = 25{,}000 \\times 9.8$",
             "1 mark: Final answer: **245 000 N**"
@@ -199,19 +195,17 @@
         },
         {
           "partLabel": "b",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "The weight of the water is 1 960 000 N and the bottom area is 49 m$^2$. Calculate the pressure at the bottom.",
           "marks": 2,
           "correctAnswer": 40000,
           "tolerance": 0.01,
-          "unit": "Pa",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$p = \\frac{F}{A}$",
             "$F = p \\times A$",
             "$p = h \\rho g$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $p = \\frac{1{,}960{,}000}{49}$",
             "1 mark: Final answer: **40 000 Pa**"
@@ -228,19 +222,17 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "A child swimming at 0.70 m/s accelerates for 5.0 s to reach 1.3 m/s. Calculate the acceleration.",
           "marks": 2,
           "correctAnswer": 0.12,
           "tolerance": 0.05,
-          "unit": "m/s\u00b2",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$a = \\frac{v - u}{t}$",
             "$v = u + at$",
             "$F = ma$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $a = \\frac{1.3 - 0.70}{5.0}$",
             "1 mark: Final answer: **0.12 m/s\u00b2**"
@@ -295,19 +287,17 @@
         },
         {
           "partLabel": "b",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "A go-kart travels at 13 m/s. The total mass of the go-kart and driver is 140 kg. Calculate the momentum.",
           "marks": 2,
           "correctAnswer": 1820,
           "tolerance": 0.01,
-          "unit": "kg m/s",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$p = m \\times v$",
             "$F = m \\times a$",
             "$W = F \\times d$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $p = 140 \\times 13$",
             "1 mark: Final answer: **1820 kg m/s**"
@@ -339,19 +329,17 @@
         },
         {
           "partLabel": "b",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "A cyclist and bicycle have total mass 80 kg and accelerate at 1.2 m/s\u00b2. Calculate the resultant force.",
           "marks": 2,
           "correctAnswer": 96,
           "tolerance": 0.01,
-          "unit": "N",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$F = m \\times a$",
             "$W = m \\times g$",
             "$p = m \\times v$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $F = 80 \\times 1.2$",
             "1 mark: Final answer: **96 N**"
@@ -360,19 +348,17 @@
         },
         {
           "partLabel": "c",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "A trolley has forces of 2.7 N to the right and 1.5 N to the left. The trolley has a mass of 0.75 kg. Calculate the acceleration.",
           "marks": 3,
           "correctAnswer": 1.6,
           "tolerance": 0.02,
-          "unit": "m/s\u00b2",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$F = m \\times a$",
             "$a = \\frac{F}{m}$",
             "$W = m \\times g$"
           ],
-          "requiresRearrangement": true,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $2.7 - 1.5 = 0.75 \\times a$",
             "1 mark: Correct rearrangement: $a = \\frac{1.2}{0.75}$",
@@ -491,19 +477,17 @@
         },
         {
           "partLabel": "b",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "The force on a spring is 336 N and the extension is 0.21 m. Calculate the spring constant.",
           "marks": 3,
           "correctAnswer": 1600,
           "tolerance": 0.01,
-          "unit": "N/m",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$F = k \\times e$",
             "$k = \\frac{F}{e}$",
             "$W = F \\times d$"
           ],
-          "requiresRearrangement": true,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $336 = k \\times 0.21$",
             "1 mark: Correct rearrangement: $k = \\frac{336}{0.21}$",
@@ -513,15 +497,17 @@
         },
         {
           "partLabel": "c",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "The original length of the spring is 0.84 m. When a child stands on it, the length decreases by 0.21 m. Calculate the percentage change in length.",
           "marks": 2,
           "correctAnswer": 25,
           "tolerance": 0.01,
-          "unit": "%",
-          "showUnit": true,
-          "formulas": [],
-          "requiresRearrangement": false,
+          "equations": [
+            "$\\text{percentage change} = \\frac{\\text{change}}{\\text{original}} \\times 100$",
+            "$F = k \\times e$",
+            "$W = F \\times d$"
+          ],
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $\\frac{0.21}{0.84} \\times 100$",
             "1 mark: Final answer: **25%**"
@@ -538,19 +524,17 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "A parachutist has a mass of 75 kg. Calculate the weight. (g = 10 N/kg)",
           "marks": 2,
           "correctAnswer": 750,
           "tolerance": 0.01,
-          "unit": "N",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$W = m \\times g$",
             "$F = m \\times a$",
             "$p = m \\times v$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $W = 75 \\times 10$",
             "1 mark: Final answer: **750 N**"
@@ -559,19 +543,17 @@
         },
         {
           "partLabel": "b",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "A bus has 500 000 J of kinetic energy and stops in 25 m. Calculate the braking force.",
           "marks": 2,
           "correctAnswer": 20000,
           "tolerance": 0.01,
-          "unit": "N",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$W = F \\times d$",
             "$F = m \\times a$",
             "$E_k = \\frac{1}{2}mv^2$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $500{,}000 = F \\times 25$",
             "1 mark: Final answer: **20 000 N**"
@@ -631,19 +613,17 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "A car driver sees a dog. The thinking time is 0.7 s and the car travels at 24 m/s. Calculate the thinking distance.",
           "marks": 2,
           "correctAnswer": 16.8,
           "tolerance": 0.02,
-          "unit": "m",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$d = v \\times t$",
             "$v = \\frac{d}{t}$",
             "$a = \\frac{\\Delta v}{t}$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $d = 24 \\times 0.7$",
             "1 mark: Final answer: **16.8 m**"
@@ -652,19 +632,17 @@
         },
         {
           "partLabel": "b",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "The car decelerates from 24 m/s to 0 in 4 s after braking. Calculate the acceleration.",
           "marks": 2,
           "correctAnswer": 6,
           "tolerance": 0.01,
-          "unit": "m/s\u00b2",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$a = \\frac{v - u}{t}$",
             "$F = m \\times a$",
             "$v = u + at$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $a = \\frac{24 - 0}{4}$",
             "1 mark: Final answer: **6 m/s\u00b2**"
@@ -673,19 +651,17 @@
         },
         {
           "partLabel": "c",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "The car has mass 800 kg and decelerates at 6 m/s\u00b2. Calculate the braking force.",
           "marks": 2,
           "correctAnswer": 4800,
           "tolerance": 0.01,
-          "unit": "N",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$F = m \\times a$",
             "$W = F \\times d$",
             "$p = m \\times v$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $F = 800 \\times 6$",
             "1 mark: Final answer: **4800 N**"
@@ -702,19 +678,17 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "A child steps off a diving board. Initial velocity = 0 m/s, acceleration = 9.8 m/s\u00b2, distance fallen = 0.95 m. Using $v^2 = u^2 + 2as$, calculate the final velocity to 2 significant figures.",
           "marks": 3,
           "correctAnswer": 4.3,
           "tolerance": 0.02,
-          "unit": "m/s",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$v^2 = u^2 + 2as$",
             "$s = ut + \\frac{1}{2}at^2$",
             "$v = u + at$"
           ],
-          "requiresRearrangement": true,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $v^2 = 0 + 2 \\times 9.8 \\times 0.95$",
             "1 mark: Correct rearrangement: $v = \\sqrt{18.62}$",

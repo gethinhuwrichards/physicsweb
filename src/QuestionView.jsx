@@ -4,7 +4,7 @@ import QuestionPart from './components/QuestionPart';
 import SelfMarkingView from './components/marking/SelfMarkingView';
 import FinalScorePanel from './components/marking/FinalScorePanel';
 import ScorePage from './components/marking/ScorePage';
-import { autoMarkSingleChoice, autoMarkMultiChoice, autoMarkGapFill, autoMarkNumerical, autoMarkTickBoxTable } from './utils/autoMark';
+import { autoMarkSingleChoice, autoMarkMultiChoice, autoMarkGapFill, autoMarkCalculation, autoMarkTickBoxTable } from './utils/autoMark';
 import { parseMarkScheme } from './utils/parseMarkScheme';
 
 function initState({ question, savedState }) {
@@ -89,8 +89,8 @@ function reducer(state, action) {
             autoMarkResults[i] = result;
             break;
           }
-          case 'short-numerical': {
-            const result = autoMarkNumerical(part, answer || {});
+          case 'calculation': {
+            const result = autoMarkCalculation(part, answer || {});
             autoMarkResults[i] = result;
             if (result.isCorrect) {
               partScores[i] = result.score;
@@ -119,8 +119,8 @@ function reducer(state, action) {
         markingDecisions[i] = points.map(() => null);
         lockedPoints[i] = points.map(() => false);
 
-        // For incorrect short-numerical: lock the last point (final answer) as false
-        if (part.type === 'short-numerical' && points.length > 0) {
+        // For incorrect calculation: lock the last point (final answer) as false
+        if (part.type === 'calculation' && points.length > 0) {
           const lastIdx = points.length - 1;
           markingDecisions[i][lastIdx] = false;
           lockedPoints[i][lastIdx] = true;
@@ -163,7 +163,7 @@ function reducer(state, action) {
             );
             break;
           }
-          case 'short-numerical':
+          case 'calculation':
             // Only reaches here if correct (incorrect goes to selfMarkParts)
             markingDecisions[i] = points.map(() => true);
             break;
@@ -195,23 +195,6 @@ function reducer(state, action) {
       const prevDecisions = state.markingDecisions[partIndex] || [];
       const nextDecisions = [...prevDecisions];
       nextDecisions[pointIndex] = decision;
-
-      // Dependency logic for 3-mark numerical with rearrangement
-      // After reorder: index 0 = substitution, index 1 = rearrangement, index 2 = final answer
-      if (part.type === 'short-numerical' && part.requiresRearrangement && nextDecisions.length === 3) {
-        if (pointIndex === 0 && decision === false) {
-          // Substitution wrong → rearrangement must also be wrong
-          nextDecisions[1] = false;
-        }
-        if (pointIndex === 0 && decision === null) {
-          // Substitution toggled off → rearrangement must also reset
-          nextDecisions[1] = null;
-        }
-        if (pointIndex === 1 && decision === true) {
-          // Rearrangement correct → substitution must also be correct
-          nextDecisions[0] = true;
-        }
-      }
 
       return {
         ...state,

@@ -50,7 +50,7 @@ export function autoMarkTickBoxTable(part, selections) {
   return { score, results };
 }
 
-export function autoMarkNumerical(part, answer) {
+export function autoMarkCalculation(part, answer) {
   const raw = answer && answer.finalAnswer != null ? String(answer.finalAnswer).trim() : '';
   const parsed = parseFloat(raw);
   const correct = part.correctAnswer;

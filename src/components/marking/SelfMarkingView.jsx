@@ -28,13 +28,13 @@ export default function SelfMarkingView({
 
   const renderedQuestion = useMemo(() => renderLatex(part.text), [part.text]);
   const studentAnswer = answers[partIndex] || '';
-  const numericalResult = part.type === 'short-numerical' ? (autoMarkResults && autoMarkResults[partIndex]) : null;
+  const numericalResult = part.type === 'calculation' ? (autoMarkResults && autoMarkResults[partIndex]) : null;
 
-  const renderedSelectedFormula = useMemo(() => {
-    if (part.type !== 'short-numerical') return '';
+  const renderedSelectedEquation = useMemo(() => {
+    if (part.type !== 'calculation') return '';
     const ans = answers[partIndex] || {};
-    if (ans.selectedFormula != null && part.formulas && part.formulas[ans.selectedFormula]) {
-      return renderLatex(part.formulas[ans.selectedFormula]);
+    if (ans.selectedEquation != null && part.equations && part.equations[ans.selectedEquation]) {
+      return renderLatex(part.equations[ans.selectedEquation]);
     }
     return '';
   }, [part, partIndex, answers]);
@@ -259,38 +259,35 @@ export default function SelfMarkingView({
     );
   }
 
-  // Render numerical display (shared between auto and self-marked)
-  function renderNumericalDisplay(isCorrectNumerical) {
+  // Render calculation display (shared between auto and self-marked)
+  function renderCalculationDisplay(isCorrectCalc) {
+    const ans = answers[partIndex] || {};
     return (
       <div className="numerical-display">
-        {(renderedSelectedFormula || answers[partIndex]?.substitution) && (
+        {renderedSelectedEquation && (
           <div className="numerical-display-section">
-            <div className="numerical-display-label">Formula &amp; Substitution:</div>
-            {renderedSelectedFormula && (
-              <div className="numerical-display-value" dangerouslySetInnerHTML={{ __html: renderedSelectedFormula }} />
-            )}
-            {(answers[partIndex]?.substitution) && (
-              <div className="numerical-display-value">{answers[partIndex].substitution}</div>
-            )}
+            <div className="numerical-display-label">Selected equation:</div>
+            <div className="numerical-display-value" dangerouslySetInnerHTML={{ __html: renderedSelectedEquation }} />
           </div>
         )}
-        {part.requiresRearrangement && (answers[partIndex]?.rearrangement) && (
+        {ans.steps && ans.steps.some(s => s && s.trim()) && (
           <div className="numerical-display-section">
-            <div className="numerical-display-label">Rearrangement:</div>
-            <div className="numerical-display-value">{answers[partIndex].rearrangement}</div>
+            <div className="numerical-display-label">Working steps:</div>
+            {ans.steps.filter(s => s && s.trim()).map((step, i) => (
+              <div key={i} className="numerical-display-value">Step {i + 1}: {step}</div>
+            ))}
           </div>
         )}
         <div className="numerical-display-section">
           <div className="numerical-display-label">Final answer:</div>
           <div className="numerical-display-value">
-            <span className={`numerical-display-answer ${isCorrectNumerical ? 'correct' : 'incorrect'}`}>
+            <span className={`numerical-display-answer ${isCorrectCalc ? 'correct' : 'incorrect'}`}>
               {numericalResult?.userAnswer || 'No answer'}
-              {part.showUnit && part.unit ? ` ${part.unit}` : ''}
             </span>
           </div>
-          {!isCorrectNumerical && (
+          {!isCorrectCalc && (
             <div className="numerical-correct-answer">
-              Correct answer: {numericalResult?.correctAnswer}{part.showUnit && part.unit ? ` ${part.unit}` : ''}
+              Correct answer: {numericalResult?.correctAnswer}
             </div>
           )}
         </div>
@@ -309,16 +306,16 @@ export default function SelfMarkingView({
         return renderGapFillReview();
       case 'tick-box-table':
         return renderTickBoxReview();
-      case 'short-numerical':
-        return renderNumericalDisplay(true);
+      case 'calculation':
+        return renderCalculationDisplay(true);
       default:
         return null;
     }
   }
 
   function renderSelfMarkedAnswer() {
-    if (part.type === 'short-numerical') {
-      return renderNumericalDisplay(false);
+    if (part.type === 'calculation') {
+      return renderCalculationDisplay(false);
     }
     return (
       <div className="self-marking-answer-display">
@@ -372,8 +369,6 @@ export default function SelfMarkingView({
           <div className="self-marking-points">
             {points.map((point, i) => {
               if (!isAutoMarked && i >= maxRevealed) return null;
-              const isRearrangement = part.type === 'short-numerical'
-                && part.requiresRearrangement && points.length === 3 && i === 1;
               return (
                 <MarkingPointRow
                   key={i}
@@ -382,7 +377,7 @@ export default function SelfMarkingView({
                   onDecide={(val) => onDecide(partIndex, i, val, point.marks)}
                   locked={locked[i] === true}
                   pointNumber={i + 1}
-                  dependencyNote={isRearrangement ? '(depends on substitution marking point)' : null}
+                  dependencyNote={null}
                   highlight={!isAutoMarked && i === 0 && !hasDecidedFirst}
                 />
               );

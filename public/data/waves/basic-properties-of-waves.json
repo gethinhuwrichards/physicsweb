@@ -42,19 +42,17 @@
         },
         {
           "partLabel": "c",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "The wave has a frequency of 2.0 hertz. The wavelength is 0.032 metres. Calculate the wave speed.",
           "marks": 2,
           "correctAnswer": 0.064,
           "tolerance": 0.01,
-          "unit": "m/s",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$v = f \\lambda$",
             "$T = \\frac{1}{f}$",
             "$v = \\frac{d}{t}$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $v = 2.0 \\times 0.032$",
             "1 mark: Final answer: **0.064 m/s**"
@@ -240,19 +238,17 @@
         },
         {
           "partLabel": "d",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "Microwaves from a mobile phone take 0.000 009 s to reach a mobile phone mast. Speed of microwaves = 300 000 000 m/s. Calculate the distance between the mobile phone and the mobile phone mast.",
           "marks": 2,
           "correctAnswer": 2700,
           "tolerance": 0.01,
-          "unit": "m",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$s = v t$",
             "$v = f \\lambda$",
             "$T = \\frac{1}{f}$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $s = 300\\,000\\,000 \\times 0.000\\,009$",
             "1 mark: Final answer: **2700 m**"
@@ -313,19 +309,17 @@
         },
         {
           "partLabel": "c",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "A wave has a frequency of 5000 Hz. Calculate the period of the wave.",
           "marks": 2,
           "correctAnswer": 0.0002,
           "tolerance": 0.01,
-          "unit": "s",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$T = \\frac{1}{f}$",
             "$v = f \\lambda$",
             "$v = \\frac{d}{t}$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $T = \\frac{1}{5000}$",
             "1 mark: Final answer: **0.0002 s**"
@@ -360,19 +354,17 @@
         },
         {
           "partLabel": "f",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "A sound wave has a frequency of 750 Hz. Speed of sound in air = 330 m/s. Calculate the wavelength of the sound wave.",
           "marks": 2,
           "correctAnswer": 0.44,
           "tolerance": 0.03,
-          "unit": "m",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$\\lambda = \\frac{v}{f}$",
             "$v = f \\lambda$",
             "$T = \\frac{1}{f}$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $\\lambda = \\frac{330}{750}$",
             "1 mark: Final answer: **0.44 m**"
@@ -496,19 +488,17 @@
         },
         {
           "partLabel": "d",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "Diagram 2 shows water waves in a ripple tank moving towards and passing through a gap in a barrier. Every second, 8 waves pass through the gap in the barrier. The waves have a wavelength of 0.015 metres. Calculate the speed of the water waves.",
           "marks": 2,
           "correctAnswer": 0.12,
           "tolerance": 0.01,
-          "unit": "m/s",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$v = f \\lambda$",
             "$T = \\frac{1}{f}$",
             "$s = v t$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $v = 8 \\times 0.015$",
             "1 mark: Final answer: **0.12 m/s**"
@@ -541,19 +531,17 @@
         },
         {
           "partLabel": "b",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "A submarine sends a pulse of ultrasound to the sea floor. The pulse takes 0.25 seconds to travel from the submarine to the sea floor. The speed of sound in water is 1600 m/s. Calculate the distance from the submarine to the sea floor.",
           "marks": 2,
           "correctAnswer": 400,
           "tolerance": 0.01,
-          "unit": "m",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$s = v t$",
             "$v = f \\lambda$",
             "$T = \\frac{1}{f}$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $s = 1600 \\times 0.25$",
             "1 mark: Final answer: **400 m**"
@@ -769,19 +757,17 @@
         },
         {
           "partLabel": "c",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "The bat emits a sound wave with a frequency of 25.0 kHz and a wavelength of 0.0136 metres. Calculate the speed of this sound wave.",
           "marks": 2,
           "correctAnswer": 340,
           "tolerance": 0.01,
-          "unit": "m/s",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$v = f \\lambda$",
             "$T = \\frac{1}{f}$",
             "$s = v t$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $v = 25\\,000 \\times 0.0136$",
             "1 mark: Final answer: **340 m/s**"
@@ -942,19 +928,17 @@
         },
         {
           "partLabel": "d",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "Calculate the period of a sound wave with a frequency of 8.0 kHz (8000 Hz).",
           "marks": 2,
           "correctAnswer": 0.000125,
           "tolerance": 0.01,
-          "unit": "s",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$T = \\frac{1}{f}$",
             "$v = f \\lambda$",
             "$s = v t$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $T = \\frac{1}{8000}$",
             "1 mark: Final answer: **0.000125 s** (accept 1.25 × 10⁻⁴ s)"
@@ -963,20 +947,17 @@
         },
         {
           "partLabel": "e",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "Calculate the wavelength of a sound wave with a frequency of 6600 Hz. Speed of sound = 330 m/s.",
           "marks": 3,
           "correctAnswer": 0.05,
           "tolerance": 0.01,
-          "unit": "m",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$v = f \\lambda$",
-            "$\\lambda = \\frac{v}{f}$",
             "$T = \\frac{1}{f}$",
             "$s = v t$"
           ],
-          "requiresRearrangement": true,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $\\lambda = \\frac{330}{6600}$",
             "1 mark: Correct rearrangement: $\\lambda = \\frac{v}{f}$ (from $v = f\\lambda$)",
@@ -1003,20 +984,17 @@
         },
         {
           "partLabel": "g",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "The figure shows the arrangement of two loudspeakers at a concert venue. Distance A on the diagram is 13.2 m. Speed of sound = 330 m/s. Calculate the time taken for the sound to travel from loudspeaker A to the technician.",
           "marks": 3,
           "correctAnswer": 0.04,
           "tolerance": 0.01,
-          "unit": "s",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$s = v t$",
-            "$t = \\frac{s}{v}$",
             "$v = f \\lambda$",
             "$T = \\frac{1}{f}$"
           ],
-          "requiresRearrangement": true,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $13.2 = 330 \\times t$",
             "1 mark: Correct rearrangement: $t = \\frac{s}{v}$ (from $s = vt$)",
@@ -1088,20 +1066,17 @@
         },
         {
           "partLabel": "e",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "Use the information in the diagram to calculate the distance from the head of the bolt to the internal crack. The time between the transmitted pulse and pulse A on the oscilloscope is 0.000025 s (round-trip). Speed of sound through steel = 6000 m/s.",
           "marks": 3,
           "correctAnswer": 0.075,
           "tolerance": 0.02,
-          "unit": "m",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$s = v t$",
             "$v = f \\lambda$",
-            "$T = \\frac{1}{f}$",
-            "$t = \\frac{s}{v}$"
+            "$T = \\frac{1}{f}$"
           ],
-          "requiresRearrangement": true,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: time from diagram = $0.000\\,025$ s",
             "1 mark: Correct rearrangement: one-way time = $\\frac{0.000\\,025}{2} = 0.000\\,012\\,5$ s",

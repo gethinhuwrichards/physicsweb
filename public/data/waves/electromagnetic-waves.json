@@ -306,19 +306,17 @@
         },
         {
           "partLabel": "g",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "Calculate the wavelength of the radio waves emitted from the distant galaxy. Give your answer in metres.",
           "marks": 3,
           "correctAnswer": 0.25,
           "tolerance": 0.01,
-          "unit": "m",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$v = f \\times \\lambda$",
-            "$\\lambda = \\frac{v}{f}$",
-            "$f = \\frac{v}{\\lambda}$"
+            "$T = \\frac{1}{f}$",
+            "$v = \\frac{d}{t}$"
           ],
-          "requiresRearrangement": true,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $300\\,000\\,000 = 1\\,200\\,000\\,000 \\times \\lambda$",
             "1 mark: Correct rearrangement: $\\lambda = \\frac{v}{f}$",
@@ -366,13 +364,17 @@
         },
         {
           "partLabel": "c",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "The table below shows the total dose of X-rays received by the human body when different parts are X-rayed.<table><tr><th>Part of body X-rayed</th><th>Dose (arbitrary units)</th></tr><tr><td>Head</td><td>3</td></tr><tr><td>Chest</td><td>4</td></tr><tr><td>Pelvis</td><td>60</td></tr></table>Calculate the number of head X-rays that are equal in dose to one pelvis X-ray.",
           "marks": 2,
           "correctAnswer": 20,
           "tolerance": 0.01,
-          "showUnit": false,
-          "requiresRearrangement": false,
+          "equations": [
+            "$n = \\frac{\\text{total dose}}{\\text{dose per X-ray}}$",
+            "$v = f \\lambda$",
+            "$T = \\frac{1}{f}$"
+          ],
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct working: $60 \\div 3$",
             "1 mark: Final answer: **20**"
@@ -467,19 +469,17 @@
         },
         {
           "partLabel": "c",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "A wave has a frequency of 5000 Hz. Calculate the period of the wave.",
           "marks": 2,
           "correctAnswer": 0.0002,
           "tolerance": 0.01,
-          "unit": "s",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$T = \\frac{1}{f}$",
-            "$f = \\frac{1}{T}$",
-            "$v = f \\times \\lambda$"
+            "$v = f \\times \\lambda$",
+            "$v = \\frac{d}{t}$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $T = \\frac{1}{5000}$",
             "1 mark: Final answer: **0.0002 s**"
@@ -516,19 +516,17 @@
         },
         {
           "partLabel": "b",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "A sound wave has a frequency of 750 Hz. The speed of sound in air is 330 m/s. Calculate the wavelength of the sound wave.",
           "marks": 2,
           "correctAnswer": 0.44,
           "tolerance": 0.01,
-          "unit": "m",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$v = f \\times \\lambda$",
-            "$\\lambda = \\frac{v}{f}$",
-            "$f = \\frac{v}{\\lambda}$"
+            "$T = \\frac{1}{f}$",
+            "$v = \\frac{d}{t}$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $\\lambda = \\frac{330}{750}$",
             "1 mark: Final answer: **0.44 m**"
@@ -577,19 +575,17 @@
         },
         {
           "partLabel": "b",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "Calculate the speed of a sound wave with a frequency of 250 Hz and a wavelength of 1.3 m.",
           "marks": 2,
           "correctAnswer": 325,
           "tolerance": 0.01,
-          "unit": "m/s",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$v = f \\times \\lambda$",
-            "$\\lambda = \\frac{v}{f}$",
-            "$f = \\frac{v}{\\lambda}$"
+            "$T = \\frac{1}{f}$",
+            "$v = \\frac{d}{t}$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $v = 250 \\times 1.3$",
             "1 mark: Final answer: **325 m/s**"
@@ -787,19 +783,17 @@
         },
         {
           "partLabel": "c",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "The wavelength of a radio wave is 1500 m. The speed of radio waves is $3.0 \\times 10^{8}$ m/s. Calculate the frequency of the radio wave.",
           "marks": 3,
           "correctAnswer": 200000,
           "tolerance": 0.01,
-          "unit": "Hz",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$v = f \\times \\lambda$",
-            "$f = \\frac{v}{\\lambda}$",
-            "$\\lambda = \\frac{v}{f}$"
+            "$T = \\frac{1}{f}$",
+            "$v = \\frac{d}{t}$"
           ],
-          "requiresRearrangement": true,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $3.0 \\times 10^{8} = f \\times 1500$",
             "1 mark: Correct rearrangement: $f = \\frac{v}{\\lambda}$",

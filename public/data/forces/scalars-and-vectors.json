@@ -21,19 +21,17 @@
         },
         {
           "partLabel": "b",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "Calculate the work done by the worker to push the crate 28 m. Give the unit.",
           "marks": 2,
           "correctAnswer": 1680,
           "tolerance": 0.0,
-          "unit": "J",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$W = F d$",
             "$E = P t$",
             "$E_k = \\tfrac{1}{2} m v^2$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $W = 60 \\times 28$",
             "1 mark: Final answer: **1680 J**"

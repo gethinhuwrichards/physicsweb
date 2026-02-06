@@ -4,7 +4,7 @@ import SingleChoiceInput from './inputs/SingleChoiceInput';
 import MultiChoiceInput from './inputs/MultiChoiceInput';
 import GapFillInput from './inputs/GapFillInput';
 import ExtendedWrittenInput from './inputs/ExtendedWrittenInput';
-import NumericalInput from './inputs/NumericalInput';
+import CalculationInput from './inputs/CalculationInput';
 import TickBoxTableInput from './inputs/TickBoxTableInput';
 
 export default function QuestionPart({
@@ -62,9 +62,9 @@ export default function QuestionPart({
             disabled={disabled}
           />
         );
-      case 'short-numerical':
+      case 'calculation':
         return (
-          <NumericalInput
+          <CalculationInput
             part={part}
             value={answer}
             onChange={val => onAnswer(partIndex, val)}

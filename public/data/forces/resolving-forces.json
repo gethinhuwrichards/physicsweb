@@ -26,19 +26,17 @@
         },
         {
           "partLabel": "b",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "The trolley is pushed at a constant speed for 80 m with a total force of 50 N. Calculate the work done.",
           "marks": 2,
           "correctAnswer": 4000,
           "tolerance": 0.0,
-          "unit": "J",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$W = F d$",
             "$E = P t$",
             "$E_k = \\tfrac{1}{2} m v^2$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Substitution: $W = 50 \\times 80$",
             "1 mark: Final answer: **4000 J**"

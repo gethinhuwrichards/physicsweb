@@ -68,7 +68,7 @@ Before assigning IDs, check existing question files to ensure no duplicates.
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `partLabel` | string | Yes | Part identifier (e.g., "a", "b", "c", "i", "ii") |
-| `type` | string | Yes | One of: `"single-choice"`, `"multi-choice"`, `"gap-fill"`, `"extended-written"`, `"short-numerical"`, `"equation-choice"`, `"tick-box-table"` |
+| `type` | string | Yes | One of: `"single-choice"`, `"multi-choice"`, `"gap-fill"`, `"extended-written"`, `"calculation"`, `"equation-choice"`, `"tick-box-table"` |
 | `text` | string | Yes | The question text (supports LaTeX) |
 | `marks` | integer | Yes | Number of marks (1-6) |
 | `markScheme` | string[] | Yes | Array of marking criteria |
@@ -76,7 +76,7 @@ Before assigning IDs, check existing question files to ensure no duplicates.
 
 ## Part Types
 
-Types 1-3, 6 and 7 are fully auto-marked. Type 4 (extended-written) is self-marked by the student using a split-panel marking UI. Type 5 (short-numerical) auto-marks the final answer; if incorrect, the student self-marks method points.
+Types 1-3, 6 and 7 are fully auto-marked. Type 4 (extended-written) is self-marked by the student using a split-panel marking UI. Type 5 (calculation) auto-marks the final answer; if correct, all marks are awarded. If incorrect, the student self-marks method points via the split-panel UI.
 
 ### 1. Single Choice (`type: "single-choice"`)
 
@@ -200,90 +200,104 @@ The character limit for the textarea is derived at render time: `marks * 400` (~
 }
 ```
 
-### 5. Short Numerical (`type: "short-numerical"`)
+### 5. Calculation (`type: "calculation"`)
 
-Student enters a numeric final answer and optionally shows working (formula selection, substitution, rearrangement). The final answer is auto-marked using relative tolerance. If correct, all marks are awarded. If incorrect, the student self-marks method points via the split-panel marking UI, with the final answer point locked as incorrect.
+Student enters a numeric final answer and optionally shows working via a step-based interface with equation selection and a calculator. The final answer is auto-marked using relative tolerance. If correct, all marks are awarded. If incorrect, the student self-marks method points via the split-panel marking UI, with the final answer point locked as incorrect.
+
+**UI Layout:**
+1. Final answer box shown first (units are not required and do not carry marks)
+2. "Show Working" button reveals equation selection, step inputs, and calculator
+3. Equation selection: 3 radio buttons with LaTeX equations
+4. Step-based working: Step 1 shown initially, "Add a step" button (up to 6 steps)
+5. Calculator button grid for typing into step inputs, with evaluation via `=`
 
 **Additional fields:**
 
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
+| `equations` | string[] | Yes | Exactly 3 LaTeX equation strings (1 correct + 2 distractors) |
+| `correctEquation` | integer | Yes | 0-based index of the correct equation |
 | `correctAnswer` | number | Yes | The expected numeric answer |
 | `tolerance` | number | No | Relative tolerance for comparison (default `0.01` = 1%) |
-| `unit` | string | No | Unit label (e.g., "J", "m/s") |
-| `showUnit` | boolean | No | Whether to display the unit beside the input (default `false`) |
-| `formulas` | string[] | No | LaTeX formula strings for the formula selector (includes distractors) |
-| `requiresRearrangement` | boolean | Yes | `false` for 2-mark questions, `true` for 3-mark questions |
 
-**STRICT RULES — only two formats are allowed:**
+**Marks must be 2, 3, or 4.** The `markScheme` array must follow one of the three structures below.
 
-Short numerical questions **must** be exactly **2 marks** or **3 marks**. No other mark value is permitted. The `markScheme` array **must** follow one of the two fixed structures below exactly. Do not add, remove, or reorder marking points.
-
-#### Format A: 2-mark (no rearrangement)
+#### Format A: 2-mark — Substitute and calculate
 
 Use when the student can substitute directly into the standard form of the equation.
 
-- `marks`: **2**
-- `requiresRearrangement`: **false**
-- `markScheme` must have **exactly 2 entries** in this order:
-  1. Substitution point
-  2. Final answer point
-
 ```json
 {
-  "partLabel": "b",
-  "type": "short-numerical",
+  "partLabel": "a",
+  "type": "calculation",
   "text": "Calculate the kinetic energy of a 1500 kg car travelling at 30 m/s.",
   "marks": 2,
-  "correctAnswer": 675000,
-  "tolerance": 0.01,
-  "unit": "J",
-  "showUnit": true,
-  "formulas": [
+  "equations": [
     "$E_k = \\frac{1}{2} m v^2$",
     "$E_p = m g h$",
     "$W = F d$"
   ],
-  "requiresRearrangement": false,
+  "correctEquation": 0,
+  "correctAnswer": 675000,
+  "tolerance": 0.01,
   "markScheme": [
-    "1 mark: Correct substitution: $E_k = \\frac{1}{2} \\times 1500 \\times 30^2$",
-    "1 mark: Final answer: **675 000 J**"
+    "1 mark: Correct equation selected + correct substitution: $E_k = \\frac{1}{2} \\times 1500 \\times 30^2$",
+    "1 mark: Correct final answer: **675 000 J**"
   ],
   "diagram": null
 }
 ```
 
-#### Format B: 3-mark (with rearrangement)
+#### Format B: 3-mark — Substitute, rearrange, and calculate
 
-Use when the student must rearrange the equation before substituting.
+Use when the student must rearrange the equation before or after substituting.
 
-- `marks`: **3**
-- `requiresRearrangement`: **true**
-- `markScheme` must have **exactly 3 entries** in this order:
-  1. Substitution point
-  2. Rearrangement point
-  3. Final answer point
+```json
+{
+  "partLabel": "b",
+  "type": "calculation",
+  "text": "A car has a kinetic energy of 450 000 J and a mass of 1000 kg. Calculate the speed of the car.",
+  "marks": 3,
+  "equations": [
+    "$E_k = \\frac{1}{2} m v^2$",
+    "$E_p = m g h$",
+    "$F = m a$"
+  ],
+  "correctEquation": 0,
+  "correctAnswer": 30,
+  "tolerance": 0.01,
+  "markScheme": [
+    "1 mark: Correct equation selected + correct substitution: $450000 = \\frac{1}{2} \\times 1000 \\times v^2$",
+    "1 mark: Correct rearrangement: $v = \\sqrt{\\frac{2 \\times 450000}{1000}}$",
+    "1 mark: Correct final answer: **30 m/s**"
+  ],
+  "diagram": null
+}
+```
+
+#### Format C: 4-mark — Unit conversion, substitute, rearrange, and calculate
+
+Use when a unit conversion is required before the calculation.
 
 ```json
 {
   "partLabel": "c",
-  "type": "short-numerical",
-  "text": "A car has a kinetic energy of 450 000 J and a mass of 1000 kg. Calculate the speed of the car.",
-  "marks": 3,
-  "correctAnswer": 30,
-  "tolerance": 0.01,
-  "unit": "m/s",
-  "showUnit": true,
-  "formulas": [
-    "$E_k = \\frac{1}{2} m v^2$",
-    "$v = \\sqrt{\\frac{2 E_k}{m}}$",
-    "$F = m a$"
+  "type": "calculation",
+  "text": "A kettle is rated at 2.5 kW. It is switched on for 3 minutes. Calculate the energy transferred.",
+  "marks": 4,
+  "equations": [
+    "$E = P t$",
+    "$P = I V$",
+    "$Q = I t$"
   ],
-  "requiresRearrangement": true,
+  "correctEquation": 0,
+  "correctAnswer": 450000,
+  "tolerance": 0.01,
   "markScheme": [
-    "1 mark: Correct substitution: $v = \\sqrt{\\frac{2 \\times 450000}{1000}}$",
-    "1 mark: Correct rearrangement: $v = \\sqrt{\\frac{2 E_k}{m}}$",
-    "1 mark: Final answer: **30 m/s**"
+    "1 mark: Correct unit conversions: 2.5 kW = **2500 W** and 3 minutes = **180 s**",
+    "1 mark: Correct equation selected + correct substitution: $E = 2500 \\times 180$",
+    "1 mark: Correct calculation shown",
+    "1 mark: Correct final answer: **450 000 J**"
   ],
   "diagram": null
 }
@@ -291,9 +305,9 @@ Use when the student must rearrange the equation before substituting.
 
 **Marking behaviour:**
 - Final answer compared using relative tolerance: `|userAnswer - correctAnswer| / |correctAnswer| <= tolerance`
-- If correct: all marks awarded automatically, no self-marking needed
-- If incorrect: enters self-marking mode. The **last** `markScheme` entry (final answer point) is auto-locked as incorrect. Student self-marks remaining method points.
-- The app has dependency logic for 3-mark questions: if substitution is marked wrong, rearrangement is automatically marked wrong too.
+- If correct (including rounding): all marks awarded automatically, no self-marking needed
+- If incorrect: enters self-marking mode. The **last** `markScheme` entry (final answer point) is auto-locked as incorrect. Student self-marks remaining method points independently.
+- Each marking point is independently awardable (no dependency logic between points).
 
 ### 6. Equation Choice (`type: "equation-choice"`)
 
@@ -511,7 +525,7 @@ Each string in `markScheme` should describe one marking point:
 6. For `multi-choice`: `correctAnswers` must be an array of valid indices; `options` must have 4+ strings; `selectCount` must be a positive integer; `scoring` must be `"all-or-nothing"` or `"partial"` (defaults to `"all-or-nothing"`)
 7. For `gap-fill`: `segments` must alternate between text strings and `{ "blank": N }` objects; `correctAnswers` length must match the number of blanks; all `wordBank` entries should be distinct
 8. For `extended-written`: no additional fields beyond common ones; `markScheme` entries may use `**keyword**` for bold rendering; `marks` determines textarea character limit (`marks * 400`)
-9. For `short-numerical`: `marks` must be **2** or **3** (no other value). If `marks` is 2: `requiresRearrangement` must be `false` and `markScheme` must have exactly 2 entries (substitution, final answer). If `marks` is 3: `requiresRearrangement` must be `true` and `markScheme` must have exactly 3 entries (substitution, rearrangement, final answer). The last `markScheme` entry must always be the final answer point. `tolerance` defaults to `0.01` (1% relative). `formulas` is an optional array of LaTeX strings. `unit` and `showUnit` are optional
+9. For `calculation`: `marks` must be **2**, **3**, or **4**. `equations` must have exactly 3 LaTeX equation strings. `correctEquation` must be a valid index (0-2). The last `markScheme` entry must always be the final answer point. `markScheme` length must equal `marks`. `tolerance` defaults to `0.01` (1% relative)
 10. For `equation-choice`: `options` must have exactly 4 LaTeX equation strings; `correctAnswer` must be a valid index (0-3); `marks` must be 1
 11. For `tick-box-table`: `columnHeaders` must have at least 2 strings; `rows` must be an array of objects each with `label` (string) and `correctColumn` (0-based index into columnHeaders); `marks` must equal the number of rows (1 mark per row); `markScheme` must have one entry per row
 12. `diagram` filenames should not include path (just the filename)

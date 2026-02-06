@@ -60,19 +60,17 @@
         },
         {
           "partLabel": "c",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "At the lowest point in the jump the student is stationary. The extension of the bungee cord is 35 m. The bungee cord behaves like a spring with spring constant 40 N/m. Calculate the energy stored in the stretched bungee cord.",
           "marks": 2,
           "correctAnswer": 24500,
           "tolerance": 0.02,
-          "unit": "J",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$E_e = \\tfrac{1}{2} k e^2$",
             "$F = k e$",
             "$E_k = \\tfrac{1}{2} m v^2$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: $E_e = 0.5 \\times 40 \\times 35^2$",
             "1 mark: $E_e = 24\\,500\\,\\text{J}$ (accept ~25,000 J)"
@@ -137,19 +135,17 @@
         },
         {
           "partLabel": "d",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "The bungee cord behaves like a spring with spring constant 78.4 N/m. The extension is 25 m. Calculate the elastic potential energy stored by the bungee cord.",
           "marks": 2,
           "correctAnswer": 24500,
           "tolerance": 0.02,
-          "unit": "J",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$E_e = \\tfrac{1}{2} k e^2$",
             "$F = k e$",
             "$E_k = \\tfrac{1}{2} m v^2$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: $E_e = 0.5 \\times 78.4 \\times 25^2$",
             "1 mark: $E_e = 24\\,500\\,\\text{J}$"
@@ -218,19 +214,17 @@
         },
         {
           "partLabel": "b",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "The mass of one rider is 62.5 kg. The height of the slide is 16.0 m. Gravitational field strength = 9.8 N/kg. Calculate the gravitational potential energy at the top of the slide.",
           "marks": 2,
           "correctAnswer": 9800,
           "tolerance": 0.02,
-          "unit": "J",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$E_p = m g h$",
             "$E_k = \\tfrac{1}{2} m v^2$",
             "$E = P t$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: $E_p = 62.5 \\times 9.8 \\times 16.0$",
             "1 mark: $E_p = 9800\\,\\text{J}$"
@@ -239,19 +233,17 @@
         },
         {
           "partLabel": "c",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "At the bottom of the slide the speed is 12 m/s. The mass is 62.5 kg. Calculate the kinetic energy at the bottom of the slide.",
           "marks": 2,
           "correctAnswer": 4500,
           "tolerance": 0.03,
-          "unit": "J",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$E_k = \\tfrac{1}{2} m v^2$",
             "$E_p = m g h$",
             "$E = P t$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: $E_k = 0.5 \\times 62.5 \\times 12^2$",
             "1 mark: $E_k = 4500\\,\\text{J}$"
@@ -290,20 +282,17 @@
         },
         {
           "partLabel": "b",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "The person moved through a vertical height of 2.0 m. Mass = 45 kg. Gravitational field strength = 9.8 N/kg. Calculate the change in gravitational potential energy.",
           "marks": 2,
           "correctAnswer": 882,
           "tolerance": 0.02,
-          "unit": "J",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$\\Delta E_p = m g h$",
-            "$E_p = m g h$",
             "$E_k = \\tfrac{1}{2} m v^2$",
             "$E = P t$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: $E_p = 45 \\times 9.8 \\times 2.0$",
             "1 mark: $E_p \\approx 880\\,\\text{J}$ (accept 882 J)"
@@ -381,19 +370,17 @@
         },
         {
           "partLabel": "c",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "At the instant the diver hits the water, the kinetic energy is 5040 J and the speed is 12 m/s. Calculate the mass of the diver.",
           "marks": 3,
           "correctAnswer": 70,
           "tolerance": 0.02,
-          "unit": "kg",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$E_k = \\tfrac{1}{2} m v^2$",
             "$E_p = m g h$",
             "$E = P t$"
           ],
-          "requiresRearrangement": true,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $5040 = 0.5 \\times m \\times 12^2$",
             "1 mark: Correct rearrangement: $m = \\frac{2E_k}{v^2}$",
@@ -560,19 +547,17 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "A volume of $2.3 \\times 10^4\\,\\text{m}^3$ of air passes the blades each second. The density of air is $1.2\\,\\text{kg/m}^3$. Calculate the mass of air passing the blades per second.",
           "marks": 3,
           "correctAnswer": 27600,
           "tolerance": 0.03,
-          "unit": "kg",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$m = \\rho V$",
             "$\\rho = \\frac{m}{V}$",
             "$E_k = \\tfrac{1}{2} m v^2$"
           ],
-          "requiresRearrangement": true,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $m = 1.2 \\times 2.3 \\times 10^4$",
             "1 mark: Correct rearrangement: $m = \\rho V$ (from $\\rho = m / V$)",

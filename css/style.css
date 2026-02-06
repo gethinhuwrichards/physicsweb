@@ -2416,6 +2416,324 @@ header .header-top-row {
 }
 
 /* ============================================
+   Calculator button grid & step inputs
+   ============================================ */
+
+/* Step actions row: = button + add step (right-aligned) */
+.calc-step-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 2px;
+    padding-left: 56px; /* align with step inputs (48px label + 8px gap) */
+}
+
+.calc-equals-btn {
+    flex-shrink: 0;
+    padding: 0 14px;
+    height: 38px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-on-accent);
+    background: var(--accent-blue);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.calc-equals-btn:hover {
+    background: var(--accent-blue-hover);
+}
+
+
+/* Calculator layout: digits+operators left, symbols right */
+.calc-btn-layout {
+    display: flex;
+    gap: 24px;
+    margin-top: 4px;
+}
+
+/* Left group: numpad + operator col + modifier col */
+.calc-btn-left {
+    display: flex;
+    gap: 5px;
+}
+
+.calc-btn-numpad {
+    display: grid;
+    grid-template-columns: repeat(3, 40px);
+    gap: 5px;
+}
+
+.calc-btn-ops {
+    display: grid;
+    grid-template-columns: 40px 40px;
+    gap: 5px;
+}
+
+.calc-btn-backspace {
+    grid-column: 1 / -1;
+    font-size: 1.3rem !important;
+}
+
+/* Symbols grid */
+.calc-btn-symbols {
+    display: grid;
+    grid-template-columns: repeat(6, 36px);
+    gap: 5px;
+    align-content: start;
+}
+
+/* How to use help box */
+.calc-help-wrapper {
+    position: relative;
+    min-width: 200px;
+    max-width: 320px;
+    width: 320px;
+    height: 167px;
+    align-self: start;
+}
+
+.calc-help-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-height: 167px;
+    padding: 12px 16px;
+    background: var(--accent-blue-muted);
+    border: 1px solid var(--accent-blue-subtle);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: max-height 0.3s ease;
+    z-index: 5;
+}
+
+.calc-help-box::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 36px;
+    background: linear-gradient(transparent, var(--accent-blue-muted));
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.calc-help-box.expanded {
+    max-height: 500px;
+}
+
+.calc-help-box.expanded::after {
+    opacity: 0;
+}
+
+.calc-help-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent-blue);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.calc-help-toggle {
+    font-size: 0.7rem;
+}
+
+.calc-help-list {
+    font-size: 0.78rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    padding-left: 18px;
+    margin: 0;
+}
+
+.calc-help-list li {
+    margin-bottom: 6px;
+}
+
+.calc-help-list li:last-child {
+    margin-bottom: 0;
+}
+
+.calc-help-example {
+    display: inline-block;
+    font-family: 'Courier New', monospace;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    background: var(--bg-surface);
+    padding: 1px 6px;
+    border-radius: 4px;
+    margin: 2px 3px 2px 0;
+}
+
+/* Shared button styles */
+.calc-btn-layout button {
+    height: 38px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    background: var(--bg-input);
+    border: 1px solid var(--border-input);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+    user-select: none;
+}
+
+.calc-btn-layout button:hover:not(:disabled) {
+    background: var(--bg-input-focus);
+    border-color: var(--accent-blue-muted);
+}
+
+.calc-btn-layout button:active:not(:disabled) {
+    background: var(--accent-blue-muted);
+}
+
+.calc-btn-layout button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.calc-btn-layout .calc-btn-operator {
+    color: var(--accent-blue);
+    font-weight: 700;
+}
+
+.calc-btn-layout .calc-btn-symbol {
+    font-style: italic;
+    color: #5b6abf;
+}
+
+.calc-btn-layout .calc-btn-symbol-greek {
+    font-style: italic;
+    color: #8b5e9b;
+}
+
+[data-theme="dark"] .calc-btn-layout .calc-btn-symbol {
+    color: #7b8fd4;
+}
+
+[data-theme="dark"] .calc-btn-layout .calc-btn-symbol-greek {
+    color: #b48cc4;
+}
+
+/* Calculation step inputs */
+.calc-steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.calc-step-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.calc-step-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-tertiary);
+    min-width: 48px;
+    flex-shrink: 0;
+}
+
+.calc-step-input {
+    flex: 1;
+    padding: 8px 12px;
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--text-primary);
+    background: var(--bg-input);
+    border: 2px solid var(--border-input);
+    border-radius: 8px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.calc-step-input:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+    background: var(--bg-input-focus);
+    box-shadow: 0 0 0 3px var(--accent-blue-muted);
+}
+
+.calc-step-input:disabled,
+.calc-step-input:read-only {
+    opacity: 0.7;
+    cursor: not-allowed;
+    background: var(--bg-surface-alt);
+}
+
+.calc-step-input::placeholder {
+    color: var(--text-tertiary);
+}
+
+.calc-remove-step-btn {
+    margin-left: auto;
+    padding: 4px 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-tertiary);
+    background: transparent;
+    border: 1px dashed var(--border-subtle);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: color 0.2s, background 0.2s, border-color 0.2s;
+}
+
+.calc-remove-step-btn:hover:not(:disabled) {
+    color: var(--color-incorrect);
+    background: var(--color-incorrect-bg);
+    border-color: var(--color-incorrect-border);
+}
+
+.calc-remove-step-btn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.calc-add-step-btn {
+    padding: 4px 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--accent-blue);
+    background: transparent;
+    border: 1px dashed var(--accent-blue-muted);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.calc-add-step-btn:hover:not(:disabled) {
+    background: var(--accent-blue-muted);
+    border-color: var(--accent-blue);
+}
+
+.calc-add-step-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.calc-message {
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+.calc-message-error {
+    color: var(--color-incorrect-text);
+    background: var(--color-incorrect-bg);
+    border: 1px solid var(--color-incorrect-border);
+}
+
+/* ============================================
    KaTeX overrides
    ============================================ */
 

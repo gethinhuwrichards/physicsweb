@@ -10,19 +10,17 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "A remote village uses a hydroelectric generator. The mass of water that passes through the generator each day is 2 500 000 kg. The change in vertical height of the water is 15.0 m. Gravitational field strength = 9.8 N/kg. Calculate the decrease in gravitational potential energy of the water.",
           "marks": 2,
           "correctAnswer": 367500000.0,
           "tolerance": 0.03,
-          "unit": "J",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$E_p = m g h$",
             "$E = P t$",
             "$P = \\frac{E}{t}$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $E_p = 2.5\\times10^6 \\times 9.8 \\times 15.0$",
             "1 mark: $E_p = 3.675\\times10^8\\,\\text{J}$ (allow 3.7×10^8 J)"
@@ -88,20 +86,17 @@
         },
         {
           "partLabel": "c",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "Using data from Figure 1, determine the percentage of electricity generated in nuclear power stations that day.",
           "marks": 2,
           "correctAnswer": 22,
           "tolerance": 0.0,
-          "unit": "%",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "percentage = (part/total) × 100",
             "$E = P t$",
-            "$E_p = m g h$",
-            "$E_k = \\tfrac{1}{2} m v^2$"
+            "$E_p = m g h$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Determine non-nuclear total shown (e.g. 78%).",
             "1 mark: Nuclear percentage = **22%**."
@@ -110,19 +105,17 @@
         },
         {
           "partLabel": "d",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "Figure 2 shows how the demand for electricity varied with time of day. What was the difference between the maximum demand and minimum demand during this day?",
           "marks": 2,
           "correctAnswer": 12500,
           "tolerance": 0.0,
-          "unit": "MW",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$E = P t$",
             "$E_p = m g h$",
             "$E_k = \\tfrac{1}{2} m v^2$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Read maximum demand ≈ 37 500 MW and minimum ≈ 25 000 MW from the graph.",
             "1 mark: Difference = **12 500 MW**."
@@ -166,19 +159,17 @@
         },
         {
           "partLabel": "b",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "A homeowner pays £7600 for solar panels and expects to save £950 each year. Calculate the pay-back time.",
           "marks": 2,
           "correctAnswer": 8,
           "tolerance": 0.0,
-          "unit": "years",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$E = P t$",
             "$E_p = m g h$",
             "$E_k = \\tfrac{1}{2} m v^2$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: pay-back time = cost ÷ annual saving = 7600 ÷ 950",
             "1 mark: pay-back time = **8 years**"
@@ -409,19 +400,17 @@
         },
         {
           "partLabel": "b",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "The mean current from the solar cells to the battery is 3.5 A. Calculate the charge flow in 3600 s.",
           "marks": 2,
           "correctAnswer": 12600,
           "tolerance": 0.0,
-          "unit": "C",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$Q = I t$",
             "$E = P t$",
             "$P = \\frac{E}{t}$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Substitution: $Q = 3.5 \\times 3600$",
             "1 mark: $Q = 12\\,600\\,\\text{C}$"
@@ -447,20 +436,17 @@
         },
         {
           "partLabel": "d",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "At one time, the total power input to the solar cells was 7500 W and the efficiency was 0.16. Calculate the useful power output.",
           "marks": 3,
           "correctAnswer": 1200,
           "tolerance": 0.02,
-          "unit": "W",
-          "showUnit": true,
-          "formulas": [
-            "$\\text{efficiency} = \\frac{\\text{useful}}{\\text{total}}$",
-            "useful = efficiency × total",
+          "equations": [
             "$\\text{efficiency} = \\frac{\\text{useful output}}{\\text{total input}}$",
-            "$E = P t$"
+            "$E = P t$",
+            "$P = \\frac{E}{t}$"
           ],
-          "requiresRearrangement": true,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: useful power = 0.16 × 7500",
             "1 mark: Correct rearrangement: useful power = efficiency × total power input",
@@ -559,19 +545,17 @@
         },
         {
           "partLabel": "b",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "A solar storage power station can supply a maximum electrical power of 140 000 kW for 15 hours. Calculate the maximum energy stored, in kWh.",
           "marks": 2,
           "correctAnswer": 2100000,
           "tolerance": 0.0,
-          "unit": "kWh",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$E = P t$",
             "$P = \\frac{E}{t}$",
             "$E_p = m g h$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Substitution: $E = 140\\,000 \\times 15$",
             "1 mark: $E = 2\\,100\\,000\\,\\text{kWh}$"
@@ -667,20 +651,17 @@
         },
         {
           "partLabel": "b",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "Each second, the micro-hydroelectricity generator transforms 80 000 J of gravitational potential energy into 60 000 J of electrical energy. Calculate the efficiency.",
           "marks": 2,
           "correctAnswer": 0.75,
           "tolerance": 0.0,
-          "unit": "",
-          "showUnit": false,
-          "formulas": [
+          "equations": [
             "$\\text{efficiency} = \\frac{\\text{useful output}}{\\text{total input}}$",
             "$E_p = m g h$",
-            "$E = P t$",
-            "$P = \\frac{E}{t}$"
+            "$E = P t$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Substitution: efficiency = 60 000 / 80 000",
             "1 mark: efficiency = **0.75** (or 75%)"

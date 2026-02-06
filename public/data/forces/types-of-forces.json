@@ -60,15 +60,17 @@
         },
         {
           "partLabel": "d",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "A scientist investigated how terminal velocity varies with diameter (graph). Estimate the terminal velocity for a hailstone with a diameter of 80 mm.",
           "marks": 2,
           "correctAnswer": 46,
           "tolerance": 0.05,
-          "unit": "m/s",
-          "showUnit": true,
-          "formulas": [],
-          "requiresRearrangement": false,
+          "equations": [
+            "$v = \\frac{d}{t}$",
+            "$W = m g$",
+            "$F = m a$"
+          ],
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct method: extrapolate the best-fit line to 80 mm on the graph.",
             "1 mark: Terminal velocity ≈ **46 m/s** (accept 44–48 m/s if consistent with the line)."
@@ -179,19 +181,17 @@
         },
         {
           "partLabel": "d",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "The cyclist applies a force of 150 N to a pedal. The distance from the pivot is 0.24 m (Figure 2). Calculate the moment about the pivot.",
           "marks": 2,
           "correctAnswer": 36,
           "tolerance": 0.0,
-          "unit": "N m",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "moment = force × distance",
             "$W = F d$",
             "$a = \\frac{\\Delta v}{t}$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Substitution: moment = 150 × 0.24",
             "1 mark: Moment = **36 N m**"
@@ -242,19 +242,17 @@
         },
         {
           "partLabel": "g",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "Determine the acceleration of the cyclist during the first 20 seconds. Use your answer from part (f) and the equation $a = \\Delta v / t$.",
           "marks": 2,
           "correctAnswer": 0.29,
           "tolerance": 0.03,
-          "unit": "m/s^2",
-          "showUnit": true,
-          "formulas": [
+          "equations": [
             "$a = \\frac{\\Delta v}{t}$",
             "$W = F d$",
             "$v = \\frac{d}{t}$"
           ],
-          "requiresRearrangement": false,
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Substitution: $a = 5.8 / 20$",
             "1 mark: $a = **0.29\\,\\text{m/s}^2**$"

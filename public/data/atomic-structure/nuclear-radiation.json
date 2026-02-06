@@ -279,14 +279,17 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "The average background radiation dose per year in the UK is 2.0 millisieverts. A dental X-ray gives a dose of 0.005 millisieverts. Calculate how many dental X-rays would give the same dose as the average background radiation per year.",
           "marks": 2,
           "correctAnswer": 400,
           "tolerance": 0.01,
-          "unit": "",
-          "showUnit": false,
-          "requiresRearrangement": false,
+          "equations": [
+            "$\\text{number} = \\frac{\\text{total dose}}{\\text{dose per X-ray}}$",
+            "$A = Z + N$",
+            "$\\text{activity} = \\frac{\\text{count}}{\\text{time}}$"
+          ],
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $\\frac{2.0}{0.005}$",
             "1 mark: Final answer: **400**"
@@ -295,14 +298,17 @@
         },
         {
           "partLabel": "b",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "An aeroplane pilot receives 0.072 mSv per day. A nuclear power station worker receives 0.00050 mSv per day. Calculate the number of days a nuclear power station worker must work to receive the same dose as a pilot in one day.",
           "marks": 2,
           "correctAnswer": 144,
           "tolerance": 0.01,
-          "unit": "days",
-          "showUnit": true,
-          "requiresRearrangement": false,
+          "equations": [
+            "$\\text{number of days} = \\frac{\\text{pilot dose per day}}{\\text{worker dose per day}}$",
+            "$A = Z + N$",
+            "$E = m c^2$"
+          ],
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $\\frac{0.072}{0.00050}$",
             "1 mark: Final answer: **144 days**"
@@ -463,14 +469,17 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "1 kg of granite has an activity of 1250 Bq. A kitchen worktop has a mass of 180 kg. Calculate the activity of the worktop.",
           "marks": 2,
           "correctAnswer": 225000,
           "tolerance": 0.01,
-          "unit": "Bq",
-          "showUnit": true,
-          "requiresRearrangement": false,
+          "equations": [
+            "$\\text{total activity} = \\text{activity per kg} \\times \\text{mass}$",
+            "$\\text{activity} = \\frac{\\text{count}}{\\text{time}}$",
+            "$A = Z + N$"
+          ],
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $1250 \\times 180$",
             "1 mark: Final answer: **225 000 Bq**"
@@ -590,14 +599,17 @@
         },
         {
           "partLabel": "b",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "A sample of polonium-210 was left for 414 days. After this time it had a mass of $1.45 \\times 10^{-4}$ g. The half-life of polonium-210 is 138 days. Calculate the initial mass of the sample.",
           "marks": 3,
           "correctAnswer": 0.00116,
           "tolerance": 0.02,
-          "unit": "g",
-          "showUnit": true,
-          "requiresRearrangement": true,
+          "equations": [
+            "$\\text{number of half-lives} = \\frac{\\text{total time}}{\\text{half-life}}$",
+            "$A = Z + N$",
+            "$E = m c^2$"
+          ],
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $\\frac{414}{138} = 3$ half-lives",
             "1 mark: Correct rearrangement: $1.45 \\times 10^{-4} \\times 2 \\times 2 \\times 2$",
@@ -615,14 +627,17 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "short-numerical",
+          "type": "calculation",
           "text": "A teacher recorded three background radiation readings: 17, 21 and 19 counts per minute. Calculate the mean value of the background radiation.",
           "marks": 2,
           "correctAnswer": 19,
           "tolerance": 0.01,
-          "unit": "counts per minute",
-          "showUnit": false,
-          "requiresRearrangement": false,
+          "equations": [
+            "$\\text{mean} = \\frac{\\text{sum of values}}{\\text{number of values}}$",
+            "$\\text{activity} = \\frac{\\text{count}}{\\text{time}}$",
+            "$A = Z + N$"
+          ],
+          "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $\\frac{17 + 21 + 19}{3}$",
             "1 mark: Final answer: **19** counts per minute"
