@@ -31,6 +31,7 @@ Questions are organized hierarchically:
 - **Subtopics**: Each main topic has subtopics (e.g., Energy → Energy Stores)
 - **Separate JSON files**: Each subtopic has its own JSON file in `public/data/<topic>/<subtopic>.json`
 - **Difficulty**: Every question has a `difficulty` field (`"easy"`, `"medium"`, or `"hard"`). Questions are sorted easy → hard in the question list.
+- **Tags**: Every question has 5 tag fields: `source` (`"original"`/`"pastpaper"`), `examBoard` (`"AQA"`/`"Edexcel"`/`"OCR"`/`"iGCSE Edexcel"`/`"iGCSE Cambridge"`), `tier` (`"combined"`/`"separate"`), `subject` (`"physics"`), `level` (`"GCSE"`). Used for future filtering.
 
 ### Data Flow
 1. `public/data/topics.json` loaded on page init (contains topic/subtopic index)

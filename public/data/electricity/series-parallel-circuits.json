@@ -8,6 +8,11 @@
       "topic": "Series and parallel circuits",
       "title": "Current and potential difference in series circuits",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -22,7 +27,7 @@
           ],
           "correctAnswer": 1,
           "markScheme": [
-            "Answer: B \u2013 The current is the same at all points in a series circuit"
+            "Answer: B – The current is the same at all points in a series circuit"
           ],
           "diagrams": []
         },
@@ -45,6 +50,11 @@
       "topic": "Series and parallel circuits",
       "title": "Potential difference in parallel circuits",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -90,6 +100,11 @@
       "topic": "Series and parallel circuits",
       "title": "Comparing series and parallel circuits",
       "difficulty": "hard",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",

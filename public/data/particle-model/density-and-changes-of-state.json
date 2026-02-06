@@ -7,25 +7,44 @@
       "topic": "Density and Changes of State",
       "title": "Measuring cylinder basics",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "single-choice",
           "text": "Figure 1 shows a measuring cylinder containing some water.<br><br>What range of volumes can be measured using the measuring cylinder?",
           "marks": 1,
-          "options": ["0.0 to 0.2 cm³", "0.0 to 2.0 cm³", "0.0 to 10.0 cm³"],
+          "options": [
+            "0.0 to 0.2 cm³",
+            "0.0 to 2.0 cm³",
+            "0.0 to 10.0 cm³"
+          ],
           "correctAnswer": 2,
-          "markScheme": ["Answer: C – 0.0 to 10.0 cm³"],
-          "diagrams": ["density-measuring-cylinder.jpeg"]
+          "markScheme": [
+            "Answer: C – 0.0 to 10.0 cm³"
+          ],
+          "diagrams": [
+            "density-measuring-cylinder.jpeg"
+          ]
         },
         {
           "partLabel": "b",
           "type": "single-choice",
           "text": "A student used the measuring cylinder to measure the volume of a metal ring. The student tied the metal ring to some very thin string and lowered the ring into the measuring cylinder.<br><br>The student could have used thick string instead of thin string. How would using thick string have affected the measured volume of the metal ring?",
           "marks": 1,
-          "options": ["The measured volume would be smaller.", "The measured volume would not be affected.", "The measured volume would be larger."],
+          "options": [
+            "The measured volume would be smaller.",
+            "The measured volume would not be affected.",
+            "The measured volume would be larger."
+          ],
           "correctAnswer": 2,
-          "markScheme": ["Answer: C – The measured volume would be larger"],
+          "markScheme": [
+            "Answer: C – The measured volume would be larger"
+          ],
           "diagrams": []
         },
         {
@@ -33,7 +52,9 @@
           "type": "extended-written",
           "text": "The table below shows the results.<table><tr><th>Volume of water in cm³</th><th>Volume of water and ring in cm³</th><th>Volume of ring in cm³</th></tr><tr><td>5.0</td><td>5.4</td><td>X</td></tr></table>Calculate value X.",
           "marks": 1,
-          "markScheme": ["1 mark: X = **0.4** (cm³)"],
+          "markScheme": [
+            "1 mark: X = **0.4** (cm³)"
+          ],
           "diagrams": []
         },
         {
@@ -41,9 +62,15 @@
           "type": "single-choice",
           "text": "The student measured the volume of the ring three times. The results were all the same.<br><br>Which of the following describes the student's results?",
           "marks": 1,
-          "options": ["The results are anomalies.", "The results are repeatable.", "The results contain random errors."],
+          "options": [
+            "The results are anomalies.",
+            "The results are repeatable.",
+            "The results contain random errors."
+          ],
           "correctAnswer": 1,
-          "markScheme": ["Answer: B – The results are repeatable"],
+          "markScheme": [
+            "Answer: B – The results are repeatable"
+          ],
           "diagrams": []
         },
         {
@@ -51,9 +78,16 @@
           "type": "single-choice",
           "text": "The student used a balance to measure the mass of the ring. The student noticed that the balance had a reading of 0.02 g when there was no object on the balance.<br><br>How should the student correct this error after the mass of the ring had been measured?",
           "marks": 1,
-          "options": ["Add 0.02 to the measurement", "Divide the measurement by 0.02", "Multiply the measurement by 0.02", "Subtract 0.02 from the measurement"],
+          "options": [
+            "Add 0.02 to the measurement",
+            "Divide the measurement by 0.02",
+            "Multiply the measurement by 0.02",
+            "Subtract 0.02 from the measurement"
+          ],
           "correctAnswer": 3,
-          "markScheme": ["Answer: D – Subtract 0.02 from the measurement"],
+          "markScheme": [
+            "Answer: D – Subtract 0.02 from the measurement"
+          ],
           "diagrams": []
         }
       ]
@@ -63,6 +97,11 @@
       "topic": "Density and Changes of State",
       "title": "States of matter",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -71,24 +110,46 @@
           "marks": 2,
           "segments": [
             "The diagram which shows the arrangement of particles in a liquid is ",
-            {"blank": 0},
+            {
+              "blank": 0
+            },
             ".<br><br>The diagram which shows the arrangement of particles in a gas is ",
-            {"blank": 1},
+            {
+              "blank": 1
+            },
             "."
           ],
-          "wordBank": ["X", "Y", "Z"],
-          "correctAnswers": ["Z", "X"],
-          "markScheme": ["1 mark: Liquid = **Z**", "1 mark: Gas = **X**"],
-          "diagrams": ["density-particle-diagrams.png"]
+          "wordBank": [
+            "X",
+            "Y",
+            "Z"
+          ],
+          "correctAnswers": [
+            "Z",
+            "X"
+          ],
+          "markScheme": [
+            "1 mark: Liquid = **Z**",
+            "1 mark: Gas = **X**"
+          ],
+          "diagrams": [
+            "density-particle-diagrams.png"
+          ]
         },
         {
           "partLabel": "b",
           "type": "single-choice",
           "text": "In a gas, the particles are...",
           "marks": 1,
-          "options": ["vibrating in fixed positions", "moving randomly", "not moving"],
+          "options": [
+            "vibrating in fixed positions",
+            "moving randomly",
+            "not moving"
+          ],
           "correctAnswer": 1,
-          "markScheme": ["Answer: B – moving randomly"],
+          "markScheme": [
+            "Answer: B – moving randomly"
+          ],
           "diagrams": []
         },
         {
@@ -96,9 +157,15 @@
           "type": "single-choice",
           "text": "In a solid, the forces between the particles are ___ the forces between the particles in a liquid.",
           "marks": 1,
-          "options": ["stronger than", "equal to", "weaker than"],
+          "options": [
+            "stronger than",
+            "equal to",
+            "weaker than"
+          ],
           "correctAnswer": 0,
-          "markScheme": ["Answer: A – stronger than"],
+          "markScheme": [
+            "Answer: A – stronger than"
+          ],
           "diagrams": []
         },
         {
@@ -106,9 +173,15 @@
           "type": "single-choice",
           "text": "During the day, a puddle of water dries up and disappears because the water particles move from the puddle into the air.<br><br>What process causes water particles to move from the puddle into the air?",
           "marks": 1,
-          "options": ["condensation", "evaporation", "radiation"],
+          "options": [
+            "condensation",
+            "evaporation",
+            "radiation"
+          ],
           "correctAnswer": 1,
-          "markScheme": ["Answer: B – evaporation"],
+          "markScheme": [
+            "Answer: B – evaporation"
+          ],
           "diagrams": []
         },
         {
@@ -116,7 +189,9 @@
           "type": "extended-written",
           "text": "Describe one change in the weather which would cause the puddle of water to dry up faster.",
           "marks": 1,
-          "markScheme": ["1 mark: Any one of: becomes **windy** / temperature **increases** (accept sunny) / less **humid**"],
+          "markScheme": [
+            "1 mark: Any one of: becomes **windy** / temperature **increases** (accept sunny) / less **humid**"
+          ],
           "diagrams": []
         }
       ]
@@ -126,25 +201,46 @@
       "topic": "Density and Changes of State",
       "title": "Heating curve and latent heat",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "single-choice",
           "text": "A large lump of ice was heated and changed state. The figure below shows how the temperature varied with time.<br><br>Which part of the figure shows when the ice was melting?",
           "marks": 1,
-          "options": ["A", "B", "C", "D"],
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
           "correctAnswer": 1,
-          "markScheme": ["Answer: B"],
-          "diagrams": ["density-heating-curve.jpeg"]
+          "markScheme": [
+            "Answer: B"
+          ],
+          "diagrams": [
+            "density-heating-curve.jpeg"
+          ]
         },
         {
           "partLabel": "b",
           "type": "single-choice",
           "text": "Which part of the figure shows when the water was boiling?",
           "marks": 1,
-          "options": ["A", "B", "C", "D"],
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
           "correctAnswer": 3,
-          "markScheme": ["Answer: D"],
+          "markScheme": [
+            "Answer: D"
+          ],
           "diagrams": []
         },
         {
@@ -152,9 +248,15 @@
           "type": "single-choice",
           "text": "Which property of the water particles changes as the temperature of the water increases?",
           "marks": 1,
-          "options": ["The kinetic energy of the particles", "The mass of each particle", "The number of particles"],
+          "options": [
+            "The kinetic energy of the particles",
+            "The mass of each particle",
+            "The number of particles"
+          ],
           "correctAnswer": 0,
-          "markScheme": ["Answer: A – The kinetic energy of the particles"],
+          "markScheme": [
+            "Answer: A – The kinetic energy of the particles"
+          ],
           "diagrams": []
         },
         {
@@ -183,12 +285,23 @@
           "marks": 1,
           "segments": [
             "A substance is heated and changes directly from a solid to a gas. The substance ",
-            {"blank": 0},
+            {
+              "blank": 0
+            },
             "."
           ],
-          "wordBank": ["condenses", "evaporates", "ionises", "sublimates"],
-          "correctAnswers": ["sublimates"],
-          "markScheme": ["1 mark: **sublimates**"],
+          "wordBank": [
+            "condenses",
+            "evaporates",
+            "ionises",
+            "sublimates"
+          ],
+          "correctAnswers": [
+            "sublimates"
+          ],
+          "markScheme": [
+            "1 mark: **sublimates**"
+          ],
           "diagrams": []
         }
       ]
@@ -198,6 +311,11 @@
       "topic": "Density and Changes of State",
       "title": "Internal energy and particle model",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -222,7 +340,9 @@
             "Particles in a liquid are larger than particles in a gas."
           ],
           "correctAnswer": 1,
-          "markScheme": ["Answer: B – Particles in a gas have more potential energy than particles in a liquid"],
+          "markScheme": [
+            "Answer: B – Particles in a gas have more potential energy than particles in a liquid"
+          ],
           "diagrams": []
         }
       ]
@@ -232,6 +352,11 @@
       "topic": "Density and Changes of State",
       "title": "Density equation and mass calculation",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -245,7 +370,9 @@
             "$P = \\frac{F}{A}$"
           ],
           "correctAnswer": 0,
-          "markScheme": ["Answer: A – $\\rho = \\frac{m}{V}$"],
+          "markScheme": [
+            "Answer: A – $\\rho = \\frac{m}{V}$"
+          ],
           "diagrams": []
         },
         {
@@ -275,6 +402,11 @@
       "topic": "Density and Changes of State",
       "title": "Fruit density investigation",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -307,7 +439,10 @@
             "Reduces the effect of random errors when using the equipment.",
             "Stops all types of error when using the equipment."
           ],
-          "correctAnswers": [0, 3],
+          "correctAnswers": [
+            0,
+            3
+          ],
           "selectCount": 2,
           "scoring": "partial",
           "markScheme": [
@@ -321,7 +456,7 @@
           "type": "calculation",
           "text": "The mass of an apple was 84.0 g. The volume of the apple was 120 cm³.<br><br>Calculate the density of the apple. Give your answer in g/cm³.",
           "marks": 2,
-          "correctAnswer": 0.70,
+          "correctAnswer": 0.7,
           "tolerance": 0.02,
           "equations": [
             "$\\rho = \\frac{m}{V}$",
@@ -342,13 +477,18 @@
       "topic": "Density and Changes of State",
       "title": "Rock density",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "calculation",
           "text": "A student wanted to determine the density of a small piece of rock. The volume of the piece of rock was 18.0 cm³. The student measured the mass of the piece of rock as 48.6 g.<br><br>Calculate the density of the rock in g/cm³.",
           "marks": 2,
-          "correctAnswer": 2.70,
+          "correctAnswer": 2.7,
           "tolerance": 0.01,
           "equations": [
             "$\\rho = \\frac{m}{V}$",
@@ -367,17 +507,28 @@
           "type": "single-choice",
           "text": "The graph below shows the densities of different types of rock.<br><br>What is the most likely type of rock that the student had?",
           "marks": 1,
-          "options": ["Basalt", "Granite", "Limestone", "Sandstone"],
+          "options": [
+            "Basalt",
+            "Granite",
+            "Limestone",
+            "Sandstone"
+          ],
           "correctAnswer": 2,
-          "markScheme": ["Answer: C – Limestone (density ≈ 2.71 g/cm³, closest to 2.70)"],
-          "diagrams": ["density-rock-bar-chart.jpeg"]
+          "markScheme": [
+            "Answer: C – Limestone (density ≈ 2.71 g/cm³, closest to 2.70)"
+          ],
+          "diagrams": [
+            "density-rock-bar-chart.jpeg"
+          ]
         },
         {
           "partLabel": "c",
           "type": "extended-written",
           "text": "Give one source of error that may have occurred when the student measured the volume of the rock.",
           "marks": 1,
-          "markScheme": ["1 mark: **Eye position** when reading the measuring cylinder (parallax error), or water level in displacement can not at level of spout, or not all displaced water collected"],
+          "markScheme": [
+            "1 mark: **Eye position** when reading the measuring cylinder (parallax error), or water level in displacement can not at level of spout, or not all displaced water collected"
+          ],
           "diagrams": []
         },
         {
@@ -385,7 +536,9 @@
           "type": "extended-written",
           "text": "How would the error you described in part (c) affect the measured volume of the rock?",
           "marks": 1,
-          "markScheme": ["1 mark: Volume would be **lower** or **higher** (depending on the error described)"],
+          "markScheme": [
+            "1 mark: Volume would be **lower** or **higher** (depending on the error described)"
+          ],
           "diagrams": []
         }
       ]
@@ -395,13 +548,20 @@
       "topic": "Density and Changes of State",
       "title": "Fruit density with rearrangement",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "extended-written",
           "text": "A student investigated the density of different fruits. The table below shows the results.<table><tr><th>Fruit</th><th>Density in g/cm³</th></tr><tr><td>Apple</td><td>0.68</td></tr><tr><td>Kiwi</td><td>1.03</td></tr><tr><td>Lemon</td><td>0.95</td></tr><tr><td>Lime</td><td>1.05</td></tr></table>The student determined the volume of each fruit using a displacement can and a measuring cylinder.<br><br>What other piece of equipment would the student need to determine the density of each fruit?",
           "marks": 1,
-          "markScheme": ["1 mark: **Balance** / scales"],
+          "markScheme": [
+            "1 mark: **Balance** / scales"
+          ],
           "diagrams": []
         },
         {
@@ -416,7 +576,9 @@
             "$P = \\frac{F}{A}$"
           ],
           "correctAnswer": 0,
-          "markScheme": ["Answer: A – $\\rho = \\frac{m}{V}$"],
+          "markScheme": [
+            "Answer: A – $\\rho = \\frac{m}{V}$"
+          ],
           "diagrams": []
         },
         {
@@ -444,7 +606,9 @@
           "type": "extended-written",
           "text": "The student only measured the volume of each fruit once. The volume measurements cannot be used to show that the method to measure volume gives precise readings.<br><br>Give the reason why.",
           "marks": 1,
-          "markScheme": ["1 mark: **Repeat readings** of volume need to be taken to show that the readings are close together (accept 'the same')"],
+          "markScheme": [
+            "1 mark: **Repeat readings** of volume need to be taken to show that the readings are close together (accept 'the same')"
+          ],
           "diagrams": []
         }
       ]
@@ -454,6 +618,11 @@
       "topic": "Density and Changes of State",
       "title": "Latent heat of vaporisation",
       "difficulty": "hard",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -492,23 +661,38 @@
       "topic": "Density and Changes of State",
       "title": "Metal ring measurements",
       "difficulty": "hard",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "single-choice",
           "text": "A student used a measuring cylinder containing some water to measure the volume of a metal ring. When measuring the volume, the student's eye was in line with the level of the water.<br><br>Which type of error would have been caused if the student's eye was not in line with the level of the water?",
           "marks": 1,
-          "options": ["Random error", "Systematic error", "Zero error"],
+          "options": [
+            "Random error",
+            "Systematic error",
+            "Zero error"
+          ],
           "correctAnswer": 0,
-          "markScheme": ["Answer: A – Random error"],
-          "diagrams": ["density-ring-measuring-cylinder.jpeg"]
+          "markScheme": [
+            "Answer: A – Random error"
+          ],
+          "diagrams": [
+            "density-ring-measuring-cylinder.jpeg"
+          ]
         },
         {
           "partLabel": "b",
           "type": "extended-written",
           "text": "The student tied a piece of thick string to the metal ring and lowered the ring into the water.<br><br>Suggest one reason why the student should have used thin string instead of thick string.",
           "marks": 1,
-          "markScheme": ["1 mark: Thin string would affect the volume measurement **less** (thin string would displace less water than thick string)"],
+          "markScheme": [
+            "1 mark: Thin string would affect the volume measurement **less** (thin string would displace less water than thick string)"
+          ],
           "diagrams": []
         },
         {
@@ -516,7 +700,9 @@
           "type": "extended-written",
           "text": "The true volume of the ring was 0.44 cm³. Even without using the string, the measuring cylinder could not give an accurate value for the volume of the ring.<br><br>Give one reason why.",
           "marks": 1,
-          "markScheme": ["1 mark: The **resolution** of the measuring cylinder is 0.2 cm³ (cannot measure to 2 decimal places)"],
+          "markScheme": [
+            "1 mark: The **resolution** of the measuring cylinder is 0.2 cm³ (cannot measure to 2 decimal places)"
+          ],
           "diagrams": []
         },
         {
@@ -524,7 +710,9 @@
           "type": "extended-written",
           "text": "The student used a balance to measure the mass of the ring. After the ring was removed from the balance, the reading on the balance was 0.02 g.<br><br>How could the student use the readings from the balance to determine the correct mass of the ring?",
           "marks": 1,
-          "markScheme": ["1 mark: **Subtract 0.02 g** from the measured value"],
+          "markScheme": [
+            "1 mark: **Subtract 0.02 g** from the measured value"
+          ],
           "diagrams": []
         },
         {
@@ -554,6 +742,11 @@
       "topic": "Density and Changes of State",
       "title": "Road ice and latent heat",
       "difficulty": "hard",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -590,8 +783,12 @@
           "type": "extended-written",
           "text": "A student investigated how the melting point of ice varies with the mass of salt added. The student added salt to crushed ice and measured the temperature at which the ice melted.<br><br>State one variable that the student should have controlled.",
           "marks": 1,
-          "markScheme": ["1 mark: **Mass of ice** (accept volume/weight/amount/quantity of ice)"],
-          "diagrams": ["density-salt-equipment.png"]
+          "markScheme": [
+            "1 mark: **Mass of ice** (accept volume/weight/amount/quantity of ice)"
+          ],
+          "diagrams": [
+            "density-salt-equipment.png"
+          ]
         },
         {
           "partLabel": "d",
@@ -605,7 +802,10 @@
             "To keep all the ice at the same temperature",
             "To reduce energy transfer from the surroundings to the ice"
           ],
-          "correctAnswers": [2, 3],
+          "correctAnswers": [
+            2,
+            3
+          ],
           "selectCount": 2,
           "scoring": "partial",
           "markScheme": [
@@ -619,7 +819,9 @@
           "type": "extended-written",
           "text": "The table below shows the data that the student obtained.<table><tr><th>Mass of salt added in grams</th><th>0</th><th>10</th><th>20</th></tr><tr><td>Melting point of ice in °C</td><td>0</td><td>−6</td><td>−16</td></tr></table>Describe the pattern shown in the table.",
           "marks": 1,
-          "markScheme": ["1 mark: **Melting point decreases** as the mass of salt is increased (accept negative correlation)"],
+          "markScheme": [
+            "1 mark: **Melting point decreases** as the mass of salt is increased (accept negative correlation)"
+          ],
           "diagrams": []
         }
       ]

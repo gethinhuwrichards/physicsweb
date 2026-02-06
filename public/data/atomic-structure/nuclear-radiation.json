@@ -7,15 +7,27 @@
       "topic": "Nuclear Radiation",
       "title": "Types of nuclear radiation",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "single-choice",
           "text": "What does an alpha particle consist of?",
           "marks": 1,
-          "options": ["2 protons and 2 electrons", "2 protons and 2 neutrons", "4 protons", "4 neutrons"],
+          "options": [
+            "2 protons and 2 electrons",
+            "2 protons and 2 neutrons",
+            "4 protons",
+            "4 neutrons"
+          ],
           "correctAnswer": 1,
-          "markScheme": ["Answer: B - An alpha particle consists of 2 protons and 2 neutrons"],
+          "markScheme": [
+            "Answer: B - An alpha particle consists of 2 protons and 2 neutrons"
+          ],
           "diagrams": []
         },
         {
@@ -23,9 +35,15 @@
           "type": "single-choice",
           "text": "What is a beta particle?",
           "marks": 1,
-          "options": ["An electron", "A neutron", "Electromagnetic radiation"],
+          "options": [
+            "An electron",
+            "A neutron",
+            "Electromagnetic radiation"
+          ],
           "correctAnswer": 0,
-          "markScheme": ["Answer: A - A beta particle is an electron emitted from the nucleus"],
+          "markScheme": [
+            "Answer: A - A beta particle is an electron emitted from the nucleus"
+          ],
           "diagrams": []
         },
         {
@@ -33,9 +51,15 @@
           "type": "single-choice",
           "text": "Which is a man-made source of background radiation?",
           "marks": 1,
-          "options": ["Cosmic rays", "Nuclear accidents", "Rocks"],
+          "options": [
+            "Cosmic rays",
+            "Nuclear accidents",
+            "Rocks"
+          ],
           "correctAnswer": 1,
-          "markScheme": ["Answer: B - Nuclear accidents are a man-made source of background radiation"],
+          "markScheme": [
+            "Answer: B - Nuclear accidents are a man-made source of background radiation"
+          ],
           "diagrams": []
         }
       ]
@@ -45,17 +69,34 @@
       "topic": "Nuclear Radiation",
       "title": "Background radiation sources",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "multi-choice",
           "text": "Which two sources are natural sources of background radiation?",
           "marks": 2,
-          "options": ["Cosmic rays", "Medical X-rays", "Nuclear power stations", "Nuclear weapons testing", "Radon gas"],
-          "correctAnswers": [0, 4],
+          "options": [
+            "Cosmic rays",
+            "Medical X-rays",
+            "Nuclear power stations",
+            "Nuclear weapons testing",
+            "Radon gas"
+          ],
+          "correctAnswers": [
+            0,
+            4
+          ],
           "selectCount": 2,
           "scoring": "partial",
-          "markScheme": ["1 mark: Cosmic rays", "1 mark: Radon gas"],
+          "markScheme": [
+            "1 mark: Cosmic rays",
+            "1 mark: Radon gas"
+          ],
           "diagrams": []
         },
         {
@@ -63,18 +104,33 @@
           "type": "tick-box-table",
           "text": "Which sources of background radiation are natural and which are man-made?",
           "marks": 4,
-          "columnHeaders": ["Natural", "Man-made"],
+          "columnHeaders": [
+            "Natural",
+            "Man-made"
+          ],
           "rows": [
-            { "label": "Cosmic rays", "correctColumn": 0 },
-            { "label": "Medical X-rays", "correctColumn": 1 },
-            { "label": "Nuclear accidents", "correctColumn": 1 },
-            { "label": "Radon gas", "correctColumn": 0 }
+            {
+              "label": "Cosmic rays",
+              "correctColumn": 0
+            },
+            {
+              "label": "Medical X-rays",
+              "correctColumn": 1
+            },
+            {
+              "label": "Nuclear accidents",
+              "correctColumn": 1
+            },
+            {
+              "label": "Radon gas",
+              "correctColumn": 0
+            }
           ],
           "markScheme": [
-            "1 mark: Cosmic rays \u2014 Natural",
-            "1 mark: Medical X-rays \u2014 Man-made",
-            "1 mark: Nuclear accidents \u2014 Man-made",
-            "1 mark: Radon gas \u2014 Natural"
+            "1 mark: Cosmic rays — Natural",
+            "1 mark: Medical X-rays — Man-made",
+            "1 mark: Nuclear accidents — Man-made",
+            "1 mark: Radon gas — Natural"
           ],
           "diagrams": []
         }
@@ -85,15 +141,27 @@
       "topic": "Nuclear Radiation",
       "title": "Measuring background radiation",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "single-choice",
           "text": "A GM tube recorded 16, 21 and 18 counts in 1 minute on 3 separate occasions when no radioactive source was present. What is the most likely reason for the readings being different each time?",
           "marks": 1,
-          "options": ["Radioactive decay is a random process", "The air pressure in the laboratory increased", "The background radiation increased during the day", "The temperature in the laboratory decreased"],
+          "options": [
+            "Radioactive decay is a random process",
+            "The air pressure in the laboratory increased",
+            "The background radiation increased during the day",
+            "The temperature in the laboratory decreased"
+          ],
           "correctAnswer": 0,
-          "markScheme": ["Answer: A - Radioactive decay is a random process, so background readings vary"],
+          "markScheme": [
+            "Answer: A - Radioactive decay is a random process, so background readings vary"
+          ],
           "diagrams": []
         },
         {
@@ -101,9 +169,15 @@
           "type": "single-choice",
           "text": "A radioactive source is stored in a box. Why does storing it in a lead-lined box reduce the risk to people nearby?",
           "marks": 1,
-          "options": ["The lead lining absorbs the emitted radiation", "The lead lining reflects the emitted radiation", "The lead lining transmits the emitted radiation"],
+          "options": [
+            "The lead lining absorbs the emitted radiation",
+            "The lead lining reflects the emitted radiation",
+            "The lead lining transmits the emitted radiation"
+          ],
           "correctAnswer": 0,
-          "markScheme": ["Answer: A - Lead absorbs the emitted radiation, reducing exposure"],
+          "markScheme": [
+            "Answer: A - Lead absorbs the emitted radiation, reducing exposure"
+          ],
           "diagrams": []
         },
         {
@@ -111,9 +185,16 @@
           "type": "single-choice",
           "text": "A teacher measured a background count of 18 counts per minute. They then placed a radioactive source near the GM tube and the counter recorded 159 counts in 1 minute. How should the teacher calculate the count rate from the source alone?",
           "marks": 1,
-          "options": ["Add the background count to 159", "Divide the background count by 159", "Multiply the background count by 159", "Subtract the background count from 159"],
+          "options": [
+            "Add the background count to 159",
+            "Divide the background count by 159",
+            "Multiply the background count by 159",
+            "Subtract the background count from 159"
+          ],
           "correctAnswer": 3,
-          "markScheme": ["Answer: D - Subtract the background count from 159 to get the count from the source alone"],
+          "markScheme": [
+            "Answer: D - Subtract the background count from 159 to get the count from the source alone"
+          ],
           "diagrams": []
         }
       ]
@@ -123,15 +204,27 @@
       "topic": "Nuclear Radiation",
       "title": "Half-life and activity",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "single-choice",
           "text": "What is the activity of a radioactive source after one half-life?",
           "marks": 1,
-          "options": ["A quarter of the original activity", "Half the original activity", "Double the original activity", "Zero"],
+          "options": [
+            "A quarter of the original activity",
+            "Half the original activity",
+            "Double the original activity",
+            "Zero"
+          ],
           "correctAnswer": 1,
-          "markScheme": ["Answer: B - After one half-life the activity is half of the original activity"],
+          "markScheme": [
+            "Answer: B - After one half-life the activity is half of the original activity"
+          ],
           "diagrams": []
         },
         {
@@ -139,9 +232,15 @@
           "type": "single-choice",
           "text": "What does 'half-life' mean?",
           "marks": 1,
-          "options": ["Half the time taken for all nuclei to decay", "The time taken for half the nuclei to decay", "The time taken for one nucleus to split in half"],
+          "options": [
+            "Half the time taken for all nuclei to decay",
+            "The time taken for half the nuclei to decay",
+            "The time taken for one nucleus to split in half"
+          ],
           "correctAnswer": 1,
-          "markScheme": ["Answer: B - Half-life is the time taken for half the nuclei to decay"],
+          "markScheme": [
+            "Answer: B - Half-life is the time taken for half the nuclei to decay"
+          ],
           "diagrams": []
         },
         {
@@ -149,9 +248,15 @@
           "type": "single-choice",
           "text": "How does the activity of a radioactive source affect the risk of harm to a person nearby?",
           "marks": 1,
-          "options": ["The smaller the activity, the greater the risk", "The activity does not affect the risk", "The greater the activity, the greater the risk"],
+          "options": [
+            "The smaller the activity, the greater the risk",
+            "The activity does not affect the risk",
+            "The greater the activity, the greater the risk"
+          ],
           "correctAnswer": 2,
-          "markScheme": ["Answer: C - The greater the activity, the greater the risk of harm"],
+          "markScheme": [
+            "Answer: C - The greater the activity, the greater the risk of harm"
+          ],
           "diagrams": []
         }
       ]
@@ -161,6 +266,11 @@
       "topic": "Nuclear Radiation",
       "title": "Carbon isotopes and stability",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -169,14 +279,29 @@
           "marks": 2,
           "segments": [
             "The nucleus of a carbon-12 atom and the nucleus of a carbon-14 atom have the same number of ",
-            { "blank": 0 },
+            {
+              "blank": 0
+            },
             ". The nucleus of a carbon-12 atom and the nucleus of a carbon-14 atom have a different number of ",
-            { "blank": 1 },
+            {
+              "blank": 1
+            },
             "."
           ],
-          "wordBank": ["alpha particles", "electrons", "neutrons", "protons"],
-          "correctAnswers": ["protons", "neutrons"],
-          "markScheme": ["1 mark: protons", "1 mark: neutrons"],
+          "wordBank": [
+            "alpha particles",
+            "electrons",
+            "neutrons",
+            "protons"
+          ],
+          "correctAnswers": [
+            "protons",
+            "neutrons"
+          ],
+          "markScheme": [
+            "1 mark: protons",
+            "1 mark: neutrons"
+          ],
           "diagrams": []
         },
         {
@@ -184,9 +309,16 @@
           "type": "single-choice",
           "text": "The table shows the half-lives of some carbon isotopes.<table><tr><th>Isotope</th><th>Half-life (seconds)</th></tr><tr><td>Carbon-15</td><td>2.45</td></tr><tr><td>Carbon-16</td><td>0.75</td></tr><tr><td>Carbon-17</td><td>0.19</td></tr><tr><td>Carbon-18</td><td>0.09</td></tr></table>Which isotope is the least stable?",
           "marks": 1,
-          "options": ["Carbon-15", "Carbon-16", "Carbon-17", "Carbon-18"],
+          "options": [
+            "Carbon-15",
+            "Carbon-16",
+            "Carbon-17",
+            "Carbon-18"
+          ],
           "correctAnswer": 3,
-          "markScheme": ["Answer: D - Carbon-18 has the shortest half-life (0.09 s) so it is the least stable"],
+          "markScheme": [
+            "Answer: D - Carbon-18 has the shortest half-life (0.09 s) so it is the least stable"
+          ],
           "diagrams": []
         }
       ]
@@ -196,15 +328,27 @@
       "topic": "Nuclear Radiation",
       "title": "Identifying radiation types from experiments",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "single-choice",
           "text": "A teacher measured the count rate from four radioactive rocks with different materials placed between the source and the detector. The results are shown in the table.<table><tr><th></th><th>No material</th><th>Paper</th><th>Aluminium</th></tr><tr><td>No rock</td><td>21</td><td>20</td><td>22</td></tr><tr><td>Rock A</td><td>450</td><td>448</td><td>18</td></tr><tr><td>Rock B</td><td>385</td><td>387</td><td>356</td></tr><tr><td>Rock C</td><td>870</td><td>21</td><td>20</td></tr><tr><td>Rock D</td><td>620</td><td>473</td><td>214</td></tr></table>Which rock emitted only alpha radiation?",
           "marks": 1,
-          "options": ["Rock A", "Rock B", "Rock C", "Rock D"],
+          "options": [
+            "Rock A",
+            "Rock B",
+            "Rock C",
+            "Rock D"
+          ],
           "correctAnswer": 2,
-          "markScheme": ["Answer: C - Rock C's count dropped to background level after paper was placed, indicating only alpha radiation"],
+          "markScheme": [
+            "Answer: C - Rock C's count dropped to background level after paper was placed, indicating only alpha radiation"
+          ],
           "diagrams": []
         },
         {
@@ -212,7 +356,9 @@
           "type": "extended-written",
           "text": "Give a reason for your answer to part (a).",
           "marks": 1,
-          "markScheme": ["1 mark: Alpha radiation is stopped by (one sheet of) **paper**, so the count dropped to background level after paper was placed between source and detector"],
+          "markScheme": [
+            "1 mark: Alpha radiation is stopped by (one sheet of) **paper**, so the count dropped to background level after paper was placed between source and detector"
+          ],
           "diagrams": []
         },
         {
@@ -220,9 +366,16 @@
           "type": "single-choice",
           "text": "Which rock emitted only beta radiation?",
           "marks": 1,
-          "options": ["Rock A", "Rock B", "Rock C", "Rock D"],
+          "options": [
+            "Rock A",
+            "Rock B",
+            "Rock C",
+            "Rock D"
+          ],
           "correctAnswer": 0,
-          "markScheme": ["Answer: A - Rock A's count was not stopped by paper but dropped to background level after aluminium was placed"],
+          "markScheme": [
+            "Answer: A - Rock A's count was not stopped by paper but dropped to background level after aluminium was placed"
+          ],
           "diagrams": []
         },
         {
@@ -230,7 +383,9 @@
           "type": "extended-written",
           "text": "Give a reason for your answer to part (c).",
           "marks": 1,
-          "markScheme": ["1 mark: Beta radiation is stopped by (a thick) **aluminium** sheet, so the count dropped to background after aluminium was placed"],
+          "markScheme": [
+            "1 mark: Beta radiation is stopped by (a thick) **aluminium** sheet, so the count dropped to background after aluminium was placed"
+          ],
           "diagrams": []
         }
       ]
@@ -240,15 +395,26 @@
       "topic": "Nuclear Radiation",
       "title": "Safety and contamination",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "single-choice",
           "text": "Which precaution would prevent contamination by radioactive rocks?",
           "marks": 1,
-          "options": ["Displaying the radiation hazard symbol", "Handling the rocks with clean hands", "Wearing protective gloves"],
+          "options": [
+            "Displaying the radiation hazard symbol",
+            "Handling the rocks with clean hands",
+            "Wearing protective gloves"
+          ],
           "correctAnswer": 2,
-          "markScheme": ["Answer: C - Wearing protective gloves prevents radioactive material from contaminating the skin"],
+          "markScheme": [
+            "Answer: C - Wearing protective gloves prevents radioactive material from contaminating the skin"
+          ],
           "diagrams": []
         },
         {
@@ -256,9 +422,15 @@
           "type": "single-choice",
           "text": "Why are workers required to walk across a sticky floor before leaving a nuclear power station?",
           "marks": 1,
-          "options": ["To remove alpha particles from their shoes", "To remove gamma radiation from their shoes", "To remove radioactive dust from their shoes"],
+          "options": [
+            "To remove alpha particles from their shoes",
+            "To remove gamma radiation from their shoes",
+            "To remove radioactive dust from their shoes"
+          ],
           "correctAnswer": 2,
-          "markScheme": ["Answer: C - The sticky floor removes radioactive dust (contamination) from shoes"],
+          "markScheme": [
+            "Answer: C - The sticky floor removes radioactive dust (contamination) from shoes"
+          ],
           "diagrams": []
         },
         {
@@ -266,7 +438,9 @@
           "type": "extended-written",
           "text": "An alpha particle is the same as the nucleus of a helium atom. How is an alpha particle different from a helium atom?",
           "marks": 1,
-          "markScheme": ["1 mark: Has no **electrons** (or: alpha has a positive charge / helium atom has no overall charge)"],
+          "markScheme": [
+            "1 mark: Has no **electrons** (or: alpha has a positive charge / helium atom has no overall charge)"
+          ],
           "diagrams": []
         }
       ]
@@ -276,6 +450,11 @@
       "topic": "Nuclear Radiation",
       "title": "Radiation dose calculations",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -322,6 +501,11 @@
       "topic": "Nuclear Radiation",
       "title": "Radon and background radiation",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -352,15 +536,26 @@
       "topic": "Nuclear Radiation",
       "title": "Smoke detectors and half-life",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "single-choice",
           "text": "A smoke detector contains americium-241 which emits alpha particles. Americium-241 has a half-life of 432 years. Which statement gives a reason why the americium-241 in the smoke detector will not need replacing?",
           "marks": 1,
-          "options": ["The alpha particles have a low energy", "People replace smoke detectors every few years", "Americium-241 has a long half-life"],
+          "options": [
+            "The alpha particles have a low energy",
+            "People replace smoke detectors every few years",
+            "Americium-241 has a long half-life"
+          ],
           "correctAnswer": 2,
-          "markScheme": ["Answer: C - Americium-241 has a long half-life so its activity barely changes over many years"],
+          "markScheme": [
+            "Answer: C - Americium-241 has a long half-life so its activity barely changes over many years"
+          ],
           "diagrams": []
         },
         {
@@ -368,7 +563,9 @@
           "type": "extended-written",
           "text": "Why do people need to know that a smoke detector contains a radioactive material?",
           "marks": 1,
-          "markScheme": ["1 mark: Alpha particles / radiation is **harmful** (e.g. can cause cancer), so people can dispose of it safely or make an informed choice"],
+          "markScheme": [
+            "1 mark: Alpha particles / radiation is **harmful** (e.g. can cause cancer), so people can dispose of it safely or make an informed choice"
+          ],
           "diagrams": []
         }
       ]
@@ -378,6 +575,11 @@
       "topic": "Nuclear Radiation",
       "title": "Radon-222 and alpha decay",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -386,14 +588,29 @@
           "marks": 2,
           "segments": [
             "The mass number is the total number of ",
-            { "blank": 0 },
+            {
+              "blank": 0
+            },
             " and ",
-            { "blank": 1 },
+            {
+              "blank": 1
+            },
             " inside an atom."
           ],
-          "wordBank": ["electrons", "neutrons", "protons", "quarks"],
-          "correctAnswers": ["protons", "neutrons"],
-          "markScheme": ["1 mark: protons", "1 mark: neutrons"],
+          "wordBank": [
+            "electrons",
+            "neutrons",
+            "protons",
+            "quarks"
+          ],
+          "correctAnswers": [
+            "protons",
+            "neutrons"
+          ],
+          "markScheme": [
+            "1 mark: protons",
+            "1 mark: neutrons"
+          ],
           "diagrams": []
         },
         {
@@ -401,7 +618,9 @@
           "type": "extended-written",
           "text": "Radon-222 has a mass number of 222 and an atomic number of 86. How many protons are in an atom of radon-222?",
           "marks": 1,
-          "markScheme": ["1 mark: **86**"],
+          "markScheme": [
+            "1 mark: **86**"
+          ],
           "diagrams": []
         },
         {
@@ -409,7 +628,9 @@
           "type": "extended-written",
           "text": "When radon-222 emits an alpha particle, it changes to polonium-218. An alpha particle consists of 2 protons and 2 neutrons. How is the nucleus of polonium-218 different from the nucleus of radon-222?",
           "marks": 1,
-          "markScheme": ["1 mark: Two fewer **protons** and two fewer **neutrons** (or: 84 protons and 134 neutrons)"],
+          "markScheme": [
+            "1 mark: Two fewer **protons** and two fewer **neutrons** (or: 84 protons and 134 neutrons)"
+          ],
           "diagrams": []
         }
       ]
@@ -419,13 +640,20 @@
       "topic": "Nuclear Radiation",
       "title": "Food irradiation",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "extended-written",
           "text": "What is gamma radiation?",
           "marks": 1,
-          "markScheme": ["1 mark: **Electromagnetic** wave/radiation"],
+          "markScheme": [
+            "1 mark: **Electromagnetic** wave/radiation"
+          ],
           "diagrams": []
         },
         {
@@ -433,7 +661,9 @@
           "type": "extended-written",
           "text": "Food can be treated with gamma radiation to kill bacteria. Why must a source that emits gamma radiation be used rather than alpha or beta?",
           "marks": 1,
-          "markScheme": ["1 mark: Gamma can **penetrate** the crate/box/packaging"],
+          "markScheme": [
+            "1 mark: Gamma can **penetrate** the crate/box/packaging"
+          ],
           "diagrams": []
         },
         {
@@ -443,12 +673,22 @@
           "marks": 1,
           "segments": [
             "An atom of caesium-137 has two more ",
-            { "blank": 0 },
+            {
+              "blank": 0
+            },
             " than an atom of caesium-135."
           ],
-          "wordBank": ["electrons", "neutrons", "protons"],
-          "correctAnswers": ["neutrons"],
-          "markScheme": ["1 mark: neutrons"],
+          "wordBank": [
+            "electrons",
+            "neutrons",
+            "protons"
+          ],
+          "correctAnswers": [
+            "neutrons"
+          ],
+          "markScheme": [
+            "1 mark: neutrons"
+          ],
           "diagrams": []
         },
         {
@@ -456,7 +696,9 @@
           "type": "extended-written",
           "text": "The food treatment area has thick concrete walls. How do the concrete walls reduce the radiation hazard to workers outside the area?",
           "marks": 1,
-          "markScheme": ["1 mark: Concrete **absorbs** the gamma radiation"],
+          "markScheme": [
+            "1 mark: Concrete **absorbs** the gamma radiation"
+          ],
           "diagrams": []
         }
       ]
@@ -466,6 +708,11 @@
       "topic": "Nuclear Radiation",
       "title": "Granite worktop radiation",
       "difficulty": "hard",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -504,15 +751,27 @@
       "topic": "Nuclear Radiation",
       "title": "Uranium decay and age of the Earth",
       "difficulty": "hard",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "single-choice",
           "text": "Uranium-238 decays by emitting radiation and changing into thorium-234. What type of radiation is emitted?",
           "marks": 1,
-          "options": ["Alpha particle", "Beta particle", "Gamma ray", "Neutron"],
+          "options": [
+            "Alpha particle",
+            "Beta particle",
+            "Gamma ray",
+            "Neutron"
+          ],
           "correctAnswer": 0,
-          "markScheme": ["Answer: A - The mass number decreases by 4 and the atomic number by 2, indicating alpha emission"],
+          "markScheme": [
+            "Answer: A - The mass number decreases by 4 and the atomic number by 2, indicating alpha emission"
+          ],
           "diagrams": []
         },
         {
@@ -520,7 +779,9 @@
           "type": "extended-written",
           "text": "From which part of a uranium-238 atom is the radiation emitted?",
           "marks": 1,
-          "markScheme": ["1 mark: The (unstable) **nucleus**"],
+          "markScheme": [
+            "1 mark: The (unstable) **nucleus**"
+          ],
           "diagrams": []
         },
         {
@@ -528,7 +789,9 @@
           "type": "extended-written",
           "text": "Uranium-235 is another isotope of uranium. How is an atom of uranium-235 similar to an atom of uranium-238?",
           "marks": 1,
-          "markScheme": ["1 mark: Same number of **protons** (or same atomic number, or both have 92 protons)"],
+          "markScheme": [
+            "1 mark: Same number of **protons** (or same atomic number, or both have 92 protons)"
+          ],
           "diagrams": []
         },
         {
@@ -536,7 +799,9 @@
           "type": "extended-written",
           "text": "Uranium-238 has a half-life of 4500 million years. When the Earth was formed, there was twice as much uranium-238 as there is now. What is the age of the Earth?",
           "marks": 1,
-          "markScheme": ["1 mark: **4500 million years**"],
+          "markScheme": [
+            "1 mark: **4500 million years**"
+          ],
           "diagrams": []
         }
       ]
@@ -546,13 +811,20 @@
       "topic": "Nuclear Radiation",
       "title": "Beta decay and alpha decay",
       "difficulty": "hard",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "extended-written",
           "text": "What is the mass number of an atom?",
           "marks": 1,
-          "markScheme": ["1 mark: Total number of **protons** plus **neutrons** (or number of nucleons)"],
+          "markScheme": [
+            "1 mark: Total number of **protons** plus **neutrons** (or number of nucleons)"
+          ],
           "diagrams": []
         },
         {
@@ -584,6 +856,11 @@
       "topic": "Nuclear Radiation",
       "title": "Contamination and Po-210",
       "difficulty": "hard",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -624,6 +901,11 @@
       "topic": "Nuclear Radiation",
       "title": "Detecting radiation types",
       "difficulty": "hard",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -649,9 +931,15 @@
           "type": "single-choice",
           "text": "The teacher put a powerful magnet between the radioactive source and the GM tube. The count rate stayed the same. What type of radiation was being emitted?",
           "marks": 1,
-          "options": ["Alpha", "Beta", "Gamma"],
+          "options": [
+            "Alpha",
+            "Beta",
+            "Gamma"
+          ],
           "correctAnswer": 2,
-          "markScheme": ["Answer: C - Gamma radiation has no charge so is not deflected by a magnetic field"],
+          "markScheme": [
+            "Answer: C - Gamma radiation has no charge so is not deflected by a magnetic field"
+          ],
           "diagrams": []
         },
         {

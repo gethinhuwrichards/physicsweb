@@ -7,6 +7,11 @@
       "topic": "Forces and terminal velocity",
       "title": "Hailstones: weight, drag and terminal velocity",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -23,7 +28,9 @@
           "markScheme": [
             "Answer: B — gravitational force."
           ],
-          "diagrams": ["q1_hailstones_fig1.jpeg"]
+          "diagrams": [
+            "q1_hailstones_fig1.jpeg"
+          ]
         },
         {
           "partLabel": "b",
@@ -75,7 +82,9 @@
             "1 mark: Correct method: extrapolate the best-fit line to 80 mm on the graph.",
             "1 mark: Terminal velocity ≈ **46 m/s** (accept 44–48 m/s if consistent with the line)."
           ],
-          "diagrams": ["q1_terminal_velocity_graph.jpeg"]
+          "diagrams": [
+            "q1_terminal_velocity_graph.jpeg"
+          ]
         },
         {
           "partLabel": "e",
@@ -109,7 +118,9 @@
           "markScheme": [
             "Answer: B — 0.48 N."
           ],
-          "diagrams": ["q1_hailstone_forces.jpeg"]
+          "diagrams": [
+            "q1_hailstone_forces.jpeg"
+          ]
         },
         {
           "partLabel": "g",
@@ -128,6 +139,11 @@
       "topic": "Forces, moments and motion",
       "title": "Cyclist: balanced forces, moments and acceleration",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -144,7 +160,9 @@
           "markScheme": [
             "Answer: B — friction."
           ],
-          "diagrams": ["q2_cyclist_forces.jpeg"]
+          "diagrams": [
+            "q2_cyclist_forces.jpeg"
+          ]
         },
         {
           "partLabel": "b",
@@ -185,7 +203,7 @@
           "text": "The cyclist applies a force of 150 N to a pedal. The distance from the pivot is 0.24 m (Figure 2). Calculate the moment about the pivot.",
           "marks": 2,
           "correctAnswer": 36,
-          "tolerance": 0.0,
+          "tolerance": 0,
           "equations": [
             "moment = force × distance",
             "$W = F d$",
@@ -196,7 +214,9 @@
             "1 mark: Substitution: moment = 150 × 0.24",
             "1 mark: Moment = **36 N m**"
           ],
-          "diagrams": ["q2_pedal_distance.jpeg"]
+          "diagrams": [
+            "q2_pedal_distance.jpeg"
+          ]
         },
         {
           "partLabel": "e",
@@ -221,7 +241,9 @@
           "markScheme": [
             "1 mark: **chain**"
           ],
-          "diagrams": ["q2_chain_drive.jpeg"]
+          "diagrams": [
+            "q2_chain_drive.jpeg"
+          ]
         },
         {
           "partLabel": "f",
@@ -238,7 +260,9 @@
           "markScheme": [
             "Answer: D — 5.8 m/s."
           ],
-          "diagrams": ["q2_velocity_time_graph.jpeg"]
+          "diagrams": [
+            "q2_velocity_time_graph.jpeg"
+          ]
         },
         {
           "partLabel": "g",
@@ -257,7 +281,9 @@
             "1 mark: Substitution: $a = 5.8 / 20$",
             "1 mark: $a = **0.29\\,\\text{m/s}^2**$"
           ],
-          "diagrams": ["q2_equation_snip.jpeg"]
+          "diagrams": [
+            "q2_equation_snip.jpeg"
+          ]
         },
         {
           "partLabel": "h",
@@ -291,6 +317,11 @@
       "topic": "Forces and units",
       "title": "Gravity, newtons and balanced forces",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -339,6 +370,11 @@
       "topic": "Centripetal force and stability",
       "title": "Car around a bend and preventing rollover",
       "difficulty": "hard",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -355,7 +391,9 @@
           "markScheme": [
             "Answer: D."
           ],
-          "diagrams": ["q5_bend_directions.png"]
+          "diagrams": [
+            "q5_bend_directions.png"
+          ]
         },
         {
           "partLabel": "b",
@@ -386,7 +424,9 @@
             "1 mark: **Wide base / wide wheelbase**.",
             "1 mark: **Low centre of mass/centre of gravity**."
           ],
-          "diagrams": ["q5_racing_car.png"]
+          "diagrams": [
+            "q5_racing_car.png"
+          ]
         }
       ]
     }

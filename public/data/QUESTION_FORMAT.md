@@ -32,6 +32,11 @@ Each subtopic has its own JSON file in `public/data/<topic>/<subtopic>.json`:
 | `topic` | string | Yes | Topic name |
 | `title` | string | Yes | Display title for the question |
 | `difficulty` | string | Yes | One of: `"easy"`, `"medium"`, `"hard"` |
+| `source` | string | Yes | `"original"` or `"pastpaper"` — see Tags section below |
+| `examBoard` | string | Yes | `"AQA"`, `"Edexcel"`, `"OCR"`, `"iGCSE Edexcel"`, or `"iGCSE Cambridge"` |
+| `tier` | string | Yes | `"combined"` or `"separate"` |
+| `subject` | string | Yes | `"physics"` (future: `"biology"`, `"chemistry"`) |
+| `level` | string | Yes | `"GCSE"` (future: `"KS3"`, `"A-level"`, `"IB"`) |
 | `parts` | Part[] | Yes | Array of question parts (minimum 1) |
 
 ### Difficulty Classification
@@ -45,6 +50,18 @@ Every question **must** have a `difficulty` field. Questions are displayed in th
 | `"hard"` | Requires evaluation, multi-step calculations, or extended analysis. Typically 5+ total marks. Includes complex extended-written (evaluate/discuss), calculations with rearrangement, or questions combining several concepts. |
 
 These are guidelines — use judgement. A 2-mark question requiring tricky reasoning can be `"medium"`, and a 6-mark question with simple recall points can still be `"medium"`.
+
+### Tags
+
+Every question has 5 tag fields for filtering and organisation:
+
+| Tag | Allowed Values | Notes |
+|-----|---------------|-------|
+| `source` | `"original"`, `"pastpaper"` | Mutually exclusive. Past papers are real exam board questions; original are custom-written. |
+| `examBoard` | `"AQA"`, `"Edexcel"`, `"OCR"`, `"iGCSE Edexcel"`, `"iGCSE Cambridge"` | Primary specification. One per question. |
+| `tier` | `"combined"`, `"separate"` | Combined science content is a subset of separate science. When filtering for separate, combined questions must also be shown. The reverse is not true. |
+| `subject` | `"physics"` | Future: `"biology"`, `"chemistry"` |
+| `level` | `"GCSE"` | Future: `"KS3"`, `"A-level"`, `"IB"` |
 
 ### Question ID Rules
 
@@ -461,6 +478,11 @@ Each string in `markScheme` should describe one marking point:
   "topic": "Energy stores",
   "title": "Cyclist energy stores",
   "difficulty": "easy",
+  "source": "original",
+  "examBoard": "AQA",
+  "tier": "combined",
+  "subject": "physics",
+  "level": "GCSE",
   "parts": [
     {
       "partLabel": "a",

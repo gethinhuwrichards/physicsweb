@@ -7,6 +7,11 @@
       "topic": "Resultant force and work done",
       "title": "Pushing a trolley at constant speed",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -22,7 +27,9 @@
           "markScheme": [
             "Answer: resultant force."
           ],
-          "diagrams": ["trolley.png"]
+          "diagrams": [
+            "trolley.png"
+          ]
         },
         {
           "partLabel": "b",
@@ -30,7 +37,7 @@
           "text": "The trolley is pushed at a constant speed for 80 m with a total force of 50 N. Calculate the work done.",
           "marks": 2,
           "correctAnswer": 4000,
-          "tolerance": 0.0,
+          "tolerance": 0,
           "equations": [
             "$W = F d$",
             "$E = P t$",
@@ -50,6 +57,11 @@
       "topic": "Balanced and unbalanced forces",
       "title": "Sky-diver in free fall",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -81,7 +93,9 @@
             "1 mark: **air resistance**",
             "1 mark: **gravity**"
           ],
-          "diagrams": ["skydiver.png"]
+          "diagrams": [
+            "skydiver.png"
+          ]
         },
         {
           "partLabel": "b",
@@ -100,6 +114,11 @@
       "topic": "Resultant force and motion",
       "title": "Car motion from force diagrams",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -111,7 +130,9 @@
             "1 mark: B: **accelerating** (speeding up).",
             "1 mark: C: **decelerating** (slowing down)."
           ],
-          "diagrams": ["car-forces.png"]
+          "diagrams": [
+            "car-forces.png"
+          ]
         }
       ]
     },
@@ -120,6 +141,11 @@
       "topic": "Resultant force in fluids",
       "title": "Forces on a swimmer",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -129,7 +155,9 @@
           "markScheme": [
             "1 mark: **120 N** (forces are balanced at constant speed)."
           ],
-          "diagrams": ["swimmer.png"]
+          "diagrams": [
+            "swimmer.png"
+          ]
         },
         {
           "partLabel": "b",
@@ -149,6 +177,11 @@
       "topic": "Forces and motion states",
       "title": "Forces on a van",
       "difficulty": "hard",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -179,7 +212,9 @@
             "1 mark: Constant speed — A = E",
             "1 mark: Slowing down — A < E"
           ],
-          "diagrams": ["van-forces.png"]
+          "diagrams": [
+            "van-forces.png"
+          ]
         }
       ]
     },
@@ -188,6 +223,11 @@
       "topic": "Resultant force and acceleration",
       "title": "Aircraft acceleration on runway",
       "difficulty": "hard",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -204,7 +244,9 @@
           "markScheme": [
             "Answer: A — $F = m a$."
           ],
-          "diagrams": ["aircraft.png"]
+          "diagrams": [
+            "aircraft.png"
+          ]
         }
       ]
     }

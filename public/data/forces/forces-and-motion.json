@@ -7,15 +7,27 @@
       "topic": "Forces and Motion",
       "title": "Resultant forces",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "single-choice",
           "text": "The diagram shows two forces acting on an object: 6 N to the right and 2 N to the left. What is the resultant force?",
           "marks": 1,
-          "options": ["8 N to the right", "8 N to the left", "4 N to the right", "4 N to the left"],
+          "options": [
+            "8 N to the right",
+            "8 N to the left",
+            "4 N to the right",
+            "4 N to the left"
+          ],
           "correctAnswer": 2,
-          "markScheme": ["Answer: C – The resultant force is 6 − 2 = 4 N to the right"],
+          "markScheme": [
+            "Answer: C – The resultant force is 6 − 2 = 4 N to the right"
+          ],
           "diagrams": []
         },
         {
@@ -25,13 +37,24 @@
           "marks": 2,
           "segments": [
             "A BASE jumper accelerates forwards when force A is ",
-            { "blank": 0 },
+            {
+              "blank": 0
+            },
             " force B. The BASE jumper falls at constant speed when force C is ",
-            { "blank": 1 },
+            {
+              "blank": 1
+            },
             " force D."
           ],
-          "wordBank": ["bigger than", "equal to", "smaller than"],
-          "correctAnswers": ["bigger than", "equal to"],
+          "wordBank": [
+            "bigger than",
+            "equal to",
+            "smaller than"
+          ],
+          "correctAnswers": [
+            "bigger than",
+            "equal to"
+          ],
           "markScheme": [
             "1 mark: bigger than",
             "1 mark: equal to"
@@ -45,6 +68,11 @@
       "topic": "Forces and Motion",
       "title": "Speed, velocity and acceleration basics",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -53,11 +81,19 @@
           "marks": 1,
           "segments": [
             "From B to C the car moves at constant velocity. The forward driving force is ",
-            { "blank": 0 },
+            {
+              "blank": 0
+            },
             " the backward resistive force."
           ],
-          "wordBank": ["equal to", "greater than", "less than"],
-          "correctAnswers": ["equal to"],
+          "wordBank": [
+            "equal to",
+            "greater than",
+            "less than"
+          ],
+          "correctAnswers": [
+            "equal to"
+          ],
           "markScheme": [
             "1 mark: equal to"
           ],
@@ -90,6 +126,11 @@
       "topic": "Forces and Motion",
       "title": "Newton's third law and typical speeds",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -98,11 +139,19 @@
           "marks": 1,
           "segments": [
             "The force from the athlete pushing backwards on the starting blocks is ",
-            { "blank": 0 },
+            {
+              "blank": 0
+            },
             " the force from the starting blocks pushing forwards on the athlete."
           ],
-          "wordBank": ["equal to", "greater than", "less than"],
-          "correctAnswers": ["equal to"],
+          "wordBank": [
+            "equal to",
+            "greater than",
+            "less than"
+          ],
+          "correctAnswers": [
+            "equal to"
+          ],
           "markScheme": [
             "1 mark: equal to"
           ],
@@ -113,9 +162,16 @@
           "type": "single-choice",
           "text": "What is the average running speed of a typical person?",
           "marks": 1,
-          "options": ["1.5 m/s", "3.0 m/s", "4.5 m/s", "6.0 m/s"],
+          "options": [
+            "1.5 m/s",
+            "3.0 m/s",
+            "4.5 m/s",
+            "6.0 m/s"
+          ],
           "correctAnswer": 1,
-          "markScheme": ["Answer: B – The typical running speed of a person is approximately 3.0 m/s"],
+          "markScheme": [
+            "Answer: B – The typical running speed of a person is approximately 3.0 m/s"
+          ],
           "diagrams": []
         },
         {
@@ -144,6 +200,11 @@
       "topic": "Forces and Motion",
       "title": "Parachutes and air resistance",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -161,9 +222,15 @@
           "type": "single-choice",
           "text": "A ball and the Earth form a system. What is meant by 'a system'?",
           "marks": 1,
-          "options": ["A group of objects that interact", "Objects with big differences in mass", "Objects with gravitational potential energy"],
+          "options": [
+            "A group of objects that interact",
+            "Objects with big differences in mass",
+            "Objects with gravitational potential energy"
+          ],
           "correctAnswer": 0,
-          "markScheme": ["Answer: A – A system is a group of objects that interact"],
+          "markScheme": [
+            "Answer: A – A system is a group of objects that interact"
+          ],
           "diagrams": []
         }
       ]
@@ -173,6 +240,11 @@
       "topic": "Forces and Motion",
       "title": "Weight and pressure calculations",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -219,6 +291,11 @@
       "topic": "Forces and Motion",
       "title": "Acceleration calculations",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -235,7 +312,7 @@
           "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $a = \\frac{1.3 - 0.70}{5.0}$",
-            "1 mark: Final answer: **0.12 m/s\u00b2**"
+            "1 mark: Final answer: **0.12 m/s²**"
           ],
           "diagrams": []
         },
@@ -244,9 +321,16 @@
           "type": "single-choice",
           "text": "Which is the unit for acceleration?",
           "marks": 1,
-          "options": ["J/s", "m/s", "m/s\u00b2", "Nm"],
+          "options": [
+            "J/s",
+            "m/s",
+            "m/s²",
+            "Nm"
+          ],
           "correctAnswer": 2,
-          "markScheme": ["Answer: C – The unit for acceleration is m/s\u00b2"],
+          "markScheme": [
+            "Answer: C – The unit for acceleration is m/s²"
+          ],
           "diagrams": []
         },
         {
@@ -256,11 +340,20 @@
           "marks": 1,
           "segments": [
             "The velocity of the athlete is the ",
-            { "blank": 0 },
+            {
+              "blank": 0
+            },
             " of the athlete in a given direction."
           ],
-          "wordBank": ["acceleration", "displacement", "distance", "speed"],
-          "correctAnswers": ["speed"],
+          "wordBank": [
+            "acceleration",
+            "displacement",
+            "distance",
+            "speed"
+          ],
+          "correctAnswers": [
+            "speed"
+          ],
           "markScheme": [
             "1 mark: speed"
           ],
@@ -273,6 +366,11 @@
       "topic": "Forces and Motion",
       "title": "Momentum and go-karts",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -311,6 +409,11 @@
       "topic": "Forces and Motion",
       "title": "Force, mass and acceleration",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -324,13 +427,15 @@
             "$m = F \\times a$"
           ],
           "correctAnswer": 0,
-          "markScheme": ["Answer: A \u2013 $F = m \\times a$"],
+          "markScheme": [
+            "Answer: A – $F = m \\times a$"
+          ],
           "diagrams": []
         },
         {
           "partLabel": "b",
           "type": "calculation",
-          "text": "A cyclist and bicycle have total mass 80 kg and accelerate at 1.2 m/s\u00b2. Calculate the resultant force.",
+          "text": "A cyclist and bicycle have total mass 80 kg and accelerate at 1.2 m/s². Calculate the resultant force.",
           "marks": 2,
           "correctAnswer": 96,
           "tolerance": 0.01,
@@ -362,7 +467,7 @@
           "markScheme": [
             "1 mark: Correct substitution: $2.7 - 1.5 = 0.75 \\times a$",
             "1 mark: Correct rearrangement: $a = \\frac{1.2}{0.75}$",
-            "1 mark: Final answer: **1.6 m/s\u00b2**"
+            "1 mark: Final answer: **1.6 m/s²**"
           ],
           "diagrams": []
         }
@@ -373,6 +478,11 @@
       "topic": "Forces and Motion",
       "title": "Motorbike forces and acceleration",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -407,7 +517,9 @@
             "$\\Delta v = \\frac{a}{t}$"
           ],
           "correctAnswer": 0,
-          "markScheme": ["Answer: A \u2013 $a = \\frac{\\Delta v}{t}$"],
+          "markScheme": [
+            "Answer: A – $a = \\frac{\\Delta v}{t}$"
+          ],
           "diagrams": []
         }
       ]
@@ -417,6 +529,11 @@
       "topic": "Forces and Motion",
       "title": "Stopping distances and braking",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -459,6 +576,11 @@
       "topic": "Forces and Motion",
       "title": "Hooke's law and springs",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -472,7 +594,9 @@
             "$F = \\frac{e}{k}$"
           ],
           "correctAnswer": 0,
-          "markScheme": ["Answer: A \u2013 $F = k \\times e$"],
+          "markScheme": [
+            "Answer: A – $F = k \\times e$"
+          ],
           "diagrams": []
         },
         {
@@ -521,6 +645,11 @@
       "topic": "Forces and Motion",
       "title": "Weight, work and braking force",
       "difficulty": "hard",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -578,6 +707,11 @@
       "topic": "Forces and Motion",
       "title": "Velocity-time graphs and energy",
       "difficulty": "hard",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -610,6 +744,11 @@
       "topic": "Forces and Motion",
       "title": "Emergency stop calculations",
       "difficulty": "hard",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -645,14 +784,14 @@
           "correctEquation": 0,
           "markScheme": [
             "1 mark: Correct substitution: $a = \\frac{24 - 0}{4}$",
-            "1 mark: Final answer: **6 m/s\u00b2**"
+            "1 mark: Final answer: **6 m/s²**"
           ],
           "diagrams": []
         },
         {
           "partLabel": "c",
           "type": "calculation",
-          "text": "The car has mass 800 kg and decelerates at 6 m/s\u00b2. Calculate the braking force.",
+          "text": "The car has mass 800 kg and decelerates at 6 m/s². Calculate the braking force.",
           "marks": 2,
           "correctAnswer": 4800,
           "tolerance": 0.01,
@@ -675,11 +814,16 @@
       "topic": "Forces and Motion",
       "title": "Falling objects and SUVAT",
       "difficulty": "hard",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "calculation",
-          "text": "A child steps off a diving board. Initial velocity = 0 m/s, acceleration = 9.8 m/s\u00b2, distance fallen = 0.95 m. Using $v^2 = u^2 + 2as$, calculate the final velocity to 2 significant figures.",
+          "text": "A child steps off a diving board. Initial velocity = 0 m/s, acceleration = 9.8 m/s², distance fallen = 0.95 m. Using $v^2 = u^2 + 2as$, calculate the final velocity to 2 significant figures.",
           "marks": 3,
           "correctAnswer": 4.3,
           "tolerance": 0.02,

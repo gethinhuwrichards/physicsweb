@@ -7,25 +7,45 @@
       "topic": "Pressure in a Gas",
       "title": "Syringe pressure investigation",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "single-choice",
           "text": "A student investigated how the pressure of a gas varied with the volume of the gas. The mass and temperature of the gas were constant.<br><br>What is the range of the syringe?",
           "marks": 1,
-          "options": ["0 to 1 cm³", "0 to 5 cm³", "0 to 20 cm³", "0 to 25 cm³"],
+          "options": [
+            "0 to 1 cm³",
+            "0 to 5 cm³",
+            "0 to 20 cm³",
+            "0 to 25 cm³"
+          ],
           "correctAnswer": 3,
-          "markScheme": ["Answer: D – 0 to 25 cm³"],
-          "diagrams": ["gas-pressure-syringe-gauge.jpeg"]
+          "markScheme": [
+            "Answer: D – 0 to 25 cm³"
+          ],
+          "diagrams": [
+            "gas-pressure-syringe-gauge.jpeg"
+          ]
         },
         {
           "partLabel": "b",
           "type": "single-choice",
           "text": "What type of variable was the mass of gas?",
           "marks": 1,
-          "options": ["Control", "Dependent", "Independent"],
+          "options": [
+            "Control",
+            "Dependent",
+            "Independent"
+          ],
           "correctAnswer": 0,
-          "markScheme": ["Answer: A – Control"],
+          "markScheme": [
+            "Answer: A – Control"
+          ],
           "diagrams": []
         },
         {
@@ -35,16 +55,34 @@
           "marks": 3,
           "segments": [
             "When the gas is compressed, the volume of gas in the syringe ",
-            {"blank": 0},
+            {
+              "blank": 0
+            },
             ".<br><br>So the number of collisions each second between the gas particles inside the syringe and the inside surface of the syringe ",
-            {"blank": 1},
+            {
+              "blank": 1
+            },
             ".<br><br>This means the force exerted on the inside surface of the container walls ",
-            {"blank": 2},
+            {
+              "blank": 2
+            },
             "."
           ],
-          "wordBank": ["decreases", "increases", "remains the same"],
-          "correctAnswers": ["decreases", "increases", "increases"],
-          "markScheme": ["1 mark: **decreases**", "1 mark: **increases**", "1 mark: **increases**"],
+          "wordBank": [
+            "decreases",
+            "increases",
+            "remains the same"
+          ],
+          "correctAnswers": [
+            "decreases",
+            "increases",
+            "increases"
+          ],
+          "markScheme": [
+            "1 mark: **decreases**",
+            "1 mark: **increases**",
+            "1 mark: **increases**"
+          ],
           "diagrams": []
         }
       ]
@@ -54,25 +92,44 @@
       "topic": "Pressure in a Gas",
       "title": "Syringe compression effects",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "single-choice",
           "text": "A student investigated how the pressure in a fixed mass of air varies with the volume of the air. When the plunger was pushed slowly into the syringe, the temperature of the air stayed the same.<br><br>How did pushing the plunger in affect the volume of air in the syringe?",
           "marks": 1,
-          "options": ["The volume decreased.", "The volume stayed the same.", "The volume increased."],
+          "options": [
+            "The volume decreased.",
+            "The volume stayed the same.",
+            "The volume increased."
+          ],
           "correctAnswer": 0,
-          "markScheme": ["Answer: A – The volume decreased"],
-          "diagrams": ["gas-pressure-syringe-plunger.jpeg"]
+          "markScheme": [
+            "Answer: A – The volume decreased"
+          ],
+          "diagrams": [
+            "gas-pressure-syringe-plunger.jpeg"
+          ]
         },
         {
           "partLabel": "b",
           "type": "single-choice",
           "text": "How did pushing the plunger in affect the distance between the air particles in the syringe?",
           "marks": 1,
-          "options": ["The distance decreased.", "The distance stayed the same.", "The distance increased."],
+          "options": [
+            "The distance decreased.",
+            "The distance stayed the same.",
+            "The distance increased."
+          ],
           "correctAnswer": 0,
-          "markScheme": ["Answer: A – The distance decreased"],
+          "markScheme": [
+            "Answer: A – The distance decreased"
+          ],
           "diagrams": []
         },
         {
@@ -80,9 +137,15 @@
           "type": "single-choice",
           "text": "How did pushing the plunger in affect the frequency of collisions between the air particles and the syringe walls?",
           "marks": 1,
-          "options": ["The frequency of collisions decreased.", "The frequency of collisions stayed the same.", "The frequency of collisions increased."],
+          "options": [
+            "The frequency of collisions decreased.",
+            "The frequency of collisions stayed the same.",
+            "The frequency of collisions increased."
+          ],
           "correctAnswer": 2,
-          "markScheme": ["Answer: C – The frequency of collisions increased"],
+          "markScheme": [
+            "Answer: C – The frequency of collisions increased"
+          ],
           "diagrams": []
         },
         {
@@ -90,9 +153,15 @@
           "type": "single-choice",
           "text": "How did pushing the plunger in affect the air pressure in the syringe?",
           "marks": 1,
-          "options": ["The air pressure decreased.", "The air pressure stayed the same.", "The air pressure increased."],
+          "options": [
+            "The air pressure decreased.",
+            "The air pressure stayed the same.",
+            "The air pressure increased."
+          ],
           "correctAnswer": 2,
-          "markScheme": ["Answer: C – The air pressure increased"],
+          "markScheme": [
+            "Answer: C – The air pressure increased"
+          ],
           "diagrams": []
         },
         {
@@ -100,10 +169,18 @@
           "type": "single-choice",
           "text": "A fire piston is a special type of syringe that can be used to start fires. The plunger is pushed quickly downwards and compresses the air. When the air is compressed quickly, the temperature of the air increases.<br><br>How does an increase in temperature affect the mean speed of the air particles inside the syringe?",
           "marks": 1,
-          "options": ["The mean speed of the particles decreases.", "The mean speed of the particles does not change.", "The mean speed of the particles increases."],
+          "options": [
+            "The mean speed of the particles decreases.",
+            "The mean speed of the particles does not change.",
+            "The mean speed of the particles increases."
+          ],
           "correctAnswer": 2,
-          "markScheme": ["Answer: C – The mean speed of the particles increases"],
-          "diagrams": ["gas-pressure-fire-piston.jpeg"]
+          "markScheme": [
+            "Answer: C – The mean speed of the particles increases"
+          ],
+          "diagrams": [
+            "gas-pressure-fire-piston.jpeg"
+          ]
         }
       ]
     },
@@ -112,6 +189,11 @@
       "topic": "Pressure in a Gas",
       "title": "Pressure-volume relationship",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -120,15 +202,34 @@
           "marks": 2,
           "segments": [
             "Particles in a gas move in ",
-            {"blank": 0},
+            {
+              "blank": 0
+            },
             ".<br><br>Particles in a gas move with ",
-            {"blank": 1},
+            {
+              "blank": 1
+            },
             "."
           ],
-          "wordBank": ["circular paths", "random directions", "the same direction", "a constant speed", "a constant velocity", "a range of speeds"],
-          "correctAnswers": ["random directions", "a range of speeds"],
-          "markScheme": ["1 mark: **random directions**", "1 mark: **a range of speeds**"],
-          "diagrams": ["gas-pressure-tube-equipment.jpeg"]
+          "wordBank": [
+            "circular paths",
+            "random directions",
+            "the same direction",
+            "a constant speed",
+            "a constant velocity",
+            "a range of speeds"
+          ],
+          "correctAnswers": [
+            "random directions",
+            "a range of speeds"
+          ],
+          "markScheme": [
+            "1 mark: **random directions**",
+            "1 mark: **a range of speeds**"
+          ],
+          "diagrams": [
+            "gas-pressure-tube-equipment.jpeg"
+          ]
         },
         {
           "partLabel": "b",
@@ -154,11 +255,24 @@
           "type": "tick-box-table",
           "text": "When the volume of the gas increases, the pressure in the gas decreases. The temperature of the gas stays the same.<br><br>How does increasing the volume affect each of the following quantities? Tick one box in each row.",
           "marks": 3,
-          "columnHeaders": ["Decreases", "Stays the same", "Increases"],
+          "columnHeaders": [
+            "Decreases",
+            "Stays the same",
+            "Increases"
+          ],
           "rows": [
-            {"label": "Mean time between collisions of the particles with the tube", "correctColumn": 2},
-            {"label": "Mean distance between the particles", "correctColumn": 2},
-            {"label": "Mean speed of the particles", "correctColumn": 1}
+            {
+              "label": "Mean time between collisions of the particles with the tube",
+              "correctColumn": 2
+            },
+            {
+              "label": "Mean distance between the particles",
+              "correctColumn": 2
+            },
+            {
+              "label": "Mean speed of the particles",
+              "correctColumn": 1
+            }
           ],
           "markScheme": [
             "1 mark: Mean time between collisions — Increases",
@@ -174,16 +288,29 @@
       "topic": "Pressure in a Gas",
       "title": "Helium balloon density",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "single-choice",
           "text": "The figure below shows a balloon filled with helium gas.<br><br>What name is given to the total kinetic energy and potential energy of all the particles of helium gas in the balloon?",
           "marks": 1,
-          "options": ["External energy", "Internal energy", "Movement energy"],
+          "options": [
+            "External energy",
+            "Internal energy",
+            "Movement energy"
+          ],
           "correctAnswer": 1,
-          "markScheme": ["Answer: B – Internal energy"],
-          "diagrams": ["gas-pressure-helium-balloon.png"]
+          "markScheme": [
+            "Answer: B – Internal energy"
+          ],
+          "diagrams": [
+            "gas-pressure-helium-balloon.png"
+          ]
         },
         {
           "partLabel": "b",
@@ -197,7 +324,9 @@
             "$P = \\frac{F}{A}$"
           ],
           "correctAnswer": 0,
-          "markScheme": ["Answer: A – $\\rho = \\frac{m}{V}$"],
+          "markScheme": [
+            "Answer: A – $\\rho = \\frac{m}{V}$"
+          ],
           "diagrams": []
         },
         {
@@ -205,9 +334,15 @@
           "type": "single-choice",
           "text": "The helium in the balloon has a mass of 0.00254 kg and a volume of 0.0141 m³.<br><br>Choose the correct unit for density.",
           "marks": 1,
-          "options": ["$\\text{m}^3 \\, / \\, \\text{kg}$", "$\\text{kg} \\, / \\, \\text{m}^3$", "$\\text{kg} \\, \\text{m}^3$"],
+          "options": [
+            "$\\text{m}^3 \\, / \\, \\text{kg}$",
+            "$\\text{kg} \\, / \\, \\text{m}^3$",
+            "$\\text{kg} \\, \\text{m}^3$"
+          ],
           "correctAnswer": 1,
-          "markScheme": ["Answer: B – kg / m³"],
+          "markScheme": [
+            "Answer: B – kg / m³"
+          ],
           "diagrams": []
         },
         {
@@ -236,6 +371,11 @@
       "topic": "Pressure in a Gas",
       "title": "Balloon compression",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -250,14 +390,19 @@
             "The particles move with a range of speeds.",
             "The particles vibrate about fixed positions."
           ],
-          "correctAnswers": [3, 4],
+          "correctAnswers": [
+            3,
+            4
+          ],
           "selectCount": 2,
           "scoring": "partial",
           "markScheme": [
             "1 mark: The particles move in random directions",
             "1 mark: The particles move with a range of speeds"
           ],
-          "diagrams": ["gas-pressure-red-balloon.jpeg"]
+          "diagrams": [
+            "gas-pressure-red-balloon.jpeg"
+          ]
         },
         {
           "partLabel": "b",
@@ -286,21 +431,32 @@
       "topic": "Pressure in a Gas",
       "title": "Syringe with weights",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "extended-written",
           "text": "A teacher demonstrated the relationship between the pressure in a gas and the volume of the gas. This is the method used:<br><br>1. Record the initial volume of gas in the syringe and the pressure reading before any weights are attached.<br>2. Attach a 2.0 N weight to the syringe.<br>3. Record the volume of the gas and the reading on the pressure gauge.<br>4. Repeat steps 2 and 3 until a weight of 12.0 N is attached to the syringe.<br><br>What was the range of force used?",
           "marks": 1,
-          "markScheme": ["1 mark: **0 N to 12 N** (accept 2 N to 12 N)"],
-          "diagrams": ["gas-pressure-syringe-weights.jpeg"]
+          "markScheme": [
+            "1 mark: **0 N to 12 N** (accept 2 N to 12 N)"
+          ],
+          "diagrams": [
+            "gas-pressure-syringe-weights.jpeg"
+          ]
         },
         {
           "partLabel": "b",
           "type": "extended-written",
           "text": "Give one control variable in the investigation.",
           "marks": 1,
-          "markScheme": ["1 mark: **Mass of gas** in the syringe (or **temperature** of the gas)"],
+          "markScheme": [
+            "1 mark: **Mass of gas** in the syringe (or **temperature** of the gas)"
+          ],
           "diagrams": []
         },
         {
@@ -330,6 +486,11 @@
       "topic": "Pressure in a Gas",
       "title": "Fire piston temperature change",
       "difficulty": "hard",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -349,7 +510,9 @@
             "1 mark: Correct rearrangement: $\\Delta \\theta = \\frac{0.0130}{2.60 \\times 10^{-8} \\times 1010}$",
             "1 mark: Final answer: **495 °C**"
           ],
-          "diagrams": ["gas-pressure-fire-piston.jpeg"]
+          "diagrams": [
+            "gas-pressure-fire-piston.jpeg"
+          ]
         }
       ]
     },
@@ -358,13 +521,18 @@
       "topic": "Pressure in a Gas",
       "title": "Gas pressure-volume calculation",
       "difficulty": "hard",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "calculation",
           "text": "A student investigated how the pressure exerted by a gas varied with the volume of the gas.<br><br>One of the student's results is given below.<br>Pressure = $1.6 \\times 10^5$ Pa<br>Volume = 9.0 cm³<br><br>Calculate the volume of the gas when the pressure was $1.8 \\times 10^5$ Pa. The temperature of the gas was constant.",
           "marks": 3,
-          "correctAnswer": 8.0,
+          "correctAnswer": 8,
           "tolerance": 0.01,
           "equations": [
             "$P_1 V_1 = P_2 V_2$",

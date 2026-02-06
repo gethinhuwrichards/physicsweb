@@ -7,6 +7,11 @@
       "topic": "Forces and work done",
       "title": "Crate pushed at constant speed",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -17,7 +22,9 @@
             "1 mark: Friction force = **60 N**.",
             "1 mark: At constant speed, resultant force is zero so forces balance."
           ],
-          "diagrams": ["crate-push-diagram.png"]
+          "diagrams": [
+            "crate-push-diagram.png"
+          ]
         },
         {
           "partLabel": "b",
@@ -25,7 +32,7 @@
           "text": "Calculate the work done by the worker to push the crate 28 m. Give the unit.",
           "marks": 2,
           "correctAnswer": 1680,
-          "tolerance": 0.0,
+          "tolerance": 0,
           "equations": [
             "$W = F d$",
             "$E = P t$",
@@ -45,6 +52,11 @@
       "topic": "Scalars, vectors and momentum",
       "title": "Vector quantities and momentum basics",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -93,6 +105,11 @@
       "topic": "Circular motion",
       "title": "London Eye: acceleration at steady speed",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -103,7 +120,9 @@
             "1 mark: The **direction** of the capsule’s velocity is changing.",
             "1 mark: Acceleration is the **rate of change of velocity**, and velocity includes direction."
           ],
-          "diagrams": ["london-eye.jpeg"]
+          "diagrams": [
+            "london-eye.jpeg"
+          ]
         },
         {
           "partLabel": "b",
@@ -132,6 +151,11 @@
       "topic": "Scalars and vectors",
       "title": "Classifying quantities",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",

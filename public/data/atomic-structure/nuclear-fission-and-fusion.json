@@ -7,15 +7,26 @@
       "topic": "Nuclear Fission and Fusion",
       "title": "Nuclear fusion basics",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "single-choice",
           "text": "Where does nuclear fusion happen naturally?",
           "marks": 1,
-          "options": ["Inside the Earth", "Inside a nuclear power station", "Inside the Sun"],
+          "options": [
+            "Inside the Earth",
+            "Inside a nuclear power station",
+            "Inside the Sun"
+          ],
           "correctAnswer": 2,
-          "markScheme": ["Answer: C - Nuclear fusion occurs naturally inside the Sun"],
+          "markScheme": [
+            "Answer: C - Nuclear fusion occurs naturally inside the Sun"
+          ],
           "diagrams": []
         },
         {
@@ -25,12 +36,22 @@
           "marks": 1,
           "segments": [
             "The process of joining two atomic nuclei to form a different nucleus is called nuclear ",
-            { "blank": 0 },
+            {
+              "blank": 0
+            },
             "."
           ],
-          "wordBank": ["fission", "force", "fusion"],
-          "correctAnswers": ["fusion"],
-          "markScheme": ["1 mark: fusion"],
+          "wordBank": [
+            "fission",
+            "force",
+            "fusion"
+          ],
+          "correctAnswers": [
+            "fusion"
+          ],
+          "markScheme": [
+            "1 mark: fusion"
+          ],
           "diagrams": []
         },
         {
@@ -38,9 +59,15 @@
           "type": "single-choice",
           "text": "What is released during nuclear fusion?",
           "marks": 1,
-          "options": ["Charge", "Energy", "Force"],
+          "options": [
+            "Charge",
+            "Energy",
+            "Force"
+          ],
           "correctAnswer": 1,
-          "markScheme": ["Answer: B - Energy is released during nuclear fusion"],
+          "markScheme": [
+            "Answer: B - Energy is released during nuclear fusion"
+          ],
           "diagrams": []
         }
       ]
@@ -50,6 +77,11 @@
       "topic": "Nuclear Fission and Fusion",
       "title": "Nuclear fission process",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -58,16 +90,37 @@
           "marks": 3,
           "segments": [
             "During the process of nuclear fission, a uranium ",
-            { "blank": 0 },
+            {
+              "blank": 0
+            },
             " absorbs a ",
-            { "blank": 1 },
+            {
+              "blank": 1
+            },
             ". Electromagnetic radiation is released in the form of ",
-            { "blank": 2 },
+            {
+              "blank": 2
+            },
             "."
           ],
-          "wordBank": ["gamma rays", "light rays", "proton", "neutron", "nucleus", "X-rays"],
-          "correctAnswers": ["nucleus", "neutron", "gamma rays"],
-          "markScheme": ["1 mark: nucleus", "1 mark: neutron", "1 mark: gamma rays"],
+          "wordBank": [
+            "gamma rays",
+            "light rays",
+            "proton",
+            "neutron",
+            "nucleus",
+            "X-rays"
+          ],
+          "correctAnswers": [
+            "nucleus",
+            "neutron",
+            "gamma rays"
+          ],
+          "markScheme": [
+            "1 mark: nucleus",
+            "1 mark: neutron",
+            "1 mark: gamma rays"
+          ],
           "diagrams": []
         },
         {
@@ -88,6 +141,11 @@
       "topic": "Nuclear Fission and Fusion",
       "title": "Fission and fusion comparison",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -105,9 +163,16 @@
           "type": "single-choice",
           "text": "What is released during both nuclear fission and nuclear fusion?",
           "marks": 1,
-          "options": ["Electrons", "Energy", "Neutrons", "Protons"],
+          "options": [
+            "Electrons",
+            "Energy",
+            "Neutrons",
+            "Protons"
+          ],
           "correctAnswer": 1,
-          "markScheme": ["Answer: B - Both fission and fusion release energy"],
+          "markScheme": [
+            "Answer: B - Both fission and fusion release energy"
+          ],
           "diagrams": []
         },
         {
@@ -115,7 +180,9 @@
           "type": "extended-written",
           "text": "Plutonium-239 is used as fuel in some nuclear reactors. Name another substance used as fuel in nuclear reactors.",
           "marks": 1,
-          "markScheme": ["1 mark: **Uranium** (accept U-235, thorium, MOX)"],
+          "markScheme": [
+            "1 mark: **Uranium** (accept U-235, thorium, MOX)"
+          ],
           "diagrams": []
         }
       ]
@@ -125,6 +192,11 @@
       "topic": "Nuclear Fission and Fusion",
       "title": "Fission, fusion and their fuels",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -133,14 +205,28 @@
           "marks": 2,
           "segments": [
             "Nuclear fission takes place within a ",
-            { "blank": 0 },
+            {
+              "blank": 0
+            },
             ". Nuclear fusion takes place within a ",
-            { "blank": 1 },
+            {
+              "blank": 1
+            },
             "."
           ],
-          "wordBank": ["Geiger counter", "nuclear reactor", "star"],
-          "correctAnswers": ["nuclear reactor", "star"],
-          "markScheme": ["1 mark: nuclear reactor", "1 mark: star"],
+          "wordBank": [
+            "Geiger counter",
+            "nuclear reactor",
+            "star"
+          ],
+          "correctAnswers": [
+            "nuclear reactor",
+            "star"
+          ],
+          "markScheme": [
+            "1 mark: nuclear reactor",
+            "1 mark: star"
+          ],
           "diagrams": []
         },
         {
@@ -148,7 +234,9 @@
           "type": "extended-written",
           "text": "State one way in which the process of nuclear fusion differs from the process of nuclear fission.",
           "marks": 1,
-          "markScheme": ["1 mark: In fusion, **nuclei** are **joined** (not split)"],
+          "markScheme": [
+            "1 mark: In fusion, **nuclei** are **joined** (not split)"
+          ],
           "diagrams": []
         }
       ]
@@ -158,6 +246,11 @@
       "topic": "Nuclear Fission and Fusion",
       "title": "Atomic particles and isotopes",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -175,7 +268,9 @@
           "type": "extended-written",
           "text": "Uranium-235 is used as fuel in a nuclear reactor. How is the structure of an atom of uranium-235 different from uranium-238?",
           "marks": 1,
-          "markScheme": ["1 mark: (3) fewer **neutrons** (or lower mass number)"],
+          "markScheme": [
+            "1 mark: (3) fewer **neutrons** (or lower mass number)"
+          ],
           "diagrams": []
         },
         {
@@ -183,7 +278,9 @@
           "type": "extended-written",
           "text": "The nucleus of a uranium-235 atom must absorb a particle before it can split. What type of particle is absorbed?",
           "marks": 1,
-          "markScheme": ["1 mark: **Neutron**"],
+          "markScheme": [
+            "1 mark: **Neutron**"
+          ],
           "diagrams": []
         },
         {
@@ -191,7 +288,9 @@
           "type": "extended-written",
           "text": "What name is given to the process where a nucleus splits into smaller parts?",
           "marks": 1,
-          "markScheme": ["1 mark: Nuclear **fission**"],
+          "markScheme": [
+            "1 mark: Nuclear **fission**"
+          ],
           "diagrams": []
         }
       ]
@@ -201,6 +300,11 @@
       "topic": "Nuclear Fission and Fusion",
       "title": "Nuclear fission in power stations",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -209,16 +313,36 @@
           "marks": 3,
           "segments": [
             "In nuclear power stations, energy is released from uranium ",
-            { "blank": 0 },
+            {
+              "blank": 0
+            },
             ". The uranium splits into two parts and releases three ",
-            { "blank": 1 },
+            {
+              "blank": 1
+            },
             ". The process releases electromagnetic radiation in the form of ",
-            { "blank": 2 },
+            {
+              "blank": 2
+            },
             "."
           ],
-          "wordBank": ["electrons", "gamma rays", "neutrons", "nuclei", "protons"],
-          "correctAnswers": ["nuclei", "neutrons", "gamma rays"],
-          "markScheme": ["1 mark: nuclei", "1 mark: neutrons", "1 mark: gamma rays"],
+          "wordBank": [
+            "electrons",
+            "gamma rays",
+            "neutrons",
+            "nuclei",
+            "protons"
+          ],
+          "correctAnswers": [
+            "nuclei",
+            "neutrons",
+            "gamma rays"
+          ],
+          "markScheme": [
+            "1 mark: nuclei",
+            "1 mark: neutrons",
+            "1 mark: gamma rays"
+          ],
           "diagrams": []
         },
         {
@@ -233,7 +357,9 @@
             "$t = E \\times P$"
           ],
           "correctAnswer": 0,
-          "markScheme": ["Answer: A - $E = P \\times t$"],
+          "markScheme": [
+            "Answer: A - $E = P \\times t$"
+          ],
           "diagrams": []
         },
         {
@@ -262,6 +388,11 @@
       "topic": "Nuclear Fission and Fusion",
       "title": "Nuclear fusion challenges",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -279,7 +410,9 @@
           "type": "extended-written",
           "text": "Suggest one reason why nuclear fusion reactors are not currently used to produce energy in power stations.",
           "marks": 1,
-          "markScheme": ["1 mark: Any valid reason, e.g. still only **experimental** / reaction does not last long enough / use more **energy** than they produce"],
+          "markScheme": [
+            "1 mark: Any valid reason, e.g. still only **experimental** / reaction does not last long enough / use more **energy** than they produce"
+          ],
           "diagrams": []
         },
         {
@@ -287,7 +420,9 @@
           "type": "extended-written",
           "text": "Suggest one reason why scientists continue to try to develop a practical nuclear fusion reactor.",
           "marks": 1,
-          "markScheme": ["1 mark: Any valid reason, e.g. would give another source of **energy** / unlimited fuel / would not produce **radioactive waste**"],
+          "markScheme": [
+            "1 mark: Any valid reason, e.g. would give another source of **energy** / unlimited fuel / would not produce **radioactive waste**"
+          ],
           "diagrams": []
         }
       ]
@@ -297,13 +432,20 @@
       "topic": "Nuclear Fission and Fusion",
       "title": "Radioactive waste and power generation",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "extended-written",
           "text": "Radioactive waste from nuclear power stations has a long half-life. Suggest one precaution taken to reduce the hazard caused by radioactive waste.",
           "marks": 1,
-          "markScheme": ["1 mark: Any valid precaution, e.g. **bury** the waste / store in **concrete** / transport in secure vessels / put in cooling ponds"],
+          "markScheme": [
+            "1 mark: Any valid precaution, e.g. **bury** the waste / store in **concrete** / transport in secure vessels / put in cooling ponds"
+          ],
           "diagrams": []
         },
         {
@@ -330,7 +472,9 @@
           "type": "extended-written",
           "text": "Although nuclear fuels are relatively cheap, the total cost of generating electricity using nuclear fuels is expensive. Why?",
           "marks": 1,
-          "markScheme": ["1 mark: Cost of **building** and **decommissioning** is very high (or cost of reprocessing/storage of nuclear waste)"],
+          "markScheme": [
+            "1 mark: Cost of **building** and **decommissioning** is very high (or cost of reprocessing/storage of nuclear waste)"
+          ],
           "diagrams": []
         }
       ]
@@ -340,6 +484,11 @@
       "topic": "Nuclear Fission and Fusion",
       "title": "Chain reactions and nuclear fission",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -357,7 +506,9 @@
           "type": "extended-written",
           "text": "How does nuclear fission lead to a chain reaction?",
           "marks": 1,
-          "markScheme": ["1 mark: Additional **neutrons** released collide with other nuclei causing **further fission**"],
+          "markScheme": [
+            "1 mark: Additional **neutrons** released collide with other nuclei causing **further fission**"
+          ],
           "diagrams": []
         },
         {
@@ -386,13 +537,20 @@
       "topic": "Nuclear Fission and Fusion",
       "title": "Alpha and gamma radiation",
       "difficulty": "hard",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "extended-written",
           "text": "Uranium-234 decays to thorium-230. Both transitions show a loss of 2 protons and 2 neutrons. How does this show that uranium-234 and thorium-230 emit alpha particles?",
           "marks": 1,
-          "markScheme": ["1 mark: Both lose **2 protons** and **2 neutrons** (which is the composition of an alpha particle)"],
+          "markScheme": [
+            "1 mark: Both lose **2 protons** and **2 neutrons** (which is the composition of an alpha particle)"
+          ],
           "diagrams": []
         },
         {
@@ -400,7 +558,9 @@
           "type": "extended-written",
           "text": "What makes uranium and thorium different elements?",
           "marks": 1,
-          "markScheme": ["1 mark: Different number of **protons** in the nucleus (or different atomic number)"],
+          "markScheme": [
+            "1 mark: Different number of **protons** in the nucleus (or different atomic number)"
+          ],
           "diagrams": []
         },
         {
@@ -408,7 +568,9 @@
           "type": "extended-written",
           "text": "Explain why the emission of gamma radiation does not cause a new element to be formed.",
           "marks": 1,
-          "markScheme": ["1 mark: Gamma involves no change in the number of **protons** in the nucleus (or gamma is a wave, not a particle)"],
+          "markScheme": [
+            "1 mark: Gamma involves no change in the number of **protons** in the nucleus (or gamma is a wave, not a particle)"
+          ],
           "diagrams": []
         }
       ]
@@ -418,13 +580,20 @@
       "topic": "Nuclear Fission and Fusion",
       "title": "Plutonium isotopes and Rutherford's experiment",
       "difficulty": "hard",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "extended-written",
           "text": "There are many isotopes of plutonium. What do the nuclei of different plutonium isotopes have in common?",
           "marks": 1,
-          "markScheme": ["1 mark: Same number of **protons** (or same atomic number)"],
+          "markScheme": [
+            "1 mark: Same number of **protons** (or same atomic number)"
+          ],
           "diagrams": []
         },
         {
@@ -446,13 +615,20 @@
       "topic": "Nuclear Fission and Fusion",
       "title": "Half-life calculation",
       "difficulty": "hard",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "extended-written",
           "text": "Calder Hall nuclear power station is next to the Sellafield reprocessing plant. Suggest an advantage of having the two plants close together.",
           "marks": 1,
-          "markScheme": ["1 mark: Reduces risk of radioactive **leak** during transport (or cheaper transport)"],
+          "markScheme": [
+            "1 mark: Reduces risk of radioactive **leak** during transport (or cheaper transport)"
+          ],
           "diagrams": []
         },
         {

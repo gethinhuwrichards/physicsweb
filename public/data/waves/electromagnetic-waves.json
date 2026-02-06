@@ -7,6 +7,11 @@
       "topic": "Electromagnetic Waves",
       "title": "Infrared and microwaves",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -16,7 +21,9 @@
           "markScheme": [
             "1 mark: Any one from: **(visible) light**, **ultraviolet**, **X-rays**, **gamma rays**"
           ],
-          "diagrams": ["em-q3-em-spectrum-ir-microwaves.png"]
+          "diagrams": [
+            "em-q3-em-spectrum-ir-microwaves.png"
+          ]
         },
         {
           "partLabel": "b",
@@ -25,15 +32,29 @@
           "marks": 3,
           "segments": [
             "The wavelength of infrared is ",
-            { "blank": 0 },
+            {
+              "blank": 0
+            },
             " the wavelength of microwaves.<br>The frequency of microwaves is ",
-            { "blank": 1 },
+            {
+              "blank": 1
+            },
             " the frequency of infrared.<br>The speed of microwaves in a vacuum is ",
-            { "blank": 2 },
+            {
+              "blank": 2
+            },
             " the speed of infrared in a vacuum."
           ],
-          "wordBank": ["greater than", "less than", "the same as"],
-          "correctAnswers": ["less than", "less than", "the same as"],
+          "wordBank": [
+            "greater than",
+            "less than",
+            "the same as"
+          ],
+          "correctAnswers": [
+            "less than",
+            "less than",
+            "the same as"
+          ],
           "markScheme": [
             "1 mark: **less than**",
             "1 mark: **less than**",
@@ -48,31 +69,59 @@
       "topic": "Electromagnetic Waves",
       "title": "Electromagnetic spectrum sections",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "gap-fill",
-          "text": "The diagram shows a small part of the electromagnetic spectrum divided into seven sections A\u2013G, with wavelength increasing from A to G. The different properties of the waves in each section make them useful in different ways. Choose from A, B, C, D, E, F or G.",
+          "text": "The diagram shows a small part of the electromagnetic spectrum divided into seven sections A–G, with wavelength increasing from A to G. The different properties of the waves in each section make them useful in different ways. Choose from A, B, C, D, E, F or G.",
           "marks": 4,
           "segments": [
             "Used to send a signal to a satellite in space: ",
-            { "blank": 0 },
+            {
+              "blank": 0
+            },
             "<br>Used to communicate with a submarine under the water: ",
-            { "blank": 1 },
+            {
+              "blank": 1
+            },
             "<br>Used by a radio station to broadcast programmes around the world: ",
-            { "blank": 2 },
+            {
+              "blank": 2
+            },
             "<br>The waves with the shortest wavelength: ",
-            { "blank": 3 }
+            {
+              "blank": 3
+            }
           ],
-          "wordBank": ["A", "B", "C", "D", "E", "F", "G"],
-          "correctAnswers": ["B", "G", "D", "A"],
+          "wordBank": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G"
+          ],
+          "correctAnswers": [
+            "B",
+            "G",
+            "D",
+            "A"
+          ],
           "markScheme": [
             "1 mark: **B**",
             "1 mark: **G**",
             "1 mark: **D**",
             "1 mark: **A**"
           ],
-          "diagrams": ["em-q8-em-spectrum-sections.png"]
+          "diagrams": [
+            "em-q8-em-spectrum-sections.png"
+          ]
         }
       ]
     },
@@ -81,6 +130,11 @@
       "topic": "Electromagnetic Waves",
       "title": "Oscilloscope wave traces",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -89,20 +143,37 @@
           "marks": 3,
           "segments": [
             "The wave with the longest wavelength: ",
-            { "blank": 0 },
+            {
+              "blank": 0
+            },
             "<br>The wave with the greatest amplitude: ",
-            { "blank": 1 },
+            {
+              "blank": 1
+            },
             "<br>The wave with the highest frequency: ",
-            { "blank": 2 }
+            {
+              "blank": 2
+            }
           ],
-          "wordBank": ["A", "B", "C", "D"],
-          "correctAnswers": ["D", "C", "B"],
+          "wordBank": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "correctAnswers": [
+            "D",
+            "C",
+            "B"
+          ],
           "markScheme": [
             "1 mark: **D**",
             "1 mark: **C**",
             "1 mark: **B**"
           ],
-          "diagrams": ["em-q19-oscilloscope-traces.png"]
+          "diagrams": [
+            "em-q19-oscilloscope-traces.png"
+          ]
         }
       ]
     },
@@ -111,6 +182,11 @@
       "topic": "Electromagnetic Waves",
       "title": "Electromagnetic spectrum wavelengths",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -120,16 +196,25 @@
           "markScheme": [
             "1 mark: **Infrared camera** (accept thermometer, thermal imaging camera, night vision goggles)"
           ],
-          "diagrams": ["em-q1-em-spectrum-wavelengths.jpeg"]
+          "diagrams": [
+            "em-q1-em-spectrum-wavelengths.jpeg"
+          ]
         },
         {
           "partLabel": "b",
           "type": "single-choice",
           "text": "Which of the following values is a wavelength of red light?",
           "marks": 1,
-          "options": ["320 nm", "410 nm", "690 nm", "750 nm"],
+          "options": [
+            "320 nm",
+            "410 nm",
+            "690 nm",
+            "750 nm"
+          ],
           "correctAnswer": 2,
-          "markScheme": ["Answer: C \u2013 **690 nm**"],
+          "markScheme": [
+            "Answer: C – **690 nm**"
+          ],
           "diagrams": []
         },
         {
@@ -139,13 +224,25 @@
           "marks": 2,
           "segments": [
             "When sunlight shines on a red flower, the red light is ",
-            { "blank": 0 },
+            {
+              "blank": 0
+            },
             ".<br>All other colours of light shining on the red flower are ",
-            { "blank": 1 },
+            {
+              "blank": 1
+            },
             "."
           ],
-          "wordBank": ["absorbed", "emitted", "reflected", "refracted"],
-          "correctAnswers": ["reflected", "absorbed"],
+          "wordBank": [
+            "absorbed",
+            "emitted",
+            "reflected",
+            "refracted"
+          ],
+          "correctAnswers": [
+            "reflected",
+            "absorbed"
+          ],
           "markScheme": [
             "1 mark: **reflected**",
             "1 mark: **absorbed**"
@@ -157,9 +254,16 @@
           "type": "single-choice",
           "text": "A gardener looks at a red flower through a green filter. How does the flower appear to the gardener?",
           "marks": 1,
-          "options": ["Black", "Green", "Red", "White"],
+          "options": [
+            "Black",
+            "Green",
+            "Red",
+            "White"
+          ],
           "correctAnswer": 0,
-          "markScheme": ["Answer: A \u2013 **Black**"],
+          "markScheme": [
+            "Answer: A – **Black**"
+          ],
           "diagrams": []
         },
         {
@@ -179,6 +283,11 @@
       "topic": "Electromagnetic Waves",
       "title": "Electromagnetic waves and communication",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -188,26 +297,42 @@
           "markScheme": [
             "1 mark: **Normal**"
           ],
-          "diagrams": ["em-q2-transmitter-ionosphere.png"]
+          "diagrams": [
+            "em-q2-transmitter-ionosphere.png"
+          ]
         },
         {
           "partLabel": "b",
           "type": "single-choice",
           "text": "Figure 2 shows a transmitter sending a signal to a satellite orbiting the Earth. Which type of electromagnetic wave is used to send a signal to a satellite?",
           "marks": 1,
-          "options": ["Gamma", "Microwave", "Ultraviolet"],
+          "options": [
+            "Gamma",
+            "Microwave",
+            "Ultraviolet"
+          ],
           "correctAnswer": 1,
-          "markScheme": ["Answer: B \u2013 **Microwave**"],
-          "diagrams": ["em-q2-satellite-signal.png"]
+          "markScheme": [
+            "Answer: B – **Microwave**"
+          ],
+          "diagrams": [
+            "em-q2-satellite-signal.png"
+          ]
         },
         {
           "partLabel": "c",
           "type": "single-choice",
           "text": "What name is given to the process that occurs as wave L passes into the ionosphere?",
           "marks": 1,
-          "options": ["Diffraction", "Reflection", "Refraction"],
+          "options": [
+            "Diffraction",
+            "Reflection",
+            "Refraction"
+          ],
           "correctAnswer": 2,
-          "markScheme": ["Answer: C \u2013 **Refraction**"],
+          "markScheme": [
+            "Answer: C – **Refraction**"
+          ],
           "diagrams": []
         },
         {
@@ -222,7 +347,10 @@
             "All electromagnetic waves have the same speed in a vacuum.",
             "All electromagnetic waves have the same frequency."
           ],
-          "correctAnswers": [1, 3],
+          "correctAnswers": [
+            1,
+            3
+          ],
           "selectCount": 2,
           "scoring": "partial",
           "markScheme": [
@@ -238,15 +366,27 @@
       "topic": "Electromagnetic Waves",
       "title": "Electromagnetic wave properties and radio waves",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "single-choice",
           "text": "Which one of the following is not an electromagnetic wave?",
           "marks": 1,
-          "options": ["Gamma rays", "Sound", "Ultraviolet", "X-rays"],
+          "options": [
+            "Gamma rays",
+            "Sound",
+            "Ultraviolet",
+            "X-rays"
+          ],
           "correctAnswer": 1,
-          "markScheme": ["Answer: B \u2013 **Sound**"],
+          "markScheme": [
+            "Answer: B – **Sound**"
+          ],
           "diagrams": []
         },
         {
@@ -264,9 +404,16 @@
           "type": "single-choice",
           "text": "What is a practical use for infrared waves?",
           "marks": 1,
-          "options": ["Cooking food", "Energy efficient lamps", "Medical imaging", "Satellite communications"],
+          "options": [
+            "Cooking food",
+            "Energy efficient lamps",
+            "Medical imaging",
+            "Satellite communications"
+          ],
           "correctAnswer": 0,
-          "markScheme": ["Answer: A \u2013 **Cooking food**"],
+          "markScheme": [
+            "Answer: A – **Cooking food**"
+          ],
           "diagrams": []
         },
         {
@@ -274,9 +421,16 @@
           "type": "single-choice",
           "text": "Scientists have detected radio waves emitted from a distant galaxy. Some of the radio waves have a frequency of 1 200 000 000 hertz. Which is the same as 1 200 000 000 hertz?",
           "marks": 1,
-          "options": ["1.2 gigahertz", "1.2 kilohertz", "1.2 megahertz", "1.2 millihertz"],
+          "options": [
+            "1.2 gigahertz",
+            "1.2 kilohertz",
+            "1.2 megahertz",
+            "1.2 millihertz"
+          ],
           "correctAnswer": 0,
-          "markScheme": ["Answer: A \u2013 **1.2 gigahertz**"],
+          "markScheme": [
+            "Answer: A – **1.2 gigahertz**"
+          ],
           "diagrams": []
         },
         {
@@ -285,13 +439,15 @@
           "text": "Radio waves travel through space at 300 000 kilometres per second (km/s). How is 300 000 km/s converted to metres per second (m/s)?",
           "marks": 1,
           "options": [
-            "300 000 \u00f7 1000 = 300 m/s",
-            "300 000 \u00d7 1000 = 300 000 000 m/s",
+            "300 000 ÷ 1000 = 300 m/s",
+            "300 000 × 1000 = 300 000 000 m/s",
             "300 000 + 1000 = 301 000 m/s",
-            "300 000 \u2013 1000 = 299 000 m/s"
+            "300 000 – 1000 = 299 000 m/s"
           ],
           "correctAnswer": 1,
-          "markScheme": ["Answer: B \u2013 **300 000 \u00d7 1000 = 300 000 000 m/s**"],
+          "markScheme": [
+            "Answer: B – **300 000 × 1000 = 300 000 000 m/s**"
+          ],
           "diagrams": []
         },
         {
@@ -300,7 +456,7 @@
           "text": "Write the equation which links frequency, wavelength and wave speed.",
           "marks": 1,
           "markScheme": [
-            "1 mark: **wave speed = frequency \u00d7 wavelength** (accept $v = f \\lambda$)"
+            "1 mark: **wave speed = frequency × wavelength** (accept $v = f \\lambda$)"
           ],
           "diagrams": []
         },
@@ -331,6 +487,11 @@
       "topic": "Electromagnetic Waves",
       "title": "X-ray image of a skull",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -339,18 +500,32 @@
           "marks": 2,
           "segments": [
             "When X-rays enter the human body, soft tissue ",
-            { "blank": 0 },
+            {
+              "blank": 0
+            },
             " X-rays and bone ",
-            { "blank": 1 },
+            {
+              "blank": 1
+            },
             " X-rays."
           ],
-          "wordBank": ["absorbs", "ionises", "reflects", "transmits"],
-          "correctAnswers": ["transmits", "absorbs"],
+          "wordBank": [
+            "absorbs",
+            "ionises",
+            "reflects",
+            "transmits"
+          ],
+          "correctAnswers": [
+            "transmits",
+            "absorbs"
+          ],
           "markScheme": [
             "1 mark: **transmits**",
             "1 mark: **absorbs**"
           ],
-          "diagrams": ["em-q6-xray-skull.jpeg"]
+          "diagrams": [
+            "em-q6-xray-skull.jpeg"
+          ]
         },
         {
           "partLabel": "b",
@@ -386,9 +561,15 @@
           "type": "single-choice",
           "text": "Which one of the following is another use of X-rays?",
           "marks": 1,
-          "options": ["Cleaning stained teeth", "Killing cancer cells", "Scanning of unborn babies"],
+          "options": [
+            "Cleaning stained teeth",
+            "Killing cancer cells",
+            "Scanning of unborn babies"
+          ],
           "correctAnswer": 1,
-          "markScheme": ["Answer: B \u2013 **Killing cancer cells**"],
+          "markScheme": [
+            "Answer: B – **Killing cancer cells**"
+          ],
           "diagrams": []
         }
       ]
@@ -398,6 +579,11 @@
       "topic": "Electromagnetic Waves",
       "title": "Visible light spectrum and glass",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -406,13 +592,24 @@
           "marks": 2,
           "segments": [
             "As the frequency of the light waves increases, the wavelength of the light waves ",
-            { "blank": 0 },
+            {
+              "blank": 0
+            },
             " and the energy of the light waves ",
-            { "blank": 1 },
+            {
+              "blank": 1
+            },
             "."
           ],
-          "wordBank": ["decreases", "stays the same", "increases"],
-          "correctAnswers": ["decreases", "increases"],
+          "wordBank": [
+            "decreases",
+            "stays the same",
+            "increases"
+          ],
+          "correctAnswers": [
+            "decreases",
+            "increases"
+          ],
           "markScheme": [
             "1 mark: **decreases**",
             "1 mark: **increases**"
@@ -427,7 +624,9 @@
           "markScheme": [
             "1 mark: Intensity / absorption depends on **thickness** (accept: to enable a valid comparison, it is a control variable)"
           ],
-          "diagrams": ["em-q7-glass-transmission-graph.png"]
+          "diagrams": [
+            "em-q7-glass-transmission-graph.png"
+          ]
         },
         {
           "partLabel": "c",
@@ -446,25 +645,46 @@
       "topic": "Electromagnetic Waves",
       "title": "Transverse wave properties",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "single-choice",
-          "text": "Figure 1 represents a transverse wave with four labelled arrows A\u2013D. Which arrow represents the amplitude of the wave?",
+          "text": "Figure 1 represents a transverse wave with four labelled arrows A–D. Which arrow represents the amplitude of the wave?",
           "marks": 1,
-          "options": ["A", "B", "C", "D"],
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
           "correctAnswer": 2,
-          "markScheme": ["Answer: C"],
-          "diagrams": ["em-q10-transverse-wave-arrows.jpeg"]
+          "markScheme": [
+            "Answer: C"
+          ],
+          "diagrams": [
+            "em-q10-transverse-wave-arrows.jpeg"
+          ]
         },
         {
           "partLabel": "b",
           "type": "single-choice",
           "text": "Which arrow represents the wavelength of the wave?",
           "marks": 1,
-          "options": ["A", "B", "C", "D"],
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
           "correctAnswer": 1,
-          "markScheme": ["Answer: B"],
+          "markScheme": [
+            "Answer: B"
+          ],
           "diagrams": []
         },
         {
@@ -503,16 +723,29 @@
       "topic": "Electromagnetic Waves",
       "title": "Longitudinal waves and sound",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "single-choice",
           "text": "Figure 2 represents a longitudinal wave. Which point is at the centre of a rarefaction?",
           "marks": 1,
-          "options": ["E", "F", "G"],
+          "options": [
+            "E",
+            "F",
+            "G"
+          ],
           "correctAnswer": 1,
-          "markScheme": ["Answer: B \u2013 **F**"],
-          "diagrams": ["em-q10-longitudinal-wave.jpeg"]
+          "markScheme": [
+            "Answer: B – **F**"
+          ],
+          "diagrams": [
+            "em-q10-longitudinal-wave.jpeg"
+          ]
         },
         {
           "partLabel": "b",
@@ -540,11 +773,19 @@
           "marks": 1,
           "segments": [
             "When a sound wave moves from air into water its wavelength ",
-            { "blank": 0 },
+            {
+              "blank": 0
+            },
             "."
           ],
-          "wordBank": ["decreases", "stays the same", "increases"],
-          "correctAnswers": ["increases"],
+          "wordBank": [
+            "decreases",
+            "stays the same",
+            "increases"
+          ],
+          "correctAnswers": [
+            "increases"
+          ],
           "markScheme": [
             "1 mark: **increases**"
           ],
@@ -557,6 +798,11 @@
       "topic": "Electromagnetic Waves",
       "title": "Wave speed equation and calculation",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -570,7 +816,9 @@
             "$f = v \\times \\lambda$"
           ],
           "correctAnswer": 0,
-          "markScheme": ["Answer: A \u2013 $v = f \\times \\lambda$"],
+          "markScheme": [
+            "Answer: A – $v = f \\times \\lambda$"
+          ],
           "diagrams": []
         },
         {
@@ -599,15 +847,27 @@
       "topic": "Electromagnetic Waves",
       "title": "Infrared radiation and temperature",
       "difficulty": "hard",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "single-choice",
           "text": "Figure 1 shows the position of three types of wave in the electromagnetic spectrum.<table><tr><th>A</th><th>Microwaves</th><th>B</th><th>Visible light</th><th>C</th><th>D</th><th>Gamma rays</th></tr></table>Which letter represents infrared in the electromagnetic spectrum?",
           "marks": 1,
-          "options": ["A", "B", "C", "D"],
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
           "correctAnswer": 1,
-          "markScheme": ["Answer: B"],
+          "markScheme": [
+            "Answer: B"
+          ],
           "diagrams": []
         },
         {
@@ -615,32 +875,49 @@
           "type": "single-choice",
           "text": "What is infrared used for?",
           "marks": 1,
-          "options": ["Electrical heating", "Energy efficient lamps", "Satellite communications", "Sun tanning"],
+          "options": [
+            "Electrical heating",
+            "Energy efficient lamps",
+            "Satellite communications",
+            "Sun tanning"
+          ],
           "correctAnswer": 0,
-          "markScheme": ["Answer: A \u2013 **Electrical heating**"],
+          "markScheme": [
+            "Answer: A – **Electrical heating**"
+          ],
           "diagrams": []
         },
         {
           "partLabel": "c",
           "type": "gap-fill",
-          "text": "An infrared camera produces a colour image. Different colours show different temperatures. The diagram shows the colour scale from red (32 \u00b0C) through orange (36 \u00b0C) to yellow (40 \u00b0C). Complete the sentence. Choose the answer from the box.",
+          "text": "An infrared camera produces a colour image. Different colours show different temperatures. The diagram shows the colour scale from red (32 °C) through orange (36 °C) to yellow (40 °C). Complete the sentence. Choose the answer from the box.",
           "marks": 1,
           "segments": [
-            "The image produced by an infrared camera of a person with a body temperature of 37 \u00b0C is mainly ",
-            { "blank": 0 },
+            "The image produced by an infrared camera of a person with a body temperature of 37 °C is mainly ",
+            {
+              "blank": 0
+            },
             "."
           ],
-          "wordBank": ["orange", "red", "yellow"],
-          "correctAnswers": ["orange"],
+          "wordBank": [
+            "orange",
+            "red",
+            "yellow"
+          ],
+          "correctAnswers": [
+            "orange"
+          ],
           "markScheme": [
             "1 mark: **orange**"
           ],
-          "diagrams": ["em-q14-ir-camera-scale.jpeg"]
+          "diagrams": [
+            "em-q14-ir-camera-scale.jpeg"
+          ]
         },
         {
           "partLabel": "d",
           "type": "extended-written",
-          "text": "Rescue workers use infrared cameras to search for people trapped under rubble after an earthquake. How does the image of a trapped person change if the person's body temperature drops from 37 \u00b0C to 33 \u00b0C?",
+          "text": "Rescue workers use infrared cameras to search for people trapped under rubble after an earthquake. How does the image of a trapped person change if the person's body temperature drops from 37 °C to 33 °C?",
           "marks": 1,
           "markScheme": [
             "1 mark: Becomes (more) **red** (accept: changes from mainly orange to mainly red)"
@@ -654,24 +931,41 @@
           "marks": 1,
           "segments": [
             "In this investigation the type of surface is ",
-            { "blank": 0 },
+            {
+              "blank": 0
+            },
             " variable."
           ],
-          "wordBank": ["a control", "the dependent", "the independent"],
-          "correctAnswers": ["the independent"],
+          "wordBank": [
+            "a control",
+            "the dependent",
+            "the independent"
+          ],
+          "correctAnswers": [
+            "the independent"
+          ],
           "markScheme": [
             "1 mark: **the independent**"
           ],
-          "diagrams": ["em-q14-ir-equipment.jpeg"]
+          "diagrams": [
+            "em-q14-ir-equipment.jpeg"
+          ]
         },
         {
           "partLabel": "f",
           "type": "single-choice",
-          "text": "The table below shows the results from the investigation.<table><tr><th>Type of surface</th><th>Temperature in \u00b0C</th></tr><tr><td>Matt black</td><td>68.0</td></tr><tr><td>Matt white</td><td>65.5</td></tr><tr><td>Shiny black</td><td>66.3</td></tr><tr><td>Shiny silver</td><td>28.0</td></tr></table>What is the resolution of the infrared detector?",
+          "text": "The table below shows the results from the investigation.<table><tr><th>Type of surface</th><th>Temperature in °C</th></tr><tr><td>Matt black</td><td>68.0</td></tr><tr><td>Matt white</td><td>65.5</td></tr><tr><td>Shiny black</td><td>66.3</td></tr><tr><td>Shiny silver</td><td>28.0</td></tr></table>What is the resolution of the infrared detector?",
           "marks": 1,
-          "options": ["0.1 \u00b0C", "1.0 \u00b0C", "1.7 \u00b0C", "68.0 \u00b0C"],
+          "options": [
+            "0.1 °C",
+            "1.0 °C",
+            "1.7 °C",
+            "68.0 °C"
+          ],
           "correctAnswer": 0,
-          "markScheme": ["Answer: A \u2013 **0.1 \u00b0C**"],
+          "markScheme": [
+            "Answer: A – **0.1 °C**"
+          ],
           "diagrams": []
         },
         {
@@ -691,6 +985,11 @@
       "topic": "Electromagnetic Waves",
       "title": "Infrared radiation emission",
       "difficulty": "hard",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -699,11 +998,19 @@
           "marks": 1,
           "segments": [
             "In a transverse wave, the direction of oscillation is ",
-            { "blank": 0 },
+            {
+              "blank": 0
+            },
             " to the direction of energy transfer by the wave."
           ],
-          "wordBank": ["parallel", "perpendicular", "at an angle"],
-          "correctAnswers": ["perpendicular"],
+          "wordBank": [
+            "parallel",
+            "perpendicular",
+            "at an angle"
+          ],
+          "correctAnswers": [
+            "perpendicular"
+          ],
           "markScheme": [
             "1 mark: **perpendicular**"
           ],
@@ -714,10 +1021,18 @@
           "type": "single-choice",
           "text": "A student investigated how the colour of a surface affects the rate at which the surface emits infrared radiation using a silver-coloured flask and a black-coloured flask filled with hot water, cooling over 10 minutes. When will the flasks emit infrared radiation at the greatest rate?",
           "marks": 1,
-          "options": ["During the 1st minute", "During the 5th minute", "During the 9th minute"],
+          "options": [
+            "During the 1st minute",
+            "During the 5th minute",
+            "During the 9th minute"
+          ],
           "correctAnswer": 0,
-          "markScheme": ["Answer: A \u2013 **During the 1st minute**"],
-          "diagrams": ["em-q17-flasks.jpeg"]
+          "markScheme": [
+            "Answer: A – **During the 1st minute**"
+          ],
+          "diagrams": [
+            "em-q17-flasks.jpeg"
+          ]
         },
         {
           "partLabel": "c",
@@ -746,6 +1061,11 @@
       "topic": "Electromagnetic Waves",
       "title": "Electromagnetic spectrum properties",
       "difficulty": "hard",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -754,13 +1074,25 @@
           "marks": 2,
           "segments": [
             "The arrow in the diagram is in the direction of increasing ",
-            { "blank": 0 },
+            {
+              "blank": 0
+            },
             " and decreasing ",
-            { "blank": 1 },
+            {
+              "blank": 1
+            },
             "."
           ],
-          "wordBank": ["amplitude", "frequency", "speed", "wavelength"],
-          "correctAnswers": ["frequency", "wavelength"],
+          "wordBank": [
+            "amplitude",
+            "frequency",
+            "speed",
+            "wavelength"
+          ],
+          "correctAnswers": [
+            "frequency",
+            "wavelength"
+          ],
           "markScheme": [
             "1 mark: **frequency**",
             "1 mark: **wavelength**"
@@ -778,7 +1110,9 @@
             "$10^{4}$ to $10^{15}$ metres"
           ],
           "correctAnswer": 0,
-          "markScheme": ["Answer: A \u2013 $10^{-15}$ to $10^{4}$ metres"],
+          "markScheme": [
+            "Answer: A – $10^{-15}$ to $10^{4}$ metres"
+          ],
           "diagrams": []
         },
         {

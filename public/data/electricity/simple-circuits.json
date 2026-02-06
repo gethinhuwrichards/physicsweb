@@ -7,11 +7,16 @@
       "topic": "Electricity",
       "title": "Current in a resistor",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "calculation",
-          "text": "A resistor has a resistance of 6 \u03a9 and a potential difference of 12 V across it. Calculate the current in the resistor.",
+          "text": "A resistor has a resistance of 6 Ω and a potential difference of 12 V across it. Calculate the current in the resistor.",
           "marks": 3,
           "correctAnswer": 2,
           "tolerance": 0.01,
@@ -35,6 +40,11 @@
       "topic": "Electricity",
       "title": "Power of an electrical device",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",

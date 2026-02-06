@@ -7,15 +7,26 @@
       "topic": "Atomic Structure",
       "title": "Helium atom particles",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "single-choice",
           "text": "A helium atom contains two protons, two neutrons and two electrons. Which particle in the helium atom is not charged?",
           "marks": 1,
-          "options": ["Electron", "Neutron", "Proton"],
+          "options": [
+            "Electron",
+            "Neutron",
+            "Proton"
+          ],
           "correctAnswer": 1,
-          "markScheme": ["Answer: B - Neutrons have no charge"],
+          "markScheme": [
+            "Answer: B - Neutrons have no charge"
+          ],
           "diagrams": []
         },
         {
@@ -25,12 +36,22 @@
           "marks": 1,
           "segments": [
             "The difference between an alpha particle and a helium atom is that the alpha particle does not have any ",
-            { "blank": 0 },
+            {
+              "blank": 0
+            },
             "."
           ],
-          "wordBank": ["electrons", "neutrons", "protons"],
-          "correctAnswers": ["electrons"],
-          "markScheme": ["1 mark: electrons"],
+          "wordBank": [
+            "electrons",
+            "neutrons",
+            "protons"
+          ],
+          "correctAnswers": [
+            "electrons"
+          ],
+          "markScheme": [
+            "1 mark: electrons"
+          ],
           "diagrams": []
         },
         {
@@ -38,9 +59,15 @@
           "type": "single-choice",
           "text": "Which is a property of alpha particles? Tick one box.",
           "marks": 1,
-          "options": ["Have a long range in air", "Are highly ionising", "Will pass through metals"],
+          "options": [
+            "Have a long range in air",
+            "Are highly ionising",
+            "Will pass through metals"
+          ],
           "correctAnswer": 1,
-          "markScheme": ["Answer: B - Alpha particles are highly ionising"],
+          "markScheme": [
+            "Answer: B - Alpha particles are highly ionising"
+          ],
           "diagrams": []
         }
       ]
@@ -50,15 +77,27 @@
       "topic": "Atomic Structure",
       "title": "Lithium atom",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "single-choice",
           "text": "A lithium atom has 3 protons and 4 neutrons. What is the mass number of this lithium atom? Tick one box.",
           "marks": 1,
-          "options": ["3", "4", "7", "10"],
+          "options": [
+            "3",
+            "4",
+            "7",
+            "10"
+          ],
           "correctAnswer": 2,
-          "markScheme": ["Answer: C - Mass number = protons + neutrons = 3 + 4 = 7"],
+          "markScheme": [
+            "Answer: C - Mass number = protons + neutrons = 3 + 4 = 7"
+          ],
           "diagrams": []
         },
         {
@@ -66,9 +105,16 @@
           "type": "single-choice",
           "text": "What is the atomic number of a lithium atom? Tick one box.",
           "marks": 1,
-          "options": ["3", "4", "7", "10"],
+          "options": [
+            "3",
+            "4",
+            "7",
+            "10"
+          ],
           "correctAnswer": 0,
-          "markScheme": ["Answer: A - Atomic number = number of protons = 3"],
+          "markScheme": [
+            "Answer: A - Atomic number = number of protons = 3"
+          ],
           "diagrams": []
         },
         {
@@ -78,12 +124,22 @@
           "marks": 1,
           "segments": [
             "The electrons in an atom orbit in different energy ",
-            { "blank": 0 },
+            {
+              "blank": 0
+            },
             "."
           ],
-          "wordBank": ["circles", "levels", "rings"],
-          "correctAnswers": ["levels"],
-          "markScheme": ["1 mark: levels"],
+          "wordBank": [
+            "circles",
+            "levels",
+            "rings"
+          ],
+          "correctAnswers": [
+            "levels"
+          ],
+          "markScheme": [
+            "1 mark: levels"
+          ],
           "diagrams": []
         }
       ]
@@ -93,15 +149,26 @@
       "topic": "Atomic Structure",
       "title": "Particles in the atom",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "single-choice",
           "text": "Which of the following correctly describes the particles found in the nucleus of an atom?",
           "marks": 1,
-          "options": ["Electrons and neutrons", "Electrons and protons", "Neutrons and protons"],
+          "options": [
+            "Electrons and neutrons",
+            "Electrons and protons",
+            "Neutrons and protons"
+          ],
           "correctAnswer": 2,
-          "markScheme": ["Answer: C - The nucleus contains neutrons and protons"],
+          "markScheme": [
+            "Answer: C - The nucleus contains neutrons and protons"
+          ],
           "diagrams": []
         },
         {
@@ -111,14 +178,31 @@
           "marks": 2,
           "segments": [
             "An atom that loses an electron is called an ",
-            { "blank": 0 },
+            {
+              "blank": 0
+            },
             " and has an overall ",
-            { "blank": 1 },
+            {
+              "blank": 1
+            },
             " charge."
           ],
-          "wordBank": ["ion", "isotope", "molecule", "negative", "neutral", "positive"],
-          "correctAnswers": ["ion", "positive"],
-          "markScheme": ["1 mark: ion", "1 mark: positive"],
+          "wordBank": [
+            "ion",
+            "isotope",
+            "molecule",
+            "negative",
+            "neutral",
+            "positive"
+          ],
+          "correctAnswers": [
+            "ion",
+            "positive"
+          ],
+          "markScheme": [
+            "1 mark: ion",
+            "1 mark: positive"
+          ],
           "diagrams": []
         },
         {
@@ -139,15 +223,27 @@
       "topic": "Atomic Structure",
       "title": "Atomic discoveries",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "single-choice",
           "text": "The table shows four discoveries about atoms.<table><tr><th>Discovery</th><th>Description</th></tr><tr><td>A</td><td>Atoms contain a small, dense, positively charged nucleus</td></tr><tr><td>B</td><td>Atoms contain electrons</td></tr><tr><td>C</td><td>Atoms contain neutrons</td></tr><tr><td>D</td><td>Electrons orbit the nucleus at specific distances</td></tr></table>Which discovery was the earliest?",
           "marks": 1,
-          "options": ["A", "B", "C", "D"],
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
           "correctAnswer": 1,
-          "markScheme": ["Answer: B - The electron was discovered by J.J. Thomson in 1897, before the other discoveries"],
+          "markScheme": [
+            "Answer: B - The electron was discovered by J.J. Thomson in 1897, before the other discoveries"
+          ],
           "diagrams": []
         },
         {
@@ -155,9 +251,16 @@
           "type": "single-choice",
           "text": "Which discovery in the table above was the most recent?",
           "marks": 1,
-          "options": ["A", "B", "C", "D"],
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
           "correctAnswer": 2,
-          "markScheme": ["Answer: C - The neutron was discovered by Chadwick in 1932, after the other discoveries"],
+          "markScheme": [
+            "Answer: C - The neutron was discovered by Chadwick in 1932, after the other discoveries"
+          ],
           "diagrams": []
         },
         {
@@ -172,7 +275,9 @@
             "The equipment can be used for other experiments"
           ],
           "correctAnswer": 0,
-          "markScheme": ["Answer: A - Reproducible means other scientists can repeat the experiment and obtain the same results"],
+          "markScheme": [
+            "Answer: A - Reproducible means other scientists can repeat the experiment and obtain the same results"
+          ],
           "diagrams": []
         }
       ]
@@ -182,15 +287,26 @@
       "topic": "Atomic Structure",
       "title": "Plum pudding and nuclear models",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "single-choice",
           "text": "In the plum pudding model of the atom, negative particles are embedded in a sphere of positive charge. What are these negative particles called?",
           "marks": 1,
-          "options": ["Electrons", "Neutrons", "Protons"],
+          "options": [
+            "Electrons",
+            "Neutrons",
+            "Protons"
+          ],
           "correctAnswer": 0,
-          "markScheme": ["Answer: A - The negative particles embedded in the plum pudding model are electrons"],
+          "markScheme": [
+            "Answer: A - The negative particles embedded in the plum pudding model are electrons"
+          ],
           "diagrams": []
         },
         {
@@ -204,7 +320,9 @@
             "New experimental evidence contradicted the model"
           ],
           "correctAnswer": 2,
-          "markScheme": ["Answer: C - Models are replaced when new experimental evidence does not fit the existing model"],
+          "markScheme": [
+            "Answer: C - Models are replaced when new experimental evidence does not fit the existing model"
+          ],
           "diagrams": []
         },
         {
@@ -214,18 +332,32 @@
           "marks": 3,
           "segments": [
             "The particle with relative mass 1 and relative charge +1 is the ",
-            { "blank": 0 },
-            ". The particle with very small relative mass and relative charge \u22121 is the ",
-            { "blank": 1 },
+            {
+              "blank": 0
+            },
+            ". The particle with very small relative mass and relative charge −1 is the ",
+            {
+              "blank": 1
+            },
             ". The particle with relative mass 1 and relative charge 0 is the ",
-            { "blank": 2 },
+            {
+              "blank": 2
+            },
             "."
           ],
-          "wordBank": ["electron", "neutron", "proton"],
-          "correctAnswers": ["proton", "electron", "neutron"],
+          "wordBank": [
+            "electron",
+            "neutron",
+            "proton"
+          ],
+          "correctAnswers": [
+            "proton",
+            "electron",
+            "neutron"
+          ],
           "markScheme": [
             "1 mark: proton (relative mass 1, relative charge +1)",
-            "1 mark: electron (very small relative mass, relative charge \u22121)",
+            "1 mark: electron (very small relative mass, relative charge −1)",
             "1 mark: neutron (relative mass 1, relative charge 0)"
           ],
           "diagrams": []
@@ -237,6 +369,11 @@
       "topic": "Atomic Structure",
       "title": "Alpha particle scattering",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -245,15 +382,32 @@
           "marks": 3,
           "segments": [
             "The gold nucleus ",
-            { "blank": 0 },
+            {
+              "blank": 0
+            },
             " the alpha particles. As an alpha particle gets closer to the gold nucleus, the electric field strength experienced by the alpha particle ",
-            { "blank": 1 },
+            {
+              "blank": 1
+            },
             ". As an alpha particle gets closer to the gold nucleus, the force experienced by the alpha particle ",
-            { "blank": 2 },
+            {
+              "blank": 2
+            },
             "."
           ],
-          "wordBank": ["attracts", "decreases", "does not change", "increases", "reflects", "repels"],
-          "correctAnswers": ["repels", "increases", "increases"],
+          "wordBank": [
+            "attracts",
+            "decreases",
+            "does not change",
+            "increases",
+            "reflects",
+            "repels"
+          ],
+          "correctAnswers": [
+            "repels",
+            "increases",
+            "increases"
+          ],
           "markScheme": [
             "1 mark: repels",
             "1 mark: increases (electric field strength)",
@@ -272,7 +426,9 @@
             "The atom is mostly empty space"
           ],
           "correctAnswer": 2,
-          "markScheme": ["Answer: C - Most alpha particles pass straight through because the atom is mostly empty space"],
+          "markScheme": [
+            "Answer: C - Most alpha particles pass straight through because the atom is mostly empty space"
+          ],
           "diagrams": []
         }
       ]
@@ -282,6 +438,11 @@
       "topic": "Atomic Structure",
       "title": "Isotopes",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -313,6 +474,11 @@
       "topic": "Atomic Structure",
       "title": "Half-life and radiation risk",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -336,7 +502,9 @@
             "Much smaller than the possible benefit"
           ],
           "correctAnswer": 2,
-          "markScheme": ["Answer: C - Radiation is used when the risk is much smaller than the possible benefit"],
+          "markScheme": [
+            "Answer: C - Radiation is used when the risk is much smaller than the possible benefit"
+          ],
           "diagrams": []
         },
         {
@@ -356,6 +524,11 @@
       "topic": "Atomic Structure",
       "title": "Comparing atomic models",
       "difficulty": "hard",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -387,6 +560,11 @@
       "topic": "Atomic Structure",
       "title": "Alpha scattering and energy levels",
       "difficulty": "hard",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",

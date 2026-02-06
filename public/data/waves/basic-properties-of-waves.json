@@ -7,6 +7,11 @@
       "topic": "Water wave type and properties",
       "title": "Water wave: type, movement and speed",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -22,7 +27,9 @@
           "markScheme": [
             "Answer: C — **transverse**."
           ],
-          "diagrams": ["waves-q3-water-wave.jpeg"]
+          "diagrams": [
+            "waves-q3-water-wave.jpeg"
+          ]
         },
         {
           "partLabel": "b",
@@ -90,7 +97,9 @@
           "markScheme": [
             "Answer: D — Wave D has the **longest wavelength**."
           ],
-          "diagrams": ["waves-q3-four-waves.jpeg"]
+          "diagrams": [
+            "waves-q3-four-waves.jpeg"
+          ]
         },
         {
           "partLabel": "f",
@@ -116,6 +125,11 @@
       "topic": "Sound properties and pitch",
       "title": "Sound production, pitch and ultrasound",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -167,7 +181,9 @@
           "markScheme": [
             "1 mark: **Ultrasound** (accept ultrasonic)."
           ],
-          "diagrams": ["waves-q4-prenatal-scan.jpeg"]
+          "diagrams": [
+            "waves-q4-prenatal-scan.jpeg"
+          ]
         },
         {
           "partLabel": "d",
@@ -187,6 +203,11 @@
       "topic": "Electromagnetic wave properties",
       "title": "Transverse wave: wavelength, amplitude and microwaves",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -202,7 +223,9 @@
           "markScheme": [
             "Answer: A — wavelength = **Q**."
           ],
-          "diagrams": ["waves-q5-transverse-wave.jpeg"]
+          "diagrams": [
+            "waves-q5-transverse-wave.jpeg"
+          ]
         },
         {
           "partLabel": "b",
@@ -272,6 +295,11 @@
       "topic": "Transverse wave properties",
       "title": "Transverse wave: amplitude, wavelength and sound speed",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -288,7 +316,9 @@
           "markScheme": [
             "Answer: C — Arrow C shows the **amplitude** (equilibrium to peak/trough)."
           ],
-          "diagrams": ["waves-q1-transverse-wave.jpeg"]
+          "diagrams": [
+            "waves-q1-transverse-wave.jpeg"
+          ]
         },
         {
           "partLabel": "b",
@@ -350,7 +380,9 @@
           "markScheme": [
             "Answer: B — Point **F** is at the centre of a rarefaction (where particles are most spread out)."
           ],
-          "diagrams": ["waves-q1-longitudinal-wave.jpeg"]
+          "diagrams": [
+            "waves-q1-longitudinal-wave.jpeg"
+          ]
         },
         {
           "partLabel": "f",
@@ -416,6 +448,11 @@
       "topic": "Longitudinal and transverse waves",
       "title": "Differences between longitudinal and transverse waves",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -449,6 +486,11 @@
       "topic": "Wave quantities and diffraction",
       "title": "Comparing waves and ripple tank speed",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -458,7 +500,9 @@
           "markScheme": [
             "1 mark: **Wavelength** (accept frequency or speed)."
           ],
-          "diagrams": ["waves-q6-two-waves.png"]
+          "diagrams": [
+            "waves-q6-two-waves.png"
+          ]
         },
         {
           "partLabel": "b",
@@ -503,7 +547,9 @@
             "1 mark: Correct substitution: $v = 8 \\times 0.015$",
             "1 mark: Final answer: **0.12 m/s**"
           ],
-          "diagrams": ["waves-q6-ripple-tank.png"]
+          "diagrams": [
+            "waves-q6-ripple-tank.png"
+          ]
         }
       ]
     },
@@ -512,6 +558,11 @@
       "topic": "Ultrasound and sonar",
       "title": "Submarine ultrasound and sea floor distance",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -546,7 +597,9 @@
             "1 mark: Correct substitution: $s = 1600 \\times 0.25$",
             "1 mark: Final answer: **400 m**"
           ],
-          "diagrams": ["waves-q7-submarine.png"]
+          "diagrams": [
+            "waves-q7-submarine.png"
+          ]
         },
         {
           "partLabel": "c",
@@ -591,6 +644,11 @@
       "topic": "Ultrasound applications",
       "title": "Ultrasound: frequency, uses and oscilloscope",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -656,7 +714,9 @@
           "markScheme": [
             "1 mark: **8 microseconds** (4 divisions × 2 microseconds)."
           ],
-          "diagrams": ["waves-q9-oscilloscope.png"]
+          "diagrams": [
+            "waves-q9-oscilloscope.png"
+          ]
         },
         {
           "partLabel": "f",
@@ -687,6 +747,11 @@
       "topic": "Ultrasound explanation",
       "title": "Ultrasound: definition, cleaning and safety",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -728,6 +793,11 @@
       "topic": "Bat echolocation and sound waves",
       "title": "Bat sound wave speed and longitudinal waves",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -743,7 +813,9 @@
           "markScheme": [
             "Answer: B — **Frequency**."
           ],
-          "diagrams": ["waves-q11-bat-insect.png"]
+          "diagrams": [
+            "waves-q11-bat-insect.png"
+          ]
         },
         {
           "partLabel": "b",
@@ -792,6 +864,11 @@
       "topic": "Oscilloscope traces and ultrasound",
       "title": "Musical notes, hearing limits and ultrasound at boundaries",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -801,7 +878,9 @@
           "markScheme": [
             "1 mark: Same **frequency / period / pitch / wavelength**."
           ],
-          "diagrams": ["waves-q12-oscilloscope-traces.jpeg"]
+          "diagrams": [
+            "waves-q12-oscilloscope-traces.jpeg"
+          ]
         },
         {
           "partLabel": "b",
@@ -851,6 +930,11 @@
       "topic": "Sound wave properties and equations",
       "title": "Sound: wavelength, frequency, period and loudspeakers",
       "difficulty": "hard",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -1000,7 +1084,9 @@
             "1 mark: Correct rearrangement: $t = \\frac{s}{v}$ (from $s = vt$)",
             "1 mark: Final answer: **0.04 s** (accept 0.040 s)"
           ],
-          "diagrams": ["waves-q8-loudspeakers.jpeg"]
+          "diagrams": [
+            "waves-q8-loudspeakers.jpeg"
+          ]
         },
         {
           "partLabel": "h",
@@ -1021,6 +1107,11 @@
       "topic": "Ultrasound and crack detection",
       "title": "Loudspeaker frequency and ultrasound bolt inspection",
       "difficulty": "hard",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -1030,7 +1121,9 @@
           "markScheme": [
             "1 mark: **3** waves."
           ],
-          "diagrams": ["waves-q13-loudspeaker-mic.png"]
+          "diagrams": [
+            "waves-q13-loudspeaker-mic.png"
+          ]
         },
         {
           "partLabel": "b",
@@ -1062,7 +1155,9 @@
             "1 mark: The wave is **partially reflected** at the crack to produce pulse A.",
             "1 mark: And reflected at the **end of the bolt** to produce pulse B."
           ],
-          "diagrams": ["waves-q13-steel-bolt.png"]
+          "diagrams": [
+            "waves-q13-steel-bolt.png"
+          ]
         },
         {
           "partLabel": "e",

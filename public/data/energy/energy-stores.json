@@ -7,6 +7,11 @@
       "topic": "Energy stores and transfers",
       "title": "Bungee jump energy changes",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -17,7 +22,9 @@
             "1 mark: The bungee cord might **snap** / extension could be too great.",
             "1 mark: The student might **hit the river/ground** if the cord extends too much."
           ],
-          "diagrams": ["bungee-before-after.png"]
+          "diagrams": [
+            "bungee-before-after.png"
+          ]
         },
         {
           "partLabel": "b",
@@ -84,6 +91,11 @@
       "topic": "Energy stores and transfers",
       "title": "Energy stores during a bungee jump",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -99,7 +111,9 @@
           "markScheme": [
             "Answer: Less than at A."
           ],
-          "diagrams": ["bungee-positions-diagram.jpeg"]
+          "diagrams": [
+            "bungee-positions-diagram.jpeg"
+          ]
         },
         {
           "partLabel": "b",
@@ -195,6 +209,11 @@
       "topic": "Gravitational potential and kinetic energy",
       "title": "Theme park slide energy changes",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -210,7 +229,9 @@
           "markScheme": [
             "Answer: The friction is decreased."
           ],
-          "diagrams": ["aquashute-ride.jpeg"]
+          "diagrams": [
+            "aquashute-ride.jpeg"
+          ]
         },
         {
           "partLabel": "b",
@@ -268,6 +289,11 @@
       "topic": "Gravitational potential energy",
       "title": "Zip wire and gravitational potential energy",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -278,7 +304,9 @@
             "1 mark: Use a tape measure/metre rule/laser measure.",
             "1 mark: Ensure vertical (e.g. set square/plumb line) or two people top/bottom or repeat and take a mean."
           ],
-          "diagrams": ["zipwire-tower.jpeg"]
+          "diagrams": [
+            "zipwire-tower.jpeg"
+          ]
         },
         {
           "partLabel": "b",
@@ -318,6 +346,11 @@
       "topic": "Energy stores and equations",
       "title": "Diver energy changes",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -349,7 +382,9 @@
             "1 mark: gravitational potential (in this order)",
             "1 mark: kinetic"
           ],
-          "diagrams": ["diver-board.jpeg"]
+          "diagrams": [
+            "diver-board.jpeg"
+          ]
         },
         {
           "partLabel": "b",
@@ -411,6 +446,11 @@
       "topic": "Energy transfers in a system",
       "title": "Bouncing ball velocity-time graph",
       "difficulty": "hard",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -421,7 +461,9 @@
             "1 mark: The ball is **accelerating** (speed increasing).",
             "1 mark: The acceleration is **uniform/constant** (straight line on v-t graph)."
           ],
-          "diagrams": ["velocity-time-bounce.jpeg"]
+          "diagrams": [
+            "velocity-time-bounce.jpeg"
+          ]
         },
         {
           "partLabel": "b",
@@ -458,7 +500,7 @@
             "1 mark: Velocity just after the bounce is **less** than just before.",
             "1 mark: So the ball has **lost energy**.",
             "1 mark: Reference to loss of **kinetic energy** / reduced GPE.",
-            "1 mark: Total energy of the ball\u2013Earth system is **conserved**."
+            "1 mark: Total energy of the ball–Earth system is **conserved**."
           ],
           "diagrams": []
         }
@@ -469,6 +511,11 @@
       "topic": "Energy stores and power",
       "title": "Drone energy stores and hazards",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -507,7 +554,9 @@
             "1 mark: kinetic",
             "1 mark: chemical"
           ],
-          "diagrams": ["drone.jpeg"]
+          "diagrams": [
+            "drone.jpeg"
+          ]
         },
         {
           "partLabel": "b",
@@ -544,6 +593,11 @@
       "topic": "Kinetic energy of moving air",
       "title": "Wind turbine and kinetic energy",
       "difficulty": "hard",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -563,7 +617,9 @@
             "1 mark: Correct rearrangement: $m = \\rho V$ (from $\\rho = m / V$)",
             "1 mark: Final answer: **27 600 kg** (accept 28 000 kg)"
           ],
-          "diagrams": ["wind-turbine.jpeg"]
+          "diagrams": [
+            "wind-turbine.jpeg"
+          ]
         },
         {
           "partLabel": "b",
@@ -571,8 +627,8 @@
           "text": "The power output is directly proportional to the kinetic energy of the air passing the blades each second. Describe the effect on the power output when the wind speed is halved.",
           "marks": 3,
           "markScheme": [
-            "1 mark: Mass of air per second is **halved** \u2192 KE factor 2 decrease.",
-            "1 mark: Wind speed halved \u2192 $v^2$ quartered \u2192 KE factor **4** decrease.",
+            "1 mark: Mass of air per second is **halved** → KE factor 2 decrease.",
+            "1 mark: Wind speed halved → $v^2$ quartered → KE factor **4** decrease.",
             "1 mark: Overall KE (and so power) decreases by a factor of **8**."
           ],
           "diagrams": []
@@ -584,6 +640,11 @@
       "topic": "Energy transfers on a zip wire",
       "title": "Zip wire: energy losses and different speeds",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -594,7 +655,9 @@
             "1 mark: Work done against air resistance and/or friction (zip line and pulley).",
             "1 mark: Energy transferred to the surroundings as thermal energy."
           ],
-          "diagrams": ["zipwire-figure1.jpeg"]
+          "diagrams": [
+            "zipwire-figure1.jpeg"
+          ]
         },
         {
           "partLabel": "b",
@@ -614,6 +677,11 @@
       "topic": "Elastic potential energy and transfers",
       "title": "Baby bouncer energy transfers",
       "difficulty": "hard",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -623,7 +691,9 @@
           "markScheme": [
             "1 mark: The spring may become permanently extended / may break / extension may be too great."
           ],
-          "diagrams": ["baby-bouncer.jpeg"]
+          "diagrams": [
+            "baby-bouncer.jpeg"
+          ]
         },
         {
           "partLabel": "b",

@@ -7,13 +7,18 @@
       "topic": "Renewable electricity and hydroelectric power",
       "title": "Hydroelectric energy changes and power output",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
           "type": "calculation",
           "text": "A remote village uses a hydroelectric generator. The mass of water that passes through the generator each day is 2 500 000 kg. The change in vertical height of the water is 15.0 m. Gravitational field strength = 9.8 N/kg. Calculate the decrease in gravitational potential energy of the water.",
           "marks": 2,
-          "correctAnswer": 367500000.0,
+          "correctAnswer": 367500000,
           "tolerance": 0.03,
           "equations": [
             "$E_p = m g h$",
@@ -25,7 +30,9 @@
             "1 mark: Correct substitution: $E_p = 2.5\\times10^6 \\times 9.8 \\times 15.0$",
             "1 mark: $E_p = 3.675\\times10^8\\,\\text{J}$ (allow 3.7×10^8 J)"
           ],
-          "diagrams": ["q1_fig2_hydro-power-year.jpeg"]
+          "diagrams": [
+            "q1_fig2_hydro-power-year.jpeg"
+          ]
         },
         {
           "partLabel": "b",
@@ -62,6 +69,11 @@
       "topic": "Electricity generation mix and demand",
       "title": "UK electricity generation and daily demand",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -72,7 +84,9 @@
             "1 mark: Carbon dioxide (or other pollutants) released.",
             "1 mark: Causes global warming / climate change (or acid rain/global dimming if explained)."
           ],
-          "diagrams": ["q2_fig1_uk-generation-june2018.jpeg"]
+          "diagrams": [
+            "q2_fig1_uk-generation-june2018.jpeg"
+          ]
         },
         {
           "partLabel": "b",
@@ -90,7 +104,7 @@
           "text": "Using data from Figure 1, determine the percentage of electricity generated in nuclear power stations that day.",
           "marks": 2,
           "correctAnswer": 22,
-          "tolerance": 0.0,
+          "tolerance": 0,
           "equations": [
             "percentage = (part/total) × 100",
             "$E = P t$",
@@ -109,7 +123,7 @@
           "text": "Figure 2 shows how the demand for electricity varied with time of day. What was the difference between the maximum demand and minimum demand during this day?",
           "marks": 2,
           "correctAnswer": 12500,
-          "tolerance": 0.0,
+          "tolerance": 0,
           "equations": [
             "$E = P t$",
             "$E_p = m g h$",
@@ -140,6 +154,11 @@
       "topic": "Solar cells and payback time",
       "title": "Dirty solar cells and economic impact",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -163,7 +182,7 @@
           "text": "A homeowner pays £7600 for solar panels and expects to save £950 each year. Calculate the pay-back time.",
           "marks": 2,
           "correctAnswer": 8,
-          "tolerance": 0.0,
+          "tolerance": 0,
           "equations": [
             "$E = P t$",
             "$E_p = m g h$",
@@ -210,6 +229,11 @@
       "topic": "Fossil fuels, renewables and demand",
       "title": "Reducing fossil fuels and power station response",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -219,7 +243,9 @@
           "markScheme": [
             "1 mark: Any one from solar, hydroelectric, tidal, wave, biofuel/biomass, geothermal."
           ],
-          "diagrams": ["q4_fig_demand-winter.png"]
+          "diagrams": [
+            "q4_fig_demand-winter.png"
+          ]
         },
         {
           "partLabel": "b",
@@ -272,6 +298,11 @@
       "topic": "National Grid and transformers",
       "title": "Renewable classification and transformer roles",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -313,7 +344,9 @@
             "1 mark: At least 3 correct: biofuel (renewable), coal (non-renewable), nuclear (non-renewable), tides (renewable).",
             "1 mark: All 4 correct."
           ],
-          "diagrams": ["q5_national-grid.png"]
+          "diagrams": [
+            "q5_national-grid.png"
+          ]
         },
         {
           "partLabel": "b",
@@ -386,6 +419,11 @@
       "topic": "Solar power and efficiency",
       "title": "Solar cells charging a battery",
       "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -396,7 +434,9 @@
             "1 mark: Solar cells are not always pointed directly at the Sun / do not track the Sun.",
             "1 mark: So they do not always receive maximum light intensity / generate maximum electricity."
           ],
-          "diagrams": ["q6_house-solar-battery.jpeg"]
+          "diagrams": [
+            "q6_house-solar-battery.jpeg"
+          ]
         },
         {
           "partLabel": "b",
@@ -404,7 +444,7 @@
           "text": "The mean current from the solar cells to the battery is 3.5 A. Calculate the charge flow in 3600 s.",
           "marks": 2,
           "correctAnswer": 12600,
-          "tolerance": 0.0,
+          "tolerance": 0,
           "equations": [
             "$Q = I t$",
             "$E = P t$",
@@ -493,6 +533,11 @@
       "topic": "Solar thermal power and storage",
       "title": "Solar thermal station components and stored energy",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -541,7 +586,9 @@
             "1 mark: **turbine**",
             "1 mark: **transformer**"
           ],
-          "diagrams": ["q9_solar-thermal-station.png"]
+          "diagrams": [
+            "q9_solar-thermal-station.png"
+          ]
         },
         {
           "partLabel": "b",
@@ -549,7 +596,7 @@
           "text": "A solar storage power station can supply a maximum electrical power of 140 000 kW for 15 hours. Calculate the maximum energy stored, in kWh.",
           "marks": 2,
           "correctAnswer": 2100000,
-          "tolerance": 0.0,
+          "tolerance": 0,
           "equations": [
             "$E = P t$",
             "$P = \\frac{E}{t}$",
@@ -569,6 +616,11 @@
       "topic": "Hydroelectric stations and meeting demand",
       "title": "Hydroelectric station equations and limitations",
       "difficulty": "hard",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -585,7 +637,9 @@
           "markScheme": [
             "Answer: A – $\\rho = \\frac{m}{V}$"
           ],
-          "diagrams": ["q10_hydro-diagram.jpeg"]
+          "diagrams": [
+            "q10_hydro-diagram.jpeg"
+          ]
         },
         {
           "partLabel": "b",
@@ -622,6 +676,11 @@
       "topic": "Micro-hydroelectricity and efficiency",
       "title": "Energy transfers, efficiency and the National Grid",
       "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
@@ -647,7 +706,9 @@
           "markScheme": [
             "1 mark: **kinetic**"
           ],
-          "diagrams": ["q12_micro-hydro-diagram.png"]
+          "diagrams": [
+            "q12_micro-hydro-diagram.png"
+          ]
         },
         {
           "partLabel": "b",
@@ -655,7 +716,7 @@
           "text": "Each second, the micro-hydroelectricity generator transforms 80 000 J of gravitational potential energy into 60 000 J of electrical energy. Calculate the efficiency.",
           "marks": 2,
           "correctAnswer": 0.75,
-          "tolerance": 0.0,
+          "tolerance": 0,
           "equations": [
             "$\\text{efficiency} = \\frac{\\text{useful output}}{\\text{total input}}$",
             "$E_p = m g h$",
