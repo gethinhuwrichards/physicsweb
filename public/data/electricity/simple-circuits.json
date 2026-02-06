@@ -66,6 +66,35 @@
           "diagrams": []
         }
       ]
+    },
+    {
+      "id": "simple-circuits3",
+      "topic": "Electricity",
+      "title": "Electrical quantities and units",
+      "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "match-up",
+          "text": "Match each electrical quantity to its correct unit.",
+          "marks": 4,
+          "leftItems": ["Current", "Potential difference", "Resistance", "Power"],
+          "rightItems": ["Volt (V)", "Ampere (A)", "Watt (W)", "Ohm ($\\Omega$)", "Coulomb (C)"],
+          "correctLinks": [[0, 1], [1, 0], [2, 3], [3, 2]],
+          "markScheme": [
+            "1 mark: Current → Ampere (A)",
+            "1 mark: Potential difference → Volt (V)",
+            "1 mark: Resistance → Ohm (Ω)",
+            "1 mark: Power → Watt (W)"
+          ],
+          "diagrams": []
+        }
+      ]
     }
   ]
 }

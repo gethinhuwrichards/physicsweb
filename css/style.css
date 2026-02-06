@@ -2149,6 +2149,162 @@ header .header-top-row {
 }
 
 /* ============================================
+   Match-Up Input
+   ============================================ */
+
+.matchup-container {
+    padding: 12px 0;
+}
+
+.matchup-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.matchup-column-left,
+.matchup-column-right {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 0 1 auto;
+}
+
+.matchup-right-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.matchup-box {
+    padding: 10px 18px;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    background: var(--card-bg);
+    cursor: pointer;
+    transition: border-color 0.15s, background-color 0.15s, box-shadow 0.15s;
+    user-select: none;
+    min-width: 120px;
+    text-align: center;
+}
+
+.matchup-box:hover:not(.disabled):not(.linked) {
+    border-color: var(--accent-blue);
+    background: var(--accent-blue-muted);
+}
+
+.matchup-box.selected {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 3px var(--accent-blue-muted);
+    background: var(--accent-blue-muted);
+}
+
+.matchup-box.linked {
+    cursor: default;
+}
+
+.matchup-box.disabled {
+    cursor: default;
+    opacity: 0.9;
+}
+
+.matchup-box.correct {
+    border-color: var(--color-correct);
+    background: var(--color-correct-bg);
+}
+
+.matchup-box.incorrect {
+    border-color: var(--color-incorrect);
+    background: var(--color-incorrect-bg);
+}
+
+.matchup-box-image {
+    max-width: 100px;
+    max-height: 80px;
+    display: block;
+    margin: 0 auto;
+}
+
+.matchup-cancel-btn {
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.15s, border-color 0.15s, background-color 0.15s;
+    flex-shrink: 0;
+}
+
+.matchup-cancel-btn:hover {
+    color: var(--color-incorrect);
+    border-color: var(--color-incorrect);
+    background: var(--color-incorrect-bg);
+}
+
+/* Match-up review in marking view */
+.review-matchup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.review-matchup-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+.review-matchup-row.review-correct {
+    background: var(--color-correct-bg);
+}
+
+.review-matchup-row.review-incorrect {
+    background: var(--color-incorrect-bg);
+}
+
+.review-matchup-left {
+    font-weight: 600;
+    min-width: 100px;
+}
+
+.review-matchup-arrow {
+    color: var(--text-secondary);
+}
+
+.review-matchup-wrong {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.review-matchup-missing {
+    font-style: italic;
+    opacity: 0.6;
+}
+
+.review-matchup-correction {
+    color: var(--color-correct-text);
+    font-weight: 600;
+    margin-left: 4px;
+}
+
+.review-matchup-correction::before {
+    content: "(";
+}
+
+.review-matchup-correction::after {
+    content: ")";
+}
+
+/* ============================================
    Short Numerical Input
    ============================================ */
 

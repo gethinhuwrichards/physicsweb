@@ -259,6 +259,61 @@ export default function SelfMarkingView({
     );
   }
 
+  // Render match-up review
+  function renderMatchUpReview() {
+    const result = autoMarkResults[partIndex];
+    const userLinks = result?.userLinks || {};
+
+    return (
+      <div className="review-matchup">
+        {result.results.map(({ isCorrect, leftIdx, rightIdx, userLinked }, i) => {
+          const leftText = part.leftItems[leftIdx];
+          const rightItem = part.rightItems[rightIdx];
+          const rightText = typeof rightItem === 'string' ? rightItem : `Image ${rightIdx + 1}`;
+          const userRightItem = userLinked !== undefined ? part.rightItems[userLinked] : null;
+          const userRightText = userRightItem
+            ? (typeof userRightItem === 'string' ? userRightItem : `Image ${userLinked + 1}`)
+            : null;
+
+          return (
+            <div key={i} className={`review-matchup-row ${isCorrect ? 'review-correct' : 'review-incorrect'}`}>
+              <span
+                className="review-matchup-left"
+                dangerouslySetInnerHTML={{ __html: renderLatex(leftText) }}
+              />
+              <span className="review-matchup-arrow">{isCorrect ? '\u2192' : '\u2192'}</span>
+              {isCorrect ? (
+                <span
+                  className="review-matchup-right"
+                  dangerouslySetInnerHTML={{ __html: renderLatex(rightText) }}
+                />
+              ) : (
+                <>
+                  {userRightText ? (
+                    <span className="review-matchup-right review-matchup-wrong">
+                      <span dangerouslySetInnerHTML={{ __html: renderLatex(userRightText) }} />
+                    </span>
+                  ) : (
+                    <span className="review-matchup-right review-matchup-missing">No link</span>
+                  )}
+                  <span className="review-matchup-correction">
+                    <span dangerouslySetInnerHTML={{ __html: renderLatex(rightText) }} />
+                  </span>
+                </>
+              )}
+              <span className="review-badge">
+                {isCorrect
+                  ? <span className="badge-correct">&#10003;</span>
+                  : <span className="badge-incorrect">&#10007;</span>
+                }
+              </span>
+            </div>
+          );
+        })}
+      </div>
+    );
+  }
+
   // Render calculation display (shared between auto and self-marked)
   function renderCalculationDisplay(isCorrectCalc) {
     const ans = answers[partIndex] || {};
@@ -306,6 +361,8 @@ export default function SelfMarkingView({
         return renderGapFillReview();
       case 'tick-box-table':
         return renderTickBoxReview();
+      case 'match-up':
+        return renderMatchUpReview();
       case 'calculation':
         return renderCalculationDisplay(true);
       default:

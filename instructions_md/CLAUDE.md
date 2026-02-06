@@ -76,6 +76,7 @@ Questions are organized hierarchically:
 | `tick-box-table` | Table with radio buttons per row | Auto-marked (1 mark per row) |
 | `extended-written` | Textarea for free-text answer | Self-marked via split-panel UI |
 | `calculation` | Final answer + step-based working with calculator | Auto-marks final answer; self-mark method if wrong |
+| `match-up` | Colour-coded box pairing (left → right) | Auto-marked (1 mark per correct link) |
 
 ### LaTeX Support
 Use `$...$` for inline math and `$$...$$` for block math in question text and mark schemes.
@@ -181,6 +182,26 @@ See `public/data/QUESTION_FORMAT.md` for complete schema. Quick examples:
   "markScheme": [
     "1 mark: Correct equation selected + correct substitution: $E_k = \\frac{1}{2} \\times 2 \\times 5^2$",
     "1 mark: Correct final answer: **25 J**"
+  ],
+  "diagrams": []
+}
+```
+
+**Match up (colour-coded pairing). Always phrase as "Match..." not "Draw lines to match...":**
+```json
+{
+  "partLabel": "f",
+  "type": "match-up",
+  "text": "Match each electrical quantity to its correct unit.",
+  "marks": 4,
+  "leftItems": ["Current", "Potential difference", "Resistance", "Power"],
+  "rightItems": ["Volt (V)", "Ampere (A)", "Watt (W)", "Ohm ($\\Omega$)", "Coulomb (C)"],
+  "correctLinks": [[0, 1], [1, 0], [2, 3], [3, 2]],
+  "markScheme": [
+    "1 mark: Current → Ampere (A)",
+    "1 mark: Potential difference → Volt (V)",
+    "1 mark: Resistance → Ohm (Ω)",
+    "1 mark: Power → Watt (W)"
   ],
   "diagrams": []
 }

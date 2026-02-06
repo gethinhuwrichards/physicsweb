@@ -6,6 +6,7 @@ import GapFillInput from './inputs/GapFillInput';
 import ExtendedWrittenInput from './inputs/ExtendedWrittenInput';
 import CalculationInput from './inputs/CalculationInput';
 import TickBoxTableInput from './inputs/TickBoxTableInput';
+import MatchUpInput from './inputs/MatchUpInput';
 
 export default function QuestionPart({
   part,
@@ -75,6 +76,16 @@ export default function QuestionPart({
       case 'tick-box-table':
         return (
           <TickBoxTableInput
+            part={part}
+            value={answer}
+            onChange={val => onAnswer(partIndex, val)}
+            disabled={disabled}
+            autoMarkResult={autoMarkResult}
+          />
+        );
+      case 'match-up':
+        return (
+          <MatchUpInput
             part={part}
             value={answer}
             onChange={val => onAnswer(partIndex, val)}

@@ -4,7 +4,7 @@ import QuestionPart from './components/QuestionPart';
 import SelfMarkingView from './components/marking/SelfMarkingView';
 import FinalScorePanel from './components/marking/FinalScorePanel';
 import ScorePage from './components/marking/ScorePage';
-import { autoMarkSingleChoice, autoMarkMultiChoice, autoMarkGapFill, autoMarkCalculation, autoMarkTickBoxTable } from './utils/autoMark';
+import { autoMarkSingleChoice, autoMarkMultiChoice, autoMarkGapFill, autoMarkCalculation, autoMarkTickBoxTable, autoMarkMatchUp } from './utils/autoMark';
 import { parseMarkScheme } from './utils/parseMarkScheme';
 
 function initState({ question, savedState }) {
@@ -89,6 +89,12 @@ function reducer(state, action) {
             autoMarkResults[i] = result;
             break;
           }
+          case 'match-up': {
+            const result = autoMarkMatchUp(part, answer || {});
+            partScores[i] = result.score;
+            autoMarkResults[i] = result;
+            break;
+          }
           case 'calculation': {
             const result = autoMarkCalculation(part, answer || {});
             autoMarkResults[i] = result;
@@ -160,6 +166,13 @@ function reducer(state, action) {
             const tbtResults = result.results || [];
             markingDecisions[i] = points.map((_, idx) =>
               idx < tbtResults.length ? tbtResults[idx].isCorrect : false
+            );
+            break;
+          }
+          case 'match-up': {
+            const muResults = result.results || [];
+            markingDecisions[i] = points.map((_, idx) =>
+              idx < muResults.length ? muResults[idx].isCorrect : false
             );
             break;
           }

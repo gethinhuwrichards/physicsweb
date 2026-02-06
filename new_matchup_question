@@ -1,0 +1,11 @@
+# New question type - Match up question
+
+-Question type involves matching boxes on left hand side with correct boxes on right hand side.  
+-Total number of boxes on left and right need not match (some dummy answers). But left will always have more or equal number of boxes to right.
+-One mark per correct link. Enforce even when mark scheme on input questions says otherwise.
+-Boxes on left can exclusively be linked to one box on right. 
+-UI: click box on left for select, then box on right fro select, line appears and link is made. any other click (not on box) made after first box selected invalidates first click and resets. 
+-Lines can only be drawn uniquely, can't have two lines out of box on left or right. after lines drawn can't add more lines to a box.
+-can undo any line between two boxes by pressing cancel button, which should appear to the right of boxes on right.
+- should be possible to place images instead of text on right hand side.
+- should also be possible for text on either side to be latex

@@ -85,7 +85,7 @@ Before assigning IDs, check existing question files to ensure no duplicates.
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `partLabel` | string | Yes | Part identifier (e.g., "a", "b", "c", "i", "ii") |
-| `type` | string | Yes | One of: `"single-choice"`, `"multi-choice"`, `"gap-fill"`, `"extended-written"`, `"calculation"`, `"equation-choice"`, `"tick-box-table"` |
+| `type` | string | Yes | One of: `"single-choice"`, `"multi-choice"`, `"gap-fill"`, `"extended-written"`, `"calculation"`, `"equation-choice"`, `"tick-box-table"`, `"match-up"` |
 | `text` | string | Yes | The question text (supports LaTeX) |
 | `marks` | integer | Yes | Number of marks (1-6) |
 | `markScheme` | string[] | Yes | Array of marking criteria |
@@ -93,7 +93,7 @@ Before assigning IDs, check existing question files to ensure no duplicates.
 
 ## Part Types
 
-Types 1-3, 6 and 7 are fully auto-marked. Type 4 (extended-written) is self-marked by the student using a split-panel marking UI. Type 5 (calculation) auto-marks the final answer; if correct, all marks are awarded. If incorrect, the student self-marks method points via the split-panel UI.
+Types 1-3, 6, 7 and 8 are fully auto-marked. Type 4 (extended-written) is self-marked by the student using a split-panel marking UI. Type 5 (calculation) auto-marks the final answer; if correct, all marks are awarded. If incorrect, the student self-marks method points via the split-panel UI.
 
 ### 1. Single Choice (`type: "single-choice"`)
 
@@ -403,6 +403,58 @@ Student ticks one box per row in a table. Each row has a label on the left and r
 }
 ```
 
+### 8. Match Up (`type: "match-up"`)
+
+Student matches items on the left to items on the right using colour-coded pairing. Auto-marked. One mark per correct link. Right side has more or equal items than left (extras on the right are distractors). Each item can only be linked once (1:1 mapping).
+
+**Additional fields:**
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `leftItems` | string[] | Yes | Items displayed on the left column. Supports LaTeX. |
+| `rightItems` | (string \| object)[] | Yes | Items on the right column. Strings support LaTeX. Objects with `{ "image": "filename.png" }` render an image. |
+| `correctLinks` | [number, number][] | Yes | Array of `[leftIndex, rightIndex]` pairs defining the correct matches |
+
+**Rules:**
+- `rightItems.length >= leftItems.length` (right side may have distractors)
+- Each left item links to at most one right item, and vice versa (1:1 mapping)
+- `marks` **must** equal `correctLinks.length` (1 mark per correct link, enforced)
+- `markScheme` must have one entry per correct link
+- **Question phrasing:** Always use "Match..." wording (e.g., "Match each quantity to its unit."). Never use "Draw lines to match..." since the UI uses colour-coded pairing, not drawn lines.
+
+**UI behaviour:**
+- Click a left box to select it, then click a right box to create a link (matched pair shown in same colour)
+- Click elsewhere to deselect. Already-linked boxes cannot be selected for a second link.
+- Cancel button (✕) appears next to each linked right-side box to remove the link.
+- Up to 6 distinct colours are used for pairs (blue, green, yellow, orange, purple, pink). Colours are stable — existing pairs keep their colour when new pairs are added.
+
+```json
+{
+  "partLabel": "a",
+  "type": "match-up",
+  "text": "Match each electrical quantity to its correct unit.",
+  "marks": 4,
+  "leftItems": ["Current", "Potential difference", "Resistance", "Power"],
+  "rightItems": ["Volt (V)", "Ampere (A)", "Watt (W)", "Ohm ($\\Omega$)", "Coulomb (C)"],
+  "correctLinks": [[0, 1], [1, 0], [2, 3], [3, 2]],
+  "markScheme": [
+    "1 mark: Current → Ampere (A)",
+    "1 mark: Potential difference → Volt (V)",
+    "1 mark: Resistance → Ohm (Ω)",
+    "1 mark: Power → Watt (W)"
+  ],
+  "diagrams": []
+}
+```
+
+**Right-side images:**
+
+Right items can be images instead of text. Use an object with an `image` field referencing a file in `public/images/`:
+
+```json
+"rightItems": ["Text option", { "image": "circuit-diagram.png" }, "Another text"]
+```
+
 ## LaTeX Formatting
 
 Use LaTeX delimiters in `text`, `segments`, `options`, and `markScheme` fields:
@@ -550,5 +602,6 @@ Each string in `markScheme` should describe one marking point:
 9. For `calculation`: `marks` must be **2**, **3**, or **4**. `equations` must have exactly 3 LaTeX equation strings. `correctEquation` must be a valid index (0-2). The last `markScheme` entry must always be the final answer point. `markScheme` length must equal `marks`. `tolerance` defaults to `0.01` (1% relative)
 10. For `equation-choice`: `options` must have exactly 4 LaTeX equation strings; `correctAnswer` must be a valid index (0-3); `marks` must be 1
 11. For `tick-box-table`: `columnHeaders` must have at least 2 strings; `rows` must be an array of objects each with `label` (string) and `correctColumn` (0-based index into columnHeaders); `marks` must equal the number of rows (1 mark per row); `markScheme` must have one entry per row
-12. `diagrams` is an array of filenames (no path prefix). Use `[]` for no diagrams, `["file.png"]` for one, `["fig1.png", "fig2.png"]` for multiple. Displayed as Fig. 1, Fig. 2, etc. in a grid (max 2 per row)
+12. For `match-up`: `rightItems` must have at least as many entries as `leftItems`; `correctLinks` must be an array of `[leftIndex, rightIndex]` pairs with valid indices; `marks` must equal `correctLinks.length` (1 mark per correct link); each left/right index must appear at most once across all links; `markScheme` must have one entry per correct link; `rightItems` entries can be strings (with LaTeX) or `{ "image": "filename.png" }` objects
+13. `diagrams` is an array of filenames (no path prefix). Use `[]` for no diagrams, `["file.png"]` for one, `["fig1.png", "fig2.png"]` for multiple. Displayed as Fig. 1, Fig. 2, etc. in a grid (max 2 per row)
 13. LaTeX backslashes must be escaped as `\\` in JSON strings

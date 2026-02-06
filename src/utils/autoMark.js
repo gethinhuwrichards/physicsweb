@@ -50,6 +50,16 @@ export function autoMarkTickBoxTable(part, selections) {
   return { score, results };
 }
 
+export function autoMarkMatchUp(part, links) {
+  const userLinks = links || {};
+  const results = part.correctLinks.map(([leftIdx, rightIdx]) => {
+    const isCorrect = userLinks[leftIdx] === rightIdx;
+    return { isCorrect, leftIdx, rightIdx, userLinked: userLinks[leftIdx] };
+  });
+  const score = Math.min(results.filter(r => r.isCorrect).length, part.marks);
+  return { score, results, userLinks };
+}
+
 export function autoMarkCalculation(part, answer) {
   const raw = answer && answer.finalAnswer != null ? String(answer.finalAnswer).trim() : '';
   const parsed = parseFloat(raw);
