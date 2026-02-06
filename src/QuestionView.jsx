@@ -4,7 +4,7 @@ import QuestionPart from './components/QuestionPart';
 import SelfMarkingView from './components/marking/SelfMarkingView';
 import FinalScorePanel from './components/marking/FinalScorePanel';
 import ScorePage from './components/marking/ScorePage';
-import { autoMarkSingleChoice, autoMarkMultiChoice, autoMarkGapFill, autoMarkCalculation, autoMarkTickBoxTable, autoMarkMatchUp } from './utils/autoMark';
+import { autoMarkSingleChoice, autoMarkMultiChoice, autoMarkGapFill, autoMarkCalculation, autoMarkTickBoxTable, autoMarkMatchUp, autoMarkShortAnswer } from './utils/autoMark';
 import { parseMarkScheme } from './utils/parseMarkScheme';
 
 function initState({ question, savedState }) {
@@ -95,6 +95,12 @@ function reducer(state, action) {
             autoMarkResults[i] = result;
             break;
           }
+          case 'short-answer': {
+            const result = autoMarkShortAnswer(part, answer);
+            partScores[i] = result.score;
+            autoMarkResults[i] = result;
+            break;
+          }
           case 'calculation': {
             const result = autoMarkCalculation(part, answer || {});
             autoMarkResults[i] = result;
@@ -176,6 +182,9 @@ function reducer(state, action) {
             );
             break;
           }
+          case 'short-answer':
+            markingDecisions[i] = points.map(() => result.isCorrect);
+            break;
           case 'calculation':
             // Only reaches here if correct (incorrect goes to selfMarkParts)
             markingDecisions[i] = points.map(() => true);

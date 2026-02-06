@@ -2084,6 +2084,108 @@ header .header-top-row {
 }
 
 /* ============================================
+   Short Answer
+   ============================================ */
+
+.sa-wrapper {
+    margin-top: 12px;
+}
+
+.sa-input {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    padding: 8px 12px;
+    border: 2px solid var(--accent-blue);
+    border-radius: 6px;
+    background: var(--bg-input);
+    font-family: inherit;
+    font-size: inherit;
+    color: var(--text-primary);
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.sa-input:focus {
+    outline: none;
+    border-color: var(--accent-blue-hover);
+    background: var(--bg-input-focus);
+    box-shadow: 0 0 0 3px var(--accent-blue-muted);
+}
+
+.sa-input:disabled {
+    background: var(--bg-surface-alt);
+    cursor: not-allowed;
+    color: var(--text-tertiary);
+    border-color: var(--border-default);
+}
+
+.sa-input.correct {
+    border-color: var(--color-correct);
+    background: var(--color-correct-bg);
+}
+
+.sa-input.incorrect {
+    border-color: var(--color-incorrect);
+    background: var(--color-incorrect-bg);
+}
+
+.sa-misspelt-note {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.82rem;
+    color: var(--text-tertiary);
+    font-style: italic;
+}
+
+.sa-correct-answer {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.85rem;
+    color: var(--color-correct-text);
+    font-weight: 600;
+}
+
+/* Short answer review in marking panel */
+.review-short-answer {
+    margin-top: 10px;
+}
+
+.review-sa-value {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.review-sa-value.review-correct {
+    background: var(--color-correct-bg);
+    color: var(--color-correct-text);
+    border: 1px solid var(--color-correct);
+}
+
+.review-sa-value.review-incorrect {
+    background: var(--color-incorrect-bg);
+    color: var(--color-incorrect);
+    border: 1px solid var(--color-incorrect);
+}
+
+.review-sa-misspelt {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.82rem;
+    color: var(--text-tertiary);
+    font-style: italic;
+}
+
+.review-sa-correct {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.85rem;
+    color: var(--color-correct-text);
+    font-weight: 600;
+}
+
+/* ============================================
    Tick Box Table
    ============================================ */
 

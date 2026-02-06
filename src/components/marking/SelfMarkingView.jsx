@@ -314,6 +314,25 @@ export default function SelfMarkingView({
     );
   }
 
+  // Render short-answer review
+  function renderShortAnswerReview() {
+    const result = autoMarkResults[partIndex];
+    const userAnswer = answers[partIndex] || '';
+    return (
+      <div className="review-short-answer">
+        <span className={`review-sa-value ${result?.isCorrect ? 'review-correct' : 'review-incorrect'}`}>
+          {userAnswer || '(no answer)'}
+        </span>
+        {result?.misspelt && (
+          <span className="review-sa-misspelt">Misspelt but answer still accepted</span>
+        )}
+        {result && !result.isCorrect && (
+          <span className="review-sa-correct">Correct answer: {result.correctAnswer}</span>
+        )}
+      </div>
+    );
+  }
+
   // Render calculation display (shared between auto and self-marked)
   function renderCalculationDisplay(isCorrectCalc) {
     const ans = answers[partIndex] || {};
@@ -363,6 +382,8 @@ export default function SelfMarkingView({
         return renderTickBoxReview();
       case 'match-up':
         return renderMatchUpReview();
+      case 'short-answer':
+        return renderShortAnswerReview();
       case 'calculation':
         return renderCalculationDisplay(true);
       default:

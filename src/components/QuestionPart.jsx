@@ -7,6 +7,7 @@ import ExtendedWrittenInput from './inputs/ExtendedWrittenInput';
 import CalculationInput from './inputs/CalculationInput';
 import TickBoxTableInput from './inputs/TickBoxTableInput';
 import MatchUpInput from './inputs/MatchUpInput';
+import ShortAnswerInput from './inputs/ShortAnswerInput';
 
 export default function QuestionPart({
   part,
@@ -86,6 +87,16 @@ export default function QuestionPart({
       case 'match-up':
         return (
           <MatchUpInput
+            part={part}
+            value={answer}
+            onChange={val => onAnswer(partIndex, val)}
+            disabled={disabled}
+            autoMarkResult={autoMarkResult}
+          />
+        );
+      case 'short-answer':
+        return (
+          <ShortAnswerInput
             part={part}
             value={answer}
             onChange={val => onAnswer(partIndex, val)}

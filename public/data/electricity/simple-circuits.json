@@ -95,6 +95,38 @@
           "diagrams": []
         }
       ]
+    },
+    {
+      "id": "simple-circuits4",
+      "topic": "Electricity",
+      "title": "Circuit components",
+      "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "tags": ["recall"],
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "short-answer",
+          "text": "What is the name of the component used to measure current in a circuit?",
+          "marks": 1,
+          "acceptedAnswers": ["ammeter"],
+          "markScheme": ["1 mark: **ammeter**"],
+          "diagrams": []
+        },
+        {
+          "partLabel": "b",
+          "type": "short-answer",
+          "text": "What is the unit of resistance?",
+          "marks": 1,
+          "acceptedAnswers": ["ohm", "ohms", "Ω"],
+          "markScheme": ["1 mark: **ohm** / **Ω**"],
+          "diagrams": []
+        }
+      ]
     }
   ]
 }

@@ -60,6 +60,57 @@ export function autoMarkMatchUp(part, links) {
   return { score, results, userLinks };
 }
 
+function levenshtein(a, b) {
+  const m = a.length, n = b.length;
+  const dp = Array.from({ length: m + 1 }, () => Array(n + 1).fill(0));
+  for (let i = 0; i <= m; i++) dp[i][0] = i;
+  for (let j = 0; j <= n; j++) dp[0][j] = j;
+  for (let i = 1; i <= m; i++) {
+    for (let j = 1; j <= n; j++) {
+      dp[i][j] = a[i - 1] === b[j - 1]
+        ? dp[i - 1][j - 1]
+        : 1 + Math.min(dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1]);
+    }
+  }
+  return dp[m][n];
+}
+
+function isCloseEnough(input, target) {
+  if (input === target) return true;
+  const len = target.length;
+  // Very short words (1-2 chars like "DC"): exact only
+  if (len <= 2) return false;
+  const maxDist = len <= 5 ? 1 : 2;
+  return levenshtein(input, target) <= maxDist;
+}
+
+export function autoMarkShortAnswer(part, userAnswer) {
+  const raw = (userAnswer || '').trim();
+  const accepted = part.acceptedAnswers || [];
+  const rawLower = raw.toLowerCase();
+  let isCorrect = false;
+  let misspelt = false;
+  if (raw.length > 0) {
+    const exactMatch = accepted.some(ans => ans.toLowerCase() === rawLower);
+    if (exactMatch) {
+      isCorrect = true;
+    } else {
+      const fuzzyMatch = accepted.some(ans => isCloseEnough(rawLower, ans.toLowerCase()));
+      if (fuzzyMatch) {
+        isCorrect = true;
+        misspelt = true;
+      }
+    }
+  }
+  return {
+    score: isCorrect ? part.marks : 0,
+    isCorrect,
+    misspelt,
+    userAnswer: raw,
+    correctAnswer: accepted[0] || '',
+  };
+}
+
 export function autoMarkCalculation(part, answer) {
   const raw = answer && answer.finalAnswer != null ? String(answer.finalAnswer).trim() : '';
   const parsed = parseFloat(raw);
