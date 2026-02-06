@@ -4,12 +4,12 @@ import { renderLatex } from '../../utils/renderLatex';
 const EMPTY_LINKS = {};
 
 const LINK_COLORS = [
-  { bg: 'rgba(59, 130, 246, 0.18)', border: '#3b82f6' },   // blue
-  { bg: 'rgba(34, 197, 94, 0.18)', border: '#22c55e' },    // green
-  { bg: 'rgba(234, 179, 8, 0.18)', border: '#eab308' },    // yellow
-  { bg: 'rgba(249, 115, 22, 0.18)', border: '#f97316' },   // orange
-  { bg: 'rgba(168, 85, 247, 0.18)', border: '#a855f7' },   // purple
-  { bg: 'rgba(236, 72, 153, 0.18)', border: '#ec4899' },   // pink
+  { bg: 'rgba(59, 130, 246, 0.18)', hover: 'rgba(59, 130, 246, 0.08)', border: '#3b82f6' },   // blue
+  { bg: 'rgba(34, 197, 94, 0.18)', hover: 'rgba(34, 197, 94, 0.08)', border: '#22c55e' },    // green
+  { bg: 'rgba(234, 179, 8, 0.18)', hover: 'rgba(234, 179, 8, 0.08)', border: '#eab308' },    // yellow
+  { bg: 'rgba(249, 115, 22, 0.18)', hover: 'rgba(249, 115, 22, 0.08)', border: '#f97316' },   // orange
+  { bg: 'rgba(168, 85, 247, 0.18)', hover: 'rgba(168, 85, 247, 0.08)', border: '#a855f7' },   // purple
+  { bg: 'rgba(236, 72, 153, 0.18)', hover: 'rgba(236, 72, 153, 0.08)', border: '#ec4899' },   // pink
 ];
 
 export default function MatchUpInput({ part, value, onChange, disabled, autoMarkResult }) {
@@ -64,6 +64,14 @@ export default function MatchUpInput({ part, value, onChange, disabled, autoMark
     return next;
   }, [links]);
 
+  // Compute the next color that would be assigned to a new link
+  const nextColorIdx = useMemo(() => {
+    const usedColors = new Set(Object.values(colorAssignments));
+    let ci = 0;
+    while (usedColors.has(ci) && ci < LINK_COLORS.length) ci++;
+    return ci % LINK_COLORS.length;
+  }, [colorAssignments]);
+
   function handleLeftClick(i) {
     if (disabled) return;
     if (links[i] !== undefined) return;
@@ -83,6 +91,12 @@ export default function MatchUpInput({ part, value, onChange, disabled, autoMark
     const next = { ...links };
     delete next[leftIdx];
     onChange(next);
+  }
+
+  function handleReset() {
+    if (disabled) return;
+    onChange({});
+    setSelectedLeft(null);
   }
 
   function handleContainerClick(e) {
@@ -118,7 +132,7 @@ export default function MatchUpInput({ part, value, onChange, disabled, autoMark
     if (autoMarkResult) {
       const correctLink = autoMarkResult.results.find(r => r.leftIdx === i);
       if (correctLink) {
-        cls += correctLink.isCorrect ? ' correct' : '';
+        cls += correctLink.isCorrect ? ' correct' : ' incorrect';
       }
     }
     return cls;
@@ -142,8 +156,27 @@ export default function MatchUpInput({ part, value, onChange, disabled, autoMark
     return cls;
   }
 
+  const hasLinks = Object.keys(links).length > 0;
+  const nextColor = LINK_COLORS[nextColorIdx];
+  const containerStyle = {
+    '--matchup-next-bg': nextColor.bg,
+    '--matchup-next-hover': nextColor.hover,
+    '--matchup-next-border': nextColor.border,
+  };
+
   return (
-    <div className="matchup-container" onClick={handleContainerClick}>
+    <div className="matchup-container" onClick={handleContainerClick} style={containerStyle}>
+      {!disabled && (
+        <div className="matchup-reset-row">
+          <button
+            className={'matchup-reset-btn' + (hasLinks ? ' active' : '')}
+            onClick={handleReset}
+            disabled={!hasLinks}
+          >
+            Reset
+          </button>
+        </div>
+      )}
       <div className="matchup-columns">
         <div className="matchup-column-left">
           {part.leftItems.map((item, i) => (
