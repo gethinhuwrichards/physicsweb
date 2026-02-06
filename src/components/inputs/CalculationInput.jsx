@@ -9,6 +9,9 @@ function safeEval(expr) {
     .replace(/−/g, '-')
     .replace(/²/g, '**2')
     .replace(/\^/g, '**');
+  // Handle √: parenthesized expression or number — convert to **0.5
+  sanitised = sanitised.replace(/√\(([^)]+)\)/g, '(($1)**0.5)');
+  sanitised = sanitised.replace(/√([\d.]+)/g, '(($1)**0.5)');
   // Whitelist: digits, operators, parentheses, decimal point, spaces, scientific e
   if (!/^[\d+\-*/().e\s]+$/.test(sanitised)) return null;
   try {
@@ -25,6 +28,10 @@ function cleanResult(n) {
 
 // Pattern: a single symbol as subject on LHS, expression on RHS
 const SYMBOL_EQUALS_PATTERN = /^([A-Za-z\u03B8\u03BB\u03C1_][A-Za-z0-9_]*)\s*=\s*(.+)$/;
+// Pattern: expression on LHS, single symbol on RHS (e.g. "3 × 4 = k")
+const EXPR_EQUALS_SYMBOL_PATTERN = /^(.+?)\s*=\s*([A-Za-z\u03B8\u03BB\u03C1_][A-Za-z0-9_]*)\s*$/;
+// Pattern: expression followed by trailing equals (e.g. "3 × 4 =")
+const EXPR_TRAILING_EQUALS = /^(.+?)\s*=\s*$/;
 // Pattern: detects any letter/symbol anywhere in the expression
 const HAS_SYMBOL = /[A-Za-z\u03B8\u03BB\u03C1_]/;
 
@@ -44,9 +51,10 @@ const DIGIT_BUTTONS = [
   { label: '=', value: '=', className: 'calc-btn-operator' },
 ];
 
-// Operators (2-column grid, top to bottom: backspace, ^/x², ×/÷, +/−)
+// Operators (2-column grid, top to bottom: ⌫/√, ^/x², ×/÷, +/−)
 const OPERATOR_BUTTONS = [
-  { label: '⌫', isBackspace: true, className: 'calc-btn-operator calc-btn-backspace' },
+  { label: '√', value: '√', className: 'calc-btn-operator' },
+  { label: '⌫', isBackspace: true, className: 'calc-btn-operator' },
   { label: '^', value: '^', className: 'calc-btn-operator' },
   { label: 'x²', value: '²', className: 'calc-btn-operator' },
   { label: '×', value: '×', className: 'calc-btn-operator' },
@@ -150,7 +158,41 @@ export default function CalculationInput({ part, value, onChange, disabled, auto
       return;
     }
 
-    // Case 2: pure arithmetic with no symbols (e.g. "3 × 4", "12 / 3")
+    // Case 2: expression = symbol (e.g. "3 × 4 = k")
+    const matchReverse = stepText.match(EXPR_EQUALS_SYMBOL_PATTERN);
+    if (matchReverse) {
+      const raw = safeEval(matchReverse[1]);
+      if (raw === null) {
+        setCalcMessage('Could not evaluate the expression. Check your working.');
+        return;
+      }
+      const result = cleanResult(raw);
+      setCalcMessage(null);
+      onChange({ ...answer, finalAnswer: String(result) });
+      requestAnimationFrame(() => {
+        finalAnswerRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+      return;
+    }
+
+    // Case 3: expression followed by trailing equals (e.g. "3 × 4 =")
+    const matchTrailing = stepText.match(EXPR_TRAILING_EQUALS);
+    if (matchTrailing) {
+      const raw = safeEval(matchTrailing[1]);
+      if (raw === null) {
+        setCalcMessage('Could not evaluate the expression. Check your working.');
+        return;
+      }
+      const result = cleanResult(raw);
+      setCalcMessage(null);
+      onChange({ ...answer, finalAnswer: String(result) });
+      requestAnimationFrame(() => {
+        finalAnswerRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+      return;
+    }
+
+    // Case 4: pure arithmetic with no symbols (e.g. "3 × 4", "12 / 3")
     if (!HAS_SYMBOL.test(stepText)) {
       const raw = safeEval(stepText);
       if (raw === null) {
@@ -265,6 +307,19 @@ export default function CalculationInput({ part, value, onChange, disabled, auto
                     className="calc-step-input"
                     value={step}
                     onChange={e => updateStep(i, e.target.value)}
+                    onKeyDown={e => {
+                      if (e.key === 'x') {
+                        e.preventDefault();
+                        const input = e.target;
+                        const start = input.selectionStart;
+                        const end = input.selectionEnd;
+                        const newVal = step.slice(0, start) + '×' + step.slice(end);
+                        updateStep(i, newVal);
+                        requestAnimationFrame(() => {
+                          input.setSelectionRange(start + 1, start + 1);
+                        });
+                      }
+                    }}
                     onFocus={() => { focusedStepRef.current = i; }}
                     disabled={disabled}
                     readOnly={disabled}
