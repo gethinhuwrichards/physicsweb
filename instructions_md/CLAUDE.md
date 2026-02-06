@@ -109,7 +109,7 @@ See `public/data/QUESTION_FORMAT.md` for complete schema. Quick examples:
   "options": ["Option A", "Option B", "Option C", "Option D"],
   "correctAnswer": 2,
   "markScheme": ["Answer: C - explanation"],
-  "diagram": null
+  "diagrams": []
 }
 ```
 
@@ -125,7 +125,7 @@ See `public/data/QUESTION_FORMAT.md` for complete schema. Quick examples:
   "selectCount": 2,
   "scoring": "all-or-nothing",
   "markScheme": ["1 mark: Wind", "1 mark: Solar"],
-  "diagram": null
+  "diagrams": []
 }
 ```
 
@@ -146,7 +146,7 @@ See `public/data/QUESTION_FORMAT.md` for complete schema. Quick examples:
   "wordBank": ["chemical", "kinetic", "nuclear", "elastic potential"],
   "correctAnswers": ["chemical", "kinetic"],
   "markScheme": ["1 mark: chemical", "1 mark: kinetic"],
-  "diagram": null
+  "diagrams": []
 }
 ```
 
@@ -162,7 +162,7 @@ See `public/data/QUESTION_FORMAT.md` for complete schema. Quick examples:
     "1 mark: Particles move **faster**",
     "1 mark: More **collisions** occur"
   ],
-  "diagram": null
+  "diagrams": []
 }
 ```
 
@@ -181,6 +181,6 @@ See `public/data/QUESTION_FORMAT.md` for complete schema. Quick examples:
     "1 mark: Correct equation selected + correct substitution: $E_k = \\frac{1}{2} \\times 2 \\times 5^2$",
     "1 mark: Correct final answer: **25 J**"
   ],
-  "diagram": null
+  "diagrams": []
 }
 ```

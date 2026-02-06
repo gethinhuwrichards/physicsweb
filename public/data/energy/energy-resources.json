@@ -25,7 +25,7 @@
             "1 mark: Correct substitution: $E_p = 2.5\\times10^6 \\times 9.8 \\times 15.0$",
             "1 mark: $E_p = 3.675\\times10^8\\,\\text{J}$ (allow 3.7×10^8 J)"
           ],
-          "diagram": "q1_fig2_hydro-power-year.jpeg"
+          "diagrams": ["q1_fig2_hydro-power-year.jpeg"]
         },
         {
           "partLabel": "b",
@@ -42,7 +42,7 @@
           "markScheme": [
             "Answer: A – $E = P t$"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -53,7 +53,7 @@
             "1 mark: The river flow / water level varies (e.g. rainfall varies).",
             "1 mark: In drier periods (often summer) less water flows so power output is lower."
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -72,7 +72,7 @@
             "1 mark: Carbon dioxide (or other pollutants) released.",
             "1 mark: Causes global warming / climate change (or acid rain/global dimming if explained)."
           ],
-          "diagram": "q2_fig1_uk-generation-june2018.jpeg"
+          "diagrams": ["q2_fig1_uk-generation-june2018.jpeg"]
         },
         {
           "partLabel": "b",
@@ -82,7 +82,7 @@
           "markScheme": [
             "2 marks: Any two from wind, tidal, wave, hydroelectric, geothermal, biofuel/biomass."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -101,7 +101,7 @@
             "1 mark: Determine non-nuclear total shown (e.g. 78%).",
             "1 mark: Nuclear percentage = **22%**."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "d",
@@ -120,7 +120,7 @@
             "1 mark: Read maximum demand ≈ 37 500 MW and minimum ≈ 25 000 MW from the graph.",
             "1 mark: Difference = **12 500 MW**."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "e",
@@ -131,7 +131,7 @@
             "1 mark: Solar panels generate electricity from sunlight.",
             "1 mark: Sunlight (and so power output) increases through the morning as the Sun rises."
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -155,7 +155,7 @@
           "markScheme": [
             "Answer: A — lower light intensity gives a lower output voltage."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -174,7 +174,7 @@
             "1 mark: pay-back time = cost ÷ annual saving = 7600 ÷ 950",
             "1 mark: pay-back time = **8 years**"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -190,7 +190,7 @@
           "markScheme": [
             "Answer: C — dirt reduces output so pay-back takes longer."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "d",
@@ -201,7 +201,7 @@
             "1 mark: Dirty panels generate less electricity (lower power/voltage output).",
             "1 mark: So savings/income from selling electricity are lower, increasing pay-back time."
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -219,7 +219,7 @@
           "markScheme": [
             "1 mark: Any one from solar, hydroelectric, tidal, wave, biofuel/biomass, geothermal."
           ],
-          "diagram": "q4_fig_demand-winter.png"
+          "diagrams": ["q4_fig_demand-winter.png"]
         },
         {
           "partLabel": "b",
@@ -235,7 +235,7 @@
           "markScheme": [
             "Answer: A — burning fewer fossil fuels releases less CO₂."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -246,7 +246,7 @@
             "1 mark: Demand increases from 4.00 am to about 8.00 am.",
             "1 mark: Then demand remains approximately constant from about 8.00 am to 10.00 am."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "d",
@@ -263,7 +263,7 @@
           "markScheme": [
             "Answer: B — natural gas power stations can start up quickly."
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -313,7 +313,7 @@
             "1 mark: At least 3 correct: biofuel (renewable), coal (non-renewable), nuclear (non-renewable), tides (renewable).",
             "1 mark: All 4 correct."
           ],
-          "diagram": "q5_national-grid.png"
+          "diagrams": ["q5_national-grid.png"]
         },
         {
           "partLabel": "b",
@@ -360,7 +360,7 @@
             "1 mark: **energy**",
             "1 mark: **potential difference**"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -377,7 +377,7 @@
           "markScheme": [
             "Answer: A – $Q = I t$"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -396,7 +396,7 @@
             "1 mark: Solar cells are not always pointed directly at the Sun / do not track the Sun.",
             "1 mark: So they do not always receive maximum light intensity / generate maximum electricity."
           ],
-          "diagram": "q6_house-solar-battery.jpeg"
+          "diagrams": ["q6_house-solar-battery.jpeg"]
         },
         {
           "partLabel": "b",
@@ -415,7 +415,7 @@
             "1 mark: Substitution: $Q = 3.5 \\times 3600$",
             "1 mark: $Q = 12\\,600\\,\\text{C}$"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -432,7 +432,7 @@
           "markScheme": [
             "Answer: A – $\\text{efficiency} = \\frac{\\text{useful power output}}{\\text{total power input}}$"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "d",
@@ -452,7 +452,7 @@
             "1 mark: Correct rearrangement: useful power = efficiency × total power input",
             "1 mark: Final answer: **1200 W**"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "e",
@@ -468,7 +468,7 @@
           "markScheme": [
             "Answer: A — dissipated energy is spread out and becomes less useful."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "f",
@@ -484,7 +484,7 @@
           "markScheme": [
             "Answer: A — the required area would be very large."
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -541,7 +541,7 @@
             "1 mark: **turbine**",
             "1 mark: **transformer**"
           ],
-          "diagram": "q9_solar-thermal-station.png"
+          "diagrams": ["q9_solar-thermal-station.png"]
         },
         {
           "partLabel": "b",
@@ -560,7 +560,7 @@
             "1 mark: Substitution: $E = 140\\,000 \\times 15$",
             "1 mark: $E = 2\\,100\\,000\\,\\text{kWh}$"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -585,7 +585,7 @@
           "markScheme": [
             "Answer: A – $\\rho = \\frac{m}{V}$"
           ],
-          "diagram": "q10_hydro-diagram.jpeg"
+          "diagrams": ["q10_hydro-diagram.jpeg"]
         },
         {
           "partLabel": "b",
@@ -602,7 +602,7 @@
           "markScheme": [
             "Answer: A – $E = P t$"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -613,7 +613,7 @@
             "1 mark: The increase/variation in demand is greater than the station’s maximum power output.",
             "1 mark: Demand remains high for longer than 5 hours (04:00 to 16:00 is 12 hours)."
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -647,7 +647,7 @@
           "markScheme": [
             "1 mark: **kinetic**"
           ],
-          "diagram": "q12_micro-hydro-diagram.png"
+          "diagrams": ["q12_micro-hydro-diagram.png"]
         },
         {
           "partLabel": "b",
@@ -666,7 +666,7 @@
             "1 mark: Substitution: efficiency = 60 000 / 80 000",
             "1 mark: efficiency = **0.75** (or 75%)"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -676,7 +676,7 @@
           "markScheme": [
             "1 mark: A system/network of **cables and transformers** that distributes electricity."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "d",
@@ -687,7 +687,7 @@
             "1 mark: Less energy is wasted/ lost as heat in the cables.",
             "1 mark: Because the cables are shorter (so lower resistance/less heating)."
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     }

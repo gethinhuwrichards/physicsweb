@@ -22,7 +22,7 @@
           "markScheme": [
             "Answer: C — **transverse**."
           ],
-          "diagram": "waves-q3-water-wave.jpeg"
+          "diagrams": ["waves-q3-water-wave.jpeg"]
         },
         {
           "partLabel": "b",
@@ -38,7 +38,7 @@
           "markScheme": [
             "Answer: C — The water at point X moves **up and down**."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -57,7 +57,7 @@
             "1 mark: Correct substitution: $v = 2.0 \\times 0.032$",
             "1 mark: Final answer: **0.064 m/s**"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "d",
@@ -73,7 +73,7 @@
           "markScheme": [
             "Answer: A — **Energy**."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "e",
@@ -90,7 +90,7 @@
           "markScheme": [
             "Answer: D — Wave D has the **longest wavelength**."
           ],
-          "diagram": "waves-q3-four-waves.jpeg"
+          "diagrams": ["waves-q3-four-waves.jpeg"]
         },
         {
           "partLabel": "f",
@@ -107,7 +107,7 @@
           "markScheme": [
             "Answer: B — Wave B has the **shortest wavelength** and therefore the **highest frequency**."
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -125,7 +125,7 @@
           "markScheme": [
             "1 mark: **vibrates** (or oscillates)."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -157,7 +157,7 @@
             "1 mark: **higher**",
             "1 mark: **louder**"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -167,7 +167,7 @@
           "markScheme": [
             "1 mark: **Ultrasound** (accept ultrasonic)."
           ],
-          "diagram": "waves-q4-prenatal-scan.jpeg"
+          "diagrams": ["waves-q4-prenatal-scan.jpeg"]
         },
         {
           "partLabel": "d",
@@ -178,7 +178,7 @@
             "1 mark: The frequency is **different from / higher than** the audible range.",
             "1 mark: The frequency is **above 20 000 Hz** (above the upper limit of human hearing)."
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -202,7 +202,7 @@
           "markScheme": [
             "Answer: A — wavelength = **Q**."
           ],
-          "diagram": "waves-q5-transverse-wave.jpeg"
+          "diagrams": ["waves-q5-transverse-wave.jpeg"]
         },
         {
           "partLabel": "b",
@@ -218,7 +218,7 @@
           "markScheme": [
             "Answer: C — amplitude = **R / 2**."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -234,7 +234,7 @@
           "markScheme": [
             "Answer: A — **Radio waves**."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "d",
@@ -253,7 +253,7 @@
             "1 mark: Correct substitution: $s = 300\\,000\\,000 \\times 0.000\\,009$",
             "1 mark: Final answer: **2700 m**"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "e",
@@ -263,7 +263,7 @@
           "markScheme": [
             "1 mark: Any valid use, e.g. **cooking/heating food**, **satellite communications**, **WiFi**."
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -288,7 +288,7 @@
           "markScheme": [
             "Answer: C — Arrow C shows the **amplitude** (equilibrium to peak/trough)."
           ],
-          "diagram": "waves-q1-transverse-wave.jpeg"
+          "diagrams": ["waves-q1-transverse-wave.jpeg"]
         },
         {
           "partLabel": "b",
@@ -305,7 +305,7 @@
           "markScheme": [
             "Answer: B — Arrow B shows the **wavelength** (one complete cycle, peak to peak)."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -324,7 +324,7 @@
             "1 mark: Correct substitution: $T = \\frac{1}{5000}$",
             "1 mark: Final answer: **0.0002 s**"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "d",
@@ -334,7 +334,7 @@
           "markScheme": [
             "1 mark: Any named **electromagnetic wave**, e.g. **light**, **radio waves**, **microwaves**, **infrared**, **ultraviolet**, **X-rays**, **gamma rays**."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "e",
@@ -350,7 +350,7 @@
           "markScheme": [
             "Answer: B — Point **F** is at the centre of a rarefaction (where particles are most spread out)."
           ],
-          "diagram": "waves-q1-longitudinal-wave.jpeg"
+          "diagrams": ["waves-q1-longitudinal-wave.jpeg"]
         },
         {
           "partLabel": "f",
@@ -369,7 +369,7 @@
             "1 mark: Correct substitution: $\\lambda = \\frac{330}{750}$",
             "1 mark: Final answer: **0.44 m**"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "g",
@@ -382,7 +382,7 @@
             "1 mark: Measuring the **time** for the sound to travel (e.g. stopwatch, data logger, oscilloscope).",
             "1 mark: Using the equation $\\text{speed} = \\frac{\\text{distance}}{\\text{time}}$ (or dividing time by 2 for echo method)."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "h",
@@ -407,7 +407,7 @@
           "markScheme": [
             "1 mark: **increases**"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -427,7 +427,7 @@
             "1 mark: For a transverse wave, oscillations are **perpendicular** to the direction of energy transfer.",
             "1 mark: For a longitudinal wave, oscillations are **parallel** to the direction of energy transfer."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -440,7 +440,7 @@
             "1 mark: Radio waves have **higher frequencies** than sound.",
             "1 mark: Radio waves can travel through a **vacuum** (sound cannot)."
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -458,7 +458,7 @@
           "markScheme": [
             "1 mark: **Wavelength** (accept frequency or speed)."
           ],
-          "diagram": "waves-q6-two-waves.png"
+          "diagrams": ["waves-q6-two-waves.png"]
         },
         {
           "partLabel": "b",
@@ -468,7 +468,7 @@
           "markScheme": [
             "1 mark: **Amplitude** (accept energy)."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -484,7 +484,7 @@
           "markScheme": [
             "Answer: B — **Sound** is a longitudinal wave."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "d",
@@ -503,7 +503,7 @@
             "1 mark: Correct substitution: $v = 8 \\times 0.015$",
             "1 mark: Final answer: **0.12 m/s**"
           ],
-          "diagram": "waves-q6-ripple-tank.png"
+          "diagrams": ["waves-q6-ripple-tank.png"]
         }
       ]
     },
@@ -527,7 +527,7 @@
           "markScheme": [
             "Answer: C — **20 000 Hz**."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -546,7 +546,7 @@
             "1 mark: Correct substitution: $s = 1600 \\times 0.25$",
             "1 mark: Final answer: **400 m**"
           ],
-          "diagram": "waves-q7-submarine.png"
+          "diagrams": ["waves-q7-submarine.png"]
         },
         {
           "partLabel": "c",
@@ -571,7 +571,7 @@
           "markScheme": [
             "1 mark: **twice**"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "d",
@@ -582,7 +582,7 @@
             "1 mark: From pulse 1 to pulse 3, the distance to the sea floor **decreased** (the sea got shallower / submarine went deeper).",
             "1 mark: From pulse 3 to pulse 5, the distance to the sea floor **increased** (the sea got deeper / submarine rose)."
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -616,7 +616,7 @@
           "markScheme": [
             "1 mark: **20 000**"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -626,7 +626,7 @@
           "markScheme": [
             "1 mark: **kilohertz** (accept '1000 hertz' or '1000 Hz')."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -636,7 +636,7 @@
           "markScheme": [
             "1 mark: Any valid industrial use, e.g. **cleaning** (delicate objects), **quality control / flaw detection**, **sonar**."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "d",
@@ -646,7 +646,7 @@
           "markScheme": [
             "1 mark: **Pre-natal scanning** (accept destruction of kidney stones or cleaning teeth)."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "e",
@@ -656,7 +656,7 @@
           "markScheme": [
             "1 mark: **8 microseconds** (4 divisions × 2 microseconds)."
           ],
-          "diagram": "waves-q9-oscilloscope.png"
+          "diagrams": ["waves-q9-oscilloscope.png"]
         },
         {
           "partLabel": "f",
@@ -667,7 +667,7 @@
             "1 mark: The **distance** (to the boundary).",
             "1 mark: Between the **boundary and the detector/source**."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "g",
@@ -678,7 +678,7 @@
             "1 mark: **Publish / share** their evidence/results/data with doctors/the public.",
             "1 mark: **Carry out more research/tests** to check reliability (or stop using them / restrict to industrial purposes only)."
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -697,7 +697,7 @@
             "1 mark: A **sound / mechanical / longitudinal** wave.",
             "1 mark: With a frequency **above 20 000 Hz / 20 kHz** (above the audible range / cannot be heard by humans)."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -708,7 +708,7 @@
             "1 mark: Particles/molecules/fluid **vibrate** (or by the process of **cavitation** / formation and collapse of tiny bubbles).",
             "1 mark: Which **knocks particles of dirt off** the jewellery / breaks up dirt from the surface."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -719,7 +719,7 @@
             "1 mark: A valid point, e.g. other mammals are **similar to humans** / unethical to experiment on humans / knowledge will **benefit humans**.",
             "1 mark: An appropriate qualification/expansion, e.g. so results are appropriate / it is better to experiment on mice / ultrasound has proved **useful**."
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -743,7 +743,7 @@
           "markScheme": [
             "Answer: B — **Frequency**."
           ],
-          "diagram": "waves-q11-bat-insect.png"
+          "diagrams": ["waves-q11-bat-insect.png"]
         },
         {
           "partLabel": "b",
@@ -753,7 +753,7 @@
           "markScheme": [
             "1 mark: **Echo(es)**."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -772,7 +772,7 @@
             "1 mark: Correct substitution: $v = 25\\,000 \\times 0.0136$",
             "1 mark: Final answer: **340 m/s**"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "d",
@@ -783,7 +783,7 @@
             "1 mark: Oscillations are **parallel** to the direction of energy transfer.",
             "1 mark: Causing areas of **compression and rarefaction**."
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -801,7 +801,7 @@
           "markScheme": [
             "1 mark: Same **frequency / period / pitch / wavelength**."
           ],
-          "diagram": "waves-q12-oscilloscope-traces.jpeg"
+          "diagrams": ["waves-q12-oscilloscope-traces.jpeg"]
         },
         {
           "partLabel": "b",
@@ -811,7 +811,7 @@
           "markScheme": [
             "1 mark: Differences in **waveform / shape / quality** (the diagrams are not identical)."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -821,7 +821,7 @@
           "markScheme": [
             "1 mark: **20 000 Hz** (accept 20 kHz)."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "d",
@@ -831,7 +831,7 @@
           "markScheme": [
             "1 mark: **Materials / substances** (through which sound travels)."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "e",
@@ -842,7 +842,7 @@
             "1 mark: It is **absorbed** (energy transferred as thermal energy).",
             "1 mark: It is **transmitted** (accept refracted / changes speed)."
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -882,7 +882,7 @@
             "1 mark: **wavelength**",
             "1 mark: **frequency**"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -907,7 +907,7 @@
           "markScheme": [
             "1 mark: **parallel**"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -924,7 +924,7 @@
           "markScheme": [
             "Answer: C — **8000 Hz**."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "d",
@@ -943,7 +943,7 @@
             "1 mark: Correct substitution: $T = \\frac{1}{8000}$",
             "1 mark: Final answer: **0.000125 s** (accept 1.25 × 10⁻⁴ s)"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "e",
@@ -963,7 +963,7 @@
             "1 mark: Correct rearrangement: $\\lambda = \\frac{v}{f}$ (from $v = f\\lambda$)",
             "1 mark: Final answer: **0.05 m** (accept 0.050 m)"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "f",
@@ -980,7 +980,7 @@
           "markScheme": [
             "Answer: A — $s = v t$"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "g",
@@ -1000,7 +1000,7 @@
             "1 mark: Correct rearrangement: $t = \\frac{s}{v}$ (from $s = vt$)",
             "1 mark: Final answer: **0.04 s** (accept 0.040 s)"
           ],
-          "diagram": "waves-q8-loudspeakers.jpeg"
+          "diagrams": ["waves-q8-loudspeakers.jpeg"]
         },
         {
           "partLabel": "h",
@@ -1012,7 +1012,7 @@
             "1 mark: So the sound from B takes **more time** to travel to the technician.",
             "1 mark: Emitting B first means sound from both speakers arrives at the technician at the **same time**."
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -1030,7 +1030,7 @@
           "markScheme": [
             "1 mark: **3** waves."
           ],
-          "diagram": "waves-q13-loudspeaker-mic.png"
+          "diagrams": ["waves-q13-loudspeaker-mic.png"]
         },
         {
           "partLabel": "b",
@@ -1040,7 +1040,7 @@
           "markScheme": [
             "1 mark: **30 000** waves per second (3 waves in 0.0001 s → 3 / 0.0001 = 30 000)."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -1051,7 +1051,7 @@
             "1 mark: The frequency is **above 20 000 Hz** (the frequency is 30 000 Hz).",
             "1 mark: This is above the **upper limit of the audible range** / it is **ultrasound**."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "d",
@@ -1062,7 +1062,7 @@
             "1 mark: The wave is **partially reflected** at the crack to produce pulse A.",
             "1 mark: And reflected at the **end of the bolt** to produce pulse B."
           ],
-          "diagram": "waves-q13-steel-bolt.png"
+          "diagrams": ["waves-q13-steel-bolt.png"]
         },
         {
           "partLabel": "e",
@@ -1082,7 +1082,7 @@
             "1 mark: Correct rearrangement: one-way time = $\\frac{0.000\\,025}{2} = 0.000\\,012\\,5$ s",
             "1 mark: Final answer: $s = 6000 \\times 0.000\\,012\\,5 =$ **0.075 m**"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     }

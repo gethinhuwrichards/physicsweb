@@ -16,7 +16,7 @@
           "options": ["8 N to the right", "8 N to the left", "4 N to the right", "4 N to the left"],
           "correctAnswer": 2,
           "markScheme": ["Answer: C – The resultant force is 6 − 2 = 4 N to the right"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -36,7 +36,7 @@
             "1 mark: bigger than",
             "1 mark: equal to"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -61,7 +61,7 @@
           "markScheme": [
             "1 mark: equal to"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -71,7 +71,7 @@
           "markScheme": [
             "1 mark: **Deceleration** (or decelerate)"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -81,7 +81,7 @@
           "markScheme": [
             "1 mark: Velocity includes **direction** (speed does not)"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -106,7 +106,7 @@
           "markScheme": [
             "1 mark: equal to"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -116,7 +116,7 @@
           "options": ["1.5 m/s", "3.0 m/s", "4.5 m/s", "6.0 m/s"],
           "correctAnswer": 1,
           "markScheme": ["Answer: B – The typical running speed of a person is approximately 3.0 m/s"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -135,7 +135,7 @@
             "1 mark: Correct substitution: $v = \\frac{100}{12.5}$",
             "1 mark: Final answer: **8.0 m/s**"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -154,7 +154,7 @@
             "1 mark: **Reduces** the speed",
             "1 mark: Opening the parachute increases **air resistance** / drag (or parachute has a large surface area)"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -164,7 +164,7 @@
           "options": ["A group of objects that interact", "Objects with big differences in mass", "Objects with gravitational potential energy"],
           "correctAnswer": 0,
           "markScheme": ["Answer: A – A system is a group of objects that interact"],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -191,7 +191,7 @@
             "1 mark: Correct substitution: $W = 25{,}000 \\times 9.8$",
             "1 mark: Final answer: **245 000 N**"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -210,7 +210,7 @@
             "1 mark: Correct substitution: $p = \\frac{1{,}960{,}000}{49}$",
             "1 mark: Final answer: **40 000 Pa**"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -237,7 +237,7 @@
             "1 mark: Correct substitution: $a = \\frac{1.3 - 0.70}{5.0}$",
             "1 mark: Final answer: **0.12 m/s\u00b2**"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -247,7 +247,7 @@
           "options": ["J/s", "m/s", "m/s\u00b2", "Nm"],
           "correctAnswer": 2,
           "markScheme": ["Answer: C – The unit for acceleration is m/s\u00b2"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -264,7 +264,7 @@
           "markScheme": [
             "1 mark: speed"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -283,7 +283,7 @@
             "1 mark: Make the shape/body more **streamlined** (or lower the seating position)",
             "1 mark: **Increase** the power of the engine, or **reduce** the mass/weight of the go-kart"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -302,7 +302,7 @@
             "1 mark: Correct substitution: $p = 140 \\times 13$",
             "1 mark: Final answer: **1820 kg m/s**"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -325,7 +325,7 @@
           ],
           "correctAnswer": 0,
           "markScheme": ["Answer: A \u2013 $F = m \\times a$"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -344,7 +344,7 @@
             "1 mark: Correct substitution: $F = 80 \\times 1.2$",
             "1 mark: Final answer: **96 N**"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -364,7 +364,7 @@
             "1 mark: Correct rearrangement: $a = \\frac{1.2}{0.75}$",
             "1 mark: Final answer: **1.6 m/s\u00b2**"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -383,7 +383,7 @@
             "1 mark: **Constant speed** (not accelerating)",
             "1 mark: In a **straight line** (accept any reference to direction; 'constant velocity' scores both marks)"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -393,7 +393,7 @@
           "markScheme": [
             "1 mark: The motorbike **slows down**"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -408,7 +408,7 @@
           ],
           "correctAnswer": 0,
           "markScheme": ["Answer: A \u2013 $a = \\frac{\\Delta v}{t}$"],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -427,7 +427,7 @@
             "1 mark: The stopping distance **increases**",
             "1 mark: By **more than double**"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -438,7 +438,7 @@
             "1 mark: The vehicle may **skid** / slide (or loss of control / brakes lock)",
             "1 mark: Due to reduced **friction** between tyres and road"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -450,7 +450,7 @@
             "1 mark: Slower driver **reactions** (e.g. tiredness, alcohol, drugs, distraction)",
             "1 mark: Poor vehicle maintenance (e.g. worn **brakes** / worn **tyres**) or increased mass"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -473,7 +473,7 @@
           ],
           "correctAnswer": 0,
           "markScheme": ["Answer: A \u2013 $F = k \\times e$"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -493,7 +493,7 @@
             "1 mark: Correct rearrangement: $k = \\frac{336}{0.21}$",
             "1 mark: Final answer: **1600 N/m**"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -512,7 +512,7 @@
             "1 mark: Correct substitution: $\\frac{0.21}{0.84} \\times 100$",
             "1 mark: Final answer: **25%**"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -539,7 +539,7 @@
             "1 mark: Correct substitution: $W = 75 \\times 10$",
             "1 mark: Final answer: **750 N**"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -558,7 +558,7 @@
             "1 mark: Correct substitution: $500{,}000 = F \\times 25$",
             "1 mark: Final answer: **20 000 N**"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -569,7 +569,7 @@
             "1 mark: Kinetic energy is transferred by **heating**",
             "1 mark: To the **brakes**"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -588,7 +588,7 @@
             "1 mark: The velocity/speed is **increasing**",
             "1 mark: The acceleration is **uniform** / constant / steady"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -601,7 +601,7 @@
             "1 mark: The ball has lost **kinetic energy** (or has reduced gravitational potential energy at top of bounce)",
             "1 mark: Total energy of ball and Earth system is **conserved** / constant"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -628,7 +628,7 @@
             "1 mark: Correct substitution: $d = 24 \\times 0.7$",
             "1 mark: Final answer: **16.8 m**"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -647,7 +647,7 @@
             "1 mark: Correct substitution: $a = \\frac{24 - 0}{4}$",
             "1 mark: Final answer: **6 m/s\u00b2**"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -666,7 +666,7 @@
             "1 mark: Correct substitution: $F = 800 \\times 6$",
             "1 mark: Final answer: **4800 N**"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -694,7 +694,7 @@
             "1 mark: Correct rearrangement: $v = \\sqrt{18.62}$",
             "1 mark: Final answer: **4.3 m/s** (to 2 significant figures)"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -704,7 +704,7 @@
           "markScheme": [
             "1 mark: Both velocity and time are **continuous** variables (not categoric)"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     }

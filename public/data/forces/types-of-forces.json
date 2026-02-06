@@ -23,7 +23,7 @@
           "markScheme": [
             "Answer: B — gravitational force."
           ],
-          "diagram": "q1_hailstones_fig1.jpeg"
+          "diagrams": ["q1_hailstones_fig1.jpeg"]
         },
         {
           "partLabel": "b",
@@ -40,7 +40,7 @@
           "markScheme": [
             "Answer: A — air resistance increases with speed."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -56,7 +56,7 @@
           "markScheme": [
             "Answer: C — resultant force is zero at terminal velocity."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "d",
@@ -75,7 +75,7 @@
             "1 mark: Correct method: extrapolate the best-fit line to 80 mm on the graph.",
             "1 mark: Terminal velocity ≈ **46 m/s** (accept 44–48 m/s if consistent with the line)."
           ],
-          "diagram": "q1_terminal_velocity_graph.jpeg"
+          "diagrams": ["q1_terminal_velocity_graph.jpeg"]
         },
         {
           "partLabel": "e",
@@ -92,7 +92,7 @@
           "markScheme": [
             "Answer: D — greater weight."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "f",
@@ -109,7 +109,7 @@
           "markScheme": [
             "Answer: B — 0.48 N."
           ],
-          "diagram": "q1_hailstone_forces.jpeg"
+          "diagrams": ["q1_hailstone_forces.jpeg"]
         },
         {
           "partLabel": "g",
@@ -119,7 +119,7 @@
           "markScheme": [
             "1 mark: **Upwards**."
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -144,7 +144,7 @@
           "markScheme": [
             "Answer: B — friction."
           ],
-          "diagram": "q2_cyclist_forces.jpeg"
+          "diagrams": ["q2_cyclist_forces.jpeg"]
         },
         {
           "partLabel": "b",
@@ -161,7 +161,7 @@
           "markScheme": [
             "Answer: A — air resistance."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -177,7 +177,7 @@
           "markScheme": [
             "Answer: A — forces balance at constant velocity."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "d",
@@ -196,7 +196,7 @@
             "1 mark: Substitution: moment = 150 × 0.24",
             "1 mark: Moment = **36 N m**"
           ],
-          "diagram": "q2_pedal_distance.jpeg"
+          "diagrams": ["q2_pedal_distance.jpeg"]
         },
         {
           "partLabel": "e",
@@ -221,7 +221,7 @@
           "markScheme": [
             "1 mark: **chain**"
           ],
-          "diagram": "q2_chain_drive.jpeg"
+          "diagrams": ["q2_chain_drive.jpeg"]
         },
         {
           "partLabel": "f",
@@ -238,7 +238,7 @@
           "markScheme": [
             "Answer: D — 5.8 m/s."
           ],
-          "diagram": "q2_velocity_time_graph.jpeg"
+          "diagrams": ["q2_velocity_time_graph.jpeg"]
         },
         {
           "partLabel": "g",
@@ -257,7 +257,7 @@
             "1 mark: Substitution: $a = 5.8 / 20$",
             "1 mark: $a = **0.29\\,\\text{m/s}^2**$"
           ],
-          "diagram": "q2_equation_snip.jpeg"
+          "diagrams": ["q2_equation_snip.jpeg"]
         },
         {
           "partLabel": "h",
@@ -282,7 +282,7 @@
           "markScheme": [
             "1 mark: **deceleration**"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -330,7 +330,7 @@
             "1 mark: **newtons**",
             "1 mark: **balanced**"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -355,7 +355,7 @@
           "markScheme": [
             "Answer: D."
           ],
-          "diagram": "q5_bend_directions.png"
+          "diagrams": ["q5_bend_directions.png"]
         },
         {
           "partLabel": "b",
@@ -365,7 +365,7 @@
           "markScheme": [
             "1 mark: **Friction** (between tyres and road)."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -375,7 +375,7 @@
           "markScheme": [
             "Any two: **speed/velocity**, **radius of bend** (distance from centre), **mass**."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "d",
@@ -386,7 +386,7 @@
             "1 mark: **Wide base / wide wheelbase**.",
             "1 mark: **Low centre of mass/centre of gravity**."
           ],
-          "diagram": "q5_racing_car.png"
+          "diagrams": ["q5_racing_car.png"]
         }
       ]
     }

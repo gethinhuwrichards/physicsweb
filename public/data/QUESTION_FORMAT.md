@@ -72,7 +72,7 @@ Before assigning IDs, check existing question files to ensure no duplicates.
 | `text` | string | Yes | The question text (supports LaTeX) |
 | `marks` | integer | Yes | Number of marks (1-6) |
 | `markScheme` | string[] | Yes | Array of marking criteria |
-| `diagram` | string \| null | Yes | Filename in images/ folder, or null |
+| `diagrams` | string[] | Yes | Array of filenames in images/ folder, or empty array `[]` |
 
 ## Part Types
 
@@ -98,7 +98,7 @@ Student selects one option from 3 or 4 choices (radio buttons). Auto-marked.
   "options": ["Speed", "Mass", "Velocity", "Distance"],
   "correctAnswer": 2,
   "markScheme": ["Answer: C - Velocity has magnitude and direction"],
-  "diagram": null
+  "diagrams": []
 }
 ```
 
@@ -130,7 +130,7 @@ Student selects multiple options (checkboxes). The UI enforces a selection limit
   "selectCount": 2,
   "scoring": "all-or-nothing",
   "markScheme": ["1 mark: Wind", "1 mark: Solar"],
-  "diagram": null
+  "diagrams": []
 }
 ```
 
@@ -166,7 +166,7 @@ The `text` field serves as an introductory instruction (e.g., "Complete the sent
   "wordBank": ["chemical", "kinetic", "nuclear", "elastic potential"],
   "correctAnswers": ["chemical", "kinetic"],
   "markScheme": ["1 mark: chemical", "1 mark: kinetic"],
-  "diagram": null
+  "diagrams": []
 }
 ```
 
@@ -196,7 +196,7 @@ The character limit for the textarea is derived at render time: `marks * 400` (~
     "1 mark: **Carbon dioxide** and water are converted into **glucose**",
     "1 mark: **Oxygen** is released as a byproduct"
   ],
-  "diagram": null
+  "diagrams": []
 }
 ```
 
@@ -244,7 +244,7 @@ Use when the student can substitute directly into the standard form of the equat
     "1 mark: Correct equation selected + correct substitution: $E_k = \\frac{1}{2} \\times 1500 \\times 30^2$",
     "1 mark: Correct final answer: **675 000 J**"
   ],
-  "diagram": null
+  "diagrams": []
 }
 ```
 
@@ -271,7 +271,7 @@ Use when the student must rearrange the equation before or after substituting.
     "1 mark: Correct rearrangement: $v = \\sqrt{\\frac{2 \\times 450000}{1000}}$",
     "1 mark: Correct final answer: **30 m/s**"
   ],
-  "diagram": null
+  "diagrams": []
 }
 ```
 
@@ -299,7 +299,7 @@ Use when a unit conversion is required before the calculation.
     "1 mark: Correct calculation shown",
     "1 mark: Correct final answer: **450 000 J**"
   ],
-  "diagram": null
+  "diagrams": []
 }
 ```
 
@@ -336,7 +336,7 @@ All options **must** be LaTeX equations wrapped in `$...$` delimiters. The quest
   ],
   "correctAnswer": 0,
   "markScheme": ["Answer: A – $E_k = \\frac{1}{2} m v^2$"],
-  "diagram": null
+  "diagrams": []
 }
 ```
 
@@ -382,7 +382,7 @@ Student ticks one box per row in a table. Each row has a label on the left and r
     "1 mark: Solar — Renewable",
     "1 mark: Natural gas — Non-renewable"
   ],
-  "diagram": null
+  "diagrams": []
 }
 ```
 
@@ -426,7 +426,7 @@ Tables are supported in the `text` field using **inline HTML**. The app renders 
   "options": ["0 – 5 s", "5 – 10 s", "10 – 15 s", "0 – 10 s"],
   "correctAnswer": 2,
   "markScheme": ["Answer: C – Speed decreases from 15 to 5 m/s between 10 and 15 s"],
-  "diagram": null
+  "diagrams": []
 }
 ```
 
@@ -480,7 +480,7 @@ Each string in `markScheme` should describe one marking point:
         "1 mark: chemical",
         "1 mark: kinetic"
       ],
-      "diagram": null
+      "diagrams": []
     },
     {
       "partLabel": "b",
@@ -494,7 +494,7 @@ Each string in `markScheme` should describe one marking point:
       ],
       "correctAnswer": 1,
       "markScheme": ["Answer: B - Internal energy increases with temperature"],
-      "diagram": null
+      "diagrams": []
     },
     {
       "partLabel": "c",
@@ -509,7 +509,7 @@ Each string in `markScheme` should describe one marking point:
         "1 mark: Kinetic",
         "1 mark: Chemical"
       ],
-      "diagram": null
+      "diagrams": []
     }
   ]
 }
@@ -528,5 +528,5 @@ Each string in `markScheme` should describe one marking point:
 9. For `calculation`: `marks` must be **2**, **3**, or **4**. `equations` must have exactly 3 LaTeX equation strings. `correctEquation` must be a valid index (0-2). The last `markScheme` entry must always be the final answer point. `markScheme` length must equal `marks`. `tolerance` defaults to `0.01` (1% relative)
 10. For `equation-choice`: `options` must have exactly 4 LaTeX equation strings; `correctAnswer` must be a valid index (0-3); `marks` must be 1
 11. For `tick-box-table`: `columnHeaders` must have at least 2 strings; `rows` must be an array of objects each with `label` (string) and `correctColumn` (0-based index into columnHeaders); `marks` must equal the number of rows (1 mark per row); `markScheme` must have one entry per row
-12. `diagram` filenames should not include path (just the filename)
+12. `diagrams` is an array of filenames (no path prefix). Use `[]` for no diagrams, `["file.png"]` for one, `["fig1.png", "fig2.png"]` for multiple. Displayed as Fig. 1, Fig. 2, etc. in a grid (max 2 per row)
 13. LaTeX backslashes must be escaped as `\\` in JSON strings

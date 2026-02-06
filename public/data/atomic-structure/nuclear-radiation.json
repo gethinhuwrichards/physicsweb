@@ -16,7 +16,7 @@
           "options": ["2 protons and 2 electrons", "2 protons and 2 neutrons", "4 protons", "4 neutrons"],
           "correctAnswer": 1,
           "markScheme": ["Answer: B - An alpha particle consists of 2 protons and 2 neutrons"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -26,7 +26,7 @@
           "options": ["An electron", "A neutron", "Electromagnetic radiation"],
           "correctAnswer": 0,
           "markScheme": ["Answer: A - A beta particle is an electron emitted from the nucleus"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -36,7 +36,7 @@
           "options": ["Cosmic rays", "Nuclear accidents", "Rocks"],
           "correctAnswer": 1,
           "markScheme": ["Answer: B - Nuclear accidents are a man-made source of background radiation"],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -56,7 +56,7 @@
           "selectCount": 2,
           "scoring": "partial",
           "markScheme": ["1 mark: Cosmic rays", "1 mark: Radon gas"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -76,7 +76,7 @@
             "1 mark: Nuclear accidents \u2014 Man-made",
             "1 mark: Radon gas \u2014 Natural"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -94,7 +94,7 @@
           "options": ["Radioactive decay is a random process", "The air pressure in the laboratory increased", "The background radiation increased during the day", "The temperature in the laboratory decreased"],
           "correctAnswer": 0,
           "markScheme": ["Answer: A - Radioactive decay is a random process, so background readings vary"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -104,7 +104,7 @@
           "options": ["The lead lining absorbs the emitted radiation", "The lead lining reflects the emitted radiation", "The lead lining transmits the emitted radiation"],
           "correctAnswer": 0,
           "markScheme": ["Answer: A - Lead absorbs the emitted radiation, reducing exposure"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -114,7 +114,7 @@
           "options": ["Add the background count to 159", "Divide the background count by 159", "Multiply the background count by 159", "Subtract the background count from 159"],
           "correctAnswer": 3,
           "markScheme": ["Answer: D - Subtract the background count from 159 to get the count from the source alone"],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -132,7 +132,7 @@
           "options": ["A quarter of the original activity", "Half the original activity", "Double the original activity", "Zero"],
           "correctAnswer": 1,
           "markScheme": ["Answer: B - After one half-life the activity is half of the original activity"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -142,7 +142,7 @@
           "options": ["Half the time taken for all nuclei to decay", "The time taken for half the nuclei to decay", "The time taken for one nucleus to split in half"],
           "correctAnswer": 1,
           "markScheme": ["Answer: B - Half-life is the time taken for half the nuclei to decay"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -152,7 +152,7 @@
           "options": ["The smaller the activity, the greater the risk", "The activity does not affect the risk", "The greater the activity, the greater the risk"],
           "correctAnswer": 2,
           "markScheme": ["Answer: C - The greater the activity, the greater the risk of harm"],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -177,7 +177,7 @@
           "wordBank": ["alpha particles", "electrons", "neutrons", "protons"],
           "correctAnswers": ["protons", "neutrons"],
           "markScheme": ["1 mark: protons", "1 mark: neutrons"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -187,7 +187,7 @@
           "options": ["Carbon-15", "Carbon-16", "Carbon-17", "Carbon-18"],
           "correctAnswer": 3,
           "markScheme": ["Answer: D - Carbon-18 has the shortest half-life (0.09 s) so it is the least stable"],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -205,7 +205,7 @@
           "options": ["Rock A", "Rock B", "Rock C", "Rock D"],
           "correctAnswer": 2,
           "markScheme": ["Answer: C - Rock C's count dropped to background level after paper was placed, indicating only alpha radiation"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -213,7 +213,7 @@
           "text": "Give a reason for your answer to part (a).",
           "marks": 1,
           "markScheme": ["1 mark: Alpha radiation is stopped by (one sheet of) **paper**, so the count dropped to background level after paper was placed between source and detector"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -223,7 +223,7 @@
           "options": ["Rock A", "Rock B", "Rock C", "Rock D"],
           "correctAnswer": 0,
           "markScheme": ["Answer: A - Rock A's count was not stopped by paper but dropped to background level after aluminium was placed"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "d",
@@ -231,7 +231,7 @@
           "text": "Give a reason for your answer to part (c).",
           "marks": 1,
           "markScheme": ["1 mark: Beta radiation is stopped by (a thick) **aluminium** sheet, so the count dropped to background after aluminium was placed"],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -249,7 +249,7 @@
           "options": ["Displaying the radiation hazard symbol", "Handling the rocks with clean hands", "Wearing protective gloves"],
           "correctAnswer": 2,
           "markScheme": ["Answer: C - Wearing protective gloves prevents radioactive material from contaminating the skin"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -259,7 +259,7 @@
           "options": ["To remove alpha particles from their shoes", "To remove gamma radiation from their shoes", "To remove radioactive dust from their shoes"],
           "correctAnswer": 2,
           "markScheme": ["Answer: C - The sticky floor removes radioactive dust (contamination) from shoes"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -267,7 +267,7 @@
           "text": "An alpha particle is the same as the nucleus of a helium atom. How is an alpha particle different from a helium atom?",
           "marks": 1,
           "markScheme": ["1 mark: Has no **electrons** (or: alpha has a positive charge / helium atom has no overall charge)"],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -294,7 +294,7 @@
             "1 mark: Correct substitution: $\\frac{2.0}{0.005}$",
             "1 mark: Final answer: **400**"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -313,7 +313,7 @@
             "1 mark: Correct substitution: $\\frac{0.072}{0.00050}$",
             "1 mark: Final answer: **144 days**"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -332,7 +332,7 @@
             "1 mark: **Increased** levels of exposure increases the risk of developing cancer",
             "1 mark: **Smoking** increases the harmful effect of radon"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -343,7 +343,7 @@
             "1 mark: Any valid reason, e.g. frequent **flying** / living at **altitude**",
             "1 mark: Any second valid reason, e.g. living in areas with high **radon** concentrations / having more **X-rays** than average"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -361,7 +361,7 @@
           "options": ["The alpha particles have a low energy", "People replace smoke detectors every few years", "Americium-241 has a long half-life"],
           "correctAnswer": 2,
           "markScheme": ["Answer: C - Americium-241 has a long half-life so its activity barely changes over many years"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -369,7 +369,7 @@
           "text": "Why do people need to know that a smoke detector contains a radioactive material?",
           "marks": 1,
           "markScheme": ["1 mark: Alpha particles / radiation is **harmful** (e.g. can cause cancer), so people can dispose of it safely or make an informed choice"],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -394,7 +394,7 @@
           "wordBank": ["electrons", "neutrons", "protons", "quarks"],
           "correctAnswers": ["protons", "neutrons"],
           "markScheme": ["1 mark: protons", "1 mark: neutrons"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -402,7 +402,7 @@
           "text": "Radon-222 has a mass number of 222 and an atomic number of 86. How many protons are in an atom of radon-222?",
           "marks": 1,
           "markScheme": ["1 mark: **86**"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -410,7 +410,7 @@
           "text": "When radon-222 emits an alpha particle, it changes to polonium-218. An alpha particle consists of 2 protons and 2 neutrons. How is the nucleus of polonium-218 different from the nucleus of radon-222?",
           "marks": 1,
           "markScheme": ["1 mark: Two fewer **protons** and two fewer **neutrons** (or: 84 protons and 134 neutrons)"],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -426,7 +426,7 @@
           "text": "What is gamma radiation?",
           "marks": 1,
           "markScheme": ["1 mark: **Electromagnetic** wave/radiation"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -434,7 +434,7 @@
           "text": "Food can be treated with gamma radiation to kill bacteria. Why must a source that emits gamma radiation be used rather than alpha or beta?",
           "marks": 1,
           "markScheme": ["1 mark: Gamma can **penetrate** the crate/box/packaging"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -449,7 +449,7 @@
           "wordBank": ["electrons", "neutrons", "protons"],
           "correctAnswers": ["neutrons"],
           "markScheme": ["1 mark: neutrons"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "d",
@@ -457,7 +457,7 @@
           "text": "The food treatment area has thick concrete walls. How do the concrete walls reduce the radiation hazard to workers outside the area?",
           "marks": 1,
           "markScheme": ["1 mark: Concrete **absorbs** the gamma radiation"],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -484,7 +484,7 @@
             "1 mark: Correct substitution: $1250 \\times 180$",
             "1 mark: Final answer: **225 000 Bq**"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -495,7 +495,7 @@
             "1 mark: Yearly dose = $0.003 \\times 365$ = **1.095 mSv**",
             "1 mark: Which is much less than **100 mSv** (the lowest dose with evidence of causing cancer)"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -513,7 +513,7 @@
           "options": ["Alpha particle", "Beta particle", "Gamma ray", "Neutron"],
           "correctAnswer": 0,
           "markScheme": ["Answer: A - The mass number decreases by 4 and the atomic number by 2, indicating alpha emission"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -521,7 +521,7 @@
           "text": "From which part of a uranium-238 atom is the radiation emitted?",
           "marks": 1,
           "markScheme": ["1 mark: The (unstable) **nucleus**"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -529,7 +529,7 @@
           "text": "Uranium-235 is another isotope of uranium. How is an atom of uranium-235 similar to an atom of uranium-238?",
           "marks": 1,
           "markScheme": ["1 mark: Same number of **protons** (or same atomic number, or both have 92 protons)"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "d",
@@ -537,7 +537,7 @@
           "text": "Uranium-238 has a half-life of 4500 million years. When the Earth was formed, there was twice as much uranium-238 as there is now. What is the age of the Earth?",
           "marks": 1,
           "markScheme": ["1 mark: **4500 million years**"],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -553,7 +553,7 @@
           "text": "What is the mass number of an atom?",
           "marks": 1,
           "markScheme": ["1 mark: Total number of **protons** plus **neutrons** (or number of nucleons)"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -564,7 +564,7 @@
             "1 mark: The number of **neutrons** decreases by one",
             "1 mark: The number of **protons** increases by one (a neutron changes into a proton)"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -575,7 +575,7 @@
             "1 mark: The number of **protons** determines the element (or atomic number)",
             "1 mark: Alpha and beta decay produce **different changes** to the number of protons"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -595,7 +595,7 @@
             "1 mark: Causing increased risk of **cancer** / organ failure / radiation sickness / mutation of DNA",
             "1 mark: The radioactive material remains inside the body (all alpha radiation is **absorbed** by the body)"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -615,7 +615,7 @@
             "1 mark: Correct rearrangement: $1.45 \\times 10^{-4} \\times 2 \\times 2 \\times 2$",
             "1 mark: Final answer: **$1.16 \\times 10^{-3}$ g** (or 0.00116 g)"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -642,7 +642,7 @@
             "1 mark: Correct substitution: $\\frac{17 + 21 + 19}{3}$",
             "1 mark: Final answer: **19** counts per minute"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -652,7 +652,7 @@
           "options": ["Alpha", "Beta", "Gamma"],
           "correctAnswer": 2,
           "markScheme": ["Answer: C - Gamma radiation has no charge so is not deflected by a magnetic field"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -663,7 +663,7 @@
             "1 mark: **Gamma** has no charge (or gamma is an electromagnetic wave)",
             "1 mark: So gamma is not **deflected** / affected by a magnetic field"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     }

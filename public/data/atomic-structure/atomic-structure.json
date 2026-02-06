@@ -16,7 +16,7 @@
           "options": ["Electron", "Neutron", "Proton"],
           "correctAnswer": 1,
           "markScheme": ["Answer: B - Neutrons have no charge"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -31,7 +31,7 @@
           "wordBank": ["electrons", "neutrons", "protons"],
           "correctAnswers": ["electrons"],
           "markScheme": ["1 mark: electrons"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -41,7 +41,7 @@
           "options": ["Have a long range in air", "Are highly ionising", "Will pass through metals"],
           "correctAnswer": 1,
           "markScheme": ["Answer: B - Alpha particles are highly ionising"],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -59,7 +59,7 @@
           "options": ["3", "4", "7", "10"],
           "correctAnswer": 2,
           "markScheme": ["Answer: C - Mass number = protons + neutrons = 3 + 4 = 7"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -69,7 +69,7 @@
           "options": ["3", "4", "7", "10"],
           "correctAnswer": 0,
           "markScheme": ["Answer: A - Atomic number = number of protons = 3"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -84,7 +84,7 @@
           "wordBank": ["circles", "levels", "rings"],
           "correctAnswers": ["levels"],
           "markScheme": ["1 mark: levels"],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -102,7 +102,7 @@
           "options": ["Electrons and neutrons", "Electrons and protons", "Neutrons and protons"],
           "correctAnswer": 2,
           "markScheme": ["Answer: C - The nucleus contains neutrons and protons"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -119,7 +119,7 @@
           "wordBank": ["ion", "isotope", "molecule", "negative", "neutral", "positive"],
           "correctAnswers": ["ion", "positive"],
           "markScheme": ["1 mark: ion", "1 mark: positive"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -130,7 +130,7 @@
             "1 mark: The total **positive** charge (from protons) equals the total **negative** charge (from electrons)",
             "1 mark: The number of **protons** equals the number of **electrons**"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -148,7 +148,7 @@
           "options": ["A", "B", "C", "D"],
           "correctAnswer": 1,
           "markScheme": ["Answer: B - The electron was discovered by J.J. Thomson in 1897, before the other discoveries"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -158,7 +158,7 @@
           "options": ["A", "B", "C", "D"],
           "correctAnswer": 2,
           "markScheme": ["Answer: C - The neutron was discovered by Chadwick in 1932, after the other discoveries"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -173,7 +173,7 @@
           ],
           "correctAnswer": 0,
           "markScheme": ["Answer: A - Reproducible means other scientists can repeat the experiment and obtain the same results"],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -191,7 +191,7 @@
           "options": ["Electrons", "Neutrons", "Protons"],
           "correctAnswer": 0,
           "markScheme": ["Answer: A - The negative particles embedded in the plum pudding model are electrons"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -205,7 +205,7 @@
           ],
           "correctAnswer": 2,
           "markScheme": ["Answer: C - Models are replaced when new experimental evidence does not fit the existing model"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -228,7 +228,7 @@
             "1 mark: electron (very small relative mass, relative charge \u22121)",
             "1 mark: neutron (relative mass 1, relative charge 0)"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -259,7 +259,7 @@
             "1 mark: increases (electric field strength)",
             "1 mark: increases (force)"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -273,7 +273,7 @@
           ],
           "correctAnswer": 2,
           "markScheme": ["Answer: C - Most alpha particles pass straight through because the atom is mostly empty space"],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -292,7 +292,7 @@
             "1 mark: **B** is a different element",
             "1 mark: B has a different number of **protons** (or a different atomic number)"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -304,7 +304,7 @@
             "1 mark: They have the same number of **protons** (same atomic number / same element)",
             "1 mark: They have a different number of **neutrons** (different mass numbers)"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -323,7 +323,7 @@
             "1 mark: Oxygen-15 has the **shortest half-life** of the three sources",
             "1 mark: So the patient is exposed to **radiation** for a shorter time / the source decays most quickly"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -337,7 +337,7 @@
           ],
           "correctAnswer": 2,
           "markScheme": ["Answer: C - Radiation is used when the risk is much smaller than the possible benefit"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -347,7 +347,7 @@
           "markScheme": [
             "1 mark: The radiation may **damage** / destroy / kill / mutate / ionise healthy body cells"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -368,7 +368,7 @@
             "1 mark: In the nuclear model, **electrons orbit** the nucleus at a distance",
             "1 mark: In the plum pudding model, electrons are **embedded** in the sphere of positive charge"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -378,7 +378,7 @@
           "markScheme": [
             "1 mark: In the Bohr model, electrons orbit at **specific distances** (fixed energy levels / shells), whereas in the nuclear model electrons can orbit at **any distance**"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -397,7 +397,7 @@
             "1 mark: Both the alpha particle and the gold **nucleus** are **positively** charged",
             "1 mark: So they **repel** each other, deflecting the alpha particle"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -408,7 +408,7 @@
             "1 mark: Alpha particle B passes **closer** to the (positively charged) nucleus",
             "1 mark: So it experiences a **stronger** repulsive (electrostatic) force"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -419,7 +419,7 @@
             "1 mark: To move to a higher energy level, an electron must **absorb** electromagnetic radiation (or a specific amount of energy / a photon)",
             "1 mark: To move to a lower energy level, an electron **emits** electromagnetic radiation (or releases energy as a photon)"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     }

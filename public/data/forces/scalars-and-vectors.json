@@ -17,7 +17,7 @@
             "1 mark: Friction force = **60 N**.",
             "1 mark: At constant speed, resultant force is zero so forces balance."
           ],
-          "diagram": "crate-push-diagram.png"
+          "diagrams": ["crate-push-diagram.png"]
         },
         {
           "partLabel": "b",
@@ -36,7 +36,7 @@
             "1 mark: Correct substitution: $W = 60 \\times 28$",
             "1 mark: Final answer: **1680 J**"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -54,7 +54,7 @@
           "markScheme": [
             "1 mark: A vector has **magnitude and direction** (a scalar has magnitude only)."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -64,7 +64,7 @@
           "markScheme": [
             "1 mark: Any one, e.g. **velocity**, **force**, **weight**, **acceleration**, **displacement**."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -74,7 +74,7 @@
           "markScheme": [
             "1 mark: Momentum = **mass × velocity**."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "d",
@@ -84,7 +84,7 @@
           "markScheme": [
             "1 mark: **kg m/s** (accept **N s**)."
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -103,7 +103,7 @@
             "1 mark: The **direction** of the capsule’s velocity is changing.",
             "1 mark: Acceleration is the **rate of change of velocity**, and velocity includes direction."
           ],
-          "diagram": "london-eye.jpeg"
+          "diagrams": ["london-eye.jpeg"]
         },
         {
           "partLabel": "b",
@@ -113,7 +113,7 @@
           "markScheme": [
             "1 mark: **Towards the centre** of the wheel."
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -123,7 +123,7 @@
           "markScheme": [
             "1 mark: **Radius** (or diameter): a larger radius gives a **smaller** resultant force."
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -164,7 +164,7 @@
             "1 mark: **speed**",
             "1 mark: **direction**"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -204,7 +204,7 @@
             "1 mark: Force — Vector",
             "1 mark: Time — Scalar"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     }

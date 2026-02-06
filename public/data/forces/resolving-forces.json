@@ -22,7 +22,7 @@
           "markScheme": [
             "Answer: resultant force."
           ],
-          "diagram": "trolley.png"
+          "diagrams": ["trolley.png"]
         },
         {
           "partLabel": "b",
@@ -41,7 +41,7 @@
             "1 mark: Substitution: $W = 50 \\times 80$",
             "1 mark: Final answer: **4000 J**"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -81,7 +81,7 @@
             "1 mark: **air resistance**",
             "1 mark: **gravity**"
           ],
-          "diagram": "skydiver.png"
+          "diagrams": ["skydiver.png"]
         },
         {
           "partLabel": "b",
@@ -91,7 +91,7 @@
           "markScheme": [
             "1 mark: Constant speed / terminal velocity / zero acceleration."
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -111,7 +111,7 @@
             "1 mark: B: **accelerating** (speeding up).",
             "1 mark: C: **decelerating** (slowing down)."
           ],
-          "diagram": "car-forces.png"
+          "diagrams": ["car-forces.png"]
         }
       ]
     },
@@ -129,7 +129,7 @@
           "markScheme": [
             "1 mark: **120 N** (forces are balanced at constant speed)."
           ],
-          "diagram": "swimmer.png"
+          "diagrams": ["swimmer.png"]
         },
         {
           "partLabel": "b",
@@ -140,7 +140,7 @@
             "1 mark: As speed increases, **drag/water resistance increases**.",
             "1 mark: Until drag equals thrust so **forces balance**."
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -179,7 +179,7 @@
             "1 mark: Constant speed — A = E",
             "1 mark: Slowing down — A < E"
           ],
-          "diagram": "van-forces.png"
+          "diagrams": ["van-forces.png"]
         }
       ]
     },
@@ -204,7 +204,7 @@
           "markScheme": [
             "Answer: A — $F = m a$."
           ],
-          "diagram": "aircraft.png"
+          "diagrams": ["aircraft.png"]
         }
       ]
     }

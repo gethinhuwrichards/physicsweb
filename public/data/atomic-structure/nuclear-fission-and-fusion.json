@@ -16,7 +16,7 @@
           "options": ["Inside the Earth", "Inside a nuclear power station", "Inside the Sun"],
           "correctAnswer": 2,
           "markScheme": ["Answer: C - Nuclear fusion occurs naturally inside the Sun"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -31,7 +31,7 @@
           "wordBank": ["fission", "force", "fusion"],
           "correctAnswers": ["fusion"],
           "markScheme": ["1 mark: fusion"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -41,7 +41,7 @@
           "options": ["Charge", "Energy", "Force"],
           "correctAnswer": 1,
           "markScheme": ["Answer: B - Energy is released during nuclear fusion"],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -68,7 +68,7 @@
           "wordBank": ["gamma rays", "light rays", "proton", "neutron", "nucleus", "X-rays"],
           "correctAnswers": ["nucleus", "neutron", "gamma rays"],
           "markScheme": ["1 mark: nucleus", "1 mark: neutron", "1 mark: gamma rays"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -79,7 +79,7 @@
             "1 mark: Any valid issue, e.g. **radioactive** waste / waste has a long **half-life** / risk of catastrophic **accidents**",
             "1 mark: Any second valid issue, e.g. fuel is **non-renewable** / waste is **toxic** / waste needs to be **buried**"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -98,7 +98,7 @@
             "1 mark: Nuclear **fission** is the splitting of a large atomic **nucleus**",
             "1 mark: Nuclear **fusion** is the joining of two atomic **nuclei** to form a larger one"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -108,7 +108,7 @@
           "options": ["Electrons", "Energy", "Neutrons", "Protons"],
           "correctAnswer": 1,
           "markScheme": ["Answer: B - Both fission and fusion release energy"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -116,7 +116,7 @@
           "text": "Plutonium-239 is used as fuel in some nuclear reactors. Name another substance used as fuel in nuclear reactors.",
           "marks": 1,
           "markScheme": ["1 mark: **Uranium** (accept U-235, thorium, MOX)"],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -141,7 +141,7 @@
           "wordBank": ["Geiger counter", "nuclear reactor", "star"],
           "correctAnswers": ["nuclear reactor", "star"],
           "markScheme": ["1 mark: nuclear reactor", "1 mark: star"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -149,7 +149,7 @@
           "text": "State one way in which the process of nuclear fusion differs from the process of nuclear fission.",
           "marks": 1,
           "markScheme": ["1 mark: In fusion, **nuclei** are **joined** (not split)"],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -168,7 +168,7 @@
             "1 mark: Equal numbers of **protons** and **electrons**",
             "1 mark: Protons and electrons have **equal** but **opposite** charge (+1 and -1)"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -176,7 +176,7 @@
           "text": "Uranium-235 is used as fuel in a nuclear reactor. How is the structure of an atom of uranium-235 different from uranium-238?",
           "marks": 1,
           "markScheme": ["1 mark: (3) fewer **neutrons** (or lower mass number)"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -184,7 +184,7 @@
           "text": "The nucleus of a uranium-235 atom must absorb a particle before it can split. What type of particle is absorbed?",
           "marks": 1,
           "markScheme": ["1 mark: **Neutron**"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "d",
@@ -192,7 +192,7 @@
           "text": "What name is given to the process where a nucleus splits into smaller parts?",
           "marks": 1,
           "markScheme": ["1 mark: Nuclear **fission**"],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -219,7 +219,7 @@
           "wordBank": ["electrons", "gamma rays", "neutrons", "nuclei", "protons"],
           "correctAnswers": ["nuclei", "neutrons", "gamma rays"],
           "markScheme": ["1 mark: nuclei", "1 mark: neutrons", "1 mark: gamma rays"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -234,7 +234,7 @@
           ],
           "correctAnswer": 0,
           "markScheme": ["Answer: A - $E = P \\times t$"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -253,7 +253,7 @@
             "1 mark: Correct substitution: $E = 500{,}000{,}000 \\times 3600$",
             "1 mark: Final answer: **$1.8 \\times 10^{12}$ J**"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -272,7 +272,7 @@
             "1 mark: Two **nuclei** (of light elements) **join**",
             "1 mark: Forming a **larger** / heavier nucleus"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -280,7 +280,7 @@
           "text": "Suggest one reason why nuclear fusion reactors are not currently used to produce energy in power stations.",
           "marks": 1,
           "markScheme": ["1 mark: Any valid reason, e.g. still only **experimental** / reaction does not last long enough / use more **energy** than they produce"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -288,7 +288,7 @@
           "text": "Suggest one reason why scientists continue to try to develop a practical nuclear fusion reactor.",
           "marks": 1,
           "markScheme": ["1 mark: Any valid reason, e.g. would give another source of **energy** / unlimited fuel / would not produce **radioactive waste**"],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -304,7 +304,7 @@
           "text": "Radioactive waste from nuclear power stations has a long half-life. Suggest one precaution taken to reduce the hazard caused by radioactive waste.",
           "marks": 1,
           "markScheme": ["1 mark: Any valid precaution, e.g. **bury** the waste / store in **concrete** / transport in secure vessels / put in cooling ponds"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -323,7 +323,7 @@
             "1 mark: Correct substitution: $0.92 \\times 365$",
             "1 mark: Final answer: **335.8 days** (accept 335 or 336)"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -331,7 +331,7 @@
           "text": "Although nuclear fuels are relatively cheap, the total cost of generating electricity using nuclear fuels is expensive. Why?",
           "marks": 1,
           "markScheme": ["1 mark: Cost of **building** and **decommissioning** is very high (or cost of reprocessing/storage of nuclear waste)"],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -350,7 +350,7 @@
             "1 mark: A large **nucleus** is hit by a **neutron**",
             "1 mark: It **splits** into smaller nuclei (and neutrons and energy are released)"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -358,7 +358,7 @@
           "text": "How does nuclear fission lead to a chain reaction?",
           "marks": 1,
           "markScheme": ["1 mark: Additional **neutrons** released collide with other nuclei causing **further fission**"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -377,7 +377,7 @@
             "1 mark: Correct substitution: $\\frac{25{,}000{,}000}{2{,}400{,}000} = 10.4...$",
             "1 mark: Final answer: **11** (must round up)"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -393,7 +393,7 @@
           "text": "Uranium-234 decays to thorium-230. Both transitions show a loss of 2 protons and 2 neutrons. How does this show that uranium-234 and thorium-230 emit alpha particles?",
           "marks": 1,
           "markScheme": ["1 mark: Both lose **2 protons** and **2 neutrons** (which is the composition of an alpha particle)"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -401,7 +401,7 @@
           "text": "What makes uranium and thorium different elements?",
           "marks": 1,
           "markScheme": ["1 mark: Different number of **protons** in the nucleus (or different atomic number)"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -409,7 +409,7 @@
           "text": "Explain why the emission of gamma radiation does not cause a new element to be formed.",
           "marks": 1,
           "markScheme": ["1 mark: Gamma involves no change in the number of **protons** in the nucleus (or gamma is a wave, not a particle)"],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -425,7 +425,7 @@
           "text": "There are many isotopes of plutonium. What do the nuclei of different plutonium isotopes have in common?",
           "marks": 1,
           "markScheme": ["1 mark: Same number of **protons** (or same atomic number)"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -437,7 +437,7 @@
             "1 mark: A few particles were **deflected** through large angles",
             "1 mark: Suggesting a concentrated, small **nucleus** that is **positively** charged (repelling positive alpha particles)"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -453,7 +453,7 @@
           "text": "Calder Hall nuclear power station is next to the Sellafield reprocessing plant. Suggest an advantage of having the two plants close together.",
           "marks": 1,
           "markScheme": ["1 mark: Reduces risk of radioactive **leak** during transport (or cheaper transport)"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -473,7 +473,7 @@
             "1 mark: Correct rearrangement: $4 \\times 6$",
             "1 mark: Final answer: **24 seconds**"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     }

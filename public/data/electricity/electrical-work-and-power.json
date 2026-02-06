@@ -25,7 +25,7 @@
             "1 mark: Correct substitution: $E = 5.0 \\times 8.0$",
             "1 mark: Final answer: **40 J**"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -44,7 +44,7 @@
             "1 mark: Correct substitution: $P = 12 \\times 3.0$",
             "1 mark: Final answer: **36 W**"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -64,7 +64,7 @@
             "1 mark: Correct rearrangement: $P = \\frac{E}{t}$",
             "1 mark: Final answer: **12 W**"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     }

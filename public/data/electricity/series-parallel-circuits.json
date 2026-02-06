@@ -24,7 +24,7 @@
           "markScheme": [
             "Answer: B \u2013 The current is the same at all points in a series circuit"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -36,7 +36,7 @@
             "1 mark: Charge is **not lost or gained** in components",
             "1 mark: Therefore the **same charge per second** flows through each component"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -68,7 +68,7 @@
             "1 mark: Same potential difference across each branch",
             "1 mark: Components operate independently"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -81,7 +81,7 @@
             "1 mark: This increases the **total current** drawn from the supply",
             "1 mark: Since $R = \\\\frac{V}{I}$, increasing current **reduces total resistance**"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -128,7 +128,7 @@
             "1 mark: the same",
             "1 mark: the circuit breaks"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -143,7 +143,7 @@
             "1 mark: Total resistance is **lower**, allowing sufficient current",
             "1 mark: Reasoned explanation linking circuit behaviour to practical use"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     }

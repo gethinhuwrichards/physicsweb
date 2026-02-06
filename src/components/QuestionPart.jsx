@@ -100,8 +100,15 @@ export default function QuestionPart({
           {part.type === 'gap-fill' && (
             <div className="part-label-standalone">({part.partLabel})</div>
           )}
-          {part.diagram && (
-            <img src={`images/${part.diagram}`} alt="Diagram" className="part-diagram" />
+          {part.diagrams && part.diagrams.length > 0 && (
+            <div className="part-diagrams-grid">
+              {part.diagrams.map((file, i) => (
+                <figure key={i} className="part-diagram-figure">
+                  <img src={`images/${file}`} alt={`Fig. ${i + 1}`} className="part-diagram" />
+                  <figcaption className="part-diagram-caption">Fig. {i + 1}</figcaption>
+                </figure>
+              ))}
+            </div>
           )}
           {renderInput()}
           <div className="part-marks">

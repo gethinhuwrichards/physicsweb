@@ -16,7 +16,7 @@
           "options": ["0 to 1 cm³", "0 to 5 cm³", "0 to 20 cm³", "0 to 25 cm³"],
           "correctAnswer": 3,
           "markScheme": ["Answer: D – 0 to 25 cm³"],
-          "diagram": "gas-pressure-syringe-gauge.jpeg"
+          "diagrams": ["gas-pressure-syringe-gauge.jpeg"]
         },
         {
           "partLabel": "b",
@@ -26,7 +26,7 @@
           "options": ["Control", "Dependent", "Independent"],
           "correctAnswer": 0,
           "markScheme": ["Answer: A – Control"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -45,7 +45,7 @@
           "wordBank": ["decreases", "increases", "remains the same"],
           "correctAnswers": ["decreases", "increases", "increases"],
           "markScheme": ["1 mark: **decreases**", "1 mark: **increases**", "1 mark: **increases**"],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -63,7 +63,7 @@
           "options": ["The volume decreased.", "The volume stayed the same.", "The volume increased."],
           "correctAnswer": 0,
           "markScheme": ["Answer: A – The volume decreased"],
-          "diagram": "gas-pressure-syringe-plunger.jpeg"
+          "diagrams": ["gas-pressure-syringe-plunger.jpeg"]
         },
         {
           "partLabel": "b",
@@ -73,7 +73,7 @@
           "options": ["The distance decreased.", "The distance stayed the same.", "The distance increased."],
           "correctAnswer": 0,
           "markScheme": ["Answer: A – The distance decreased"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -83,7 +83,7 @@
           "options": ["The frequency of collisions decreased.", "The frequency of collisions stayed the same.", "The frequency of collisions increased."],
           "correctAnswer": 2,
           "markScheme": ["Answer: C – The frequency of collisions increased"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "d",
@@ -93,7 +93,7 @@
           "options": ["The air pressure decreased.", "The air pressure stayed the same.", "The air pressure increased."],
           "correctAnswer": 2,
           "markScheme": ["Answer: C – The air pressure increased"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "e",
@@ -103,7 +103,7 @@
           "options": ["The mean speed of the particles decreases.", "The mean speed of the particles does not change.", "The mean speed of the particles increases."],
           "correctAnswer": 2,
           "markScheme": ["Answer: C – The mean speed of the particles increases"],
-          "diagram": "gas-pressure-fire-piston.jpeg"
+          "diagrams": ["gas-pressure-fire-piston.jpeg"]
         }
       ]
     },
@@ -128,7 +128,7 @@
           "wordBank": ["circular paths", "random directions", "the same direction", "a constant speed", "a constant velocity", "a range of speeds"],
           "correctAnswers": ["random directions", "a range of speeds"],
           "markScheme": ["1 mark: **random directions**", "1 mark: **a range of speeds**"],
-          "diagram": "gas-pressure-tube-equipment.jpeg"
+          "diagrams": ["gas-pressure-tube-equipment.jpeg"]
         },
         {
           "partLabel": "b",
@@ -147,7 +147,7 @@
             "1 mark: Correct substitution: $300 \\times 10$",
             "1 mark: Final answer: **3000 kPa cm³**"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -165,7 +165,7 @@
             "1 mark: Mean distance between particles — Increases",
             "1 mark: Mean speed of particles — Stays the same"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -183,7 +183,7 @@
           "options": ["External energy", "Internal energy", "Movement energy"],
           "correctAnswer": 1,
           "markScheme": ["Answer: B – Internal energy"],
-          "diagram": "gas-pressure-helium-balloon.png"
+          "diagrams": ["gas-pressure-helium-balloon.png"]
         },
         {
           "partLabel": "b",
@@ -198,7 +198,7 @@
           ],
           "correctAnswer": 0,
           "markScheme": ["Answer: A – $\\rho = \\frac{m}{V}$"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -208,7 +208,7 @@
           "options": ["$\\text{m}^3 \\, / \\, \\text{kg}$", "$\\text{kg} \\, / \\, \\text{m}^3$", "$\\text{kg} \\, \\text{m}^3$"],
           "correctAnswer": 1,
           "markScheme": ["Answer: B – kg / m³"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "d",
@@ -227,7 +227,7 @@
             "1 mark: Correct substitution: $\\rho = \\frac{0.00254}{0.0141}$",
             "1 mark: Final answer: **0.18 kg/m³**"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -257,7 +257,7 @@
             "1 mark: The particles move in random directions",
             "1 mark: The particles move with a range of speeds"
           ],
-          "diagram": "gas-pressure-red-balloon.jpeg"
+          "diagrams": ["gas-pressure-red-balloon.jpeg"]
         },
         {
           "partLabel": "b",
@@ -277,7 +277,7 @@
             "1 mark: Correct rearrangement: $P_2 = \\frac{100\\,000 \\times 0.030}{0.025}$",
             "1 mark: Final answer: **120 000 Pa**"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -293,7 +293,7 @@
           "text": "A teacher demonstrated the relationship between the pressure in a gas and the volume of the gas. This is the method used:<br><br>1. Record the initial volume of gas in the syringe and the pressure reading before any weights are attached.<br>2. Attach a 2.0 N weight to the syringe.<br>3. Record the volume of the gas and the reading on the pressure gauge.<br>4. Repeat steps 2 and 3 until a weight of 12.0 N is attached to the syringe.<br><br>What was the range of force used?",
           "marks": 1,
           "markScheme": ["1 mark: **0 N to 12 N** (accept 2 N to 12 N)"],
-          "diagram": "gas-pressure-syringe-weights.jpeg"
+          "diagrams": ["gas-pressure-syringe-weights.jpeg"]
         },
         {
           "partLabel": "b",
@@ -301,7 +301,7 @@
           "text": "Give one control variable in the investigation.",
           "marks": 1,
           "markScheme": ["1 mark: **Mass of gas** in the syringe (or **temperature** of the gas)"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -321,7 +321,7 @@
             "1 mark: Correct rearrangement: $P = \\frac{60 \\times 45}{40}$",
             "1 mark: Final answer: **67.5 kPa**"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -349,7 +349,7 @@
             "1 mark: Correct rearrangement: $\\Delta \\theta = \\frac{0.0130}{2.60 \\times 10^{-8} \\times 1010}$",
             "1 mark: Final answer: **495 °C**"
           ],
-          "diagram": "gas-pressure-fire-piston.jpeg"
+          "diagrams": ["gas-pressure-fire-piston.jpeg"]
         }
       ]
     },
@@ -377,7 +377,7 @@
             "1 mark: Correct rearrangement: $V = \\frac{1.6 \\times 10^5 \\times 9.0}{1.8 \\times 10^5}$",
             "1 mark: Final answer: **8.0 cm³**"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     }

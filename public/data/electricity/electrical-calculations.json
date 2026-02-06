@@ -25,7 +25,7 @@
             "1 mark: Correct equation selected and correct substitution: $6.0 = 0.25 \\times R$",
             "1 mark: Correct final answer: **24 \u03A9**"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -52,7 +52,7 @@
             "1 mark: Correct equation selected and correct substitution: $P = 4.0 \\times 230$",
             "1 mark: Correct final answer: **920 W**"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -80,7 +80,7 @@
             "1 mark: Correct rearrangement: $I = \\frac{V}{R}$",
             "1 mark: Correct final answer: **0.25 A**"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -107,7 +107,7 @@
             "1 mark: Correct equation selected and correct substitution: $Q = 0.50 \\times 120$",
             "1 mark: Correct final answer: **60 C**"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -126,7 +126,7 @@
             "1 mark: Correct equation selected and correct substitution: $E = 60 \\times 9.0$",
             "1 mark: Correct final answer: **540 J**"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -155,7 +155,7 @@
             "1 mark: Correct calculation shown",
             "1 mark: Correct final answer: **450 000 J**"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     }

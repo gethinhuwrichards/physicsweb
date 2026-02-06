@@ -16,7 +16,7 @@
           "options": ["0.0 to 0.2 cm³", "0.0 to 2.0 cm³", "0.0 to 10.0 cm³"],
           "correctAnswer": 2,
           "markScheme": ["Answer: C – 0.0 to 10.0 cm³"],
-          "diagram": "density-measuring-cylinder.jpeg"
+          "diagrams": ["density-measuring-cylinder.jpeg"]
         },
         {
           "partLabel": "b",
@@ -26,7 +26,7 @@
           "options": ["The measured volume would be smaller.", "The measured volume would not be affected.", "The measured volume would be larger."],
           "correctAnswer": 2,
           "markScheme": ["Answer: C – The measured volume would be larger"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -34,7 +34,7 @@
           "text": "The table below shows the results.<table><tr><th>Volume of water in cm³</th><th>Volume of water and ring in cm³</th><th>Volume of ring in cm³</th></tr><tr><td>5.0</td><td>5.4</td><td>X</td></tr></table>Calculate value X.",
           "marks": 1,
           "markScheme": ["1 mark: X = **0.4** (cm³)"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "d",
@@ -44,7 +44,7 @@
           "options": ["The results are anomalies.", "The results are repeatable.", "The results contain random errors."],
           "correctAnswer": 1,
           "markScheme": ["Answer: B – The results are repeatable"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "e",
@@ -54,7 +54,7 @@
           "options": ["Add 0.02 to the measurement", "Divide the measurement by 0.02", "Multiply the measurement by 0.02", "Subtract 0.02 from the measurement"],
           "correctAnswer": 3,
           "markScheme": ["Answer: D – Subtract 0.02 from the measurement"],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -79,7 +79,7 @@
           "wordBank": ["X", "Y", "Z"],
           "correctAnswers": ["Z", "X"],
           "markScheme": ["1 mark: Liquid = **Z**", "1 mark: Gas = **X**"],
-          "diagram": "density-particle-diagrams.png"
+          "diagrams": ["density-particle-diagrams.png"]
         },
         {
           "partLabel": "b",
@@ -89,7 +89,7 @@
           "options": ["vibrating in fixed positions", "moving randomly", "not moving"],
           "correctAnswer": 1,
           "markScheme": ["Answer: B – moving randomly"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -99,7 +99,7 @@
           "options": ["stronger than", "equal to", "weaker than"],
           "correctAnswer": 0,
           "markScheme": ["Answer: A – stronger than"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "d",
@@ -109,7 +109,7 @@
           "options": ["condensation", "evaporation", "radiation"],
           "correctAnswer": 1,
           "markScheme": ["Answer: B – evaporation"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "e",
@@ -117,7 +117,7 @@
           "text": "Describe one change in the weather which would cause the puddle of water to dry up faster.",
           "marks": 1,
           "markScheme": ["1 mark: Any one of: becomes **windy** / temperature **increases** (accept sunny) / less **humid**"],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -135,7 +135,7 @@
           "options": ["A", "B", "C", "D"],
           "correctAnswer": 1,
           "markScheme": ["Answer: B"],
-          "diagram": "density-heating-curve.jpeg"
+          "diagrams": ["density-heating-curve.jpeg"]
         },
         {
           "partLabel": "b",
@@ -145,7 +145,7 @@
           "options": ["A", "B", "C", "D"],
           "correctAnswer": 3,
           "markScheme": ["Answer: D"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -155,7 +155,7 @@
           "options": ["The kinetic energy of the particles", "The mass of each particle", "The number of particles"],
           "correctAnswer": 0,
           "markScheme": ["Answer: A – The kinetic energy of the particles"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "d",
@@ -174,7 +174,7 @@
             "1 mark: Correct substitution: $E = 0.250 \\times 334\\,000$",
             "1 mark: Final answer: **83 500 J**"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "e",
@@ -189,7 +189,7 @@
           "wordBank": ["condenses", "evaporates", "ionises", "sublimates"],
           "correctAnswers": ["sublimates"],
           "markScheme": ["1 mark: **sublimates**"],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -208,7 +208,7 @@
             "1 mark: The (mean) **kinetic energy** of the particles increases (accept the mean speed of the particles increases)",
             "1 mark: Which increases the **internal energy** of the water"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -223,7 +223,7 @@
           ],
           "correctAnswer": 1,
           "markScheme": ["Answer: B – Particles in a gas have more potential energy than particles in a liquid"],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -246,7 +246,7 @@
           ],
           "correctAnswer": 0,
           "markScheme": ["Answer: A – $\\rho = \\frac{m}{V}$"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -266,7 +266,7 @@
             "1 mark: Correct rearrangement: $m = \\rho \\times V$",
             "1 mark: Final answer: **6.6 g**"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -293,7 +293,7 @@
             "1 mark: Correct substitution: $(2.1 + 2.1 + 2.4) \\div 3$",
             "1 mark: Final answer: **2.2 cm³**"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -314,7 +314,7 @@
             "1 mark: Allows anomalous results to be identified and ignored",
             "1 mark: Reduces the effect of random errors when using the equipment"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -333,7 +333,7 @@
             "1 mark: Correct substitution: $\\rho = \\frac{84.0}{120}$",
             "1 mark: Final answer: **0.70 g/cm³**"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -360,7 +360,7 @@
             "1 mark: Correct substitution: $\\rho = \\frac{48.6}{18.0}$",
             "1 mark: Final answer: **2.70 g/cm³**"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -370,7 +370,7 @@
           "options": ["Basalt", "Granite", "Limestone", "Sandstone"],
           "correctAnswer": 2,
           "markScheme": ["Answer: C – Limestone (density ≈ 2.71 g/cm³, closest to 2.70)"],
-          "diagram": "density-rock-bar-chart.jpeg"
+          "diagrams": ["density-rock-bar-chart.jpeg"]
         },
         {
           "partLabel": "c",
@@ -378,7 +378,7 @@
           "text": "Give one source of error that may have occurred when the student measured the volume of the rock.",
           "marks": 1,
           "markScheme": ["1 mark: **Eye position** when reading the measuring cylinder (parallax error), or water level in displacement can not at level of spout, or not all displaced water collected"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "d",
@@ -386,7 +386,7 @@
           "text": "How would the error you described in part (c) affect the measured volume of the rock?",
           "marks": 1,
           "markScheme": ["1 mark: Volume would be **lower** or **higher** (depending on the error described)"],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -402,7 +402,7 @@
           "text": "A student investigated the density of different fruits. The table below shows the results.<table><tr><th>Fruit</th><th>Density in g/cm³</th></tr><tr><td>Apple</td><td>0.68</td></tr><tr><td>Kiwi</td><td>1.03</td></tr><tr><td>Lemon</td><td>0.95</td></tr><tr><td>Lime</td><td>1.05</td></tr></table>The student determined the volume of each fruit using a displacement can and a measuring cylinder.<br><br>What other piece of equipment would the student need to determine the density of each fruit?",
           "marks": 1,
           "markScheme": ["1 mark: **Balance** / scales"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -417,7 +417,7 @@
           ],
           "correctAnswer": 0,
           "markScheme": ["Answer: A – $\\rho = \\frac{m}{V}$"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -437,7 +437,7 @@
             "1 mark: Correct rearrangement: $V = \\frac{m}{\\rho} = \\frac{85}{0.68}$",
             "1 mark: Final answer: **125 cm³**"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "d",
@@ -445,7 +445,7 @@
           "text": "The student only measured the volume of each fruit once. The volume measurements cannot be used to show that the method to measure volume gives precise readings.<br><br>Give the reason why.",
           "marks": 1,
           "markScheme": ["1 mark: **Repeat readings** of volume need to be taken to show that the readings are close together (accept 'the same')"],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -464,7 +464,7 @@
             "1 mark: Amount of energy required to change the state of a substance from **liquid** to **gas** (vapour)",
             "1 mark: For **unit mass** / 1 kg (with no change in temperature)"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -483,7 +483,7 @@
             "1 mark: Correct substitution: $E = 0.018 \\times 2.3 \\times 10^6$",
             "1 mark: Final answer: **41 400 J** (accept 41 000 or $4.1 \\times 10^4$)"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -501,7 +501,7 @@
           "options": ["Random error", "Systematic error", "Zero error"],
           "correctAnswer": 0,
           "markScheme": ["Answer: A – Random error"],
-          "diagram": "density-ring-measuring-cylinder.jpeg"
+          "diagrams": ["density-ring-measuring-cylinder.jpeg"]
         },
         {
           "partLabel": "b",
@@ -509,7 +509,7 @@
           "text": "The student tied a piece of thick string to the metal ring and lowered the ring into the water.<br><br>Suggest one reason why the student should have used thin string instead of thick string.",
           "marks": 1,
           "markScheme": ["1 mark: Thin string would affect the volume measurement **less** (thin string would displace less water than thick string)"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -517,7 +517,7 @@
           "text": "The true volume of the ring was 0.44 cm³. Even without using the string, the measuring cylinder could not give an accurate value for the volume of the ring.<br><br>Give one reason why.",
           "marks": 1,
           "markScheme": ["1 mark: The **resolution** of the measuring cylinder is 0.2 cm³ (cannot measure to 2 decimal places)"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "d",
@@ -525,7 +525,7 @@
           "text": "The student used a balance to measure the mass of the ring. After the ring was removed from the balance, the reading on the balance was 0.02 g.<br><br>How could the student use the readings from the balance to determine the correct mass of the ring?",
           "marks": 1,
           "markScheme": ["1 mark: **Subtract 0.02 g** from the measured value"],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "e",
@@ -545,7 +545,7 @@
             "1 mark: Correct rearrangement: $m = \\rho \\times V$",
             "1 mark: Final answer: **0.00946 kg** (accept $9.46 \\times 10^{-3}$ kg)"
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -564,7 +564,7 @@
             "1 mark: Amount of energy required to change the state of a substance from **solid** to **liquid**",
             "1 mark: For **unit mass** / 1 kg (with no change in temperature)"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -583,7 +583,7 @@
             "1 mark: Correct substitution: $E = 15 \\times 3.4 \\times 10^5$",
             "1 mark: Final answer: **$5.1 \\times 10^6$ J** (accept 5 100 000)"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -591,7 +591,7 @@
           "text": "A student investigated how the melting point of ice varies with the mass of salt added. The student added salt to crushed ice and measured the temperature at which the ice melted.<br><br>State one variable that the student should have controlled.",
           "marks": 1,
           "markScheme": ["1 mark: **Mass of ice** (accept volume/weight/amount/quantity of ice)"],
-          "diagram": "density-salt-equipment.png"
+          "diagrams": ["density-salt-equipment.png"]
         },
         {
           "partLabel": "d",
@@ -612,7 +612,7 @@
             "1 mark: To distribute the salt throughout the ice",
             "1 mark: To keep all the ice at the same temperature"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "e",
@@ -620,7 +620,7 @@
           "text": "The table below shows the data that the student obtained.<table><tr><th>Mass of salt added in grams</th><th>0</th><th>10</th><th>20</th></tr><tr><td>Melting point of ice in °C</td><td>0</td><td>−6</td><td>−16</td></tr></table>Describe the pattern shown in the table.",
           "marks": 1,
           "markScheme": ["1 mark: **Melting point decreases** as the mass of salt is increased (accept negative correlation)"],
-          "diagram": null
+          "diagrams": []
         }
       ]
     }

@@ -23,7 +23,7 @@
           "markScheme": [
             "Answer: A — Resolution = **0.1 °C**"
           ],
-          "diagram": "heat-thermal1_fig2.jpeg"
+          "diagrams": ["heat-thermal1_fig2.jpeg"]
         },
         {
           "partLabel": "b",
@@ -48,7 +48,7 @@
           "markScheme": [
             "1 mark: **a bigger**"
           ],
-          "diagram": "heat-thermal1_fig2.jpeg"
+          "diagrams": ["heat-thermal1_fig2.jpeg"]
         },
         {
           "partLabel": "c",
@@ -64,7 +64,7 @@
           "markScheme": [
             "Answer: B — Thick insulation reduces the rate of energy transfer, so cooling is slower."
           ],
-          "diagram": "heat-thermal1_fig4.jpeg"
+          "diagrams": ["heat-thermal1_fig4.jpeg"]
         },
         {
           "partLabel": "d",
@@ -80,7 +80,7 @@
           "markScheme": [
             "Answer: A — With less cooling, the water stays at a higher temperature after 10 minutes."
           ],
-          "diagram": "heat-thermal1_fig4.jpeg"
+          "diagrams": ["heat-thermal1_fig4.jpeg"]
         }
       ]
     },
@@ -104,7 +104,7 @@
           "markScheme": [
             "Answer: B — Insulation reduces energy transfer to the surroundings."
           ],
-          "diagram": "heat-thermal2_fig1.jpeg"
+          "diagrams": ["heat-thermal2_fig1.jpeg"]
         },
         {
           "partLabel": "b",
@@ -114,7 +114,7 @@
           "markScheme": [
             "1 mark: Risk of **burning/scalding** skin from hot water."
           ],
-          "diagram": "heat-thermal2_fig1.jpeg"
+          "diagrams": ["heat-thermal2_fig1.jpeg"]
         },
         {
           "partLabel": "c",
@@ -130,7 +130,7 @@
           "markScheme": [
             "Answer: A — Resolution = **1 °C**."
           ],
-          "diagram": "heat-thermal2_fig2.jpeg"
+          "diagrams": ["heat-thermal2_fig2.jpeg"]
         },
         {
           "partLabel": "d",
@@ -147,7 +147,7 @@
           "markScheme": [
             "Answer: A — Mass of beaker = **0.06 kg**."
           ],
-          "diagram": "heat-thermal2_fig3.jpeg"
+          "diagrams": ["heat-thermal2_fig3.jpeg"]
         }
       ]
     },
@@ -174,7 +174,7 @@
             "1 mark: Correct substitution: $E = 0.33 \\times 4200 \\times 15$",
             "1 mark: Final answer: **20 790 J**"
           ],
-          "diagram": "heat-thermal3_fig1.png"
+          "diagrams": ["heat-thermal3_fig1.png"]
         },
         {
           "partLabel": "b",
@@ -200,7 +200,7 @@
           "markScheme": [
             "1 mark: **temperature**"
           ],
-          "diagram": "heat-thermal3_fig1.png"
+          "diagrams": ["heat-thermal3_fig1.png"]
         },
         {
           "partLabel": "c",
@@ -210,7 +210,7 @@
           "markScheme": [
             "1 mark: **(top-pan) balance** / **scales**."
           ],
-          "diagram": "heat-thermal3_fig1.png"
+          "diagrams": ["heat-thermal3_fig1.png"]
         },
         {
           "partLabel": "d",
@@ -243,7 +243,7 @@
             "1 mark: **black** (or dark)",
             "1 mark: **convection**"
           ],
-          "diagram": "heat-thermal3_fig2.png"
+          "diagrams": ["heat-thermal3_fig2.png"]
         },
         {
           "partLabel": "e",
@@ -276,7 +276,7 @@
             "1 mark: **created**",
             "1 mark: Air temperature **increases**"
           ],
-          "diagram": "heat-thermal3_fig2.png"
+          "diagrams": ["heat-thermal3_fig2.png"]
         }
       ]
     },
@@ -317,7 +317,7 @@
             "1 mark: **kg**",
             "1 mark: **°C**"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "b",
@@ -336,7 +336,7 @@
             "1 mark: Correct substitution: $P = 12^2 \\times 15$",
             "1 mark: Final answer: **2160 W**"
           ],
-          "diagram": null
+          "diagrams": []
         },
         {
           "partLabel": "c",
@@ -353,7 +353,7 @@
           "markScheme": [
             "Answer: C — The heating element takes time to heat up before transferring energy to the water."
           ],
-          "diagram": "heat-thermal4_graph.jpeg"
+          "diagrams": ["heat-thermal4_graph.jpeg"]
         }
       ]
     },
@@ -377,7 +377,7 @@
           "markScheme": [
             "Answer: A — Extra power demand drains the battery faster."
           ],
-          "diagram": "heat-thermal5_mug.png"
+          "diagrams": ["heat-thermal5_mug.png"]
         },
         {
           "partLabel": "b",
@@ -396,7 +396,7 @@
             "1 mark: Correct substitution: $E = 12 \\times 60$",
             "1 mark: Final answer: **720 J**"
           ],
-          "diagram": "heat-thermal5_mug.png"
+          "diagrams": ["heat-thermal5_mug.png"]
         },
         {
           "partLabel": "c",
@@ -422,7 +422,7 @@
             "1 mark: Use a lower power heater (less energy per second)",
             "1 mark: Use a plastic mug instead of a metal mug (poorer conduction)"
           ],
-          "diagram": "heat-thermal5_mug.png"
+          "diagrams": ["heat-thermal5_mug.png"]
         }
       ]
     },
@@ -467,7 +467,7 @@
             "1 mark: **metre (m)**",
             "1 mark: **joule (J)**"
           ],
-          "diagram": "heat-thermal6_trolley.png"
+          "diagrams": ["heat-thermal6_trolley.png"]
         }
       ]
     },
@@ -491,7 +491,7 @@
           "markScheme": [
             "Answer: A — **0.1 °C** is most appropriate for a 0.6 °C change."
           ],
-          "diagram": "heat-thermal7_solar.png"
+          "diagrams": ["heat-thermal7_solar.png"]
         },
         {
           "partLabel": "b",
@@ -501,7 +501,7 @@
           "markScheme": [
             "Answer: A – $E = P t$"
           ],
-          "diagram": "heat-thermal7_solar.png",
+          "diagrams": ["heat-thermal7_solar.png"],
           "options": [
             "$E = P t$",
             "$E_p = m g h$",
@@ -527,7 +527,7 @@
             "1 mark: The room is losing thermal energy to the surroundings.",
             "1 mark: The rate of heat loss equals the rate of heat supplied (so temperature stays constant)."
           ],
-          "diagram": "heat-thermal8_graph.png"
+          "diagrams": ["heat-thermal8_graph.png"]
         }
       ]
     },
@@ -545,7 +545,7 @@
           "markScheme": [
             "1 mark: To allow the thermometer to reach the **same temperature** as the iron block (thermal equilibrium)."
           ],
-          "diagram": "heat-thermal9_fig1.jpeg"
+          "diagrams": ["heat-thermal9_fig1.jpeg"]
         },
         {
           "partLabel": "b",
@@ -569,7 +569,7 @@
             "1 mark: The calculated specific heat capacity will be more accurate.",
             "1 mark: The iron block will transfer thermal energy to the surroundings at a lower rate."
           ],
-          "diagram": "heat-thermal9_fig1.jpeg"
+          "diagrams": ["heat-thermal9_fig1.jpeg"]
         }
       ]
     },
@@ -588,7 +588,7 @@
             "1 mark: Energy required to raise the temperature of a substance by **1 °C**.",
             "1 mark: Per **1 kg** of the substance (unit mass)."
           ],
-          "diagram": null
+          "diagrams": []
         }
       ]
     },
@@ -607,7 +607,7 @@
             "1 mark: Independent variable: (type of) **insulation/material**.",
             "1 mark: Dependent variable: **time** taken for the temperature to decrease by a fixed amount."
           ],
-          "diagram": "heat-thermal11_fig1.jpeg"
+          "diagrams": ["heat-thermal11_fig1.jpeg"]
         },
         {
           "partLabel": "b",
@@ -617,7 +617,7 @@
           "markScheme": [
             "1 mark: **0.1 °C**"
           ],
-          "diagram": "heat-thermal11_fig2.jpeg"
+          "diagrams": ["heat-thermal11_fig2.jpeg"]
         },
         {
           "partLabel": "c",
@@ -627,7 +627,7 @@
           "markScheme": [
             "1 mark: Viewing angle affects measurement (e.g. **parallax error**) / judgement needed between scale markings."
           ],
-          "diagram": "heat-thermal11_fig2.jpeg"
+          "diagrams": ["heat-thermal11_fig2.jpeg"]
         }
       ]
     }
