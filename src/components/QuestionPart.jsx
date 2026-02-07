@@ -22,6 +22,7 @@ export default function QuestionPart({
   phase,
   partScore,
   diagramOffset = 0,
+  onFigureClick,
 }) {
   const renderedText = useMemo(() => renderLatex(part.text), [part.text]);
 
@@ -150,7 +151,12 @@ export default function QuestionPart({
             <div className="part-diagrams-grid">
               {part.diagrams.map((file, i) => (
                 <figure key={i} className="part-diagram-figure">
-                  <img src={`images/${file}`} alt={`Fig. ${diagramOffset + i + 1}`} className="part-diagram" />
+                  <img
+                    src={`images/${file}`}
+                    alt={`Fig. ${diagramOffset + i + 1}`}
+                    className={`part-diagram${onFigureClick ? ' part-diagram-clickable' : ''}`}
+                    onClick={onFigureClick ? () => onFigureClick(diagramOffset + i) : undefined}
+                  />
                   <figcaption className="part-diagram-caption">Fig. {diagramOffset + i + 1}</figcaption>
                 </figure>
               ))}

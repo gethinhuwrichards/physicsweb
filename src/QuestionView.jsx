@@ -1,6 +1,8 @@
-import React, { useReducer, useRef, useCallback, useEffect } from 'react';
+import React, { useReducer, useRef, useCallback, useEffect, useMemo, useState } from 'react';
 import QuestionHeader from './components/QuestionHeader';
 import QuestionPart from './components/QuestionPart';
+import FigureSidebar from './components/FigureSidebar';
+import FigureViewer from './components/FigureViewer';
 import SelfMarkingView from './components/marking/SelfMarkingView';
 import FinalScorePanel from './components/marking/FinalScorePanel';
 import ScorePage from './components/marking/ScorePage';
@@ -311,6 +313,48 @@ export default function QuestionView({
 
   const totalMarks = question.parts.reduce((sum, p) => sum + p.marks, 0);
 
+  // Collect all unique figures across parts in first-appearance order
+  const figures = useMemo(() => {
+    const seen = new Set();
+    const result = [];
+    let n = 1;
+    question.parts.forEach(p => {
+      (p.diagrams || []).forEach(f => {
+        if (!seen.has(f)) {
+          seen.add(f);
+          result.push({ src: f, label: `Fig. ${n}`, index: n - 1 });
+          n++;
+        }
+      });
+    });
+    return result;
+  }, [question]);
+
+  const [viewerIndex, setViewerIndex] = useState(null);
+
+  const handleFigureClick = useCallback((figIndex) => {
+    setViewerIndex(figIndex);
+  }, []);
+
+  const handleViewerClose = useCallback(() => {
+    setViewerIndex(null);
+  }, []);
+
+  const handleViewerPrev = useCallback(() => {
+    setViewerIndex(i => (i > 0 ? i - 1 : i));
+  }, []);
+
+  const handleViewerNext = useCallback(() => {
+    setViewerIndex(i => (i < figures.length - 1 ? i + 1 : i));
+  }, [figures.length]);
+
+  // Close viewer when leaving answering/complete phases
+  useEffect(() => {
+    if (state.phase !== 'answering' && state.phase !== 'complete') {
+      setViewerIndex(null);
+    }
+  }, [state.phase]);
+
   const handleAnswer = useCallback((partIndex, value) => {
     dispatch({ type: 'SET_ANSWER', partIndex, value });
   }, []);
@@ -380,6 +424,8 @@ export default function QuestionView({
   // Calculate total score for final panel
   const totalScore = Object.values(state.partScores).reduce((sum, s) => sum + s, 0);
 
+  const showSidebar = figures.length > 0 && (state.phase === 'answering' || state.phase === 'complete');
+
   return (
     <>
       <div
@@ -405,6 +451,7 @@ export default function QuestionView({
               phase={state.phase}
               partScore={state.partScores[i]}
               diagramOffset={diagramOffset}
+              onFigureClick={figures.length > 0 ? handleFigureClick : undefined}
             />
           );
         })}
@@ -424,6 +471,24 @@ export default function QuestionView({
           />
         )}
       </div>
+
+      {showSidebar && (
+        <FigureSidebar
+          figures={figures}
+          onFigureClick={handleFigureClick}
+          activeFigure={viewerIndex}
+        />
+      )}
+
+      {viewerIndex !== null && figures[viewerIndex] && (
+        <FigureViewer
+          src={`images/${figures[viewerIndex].src}`}
+          label={figures[viewerIndex].label}
+          onClose={handleViewerClose}
+          onPrev={viewerIndex > 0 ? handleViewerPrev : null}
+          onNext={viewerIndex < figures.length - 1 ? handleViewerNext : null}
+        />
+      )}
 
       {state.phase === 'marking' && (
         <SelfMarkingView

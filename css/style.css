@@ -872,6 +872,212 @@ header .header-top-row {
     margin-top: 4px;
 }
 
+.part-diagram-clickable {
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.part-diagram-clickable:hover {
+    border-color: var(--accent-blue);
+    box-shadow: var(--shadow-md);
+}
+
+/* ============================================
+   Figure Sidebar + Viewer
+   ============================================ */
+
+/* Layout: sidebar beside question content */
+#question-container.has-figure-sidebar {
+    display: grid;
+    grid-template-columns: 1fr 180px;
+    gap: 0;
+    padding: 0;
+}
+
+#question-container.has-figure-sidebar #question-content-inner {
+    padding: clamp(1.25rem, 4vw, 2.25rem);
+}
+
+body:has(.has-figure-sidebar) {
+    max-width: 1120px;
+}
+
+/* Sidebar */
+.figure-sidebar {
+    position: sticky;
+    top: 1rem;
+    align-self: start;
+    padding: 12px;
+    border-left: 1px solid var(--border-subtle);
+    background: var(--bg-surface-alt);
+    border-radius: 0 12px 12px 0;
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.figure-sidebar-title {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 2px;
+}
+
+.figure-thumb {
+    cursor: pointer;
+    border-radius: 6px;
+    border: 2px solid transparent;
+    padding: 4px;
+    background: var(--bg-surface);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-family: inherit;
+}
+
+.figure-thumb:hover {
+    border-color: var(--accent-blue);
+    box-shadow: var(--shadow-sm);
+}
+
+.figure-thumb.active {
+    border-color: var(--accent-blue);
+    box-shadow: var(--shadow-md);
+}
+
+.figure-thumb img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+    background: #fff;
+}
+
+.figure-thumb-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-top: 3px;
+}
+
+/* Mobile trigger (hidden on desktop) */
+.figure-sidebar-mobile-trigger {
+    display: none;
+}
+
+/* Viewer overlay */
+.figure-viewer-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    cursor: pointer;
+}
+
+[data-theme="dark"] .figure-viewer-overlay {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.figure-viewer-content {
+    position: relative;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-default);
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 90vw;
+    max-height: 90vh;
+    box-shadow: var(--shadow-lg, 0 10px 40px rgba(0, 0, 0, 0.15));
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.figure-viewer-content img {
+    max-width: 100%;
+    max-height: calc(90vh - 100px);
+    object-fit: contain;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.figure-viewer-caption {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.figure-viewer-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: var(--bg-surface-alt);
+    border: 1px solid var(--border-default);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    transition: background 0.2s, color 0.2s;
+    font-family: inherit;
+}
+
+.figure-viewer-close:hover {
+    background: var(--bg-surface);
+    color: var(--text-primary);
+}
+
+.figure-viewer-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--bg-surface);
+    border: 1px solid var(--border-default);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: var(--text-secondary);
+    box-shadow: var(--shadow-sm);
+    transition: background 0.2s, color 0.2s;
+    font-family: inherit;
+}
+
+.figure-viewer-nav:hover {
+    background: var(--bg-surface-alt);
+    color: var(--text-primary);
+}
+
+.figure-viewer-prev {
+    left: -18px;
+}
+
+.figure-viewer-next {
+    right: -18px;
+}
+
+/* Disable body scroll when viewer is open */
+html:has(.figure-viewer-overlay) {
+    overflow: hidden;
+}
+
 /* ============================================
    Multiple Choice / Single Choice
    ============================================ */
@@ -3850,6 +4056,77 @@ body.landing-active header {
 /* ============================================
    Responsive
    ============================================ */
+
+/* Figure sidebar mobile — collapse to bottom drawer */
+@media (max-width: 900px) {
+    body:has(.has-figure-sidebar) {
+        max-width: 920px;
+    }
+
+    #question-container.has-figure-sidebar {
+        display: block;
+        padding: clamp(1.25rem, 4vw, 2.25rem);
+        padding-bottom: 4rem;
+    }
+
+    .figure-sidebar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: auto;
+        border-left: none;
+        border-top: 1px solid var(--border-default);
+        border-radius: 0;
+        max-height: none;
+        overflow: visible;
+        padding: 0;
+        background: var(--bg-surface);
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.08);
+        z-index: 50;
+        gap: 0;
+    }
+
+    .figure-sidebar-title {
+        display: none;
+    }
+
+    .figure-sidebar-mobile-trigger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px;
+        padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--accent-blue);
+        cursor: pointer;
+        gap: 6px;
+    }
+
+    .figure-sidebar-mobile-arrow {
+        font-size: 0.7rem;
+    }
+
+    .figure-sidebar-thumbs {
+        display: none;
+    }
+
+    .figure-sidebar.drawer-open .figure-sidebar-thumbs {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 12px;
+        padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+        gap: 10px;
+        border-top: 1px solid var(--border-subtle);
+    }
+
+    .figure-sidebar.drawer-open .figure-thumb {
+        flex-shrink: 0;
+        width: 100px;
+    }
+}
 
 /* Large desktop — scale up for big monitors */
 @media (min-width: 1400px) {
