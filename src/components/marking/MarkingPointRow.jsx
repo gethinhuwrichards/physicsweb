@@ -7,13 +7,14 @@ function buildTracePath(w, h, r) {
   return `M ${w - r} 0 A ${r} ${r} 0 0 1 ${w} ${r} V ${h - r} A ${r} ${r} 0 0 1 ${w - r} ${h} H ${r} A ${r} ${r} 0 0 1 0 ${h - r} V ${r} A ${r} ${r} 0 0 1 ${r} 0 Z`;
 }
 
-export default function MarkingPointRow({ point, decision, onDecide, locked, pointNumber, dependencyNote, highlight }) {
+export default function MarkingPointRow({ point, decision, onDecide, locked, awardDisabled, pointNumber, dependencyNote, highlight }) {
   const renderedText = useMemo(
     () => renderLatex(renderMarkdownBold(point.text)),
     [point.text]
   );
 
   const isLocked = locked === true;
+  const isAwardDisabled = isLocked || awardDisabled === true;
   const decided = decision !== null && decision !== undefined;
 
   const rowRef = useRef(null);
@@ -54,9 +55,9 @@ export default function MarkingPointRow({ point, decision, onDecide, locked, poi
         <div className="marking-point-buttons">
           <div className="mark-btn-wrapper">
             <button
-              className={`mark-tick${decision === true ? ' selected' : ''}`}
+              className={`mark-tick${decision === true ? ' selected' : ''}${awardDisabled && !isLocked ? ' award-capped' : ''}`}
               onClick={() => onDecide(decision === true ? null : true)}
-              disabled={isLocked}
+              disabled={isAwardDisabled}
               aria-label="Award"
             >&#10003;</button>
             <span className="mark-btn-label">Award</span>

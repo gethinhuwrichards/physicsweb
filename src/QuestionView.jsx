@@ -123,7 +123,8 @@ function reducer(state, action) {
             }
             break;
           }
-          case 'extended-written': {
+          case 'extended-written':
+          case 'extended-written-levels': {
             selfMarkParts.push(i);
             break;
           }
@@ -363,7 +364,17 @@ export default function QuestionView({
 
   const allPartsFullyDecided = state.selfMarkParts.every(partIdx => {
     const d = state.markingDecisions[partIdx];
-    return d && d.every(v => v !== null);
+    if (!d) return false;
+    if (d.every(v => v !== null)) return true;
+    // For extended-written-levels: cap reached means fully decided
+    const part = question.parts[partIdx];
+    if (part.type === 'extended-written-levels') {
+      const points = parseMarkScheme(part.markScheme);
+      let awarded = 0;
+      d.forEach((v, i) => { if (v === true && points[i]) awarded += points[i].marks; });
+      return awarded >= part.marks;
+    }
+    return false;
   });
 
   // Calculate total score for final panel

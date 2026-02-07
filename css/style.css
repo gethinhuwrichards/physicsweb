@@ -932,6 +932,59 @@ header .header-top-row {
     border-color: var(--accent-blue);
 }
 
+/* Image options grid layout */
+.mc-options-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.mc-option-image-label {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.mc-option-image-label span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.mc-option-image {
+    max-width: 100%;
+    max-height: 180px;
+    display: block;
+    margin: 4px auto 0;
+    border-radius: 6px;
+    background: #fff;
+    padding: 4px;
+    border: 1px solid var(--border-subtle);
+}
+
+/* Review panel image options */
+.review-options-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.review-option-image-item {
+    flex-direction: column;
+    align-items: center;
+}
+
+.review-option-image {
+    max-width: 100%;
+    max-height: 150px;
+    display: block;
+    margin: 6px auto 0;
+    border-radius: 6px;
+    background: #fff;
+    padding: 4px;
+    border: 1px solid var(--border-subtle);
+}
+
 /* ============================================
    Mark Scheme (inline box)
    ============================================ */
@@ -1383,6 +1436,23 @@ header .header-top-row {
     color: var(--color-partial-text);
     font-weight: 500;
     line-height: 1.5;
+}
+
+.levels-cap-banner {
+    background: var(--color-correct-bg);
+    border: 1px solid var(--color-correct-border);
+    border-radius: 8px;
+    padding: 10px 16px;
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+    color: var(--color-correct-text);
+    font-weight: 600;
+    text-align: center;
+}
+
+.mark-tick.award-capped {
+    opacity: 0.35;
+    cursor: not-allowed;
 }
 
 .self-marking-points {

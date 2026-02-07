@@ -58,6 +58,7 @@ export default function QuestionPart({
           />
         );
       case 'extended-written':
+      case 'extended-written-levels':
         return (
           <ExtendedWrittenInput
             part={part}

@@ -39,7 +39,20 @@ export default function SelfMarkingView({
     return '';
   }, [part, partIndex, answers]);
 
-  const currentAllDecided = decisions.every(d => d !== null);
+  const isLevelsType = part.type === 'extended-written-levels';
+
+  const awardedMarks = useMemo(() => {
+    if (!isLevelsType) return 0;
+    let count = 0;
+    decisions.forEach((d, i) => {
+      if (d === true && points[i]) count += points[i].marks;
+    });
+    return count;
+  }, [isLevelsType, decisions, points]);
+
+  const capReached = isLevelsType && awardedMarks >= part.marks;
+
+  const currentAllDecided = capReached || decisions.every(d => d !== null);
   const isFirst = currentSelfMarkIdx === 0;
   const isLast = currentSelfMarkIdx === reviewParts.length - 1;
 
@@ -102,7 +115,7 @@ export default function SelfMarkingView({
   const prevPartRef = useRef(currentSelfMarkIdx);
 
   useEffect(() => {
-    if (isAutoMarked) { setMaxRevealed(points.length); return; }
+    if (isAutoMarked || isLevelsType) { setMaxRevealed(points.length); return; }
 
     let consecutive = 0;
     for (let i = 0; i < decisions.length; i++) {
@@ -117,22 +130,30 @@ export default function SelfMarkingView({
     } else {
       setMaxRevealed(prev => Math.max(prev, reveal));
     }
-  }, [currentSelfMarkIdx, decisions, isAutoMarked, points.length]);
+  }, [currentSelfMarkIdx, decisions, isAutoMarked, isLevelsType, points.length]);
 
+
+  function renderReviewOptionContent(opt) {
+    if (typeof opt === 'object' && opt.image) {
+      return <img src={`images/${opt.image}`} alt="" className="review-option-image" />;
+    }
+    return <span className="review-option-text" dangerouslySetInnerHTML={{ __html: renderLatex(opt) }} />;
+  }
 
   // Render single/equation choice as plain text review
   function renderChoiceReview() {
     const result = autoMarkResults[partIndex];
     const selectedIdx = answers[partIndex];
-    const renderedOptions = part.options.map(opt => renderLatex(opt));
+    const hasImageOptions = part.options.some(opt => typeof opt === 'object' && opt.image);
 
     return (
-      <div className="review-options-list">
-        {renderedOptions.map((optHtml, i) => {
+      <div className={`review-options-list${hasImageOptions ? ' review-options-grid' : ''}`}>
+        {part.options.map((opt, i) => {
           const letter = String.fromCharCode(65 + i);
           const isSelected = i === selectedIdx;
           const isCorrectAnswer = i === part.correctAnswer;
           let className = 'review-option-item';
+          if (hasImageOptions) className += ' review-option-image-item';
           if (isSelected && isCorrectAnswer) className += ' review-correct';
           else if (isSelected && !isCorrectAnswer) className += ' review-incorrect';
           else if (isCorrectAnswer) className += ' review-was-correct';
@@ -140,7 +161,7 @@ export default function SelfMarkingView({
           return (
             <div key={i} className={className}>
               <span className="review-option-letter">{letter}.</span>
-              <span className="review-option-text" dangerouslySetInnerHTML={{ __html: optHtml }} />
+              {renderReviewOptionContent(opt)}
               {isSelected && isCorrectAnswer && <span className="review-badge badge-correct">Correct</span>}
               {isSelected && !isCorrectAnswer && <span className="review-badge badge-incorrect">Your answer</span>}
               {isCorrectAnswer && !isSelected && <span className="review-badge badge-missed">Correct answer</span>}
@@ -155,15 +176,16 @@ export default function SelfMarkingView({
   function renderMultiChoiceReview() {
     const result = autoMarkResults[partIndex];
     const selected = answers[partIndex] || [];
-    const renderedOptions = part.options.map(opt => renderLatex(opt));
+    const hasImageOptions = part.options.some(opt => typeof opt === 'object' && opt.image);
 
     return (
-      <div className="review-options-list">
-        {renderedOptions.map((optHtml, i) => {
+      <div className={`review-options-list${hasImageOptions ? ' review-options-grid' : ''}`}>
+        {part.options.map((opt, i) => {
           const letter = String.fromCharCode(65 + i);
           const isSelected = selected.includes(i);
           const isCorrect = part.correctAnswers.includes(i);
           let className = 'review-option-item';
+          if (hasImageOptions) className += ' review-option-image-item';
           if (isSelected && isCorrect) className += ' review-correct';
           else if (isSelected && !isCorrect) className += ' review-incorrect';
           else if (isCorrect) className += ' review-was-correct';
@@ -171,7 +193,7 @@ export default function SelfMarkingView({
           return (
             <div key={i} className={className}>
               <span className="review-option-letter">{letter}.</span>
-              <span className="review-option-text" dangerouslySetInnerHTML={{ __html: optHtml }} />
+              {renderReviewOptionContent(opt)}
               {isSelected && isCorrect && <span className="review-badge badge-correct">Correct</span>}
               {isSelected && !isCorrect && <span className="review-badge badge-incorrect">Your answer</span>}
               {isCorrect && !isSelected && <span className="review-badge badge-missed">Correct answer</span>}
@@ -382,16 +404,17 @@ export default function SelfMarkingView({
     const result = autoMarkResults[partIndex];
     const ans = answers[partIndex] || {};
     const selectedIdx = ans.selectedOption;
-    const renderedOptions = part.options.map(opt => renderLatex(opt));
+    const hasImageOptions = part.options.some(opt => typeof opt === 'object' && opt.image);
 
     return (
       <div className="review-sae">
-        <div className="review-options-list">
-          {renderedOptions.map((optHtml, i) => {
+        <div className={`review-options-list${hasImageOptions ? ' review-options-grid' : ''}`}>
+          {part.options.map((opt, i) => {
             const letter = String.fromCharCode(65 + i);
             const isSelected = i === selectedIdx;
             const isCorrectAnswer = i === part.correctAnswer;
             let className = 'review-option-item';
+            if (hasImageOptions) className += ' review-option-image-item';
             if (isSelected && isCorrectAnswer) className += ' review-correct';
             else if (isSelected && !isCorrectAnswer) className += ' review-incorrect';
             else if (isCorrectAnswer) className += ' review-was-correct';
@@ -399,7 +422,7 @@ export default function SelfMarkingView({
             return (
               <div key={i} className={className}>
                 <span className="review-option-letter">{letter}.</span>
-                <span className="review-option-text" dangerouslySetInnerHTML={{ __html: optHtml }} />
+                {renderReviewOptionContent(opt)}
                 {isSelected && isCorrectAnswer && <span className="review-badge badge-correct">Correct</span>}
                 {isSelected && !isCorrectAnswer && <span className="review-badge badge-incorrect">Your answer</span>}
                 {isCorrectAnswer && !isSelected && <span className="review-badge badge-missed">Correct answer</span>}
@@ -529,13 +552,21 @@ export default function SelfMarkingView({
         <div className="self-marking-right">
           <h3 className="self-marking-panel-heading">Mark Scheme</h3>
           {!isAutoMarked && (
-            <div className="self-mark-hint-banner">
-              Compare your answer with the marking points below. Award or deny each point using the buttons.
+            <div className={`self-mark-hint-banner${isLevelsType ? ' levels-hint' : ''}`}>
+              {isLevelsType
+                ? <>Award up to <strong>{part.marks} marks</strong> from the indicative content below. You do not need to decide every point.</>
+                : 'Compare your answer with the marking points below. Award or deny each point using the buttons.'
+              }
+            </div>
+          )}
+          {capReached && (
+            <div className="levels-cap-banner">
+              Maximum marks reached ({part.marks}/{part.marks})
             </div>
           )}
           <div className="self-marking-points">
             {points.map((point, i) => {
-              if (!isAutoMarked && i >= maxRevealed) return null;
+              if (!isAutoMarked && !isLevelsType && i >= maxRevealed) return null;
 
               let depNote = null;
               if (part.type === 'select-and-explain' && i > 0 && decisions[0] === false) {
@@ -549,9 +580,10 @@ export default function SelfMarkingView({
                   decision={decisions[i] ?? null}
                   onDecide={(val) => onDecide(partIndex, i, val, point.marks)}
                   locked={locked[i] === true}
+                  awardDisabled={capReached && decisions[i] !== true}
                   pointNumber={i + 1}
                   dependencyNote={depNote}
-                  highlight={!isAutoMarked && i === 0 && !hasDecidedFirst}
+                  highlight={!isAutoMarked && !isLevelsType && i === 0 && !hasDecidedFirst}
                 />
               );
             })}

@@ -33,36 +33,6 @@ Questions are organized hierarchically:
 - **Difficulty**: Every question has a `difficulty` field (`"easy"`, `"medium"`, or `"hard"`). Questions are sorted easy → hard in the question list.
 - **Tags**: Every question has 5 tag fields: `source` (`"original"`/`"pastpaper"`), `examBoard` (`"AQA"`/`"Edexcel"`/`"OCR"`/`"iGCSE Edexcel"`/`"iGCSE Cambridge"`), `tier` (`"combined"`/`"separate"`), `subject` (`"physics"`), `level` (`"GCSE"`). Used for future filtering.
 
-### Combined vs Separate Science (AQA Tier Classification)
-
-The `tier` tag determines whether a question is suitable for Combined Science students (`"combined"`) or only for Separate Physics students (`"separate"`). Based on the AQA specifications (Combined Science: Trilogy 8464, Separate Physics: 8463):
-
-- **`"combined"`** — Content appears in both specs. Suitable for all students. Use this as the default.
-- **`"separate"`** — Content appears only in the Separate Physics spec. Combined Science students do not study this material.
-
-**Rule:** If a question covers ANY separate-only content, tag it `"separate"`. Only tag `"combined"` if the question exclusively covers shared content.
-
-**Separate-only content by topic:**
-
-| Topic | Separate-Only Content |
-|---|---|
-| **Energy** | Required practical: thermal insulation investigation |
-| **Electricity** | Static electricity (static charge, electron transfer, sparking); Electric fields (field patterns, non-contact forces) |
-| **Particle Model** | Pressure in gases ($pV$ = constant); Increasing pressure of a gas (work done on gas) |
-| **Atomic Structure** | Background radiation (sources, sieverts, dose by occupation/location); Different half-lives (hazards); Uses of nuclear radiation (medical imaging/treatment); Nuclear fission (chain reactions, reactors); Nuclear fusion (joining light nuclei) |
-| **Forces** | Moments, levers and gears ($M = Fd$, principle of moments); Pressure in fluids ($p = F/A$, $p = h\rho g$, upthrust, atmospheric pressure); Terminal velocity (detailed graphs); Stopping distances (estimating, speed-distance graphs); Momentum calculations for collisions; Changes in momentum ($F = m\Delta v / \Delta t$, safety features) |
-| **Waves** | Reflection of waves (ray diagrams, specular vs diffuse); Sound waves (vibrations in solids, hearing range); Waves for detection/exploration (ultrasound, seismic); Lenses (convex/concave, focal length, ray diagrams, magnification); Visible light (colour, filters, opaque/transparent); Black body radiation (emission/absorption, Earth temperature equilibrium) |
-| **Magnetism** | Loudspeakers (motor effect for sound); Induced potential (generator effect, alternator vs dynamo); Uses of generator effect; Microphones; Transformers ($V_p/V_s = n_p/n_s$, $V_s I_s = V_p I_p$) |
-| **Space** | **Entire topic** — solar system, orbital motions, satellites, red-shift, Big Bang, dark energy. All Space questions must be tagged `"separate"`. |
-
-**Examples:**
-- "Calculate the current using $V = IR$" → `"combined"` (basic electricity, shared content)
-- "Explain how a transformer steps up voltage" → `"separate"` (transformers are separate-only)
-- "Describe the life cycle of a star" → `"separate"` (all Space content is separate-only)
-- "Calculate the moment of a force about a pivot" → `"separate"` (moments are separate-only)
-- "Explain what happens during nuclear fission" → `"separate"` (fission is separate-only)
-- "Describe the structure of an atom" → `"combined"` (basic atomic structure is shared)
-
 ### Data Flow
 1. `public/data/topics.json` loaded on page init (contains topic/subtopic index)
 2. Landing page shown with subject selection
@@ -110,65 +80,18 @@ The `tier` tag determines whether a question is suitable for Combined Science st
 | `short-answer` | Single text input for 1-word/phrase answer | Auto-marked (fuzzy matching) |
 | `select-and-explain` | Radio buttons + textarea for explanation | Auto-marks selection (1 mark); self-mark explanation |
 | `table-fill` | Table with text inputs for blank cells | Auto-marked (1 mark per correct cell) |
+| `extended-written-levels` | Textarea (same as extended-written) | Self-marked; mark scheme has more points than marks; cap at max marks |
 
 ### LaTeX Support
 Use `$...$` for inline math and `$$...$$` for block math in question text and mark schemes.
 
-### Question Patterns That Cannot Be Digitised
+### Converting Exam Questions (.docx → .json)
 
-Some exam question parts are inherently paper-based and cannot be represented with the existing question types. When converting past papers or writing questions based on exam content, follow these rules:
-
-**Must skip (no digital equivalent):**
-- Drawing on diagrams (e.g., "Show the wavelength on the diagram and label it W")
-- Drawing circuit diagrams (e.g., "Draw a circuit for a hairdryer")
-- Completing or drawing bar charts / graphs
-- Drawing ray paths or wave diagrams
-- Drawing lines of best fit on graphs
-
-**Can be reclassified to an existing type:**
-| Original pattern | Reclassify to | How |
-|---|---|---|
-| Labelling a diagram ("Write the name of each particle in the spaces") | `short-answer`, `gap-fill`, or `table-fill` | See **Reclassifying labelling questions** below |
-| "Draw a line from each... to..." | `match-up` | Use colour-coded pairing instead of drawn lines. Rephrase as "Match each..." |
-| Reading values from a graph then answering | `calculation` or `short-answer` | Provide the values in the question text or a table instead of requiring graph reading |
-| Nuclear equation completion ("Complete the symbol for...") | `short-answer` or `gap-fill` | Ask for the particle name, mass number, or atomic number as text |
-| "Tick one box" / "Draw a ring around" | `single-choice` | Direct mapping — use radio buttons |
-| "Tick two boxes" | `multi-choice` | Direct mapping — use checkboxes |
-
-#### Reclassifying labelling questions
-
-Exam questions that ask students to label a diagram (e.g., "Write the name of each particle in the spaces") cannot be reproduced directly because they rely on pointing at specific positions on an image. Instead, rephrase them as text-based questions using the distinguishing property that each label refers to. Choose the type based on how many labels and whether a word bank is appropriate:
-
-- **1 label → `short-answer`**: Rephrase using the property that identifies what should be labelled.
-  - Original: *"Label particle X on the diagram"* (where X sits in the nucleus and has +1 charge)
-  - Reclassified: *"Name the particle found in the nucleus that has a relative charge of +1."* with `acceptedAnswers: ["proton"]`
-
-- **2+ labels, word bank available → `gap-fill`**: When the original provides a word bank or the answers come from a closed set, use gap-fill with a sentence per label.
-  - Original: *"Label the parts of the wave on the diagram"* (with a box containing: amplitude, wavelength, crest, trough)
-  - Reclassified: Use segments like `"The distance from rest to the peak is the "`, `{ "blank": 0 }`, `". The distance for one complete cycle is the "`, `{ "blank": 1 }`, `"."` with the word bank.
-
-- **2+ labels, no word bank → `table-fill`**: When students must recall the answers without a word bank, use a table where each row gives the identifying property and the student fills in the name.
-  - Original: *"Write the name of each particle in the spaces"* (pointing to proton, neutron, electron on an atom diagram)
-  - Reclassified: A table with headers `["Location", "Relative charge", "Particle name"]` and rows like `{ "cells": ["In the nucleus", "+1", { "blank": 0 }] }` with `correctAnswers: ["proton", "neutron", ["electron", "e-"]]`.
-
-- **If a diagram is available as an image file**, you can still include it via the `diagrams` field and rephrase to reference it (e.g., "Look at Figure 1. Name the part labelled X."). This preserves visual context while keeping the answer as text input.
-
-### Skipping Parts and Question Coherence
-
-When a multi-part exam question has parts that must be skipped (e.g., drawing tasks), **you must check that the remaining parts still make sense as a standalone question**. Follow these rules:
-
-1. **If a skipped part provides context needed by later parts** (e.g., "Draw the circuit in part (a)" followed by "Use your circuit to explain..."), you must either:
-   - Rewrite the later part to be self-contained (provide the context in its `text` field)
-   - Skip the dependent part as well
-   - Provide a diagram image if available and reference it instead
-
-2. **If skipping a part leaves only 1 part remaining**, consider whether the question is still worth including. A single 1-mark part on its own may not be valuable.
-
-3. **Re-label parts sequentially** after skipping. If original parts were (a), (b), (c) and (b) is skipped, the remaining parts should be labelled (a), (b) — not (a), (c).
-
-4. **Adjust the question title** if the skipped part was the main focus. The title should reflect what the remaining parts actually ask about.
-
-5. **Never leave dangling references.** If the question text says "Use Figure 2 to answer parts (b) and (c)" but Figure 2 was for a drawing task, remove or rewrite that reference.
+When converting past paper questions from `.docx` to JSON, follow the instructions in **`instructions_md/llm_parsing.md`**. This covers:
+- **Combined vs Separate tier classification** — which topics are separate-only (based on AQA specs)
+- **Non-digitisable patterns** — what to skip and what can be reclassified
+- **Reclassifying labelling questions** — how to convert diagram-labelling to `short-answer`, `gap-fill`, or `table-fill`
+- **Skipping parts and question coherence** — ensuring remaining parts still make sense
 
 ## Adding Questions
 

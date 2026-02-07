@@ -85,7 +85,7 @@ Before assigning IDs, check existing question files to ensure no duplicates.
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `partLabel` | string | Yes | Part identifier (e.g., "a", "b", "c", "i", "ii") |
-| `type` | string | Yes | One of: `"single-choice"`, `"multi-choice"`, `"gap-fill"`, `"extended-written"`, `"calculation"`, `"equation-choice"`, `"tick-box-table"`, `"match-up"`, `"short-answer"`, `"select-and-explain"`, `"table-fill"` |
+| `type` | string | Yes | One of: `"single-choice"`, `"multi-choice"`, `"gap-fill"`, `"extended-written"`, `"extended-written-levels"`, `"calculation"`, `"equation-choice"`, `"tick-box-table"`, `"match-up"`, `"short-answer"`, `"select-and-explain"`, `"table-fill"` |
 | `text` | string | Yes | The question text (supports LaTeX) |
 | `marks` | integer | Yes | Number of marks (1-6) |
 | `markScheme` | string[] | Yes | Array of marking criteria |
@@ -93,7 +93,7 @@ Before assigning IDs, check existing question files to ensure no duplicates.
 
 ## Part Types
 
-Types 1-3, 6, 7, 8, 9 and 11 are fully auto-marked. Type 4 (extended-written) is self-marked by the student using a split-panel marking UI. Type 5 (calculation) auto-marks the final answer; if correct, all marks are awarded. If incorrect, the student self-marks method points via the split-panel UI. Type 10 (select-and-explain) auto-marks the selection (1 mark) and self-marks the explanation (remaining marks).
+Types 1-3, 6, 7, 8, 9 and 11 are fully auto-marked. Type 4 (extended-written) is self-marked by the student using a split-panel marking UI. Type 4b (extended-written-levels) is similar but used for 6-mark levels-of-response questions where the mark scheme has more indicative content points than marks available. Type 5 (calculation) auto-marks the final answer; if correct, all marks are awarded. If incorrect, the student self-marks method points via the split-panel UI. Type 10 (select-and-explain) auto-marks the selection (1 mark) and self-marks the explanation (remaining marks).
 
 ### 1. Single Choice (`type: "single-choice"`)
 
@@ -103,9 +103,10 @@ Student selects one option from 3 or 4 choices (radio buttons). Auto-marked.
 
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
-| `options` | string[] | Yes | 3 or 4 option texts |
+| `options` | (string \| object)[] | Yes | 3 or 4 options. Each is either a text string or `{ "image": "filename.png" }` for image options. |
 | `correctAnswer` | integer | Yes | 0-based index of the correct option |
 
+**Text options:**
 ```json
 {
   "partLabel": "a",
@@ -119,6 +120,27 @@ Student selects one option from 3 or 4 choices (radio buttons). Auto-marked.
 }
 ```
 
+**Image options** (displayed in a 2-column grid with images inside radio button labels):
+```json
+{
+  "partLabel": "b",
+  "type": "single-choice",
+  "text": "Which circuit diagram shows a series circuit?",
+  "marks": 1,
+  "options": [
+    { "image": "circuits-opt-a-series.png" },
+    { "image": "circuits-opt-b-parallel.png" },
+    { "image": "circuits-opt-c-mixed.png" },
+    { "image": "circuits-opt-d-short.png" }
+  ],
+  "correctAnswer": 0,
+  "markScheme": ["Answer: A - Components are connected end-to-end in a single loop"],
+  "diagrams": []
+}
+```
+
+Options can mix text and images within the same question if needed, though in practice they are usually all one type.
+
 ### 2. Multi Choice (`type: "multi-choice"`)
 
 Student selects multiple options (checkboxes). The UI enforces a selection limit and shows a remaining counter.
@@ -127,7 +149,7 @@ Student selects multiple options (checkboxes). The UI enforces a selection limit
 
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
-| `options` | string[] | Yes | 4 or more option texts |
+| `options` | (string \| object)[] | Yes | 4 or more options. Each is either a text string or `{ "image": "filename.png" }` for image options (see single-choice for example). |
 | `correctAnswers` | integer[] | Yes | Array of 0-based indices of correct options |
 | `selectCount` | integer | Yes | Number of selections required (shown as "Select N") |
 | `scoring` | string | No | `"all-or-nothing"` (default) or `"partial"` |
@@ -212,6 +234,45 @@ The character limit for the textarea is derived at render time: `marks * 400` (~
     "1 mark: **Light energy** is absorbed by **chlorophyll**",
     "1 mark: **Carbon dioxide** and water are converted into **glucose**",
     "1 mark: **Oxygen** is released as a byproduct"
+  ],
+  "diagrams": []
+}
+```
+
+### 4b. Extended Written — Levels of Response (`type: "extended-written-levels"`)
+
+Student writes a free-text answer in a textarea, identical to `extended-written`. Used for 6-mark (occasionally 4-mark) levels-of-response questions where the mark scheme has more indicative content points than marks available.
+
+**No additional fields** beyond the common Part fields. Uses the same textarea input as `extended-written`.
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| *(common fields only)* | | | See Part Object above |
+
+**Key differences from `extended-written`:**
+- The `markScheme` array contains **more entries than `marks`**. For example, a 6-mark question may have 8–10 indicative content points.
+- During self-marking, **all** marking points are shown at once (no progressive reveal).
+- The student awards up to `marks` points. Once the maximum marks are reached, the Award button is disabled on remaining undecided points. The student does not need to decide every point.
+- The Deny button remains available so students can re-allocate marks if they change their mind.
+- Each indicative content point is worth 1 mark.
+
+**`**keyword**` syntax in markScheme:** Same as `extended-written` — use double asterisks for key terms.
+
+```json
+{
+  "partLabel": "a",
+  "type": "extended-written-levels",
+  "text": "Describe a method to determine the specific heat capacity of a metal block. Include the equipment you would use, the measurements you would take, and how you would use them to calculate the specific heat capacity.",
+  "marks": 6,
+  "markScheme": [
+    "1 mark: Use an **immersion heater** / **heating element** to heat the block",
+    "1 mark: Use a **thermometer** to measure the temperature change",
+    "1 mark: Use a **balance** to measure the **mass** of the block",
+    "1 mark: Use a **joulemeter** to measure the energy transferred (or use $E = P t$ / $E = I V t$)",
+    "1 mark: Insulate the block to reduce **heat losses** to the surroundings",
+    "1 mark: Record the **initial** and **final** temperature",
+    "1 mark: Calculate using $c = \\frac{\\Delta E}{m \\Delta \\theta}$",
+    "1 mark: **Repeat** the experiment and calculate a **mean**"
   ],
   "diagrams": []
 }
@@ -694,6 +755,7 @@ Each string in `markScheme` should describe one marking point:
 6. For `multi-choice`: `correctAnswers` must be an array of valid indices; `options` must have 4+ strings; `selectCount` must be a positive integer; `scoring` must be `"all-or-nothing"` or `"partial"` (defaults to `"all-or-nothing"`)
 7. For `gap-fill`: `segments` must alternate between text strings and `{ "blank": N }` objects; `correctAnswers` length must match the number of blanks; all `wordBank` entries should be distinct
 8. For `extended-written`: no additional fields beyond common ones; `markScheme` entries may use `**keyword**` for bold rendering; `marks` determines textarea character limit (`marks * 400`)
+8b. For `extended-written-levels`: same as `extended-written` but `markScheme` should have **more entries than `marks`** (e.g., 8 entries for 6 marks). `marks` is typically 6 (occasionally 4). Each `markScheme` entry should be 1 mark.
 9. For `calculation`: `marks` must be **2**, **3**, or **4**. `equations` must have exactly 3 LaTeX equation strings. `correctEquation` must be a valid index (0-2). The last `markScheme` entry must always be the final answer point. `markScheme` length must equal `marks`. `tolerance` defaults to `0.01` (1% relative)
 10. For `equation-choice`: `options` must have exactly 4 LaTeX equation strings; `correctAnswer` must be a valid index (0-3); `marks` must be 1
 11. For `tick-box-table`: `columnHeaders` must have at least 2 strings; `rows` must be an array of objects each with `label` (string) and `correctColumn` (0-based index into columnHeaders); `marks` must equal the number of rows (1 mark per row); `markScheme` must have one entry per row
