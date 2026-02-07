@@ -623,7 +623,11 @@ export default function SelfMarkingView({
           >
             Submit Marks
           </button>
-          <div className={`self-marking-score ${totalScoreClass}`}>
+          <div
+            className={`self-marking-score ${totalScoreClass}`}
+            onClick={canSubmit ? onSubmitMarks : undefined}
+            style={canSubmit ? { cursor: 'pointer' } : undefined}
+          >
             <span className="score-label-text">Score:</span>&nbsp;{totalScore} / {totalMarks}
           </div>
         </div>

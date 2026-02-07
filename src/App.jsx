@@ -268,16 +268,15 @@ export default function App() {
         <header>
           <div className="header-top-row">
             <Breadcrumb items={breadcrumbItems} />
-            <button className="back-link" onClick={handleBack}>
-              &larr; Back
-            </button>
           </div>
           {getHeaderTitle() && <h1>{getHeaderTitle()}</h1>}
-          {getHeaderSubtitle() && <p className="header-subtitle">{getHeaderSubtitle()}</p>}
         </header>
       )}
 
       <main>
+        {view !== 'landing' && view !== 'question' && getHeaderSubtitle() && (
+          <p className="content-subtitle">{getHeaderSubtitle()}</p>
+        )}
         {view === 'landing' && <LandingPage onStart={goToTopics} />}
 
         {view === 'topics' && topicsData && (
