@@ -116,7 +116,16 @@
         {
           "partLabel": "c",
           "type": "table-fill",
-          "text": "Figure 3 shows a circuit with five ammeters and three identical lamps connected in parallel. The table shows the ammeter readings. The total current from the battery is measured by ammeter A1. Each lamp has the same current flowing through it, measured by ammeters A3 and A4. Complete the table to show the readings on ammeters A2 and A5.<table><tr><th>Ammeter</th><th>A1</th><th>A2</th><th>A3</th><th>A4</th><th>A5</th></tr><tr><td>Current in amps</td><td>0.36</td><td>?</td><td>0.12</td><td>0.12</td><td>?</td></tr></table>",
+          "text": "Figure 3 shows a circuit with five ammeters and three identical lamps connected in parallel. Table 1 shows the ammeter readings. The total current from the battery is measured by ammeter A1. Each lamp has the same current flowing through it, measured by ammeters A3 and A4. Complete the table to show the readings on ammeters A2 and A5.",
+          "tables": [
+            {
+              "caption": "Ammeter readings",
+              "headers": ["Ammeter", "A1", "A2", "A3", "A4", "A5"],
+              "rows": [
+                ["Current in amps", "0.36", "?", "0.12", "0.12", "?"]
+              ]
+            }
+          ],
           "marks": 2,
           "headers": ["Ammeter", "Reading (A)"],
           "rows": [
@@ -165,7 +174,16 @@
         {
           "partLabel": "a",
           "type": "calculation",
-          "text": "A student investigated how the total resistance of identical resistors connected in series varied with the number of resistors. The student used an ohmmeter to measure the total resistance. The diagram below shows the student's circuit with 3 resistors. The table below shows the student's results for 3 resistors in series.<table><tr><th>Number of resistors</th><th>Reading 1 (Ω)</th><th>Reading 2 (Ω)</th><th>Reading 3 (Ω)</th><th>Mean (Ω)</th></tr><tr><td>3</td><td>35.9</td><td>36.0</td><td>36.1</td><td>36.0</td></tr></table>Calculate the mean resistance of 1 resistor.",
+          "text": "A student investigated how the total resistance of identical resistors connected in series varied with the number of resistors. The student used an ohmmeter to measure the total resistance. The diagram below shows the student's circuit with 3 resistors. Table 1 shows the student's results for 3 resistors in series. Calculate the mean resistance of 1 resistor.",
+          "tables": [
+            {
+              "caption": "Resistance readings for 3 resistors in series",
+              "headers": ["Number of resistors", "Reading 1 (\u03a9)", "Reading 2 (\u03a9)", "Reading 3 (\u03a9)", "Mean (\u03a9)"],
+              "rows": [
+                ["3", "35.9", "36.0", "36.1", "36.0"]
+              ]
+            }
+          ],
           "marks": 2,
           "equations": [
             "$R_{\\text{mean}} = \\frac{R_{\\text{total}}}{n}$",

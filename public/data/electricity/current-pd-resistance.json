@@ -312,7 +312,19 @@
         {
           "partLabel": "a",
           "type": "short-answer",
-          "text": "A student measured the resistance of four wires. The table below shows the data.\n\n<table><tr><th>Wire</th><th>Type of metal</th><th>Length in cm</th><th>Diameter in mm</th><th>Resistance in \u03A9</th></tr><tr><td>J</td><td>copper</td><td>50</td><td>0.17</td><td>0.36</td></tr><tr><td>K</td><td>copper</td><td>50</td><td>0.30</td><td>0.12</td></tr><tr><td>L</td><td>copper</td><td>100</td><td>0.30</td><td>0.24</td></tr><tr><td>M</td><td>constantan</td><td>100</td><td>0.30</td><td>7.00</td></tr></table>\n\nThe last column of the table should include the unit of resistance. What is the unit of resistance?",
+          "text": "A student measured the resistance of four wires. Table 1 shows the data.\n\nThe last column of the table should include the unit of resistance. What is the unit of resistance?",
+          "tables": [
+            {
+              "caption": "Resistance of four wires",
+              "headers": ["Wire", "Type of metal", "Length in cm", "Diameter in mm", "Resistance in \u03A9"],
+              "rows": [
+                ["J", "copper", "50", "0.17", "0.36"],
+                ["K", "copper", "50", "0.30", "0.12"],
+                ["L", "copper", "100", "0.30", "0.24"],
+                ["M", "constantan", "100", "0.30", "7.00"]
+              ]
+            }
+          ],
           "marks": 1,
           "acceptedAnswers": ["ohm", "ohms", "\u03A9"],
           "markScheme": ["1 mark: **ohm** / **\u03A9**"],
@@ -506,7 +518,17 @@
         {
           "partLabel": "e",
           "type": "extended-written-levels",
-          "text": "The table gives data about two types of light bulb people may use in their homes. Both types of light bulb produce the same amount of light.<table><tr><th>Type of light bulb</th><th>Energy efficiency</th><th>Cost of one light bulb</th><th>Average lifetime in hours</th></tr><tr><td>Halogen</td><td>10%</td><td>\u00a31.95</td><td>2 000</td></tr><tr><td>Light Emitting Diode (LED)</td><td>32%</td><td>\u00a311.70</td><td>36 000</td></tr></table>Evaluate, in terms of cost and energy efficiency, the use of the two types of light bulb. You should compare both types of light bulb and conclude which light bulb would be the best to use.",
+          "text": "Table 1 gives data about two types of light bulb people may use in their homes. Both types of light bulb produce the same amount of light. Evaluate, in terms of cost and energy efficiency, the use of the two types of light bulb. You should compare both types of light bulb and conclude which light bulb would be the best to use.",
+          "tables": [
+            {
+              "caption": "Halogen and LED light bulb comparison",
+              "headers": ["Type of light bulb", "Energy efficiency", "Cost of one light bulb", "Average lifetime in hours"],
+              "rows": [
+                ["Halogen", "10%", "\u00a31.95", "2 000"],
+                ["Light Emitting Diode (LED)", "32%", "\u00a311.70", "36 000"]
+              ]
+            }
+          ],
           "marks": 6,
           "markScheme": [
             "1 mark: **Halogen** bulbs are **cheaper to buy** than LED bulbs",
@@ -801,7 +823,26 @@
         {
           "partLabel": "a",
           "type": "calculation",
-          "text": "The following specification is taken from the instruction booklet of a combination microwave oven.<table><tr><th>AC voltage</th><td>240 V, 50 Hz</td></tr><tr><th>Power required</th><td></td></tr><tr><td>Microwave</td><td>1.5 kW</td></tr><tr><td>Dual (Roast/Bake)</td><td>2.8 kW</td></tr><tr><td>Dual (Grill)</td><td>2.5 kW</td></tr><tr><td>Convection</td><td>1.35 kW</td></tr><tr><td>Grill</td><td>2.3 kW</td></tr><tr><th>Output power</th><td></td></tr><tr><td>Microwave</td><td>850 W</td></tr><tr><td>Convection heater</td><td>1350 W</td></tr><tr><td>Grill heater</td><td>1000 W</td></tr></table>\n\nWhat is the current when the oven is being used to cook in the dual (roast/bake) mode? The power required in dual (roast/bake) mode is 2.8 kW.",
+          "text": "Table 1 shows the specification taken from the instruction booklet of a combination microwave oven.\n\nWhat is the current when the oven is being used to cook in the dual (roast/bake) mode? The power required in dual (roast/bake) mode is 2.8 kW.",
+          "tables": [
+            {
+              "caption": "Combination microwave oven specification",
+              "headers": ["Specification", "Value"],
+              "rows": [
+                ["AC voltage", "240 V, 50 Hz"],
+                ["Power required", ""],
+                ["Microwave", "1.5 kW"],
+                ["Dual (Roast/Bake)", "2.8 kW"],
+                ["Dual (Grill)", "2.5 kW"],
+                ["Convection", "1.35 kW"],
+                ["Grill", "2.3 kW"],
+                ["Output power", ""],
+                ["Microwave", "850 W"],
+                ["Convection heater", "1350 W"],
+                ["Grill heater", "1000 W"]
+              ]
+            }
+          ],
           "marks": 2,
           "equations": [
             "$P = I \\times V$",

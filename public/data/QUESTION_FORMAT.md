@@ -669,6 +669,76 @@ This renders as a styled table with header row and alternating row colours, foll
 <table><tr><th>Property</th><th>Series</th><th>Parallel</th></tr><tr><td>Current</td><td>Same everywhere</td><td>Splits between branches</td></tr></table>
 ```
 
+### Structured `tables` field (preferred for reference tables)
+
+When a question part contains a **reference/data table** that students need to consult (e.g., "Table 1 shows the properties of different materials"), use the `tables` field instead of embedding HTML in the `text` field. The `tables` field is an array of structured table objects on each part, similar to `diagrams`.
+
+**Advantages over inline HTML:** Tables in the `tables` field appear in the sidebar for quick access and can be viewed in a pop-out viewer. They are numbered separately from figures as "Table 1", "Table 2", etc., with cumulative numbering across the question.
+
+**When to use `tables` vs inline HTML:**
+- **Use `tables` field:** For reference/data tables that provide context for the question (experimental results, material properties, measurement data). These are tables the student may need to refer back to.
+- **Keep inline HTML:** For very small tables (2-3 cells) that are tightly integrated into the question sentence, or for decorative/formatting purposes.
+
+**Format:**
+```json
+{
+  "tables": [
+    {
+      "caption": "Speed of a car at different times",
+      "headers": ["Time (s)", "Speed (m/s)"],
+      "rows": [
+        ["0", "0"],
+        ["5", "15"],
+        ["10", "15"],
+        ["15", "5"]
+      ]
+    }
+  ]
+}
+```
+
+**Fields:**
+- `caption` (string, optional): Short description of the table. Displayed alongside the "Table N" label.
+- `headers` (string[]): Column header texts. LaTeX is supported (e.g., `"Density ($\\text{kg/m}^3$)"`).
+- `rows` (string[][]): Array of rows, where each row is an array of cell values. LaTeX is supported in cells.
+
+**Numbering rules:**
+- Tables are numbered cumulatively across the entire question: Table 1, Table 2, etc.
+- Table numbering is independent from figure numbering (a question can have Fig. 1, Fig. 2 AND Table 1, Table 2).
+- If a part has tables, the question text should reference them by number: "Table 1 shows the results."
+
+**Example with tables and diagrams:**
+```json
+{
+  "partLabel": "a",
+  "type": "calculation",
+  "text": "Table 1 shows the results of an experiment measuring the extension of a spring. Figure 1 shows the apparatus used. Calculate the spring constant.",
+  "marks": 3,
+  "diagrams": ["springs-q1-fig1.jpeg"],
+  "tables": [
+    {
+      "caption": "Results of the spring extension experiment",
+      "headers": ["Force (N)", "Extension (m)"],
+      "rows": [
+        ["0", "0.00"],
+        ["2", "0.05"],
+        ["4", "0.10"],
+        ["6", "0.15"]
+      ]
+    }
+  ],
+  "equations": ["$F = k \\times e$", "$E_e = \\frac{1}{2} k e^2$", "$W = F \\times d$"],
+  "correctEquation": 0,
+  "correctAnswer": 40,
+  "tolerance": 0.1,
+  "markScheme": [
+    "1 mark: Correct equation: $F = k \\times e$",
+    "1 mark: Correct substitution: $6 = k \\times 0.15$",
+    "1 mark: Correct answer: **40 N/m**"
+  ]
+}
+```
+
 ## Mark Scheme Guidelines
 
 Each string in `markScheme` should describe one marking point:

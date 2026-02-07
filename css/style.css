@@ -882,6 +882,61 @@ header .header-top-row {
     box-shadow: var(--shadow-md);
 }
 
+/* Inline tables (part.tables field) */
+.part-tables-grid {
+    margin-bottom: 16px;
+}
+
+.part-table-block {
+    margin-bottom: 12px;
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--bg-surface);
+}
+
+.part-table-clickable {
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.part-table-clickable:hover {
+    border-color: var(--accent-blue);
+    box-shadow: var(--shadow-md);
+}
+
+.part-table-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    padding: 6px 10px;
+    background: var(--bg-surface-alt);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.part-inline-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.part-inline-table th,
+.part-inline-table td {
+    padding: 8px 12px;
+    border: 1px solid var(--border-subtle);
+    text-align: left;
+}
+
+.part-inline-table th {
+    background: var(--bg-surface-alt);
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.part-inline-table tbody tr:nth-child(even) {
+    background: var(--bg-surface-alt);
+}
+
 /* ============================================
    Figure Sidebar + Viewer
    ============================================ */
@@ -965,6 +1020,50 @@ body:has(.has-figure-sidebar) {
     margin-top: 3px;
 }
 
+/* Table sidebar buttons */
+.sidebar-title-tables {
+    margin-top: 6px;
+    padding-top: 8px;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.table-thumb {
+    cursor: pointer;
+    border-radius: 6px;
+    border: 2px solid transparent;
+    padding: 8px;
+    background: var(--bg-surface);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+    text-align: left;
+    font-family: inherit;
+}
+
+.table-thumb:hover {
+    border-color: var(--accent-blue);
+    box-shadow: var(--shadow-sm);
+}
+
+.table-thumb.active {
+    border-color: var(--accent-blue);
+    box-shadow: var(--shadow-md);
+}
+
+.table-thumb-icon {
+    font-size: 0.9rem;
+    color: var(--accent-blue);
+    flex-shrink: 0;
+}
+
+.table-thumb-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
 /* Mobile trigger (hidden on desktop) */
 .figure-sidebar-mobile-trigger {
     display: none;
@@ -1014,6 +1113,35 @@ body:has(.has-figure-sidebar) {
     font-size: 0.95rem;
     font-weight: 600;
     color: var(--text-secondary);
+}
+
+/* Table in viewer */
+.figure-viewer-content-table {
+    max-width: 90vw;
+    overflow-x: auto;
+}
+
+.viewer-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    min-width: 300px;
+}
+
+.viewer-table th,
+.viewer-table td {
+    padding: 10px 14px;
+    border: 1px solid var(--border-subtle);
+    text-align: left;
+}
+
+.viewer-table th {
+    background: var(--bg-surface-alt);
+    font-weight: 600;
+}
+
+.viewer-table tbody tr:nth-child(even) {
+    background: var(--bg-surface-alt);
 }
 
 .figure-viewer-close {
@@ -4125,6 +4253,17 @@ body.landing-active header {
     .figure-sidebar.drawer-open .figure-thumb {
         flex-shrink: 0;
         width: 100px;
+    }
+
+    .sidebar-title-tables {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: none;
+    }
+
+    .figure-sidebar.drawer-open .table-thumb {
+        flex-shrink: 0;
+        white-space: nowrap;
     }
 }
 

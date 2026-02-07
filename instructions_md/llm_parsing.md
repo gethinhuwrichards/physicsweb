@@ -219,6 +219,58 @@ Some docx files reuse the same image across multiple questions (e.g., the same V
 
 ---
 
+## Extracting Tables from .docx Files
+
+Exam papers frequently include **data/reference tables** (experimental results, material properties, measurement values, etc.) that students need to consult when answering questions. These should be extracted into the `tables` field on question parts rather than embedded as inline HTML in the `text` field.
+
+### Recognising tables to extract
+
+Extract a table into the `tables` field when:
+- The docx says "Table 1 shows..." or "The table below shows..." followed by a data table
+- The table provides reference data needed to answer the question (e.g., results, measurements, properties)
+- The table is large enough (3+ rows) that a student might need to scroll back to see it
+
+**Do NOT** extract into `tables` if:
+- The table is part of the answer mechanism (tick-box-table, table-fill question types have their own fields)
+- The table is tiny (1-2 data cells) and tightly integrated into a sentence
+
+### Table data format
+
+```json
+"tables": [
+  {
+    "caption": "Results of the spring extension experiment",
+    "headers": ["Force (N)", "Extension (m)"],
+    "rows": [
+      ["0", "0.00"],
+      ["2", "0.05"],
+      ["4", "0.10"],
+      ["6", "0.15"]
+    ]
+  }
+]
+```
+
+- `caption`: Brief description. Use the docx wording if available (e.g., "Speed of a car at different times").
+- `headers`: Column headings from the `<th>` cells. Include units in parentheses.
+- `rows`: Each row is an array of strings. Use LaTeX for mathematical content (e.g., `"$2.5 \\times 10^3$"`).
+
+### Table numbering
+
+- Tables are numbered **separately from figures**: Table 1, Table 2, etc.
+- Numbering is **cumulative across the whole question** (same rule as figures).
+- The question text must reference tables by their cumulative number: "Table 1 shows the results."
+- If part (a) has 1 table and part (c) has 1 table, the text in part (c) should say "Table **2** shows..." not "Table 1 shows..."
+
+### Table placement
+
+Follow the same rules as images:
+- Tables in the question preamble (before any part letter) → place in the **first part's** `tables` array.
+- Tables referenced within a specific part → place in **that part's** `tables` array.
+- Tables used across multiple parts → place in the **earliest part** that references the table.
+
+---
+
 ## Skipping Parts and Question Coherence
 
 When a multi-part exam question has parts that must be skipped (e.g., drawing tasks), **you must check that the remaining parts still make sense as a standalone question**. Follow these rules:

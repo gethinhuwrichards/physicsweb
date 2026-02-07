@@ -232,7 +232,7 @@
         {
           "partLabel": "a",
           "type": "single-choice",
-          "text": "The table shows four discoveries about atoms.<table><tr><th>Discovery</th><th>Description</th></tr><tr><td>A</td><td>Atoms contain a small, dense, positively charged nucleus</td></tr><tr><td>B</td><td>Atoms contain electrons</td></tr><tr><td>C</td><td>Atoms contain neutrons</td></tr><tr><td>D</td><td>Electrons orbit the nucleus at specific distances</td></tr></table>Which discovery was the earliest?",
+          "text": "Table 1 shows four discoveries about atoms. Which discovery was the earliest?",
           "marks": 1,
           "options": [
             "A",
@@ -244,12 +244,24 @@
           "markScheme": [
             "Answer: B - The electron was discovered by J.J. Thomson in 1897, before the other discoveries"
           ],
-          "diagrams": []
+          "diagrams": [],
+          "tables": [
+            {
+              "caption": "Four discoveries about atoms",
+              "headers": ["Discovery", "Description"],
+              "rows": [
+                ["A", "Atoms contain a small, dense, positively charged nucleus"],
+                ["B", "Atoms contain electrons"],
+                ["C", "Atoms contain neutrons"],
+                ["D", "Electrons orbit the nucleus at specific distances"]
+              ]
+            }
+          ]
         },
         {
           "partLabel": "b",
           "type": "single-choice",
-          "text": "Which discovery in the table above was the most recent?",
+          "text": "Which discovery in Table 1 was the most recent?",
           "marks": 1,
           "options": [
             "A",
@@ -447,18 +459,29 @@
         {
           "partLabel": "a",
           "type": "extended-written",
-          "text": "Three atoms are shown below.<table><tr><th>Atom</th><th>Protons</th><th>Neutrons</th><th>Electrons</th></tr><tr><td>A</td><td>6</td><td>6</td><td>6</td></tr><tr><td>B</td><td>7</td><td>7</td><td>7</td></tr><tr><td>C</td><td>6</td><td>7</td><td>6</td></tr></table>Two of the atoms are from the same element. Which of A, B and C is an atom of a different element? Give one reason for your answer.",
+          "text": "Three atoms are shown in Table 1. Two of the atoms are from the same element. Which of A, B and C is an atom of a different element? Give one reason for your answer.",
           "marks": 2,
           "markScheme": [
             "1 mark: **B** is a different element",
             "1 mark: B has a different number of **protons** (or a different atomic number)"
           ],
-          "diagrams": []
+          "diagrams": [],
+          "tables": [
+            {
+              "caption": "Particles in three atoms",
+              "headers": ["Atom", "Protons", "Neutrons", "Electrons"],
+              "rows": [
+                ["A", "6", "6", "6"],
+                ["B", "7", "7", "7"],
+                ["C", "6", "7", "6"]
+              ]
+            }
+          ]
         },
         {
           "partLabel": "b",
           "type": "extended-written",
-          "text": "Two of the atoms A, B and C shown in the table above are isotopes of the same element. Which two are isotopes? Explain your answer.",
+          "text": "Two of the atoms A, B and C shown in Table 1 are isotopes of the same element. Which two are isotopes? Explain your answer.",
           "marks": 3,
           "markScheme": [
             "1 mark: **A** and **C** are isotopes",
@@ -483,13 +506,24 @@
         {
           "partLabel": "a",
           "type": "extended-written",
-          "text": "Doctors use nuclear radiation to diagnose illness. The table below gives data about three radiation sources. Each emits beta radiation.<table><tr><th>Radiation source</th><th>Half-life</th></tr><tr><td>Carbon-11</td><td>20 minutes</td></tr><tr><td>Nitrogen-13</td><td>10 minutes</td></tr><tr><td>Oxygen-15</td><td>2 minutes</td></tr></table>Explain why oxygen-15 is likely to pose the least risk to a patient.",
+          "text": "Doctors use nuclear radiation to diagnose illness. Table 1 gives data about three radiation sources. Each emits beta radiation. Explain why oxygen-15 is likely to pose the least risk to a patient.",
           "marks": 2,
           "markScheme": [
             "1 mark: Oxygen-15 has the **shortest half-life** of the three sources",
             "1 mark: So the patient is exposed to **radiation** for a shorter time / the source decays most quickly"
           ],
-          "diagrams": []
+          "diagrams": [],
+          "tables": [
+            {
+              "caption": "Half-lives of three radiation sources",
+              "headers": ["Radiation source", "Half-life"],
+              "rows": [
+                ["Carbon-11", "20 minutes"],
+                ["Nitrogen-13", "10 minutes"],
+                ["Oxygen-15", "2 minutes"]
+              ]
+            }
+          ]
         },
         {
           "partLabel": "b",

@@ -234,7 +234,7 @@
         {
           "partLabel": "b",
           "type": "calculation",
-          "text": "The relationship between the pressure and the volume of a gas is given by the equation:<br><br>$$\\text{pressure} \\times \\text{volume} = \\text{constant}$$<br><br>The table below shows some of the results.<table><tr><th>Pressure in kPa</th><th>Volume in cm³</th></tr><tr><td>300</td><td>10</td></tr><tr><td>200</td><td>15</td></tr><tr><td>150</td><td>20</td></tr><tr><td>120</td><td>25</td></tr><tr><td>100</td><td>30</td></tr></table>Calculate the constant when the pressure of the gas was 300 kPa.",
+          "text": "The relationship between the pressure and the volume of a gas is given by the equation:<br><br>$$\\text{pressure} \\times \\text{volume} = \\text{constant}$$<br><br>Table 1 shows some of the results. Calculate the constant when the pressure of the gas was 300 kPa.",
           "marks": 2,
           "correctAnswer": 3000,
           "tolerance": 0.01,
@@ -248,7 +248,20 @@
             "1 mark: Correct substitution: $300 \\times 10$",
             "1 mark: Final answer: **3000 kPa cm³**"
           ],
-          "diagrams": []
+          "diagrams": [],
+          "tables": [
+            {
+              "caption": "Pressure and volume measurements for a gas",
+              "headers": ["Pressure in kPa", "Volume in cm³"],
+              "rows": [
+                ["300", "10"],
+                ["200", "15"],
+                ["150", "20"],
+                ["120", "25"],
+                ["100", "30"]
+              ]
+            }
+          ]
         },
         {
           "partLabel": "c",

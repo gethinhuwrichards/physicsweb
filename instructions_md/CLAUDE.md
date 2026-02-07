@@ -103,6 +103,15 @@ When converting past paper questions from `.docx` to JSON, follow the instructio
 - Displayed as "Fig. 1", "Fig. 2" etc. in a flex-wrap row above the input component
 - See `llm_parsing.md` for the full extraction and placement workflow
 
+### Tables
+
+- The `tables` field on each part is an array of structured table objects: `[{ "caption": "...", "headers": [...], "rows": [[...], ...] }]`
+- Used for **reference/data tables** that students need to consult (experimental results, material properties, etc.)
+- Numbered separately from figures: "Table 1", "Table 2" etc., cumulative across the question
+- Rendered inline in the question body and accessible via the sticky sidebar
+- For small inline tables (1-2 rows, tightly integrated in text), use HTML in the `text` field instead
+- See `QUESTION_FORMAT.md` for the full schema and `llm_parsing.md` for extraction rules
+
 ## Adding Questions
 
 ### Adding a New Subtopic

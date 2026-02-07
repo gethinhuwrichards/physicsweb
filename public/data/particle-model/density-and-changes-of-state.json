@@ -50,12 +50,21 @@
         {
           "partLabel": "c",
           "type": "extended-written",
-          "text": "The table below shows the results.<table><tr><th>Volume of water in cm³</th><th>Volume of water and ring in cm³</th><th>Volume of ring in cm³</th></tr><tr><td>5.0</td><td>5.4</td><td>X</td></tr></table>Calculate value X.",
+          "text": "Table 1 shows the results. Calculate value X.",
           "marks": 1,
           "markScheme": [
             "1 mark: X = **0.4** (cm³)"
           ],
-          "diagrams": []
+          "diagrams": [],
+          "tables": [
+            {
+              "caption": "Volume measurements for the metal ring",
+              "headers": ["Volume of water in cm³", "Volume of water and ring in cm³", "Volume of ring in cm³"],
+              "rows": [
+                ["5.0", "5.4", "X"]
+              ]
+            }
+          ]
         },
         {
           "partLabel": "d",
@@ -557,12 +566,24 @@
         {
           "partLabel": "a",
           "type": "extended-written",
-          "text": "A student investigated the density of different fruits. The table below shows the results.<table><tr><th>Fruit</th><th>Density in g/cm³</th></tr><tr><td>Apple</td><td>0.68</td></tr><tr><td>Kiwi</td><td>1.03</td></tr><tr><td>Lemon</td><td>0.95</td></tr><tr><td>Lime</td><td>1.05</td></tr></table>The student determined the volume of each fruit using a displacement can and a measuring cylinder.<br><br>What other piece of equipment would the student need to determine the density of each fruit?",
+          "text": "A student investigated the density of different fruits. Table 1 shows the results. The student determined the volume of each fruit using a displacement can and a measuring cylinder.<br><br>What other piece of equipment would the student need to determine the density of each fruit?",
           "marks": 1,
           "markScheme": [
             "1 mark: **Balance** / scales"
           ],
-          "diagrams": []
+          "diagrams": [],
+          "tables": [
+            {
+              "caption": "Density of different fruits",
+              "headers": ["Fruit", "Density in g/cm³"],
+              "rows": [
+                ["Apple", "0.68"],
+                ["Kiwi", "1.03"],
+                ["Lemon", "0.95"],
+                ["Lime", "1.05"]
+              ]
+            }
+          ]
         },
         {
           "partLabel": "b",
@@ -817,12 +838,21 @@
         {
           "partLabel": "e",
           "type": "extended-written",
-          "text": "The table below shows the data that the student obtained.<table><tr><th>Mass of salt added in grams</th><th>0</th><th>10</th><th>20</th></tr><tr><td>Melting point of ice in °C</td><td>0</td><td>−6</td><td>−16</td></tr></table>Describe the pattern shown in the table.",
+          "text": "Table 1 shows the data that the student obtained. Describe the pattern shown in Table 1.",
           "marks": 1,
           "markScheme": [
             "1 mark: **Melting point decreases** as the mass of salt is increased (accept negative correlation)"
           ],
-          "diagrams": []
+          "diagrams": [],
+          "tables": [
+            {
+              "caption": "Effect of salt on the melting point of ice",
+              "headers": ["Mass of salt added in grams", "0", "10", "20"],
+              "rows": [
+                ["Melting point of ice in °C", "0", "−6", "−16"]
+              ]
+            }
+          ]
         }
       ]
     }

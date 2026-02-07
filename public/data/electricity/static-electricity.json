@@ -353,7 +353,18 @@
         {
           "partLabel": "b",
           "type": "extended-written",
-          "text": "Scientists were asked to find out whether the build-up of charge on the driver depends on the type of material used to make the driver's clothes. The results of the investigation are given in the table below. Humidity is a measure of how much water vapour the air can hold.<table><tr><th>Material</th><th>Humidity</th><th>Temperature in °C</th><th>Charge on the driver in millicoulombs</th></tr><tr><td>Nylon</td><td>48%</td><td>18</td><td>3.0 to 3.2</td></tr><tr><td>Wool</td><td>48%</td><td>18</td><td>2.4 to 2.5</td></tr><tr><td>Cotton</td><td>48%</td><td>18</td><td>1.4 to 1.7</td></tr></table>Why was it important that the scientists controlled the humidity?",
+          "text": "Scientists were asked to find out whether the build-up of charge on the driver depends on the type of material used to make the driver's clothes. Table 1 shows the results of the investigation. Humidity is a measure of how much water vapour the air can hold. Why was it important that the scientists controlled the humidity?",
+          "tables": [
+            {
+              "caption": "Charge on driver for different clothing materials",
+              "headers": ["Material", "Humidity", "Temperature in \u00b0C", "Charge on the driver in millicoulombs"],
+              "rows": [
+                ["Nylon", "48%", "18", "3.0 to 3.2"],
+                ["Wool", "48%", "18", "2.4 to 2.5"],
+                ["Cotton", "48%", "18", "1.4 to 1.7"]
+              ]
+            }
+          ],
           "marks": 1,
           "markScheme": ["1 mark: How wet the air is affects **charge** build-up (accept: humidity affects charge; damp air is a better **conductor**; damp air has a lower **resistance**)"],
           "diagrams": []

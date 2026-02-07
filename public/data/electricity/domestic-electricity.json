@@ -469,7 +469,20 @@
         {
           "partLabel": "a",
           "type": "calculation",
-          "text": "An adaptor can be used to connect up to four appliances in parallel to one 230 V mains socket. The adaptor is fitted with a 13 A fuse. The table shows the current each appliance draws.<table><tr><th>Appliance</th><th>Current</th></tr><tr><td>Computer</td><td>1 A</td></tr><tr><td>Hairdryer</td><td>4 A</td></tr><tr><td>Heater</td><td>8 A</td></tr><tr><td>Iron</td><td>6 A</td></tr><tr><td>Television</td><td>2 A</td></tr></table>What current will flow to the adaptor when the television, computer and hairdryer are plugged into the adaptor?",
+          "text": "An adaptor can be used to connect up to four appliances in parallel to one 230 V mains socket. The adaptor is fitted with a 13 A fuse. Table 1 shows the current each appliance draws. What current will flow to the adaptor when the television, computer and hairdryer are plugged into the adaptor?",
+          "tables": [
+            {
+              "caption": "Appliance currents",
+              "headers": ["Appliance", "Current"],
+              "rows": [
+                ["Computer", "1 A"],
+                ["Hairdryer", "4 A"],
+                ["Heater", "8 A"],
+                ["Iron", "6 A"],
+                ["Television", "2 A"]
+              ]
+            }
+          ],
           "marks": 2,
           "equations": [
             "$I_{\\text{total}} = I_1 + I_2 + I_3$",

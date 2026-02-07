@@ -330,14 +330,35 @@ export default function QuestionView({
     return result;
   }, [question]);
 
+  // Collect all tables across parts in order
+  const tables = useMemo(() => {
+    const result = [];
+    let n = 1;
+    question.parts.forEach(p => {
+      (p.tables || []).forEach(tbl => {
+        result.push({ data: tbl, label: `Table ${n}`, index: n - 1 });
+        n++;
+      });
+    });
+    return result;
+  }, [question]);
+
   const [viewerIndex, setViewerIndex] = useState(null);
+  const [tableViewerIndex, setTableViewerIndex] = useState(null);
 
   const handleFigureClick = useCallback((figIndex) => {
+    setTableViewerIndex(null);
     setViewerIndex(figIndex);
+  }, []);
+
+  const handleTableClick = useCallback((tblIndex) => {
+    setViewerIndex(null);
+    setTableViewerIndex(tblIndex);
   }, []);
 
   const handleViewerClose = useCallback(() => {
     setViewerIndex(null);
+    setTableViewerIndex(null);
   }, []);
 
   const handleViewerPrev = useCallback(() => {
@@ -348,10 +369,19 @@ export default function QuestionView({
     setViewerIndex(i => (i < figures.length - 1 ? i + 1 : i));
   }, [figures.length]);
 
-  // Close viewer when leaving answering/complete phases
+  const handleTableViewerPrev = useCallback(() => {
+    setTableViewerIndex(i => (i > 0 ? i - 1 : i));
+  }, []);
+
+  const handleTableViewerNext = useCallback(() => {
+    setTableViewerIndex(i => (i < tables.length - 1 ? i + 1 : i));
+  }, [tables.length]);
+
+  // Close viewers when leaving answering/complete phases
   useEffect(() => {
     if (state.phase !== 'answering' && state.phase !== 'complete') {
       setViewerIndex(null);
+      setTableViewerIndex(null);
     }
   }, [state.phase]);
 
@@ -424,7 +454,7 @@ export default function QuestionView({
   // Calculate total score for final panel
   const totalScore = Object.values(state.partScores).reduce((sum, s) => sum + s, 0);
 
-  const showSidebar = figures.length > 0 && (state.phase === 'answering' || state.phase === 'complete');
+  const showSidebar = (figures.length > 0 || tables.length > 0) && (state.phase === 'answering' || state.phase === 'complete');
 
   return (
     <>
@@ -437,6 +467,9 @@ export default function QuestionView({
         {question.parts.map((part, i) => {
           const diagramOffset = question.parts.slice(0, i).reduce(
             (sum, p) => sum + (p.diagrams ? p.diagrams.length : 0), 0
+          );
+          const tableOffset = question.parts.slice(0, i).reduce(
+            (sum, p) => sum + (p.tables ? p.tables.length : 0), 0
           );
           return (
             <QuestionPart
@@ -451,7 +484,9 @@ export default function QuestionView({
               phase={state.phase}
               partScore={state.partScores[i]}
               diagramOffset={diagramOffset}
+              tableOffset={tableOffset}
               onFigureClick={figures.length > 0 ? handleFigureClick : undefined}
+              onTableClick={tables.length > 0 ? handleTableClick : undefined}
             />
           );
         })}
@@ -475,8 +510,11 @@ export default function QuestionView({
       {showSidebar && (
         <FigureSidebar
           figures={figures}
+          tables={tables}
           onFigureClick={handleFigureClick}
+          onTableClick={handleTableClick}
           activeFigure={viewerIndex}
+          activeTable={tableViewerIndex}
         />
       )}
 
@@ -487,6 +525,16 @@ export default function QuestionView({
           onClose={handleViewerClose}
           onPrev={viewerIndex > 0 ? handleViewerPrev : null}
           onNext={viewerIndex < figures.length - 1 ? handleViewerNext : null}
+        />
+      )}
+
+      {tableViewerIndex !== null && tables[tableViewerIndex] && (
+        <FigureViewer
+          tableData={tables[tableViewerIndex].data}
+          label={tables[tableViewerIndex].label}
+          onClose={handleViewerClose}
+          onPrev={tableViewerIndex > 0 ? handleTableViewerPrev : null}
+          onNext={tableViewerIndex < tables.length - 1 ? handleTableViewerNext : null}
         />
       )}
 

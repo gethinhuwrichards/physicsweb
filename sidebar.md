@@ -94,17 +94,28 @@ Below 900px, the sidebar becomes a fixed bottom bar with a "Figures (N)" toggle.
 
 The sidebar only shows during `answering` and `complete` phases. During `marking`, the self-marking overlay takes over the full screen (z-index 950), so the sidebar would be invisible anyway. During `score`, the score page overlay covers everything. The viewer auto-closes when the phase changes.
 
-### Table asset type deferred
+### Table support in the sidebar
 
-The spec mentions table support, but currently no questions use table assets in the `diagrams` array — tables are rendered as interactive HTML components (table-fill, tick-box-table). Table thumbnail support can be added later when the data format requires it.
+Tables use a structured `tables` field on each part (`{ caption, headers, rows }`) rather than inline HTML. This enables:
+- **Sidebar access**: Tables appear as labelled buttons ("Table 1", "Table 2") below the figure thumbnails
+- **Viewer support**: Clicking a table button opens the same lightbox overlay, but renders a styled HTML table instead of an image
+- **Separate numbering**: Tables get their own counter (Table 1, Table 2...) independent of figure numbering (Fig. 1, Fig. 2...), matching exam paper convention
+- **Cumulative numbering**: Like figures, table numbers are cumulative across all parts of a question
+
+**Why structured data over inline HTML?** Structured `{ headers, rows }` is easier to render consistently, supports LaTeX in cells via `renderLatex()`, and keeps the data parseable for the sidebar. Inline HTML tables in the `text` field are still supported for small, tightly-integrated tables that don't need sidebar access.
+
+**Why separate viewer state?** Figure and table viewers use independent `viewerIndex` / `tableViewerIndex` state. Opening a table closes any open figure and vice versa. This keeps navigation simple — arrow keys cycle within the same asset type.
 
 ### Files changed
 
 | File | Change |
 |------|--------|
-| `src/components/FigureViewer.jsx` | New — lightbox overlay with close/nav/keyboard support |
-| `src/components/FigureSidebar.jsx` | New — sticky sidebar (desktop) / bottom drawer (mobile) |
-| `src/components/QuestionPart.jsx` | Added `onFigureClick` prop, click handler on inline diagrams |
-| `src/QuestionView.jsx` | Figure collection, viewer state, renders sidebar + viewer |
-| `src/App.jsx` | Added `has-figure-sidebar` class to `#question-container` |
-| `css/style.css` | ~170 lines: layout grid, sidebar, viewer, clickable diagrams, mobile drawer, responsive rules |
+| `src/components/FigureViewer.jsx` | Lightbox overlay — now supports `tableData` prop to render tables as HTML instead of images |
+| `src/components/FigureSidebar.jsx` | Sticky sidebar — now accepts `tables` prop, renders table buttons below figure thumbnails |
+| `src/components/QuestionPart.jsx` | Renders inline tables from `part.tables`, accepts `tableOffset` + `onTableClick` props |
+| `src/QuestionView.jsx` | Collects figures + tables, manages both viewer states, passes all props to children |
+| `src/App.jsx` | `has-figure-sidebar` class now also triggers when tables are present |
+| `css/style.css` | Inline table styles, table sidebar buttons, viewer table rendering, mobile responsive rules |
+| `public/data/QUESTION_FORMAT.md` | Documented `tables` field schema, numbering rules, and usage guidance |
+| `instructions_md/llm_parsing.md` | Added table extraction section for docx conversion |
+| `instructions_md/CLAUDE.md` | Added Tables subsection describing the data format |

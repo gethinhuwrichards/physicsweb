@@ -629,13 +629,26 @@
         {
           "partLabel": "d",
           "type": "extended-written",
-          "text": "The submarine moves through the sea and every few seconds sends a pulse of ultrasound to check the distance to the sea floor. The table shows the time taken for five ultrasound pulses to travel from the submarine to the sea floor.<table><tr><th>Pulse number</th><th>Time for pulse (s)</th></tr><tr><td>1</td><td>0.50</td></tr><tr><td>2</td><td>0.45</td></tr><tr><td>3</td><td>0.38</td></tr><tr><td>4</td><td>0.40</td></tr><tr><td>5</td><td>0.48</td></tr></table>Describe how the distance from the submarine to the sea floor changed over these five pulses.",
+          "text": "The submarine moves through the sea and every few seconds sends a pulse of ultrasound to check the distance to the sea floor. Table 1 shows the time taken for five ultrasound pulses to travel from the submarine to the sea floor. Describe how the distance from the submarine to the sea floor changed over these five pulses.",
           "marks": 2,
           "markScheme": [
             "1 mark: From pulse 1 to pulse 3, the distance to the sea floor **decreased** (the sea got shallower / submarine went deeper).",
             "1 mark: From pulse 3 to pulse 5, the distance to the sea floor **increased** (the sea got deeper / submarine rose)."
           ],
-          "diagrams": []
+          "diagrams": [],
+          "tables": [
+            {
+              "caption": "Time taken for ultrasound pulses to reach the sea floor",
+              "headers": ["Pulse number", "Time for pulse (s)"],
+              "rows": [
+                ["1", "0.50"],
+                ["2", "0.45"],
+                ["3", "0.38"],
+                ["4", "0.40"],
+                ["5", "0.48"]
+              ]
+            }
+          ]
         }
       ]
     },

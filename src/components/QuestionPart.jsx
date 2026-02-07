@@ -22,7 +22,9 @@ export default function QuestionPart({
   phase,
   partScore,
   diagramOffset = 0,
+  tableOffset = 0,
   onFigureClick,
+  onTableClick,
 }) {
   const renderedText = useMemo(() => renderLatex(part.text), [part.text]);
 
@@ -160,6 +162,40 @@ export default function QuestionPart({
                   <figcaption className="part-diagram-caption">Fig. {diagramOffset + i + 1}</figcaption>
                 </figure>
               ))}
+            </div>
+          )}
+          {part.tables && part.tables.length > 0 && (
+            <div className="part-tables-grid">
+              {part.tables.map((tbl, i) => {
+                const tableNum = tableOffset + i + 1;
+                return (
+                  <div
+                    key={i}
+                    className={`part-table-block${onTableClick ? ' part-table-clickable' : ''}`}
+                    onClick={onTableClick ? () => onTableClick(tableOffset + i) : undefined}
+                  >
+                    <div className="part-table-label">Table {tableNum}{tbl.caption ? `: ${tbl.caption}` : ''}</div>
+                    <table className="part-inline-table">
+                      <thead>
+                        <tr>
+                          {tbl.headers.map((h, hi) => (
+                            <th key={hi} dangerouslySetInnerHTML={{ __html: renderLatex(h) }} />
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {tbl.rows.map((row, ri) => (
+                          <tr key={ri}>
+                            {row.map((cell, ci) => (
+                              <td key={ci} dangerouslySetInnerHTML={{ __html: renderLatex(cell) }} />
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                );
+              })}
             </div>
           )}
           {renderInput()}

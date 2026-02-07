@@ -540,7 +540,7 @@
         {
           "partLabel": "c",
           "type": "calculation",
-          "text": "The table below shows the total dose of X-rays received by the human body when different parts are X-rayed.<table><tr><th>Part of body X-rayed</th><th>Dose (arbitrary units)</th></tr><tr><td>Head</td><td>3</td></tr><tr><td>Chest</td><td>4</td></tr><tr><td>Pelvis</td><td>60</td></tr></table>Calculate the number of head X-rays that are equal in dose to one pelvis X-ray.",
+          "text": "Table 1 shows the total dose of X-rays received by the human body when different parts are X-rayed. Calculate the number of head X-rays that are equal in dose to one pelvis X-ray.",
           "marks": 2,
           "correctAnswer": 20,
           "tolerance": 0.01,
@@ -554,7 +554,18 @@
             "1 mark: Correct working: $60 \\div 3$",
             "1 mark: Final answer: **20**"
           ],
-          "diagrams": []
+          "diagrams": [],
+          "tables": [
+            {
+              "caption": "X-ray doses for different parts of the body",
+              "headers": ["Part of body X-rayed", "Dose (arbitrary units)"],
+              "rows": [
+                ["Head", "3"],
+                ["Chest", "4"],
+                ["Pelvis", "60"]
+              ]
+            }
+          ]
         },
         {
           "partLabel": "d",
@@ -856,7 +867,7 @@
         {
           "partLabel": "a",
           "type": "single-choice",
-          "text": "Figure 1 shows the position of three types of wave in the electromagnetic spectrum.<table><tr><th>A</th><th>Microwaves</th><th>B</th><th>Visible light</th><th>C</th><th>D</th><th>Gamma rays</th></tr></table>Which letter represents infrared in the electromagnetic spectrum?",
+          "text": "Table 1 shows the position of three types of wave in the electromagnetic spectrum. Which letter represents infrared in the electromagnetic spectrum?",
           "marks": 1,
           "options": [
             "A",
@@ -868,7 +879,14 @@
           "markScheme": [
             "Answer: B"
           ],
-          "diagrams": []
+          "diagrams": [],
+          "tables": [
+            {
+              "caption": "Positions in the electromagnetic spectrum",
+              "headers": ["A", "Microwaves", "B", "Visible light", "C", "D", "Gamma rays"],
+              "rows": []
+            }
+          ]
         },
         {
           "partLabel": "b",
@@ -954,7 +972,7 @@
         {
           "partLabel": "f",
           "type": "single-choice",
-          "text": "The table below shows the results from the investigation.<table><tr><th>Type of surface</th><th>Temperature in °C</th></tr><tr><td>Matt black</td><td>68.0</td></tr><tr><td>Matt white</td><td>65.5</td></tr><tr><td>Shiny black</td><td>66.3</td></tr><tr><td>Shiny silver</td><td>28.0</td></tr></table>What is the resolution of the infrared detector?",
+          "text": "Table 2 shows the results from the investigation. What is the resolution of the infrared detector?",
           "marks": 1,
           "options": [
             "0.1 °C",
@@ -966,12 +984,24 @@
           "markScheme": [
             "Answer: A – **0.1 °C**"
           ],
-          "diagrams": []
+          "diagrams": [],
+          "tables": [
+            {
+              "caption": "Infrared radiation results for different surfaces",
+              "headers": ["Type of surface", "Temperature in °C"],
+              "rows": [
+                ["Matt black", "68.0"],
+                ["Matt white", "65.5"],
+                ["Shiny black", "66.3"],
+                ["Shiny silver", "28.0"]
+              ]
+            }
+          ]
         },
         {
           "partLabel": "g",
           "type": "extended-written",
-          "text": "Give one conclusion that can be made from the results in the table above.",
+          "text": "Give one conclusion that can be made from the results in Table 2.",
           "marks": 1,
           "markScheme": [
             "1 mark: (Matt) **black** is the best **emitter** (accept: shiny silver is the worst emitter; accept an answer in terms of highest/lowest temperature)"
@@ -1070,8 +1100,15 @@
         {
           "partLabel": "a",
           "type": "gap-fill",
-          "text": "The diagram shows the electromagnetic spectrum with an arrow pointing from radio waves towards gamma rays.<table><tr><td>Radio waves</td><td>Microwaves</td><td>Infrared</td><td>Visible light</td><td>Ultraviolet</td><td>X-rays</td><td>Gamma rays</td></tr></table>Use the correct answers from the box to complete the sentence.",
+          "text": "Table 1 shows the electromagnetic spectrum with an arrow pointing from radio waves towards gamma rays. Use the correct answers from the box to complete the sentence.",
           "marks": 2,
+          "tables": [
+            {
+              "caption": "The electromagnetic spectrum",
+              "headers": ["Radio waves", "Microwaves", "Infrared", "Visible light", "Ultraviolet", "X-rays", "Gamma rays"],
+              "rows": []
+            }
+          ],
           "segments": [
             "The arrow in the diagram is in the direction of increasing ",
             {

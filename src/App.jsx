@@ -311,7 +311,7 @@ export default function App() {
         )}
 
         {view === 'question' && currentQuestion && (
-          <div id="question-container" className={currentQuestion.parts?.some(p => p.diagrams?.length > 0) ? 'has-figure-sidebar' : ''}>
+          <div id="question-container" className={currentQuestion.parts?.some(p => p.diagrams?.length > 0 || p.tables?.length > 0) ? 'has-figure-sidebar' : ''}>
               <QuestionView
                 key={questionKey}
                 question={currentQuestion}

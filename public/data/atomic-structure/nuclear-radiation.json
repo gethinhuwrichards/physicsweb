@@ -307,7 +307,7 @@
         {
           "partLabel": "b",
           "type": "single-choice",
-          "text": "The table shows the half-lives of some carbon isotopes.<table><tr><th>Isotope</th><th>Half-life (seconds)</th></tr><tr><td>Carbon-15</td><td>2.45</td></tr><tr><td>Carbon-16</td><td>0.75</td></tr><tr><td>Carbon-17</td><td>0.19</td></tr><tr><td>Carbon-18</td><td>0.09</td></tr></table>Which isotope is the least stable?",
+          "text": "Table 1 shows the half-lives of some carbon isotopes. Which isotope is the least stable?",
           "marks": 1,
           "options": [
             "Carbon-15",
@@ -319,7 +319,19 @@
           "markScheme": [
             "Answer: D - Carbon-18 has the shortest half-life (0.09 s) so it is the least stable"
           ],
-          "diagrams": []
+          "diagrams": [],
+          "tables": [
+            {
+              "caption": "Half-lives of carbon isotopes",
+              "headers": ["Isotope", "Half-life (seconds)"],
+              "rows": [
+                ["Carbon-15", "2.45"],
+                ["Carbon-16", "0.75"],
+                ["Carbon-17", "0.19"],
+                ["Carbon-18", "0.09"]
+              ]
+            }
+          ]
         }
       ]
     },
@@ -337,7 +349,7 @@
         {
           "partLabel": "a",
           "type": "single-choice",
-          "text": "A teacher measured the count rate from four radioactive rocks with different materials placed between the source and the detector. The results are shown in the table.<table><tr><th></th><th>No material</th><th>Paper</th><th>Aluminium</th></tr><tr><td>No rock</td><td>21</td><td>20</td><td>22</td></tr><tr><td>Rock A</td><td>450</td><td>448</td><td>18</td></tr><tr><td>Rock B</td><td>385</td><td>387</td><td>356</td></tr><tr><td>Rock C</td><td>870</td><td>21</td><td>20</td></tr><tr><td>Rock D</td><td>620</td><td>473</td><td>214</td></tr></table>Which rock emitted only alpha radiation?",
+          "text": "A teacher measured the count rate from four radioactive rocks with different materials placed between the source and the detector. The results are shown in Table 1. Which rock emitted only alpha radiation?",
           "marks": 1,
           "options": [
             "Rock A",
@@ -349,7 +361,20 @@
           "markScheme": [
             "Answer: C - Rock C's count dropped to background level after paper was placed, indicating only alpha radiation"
           ],
-          "diagrams": []
+          "diagrams": [],
+          "tables": [
+            {
+              "caption": "Count rates from radioactive rocks with different absorbers",
+              "headers": ["", "No material", "Paper", "Aluminium"],
+              "rows": [
+                ["No rock", "21", "20", "22"],
+                ["Rock A", "450", "448", "18"],
+                ["Rock B", "385", "387", "356"],
+                ["Rock C", "870", "21", "20"],
+                ["Rock D", "620", "473", "214"]
+              ]
+            }
+          ]
         },
         {
           "partLabel": "b",
@@ -510,13 +535,24 @@
         {
           "partLabel": "a",
           "type": "extended-written",
-          "text": "Exposure to radon gas can cause lung cancer. A study compared the risk of getting lung cancer for smokers and non-smokers at different levels of radon exposure.<table><tr><th>Exposure to radon</th><th>Risk of lung cancer (non-smoker)</th><th>Risk of lung cancer (smoker)</th></tr><tr><td>No exposure</td><td>0.4%</td><td>10%</td></tr><tr><td>Moderate exposure</td><td>1.0%</td><td>14%</td></tr><tr><td>Very high exposure</td><td>1.5%</td><td>32%</td></tr></table>Using information from the table, what conclusions can be made about exposure to radon gas and the risk of getting lung cancer?",
+          "text": "Exposure to radon gas can cause lung cancer. A study compared the risk of getting lung cancer for smokers and non-smokers at different levels of radon exposure. Table 1 shows the results. Using information from Table 1, what conclusions can be made about exposure to radon gas and the risk of getting lung cancer?",
           "marks": 2,
           "markScheme": [
             "1 mark: **Increased** levels of exposure increases the risk of developing cancer",
             "1 mark: **Smoking** increases the harmful effect of radon"
           ],
-          "diagrams": []
+          "diagrams": [],
+          "tables": [
+            {
+              "caption": "Risk of lung cancer at different radon exposure levels",
+              "headers": ["Exposure to radon", "Risk of lung cancer (non-smoker)", "Risk of lung cancer (smoker)"],
+              "rows": [
+                ["No exposure", "0.4%", "10%"],
+                ["Moderate exposure", "1.0%", "14%"],
+                ["Very high exposure", "1.5%", "32%"]
+              ]
+            }
+          ]
         },
         {
           "partLabel": "b",
