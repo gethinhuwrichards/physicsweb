@@ -388,20 +388,26 @@ export default function QuestionView({
       >
         <QuestionHeader title={question.title} totalMarks={totalMarks} />
 
-        {question.parts.map((part, i) => (
-          <QuestionPart
-            key={i}
-            part={part}
-            partIndex={i}
-            answer={state.answers[i]}
-            onAnswer={handleAnswer}
-            disabled={state.phase !== 'answering'}
-            markingClass={state.phase !== 'answering' ? 'marking-done' : ''}
-            autoMarkResult={state.autoMarkResults[i] || null}
-            phase={state.phase}
-            partScore={state.partScores[i]}
-          />
-        ))}
+        {question.parts.map((part, i) => {
+          const diagramOffset = question.parts.slice(0, i).reduce(
+            (sum, p) => sum + (p.diagrams ? p.diagrams.length : 0), 0
+          );
+          return (
+            <QuestionPart
+              key={i}
+              part={part}
+              partIndex={i}
+              answer={state.answers[i]}
+              onAnswer={handleAnswer}
+              disabled={state.phase !== 'answering'}
+              markingClass={state.phase !== 'answering' ? 'marking-done' : ''}
+              autoMarkResult={state.autoMarkResults[i] || null}
+              phase={state.phase}
+              partScore={state.partScores[i]}
+              diagramOffset={diagramOffset}
+            />
+          );
+        })}
 
         {state.phase === 'answering' && (
           <button className="submit-btn" onClick={handleEnterMarking}>

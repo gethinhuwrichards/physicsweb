@@ -21,6 +21,7 @@ export default function QuestionPart({
   autoMarkResult,
   phase,
   partScore,
+  diagramOffset = 0,
 }) {
   const renderedText = useMemo(() => renderLatex(part.text), [part.text]);
 
@@ -149,8 +150,8 @@ export default function QuestionPart({
             <div className="part-diagrams-grid">
               {part.diagrams.map((file, i) => (
                 <figure key={i} className="part-diagram-figure">
-                  <img src={`images/${file}`} alt={`Fig. ${i + 1}`} className="part-diagram" />
-                  <figcaption className="part-diagram-caption">Fig. {i + 1}</figcaption>
+                  <img src={`images/${file}`} alt={`Fig. ${diagramOffset + i + 1}`} className="part-diagram" />
+                  <figcaption className="part-diagram-caption">Fig. {diagramOffset + i + 1}</figcaption>
                 </figure>
               ))}
             </div>

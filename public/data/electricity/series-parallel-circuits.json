@@ -316,7 +316,7 @@
         {
           "partLabel": "d",
           "type": "calculation",
-          "text": "Figure 3 shows another circuit built by the student. There is a potential difference of 3.6 V across the lamp in Figure 3. The current through the lamp is 0.80 A. Calculate the resistance of the lamp.",
+          "text": "Figure 2 shows another circuit built by the student. There is a potential difference of 3.6 V across the lamp in Figure 2. The current through the lamp is 0.80 A. Calculate the resistance of the lamp.",
           "marks": 3,
           "equations": [
             "$V = I \\times R$",

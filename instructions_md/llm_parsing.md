@@ -198,6 +198,14 @@ When an image is placed in a part's `diagrams` array, the question text **must**
 
 **Do NOT** describe the image contents in text as a substitute for including the image. If the docx says "Figure 1 shows...", keep that phrasing and include the actual image file.
 
+**Figure numbering is cumulative across the whole question, not per-part.** The website labels figures sequentially across all parts: if part (a) has 2 diagrams (Fig. 1, Fig. 2), then part (d)'s first diagram will be labelled Fig. 3, not Fig. 1. When writing figure references in the question text, use the cumulative number. For example:
+
+- Part (a) has 2 images → text says "Figure 1 shows..." and "Figure 2 shows..."
+- Parts (b) and (c) have no images
+- Part (d) has 1 image → text must say "Figure **3** shows...", not "Figure 1 shows..."
+
+To calculate the correct figure number for a part's Nth diagram: count the total number of diagrams in all preceding parts, then add N.
+
 ### Step 5: Handle images for dropped parts
 
 Some question parts are dropped because they require drawing (see "Question Patterns That Cannot Be Digitised" below). Their images become orphaned. Check whether:
