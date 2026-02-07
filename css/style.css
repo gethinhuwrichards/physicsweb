@@ -1082,12 +1082,19 @@ header h1 {
 #question-container.has-figure-sidebar {
     display: grid;
     grid-template-columns: 1fr 180px;
-    gap: 0;
+    gap: clamp(0.75rem, 2vw, 1rem);
     padding: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
 }
 
 #question-container.has-figure-sidebar #question-content-inner {
     padding: clamp(1.25rem, 4vw, 2.25rem);
+    background: var(--bg-surface);
+    border: 1.5px solid var(--edge);
+    border-radius: var(--press-radius);
+    box-shadow: var(--press-shadow);
 }
 
 body:has(.has-figure-sidebar) {
@@ -1104,10 +1111,40 @@ body:has(.has-figure-sidebar) {
     border-radius: var(--press-radius);
     box-shadow: var(--press-shadow-sm);
     max-height: calc(100vh - 2rem);
-    overflow-y: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.figure-sidebar-thumbs {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    overflow-y: auto;
+    min-height: 0;
+    padding-right: 6px;
+}
+
+.figure-sidebar-thumbs::-webkit-scrollbar {
+    width: 4px;
+}
+
+.figure-sidebar-thumbs::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.figure-sidebar-thumbs::-webkit-scrollbar-thumb {
+    background: var(--text-tertiary);
+    border-radius: 4px;
+}
+
+.figure-sidebar-thumbs::-webkit-scrollbar-thumb:hover {
+    background: var(--text-secondary);
+}
+
+.figure-sidebar-thumbs {
+    scrollbar-width: thin;
+    scrollbar-color: var(--text-tertiary) transparent;
 }
 
 .figure-sidebar-title {

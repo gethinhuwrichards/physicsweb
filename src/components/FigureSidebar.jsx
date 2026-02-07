@@ -66,7 +66,7 @@ export default function FigureSidebar({
 
         {tables.length > 0 && (
           <>
-            <div className="figure-sidebar-title sidebar-title-tables">Tables</div>
+            <div className={`figure-sidebar-title${figures.length > 0 ? ' sidebar-title-tables' : ''}`}>Tables</div>
             {tables.map((tbl) => (
               <button
                 key={tbl.index}
