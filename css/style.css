@@ -188,6 +188,11 @@ html:has(.score-page-overlay) {
     overflow: hidden;
 }
 
+html:has(.self-marking-overlay) .theme-toggle,
+html:has(.score-page-overlay) .theme-toggle {
+    display: none;
+}
+
 html:has(.figure-viewer-overlay) {
     overflow: hidden;
 }
@@ -1851,18 +1856,29 @@ body:has(.has-figure-sidebar) {
 }
 
 .self-marking-title {
-    font-size: 1.15rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
     font-weight: 800;
-    color: var(--accent-blue);
     letter-spacing: -0.02em;
 }
 
-.auto-marked-header .self-marking-title {
+.self-marking-title-text {
+    color: var(--accent-blue);
+}
+
+.auto-marked-header .self-marking-title-text {
     color: var(--color-correct);
 }
 
 .self-mark-badge {
-    display: inline-block;
+    position: absolute;
+    left: calc(100% + 8px);
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: nowrap;
     padding: 3px 10px;
     border-radius: 999px;
     font-size: 0.72rem;
@@ -1872,16 +1888,10 @@ body:has(.has-figure-sidebar) {
     margin-left: 10px;
 }
 
-.self-mark-badge.badge-self {
+.self-mark-badge.badge-action {
     background: var(--color-partial-bg);
     color: var(--color-partial-text);
     border: 1px solid var(--color-partial-border);
-}
-
-.self-mark-badge.badge-auto {
-    background: var(--color-correct-bg);
-    color: var(--color-correct-text);
-    border: 1px solid var(--color-correct-border);
 }
 
 .self-marking-counter {
@@ -1911,8 +1921,16 @@ body:has(.has-figure-sidebar) {
 
 .self-marking-left,
 .self-marking-right {
-    padding: clamp(1rem, 3vw, 1.75rem);
+    display: flex;
+    flex-direction: column;
+    padding: 0 clamp(1rem, 3vw, 1.75rem);
+    overflow: hidden;
+}
+
+.self-marking-panel-scroll {
+    flex: 1;
     overflow-y: auto;
+    padding-bottom: clamp(1rem, 3vw, 1.75rem);
 }
 
 .self-marking-left {
@@ -1924,44 +1942,36 @@ body:has(.has-figure-sidebar) {
     background: var(--bg-surface-alt);
 }
 
-.self-marking-right::-webkit-scrollbar {
-    width: 10px;
+.self-marking-panel-scroll::-webkit-scrollbar {
+    width: 6px;
 }
 
-.self-marking-right::-webkit-scrollbar-track {
-    background: #e2e8f0;
-    border-radius: 10px;
-    margin: 4px;
+.self-marking-panel-scroll::-webkit-scrollbar-track {
+    background: transparent;
 }
 
-.self-marking-right::-webkit-scrollbar-thumb {
-    background: #4a5568;
-    border-radius: 10px;
+.self-marking-panel-scroll::-webkit-scrollbar-thumb {
+    background: var(--text-tertiary);
+    border-radius: 6px;
 }
 
-.self-marking-right::-webkit-scrollbar-thumb:hover {
-    background: #2d3748;
+.self-marking-panel-scroll::-webkit-scrollbar-thumb:hover {
+    background: var(--text-secondary);
 }
 
-[data-theme="dark"] .self-marking-right::-webkit-scrollbar-track {
-    background: #2d3748;
-}
-
-[data-theme="dark"] .self-marking-right::-webkit-scrollbar-thumb {
-    background: #718096;
-}
-
-[data-theme="dark"] .self-marking-right::-webkit-scrollbar-thumb:hover {
-    background: #a0aec0;
+.self-marking-panel-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: var(--text-tertiary) transparent;
 }
 
 .self-marking-panel-heading {
+    flex-shrink: 0;
     font-size: 1.1rem;
     font-weight: 800;
     color: var(--text-primary);
     letter-spacing: -0.02em;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
+    padding: 10px 0 8px;
+    margin-bottom: 0;
     border-bottom: 2px solid var(--accent-blue);
 }
 
@@ -2743,26 +2753,26 @@ body:has(.has-figure-sidebar) {
 
 .gf-word-bank {
     border: 2px solid var(--accent-blue-muted);
-    padding: 16px 20px;
+    padding: 12px 16px;
     border-radius: var(--press-radius-sm);
     margin-bottom: 16px;
     background: var(--accent-blue-muted);
     font-size: 1.05rem;
-    line-height: 1.8;
     color: var(--text-primary);
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
 }
 
 .gf-word-bank strong {
-    margin-right: 20px;
     color: var(--accent-blue);
     background: var(--bg-surface);
-    padding: 3px 10px;
+    padding: 5px 16px;
     border-radius: 999px;
     border: 1px solid var(--border-default);
-    display: inline-block;
-    margin-bottom: 4px;
     font-weight: 700;
+    text-align: center;
 }
 
 .gf-sentence {

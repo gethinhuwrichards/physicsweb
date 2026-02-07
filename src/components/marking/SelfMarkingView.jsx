@@ -76,6 +76,19 @@ export default function SelfMarkingView({
     ? (delayedPulse && !isLast)
     : (currentAllDecided && !isLast);
 
+  // Keyboard navigation: left/right arrow keys
+  useEffect(() => {
+    const handleKey = (e) => {
+      if (e.key === 'ArrowLeft' && !isFirst) {
+        onNavigate('back');
+      } else if (e.key === 'ArrowRight' && !isLast && currentAllDecided) {
+        onNavigate('next');
+      }
+    };
+    window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
+  }, [isFirst, isLast, currentAllDecided, onNavigate]);
+
   // Submit button pulse when it becomes available
   const canSubmit = allPartsFullyDecided && hasVisitedLast;
 
@@ -534,53 +547,51 @@ export default function SelfMarkingView({
     <div className="self-marking-overlay">
       <div className={`self-marking-header${isAutoMarked ? ' auto-marked-header' : ''}`}>
         <div className="self-marking-header-left">
-          <span className="self-marking-title">
-            <span className="self-marking-title-text">{isAutoMarked ? 'Review' : 'Self Marking'}</span>
-            <span className={`self-mark-badge ${isAutoMarked ? 'badge-auto' : 'badge-self'}`}>
-              {isAutoMarked ? 'Auto Marked' : 'Mark Required'}
-            </span>
-          </span>
-        </div>
-        <div className="self-marking-header-center">
-          <button className="bug-report-btn self-marking-report-btn" onClick={handleReportBug}>
-            Report Bug
-          </button>
-        </div>
-        <div className="self-marking-header-right">
           <span className="self-marking-counter">
             Part ({part.partLabel}) &mdash; {currentSelfMarkIdx + 1} of {reviewParts.length}
           </span>
+        </div>
+        <div className="self-marking-header-center">
+          <span className="self-marking-title">
+            <span className="self-marking-title-text">{isAutoMarked ? 'Auto Marked' : 'Self Marked'}</span>
+            {!isAutoMarked && (
+              <span className="self-mark-badge badge-action">Action Required</span>
+            )}
+          </span>
+        </div>
+        <div className="self-marking-header-right">
+          <button className="bug-report-btn self-marking-report-btn" onClick={handleReportBug}>
+            Report Bug
+          </button>
         </div>
       </div>
 
       <div className="self-marking-panels">
         <div className="self-marking-left">
-          <h3 className="self-marking-panel-heading">
-            {isAutoMarked ? 'Your Answer' : "Your Answer"}
-          </h3>
-          <div
-            className="self-marking-question-text"
-            dangerouslySetInnerHTML={{ __html: renderedQuestion }}
-          />
-          {isAutoMarked ? renderAutoMarkedAnswer() : renderSelfMarkedAnswer()}
+          <h3 className="self-marking-panel-heading">Your Answer</h3>
+          <div className="self-marking-panel-scroll">
+            <div
+              className="self-marking-question-text"
+              dangerouslySetInnerHTML={{ __html: renderedQuestion }}
+            />
+            {isAutoMarked ? renderAutoMarkedAnswer() : renderSelfMarkedAnswer()}
+          </div>
         </div>
 
         <div className="self-marking-right">
           <h3 className="self-marking-panel-heading">Mark Scheme</h3>
-          {!isAutoMarked && (
-            <div className={`self-mark-hint-banner${isLevelsType ? ' levels-hint' : ''}`}>
-              {isLevelsType
-                ? <>Award up to <strong>{part.marks} marks</strong> from the indicative content below. You do not need to decide every point.</>
-                : 'Compare your answer with the marking points below. Award or deny each point using the buttons.'
-              }
-            </div>
-          )}
-          {capReached && (
-            <div className="levels-cap-banner">
-              Maximum marks reached ({part.marks}/{part.marks})
-            </div>
-          )}
-          <div className="self-marking-points" ref={pointsContainerRef}>
+          <div className="self-marking-panel-scroll">
+            {!isAutoMarked && isLevelsType && (
+              <div className="self-mark-hint-banner levels-hint">
+                Award up to <strong>{part.marks} marks</strong> from the indicative content below. You do not need to decide every point.
+              </div>
+            )}
+            {capReached && (
+              <div className="levels-cap-banner">
+                Maximum marks reached ({part.marks}/{part.marks})
+              </div>
+            )}
+            <div className="self-marking-points" ref={pointsContainerRef}>
             {points.map((point, i) => {
               if (!isAutoMarked && !isLevelsType && i >= maxRevealed) return null;
 
@@ -603,6 +614,7 @@ export default function SelfMarkingView({
                 />
               );
             })}
+          </div>
           </div>
         </div>
       </div>

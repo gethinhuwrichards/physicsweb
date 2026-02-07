@@ -73,7 +73,6 @@ export default function MarkingPointRow({ point, decision, onDecide, locked, awa
           </div>
         </div>
       </div>
-      {isLocked && decision === false && <div className="marking-point-locked-note">Marking point not earned</div>}
     </div>
   );
 }

@@ -32,7 +32,7 @@ export default function GapFillInput({ part, value, onChange, disabled, autoMark
       <div className="part-text" dangerouslySetInnerHTML={{ __html: renderedText }} />
       <div className="gf-word-bank">
         {part.wordBank.map((word, i) => (
-          <strong key={i}>{word}&nbsp;&nbsp;&nbsp;</strong>
+          <strong key={i}>{word}</strong>
         ))}
       </div>
       <p className="gf-sentence">
