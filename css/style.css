@@ -1098,15 +1098,16 @@ body:has(.has-figure-sidebar) {
     position: sticky;
     top: 1rem;
     align-self: start;
-    padding: 12px;
-    border-left: 1px solid var(--border-subtle);
-    background: var(--bg-surface-alt);
-    border-radius: 0 var(--press-radius) var(--press-radius) 0;
+    padding: 14px;
+    background: var(--bg-surface);
+    border: 1.5px solid var(--edge);
+    border-radius: var(--press-radius);
+    box-shadow: var(--press-shadow-sm);
     max-height: calc(100vh - 2rem);
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
 }
 
 .figure-sidebar-title {
