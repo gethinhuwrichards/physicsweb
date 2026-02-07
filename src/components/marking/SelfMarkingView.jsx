@@ -113,6 +113,7 @@ export default function SelfMarkingView({
   // Progressive reveal: show marking points one at a time for self-marked parts
   const [maxRevealed, setMaxRevealed] = useState(1);
   const prevPartRef = useRef(currentSelfMarkIdx);
+  const pointsContainerRef = useRef(null);
 
   useEffect(() => {
     if (isAutoMarked || isLevelsType) { setMaxRevealed(points.length); return; }
@@ -131,6 +132,21 @@ export default function SelfMarkingView({
       setMaxRevealed(prev => Math.max(prev, reveal));
     }
   }, [currentSelfMarkIdx, decisions, isAutoMarked, isLevelsType, points.length]);
+
+  // Auto-scroll to newly revealed marking point
+  useEffect(() => {
+    if (maxRevealed <= 1 || isAutoMarked || isLevelsType) return;
+    const container = pointsContainerRef.current;
+    if (!container) return;
+    // Small delay to let the new point render
+    requestAnimationFrame(() => {
+      const rows = container.querySelectorAll('.marking-point-row');
+      const target = rows[maxRevealed - 1];
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    });
+  }, [maxRevealed, isAutoMarked, isLevelsType]);
 
 
   function renderReviewOptionContent(opt) {
@@ -564,7 +580,7 @@ export default function SelfMarkingView({
               Maximum marks reached ({part.marks}/{part.marks})
             </div>
           )}
-          <div className="self-marking-points">
+          <div className="self-marking-points" ref={pointsContainerRef}>
             {points.map((point, i) => {
               if (!isAutoMarked && !isLevelsType && i >= maxRevealed) return null;
 

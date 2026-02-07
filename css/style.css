@@ -231,16 +231,18 @@ header {
     z-index: 50;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    background: rgba(238, 240, 245, 0.85);
+    background: rgba(238, 240, 245, 0.92);
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     margin-bottom: clamp(1.5rem, 4vw, 2.25rem);
-    padding: clamp(0.75rem, 2vw, 1rem) 0;
+    margin-left: calc(-1 * clamp(1rem, 4vw, 1.5rem));
+    margin-right: calc(-1 * clamp(1rem, 4vw, 1.5rem));
+    padding: clamp(0.75rem, 2vw, 1rem) clamp(1rem, 4vw, 1.5rem);
     text-align: center;
     min-height: 60px;
 }
 
 [data-theme="dark"] header {
-    background: rgba(12, 14, 22, 0.85);
+    background: rgba(12, 14, 22, 0.92);
     border-bottom-color: rgba(255, 255, 255, 0.06);
 }
 
@@ -2030,20 +2032,55 @@ body:has(.has-figure-sidebar) {
     align-items: center;
     padding: clamp(0.625rem, 2vw, 1rem) clamp(1rem, 3vw, 1.75rem);
     background: var(--bg-surface);
-    border-top: 1px solid var(--border-default);
+    border-top: 1.5px solid var(--edge);
     flex-shrink: 0;
-    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .self-marking-submit-group {
     display: inline-flex;
     align-items: stretch;
+    transition: transform 120ms, box-shadow 120ms;
+}
+
+/* Whole group lifts on hover when submit is available */
+.self-marking-submit-group:has(.self-marking-submit:not(:disabled)):hover {
+    transform: translateY(-2px);
+}
+
+.self-marking-submit-group:has(.self-marking-submit:not(:disabled)):active {
+    transform: translate(2px, 2px);
+}
+
+.self-marking-submit-group:has(.self-marking-submit:not(:disabled)):hover .self-marking-submit {
+    background: var(--accent-blue-hover);
+}
+
+.self-marking-submit-group:has(.self-marking-submit:not(:disabled)):active .self-marking-submit {
+    box-shadow: var(--press-shadow-active);
+}
+
+.self-marking-submit-group:has(.self-marking-submit:not(:disabled)):active .self-marking-score {
+    box-shadow: var(--press-shadow-active);
+}
+
+/* When disabled: flat thin look, no shadows */
+.self-marking-submit-group:has(.self-marking-submit:disabled) {
+    opacity: 0.6;
+}
+
+.self-marking-submit-group:has(.self-marking-submit:disabled) .self-marking-submit {
+    box-shadow: none;
+}
+
+.self-marking-submit-group:has(.self-marking-submit:disabled) .self-marking-score {
+    box-shadow: none;
+    border-color: var(--border-default);
 }
 
 .self-marking-nav-btn {
     padding: 10px 24px;
     font-size: 0.95rem;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--text-secondary);
     background: var(--bg-surface);
     border: 1.5px solid var(--edge);
@@ -2051,15 +2088,18 @@ body:has(.has-figure-sidebar) {
     cursor: pointer;
     box-shadow: var(--press-shadow-sm);
     transition: transform 120ms, box-shadow 120ms, background 0.15s, color 0.15s;
+    user-select: none;
+    touch-action: manipulation;
 }
 
 .self-marking-nav-btn:hover:not(:disabled) {
     background: var(--bg-surface-alt);
     color: var(--text-primary);
+    transform: translateY(-2px);
 }
 
 .self-marking-nav-btn:active:not(:disabled) {
-    transform: translate(1px, 1px);
+    transform: translate(2px, 2px);
     box-shadow: var(--press-shadow-active);
 }
 
@@ -2067,6 +2107,7 @@ body:has(.has-figure-sidebar) {
     opacity: 0.35;
     cursor: not-allowed;
     box-shadow: none;
+    border-color: var(--border-default);
 }
 
 .self-marking-nav-btn.ready-pulse {
@@ -2074,14 +2115,15 @@ body:has(.has-figure-sidebar) {
     border-color: var(--accent-blue);
     color: var(--accent-blue);
     background: var(--accent-blue-muted);
+    box-shadow: var(--press-shadow-sm);
 }
 
 @keyframes readyPulse {
     0%, 100% {
-        box-shadow: 0 0 0 0 rgba(91, 106, 191, 0.3);
+        box-shadow: var(--press-shadow-sm), 0 0 0 0 rgba(91, 106, 191, 0.3);
     }
     50% {
-        box-shadow: 0 0 12px 4px rgba(91, 106, 191, 0.15);
+        box-shadow: var(--press-shadow-sm), 0 0 12px 4px rgba(91, 106, 191, 0.15);
     }
 }
 
@@ -2091,10 +2133,10 @@ body:has(.has-figure-sidebar) {
 
 @keyframes readyPulseDark {
     0%, 100% {
-        box-shadow: 0 0 0 0 rgba(139, 149, 214, 0.3);
+        box-shadow: var(--press-shadow-sm), 0 0 0 0 rgba(139, 149, 214, 0.3);
     }
     50% {
-        box-shadow: 0 0 12px 4px rgba(139, 149, 214, 0.15);
+        box-shadow: var(--press-shadow-sm), 0 0 12px 4px rgba(139, 149, 214, 0.15);
     }
 }
 
@@ -2104,28 +2146,31 @@ body:has(.has-figure-sidebar) {
     font-weight: 700;
     color: var(--text-on-accent);
     background: var(--accent-blue);
-    border: 1.5px solid rgba(0, 0, 0, 0.15);
+    border: 1.5px solid var(--edge);
     border-radius: 999px 0 0 999px;
     cursor: pointer;
-    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: var(--press-shadow-sm);
     transition: transform 120ms, box-shadow 120ms, background 0.15s;
-}
-
-.self-marking-submit:hover:not(:disabled) {
-    background: var(--accent-blue-hover);
-    box-shadow: var(--shadow-md);
+    user-select: none;
+    touch-action: manipulation;
 }
 
 .self-marking-submit:disabled {
-    opacity: 0.4;
-    cursor: not-allowed;
+    background: var(--accent-blue-muted);
+    color: var(--text-tertiary);
+    cursor: default;
+    pointer-events: none;
+    box-shadow: none;
+    border-color: var(--border-default);
 }
 
-.self-marking-submit.ready-pulse {
-    animation: submitPulse 1.5s ease-in-out infinite;
+/* Glow on the whole group when submit is ready */
+.self-marking-submit-group:has(.self-marking-submit.ready-pulse) {
+    animation: submitGroupPulse 1.5s ease-in-out infinite;
+    border-radius: 999px;
 }
 
-@keyframes submitPulse {
+@keyframes submitGroupPulse {
     0%, 100% {
         box-shadow: 0 0 0 0 rgba(91, 106, 191, 0.45);
     }
@@ -2134,11 +2179,11 @@ body:has(.has-figure-sidebar) {
     }
 }
 
-[data-theme="dark"] .self-marking-submit.ready-pulse {
-    animation: submitPulseDark 1.5s ease-in-out infinite;
+[data-theme="dark"] .self-marking-submit-group:has(.self-marking-submit.ready-pulse) {
+    animation: submitGroupPulseDark 1.5s ease-in-out infinite;
 }
 
-@keyframes submitPulseDark {
+@keyframes submitGroupPulseDark {
     0%, 100% {
         box-shadow: 0 0 0 0 rgba(139, 149, 214, 0.45);
     }
@@ -2158,7 +2203,7 @@ body:has(.has-figure-sidebar) {
     border-left: none;
     border-radius: 0 999px 999px 0;
     color: var(--text-primary);
-    box-shadow: 2px 2px 0 var(--edge);
+    box-shadow: var(--press-shadow-sm);
     cursor: default;
     user-select: none;
 }

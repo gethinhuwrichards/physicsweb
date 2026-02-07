@@ -264,7 +264,7 @@ export default function App() {
       <ThemeToggle />
       <FeedbackModal />
 
-      {view !== 'landing' && (
+      {view !== 'landing' && view !== 'question' && (
         <header>
           <div className="header-top-row">
             <Breadcrumb items={breadcrumbItems} />
