@@ -147,7 +147,7 @@ These exam patterns are inherently paper-based and should be **skipped** or **ad
 | **Drawing on diagrams** | "Show the wavelength on the diagram and label it W" | Skip - cannot replicate |
 | **Drawing circuit diagrams** | "Draw a circuit for a hairdryer" | Skip |
 | **Completing bar charts** | "Complete the bar chart to show all results" | Skip |
-| **Labelling diagrams** | "Write the name of each particle in the spaces" | Adapt to `short-answer` or `gap-fill` by rephrasing |
+| **Labelling diagrams** | "Write the name of each particle in the spaces" | Adapt to `short-answer` or `gap-fill` by rephrasing | 
 | **Drawing ray paths** | "Draw the path of wave K to show reflection" | Skip |
 | **Drawing lines on graphs** | "Draw a line of best fit", "Complete the velocity-time graph" | Skip |
 | **Nuclear equation completion** | "Complete the symbols for alpha/beta particles" | Could potentially be a specialised type, but very niche |

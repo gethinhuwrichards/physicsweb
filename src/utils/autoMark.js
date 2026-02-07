@@ -111,6 +111,46 @@ export function autoMarkShortAnswer(part, userAnswer) {
   };
 }
 
+export function autoMarkSelectAndExplain(part, answer) {
+  const selected = answer ? answer.selectedOption : null;
+  const selectionCorrect = selected === part.correctAnswer;
+  return {
+    score: selectionCorrect ? 1 : 0,
+    selectionCorrect,
+    selectedOption: selected,
+    correctAnswer: part.correctAnswer,
+  };
+}
+
+export function autoMarkTableFill(part, userAnswers) {
+  const answers = userAnswers || [];
+  const results = part.correctAnswers.map((entry, i) => {
+    const accepted = Array.isArray(entry) ? entry : [entry];
+    const raw = (answers[i] || '').trim();
+    const rawLower = raw.toLowerCase();
+    let isCorrect = false;
+    let misspelt = false;
+    if (raw.length > 0) {
+      const exactMatch = accepted.some(ans => ans.toLowerCase() === rawLower);
+      if (exactMatch) {
+        isCorrect = true;
+      } else {
+        const fuzzyMatch = accepted.some(ans => isCloseEnough(rawLower, ans.toLowerCase()));
+        if (fuzzyMatch) {
+          isCorrect = true;
+          misspelt = true;
+        }
+      }
+    }
+    return { isCorrect, misspelt, userAnswer: raw, correctAnswer: accepted[0] };
+  });
+  const correctCount = results.filter(r => r.isCorrect).length;
+  return {
+    score: Math.min(correctCount, part.marks),
+    results,
+  };
+}
+
 export function autoMarkCalculation(part, answer) {
   const raw = answer && answer.finalAnswer != null ? String(answer.finalAnswer).trim() : '';
   const parsed = parseFloat(raw);

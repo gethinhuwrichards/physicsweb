@@ -8,6 +8,8 @@ import CalculationInput from './inputs/CalculationInput';
 import TickBoxTableInput from './inputs/TickBoxTableInput';
 import MatchUpInput from './inputs/MatchUpInput';
 import ShortAnswerInput from './inputs/ShortAnswerInput';
+import SelectAndExplainInput from './inputs/SelectAndExplainInput';
+import TableFillInput from './inputs/TableFillInput';
 
 export default function QuestionPart({
   part,
@@ -97,6 +99,26 @@ export default function QuestionPart({
       case 'short-answer':
         return (
           <ShortAnswerInput
+            part={part}
+            value={answer}
+            onChange={val => onAnswer(partIndex, val)}
+            disabled={disabled}
+            autoMarkResult={autoMarkResult}
+          />
+        );
+      case 'select-and-explain':
+        return (
+          <SelectAndExplainInput
+            part={part}
+            value={answer}
+            onChange={val => onAnswer(partIndex, val)}
+            disabled={disabled}
+            autoMarkResult={autoMarkResult}
+          />
+        );
+      case 'table-fill':
+        return (
+          <TableFillInput
             part={part}
             value={answer}
             onChange={val => onAnswer(partIndex, val)}

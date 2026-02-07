@@ -85,7 +85,7 @@ Before assigning IDs, check existing question files to ensure no duplicates.
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `partLabel` | string | Yes | Part identifier (e.g., "a", "b", "c", "i", "ii") |
-| `type` | string | Yes | One of: `"single-choice"`, `"multi-choice"`, `"gap-fill"`, `"extended-written"`, `"calculation"`, `"equation-choice"`, `"tick-box-table"`, `"match-up"` |
+| `type` | string | Yes | One of: `"single-choice"`, `"multi-choice"`, `"gap-fill"`, `"extended-written"`, `"calculation"`, `"equation-choice"`, `"tick-box-table"`, `"match-up"`, `"short-answer"`, `"select-and-explain"`, `"table-fill"` |
 | `text` | string | Yes | The question text (supports LaTeX) |
 | `marks` | integer | Yes | Number of marks (1-6) |
 | `markScheme` | string[] | Yes | Array of marking criteria |
@@ -93,7 +93,7 @@ Before assigning IDs, check existing question files to ensure no duplicates.
 
 ## Part Types
 
-Types 1-3, 6, 7 and 8 are fully auto-marked. Type 4 (extended-written) is self-marked by the student using a split-panel marking UI. Type 5 (calculation) auto-marks the final answer; if correct, all marks are awarded. If incorrect, the student self-marks method points via the split-panel UI.
+Types 1-3, 6, 7, 8, 9 and 11 are fully auto-marked. Type 4 (extended-written) is self-marked by the student using a split-panel marking UI. Type 5 (calculation) auto-marks the final answer; if correct, all marks are awarded. If incorrect, the student self-marks method points via the split-panel UI. Type 10 (select-and-explain) auto-marks the selection (1 mark) and self-marks the explanation (remaining marks).
 
 ### 1. Single Choice (`type: "single-choice"`)
 
@@ -453,6 +453,101 @@ Right items can be images instead of text. Use an object with an `image` field r
 
 ```json
 "rightItems": ["Text option", { "image": "circuit-diagram.png" }, "Another text"]
+```
+
+### 9. Short Answer (`type: "short-answer"`)
+
+Student types a short answer (1 word or short phrase) into a text input. Auto-marked via case-insensitive matching against an array of accepted answers, with fuzzy matching for minor misspellings.
+
+**Additional fields:**
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `acceptedAnswers` | string[] | Yes | Array of accepted correct answers (case-insensitive) |
+
+```json
+{
+  "partLabel": "a",
+  "type": "short-answer",
+  "text": "What is the unit of resistance?",
+  "marks": 1,
+  "acceptedAnswers": ["ohm", "ohms", "Ω"],
+  "markScheme": ["1 mark: **ohm** / **Ω**"],
+  "diagrams": []
+}
+```
+
+### 10. Select and Explain (`type: "select-and-explain"`)
+
+Student selects one option from radio buttons AND writes an explanation in a textarea. The selection (1 mark) is auto-marked. The explanation (remaining marks) is self-marked via the split-panel UI. Used for "Choose... and give a reason" style exam questions.
+
+**Additional fields:**
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `options` | string[] | Yes | 3 or 4 option texts |
+| `correctAnswer` | integer | Yes | 0-based index of the correct option |
+| `explanationPrompt` | string | No | Prompt text shown above the explanation textarea (e.g., "Give a reason for your answer.") |
+
+**Marking behaviour:**
+- First `markScheme` entry corresponds to the selection (auto-marked, locked)
+- Remaining `markScheme` entries are for the explanation (self-marked)
+- `marks` must be at least 2 (1 for selection + 1 or more for explanation)
+
+```json
+{
+  "partLabel": "a",
+  "type": "select-and-explain",
+  "text": "Which fuse should be used for a 2300 W kettle on a 230 V supply?",
+  "marks": 2,
+  "options": ["3 A", "5 A", "13 A"],
+  "correctAnswer": 2,
+  "explanationPrompt": "Give a reason for your answer.",
+  "markScheme": [
+    "1 mark: Correct answer: **13 A**",
+    "1 mark: The current drawn is 10 A so the fuse must be rated above 10 A"
+  ],
+  "diagrams": []
+}
+```
+
+### 11. Table Fill (`type: "table-fill"`)
+
+Student fills in missing cells of a table. Blank cells are rendered as text inputs. Auto-marked via case-insensitive matching with fuzzy spelling tolerance.
+
+**Additional fields:**
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `headers` | string[] | Yes | Column headers for the table |
+| `rows` | object[] | Yes | Array of row objects (see below) |
+| `correctAnswers` | (string \| string[])[] | Yes | Array of correct answers, one per blank (indexed by blank number). Each entry can be a single string or an array of accepted alternatives (case-insensitive, with fuzzy spelling tolerance). The first element is shown as the correction when wrong. |
+
+**Row object:**
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `cells` | (string \| object)[] | Yes | Array of cell values. Strings are displayed as-is. Objects with `{ "blank": N }` render as text inputs, where N is the 0-based blank index. |
+
+```json
+{
+  "partLabel": "a",
+  "type": "table-fill",
+  "text": "Complete the table to show how each electrical quantity is measured.",
+  "marks": 3,
+  "headers": ["Quantity", "Measuring instrument", "Unit"],
+  "rows": [
+    { "cells": ["Current", { "blank": 0 }, "ampere (A)"] },
+    { "cells": ["Potential difference", { "blank": 1 }, { "blank": 2 }] }
+  ],
+  "correctAnswers": ["ammeter", "voltmeter", ["volt (V)", "volt", "volts", "V"]],
+  "markScheme": [
+    "1 mark: ammeter",
+    "1 mark: voltmeter",
+    "1 mark: volt (V)"
+  ],
+  "diagrams": []
+}
 ```
 
 ## LaTeX Formatting

@@ -4,7 +4,7 @@ import QuestionPart from './components/QuestionPart';
 import SelfMarkingView from './components/marking/SelfMarkingView';
 import FinalScorePanel from './components/marking/FinalScorePanel';
 import ScorePage from './components/marking/ScorePage';
-import { autoMarkSingleChoice, autoMarkMultiChoice, autoMarkGapFill, autoMarkCalculation, autoMarkTickBoxTable, autoMarkMatchUp, autoMarkShortAnswer } from './utils/autoMark';
+import { autoMarkSingleChoice, autoMarkMultiChoice, autoMarkGapFill, autoMarkCalculation, autoMarkTickBoxTable, autoMarkMatchUp, autoMarkShortAnswer, autoMarkSelectAndExplain, autoMarkTableFill } from './utils/autoMark';
 import { parseMarkScheme } from './utils/parseMarkScheme';
 
 function initState({ question, savedState }) {
@@ -101,6 +101,18 @@ function reducer(state, action) {
             autoMarkResults[i] = result;
             break;
           }
+          case 'select-and-explain': {
+            const result = autoMarkSelectAndExplain(part, answer || {});
+            autoMarkResults[i] = result;
+            selfMarkParts.push(i);
+            break;
+          }
+          case 'table-fill': {
+            const result = autoMarkTableFill(part, answer || []);
+            partScores[i] = result.score;
+            autoMarkResults[i] = result;
+            break;
+          }
           case 'calculation': {
             const result = autoMarkCalculation(part, answer || {});
             autoMarkResults[i] = result;
@@ -136,6 +148,20 @@ function reducer(state, action) {
           const lastIdx = points.length - 1;
           markingDecisions[i][lastIdx] = false;
           lockedPoints[i][lastIdx] = true;
+        }
+
+        // For select-and-explain: lock the first point (selection) based on auto-mark
+        // If selection is wrong, lock all explanation points as false too
+        if (part.type === 'select-and-explain' && points.length > 0) {
+          const selResult = autoMarkResults[i];
+          markingDecisions[i][0] = selResult.selectionCorrect;
+          lockedPoints[i][0] = true;
+          if (!selResult.selectionCorrect) {
+            for (let p = 1; p < points.length; p++) {
+              markingDecisions[i][p] = false;
+              lockedPoints[i][p] = true;
+            }
+          }
         }
       });
 
@@ -185,6 +211,13 @@ function reducer(state, action) {
           case 'short-answer':
             markingDecisions[i] = points.map(() => result.isCorrect);
             break;
+          case 'table-fill': {
+            const tfResults = result.results || [];
+            markingDecisions[i] = points.map((_, idx) =>
+              idx < tfResults.length ? tfResults[idx].isCorrect : false
+            );
+            break;
+          }
           case 'calculation':
             // Only reaches here if correct (incorrect goes to selfMarkParts)
             markingDecisions[i] = points.map(() => true);

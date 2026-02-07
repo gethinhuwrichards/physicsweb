@@ -127,6 +127,64 @@
           "diagrams": []
         }
       ]
+    },
+    {
+      "id": "simple-circuits5",
+      "topic": "Electricity",
+      "title": "Choosing a fuse",
+      "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "select-and-explain",
+          "text": "A kettle has a power rating of 2300 W and is connected to a 230 V mains supply. Which fuse should be used in the plug for this kettle?",
+          "marks": 2,
+          "options": ["3 A", "5 A", "13 A"],
+          "correctAnswer": 2,
+          "explanationPrompt": "Give a reason for your answer.",
+          "markScheme": [
+            "1 mark: Correct answer: **13 A**",
+            "1 mark: The current drawn is $I = \\frac{P}{V} = \\frac{2300}{230} = 10$ A, so the fuse must be rated above 10 A"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "simple-circuits6",
+      "topic": "Electricity",
+      "title": "Circuit measurements",
+      "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "table-fill",
+          "text": "Complete the table to show how each electrical quantity is measured in a circuit.",
+          "marks": 3,
+          "headers": ["Quantity", "Measuring instrument", "Unit"],
+          "rows": [
+            { "cells": ["Current", { "blank": 0 }, "ampere (A)"] },
+            { "cells": ["Potential difference", { "blank": 1 }, { "blank": 2 }] }
+          ],
+          "correctAnswers": ["ammeter", "voltmeter", ["volt (V)", "volt", "volts", "V"]],
+          "markScheme": [
+            "1 mark: ammeter",
+            "1 mark: voltmeter",
+            "1 mark: volt (V)"
+          ],
+          "diagrams": []
+        }
+      ]
     }
   ]
 }

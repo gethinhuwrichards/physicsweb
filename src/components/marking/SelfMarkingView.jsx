@@ -333,6 +333,90 @@ export default function SelfMarkingView({
     );
   }
 
+  // Render table-fill review
+  function renderTableFillReview() {
+    const result = autoMarkResults[partIndex];
+    const userAnswers = answers[partIndex] || [];
+    const renderedHeaders = part.headers.map(h => renderLatex(h));
+
+    return (
+      <table className="review-table-fill">
+        <thead>
+          <tr>
+            {renderedHeaders.map((html, i) => (
+              <th key={i} dangerouslySetInnerHTML={{ __html: html }} />
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {part.rows.map((row, ri) => (
+            <tr key={ri}>
+              {row.cells.map((cell, ci) => {
+                if (typeof cell === 'string') {
+                  return <td key={ci} dangerouslySetInnerHTML={{ __html: renderLatex(cell) }} />;
+                }
+                const blankIdx = cell.blank;
+                const blankResult = result?.results?.[blankIdx];
+                const isCorrect = blankResult?.isCorrect;
+                return (
+                  <td key={ci} className={isCorrect ? 'review-tf-correct' : 'review-tf-incorrect'}>
+                    <span className="review-tf-answer">{userAnswers[blankIdx] || '(empty)'}</span>
+                    {blankResult?.misspelt && (
+                      <span className="review-tf-misspelt">Misspelt but accepted</span>
+                    )}
+                    {!isCorrect && blankResult?.correctAnswer && (
+                      <span className="review-tf-correction">{blankResult.correctAnswer}</span>
+                    )}
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    );
+  }
+
+  // Render select-and-explain review (for self-marking panel)
+  function renderSelectAndExplainReview() {
+    const result = autoMarkResults[partIndex];
+    const ans = answers[partIndex] || {};
+    const selectedIdx = ans.selectedOption;
+    const renderedOptions = part.options.map(opt => renderLatex(opt));
+
+    return (
+      <div className="review-sae">
+        <div className="review-options-list">
+          {renderedOptions.map((optHtml, i) => {
+            const letter = String.fromCharCode(65 + i);
+            const isSelected = i === selectedIdx;
+            const isCorrectAnswer = i === part.correctAnswer;
+            let className = 'review-option-item';
+            if (isSelected && isCorrectAnswer) className += ' review-correct';
+            else if (isSelected && !isCorrectAnswer) className += ' review-incorrect';
+            else if (isCorrectAnswer) className += ' review-was-correct';
+
+            return (
+              <div key={i} className={className}>
+                <span className="review-option-letter">{letter}.</span>
+                <span className="review-option-text" dangerouslySetInnerHTML={{ __html: optHtml }} />
+                {isSelected && isCorrectAnswer && <span className="review-badge badge-correct">Correct</span>}
+                {isSelected && !isCorrectAnswer && <span className="review-badge badge-incorrect">Your answer</span>}
+                {isCorrectAnswer && !isSelected && <span className="review-badge badge-missed">Correct answer</span>}
+              </div>
+            );
+          })}
+        </div>
+        <div className="review-sae-explanation">
+          <div className="review-sae-label">Your explanation:</div>
+          <div className="self-marking-answer-display">
+            {ans.explanation || <span className="self-marking-no-answer">No explanation provided</span>}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   // Render calculation display (shared between auto and self-marked)
   function renderCalculationDisplay(isCorrectCalc) {
     const ans = answers[partIndex] || {};
@@ -384,6 +468,8 @@ export default function SelfMarkingView({
         return renderMatchUpReview();
       case 'short-answer':
         return renderShortAnswerReview();
+      case 'table-fill':
+        return renderTableFillReview();
       case 'calculation':
         return renderCalculationDisplay(true);
       default:
@@ -394,6 +480,9 @@ export default function SelfMarkingView({
   function renderSelfMarkedAnswer() {
     if (part.type === 'calculation') {
       return renderCalculationDisplay(false);
+    }
+    if (part.type === 'select-and-explain') {
+      return renderSelectAndExplainReview();
     }
     return (
       <div className="self-marking-answer-display">
@@ -447,6 +536,12 @@ export default function SelfMarkingView({
           <div className="self-marking-points">
             {points.map((point, i) => {
               if (!isAutoMarked && i >= maxRevealed) return null;
+
+              let depNote = null;
+              if (part.type === 'select-and-explain' && i > 0 && decisions[0] === false) {
+                depNote = '— Depends on correct selection';
+              }
+
               return (
                 <MarkingPointRow
                   key={i}
@@ -455,7 +550,7 @@ export default function SelfMarkingView({
                   onDecide={(val) => onDecide(partIndex, i, val, point.marks)}
                   locked={locked[i] === true}
                   pointNumber={i + 1}
-                  dependencyNote={null}
+                  dependencyNote={depNote}
                   highlight={!isAutoMarked && i === 0 && !hasDecidedFirst}
                 />
               );
