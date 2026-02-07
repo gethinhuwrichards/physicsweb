@@ -10,7 +10,7 @@ This document is the definitive guide for converting past paper exam questions f
 
 ## Recognising Question Types in .docx Files
 
-Exam papers use specific wording patterns that map to the website's question types. When reading a `.docx` file, use the table below to identify the correct type for each question part.
+Exam papers use specific wording patterns that map to the website's question types. When reading a `.docx` file, use the table below to identify the correct type for each question part. 
 
 | Wording / Pattern in .docx | Question Type | Notes |
 |---|---|---|
@@ -24,33 +24,7 @@ Exam papers use specific wording patterns that map to the website's question typ
 | "Calculate..." / "Determine..." / "Work out..." with a numerical answer | `calculation` | 2–4 marks. Identify the correct equation, correct answer, and tolerance. Build mark scheme as substitution → (rearrangement) → final answer. |
 | "Name..." / "State..." / "What is the unit of..." / "What type of..." — 1-mark, one-word or short-phrase answer | `short-answer` | Use when there is a single definitive correct answer (or small set of alternatives). List all accepted spellings/synonyms in `acceptedAnswers`. |
 | "Which [option]? Tick one box. Give a reason for your answer." / "Choose... and explain..." | `select-and-explain` | Selection is auto-marked (1 mark). Explanation is self-marked (remaining marks). First mark scheme entry = selection, rest = explanation. |
-| "Describe..." / "Explain..." / "Compare..." / "Evaluate..." — 2–4 marks, free-text answer | `extended-written` | Use when the answer is open-ended with no single correct response. Use `**keyword**` syntax in mark scheme to highlight key terms. |
-| 6-mark "Describe a method..." / "Plan an investigation..." / "Evaluate..." — mark scheme has "levels" and "indicative content" | `extended-written-levels` | Use for levels-of-response questions (usually 6 marks, occasionally 4). Ignore the "levels" descriptors; use the indicative content points as the mark scheme. There will be more points than marks available. |
-| "Tick one box" but the options are **images** (circuit diagrams, graphs, wave patterns, etc.) | `single-choice` with image options | Use `{ "image": "filename.png" }` objects instead of text strings in the `options` array. See **Image options** below. |
-| "Tick two boxes" with image options | `multi-choice` with image options | Same as above — use `{ "image": "..." }` objects in `options`. |
-
-### Image options for single-choice / multi-choice
-
-When an exam paper presents visual options (e.g., "Which circuit diagram shows...?", "Which wave pattern represents...?", "Which graph shows...?"), use `{ "image": "filename.png" }` objects in the `options` array instead of text strings:
-
-```json
-{
-  "type": "single-choice",
-  "text": "Which circuit diagram shows a series circuit?",
-  "options": [
-    { "image": "circuits-opt-a-series.png" },
-    { "image": "circuits-opt-b-parallel.png" },
-    { "image": "circuits-opt-c-mixed.png" }
-  ],
-  "correctAnswer": 0
-}
-```
-
-**How it displays:** Image options are laid out in a 2-column grid, with each image inside a clickable radio/checkbox label. The letter (A, B, C...) appears above each image.
-
-**Image naming for option images:** Follow the same rules as diagram images (see "Handling Images" section), but include `-opt-` and the letter in the filename to make it clear these are option images (e.g., `waves-q3-opt-a-transverse.png`, `waves-q3-opt-b-longitudinal.png`).
-
-**When to use image options vs. `diagrams` field:** Use image options when the student must **choose between** the images. Use the `diagrams` field when the images provide **context** that the student then answers a question about (e.g., "Look at Figure 1. What type of wave is shown?" would use `diagrams`, not image options).
+| "Describe..." / "Explain..." / "Compare..." / "Evaluate..." — 2+ marks, free-text answer | `extended-written` | Use when the answer is open-ended with no single correct response. Use `**keyword**` syntax in mark scheme to highlight key terms. |
 
 ### Decision flowchart for ambiguous cases
 
@@ -70,8 +44,7 @@ Some questions could fit multiple types. Use these rules to decide:
    - In a table, with or without a word bank → `table-fill`
 
 4. **Is it a "describe a method" or "explain a process" question (2+ marks)?**
-   - If the mark scheme has **levels** (e.g., "Level 1: 1–2 marks", "Level 2: 3–4 marks") and **indicative content** → `extended-written-levels`. These are typically 6-mark questions. Use only the indicative content points in the mark scheme; ignore the level descriptors.
-   - Otherwise → `extended-written`. Do not try to auto-mark these.
+   - Always `extended-written`. Do not try to auto-mark these.
 
 5. **Does it ask for a numerical calculation?**
    - Always `calculation`, even if only 2 marks. Never use `short-answer` for numerical answers.
@@ -113,94 +86,6 @@ The `tier` tag determines whether a question is suitable for Combined Science st
 
 ---
 
-## Handling Images from .docx Files
-
-Exam papers contain embedded images (diagrams, graphs, circuit diagrams, equipment setups, etc.). These must be extracted, saved, named, and referenced correctly.
-
-### Where to store images
-
-All images go in `public/images/`. The `diagrams` field in question JSON references filenames only (no path prefix) — the app prepends `images/` at render time.
-
-### Extracting images from .docx
-
-`.docx` files store embedded images in a `word/media/` folder inside the zip archive. To extract:
-1. Rename the `.docx` to `.zip` and unzip, or use a tool to extract the `word/media/` contents
-2. Images will have generic names like `image1.png`, `image2.emf` — these must be renamed
-3. Convert any `.emf` or `.wmf` files to `.png` or `.jpeg` before saving
-
-### Naming conventions
-
-Image filenames must be descriptive and follow this pattern:
-
-```
-{subtopic-prefix}-{question-context}-{figure-description}.{ext}
-```
-
-**Rules:**
-- Use lowercase with hyphens (no spaces or underscores)
-- Prefix with the subtopic to avoid collisions across topics (e.g., `waves-`, `forces-`, `sp-circuits-`)
-- Include enough context to identify the image without seeing it (e.g., `forces-q3-velocity-time-graph.png` not `image7.png`)
-- Use `.png` for diagrams/line-art and `.jpeg` for photographs
-- Do NOT keep generic names like `image1.png`, `image5.png` — always rename
-
-**Examples of good names:**
-- `sp-circuits-q2-ammeter-reading.png`
-- `waves-q3-transverse-wave.jpeg`
-- `forces-q7-velocity-time-graph.png`
-- `atomic-q1-atom-diagram.png`
-- `energy-q4-sankey-diagram.png`
-
-**Examples of bad names:**
-- `image12.png` (meaningless)
-- `Figure 1.png` (spaces, generic)
-- `q1.png` (no subtopic prefix, no description)
-
-### Referencing images in question JSON
-
-Add filenames to the `diagrams` array on the relevant question part:
-
-```json
-{
-  "partLabel": "a",
-  "type": "single-choice",
-  "text": "Figure 1 shows a velocity-time graph for a car journey. During which section is the car decelerating?",
-  "diagrams": ["forces-q3-velocity-time-graph.png"]
-}
-```
-
-For multiple figures on a single part:
-
-```json
-{
-  "diagrams": ["waves-q6-ripple-tank.png", "waves-q6-two-waves.png"]
-}
-```
-
-### How images are displayed
-
-- Images appear **between the question text and the input controls**, captioned automatically as "Fig. 1", "Fig. 2", etc.
-- **Single image**: centred at 50% of the container width
-- **Multiple images**: displayed in a responsive grid (auto-fit columns, minimum 200px per image, max 2 per row)
-- Images have a white background with rounded corners and a subtle border — this means diagrams with transparent backgrounds will display on white regardless of the site's light/dark theme
-- Captions are auto-generated from array position — do not include "Figure 1" numbering in the `text` field unless you need to refer to a specific figure (e.g., "In Figure 2, the wave shown is...")
-
-### When to include images vs. describe in text
-
-Not every image from the .docx needs to be included. Use this decision process:
-
-- **Include the image** if the question cannot be understood without it (e.g., a graph the student must read, an equipment setup they must identify, an oscilloscope trace they must interpret)
-- **Describe in text instead** if the image merely illustrates something that can be stated in words (e.g., a picture of a kettle next to "A kettle is rated at 2000 W" — just use the text)
-- **Skip the image** if it was part of a drawing/labelling task that has been reclassified — unless the image still adds useful context to the reclassified version
-- **Never include images that show answer options** (e.g., tick-box grids from the paper) — these are replaced by the website's interactive UI
-
-### Images shared across parts
-
-If multiple parts of the same question reference the same diagram, put it on the **first part that uses it** only. Do not duplicate it across parts. In the text of later parts, refer back to it (e.g., "Using the graph shown above..." or "Look at Figure 1 in part (a)").
-
-If different parts each have their own distinct figure, put each image on its respective part's `diagrams` array.
-
----
-
 ## Question Patterns That Cannot Be Digitised
 
 Some exam question parts are inherently paper-based and cannot be represented with the existing question types. When converting past papers or writing questions based on exam content, follow these rules:
@@ -239,6 +124,90 @@ Exam questions that ask students to label a diagram (e.g., "Write the name of ea
   - Reclassified: A table with headers `["Location", "Relative charge", "Particle name"]` and rows like `{ "cells": ["In the nucleus", "+1", { "blank": 0 }] }` with `correctAnswers: ["proton", "neutron", ["electron", "e-"]]`.
 
 - **If a diagram is available as an image file**, you can still include it via the `diagrams` field and rephrase to reference it (e.g., "Look at Figure 1. Name the part labelled X."). This preserves visual context while keeping the answer as text input.
+
+---
+
+## Extracting and Placing Images from .docx Files
+
+Exam paper `.docx` files contain embedded images (circuit diagrams, graphs, photographs, etc.) that must be extracted and referenced in the JSON.
+
+### Step 1: Extract images from the .docx
+
+A `.docx` file is a ZIP archive. Images are stored in `word/media/` and referenced via relationships in `word/_rels/document.xml.rels`. Images are embedded in two formats:
+
+- **`w:drawing`** — Modern format. Contains `<a:blip r:embed="rIdN"/>` elements. Most common.
+- **`w:pict`** — Legacy VML format. Contains `<v:imagedata r:id="rIdN"/>` elements. Uses namespace `{urn:schemas-microsoft-com:vml}imagedata`.
+
+**Extraction process (Python):**
+```python
+from docx import Document
+from docx.opc.constants import RELATIONSHIP_TYPE as RT
+import os
+
+doc = Document('exam-paper.docx')
+rels = doc.part.rels
+for rel_id, rel in rels.items():
+    if "image" in rel.reltype:
+        image_data = rel.target_part.blob
+        ext = os.path.splitext(rel.target_part.partname)[1]  # .jpeg, .png, etc.
+        # Save with a descriptive name
+```
+
+To map images to questions, walk through `document.xml` paragraph by paragraph. Track which question number (Q1, Q2...) and figure number (Figure 1, Figure 2...) you're in by reading the text. When you encounter an image element (`w:drawing` or `w:pict`), extract its relationship ID and map it to the current question/figure context.
+
+**Naming convention:** `{subtopic-prefix}-q{docx-question-number}-fig{figure-number}.{ext}`
+- Examples: `static-elec-q1-fig1.jpeg`, `cpdr-q3-fig2.jpeg`, `dom-elec-q5-fig4.png`
+- The subtopic prefix matches the question ID prefix used in the JSON.
+
+**Filtering:** Skip images smaller than 500 bytes — these are typically checkbox decorations, bullet points, or tick marks, not question content. Also skip images that appear in the mark scheme section (after "Mark schemes" or similar heading).
+
+### Step 2: Identify what each image shows
+
+View each extracted image to categorise it:
+
+| Category | Action |
+|---|---|
+| **Question diagram** (circuit, graph, apparatus, photograph) | Add to the correct part's `diagrams` array |
+| **Equation image** (e.g., "current = charge flow / time") | Do NOT add as a diagram — express as LaTeX in the question text instead |
+| **Blank/artifact** (tiny checkbox, tick mark, empty square) | Discard — these are formatting artifacts from the docx |
+| **Option images** (e.g., 4 circuit symbols as answer choices for "Tick one box") | Use `single-choice` with image options: `"options": [{ "image": "file.png" }, ...]` |
+
+### Step 3: Place images in the correct part's `diagrams` array
+
+The `diagrams` field is per-part, not per-question. Place each image in the part that references it:
+
+- **Figures in the question preamble** (before any part letter): Place in the **first part's** `diagrams` array.
+- **Figures referenced within a specific part** (e.g., "Figure 2 shows..." appears between part (c) and part (d)): Place in **that part's** `diagrams` array.
+- **Figures used across multiple parts**: Place in the **earliest part** that references the figure.
+
+Example: If Q1 has "Figure 1 shows a generator" (before part a), "Figure 2 shows a student" (also before part a), and "Figure 3 shows the dome and conductor" (before part d):
+```json
+{ "partLabel": "a", "diagrams": ["static-elec-q1-fig1.jpeg", "static-elec-q1-fig2.jpeg"], ... },
+{ "partLabel": "b", "diagrams": [], ... },
+{ "partLabel": "c", "diagrams": [], ... },
+{ "partLabel": "d", "diagrams": ["static-elec-q1-fig3.jpeg"], ... }
+```
+
+### Step 4: Restore figure references in question text
+
+When an image is placed in a part's `diagrams` array, the question text **must** reference the figure so students know to look at it. Use the original docx wording:
+
+- "Figure 1 shows the circuit used."
+- "The diagram shows a negatively charged rod held near a thin stream of water."
+- "The graph shows how the current changes during the first second after switching on."
+
+**Do NOT** describe the image contents in text as a substitute for including the image. If the docx says "Figure 1 shows...", keep that phrasing and include the actual image file.
+
+### Step 5: Handle images for dropped parts
+
+Some question parts are dropped because they require drawing (see "Question Patterns That Cannot Be Digitised" below). Their images become orphaned. Check whether:
+
+1. The image provides **context for other parts** that were kept → add it to the relevant kept part's `diagrams`
+2. The image is **only relevant to the dropped part** → leave it unreferenced (it stays in `public/images/` but isn't used)
+
+### Duplicate images
+
+Some docx files reuse the same image across multiple questions (e.g., the same Van de Graaff generator photo in Q1 and Q8). Extract each occurrence separately — the files will be identical but named differently. This is fine; it keeps the mapping simple.
 
 ---
 

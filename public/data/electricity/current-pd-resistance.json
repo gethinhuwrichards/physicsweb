@@ -1,0 +1,870 @@
+{
+  "subtopic": "Current, Potential Difference and Resistance",
+  "mainTopic": "Electricity",
+  "questions": [
+    {
+      "id": "cpdr1",
+      "topic": "Current, Potential Difference and Resistance",
+      "title": "Investigating current and potential difference",
+      "difficulty": "easy",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "short-answer",
+          "text": "The diagram shows the circuit set up by a student.\n\nThe student uses the circuit to test the following hypothesis: 'The current through a resistor is directly proportional to the potential difference across the resistor.'\n\nIf the hypothesis is correct, what should the student predict will happen to the current through the resistor when the potential difference across the resistor is doubled?",
+          "marks": 1,
+          "acceptedAnswers": ["also double", "it doubles", "doubles", "the current doubles", "it will also double", "it would also double", "current doubles", "current would double", "double"],
+          "markScheme": ["1 mark: The current will also **double**"],
+          "diagrams": ["cpdr-q5-fig1.png"]
+        },
+        {
+          "partLabel": "b",
+          "type": "short-answer",
+          "text": "Name the component in the circuit used to change the potential difference across the resistor.",
+          "marks": 1,
+          "acceptedAnswers": ["variable resistor", "rheostat", "potentiometer"],
+          "markScheme": ["1 mark: **Variable resistor** (accept rheostat / potentiometer)"],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "short-answer",
+          "text": "The student used the data obtained to plot the points for a graph of current against potential difference, as shown in the graph.\n\nWhy has the student plotted the points for a line graph and not drawn a bar chart?",
+          "marks": 1,
+          "acceptedAnswers": ["the data is continuous", "the variables are continuous", "the results are continuous", "data is continuous", "variables are continuous", "continuous data", "continuous variables"],
+          "markScheme": ["1 mark: The data / results / variables are **continuous** (accept: data is not categoric / discrete)"],
+          "diagrams": ["cpdr-q5-fig2.png"]
+        },
+        {
+          "partLabel": "d",
+          "type": "short-answer",
+          "text": "One of the plotted points on the graph has been identified by the student as being anomalous. What is the most likely cause for this anomalous point?",
+          "marks": 1,
+          "acceptedAnswers": ["misreading the ammeter", "misread the ammeter", "incorrectly reading the ammeter", "error reading the ammeter", "reading the ammeter wrong", "ammeter misread"],
+          "markScheme": ["1 mark: **Misreading the ammeter**"],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "cpdr2",
+      "topic": "Current, Potential Difference and Resistance",
+      "title": "Filament lamp investigation",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "gap-fill",
+          "text": "A student investigated how the current in a filament lamp varies with the potential difference across the lamp. Figure 1 shows the circuit used.\n\nComplete the sentences. Choose answers from the box.",
+          "marks": 2,
+          "segments": [
+            "The ammeter in the circuit measures ",
+            { "blank": 0 },
+            ". The voltmeter in the circuit measures ",
+            { "blank": 1 },
+            "."
+          ],
+          "wordBank": ["charge", "current", "energy", "potential difference", "power"],
+          "correctAnswers": ["current", "potential difference"],
+          "markScheme": [
+            "1 mark: current",
+            "1 mark: potential difference"
+          ],
+          "diagrams": ["cpdr-q1-fig1.jpeg"]
+        },
+        {
+          "partLabel": "b",
+          "type": "tick-box-table",
+          "text": "How will increasing the resistance of the variable resistor affect each of the following quantities?",
+          "marks": 3,
+          "columnHeaders": ["Decreases", "Stays the same", "Increases"],
+          "rows": [
+            { "label": "Current in the circuit", "correctColumn": 0 },
+            { "label": "Potential difference across the lamp", "correctColumn": 0 },
+            { "label": "Total resistance of the circuit", "correctColumn": 2 }
+          ],
+          "markScheme": [
+            "1 mark: Current in the circuit \u2014 Decreases",
+            "1 mark: Potential difference across the lamp \u2014 Decreases",
+            "1 mark: Total resistance of the circuit \u2014 Increases"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "calculation",
+          "text": "A charge flow of 15 coulombs passed through the filament lamp in a time of 60 seconds. Calculate the current in the lamp.",
+          "marks": 2,
+          "equations": [
+            "$Q = I \\times t$",
+            "$V = I \\times R$",
+            "$P = I \\times V$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 0.25,
+          "tolerance": 0.01,
+          "markScheme": [
+            "1 mark: Correct equation selected + correct substitution: $15 = I \\times 60$",
+            "1 mark: Correct final answer: **0.25 A**"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "d",
+          "type": "calculation",
+          "text": "When the current in the filament lamp is 0.12 A, the potential difference across the lamp is 6.0 V. Calculate the resistance of the filament lamp.",
+          "marks": 2,
+          "equations": [
+            "$R = \\frac{V}{I}$",
+            "$P = I \\times V$",
+            "$Q = I \\times t$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 50,
+          "tolerance": 0.01,
+          "markScheme": [
+            "1 mark: Correct equation selected + correct substitution: $R = \\frac{6.0}{0.12}$",
+            "1 mark: Correct final answer: **50 \u03A9**"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "e",
+          "type": "single-choice",
+          "text": "Figure 2 shows an ammeter. The ammeter is not connected to a circuit.\n\nWhat type of error does the ammeter display?",
+          "marks": 1,
+          "options": ["A positive error", "A random error", "A zero error"],
+          "correctAnswer": 2,
+          "markScheme": ["1 mark: Answer: C \u2014 A zero error"],
+          "diagrams": ["cpdr-q1-fig5.jpeg"]
+        }
+      ]
+    },
+    {
+      "id": "cpdr3",
+      "topic": "Current, Potential Difference and Resistance",
+      "title": "AC mains supply and electric kettles",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "short-answer",
+          "text": "Complete the sentence:\n\nThe ac mains supply has a potential difference that continuously __________ polarity.",
+          "marks": 1,
+          "acceptedAnswers": ["changes", "reverses", "alternates"],
+          "markScheme": ["1 mark: **changes** (accept reverses / alternates)"],
+          "diagrams": []
+        },
+        {
+          "partLabel": "b",
+          "type": "single-choice",
+          "text": "A student investigated how the power output of a kettle affected the time taken to boil a fixed volume of water. What type of variable was the time?",
+          "marks": 1,
+          "options": ["Control", "Dependent", "Independent"],
+          "correctAnswer": 1,
+          "markScheme": ["1 mark: Answer: B \u2014 Dependent"],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "equation-choice",
+          "text": "Write down the equation that links charge flow, current and time.",
+          "marks": 1,
+          "options": [
+            "$Q = I \\times t$",
+            "$V = I \\times R$",
+            "$P = I \\times V$",
+            "$E = Q \\times V$"
+          ],
+          "correctAnswer": 0,
+          "markScheme": ["1 mark: Answer: A \u2014 $Q = I \\times t$"],
+          "diagrams": []
+        },
+        {
+          "partLabel": "d",
+          "type": "calculation",
+          "text": "Calculate the current through the kettle when 2400 coulombs of charge flows in 250 seconds.",
+          "marks": 3,
+          "equations": [
+            "$Q = I \\times t$",
+            "$V = I \\times R$",
+            "$P = I \\times V$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 9.6,
+          "tolerance": 0.01,
+          "markScheme": [
+            "1 mark: Correct equation selected + correct substitution: $2400 = I \\times 250$",
+            "1 mark: Correct rearrangement: $I = \\frac{2400}{250}$",
+            "1 mark: Correct final answer: **9.6 A**"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "cpdr4",
+      "topic": "Current, Potential Difference and Resistance",
+      "title": "Lamps connected in parallel",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "gap-fill",
+          "text": "A student investigated how the current in a circuit varied with the number of lamps connected in parallel in the circuit. Figure 1 shows the circuit with three identical lamps connected in parallel. Figure 2 shows the results.\n\nComplete the sentences. Choose answers from the box. Each answer can be used once, more than once or not at all.",
+          "marks": 3,
+          "segments": [
+            "As the number of lamps increased, the current ",
+            { "blank": 0 },
+            ". As the number of lamps increased, the total resistance of the circuit ",
+            { "blank": 1 },
+            ". As the number of lamps increased, the potential difference across the battery ",
+            { "blank": 2 },
+            "."
+          ],
+          "wordBank": ["decreased", "stayed the same", "increased"],
+          "correctAnswers": ["increased", "decreased", "stayed the same"],
+          "markScheme": [
+            "1 mark: increased",
+            "1 mark: decreased",
+            "1 mark: stayed the same"
+          ],
+          "diagrams": ["cpdr-q4-fig1.jpeg", "cpdr-q4-fig2.jpeg"]
+        },
+        {
+          "partLabel": "b",
+          "type": "single-choice",
+          "text": "When there were three lamps in the circuit the ammeter reading kept changing between 0.35 A and 0.36 A. What type of error would this lead to?",
+          "marks": 1,
+          "options": ["Random error", "Systematic error", "Zero error"],
+          "correctAnswer": 0,
+          "markScheme": ["1 mark: Answer: A \u2014 Random error"],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "table-fill",
+          "text": "Figure 3 shows a circuit with five ammeters and three identical lamps.\n\nComplete the table below to show the readings on ammeters A2 and A5.",
+          "marks": 2,
+          "headers": ["Ammeter", "A1", "A2", "A3", "A4", "A5"],
+          "rows": [
+            { "cells": ["Current in amps", "0.36", { "blank": 0 }, "0.12", "0.12", { "blank": 1 }] }
+          ],
+          "correctAnswers": ["0.12", "0.36"],
+          "markScheme": [
+            "1 mark: A2 = **0.12** (A)",
+            "1 mark: A5 = **0.36** (A)"
+          ],
+          "diagrams": ["cpdr-q4-fig3.jpeg"]
+        },
+        {
+          "partLabel": "d",
+          "type": "calculation",
+          "text": "The resistance of one lamp is 15 \u03A9. The current in the lamp is 0.12 A. Calculate the power output of the lamp.\n\nUse the equation: $P = I^2 \\times R$",
+          "marks": 2,
+          "equations": [
+            "$P = I^2 \\times R$",
+            "$P = I \\times V$",
+            "$E = Q \\times V$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 0.216,
+          "tolerance": 0.01,
+          "markScheme": [
+            "1 mark: Correct equation selected + correct substitution: $P = 0.12^2 \\times 15$",
+            "1 mark: Correct final answer: **0.216 W**"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "cpdr5",
+      "topic": "Current, Potential Difference and Resistance",
+      "title": "Resistance of wires",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "short-answer",
+          "text": "A student measured the resistance of four wires. The table below shows the data.\n\n<table><tr><th>Wire</th><th>Type of metal</th><th>Length in cm</th><th>Diameter in mm</th><th>Resistance in \u03A9</th></tr><tr><td>J</td><td>copper</td><td>50</td><td>0.17</td><td>0.36</td></tr><tr><td>K</td><td>copper</td><td>50</td><td>0.30</td><td>0.12</td></tr><tr><td>L</td><td>copper</td><td>100</td><td>0.30</td><td>0.24</td></tr><tr><td>M</td><td>constantan</td><td>100</td><td>0.30</td><td>7.00</td></tr></table>\n\nThe last column of the table should include the unit of resistance. What is the unit of resistance?",
+          "marks": 1,
+          "acceptedAnswers": ["ohm", "ohms", "\u03A9"],
+          "markScheme": ["1 mark: **ohm** / **\u03A9**"],
+          "diagrams": []
+        },
+        {
+          "partLabel": "b",
+          "type": "select-and-explain",
+          "text": "The resistance of a wire depends on many factors. Which two wires from J, K, L and M show that the resistance of a wire depends on the length of the wire? Give a reason for your answer.",
+          "marks": 2,
+          "options": ["J and K", "J and L", "K and L", "L and M"],
+          "correctAnswer": 2,
+          "explanationPrompt": "Give a reason for your answer.",
+          "markScheme": [
+            "1 mark: Correct answer: **K and L**",
+            "1 mark: Only the **length** varies between K and L (the type of metal and diameter are the same)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "A student looked at the data in the table and wrote this conclusion: 'The resistance of a wire depends on the type of metal from which the wire is made.' The student could not be certain that her conclusion is true for all types of metal. Suggest what extra data is needed for the student to be more certain that the conclusion is correct.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Measure the resistance of more wires made from **different metals** (accept: test more types of metals)"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "cpdr6",
+      "topic": "Current, Potential Difference and Resistance",
+      "title": "Ohmic conductors and filament lamps",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "gap-fill",
+          "text": "Complete the sentence. Choose answers from the box.",
+          "marks": 2,
+          "segments": [
+            "The current through an ohmic conductor is directly proportional to the ",
+            { "blank": 0 },
+            " across the component, provided that the ",
+            { "blank": 1 },
+            " remains constant."
+          ],
+          "wordBank": ["charge", "potential difference", "power", "temperature", "time"],
+          "correctAnswers": ["potential difference", "temperature"],
+          "markScheme": [
+            "1 mark: potential difference",
+            "1 mark: temperature"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "Figure 1 shows a current \u2212 potential difference graph for a filament lamp.\n\nExplain how the resistance of a filament lamp changes as the potential difference across it increases.",
+          "marks": 3,
+          "markScheme": [
+            "1 mark: The **current increases** when the potential difference increases",
+            "1 mark: This causes the **temperature** of the filament to **increase**",
+            "1 mark: So the **resistance increases**"
+          ],
+          "diagrams": ["cpdr-q12-fig1.jpeg"]
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "Many householders are replacing their filament lamps with LED lamps which are more energy efficient. What does more energy efficient mean?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: A higher **proportion** / **percentage** of the total power / energy input is **usefully transferred** (accept: higher useful output for the same input)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "d",
+          "type": "extended-written",
+          "text": "A Light Dependent Resistor (LDR) is used to turn on an outside lamp when it gets dark. Part of the circuit is shown in Figure 2.\n\nThe light intensity decreases. What happens to the potential difference across the LDR and the current in the LDR?",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: The potential difference across the LDR **increases**",
+            "1 mark: The current in the LDR **decreases**"
+          ],
+          "diagrams": ["cpdr-q12-fig2.jpeg"]
+        },
+        {
+          "partLabel": "e",
+          "type": "select-and-explain",
+          "text": "What is the resistance of the LDR when the potential difference across it is 4 V? The LDR is in series with a 2000 \u03A9 fixed resistor and a 12 V battery. Explain your answer.",
+          "marks": 2,
+          "options": ["500 \u03A9", "1000 \u03A9", "2000 \u03A9", "4000 \u03A9"],
+          "correctAnswer": 1,
+          "explanationPrompt": "Explain your answer.",
+          "markScheme": [
+            "1 mark: Correct answer: **1000 \u03A9**",
+            "1 mark: The potential difference is **shared in proportion** to the resistance (e.g. if pd across LDR is 4 V, pd across fixed resistor is 8 V, ratio is 4:8 = 1:2, so LDR resistance is half of 2000 \u03A9)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "f",
+          "type": "calculation",
+          "text": "Calculate the current through the LDR when the resistance of the LDR is 5000 \u03A9. The LDR is in series with a 2000 \u03A9 fixed resistor and a 12 V battery. Give your answer to 2 significant figures.",
+          "marks": 4,
+          "equations": [
+            "$V = I \\times R$",
+            "$P = I \\times V$",
+            "$P = I^2 \\times R$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 0.0017,
+          "tolerance": 0.03,
+          "markScheme": [
+            "1 mark: Correct calculation of total resistance: $R_{total} = 5000 + 2000 = $ **7000 \u03A9**",
+            "1 mark: Correct equation selected + correct substitution: $12 = I \\times 7000$",
+            "1 mark: Correct rearrangement: $I = \\frac{12}{7000}$",
+            "1 mark: Correct final answer to 2 significant figures: **0.0017 A** (or $1.7 \\times 10^{-3}$ A)"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "cpdr7",
+      "topic": "Current, Potential Difference and Resistance",
+      "title": "Filament bulb and LED comparison",
+      "difficulty": "hard",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "short-answer",
+          "text": "The diagram shows the circuit used to obtain the data needed to plot the current\u2013potential difference graph for a filament bulb.\n\nWhy is the component labelled 'J' included in the circuit?",
+          "marks": 1,
+          "acceptedAnswers": ["to obtain a range of pd values", "to change the current", "to change the potential difference", "to vary the current", "to vary the potential difference", "to change the pd", "to vary the pd", "to control the current", "to control the potential difference", "to increase or decrease the current", "to change the voltage", "to vary the voltage", "to control the voltage"],
+          "markScheme": ["1 mark: To obtain a range of **potential difference** values (accept: to change / vary / control the current or potential difference)"],
+          "diagrams": ["cpdr-q6-fig1.png"]
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "The resistance of the bulb increases as the potential difference across the bulb increases. Why?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: The **temperature** of the bulb increases (accept: the bulb gets hotter / collisions between free electrons and ions increase)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "calculation",
+          "text": "The bulb is at full brightness when the potential difference across the bulb is 12 V. The current through the bulb is then 3 A. Calculate the power of the bulb when it is at full brightness.",
+          "marks": 2,
+          "equations": [
+            "$P = I \\times V$",
+            "$P = I^2 \\times R$",
+            "$V = I \\times R$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 36,
+          "tolerance": 0.01,
+          "markScheme": [
+            "1 mark: Correct equation selected + correct substitution: $P = 3 \\times 12$",
+            "1 mark: Correct final answer: **36 W**"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "d",
+          "type": "short-answer",
+          "text": "Give the unit of power.",
+          "marks": 1,
+          "acceptedAnswers": ["watt", "watts", "W", "joules per second", "J/s"],
+          "markScheme": ["1 mark: **Watt** / **W** (accept joules per second / J/s)"],
+          "diagrams": []
+        },
+        {
+          "partLabel": "e",
+          "type": "extended-written-levels",
+          "text": "The table gives data about two types of light bulb people may use in their homes. Both types of light bulb produce the same amount of light.<table><tr><th>Type of light bulb</th><th>Energy efficiency</th><th>Cost of one light bulb</th><th>Average lifetime in hours</th></tr><tr><td>Halogen</td><td>10%</td><td>\u00a31.95</td><td>2 000</td></tr><tr><td>Light Emitting Diode (LED)</td><td>32%</td><td>\u00a311.70</td><td>36 000</td></tr></table>Evaluate, in terms of cost and energy efficiency, the use of the two types of light bulb. You should compare both types of light bulb and conclude which light bulb would be the best to use.",
+          "marks": 6,
+          "markScheme": [
+            "1 mark: **Halogen** bulbs are **cheaper to buy** than LED bulbs",
+            "1 mark: 6 halogen lamps cost the same as one LED (\u00a311.70)",
+            "1 mark: **LEDs last longer** (36 000 hours vs 2 000 hours for halogen)",
+            "1 mark: You would need to buy **18 halogen** lamps to last the same time as one LED (36 000 \u00f7 2 000 = 18), costing \u00a335.10",
+            "1 mark: It costs **more to run** a halogen bulb than an LED (higher running cost)",
+            "1 mark: LED works using a **smaller current** / wastes **less energy**",
+            "1 mark: LEDs are **more energy efficient** (32% vs 10%)",
+            "1 mark: LED is **22% more energy efficient** than halogen",
+            "1 mark: LED produces **less heat** / requires a smaller input power for the same light output",
+            "1 mark: Overall, **LED** bulbs are better to use because they are more energy efficient and cheaper in the long run despite the higher initial cost"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "cpdr8",
+      "topic": "Current, Potential Difference and Resistance",
+      "title": "Investigating resistance and wire length",
+      "difficulty": "hard",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written-levels",
+          "text": "A student investigated how the resistance of a piece of nichrome wire varies with length. The circuit contains a battery, a switch, the nichrome wire, an ammeter in series with the wire, and a voltmeter connected in parallel across the wire.\n\nDescribe how the student would obtain the data needed for the investigation. Your answer should include a risk assessment for one hazard in the investigation.",
+          "marks": 6,
+          "markScheme": [
+            "1 mark: **Length** of the wire is measured (e.g. using a ruler / metre rule)",
+            "1 mark: Length of the wire is **varied** (e.g. by moving the contact point along the wire)",
+            "1 mark: **Current** is measured using the ammeter",
+            "1 mark: **Potential difference** is measured using the voltmeter",
+            "1 mark: Take **repeat readings** and calculate a mean",
+            "1 mark: Calculate **resistance** for each length using $R = \\frac{V}{I}$",
+            "1 mark: Plot a graph of **resistance against length**",
+            "1 mark: Hazard: **high current** may cause the wire to overheat / melt",
+            "1 mark: Risk: may cause **burns** to the skin",
+            "1 mark: Control: use **low currents** / switch off between readings"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "b",
+          "type": "single-choice",
+          "text": "Why would switching off the circuit between readings have improved the accuracy of the student's investigation?",
+          "marks": 1,
+          "options": [
+            "The charge flow through the wire would not change.",
+            "The potential difference of the battery would not increase.",
+            "The power output of the battery would not increase.",
+            "The temperature of the wire would not change."
+          ],
+          "correctAnswer": 3,
+          "markScheme": ["1 mark: Answer: D \u2014 The temperature of the wire would not change"],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "multi-choice",
+          "text": "The student used crocodile clips to make connections to the wire. They could have used a piece of equipment called a 'jockey'. Figure 2 shows a crocodile clip and a jockey in contact with a wire.\n\nHow would using the jockey have affected the accuracy and resolution of the student's results compared to using the crocodile clip? Select two correct statements.",
+          "marks": 2,
+          "options": [
+            "The accuracy of the student's results would be higher.",
+            "The accuracy of the student's results would be lower.",
+            "The accuracy of the student's results would be the same.",
+            "The resolution of the length measurement would be higher.",
+            "The resolution of the length measurement would be lower.",
+            "The resolution of the length measurement would be the same."
+          ],
+          "correctAnswers": [0, 3],
+          "selectCount": 2,
+          "scoring": "all-or-nothing",
+          "markScheme": [
+            "1 mark: The accuracy of the student's results would be **higher**",
+            "1 mark: The resolution of the length measurement would be **higher**"
+          ],
+          "diagrams": ["cpdr-q8-fig2.jpeg"]
+        }
+      ]
+    },
+    {
+      "id": "cpdr9",
+      "topic": "Current, Potential Difference and Resistance",
+      "title": "Hairdryer circuit calculations",
+      "difficulty": "hard",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "In a hairdryer circuit there is a heater and a motor connected in series. Modern hairdryers are described as double insulated. Explain what this term means.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: The case or outer parts are made of **plastic** / an **insulator** / non-metallic material",
+            "1 mark: There is **no electrical pathway** between the inner (live) parts and the outer casing (accept: no connection between inner and outer parts)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "b",
+          "type": "equation-choice",
+          "text": "On a modern hairdryer handle it states: 1600 W, 230 V, 50 Hz.\n\nWrite an equation which shows the relationship between current, power and voltage.",
+          "marks": 1,
+          "options": [
+            "$P = I \\times V$",
+            "$V = I \\times R$",
+            "$E = Q \\times V$",
+            "$Q = I \\times t$"
+          ],
+          "correctAnswer": 0,
+          "markScheme": ["1 mark: Answer: A \u2014 $P = I \\times V$"],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "calculation",
+          "text": "Calculate the current in the hairdryer when it is on full power (1600 W, 230 V).",
+          "marks": 2,
+          "equations": [
+            "$P = I \\times V$",
+            "$V = I \\times R$",
+            "$E = Q \\times V$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 6.96,
+          "tolerance": 0.02,
+          "markScheme": [
+            "1 mark: Correct equation selected + correct substitution: $1600 = I \\times 230$",
+            "1 mark: Correct final answer: **6.96 A** (accept 6.95 or 7)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "d",
+          "type": "equation-choice",
+          "text": "Write an equation which shows the relationship between current, resistance and voltage.",
+          "marks": 1,
+          "options": [
+            "$V = I \\times R$",
+            "$P = I \\times V$",
+            "$Q = I \\times t$",
+            "$E = Q \\times V$"
+          ],
+          "correctAnswer": 0,
+          "markScheme": ["1 mark: Answer: A \u2014 $V = I \\times R$"],
+          "diagrams": []
+        },
+        {
+          "partLabel": "e",
+          "type": "calculation",
+          "text": "The heater and motor in the hairdryer are connected in series. The total current through the hairdryer is approximately 6.96 A at 230 V. The resistance of the heater is 20 ohms. Calculate the resistance of the motor.",
+          "marks": 2,
+          "equations": [
+            "$V = I \\times R$",
+            "$P = I \\times V$",
+            "$P = I^2 \\times R$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 13,
+          "tolerance": 0.05,
+          "markScheme": [
+            "1 mark: Correct equation selected + correct substitution: Total $R = \\frac{230}{6.96} = 33\\,\\Omega$",
+            "1 mark: Correct final answer: Motor resistance $= 33 - 20 =$ **13 \u03A9**"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "cpdr10",
+      "topic": "Current, Potential Difference and Resistance",
+      "title": "Mains lamp filament",
+      "difficulty": "hard",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "calculation",
+          "text": "When a mains lamp is switched on it takes 0.5 seconds for the filament to reach its normal operating temperature. The graph shows how the current changes during the first second after switching on. Mains voltage is 240 V.\n\nCalculate the resistance of the filament whilst the lamp is drawing the maximum current.",
+          "marks": 3,
+          "equations": [
+            "$V = I \\times R$",
+            "$P = I \\times V$",
+            "$P = I^2 \\times R$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 600,
+          "tolerance": 0.01,
+          "markScheme": [
+            "1 mark: Correct equation selected + correct substitution: $240 = 0.4 \\times R$",
+            "1 mark: Correct rearrangement: $R = \\frac{240}{0.4}$",
+            "1 mark: Correct final answer: **600 \u03A9**"
+          ],
+          "diagrams": ["cpdr-q10-fig1.png"]
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "Describe how the resistance of the lamp changes after the current has reached its maximum value.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: The resistance **doubles** (from 600 \u03A9 to 1200 \u03A9)",
+            "1 mark: The resistance **increases** as the filament heats up (accept: gets bigger)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "calculation",
+          "text": "Calculate the maximum power taken by the lamp.",
+          "marks": 2,
+          "equations": [
+            "$P = I \\times V$",
+            "$V = I \\times R$",
+            "$Q = I \\times t$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 96,
+          "tolerance": 0.01,
+          "markScheme": [
+            "1 mark: Correct equation selected + correct substitution: $P = 0.4 \\times 240$",
+            "1 mark: Correct final answer: **96 W**"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "d",
+          "type": "calculation",
+          "text": "Calculate the power of the lamp in normal use.",
+          "marks": 2,
+          "equations": [
+            "$P = I \\times V$",
+            "$V = I \\times R$",
+            "$P = I^2 \\times R$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 48,
+          "tolerance": 0.01,
+          "markScheme": [
+            "1 mark: Correct equation selected + correct substitution: $P = 0.2 \\times 240$",
+            "1 mark: Correct final answer: **48 W**"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "e",
+          "type": "calculation",
+          "text": "Calculate the energy used by the lamp in six hours of normal use.",
+          "marks": 3,
+          "equations": [
+            "$E = P \\times t$",
+            "$P = I \\times V$",
+            "$Q = I \\times t$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 1036800,
+          "tolerance": 0.01,
+          "markScheme": [
+            "1 mark: Correct equation selected + correct substitution: $E = 48 \\times 6 \\times 3600$ (or $E = 48 \\times 21600$)",
+            "1 mark: Correct unit conversion: 6 hours = **21 600 s**",
+            "1 mark: Correct final answer: **1 036 800 J**"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "cpdr11",
+      "topic": "Current, Potential Difference and Resistance",
+      "title": "Combination microwave oven",
+      "difficulty": "hard",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "calculation",
+          "text": "The following specification is taken from the instruction booklet of a combination microwave oven.<table><tr><th>AC voltage</th><td>240 V, 50 Hz</td></tr><tr><th>Power required</th><td></td></tr><tr><td>Microwave</td><td>1.5 kW</td></tr><tr><td>Dual (Roast/Bake)</td><td>2.8 kW</td></tr><tr><td>Dual (Grill)</td><td>2.5 kW</td></tr><tr><td>Convection</td><td>1.35 kW</td></tr><tr><td>Grill</td><td>2.3 kW</td></tr><tr><th>Output power</th><td></td></tr><tr><td>Microwave</td><td>850 W</td></tr><tr><td>Convection heater</td><td>1350 W</td></tr><tr><td>Grill heater</td><td>1000 W</td></tr></table>\n\nWhat is the current when the oven is being used to cook in the dual (roast/bake) mode? The power required in dual (roast/bake) mode is 2.8 kW.",
+          "marks": 2,
+          "equations": [
+            "$P = I \\times V$",
+            "$V = I \\times R$",
+            "$E = P \\times t$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 11.67,
+          "tolerance": 0.03,
+          "markScheme": [
+            "1 mark: Correct equation selected + correct substitution: $2800 = I \\times 240$",
+            "1 mark: Correct final answer: **11.67 A** (accept 11.6 to 12)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "b",
+          "type": "calculation",
+          "text": "Calculate the resistance of this combination microwave oven when it is being used in the dual (roast/bake) mode. The current is approximately 11.67 A and the voltage is 240 V.",
+          "marks": 2,
+          "equations": [
+            "$V = I \\times R$",
+            "$P = I \\times V$",
+            "$P = I^2 \\times R$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 20.6,
+          "tolerance": 0.05,
+          "markScheme": [
+            "1 mark: Correct equation selected + correct substitution: $R = \\frac{240}{11.67}$",
+            "1 mark: Correct final answer: **20.6 \u03A9** (accept 20 to 21)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "short-answer",
+          "text": "Give the unit of resistance.",
+          "marks": 1,
+          "acceptedAnswers": ["ohm", "ohms", "\u03A9"],
+          "markScheme": ["1 mark: **ohm** / **\u03A9**"],
+          "diagrams": []
+        },
+        {
+          "partLabel": "d",
+          "type": "calculation",
+          "text": "What is the percentage efficiency of the oven when it is working in the microwave mode? The power required (input) for microwave mode is 1.5 kW (1500 W) and the microwave output power is 850 W.",
+          "marks": 2,
+          "equations": [
+            "$\\text{efficiency} = \\frac{\\text{useful output}}{\\text{total input}} \\times 100$",
+            "$P = I \\times V$",
+            "$E = P \\times t$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 56.7,
+          "tolerance": 0.02,
+          "markScheme": [
+            "1 mark: Correct equation selected + correct substitution: $\\frac{850}{1500} \\times 100$",
+            "1 mark: Correct final answer: **56.7 %**"
+          ],
+          "diagrams": []
+        }
+      ]
+    }
+  ]
+}

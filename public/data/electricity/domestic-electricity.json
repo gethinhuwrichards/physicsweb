@@ -1,0 +1,786 @@
+{
+  "subtopic": "Domestic Uses of Electricity",
+  "mainTopic": "Electricity",
+  "questions": [
+    {
+      "id": "dom-elec1",
+      "topic": "Domestic Uses of Electricity",
+      "title": "Oscilloscope traces, series and parallel lamps",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "calculation",
+          "text": "Figure 1 shows the oscilloscope trace an alternating current (a.c.) electricity supply produces. One vertical division on the oscilloscope screen represents 5 volts. Calculate the peak potential difference of the electricity supply.",
+          "marks": 2,
+          "equations": [
+            "$\\text{peak p.d.} = \\text{divisions} \\times \\text{volts per division}$",
+            "$V = I R$",
+            "$P = I V$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 20,
+          "tolerance": 0.01,
+          "markScheme": [
+            "1 mark: Correct substitution: $4 \\times 5$",
+            "1 mark: Correct final answer: **20 V**"
+          ],
+          "diagrams": ["dom-elec-q1-fig1.png"]
+        },
+        {
+          "partLabel": "b",
+          "type": "gap-fill",
+          "text": "Complete the sentence. Choose the answer from the box.",
+          "marks": 1,
+          "segments": [
+            "In the UK, the frequency of the a.c. mains electricity supply is ",
+            { "blank": 0 },
+            " hertz."
+          ],
+          "wordBank": ["40", "50", "60"],
+          "correctAnswers": ["50"],
+          "markScheme": [
+            "1 mark: 50"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "calculation",
+          "text": "Figure 2 shows how two lamps may be connected in series or in parallel to the 230 volt mains electricity supply. Calculate the potential difference across each lamp when the lamps are connected in series. The lamps are identical.",
+          "marks": 2,
+          "equations": [
+            "$V_{\\text{each}} = \\frac{V_{\\text{total}}}{n}$",
+            "$V = I R$",
+            "$P = I V$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 115,
+          "tolerance": 0.01,
+          "markScheme": [
+            "1 mark: Correct substitution: $\\frac{230}{2}$",
+            "1 mark: Correct final answer: **115 V**"
+          ],
+          "diagrams": ["dom-elec-q1-fig2.png"]
+        },
+        {
+          "partLabel": "d",
+          "type": "single-choice",
+          "text": "Two identical lamps are connected in parallel to the 230 volt mains electricity supply. What is the potential difference across each lamp?",
+          "marks": 1,
+          "options": ["115 V", "230 V", "460 V"],
+          "correctAnswer": 1,
+          "markScheme": [
+            "1 mark: Answer: B - 230 V (in parallel, each lamp gets the full supply voltage)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "e",
+          "type": "short-answer",
+          "text": "Give one advantage of connecting the lamps in parallel instead of in series.",
+          "marks": 1,
+          "acceptedAnswers": ["if one goes out the other still works", "one can fail without affecting the other", "brighter", "they are brighter", "greater power output", "can be switched independently"],
+          "markScheme": [
+            "1 mark: If one goes out the other still works / **brighter** / power output is greater"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "f",
+          "type": "extended-written",
+          "text": "Figure 3 shows the light fitting used to connect a filament light bulb to the mains electricity supply. The light fitting does not have an earth wire connected. Explain why the light fitting is safe to use.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: The outside / casing is **plastic**",
+            "1 mark: Plastic is an **insulator** (accept: the light fitting is **double insulated**)"
+          ],
+          "diagrams": ["dom-elec-q1-fig3.png"]
+        },
+        {
+          "partLabel": "g",
+          "type": "short-answer",
+          "text": "A fuse can be used to protect an electrical circuit. Name a different device that can also be used to protect an electrical circuit.",
+          "marks": 1,
+          "acceptedAnswers": ["residual current circuit breaker", "RCCB", "RCBO", "RCCD", "RCB", "circuit breaker", "miniature circuit breaker", "MCB"],
+          "markScheme": [
+            "1 mark: **(Residual current) circuit breaker** / RCCB / MCB"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "dom-elec2",
+      "topic": "Domestic Uses of Electricity",
+      "title": "Two-way switches and lamp fitting safety",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "short-answer",
+          "text": "The diagram shows an electric circuit used in a dolls' house. The switches are 2-way switches; this means that each switch has a connecting wire that can be in one of two positions. With the connecting wire in each switch in the position shown in the diagram, the lamp is off. Why?",
+          "marks": 1,
+          "acceptedAnswers": ["circuit not complete", "circuit is broken", "circuit is not complete", "the circuit is broken", "the circuit is not complete", "switches are open", "switch is open"],
+          "markScheme": [
+            "1 mark: The **circuit is not complete** / circuit is broken / switches are open"
+          ],
+          "diagrams": ["dom-elec-q2-fig1.png"]
+        },
+        {
+          "partLabel": "b",
+          "type": "calculation",
+          "text": "When switched on, the lamp in a dolls' house circuit has a resistance of 18 \u03a9 and draws a current of 0.5 A from the power supply. Use the equation: potential difference = current \u00d7 resistance. Calculate the potential difference of the power supply.",
+          "marks": 2,
+          "equations": [
+            "$V = I \\times R$",
+            "$P = I \\times V$",
+            "$E = Q \\times V$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 9,
+          "tolerance": 0.01,
+          "markScheme": [
+            "1 mark: Correct substitution: $V = 0.5 \\times 18$",
+            "1 mark: Correct final answer: **9 V**"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "calculation",
+          "text": "A second, identical lamp (resistance 18 \u03a9) is added to the dolls' house circuit. The two lamps are joined in series. Calculate the total resistance of the two lamps.",
+          "marks": 2,
+          "equations": [
+            "$R_{\\text{total}} = R_1 + R_2$",
+            "$\\frac{1}{R_{\\text{total}}} = \\frac{1}{R_1} + \\frac{1}{R_2}$",
+            "$V = I R$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 36,
+          "tolerance": 0.01,
+          "markScheme": [
+            "1 mark: Correct substitution: $R_{\\text{total}} = 18 + 18$",
+            "1 mark: Correct final answer: **36 \u03a9**"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "d",
+          "type": "short-answer",
+          "text": "Two-way switch circuits are used in real houses, with one switch at the top of the stairs and another at the bottom. What is the advantage of using this circuit rather than a simple circuit with only one switch?",
+          "marks": 1,
+          "acceptedAnswers": ["can be switched on or off from top or bottom of stairs", "can switch from either end", "can turn on or off from two locations", "can control the light from two places", "can switch on or off from either switch"],
+          "markScheme": [
+            "1 mark: Can be switched **on or off** from the **top or bottom** of the stairs"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "e",
+          "type": "short-answer",
+          "text": "The diagram shows an old type of metal lamp fitting. The cable has been connected to the lamp fitting in a way that makes the lamp fitting unsafe. What is the possible risk to someone touching the lamp fitting while the lamp is switched on?",
+          "marks": 1,
+          "acceptedAnswers": ["electric shock", "shock", "electrocution", "death", "fitting becomes live"],
+          "markScheme": [
+            "1 mark: **(Electric) shock** / fitting becomes live / electrocution"
+          ],
+          "diagrams": ["dom-elec-q2-fig2.png"]
+        },
+        {
+          "partLabel": "f",
+          "type": "short-answer",
+          "text": "What should be done to make an unsafe metal lamp fitting safe to use?",
+          "marks": 1,
+          "acceptedAnswers": ["connect the earth wire", "connect an earth wire", "earth wire", "add an earth wire"],
+          "markScheme": [
+            "1 mark: Connect the **earth wire**"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "dom-elec3",
+      "topic": "Domestic Uses of Electricity",
+      "title": "Overloaded adaptors",
+      "difficulty": "easy",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "The picture shows two adaptors being used to plug five electrical appliances into the same socket. Explain why it is dangerous to have all five appliances switched on and working at the same time.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Too much **current** flows through the socket / socket is **overloaded**",
+            "1 mark: The wiring / socket gets **hot** / risk of **fire**"
+          ],
+          "diagrams": ["dom-elec-q3-fig2.png"]
+        }
+      ]
+    },
+    {
+      "id": "dom-elec4",
+      "topic": "Domestic Uses of Electricity",
+      "title": "Three-pin plugs and electrical safety",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "gap-fill",
+          "text": "Complete the sentence. Choose the correct answer from the box.",
+          "marks": 1,
+          "segments": [
+            "Electric current is the rate of flow of ",
+            { "blank": 0 },
+            "."
+          ],
+          "wordBank": ["charge", "energy", "power"],
+          "correctAnswers": ["charge"],
+          "markScheme": [
+            "1 mark: charge"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "b",
+          "type": "short-answer",
+          "text": "The diagram shows a three-pin plug connected to a three-core cable. The three wires of the three-core cable have different coloured coverings. State the colour of the covering of the neutral wire.",
+          "marks": 1,
+          "acceptedAnswers": ["blue"],
+          "markScheme": [
+            "1 mark: **Blue**"
+          ],
+          "diagrams": ["dom-elec-q4-fig1.png"]
+        },
+        {
+          "partLabel": "c",
+          "type": "multi-choice",
+          "text": "Which two parts of a three-pin plug protect the wiring of a circuit?",
+          "marks": 2,
+          "options": ["Earth wire", "Fuse", "Live wire", "Neutral wire"],
+          "correctAnswers": [0, 1],
+          "selectCount": 2,
+          "scoring": "all-or-nothing",
+          "markScheme": [
+            "1 mark: Earth wire",
+            "1 mark: Fuse"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "d",
+          "type": "short-answer",
+          "text": "Some electrical appliances are connected to the mains supply using a two-core cable. Appliances that are double insulated do not require all three wires. What does 'double insulated' mean?",
+          "marks": 1,
+          "acceptedAnswers": ["case is non-metal", "case is plastic", "case is an insulator", "outer case is plastic", "case is not made of metal", "case is non-conducting"],
+          "markScheme": [
+            "1 mark: The **case** is made of a **non-metal** / non-conducting material / plastic / insulator"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "e",
+          "type": "short-answer",
+          "text": "Appliances that are double insulated do not require all three wires. State which of the three wires is not required.",
+          "marks": 1,
+          "acceptedAnswers": ["earth", "earth wire", "the earth wire"],
+          "markScheme": [
+            "1 mark: **Earth** (wire)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "f",
+          "type": "calculation",
+          "text": "An electrical appliance is connected to a 20 V supply. The current in the appliance is 3 A. Calculate the power of the appliance.",
+          "marks": 2,
+          "equations": [
+            "$P = I \\times V$",
+            "$V = I \\times R$",
+            "$E = Q \\times V$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 60,
+          "tolerance": 0.01,
+          "markScheme": [
+            "1 mark: Correct substitution: $P = 3 \\times 20$",
+            "1 mark: Correct final answer: **60 W**"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "g",
+          "type": "calculation",
+          "text": "Another electrical appliance is connected to a 20 V supply. The appliance transfers 300 J of energy. Calculate the charge. Give the unit.",
+          "marks": 3,
+          "equations": [
+            "$E = Q \\times V$",
+            "$P = I \\times V$",
+            "$V = I \\times R$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 15,
+          "tolerance": 0.01,
+          "markScheme": [
+            "1 mark: Correct substitution: $300 = Q \\times 20$",
+            "1 mark: Correct rearrangement: $Q = \\frac{300}{20}$",
+            "1 mark: Correct final answer: **15 C** (coulombs)"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "dom-elec5",
+      "topic": "Domestic Uses of Electricity",
+      "title": "Radio power supply and circuit protection",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "short-answer",
+          "text": "Figure 1 shows a radio. The radio can be powered by connecting the two-core cable to the mains electricity supply. What must be fitted to the cable before it can be connected to the mains electricity supply?",
+          "marks": 1,
+          "acceptedAnswers": ["plug", "3-pin plug", "three-pin plug", "a plug", "a 3-pin plug"],
+          "markScheme": [
+            "1 mark: A **(3-pin) plug**"
+          ],
+          "diagrams": ["dom-elec-q5-fig1.png"]
+        },
+        {
+          "partLabel": "b",
+          "type": "single-choice",
+          "text": "The radio's cable has only two wires inside. What are the names of the two wires?",
+          "marks": 1,
+          "options": ["Earth and live", "Earth and neutral", "Live and neutral"],
+          "correctAnswer": 2,
+          "markScheme": [
+            "1 mark: Answer: C - Live and neutral"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "gap-fill",
+          "text": "Complete the sentence. Choose the correct answer from the box.",
+          "marks": 1,
+          "segments": [
+            "It is safe to connect the radio to the mains electricity supply using a two-core cable because the radio is ",
+            { "blank": 0 },
+            " insulated."
+          ],
+          "wordBank": ["double", "extra", "fully"],
+          "correctAnswers": ["double"],
+          "markScheme": [
+            "1 mark: double"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "d",
+          "type": "single-choice",
+          "text": "The radio can also be powered by a battery. What type of current does a battery supply?",
+          "marks": 1,
+          "options": ["Alternating current (a.c.) only", "Direct current (d.c.) only", "Both a.c. and d.c."],
+          "correctAnswer": 1,
+          "markScheme": [
+            "1 mark: Answer: B - Direct current (d.c.) only"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "e",
+          "type": "gap-fill",
+          "text": "Figure 2 shows a fuse and a circuit breaker. Fuses and circuit breakers are able to disconnect and switch off circuits. Complete the sentence. Choose the correct answer from the box.",
+          "marks": 1,
+          "segments": [
+            "A fuse or a circuit breaker is connected to the ",
+            { "blank": 0 },
+            " wire in a circuit."
+          ],
+          "wordBank": ["earth", "live", "neutral"],
+          "correctAnswers": ["live"],
+          "markScheme": [
+            "1 mark: live"
+          ],
+          "diagrams": ["dom-elec-q5-fig4.png"]
+        },
+        {
+          "partLabel": "f",
+          "type": "short-answer",
+          "text": "What happens to cause a fuse or circuit breaker to disconnect a circuit?",
+          "marks": 1,
+          "acceptedAnswers": ["too great a current flows", "too much current", "a surge of current", "current is too high", "too great a current", "an electrical fault", "current exceeds the rating"],
+          "markScheme": [
+            "1 mark: Too great a **current** flows / a surge of current / an electrical fault"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "g",
+          "type": "extended-written",
+          "text": "Suggest two advantages of using a circuit breaker to disconnect a circuit compared with using a fuse.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Can be **reset** / does not need replacing",
+            "1 mark: Disconnects the circuit **faster**"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "dom-elec6",
+      "topic": "Domestic Uses of Electricity",
+      "title": "Adaptor, appliance currents and electrical safety",
+      "difficulty": "hard",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "calculation",
+          "text": "An adaptor can be used to connect up to four appliances in parallel to one 230 V mains socket. The adaptor is fitted with a 13 A fuse. The table shows the current each appliance draws.<table><tr><th>Appliance</th><th>Current</th></tr><tr><td>Computer</td><td>1 A</td></tr><tr><td>Hairdryer</td><td>4 A</td></tr><tr><td>Heater</td><td>8 A</td></tr><tr><td>Iron</td><td>6 A</td></tr><tr><td>Television</td><td>2 A</td></tr></table>What current will flow to the adaptor when the television, computer and hairdryer are plugged into the adaptor?",
+          "marks": 2,
+          "equations": [
+            "$I_{\\text{total}} = I_1 + I_2 + I_3$",
+            "$P = I \\times V$",
+            "$V = I \\times R$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 7,
+          "tolerance": 0.01,
+          "markScheme": [
+            "1 mark: Correct substitution: $I = 2 + 1 + 4$",
+            "1 mark: Correct final answer: **7 A**"
+          ],
+          "diagrams": ["dom-elec-q6-fig1.png"]
+        },
+        {
+          "partLabel": "b",
+          "type": "equation-choice",
+          "text": "Write down the equation which links current, electrical power and voltage.",
+          "marks": 1,
+          "options": [
+            "$P = I \\times V$",
+            "$V = I \\times R$",
+            "$E = Q \\times V$",
+            "$E = P \\times t$"
+          ],
+          "correctAnswer": 0,
+          "markScheme": [
+            "1 mark: Answer: A - $P = I \\times V$"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "calculation",
+          "text": "Calculate the electrical power used when the television (2 A), computer (1 A) and hairdryer (4 A) are plugged into the 230 V adaptor. Give the unit.",
+          "marks": 2,
+          "equations": [
+            "$P = I \\times V$",
+            "$V = I \\times R$",
+            "$E = Q \\times V$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 1610,
+          "tolerance": 0.01,
+          "markScheme": [
+            "1 mark: Correct substitution: $P = 7 \\times 230$",
+            "1 mark: Correct final answer: **1610 W**"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "d",
+          "type": "extended-written",
+          "text": "The adaptor is fitted with a 13 A fuse. The television (2 A), computer (1 A) and hairdryer (4 A) are already plugged in. What would happen to the fuse if the heater (8 A) is also plugged into the adaptor? Give a reason for your answer.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: The fuse **melts** / blows / burns out / breaks",
+            "1 mark: The total current would be **15 A**, which is greater than the **13 A** fuse rating"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "e",
+          "type": "extended-written",
+          "text": "The diagram shows two of the appliances. For safety reasons, it is important that the iron has an earth wire connected to its outer metal case. Explain why.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: If the **live wire** touches the metal **case** / the case becomes live",
+            "1 mark: Current flows to **earth** (through the earth wire) / the **fuse** melts, disconnecting the circuit"
+          ],
+          "diagrams": ["dom-elec-q6-fig2.png"]
+        },
+        {
+          "partLabel": "f",
+          "type": "extended-written",
+          "text": "A hairdryer does not have an earth wire. It is safe to use because it is double insulated. Explain what the term double insulated means.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: The outer **case** is made of an **insulator** / plastic / not made of metal",
+            "1 mark: The **cable** / wires are also **insulated**"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "dom-elec7",
+      "topic": "Domestic Uses of Electricity",
+      "title": "Fuses and RCCBs",
+      "difficulty": "easy",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "gap-fill",
+          "text": "Complete the sentence. Choose the correct answer from the box.",
+          "marks": 1,
+          "segments": [
+            "A fuse is connected in the ",
+            { "blank": 0 },
+            " wire."
+          ],
+          "wordBank": ["earth", "live", "neutral"],
+          "correctAnswers": ["live"],
+          "markScheme": [
+            "1 mark: live"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "b",
+          "type": "gap-fill",
+          "text": "Complete the sentence. Choose the correct answer from the box.",
+          "marks": 1,
+          "segments": [
+            "RCCBs are sometimes preferred to fuses because they ",
+            { "blank": 0 },
+            "."
+          ],
+          "wordBank": ["are bigger", "are cheaper", "react faster"],
+          "correctAnswers": ["react faster"],
+          "markScheme": [
+            "1 mark: react faster"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "gap-fill",
+          "text": "RCCBs operate by detecting a difference in the current between two wires. Complete the sentence. Choose the correct answer from the box.",
+          "marks": 1,
+          "segments": [
+            "The two wires are the ",
+            { "blank": 0 },
+            " wires."
+          ],
+          "wordBank": ["earth and live", "earth and neutral", "live and neutral"],
+          "correctAnswers": ["live and neutral"],
+          "markScheme": [
+            "1 mark: live and neutral"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "dom-elec8",
+      "topic": "Domestic Uses of Electricity",
+      "title": "Electric shock and lawnmower safety",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "An RCD adaptor is an automatic safety switch that is recommended for use with an electric lawnmower. Suggest two reasons why there is a particular risk of an electric shock when using an electric lawnmower.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Risk of **cutting** through the **cable** / wire",
+            "1 mark: The **grass** may be **wet** / it may rain / risk of touching **exposed** parts"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "b",
+          "type": "short-answer",
+          "text": "If something goes wrong with an electric lawnmower, there will be a difference between the current in the live wire and the current in the neutral wire. Why will there be a difference?",
+          "marks": 1,
+          "acceptedAnswers": ["some current will go through the user", "some current flows to earth", "some current goes through the lawnmower to earth", "current flows through the user to earth", "current goes to earth"],
+          "markScheme": [
+            "1 mark: Some current will flow through the lawnmower / user / to **earth**"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "short-answer",
+          "text": "Use the words charge, current and time to write an equation which shows the relationship between them.",
+          "marks": 1,
+          "acceptedAnswers": ["charge = current x time", "charge = current \u00d7 time", "Q = I x t", "Q = It", "Q = I \u00d7 t", "I = Q / t", "I = Q/t", "t = Q / I", "t = Q/I"],
+          "markScheme": [
+            "1 mark: **charge = current \u00d7 time** / $Q = I \\times t$ (or any correct rearrangement)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "d",
+          "type": "calculation",
+          "text": "Calculate how much charge flows when a current of 30 milliamps passes for 40 milliseconds. Give the unit.",
+          "marks": 3,
+          "equations": [
+            "$Q = I \\times t$",
+            "$V = I \\times R$",
+            "$P = I \\times V$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 0.0012,
+          "tolerance": 0.02,
+          "markScheme": [
+            "1 mark: Correct unit conversions: 30 milliamps = **0.03 A** and 40 milliseconds = **0.04 s**",
+            "1 mark: Correct substitution: $Q = 0.03 \\times 0.04$",
+            "1 mark: Correct final answer: **0.0012 C** (coulombs) (accept 1200 \u03bcC or 1.2 mC)"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "dom-elec9",
+      "topic": "Domestic Uses of Electricity",
+      "title": "Undersoil heating circuit",
+      "difficulty": "hard",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "short-answer",
+          "text": "The diagram shows the structure of a cable. The cable is part of an undersoil heating circuit inside a large greenhouse. The cable is connected to the mains electricity supply through a residual current circuit breaker. What is the frequency of the mains electricity supply in the UK?",
+          "marks": 1,
+          "acceptedAnswers": ["50", "50 Hz", "50Hz"],
+          "markScheme": [
+            "1 mark: **50** (Hz)"
+          ],
+          "diagrams": ["dom-elec-q9-fig1.png"]
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "The cable is connected to the mains supply through a residual current circuit breaker (RCCB). If the cable is accidentally cut, the circuit breaker automatically switches the circuit off. What happens, as the cable is cut, to cause the circuit breaker to switch the circuit off?",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Some **current** flows to **earth** / through the earth wire / copper braid",
+            "1 mark: The RCCB detects a **difference** between the current in the **live** and **neutral** wire"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "short-answer",
+          "text": "A circuit can also be switched off by the action of a fuse. Give one advantage of using a circuit breaker to switch off a circuit rather than a fuse.",
+          "marks": 1,
+          "acceptedAnswers": ["can be reset", "does not need replacing", "it can be reset", "faster acting", "switches circuit off faster", "faster", "reusable"],
+          "markScheme": [
+            "1 mark: Can be **reset** / does not need replacing / **faster** acting"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "d",
+          "type": "calculation",
+          "text": "The 230 volt mains electricity supply causes a current of 11 amps to flow through the cable. Calculate the amount of charge that flows through the cable when the cable is switched on for 2 hours. Give the unit.",
+          "marks": 3,
+          "equations": [
+            "$Q = I \\times t$",
+            "$V = I \\times R$",
+            "$P = I \\times V$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 79200,
+          "tolerance": 0.01,
+          "markScheme": [
+            "1 mark: Correct unit conversion: 2 hours = **7200 s**",
+            "1 mark: Correct substitution: $Q = 11 \\times 7200$",
+            "1 mark: Correct final answer: **79 200 C** (coulombs)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "e",
+          "type": "calculation",
+          "text": "The 230 volt mains electricity supply causes a current of 11 amps to flow through the undersoil heating cable. Calculate the energy transferred from the cable to the soil in 2 hours.",
+          "marks": 2,
+          "equations": [
+            "$E = Q \\times V$",
+            "$P = I \\times V$",
+            "$E = P \\times t$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 18216000,
+          "tolerance": 0.01,
+          "markScheme": [
+            "1 mark: Correct substitution: $E = 79200 \\times 230$ (or $E = 2530 \\times 7200$)",
+            "1 mark: Correct final answer: **18 216 000 J** (accept 18 216 kJ or 18.216 MJ)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "f",
+          "type": "extended-written",
+          "text": "The heating circuit includes a thermistor buried in the soil, which acts as a thermostat to control the temperature of the soil. Describe how an increase in the temperature of the soil affects the thermistor.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: The **temperature** of the thermistor **increases**",
+            "1 mark: The **resistance** of the thermistor **changes** / **decreases**"
+          ],
+          "diagrams": []
+        }
+      ]
+    }
+  ]
+}

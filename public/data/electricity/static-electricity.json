@@ -1,0 +1,528 @@
+{
+  "subtopic": "Static Electricity",
+  "mainTopic": "Electricity",
+  "questions": [
+    {
+      "id": "static-elec1",
+      "topic": "Static Electricity",
+      "title": "Van de Graaff generator and charge transfer",
+      "difficulty": "easy",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "separate",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "gap-fill",
+          "text": "Figure 1 shows a static electricity generator. The rubber belt is turned by a motor. As the rubber belt moves, charge is transferred from the rubber belt to the metal dome. Figure 2 shows a student touching the metal dome of the static electricity generator. The dome is negatively charged. Complete the sentence. Choose the answer from the box.",
+          "marks": 1,
+          "segments": [
+            "When the student touches the negatively charged metal dome, the student's hair gains a ",
+            { "blank": 0 },
+            " charge."
+          ],
+          "wordBank": ["negative", "neutral", "positive"],
+          "correctAnswers": ["negative"],
+          "markScheme": ["1 mark: negative"],
+          "diagrams": ["static-elec-q1-fig1.jpeg", "static-elec-q1-fig2.jpeg"]
+        },
+        {
+          "partLabel": "b",
+          "type": "gap-fill",
+          "text": "Complete the sentence. Choose the answer from the box.",
+          "marks": 1,
+          "segments": [
+            "The hair on the student's head stands up because the strands of hair experience forces of ",
+            { "blank": 0 },
+            "."
+          ],
+          "wordBank": ["attraction", "gravity", "repulsion"],
+          "correctAnswers": ["repulsion"],
+          "markScheme": ["1 mark: repulsion"],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "gap-fill",
+          "text": "Figure 3 shows the negatively charged metal dome and an earthed conductor. The air between the dome and the earthed conductor is an insulator. Complete the sentence. Choose the answer from the box.",
+          "marks": 1,
+          "segments": [
+            "The air between the dome and the earthed conductor has a high ",
+            { "blank": 0 },
+            "."
+          ],
+          "wordBank": ["efficiency", "resistance", "temperature"],
+          "correctAnswers": ["resistance"],
+          "markScheme": ["1 mark: resistance"],
+          "diagrams": ["static-elec-q1-fig3.jpeg"]
+        },
+        {
+          "partLabel": "d",
+          "type": "gap-fill",
+          "text": "The earthed conductor is moved closer to the metal dome. A spark jumps from the dome to the earthed conductor. Complete the sentence. Choose the answer from the box.",
+          "marks": 1,
+          "segments": [
+            "The spark jumps because the air around the charged dome has become ",
+            { "blank": 0 },
+            "."
+          ],
+          "wordBank": ["earthed", "ionised", "neutral"],
+          "correctAnswers": ["ionised"],
+          "markScheme": ["1 mark: ionised"],
+          "diagrams": []
+        },
+        {
+          "partLabel": "e",
+          "type": "single-choice",
+          "text": "Which particles are transferred when the spark jumps from the negatively charged metal dome to the earthed conductor?",
+          "marks": 1,
+          "options": ["Electrons", "Neutrons", "Protons"],
+          "correctAnswer": 0,
+          "markScheme": ["1 mark: Answer: A — Electrons"],
+          "diagrams": []
+        },
+        {
+          "partLabel": "f",
+          "type": "calculation",
+          "text": "The potential difference between the metal dome and earth is $300\\,000 \\, \\text{V}$. When the spark jumps there is a charge flow of $0.000\\,002 \\, \\text{C}$. Calculate the energy transferred by the spark.",
+          "marks": 2,
+          "equations": [
+            "$E = Q \\times V$",
+            "$V = I \\times R$",
+            "$P = I \\times V$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 0.6,
+          "tolerance": 0.01,
+          "markScheme": [
+            "1 mark: Correct equation selected + correct substitution: $E = 0.000\\,002 \\times 300\\,000$",
+            "1 mark: Correct final answer: **0.6 J**"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "static-elec2",
+      "topic": "Static Electricity",
+      "title": "Charging a plastic strip",
+      "difficulty": "easy",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "separate",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "gap-fill",
+          "text": "A student rubs a plastic strip with a cloth. The plastic strip becomes negatively charged. Complete the sentences. Choose the answers from the boxes.",
+          "marks": 2,
+          "segments": [
+            "This happens because ",
+            { "blank": 0 },
+            " move from the cloth onto the plastic strip. The cloth is left with ",
+            { "blank": 1 },
+            " charge."
+          ],
+          "wordBank": ["electrons", "neutrons", "protons", "a negative", "a positive", "zero"],
+          "correctAnswers": ["electrons", "a positive"],
+          "markScheme": [
+            "1 mark: electrons",
+            "1 mark: a positive"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "When the plastic strip is hung over a wooden rod, the two halves of the strip move equally away from each other. What two conclusions should the student make about the forces acting on the two halves of the plastic strip?",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: The forces are **equal** (accept: the forces are the same)",
+            "1 mark: The forces act in **opposite directions** (accept: the forces **repel**)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "single-choice",
+          "text": "Electrical charges move more easily through some materials than through other materials. Through which one of the following materials would an electrical charge move most easily?",
+          "marks": 1,
+          "options": ["Aluminium", "Glass", "Rubber"],
+          "correctAnswer": 0,
+          "markScheme": ["1 mark: Answer: A — Aluminium"],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "static-elec3",
+      "topic": "Static Electricity",
+      "title": "Static electricity investigation with a plastic strip",
+      "difficulty": "easy",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "separate",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "gap-fill",
+          "text": "Figure 1 shows a flexible plastic strip being rubbed with a cloth. Complete the sentence. Choose the answer from the box.",
+          "marks": 1,
+          "segments": [
+            "Rubbing the plastic strip with the cloth causes the strip to become negatively charged because ",
+            { "blank": 0 },
+            " move from the cloth onto the plastic strip."
+          ],
+          "wordBank": ["electrons", "neutrons", "protons"],
+          "correctAnswers": ["electrons"],
+          "markScheme": ["1 mark: electrons"],
+          "diagrams": ["static-elec-q3-fig1.jpeg"]
+        },
+        {
+          "partLabel": "b",
+          "type": "gap-fill",
+          "text": "Complete the sentence. Choose the answer from the box.",
+          "marks": 1,
+          "segments": [
+            "The cloth is left with ",
+            { "blank": 0 },
+            " charge."
+          ],
+          "wordBank": ["a negative", "a positive", "zero"],
+          "correctAnswers": ["a positive"],
+          "markScheme": ["1 mark: a positive"],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "The student hung the plastic strip over a wooden rod. The ends of the strip moved away from each other. Figure 2 shows the position of the plastic strip on the wooden rod. What two conclusions should the student make about the forces acting on the two halves of the plastic strip?",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: The forces are **repulsive** (accept: the forces act in opposite directions)",
+            "1 mark: The forces are **equal** in size (accept: the forces are the same size)"
+          ],
+          "diagrams": ["static-elec-q3-fig2.jpeg"]
+        },
+        {
+          "partLabel": "d",
+          "type": "gap-fill",
+          "text": "Another student repeated the experiment using the same method and found the plastic strip moved in the same way. Complete the sentence. Choose the answer from the box.",
+          "marks": 1,
+          "segments": [
+            "The investigation was ",
+            { "blank": 0 },
+            "."
+          ],
+          "wordBank": ["an anomaly", "repeatable", "reproducible"],
+          "correctAnswers": ["reproducible"],
+          "markScheme": ["1 mark: reproducible"],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "static-elec4",
+      "topic": "Static Electricity",
+      "title": "Charged rod and water, electrostatic charging in industry",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "separate",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "single-choice",
+          "text": "The diagram shows a negatively charged plastic rod held near to a thin stream of water. The water is attracted towards the rod. Which one of the following statements explains what is happening to the charge in the water?",
+          "marks": 1,
+          "options": [
+            "The positive and the negative charges in the water are attracted to the rod.",
+            "The positive and the negative charges in the water are repelled by the rod.",
+            "The negative charge in the water is repelled by the rod and the positive charge is attracted to the rod.",
+            "The negative charge in the water is attracted to the rod and the positive charge is repelled by the rod."
+          ],
+          "correctAnswer": 2,
+          "markScheme": ["1 mark: Answer: C — The negative charge in the water is repelled by the rod and the positive charge is attracted to the rod."],
+          "diagrams": ["static-elec-q4-fig1.png"]
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "A company that produces bottles of mouthwash found a problem with the automatic filling system. As the bottles go towards the filler, the bottles move around on the conveyor belt and become electrostatically charged. This causes the stream of mouthwash to move sideways, missing the open top of the bottle. Explain why the plastic bottles became charged.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: **Friction** between bottles and conveyor belt / guides (accept: bottles rub against conveyor belt / guides)",
+            "1 mark: **Charge transfers** between bottles and conveyor belt / guides (accept: **electrons** move onto / off the bottles)"
+          ],
+          "diagrams": ["static-elec-q4-fig2.png"]
+        },
+        {
+          "partLabel": "c",
+          "type": "short-answer",
+          "text": "What happens to the structure of an atom to change the atom into an ion?",
+          "marks": 1,
+          "acceptedAnswers": ["loses or gains electrons", "gains or loses electrons", "loses or gains one or more electrons", "gains or loses one or more electrons", "it loses or gains electrons"],
+          "markScheme": ["1 mark: The atom **loses** or **gains** one or more **electrons**"],
+          "diagrams": []
+        },
+        {
+          "partLabel": "d",
+          "type": "extended-written",
+          "text": "The company came up with an answer to the problem: before the bottles reach the filler, the bottles pass through a stream of ionised air which neutralises the charge on the bottles. Earthing the conveyor belt with a conducting wire would not have solved this problem. Give a reason why.",
+          "marks": 1,
+          "markScheme": ["1 mark: Charge will not easily flow off the conveyor belt / bottles because the conveyor belt / bottles are **insulators** (accept: the conveyor belt is rubber / not a conductor)"],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "static-elec5",
+      "topic": "Static Electricity",
+      "title": "Charging a polythene rod and electrostatic forces",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "separate",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "The diagram shows a polythene rod being rubbed with a woollen cloth. The polythene rod becomes negatively charged. Explain how this happens.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: **Electrons** are transferred / removed",
+            "1 mark: To the rod / from the **cloth** (accept: negative charge transfers to the rod / is removed from the cloth)"
+          ],
+          "diagrams": ["static-elec-q5-fig1.png"]
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "A student put the charged polythene rod on to a balance. The rod was separated from the metal pan of the balance by a thin block of insulating material. The student then held a second charged polythene rod above, but not touching, the first rod. The reading on the balance increased. Explain why the reading on the balance increases.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: The rods / charges **repel** each other",
+            "1 mark: Creating a **downward** / extra force on the balance (accept: pushing the bottom rod downwards)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "The student observed that the nearer the two rods are to each other, the bigger the increase in the balance reading. What should the student conclude from this observation?",
+          "marks": 2,
+          "markScheme": [
+            "2 marks: The **repulsion** force increases as the **distance** between the charges **decreases** (accept: the force and distance are **inversely proportional** / there is a **negative correlation** between force and distance). Award 1 mark for stating force increases as distance decreases without mentioning repulsion."
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "static-elec6",
+      "topic": "Static Electricity",
+      "title": "Electrostatic charging of a car driver",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "separate",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "During car journeys, the driver will often become electrostatically charged. This is more noticeable on dry days than on damp, humid days. Explain what happens to cause the driver to become charged.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: **Clothing** and **seat** rub together (accept: **friction** between clothing and seat)",
+            "1 mark: **Electrons** transfer from seat to driver, or from driver to seat (accept: electrons transfer, if first mark scores)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "Scientists were asked to find out whether the build-up of charge on the driver depends on the type of material used to make the driver's clothes. The results of the investigation are given in the table below. Humidity is a measure of how much water vapour the air can hold.<table><tr><th>Material</th><th>Humidity</th><th>Temperature in °C</th><th>Charge on the driver in millicoulombs</th></tr><tr><td>Nylon</td><td>48%</td><td>18</td><td>3.0 to 3.2</td></tr><tr><td>Wool</td><td>48%</td><td>18</td><td>2.4 to 2.5</td></tr><tr><td>Cotton</td><td>48%</td><td>18</td><td>1.4 to 1.7</td></tr></table>Why was it important that the scientists controlled the humidity?",
+          "marks": 1,
+          "markScheme": ["1 mark: How wet the air is affects **charge** build-up (accept: humidity affects charge; damp air is a better **conductor**; damp air has a lower **resistance**)"],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "Does the data in the table show that the charge on the driver would always be less if they were to wear cotton clothing? Give a reason for your answer.",
+          "marks": 1,
+          "markScheme": ["1 mark: **No** — it was only the lowest under these conditions (accept: changing the conditions may change the results; there are lots of other materials that were not tested). Also accept: **Yes** — the highest value for cotton is smaller than the lowest value for the other materials."],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "static-elec7",
+      "topic": "Static Electricity",
+      "title": "Static charge from friction and electric shocks",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "separate",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "Figure 1 shows a student walking on a carpet. The student becomes negatively charged because of the friction between her socks and the carpet. Explain why the friction causes the student to become charged.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Transfer of **electrons**",
+            "1 mark: From the **carpet** to the **student**"
+          ],
+          "diagrams": ["static-elec-q7-fig1.jpeg"]
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "The negatively charged student touches a metal tap and receives an electric shock. Explain why.",
+          "marks": 3,
+          "markScheme": [
+            "1 mark: There is a **potential difference** between the student and the tap",
+            "1 mark: Which causes **electrons** / charges to transfer from the student to the tap",
+            "1 mark: Which **earths** the charge (accept: the tap is **earthed**)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "Some carpets have thin copper wires running through them. The student is less likely to receive an electric shock after walking on this type of carpet. Suggest why.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Carpet / copper has a low **resistance** (accept: carpet is a **conductor** / copper is a conductor)",
+            "1 mark: Lower / no build-up of **charge** on the student (accept: smaller / no **potential difference** between student and tap / earth)"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "static-elec8",
+      "topic": "Static Electricity",
+      "title": "Static electricity generator: hair, electric fields, and sparks",
+      "difficulty": "hard",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "separate",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "Figure 1 shows a static electricity generator. The rubber belt is turned by a motor. As the rubber belt moves, charge is transferred from the rubber belt to the metal dome. Figure 2 shows a student touching the metal dome of the static electricity generator. The dome is negatively charged. Explain why the student's hair stands up on end.",
+          "marks": 3,
+          "markScheme": [
+            "1 mark: **Electrons** are transferred to the student",
+            "1 mark: So her hair is **negatively charged** (accept: each hair has the same negative charge)",
+            "1 mark: **Like charges repel**"
+          ],
+          "diagrams": ["static-elec-q8-fig1.jpeg", "static-elec-q8-fig2.jpeg"]
+        },
+        {
+          "partLabel": "b",
+          "type": "short-answer",
+          "text": "The charged metal dome creates an electric field. What is an electric field?",
+          "marks": 1,
+          "acceptedAnswers": [
+            "the region around a charged object where another charged object experiences a force",
+            "a region where a charged object experiences a force",
+            "an area around a charged object where a charge experiences a force",
+            "the space around a charged object where another charge experiences a force"
+          ],
+          "markScheme": ["1 mark: The **region** around a charged object where another charged object experiences a **force**"],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "short-answer",
+          "text": "How does the electric field strength vary as the distance from the charged metal dome increases?",
+          "marks": 1,
+          "acceptedAnswers": ["decreases", "it decreases", "gets weaker", "it gets weaker", "reduces", "it reduces"],
+          "markScheme": ["1 mark: Electric field strength **decreases**"],
+          "diagrams": []
+        },
+        {
+          "partLabel": "d",
+          "type": "calculation",
+          "text": "Figure 3 shows the negatively charged metal dome and an earthed conductor. When the earthed conductor is moved towards the metal dome, there is a spark between the dome and the earthed conductor. The spark transfers $0.60 \\, \\text{J}$ of energy, and $2.0 \\, \\mu\\text{C}$ of charge is transferred from the dome to the earthed conductor. Calculate the potential difference between the metal dome and the earthed conductor.",
+          "marks": 4,
+          "equations": [
+            "$E = Q \\times V$",
+            "$Q = I \\times t$",
+            "$P = I \\times V$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 300000,
+          "tolerance": 0.01,
+          "markScheme": [
+            "1 mark: Correct unit conversion: $Q = 2.0 \\, \\mu\\text{C} = 2 \\times 10^{-6} \\, \\text{C}$",
+            "1 mark: Correct equation selected + correct substitution: $0.6 = 2 \\times 10^{-6} \\times V$",
+            "1 mark: Correct rearrangement: $V = \\frac{0.6}{2 \\times 10^{-6}}$",
+            "1 mark: Correct final answer: **300 000 V**"
+          ],
+          "diagrams": ["static-elec-q8-fig3.jpeg"]
+        },
+        {
+          "partLabel": "e",
+          "type": "single-choice",
+          "text": "Which of the following changes would increase the distance a spark can jump between the dome and the earthed conductor?",
+          "marks": 1,
+          "options": [
+            "Decreased charge on the metal dome",
+            "Decreased electric field strength",
+            "Decreased electrical resistance of air",
+            "Decreased potential difference"
+          ],
+          "correctAnswer": 2,
+          "markScheme": ["1 mark: Answer: C — Decreased electrical resistance of air"],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "static-elec9",
+      "topic": "Static Electricity",
+      "title": "Van de Graaff generator and positive charging",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "separate",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "Figure 1 shows a Van de Graaff generator that is used to investigate static electricity. Before it is switched on, the metal dome has no net charge. After it is switched on, the metal dome becomes positively charged. Explain how an uncharged object may become positively charged.",
+          "marks": 3,
+          "markScheme": [
+            "1 mark: The object was originally **negatively charged** (i.e. had equal positive and negative charges)",
+            "1 mark: **Electrons** are transferred",
+            "1 mark: **From** the (neutral) object (leaving it with a net positive charge)"
+          ],
+          "diagrams": ["static-elec-q9-fig1.png"]
+        }
+      ]
+    }
+  ]
+}

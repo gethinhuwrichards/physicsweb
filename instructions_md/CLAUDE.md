@@ -92,6 +92,16 @@ When converting past paper questions from `.docx` to JSON, follow the instructio
 - **Non-digitisable patterns** — what to skip and what can be reclassified
 - **Reclassifying labelling questions** — how to convert diagram-labelling to `short-answer`, `gap-fill`, or `table-fill`
 - **Skipping parts and question coherence** — ensuring remaining parts still make sense
+- **Image extraction and placement** — how to extract images from `.docx` files and add them to the `diagrams` arrays
+
+### Images
+
+- Question images live in `public/images/` as flat files (no subdirectories)
+- The `diagrams` field on each part is an array of filenames (no path prefix): `["static-elec-q1-fig1.jpeg"]`
+- Images render at native size (no forced scaling), capped at `max-width: 100%` for small screens
+- Naming convention: `{subtopic-prefix}-q{N}-fig{N}.{ext}` (e.g., `cpdr-q3-fig2.jpeg`)
+- Displayed as "Fig. 1", "Fig. 2" etc. in a flex-wrap row above the input component
+- See `llm_parsing.md` for the full extraction and placement workflow
 
 ## Adding Questions
 
