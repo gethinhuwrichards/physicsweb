@@ -1,95 +1,122 @@
-/* ============================================
-   CSS Custom Properties — Light Theme (default)
-   ============================================ */
+/* ============================================================
+   PRESSABLE SLATE DESIGN SYSTEM — Part 1
+   Foundation: Custom Properties, Global Styles, Header,
+   Theme Toggle, Breadcrumb, Utilities, Section Header
+   ============================================================ */
+
+
+/* ============ 1. :root — Light Theme Custom Properties ============ */
 
 :root {
     /* Backgrounds */
-    --bg-body: #f5f2ec;
+    --bg-body: #eef0f5;
     --bg-surface: #ffffff;
-    --bg-surface-alt: #faf8f5;
+    --bg-surface-alt: #f5f6fa;
     --bg-surface-raised: #ffffff;
     --bg-input: #ffffff;
-    --bg-input-focus: #f7f5f2;
+    --bg-input-focus: #f5f6fa;
 
     /* Text */
-    --text-primary: #1e2030;
-    --text-secondary: #5c5d72;
-    --text-tertiary: #9798aa;
+    --text-primary: #1a1d2e;
+    --text-secondary: #5c5f78;
+    --text-tertiary: #8e92a8;
     --text-on-accent: #ffffff;
 
-    /* Accent — deep slate blue */
-    --accent-blue: #3b5998;
-    --accent-blue-hover: #2d4a80;
-    --accent-blue-muted: #e8edf5;
-    --accent-blue-subtle: #dce3f0;
+    /* Accent — muted indigo */
+    --accent-blue: #5b6abf;
+    --accent-blue-hover: #4a58b0;
+    --accent-blue-muted: #ededfa;
+    --accent-blue-subtle: #dfe0f4;
 
-    /* Semantic — correct */
-    --color-correct: #1e8a5e;
-    --color-correct-bg: #e8f5ee;
-    --color-correct-border: #2da670;
-    --color-correct-text: #166b48;
+    /* Edges — dark slate for pressable borders */
+    --edge: #2d3348;
+    --edge-light: #c8cdd8;
 
-    /* Semantic — incorrect */
-    --color-incorrect: #d93025;
-    --color-incorrect-bg: #fcecea;
-    --color-incorrect-border: #e34935;
-    --color-incorrect-text: #b71c1c;
+    /* Correct / Incorrect / Partial feedback */
+    --color-correct: #16a34a;
+    --color-correct-bg: #ecfdf5;
+    --color-correct-border: #22c55e;
+    --color-correct-text: #15803d;
 
-    /* Semantic — partial */
-    --color-partial: #e09100;
-    --color-partial-bg: #fef6e7;
-    --color-partial-border: #cf8b17;
-    --color-partial-text: #8a6000;
+    --color-incorrect: #dc2626;
+    --color-incorrect-bg: #fef2f2;
+    --color-incorrect-border: #ef4444;
+    --color-incorrect-text: #b91c1c;
+
+    --color-partial: #d97706;
+    --color-partial-bg: #fffbeb;
+    --color-partial-border: #f59e0b;
+    --color-partial-text: #92400e;
 
     /* Progress */
-    --color-progress-fill: #1e8a5e;
-    --color-progress-track: #eceae6;
+    --color-progress-fill: #16a34a;
+    --color-progress-track: #e4e6ed;
 
     /* Mark scheme */
-    --color-mark-scheme-bg: #faf6ee;
-    --color-mark-scheme-border: #d4a843;
-    --color-mark-scheme-text: #7a5d1e;
+    --color-mark-scheme-bg: #f5f3ff;
+    --color-mark-scheme-border: #8b5cf6;
+    --color-mark-scheme-text: #6d28d9;
 
     /* Borders */
-    --border-default: #e0ddd7;
-    --border-subtle: #eeebe6;
-    --border-input: #ccc9c3;
-    --border-input-focus: #3b5998;
+    --border-default: #d5d8e2;
+    --border-subtle: #e8eaef;
+    --border-input: #c8ccd8;
+    --border-input-focus: #5b6abf;
 
     /* Shadows */
-    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
-    --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.07), 0 1px 3px rgba(0, 0, 0, 0.05);
-    --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
-    --shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.10), 0 2px 6px rgba(0, 0, 0, 0.06);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.10);
+    --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+    /* Pressable system */
+    --press-shadow: 3px 3px 0 var(--edge);
+    --press-shadow-sm: 2px 2px 0 var(--edge);
+    --press-shadow-active: 1px 1px 0 var(--edge);
+    --press-radius: 16px;
+    --press-radius-sm: 12px;
 
     /* Scrollbar */
-    --scrollbar-track: #f0ede8;
-    --scrollbar-thumb: #ccc9c3;
-    --scrollbar-thumb-hover: #aaa7a0;
+    --scrollbar-track: #eff1f5;
+    --scrollbar-thumb: #c5c8d4;
+    --scrollbar-thumb-hover: #a0a5b4;
+
+    /* Matchup variables */
+    --card-bg: var(--bg-surface);
+    --border: var(--border-default);
+    --matchup-next-bg: var(--accent-blue-muted);
+    --matchup-next-hover: var(--bg-surface-alt);
 }
 
-/* ============================================
-   CSS Custom Properties — Dark Theme
-   ============================================ */
+
+/* ============ 2. Dark Theme Custom Properties ============ */
 
 [data-theme="dark"] {
-    --bg-body: #0f1219;
-    --bg-surface: #1a1f2e;
-    --bg-surface-alt: #1e2538;
-    --bg-surface-raised: #252d42;
-    --bg-input: #1e2538;
-    --bg-input-focus: #252d42;
+    /* Backgrounds */
+    --bg-body: #0c0e16;
+    --bg-surface: #161923;
+    --bg-surface-alt: #1c2030;
+    --bg-surface-raised: #22263a;
+    --bg-input: #1c2030;
+    --bg-input-focus: #22263a;
 
-    --text-primary: #e8eaf0;
-    --text-secondary: #8b92a5;
-    --text-tertiary: #5a6178;
+    /* Text */
+    --text-primary: #e4e6ef;
+    --text-secondary: #8b90a8;
+    --text-tertiary: #555a70;
     --text-on-accent: #ffffff;
 
-    --accent-blue: #6b9bd2;
-    --accent-blue-hover: #5a87bf;
-    --accent-blue-muted: #253552;
-    --accent-blue-subtle: #1d2b44;
+    /* Accent — lighter indigo for dark */
+    --accent-blue: #8b95d6;
+    --accent-blue-hover: #7a84c8;
+    --accent-blue-muted: #252845;
+    --accent-blue-subtle: #1e2140;
 
+    /* Edges */
+    --edge: #3d4260;
+    --edge-light: #2a3045;
+
+    /* Correct / Incorrect / Partial feedback */
     --color-correct: #34D399;
     --color-correct-bg: #0d3326;
     --color-correct-border: #28a77a;
@@ -105,36 +132,51 @@
     --color-partial-border: #ca9a04;
     --color-partial-text: #facc15;
 
+    /* Progress */
     --color-progress-fill: #34D399;
     --color-progress-track: #252d42;
 
-    --color-mark-scheme-bg: #1f2636;
-    --color-mark-scheme-border: #d4a843;
-    --color-mark-scheme-text: #e8c96b;
+    /* Mark scheme */
+    --color-mark-scheme-bg: #1e1f36;
+    --color-mark-scheme-border: #8b5cf6;
+    --color-mark-scheme-text: #c4b5fd;
 
+    /* Borders */
     --border-default: #2a3042;
     --border-subtle: #1f2636;
     --border-input: #2a3042;
-    --border-input-focus: #6b9bd2;
+    --border-input-focus: #8b95d6;
 
+    /* Shadows */
     --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
     --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.3);
     --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.4);
     --shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.5);
 
+    /* Pressable system */
+    --press-shadow: 3px 3px 0 var(--edge);
+    --press-shadow-sm: 2px 2px 0 var(--edge);
+    --press-shadow-active: 1px 1px 0 var(--edge);
+
+    /* Scrollbar */
     --scrollbar-track: var(--bg-body);
     --scrollbar-thumb: var(--border-default);
     --scrollbar-thumb-hover: var(--text-tertiary);
+
+    /* Matchup variables */
+    --card-bg: var(--bg-surface);
+    --border: var(--border-default);
+    --matchup-next-bg: var(--accent-blue-muted);
+    --matchup-next-hover: var(--bg-surface-alt);
 }
 
-/* ============================================
-   Global
-   ============================================ */
 
-* {
+/* ============ 3. Global Styles — Reset & Base ============ */
+
+*,
+*::before,
+*::after {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 html {
@@ -143,18 +185,23 @@ html {
 
 html:has(.self-marking-overlay),
 html:has(.score-page-overlay) {
-    overflow-y: hidden;
+    overflow: hidden;
+}
+
+html:has(.figure-viewer-overlay) {
+    overflow: hidden;
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     line-height: 1.65;
     color: var(--text-primary);
-    background-color: var(--bg-body);
+    background: var(--bg-body);
     padding: clamp(1rem, 4vw, 1.5rem);
     max-width: 920px;
     margin: 0 auto;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 /* Scrollbar styling */
@@ -175,54 +222,158 @@ body {
     background: var(--scrollbar-thumb-hover);
 }
 
+
+/* ============ 4. Header — Sticky Frosted Glass ============ */
+
 header {
-    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(238, 240, 245, 0.85);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     margin-bottom: clamp(1.5rem, 4vw, 2.25rem);
-    padding-bottom: clamp(1rem, 3vw, 1.5rem);
-    border-bottom: 2px solid var(--accent-blue);
+    padding: clamp(0.75rem, 2vw, 1rem) 0;
+    text-align: center;
     min-height: 60px;
-    position: relative;
+}
+
+[data-theme="dark"] header {
+    background: rgba(12, 14, 22, 0.85);
+    border-bottom-color: rgba(255, 255, 255, 0.06);
 }
 
 header h1 {
     color: var(--accent-blue);
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: -0.01em;
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
 }
 
 .header-subtitle {
-    margin-top: 6px;
+    margin-top: 4px;
     color: var(--text-secondary);
-    font-size: 0.98rem;
+    font-size: 0.95rem;
     font-weight: 500;
 }
 
-header .header-top-row {
+.header-top-row {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding-top: 6px;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     text-align: left;
-    gap: 12px;
+    gap: 10px;
 }
 
 .back-link {
     border: none;
     background: none;
     padding: 0;
-    font-size: 0.92rem;
-    font-weight: 500;
+    font-size: 0.9rem;
+    font-weight: 600;
     color: var(--text-secondary);
     cursor: pointer;
+    transition: color 0.15s;
 }
 
 .back-link:hover {
+    color: var(--accent-blue);
     text-decoration: underline;
 }
 
-/* Views */
+
+/* ============ 5. Theme Toggle — Pressable Circle ============ */
+
+.theme-toggle {
+    position: fixed;
+    top: 16px;
+    right: 20px;
+    z-index: 1000;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1.5px solid var(--edge);
+    background: var(--bg-surface);
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--press-shadow-sm);
+    transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+    line-height: 1;
+    user-select: none;
+    touch-action: manipulation;
+}
+
+.theme-toggle:hover {
+    background: var(--bg-surface-alt);
+    transform: translateY(-1px);
+}
+
+.theme-toggle:active {
+    transform: translate(1px, 1px);
+    box-shadow: var(--press-shadow-active);
+}
+
+
+/* ============ 6. Breadcrumb ============ */
+
+.breadcrumb-nav {
+    min-height: 24px;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 4px;
+}
+
+.breadcrumb-link,
+.breadcrumb-current {
+    font-family: inherit;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.4;
+    display: inline;
+    vertical-align: baseline;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    letter-spacing: -0.01em;
+}
+
+.breadcrumb-link {
+    color: var(--accent-blue);
+    opacity: 0.85;
+    cursor: pointer;
+}
+
+.breadcrumb-link:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+.breadcrumb-sep {
+    margin: 0 8px;
+    color: var(--text-tertiary);
+    font-size: 0.95rem;
+    opacity: 0.5;
+}
+
+.breadcrumb-current {
+    color: var(--text-primary);
+}
+
+
+/* ============ 7. Utility Classes — .view / .hidden ============ */
+
 .view {
     display: none;
 }
@@ -235,95 +386,8 @@ header .header-top-row {
     display: none !important;
 }
 
-/* ============================================
-   Theme Toggle
-   ============================================ */
 
-.theme-toggle {
-    position: fixed;
-    top: 16px;
-    right: 20px;
-    z-index: 1000;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    border: 1px solid var(--border-default);
-    background: var(--bg-surface);
-    color: var(--text-secondary);
-    font-size: 1.2rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: var(--shadow-sm);
-    transition: background 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.15s;
-    line-height: 1;
-}
-
-.theme-toggle:hover {
-    background: var(--bg-surface-alt);
-    border-color: var(--accent-blue);
-    box-shadow: var(--shadow-md);
-    transform: scale(1.05);
-}
-
-/* ============================================
-   Breadcrumb Navigation
-   ============================================ */
-
-.breadcrumb-nav {
-    min-height: 24px;
-    margin-bottom: 0;
-}
-
-.breadcrumb {
-    display: flex;
-    align-items: center;
-    gap: 0;
-    flex-wrap: wrap;
-    row-gap: 4px;
-    margin-bottom: 0;
-}
-
-.breadcrumb-link,
-.breadcrumb-current {
-    font-family: inherit;
-    font-size: 1.15rem;
-    font-weight: 600;
-    line-height: 1.4;
-    display: inline;
-    vertical-align: baseline;
-    padding: 0;
-    margin: 0;
-    border: none;
-    background: none;
-}
-
-.breadcrumb-link {
-    color: var(--accent-blue);
-    opacity: 0.85;
-    cursor: pointer;
-}
-
-.breadcrumb-link:hover {
-    text-decoration: underline;
-}
-
-.breadcrumb-sep {
-    margin: 0 10px;
-    color: var(--text-tertiary);
-    font-size: 1rem;
-    line-height: 1.4;
-    opacity: 0.6;
-}
-
-.breadcrumb-current {
-    color: var(--text-primary);
-}
-
-/* ============================================
-   Section Header Row (title + reset all)
-   ============================================ */
+/* ============ 8. Section Header Row ============ */
 
 .section-header-row {
     display: flex;
@@ -339,21 +403,25 @@ header .header-top-row {
 
 .section-header-row h2 {
     margin: 0;
-    font-size: 1.35rem;
-    font-weight: 700;
-    letter-spacing: -0.01em;
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
 }
 
 .reset-all-btn {
     background: none;
-    border: 1px solid var(--border-default);
-    border-radius: 6px;
-    padding: 6px 14px;
-    font-size: 0.85rem;
+    border: 1.5px solid var(--edge);
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-size: 0.82rem;
+    font-weight: 650;
     color: var(--text-secondary);
     cursor: pointer;
     white-space: nowrap;
-    transition: background 0.2s, border-color 0.2s, color 0.2s;
+    box-shadow: var(--press-shadow-sm);
+    transition: transform 120ms ease, box-shadow 120ms ease, background 0.15s, color 0.15s;
+    user-select: none;
+    touch-action: manipulation;
 }
 
 .reset-all-btn:hover {
@@ -362,19 +430,24 @@ header .header-top-row {
     color: var(--color-incorrect-text);
 }
 
-/* ============================================
-   Topic / Subtopic Selection — Layout
-   ============================================ */
+.reset-all-btn:active {
+    transform: translate(1px, 1px);
+    box-shadow: var(--press-shadow-active);
+}
+/* ============================================================
+   PRESSABLE SLATE DESIGN SYSTEM — Part 2
+   Topic Selection, Subtopic Cards, Question List,
+   Confirm Modal, Bottom Nav, Difficulty Labels
+   ============================================================ */
+
+
+/* ============ 1. Topic Selection Cards ============ */
 
 .topic-selection,
 .subtopic-selection {
     display: flex;
     flex-direction: column;
 }
-
-/* ============================================
-   Topic Selection — Card Style
-   ============================================ */
 
 .topic-grid {
     display: grid;
@@ -384,33 +457,41 @@ header .header-top-row {
 }
 
 .topic-btn {
-    padding: clamp(1.25rem, 3vw, 2rem) clamp(1rem, 2.5vw, 1.5rem);
-    font-size: 1.1rem;
+    padding: clamp(1.25rem, 3vw, 1.75rem) clamp(1rem, 2.5vw, 1.5rem);
+    font-size: 1.05rem;
     background: var(--bg-surface);
     color: var(--text-primary);
-    border: 1px solid var(--border-default);
-    border-radius: 12px;
+    border: 1.5px solid var(--edge);
+    border-radius: var(--press-radius);
     cursor: pointer;
-    box-shadow: var(--shadow-sm);
-    transition: box-shadow 0.2s, border-color 0.2s, transform 0.15s;
+    box-shadow: var(--press-shadow);
+    transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
     text-align: left;
+    user-select: none;
+    touch-action: manipulation;
 }
 
 .topic-btn:hover:not(:disabled) {
-    box-shadow: var(--shadow-hover);
-    border-color: var(--accent-blue);
+    background: var(--bg-surface-alt);
     transform: translateY(-2px);
 }
 
+.topic-btn:active:not(:disabled) {
+    transform: translate(2px, 2px);
+    box-shadow: var(--press-shadow-active);
+}
+
 .topic-btn-empty {
-    opacity: 0.45;
+    opacity: 0.4;
     cursor: default;
     box-shadow: none;
+    border-style: dashed;
 }
 
 .btn-name {
     display: block;
-    font-weight: 600;
+    font-weight: 750;
+    letter-spacing: -0.01em;
 }
 
 .btn-counter {
@@ -420,9 +501,8 @@ header .header-top-row {
     margin-top: 10px;
 }
 
-/* ============================================
-   Subtopic Selection — Card Style
-   ============================================ */
+
+/* ============ 2. Subtopic Cards ============ */
 
 .subtopic-grid {
     display: grid;
@@ -432,72 +512,79 @@ header .header-top-row {
 }
 
 .subtopic-btn {
-    padding: clamp(1rem, 2.5vw, 1.625rem) clamp(0.875rem, 2vw, 1.25rem);
-    font-size: 1.05rem;
+    padding: clamp(1rem, 2.5vw, 1.375rem) clamp(0.875rem, 2vw, 1.25rem);
+    font-size: 1rem;
     background: var(--bg-surface);
     color: var(--text-primary);
-    border: 1px solid var(--border-default);
-    border-radius: 12px;
+    border: 1.5px solid var(--edge);
+    border-radius: var(--press-radius);
     cursor: pointer;
-    box-shadow: var(--shadow-sm);
-    transition: box-shadow 0.2s, transform 0.15s, border-color 0.2s;
+    box-shadow: var(--press-shadow);
+    transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
     text-align: left;
+    user-select: none;
+    touch-action: manipulation;
 }
 
-.subtopic-btn:hover {
-    box-shadow: var(--shadow-hover);
-    border-color: var(--accent-blue);
+.subtopic-btn:hover:not(:disabled) {
+    background: var(--bg-surface-alt);
     transform: translateY(-2px);
 }
 
-#no-subtopics-message {
-    margin-top: 20px;
-    padding: 30px;
-    text-align: center;
-    color: var(--text-secondary);
-    background: var(--bg-surface);
-    border-radius: 8px;
-    font-style: italic;
+.subtopic-btn:active:not(:disabled) {
+    transform: translate(2px, 2px);
+    box-shadow: var(--press-shadow-active);
 }
 
-/* ============================================
-   Question List
-   ============================================ */
+#no-subtopics-message {
+    text-align: center;
+    font-style: italic;
+    color: var(--text-secondary);
+    margin-top: clamp(1rem, 3vw, 1.5rem);
+}
+
+
+/* ============ 3. Question List ============ */
 
 .question-item {
     background: var(--bg-surface);
     padding: clamp(0.875rem, 2vw, 1.125rem) clamp(1rem, 2.5vw, 1.375rem);
     margin-bottom: clamp(0.5rem, 1.5vw, 0.75rem);
-    border-radius: 10px;
+    border-radius: var(--press-radius-sm);
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid var(--border-default);
-    box-shadow: var(--shadow-sm);
-    transition: box-shadow 0.2s, border-color 0.2s, transform 0.1s;
+    border: 1.5px solid var(--edge);
+    box-shadow: var(--press-shadow-sm);
+    transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+    user-select: none;
+    touch-action: manipulation;
 }
 
 .question-item:hover {
-    box-shadow: var(--shadow-hover);
-    border-color: var(--accent-blue-muted);
+    background: var(--bg-surface-alt);
     transform: translateY(-1px);
 }
 
+.question-item:active {
+    transform: translate(1px, 1px);
+    box-shadow: var(--press-shadow-active);
+}
+
 .question-item .marks {
+    border-radius: 999px;
     background: var(--bg-surface-alt);
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: var(--text-secondary);
     border: 1px solid var(--border-subtle);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 4px 12px;
 }
 
 .question-item-title {
     flex: 1;
     min-width: 0;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .question-item-right {
@@ -536,28 +623,26 @@ header .header-top-row {
 
 .question-progress-text {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 0.78rem;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--text-primary);
 }
 
 .question-reset-btn {
     background: none;
-    border: 1px solid var(--border-default);
-    border-radius: 6px;
-    padding: 4px 10px;
+    border: 1.5px solid var(--edge);
+    border-radius: 999px;
+    padding: 4px 12px;
     font-size: 0.78rem;
+    font-weight: 600;
     color: var(--text-secondary);
     cursor: pointer;
-    white-space: nowrap;
-    transition: background 0.2s, border-color 0.2s, color 0.2s;
+    box-shadow: var(--press-shadow-sm);
+    transition: transform 120ms ease, box-shadow 120ms ease, background 0.15s ease, color 0.15s ease;
 }
 
 .question-reset-btn:hover {
@@ -566,18 +651,23 @@ header .header-top-row {
     color: var(--color-incorrect-text);
 }
 
-/* ============================================
-   Confirm Modal Overlay
-   ============================================ */
+.question-reset-btn:active {
+    transform: translate(1px, 1px);
+    box-shadow: var(--press-shadow-active);
+}
+
+
+/* ============ 4. Confirm Modal ============ */
 
 .confirm-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.45);
+    background: rgba(0, 0, 0, 0.4);
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 200;
+    backdrop-filter: blur(4px);
 }
 
 [data-theme="dark"] .confirm-overlay {
@@ -586,13 +676,13 @@ header .header-top-row {
 
 .confirm-box {
     background: var(--bg-surface);
-    border: 1px solid var(--border-default);
-    border-radius: 14px;
+    border: 1.5px solid var(--edge);
+    border-radius: var(--press-radius);
     padding: clamp(1.25rem, 4vw, 2rem) clamp(1.5rem, 5vw, 2.5rem);
     text-align: center;
     max-width: 400px;
     width: 90%;
-    box-shadow: var(--shadow-lg);
+    box-shadow: 6px 6px 0 var(--edge);
 }
 
 .confirm-message {
@@ -609,60 +699,75 @@ header .header-top-row {
 }
 
 .confirm-ok {
-    padding: 10px 32px;
+    padding: 10px 28px;
     background: var(--color-incorrect);
     color: var(--text-on-accent);
-    border: none;
-    border-radius: 8px;
+    border: 1.5px solid rgba(0, 0, 0, 0.2);
+    border-radius: 999px;
     font-size: 0.95rem;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
-    transition: background 0.2s;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+    transition: transform 120ms ease, box-shadow 120ms ease, background 0.15s ease;
 }
 
 .confirm-ok:hover {
     background: var(--color-incorrect-border);
 }
 
+.confirm-ok:active {
+    transform: translate(1px, 1px);
+    box-shadow: 0.5px 0.5px 0 rgba(0, 0, 0, 0.3);
+}
+
 .confirm-cancel {
-    padding: 10px 32px;
+    padding: 10px 28px;
     background: var(--bg-surface-alt);
     color: var(--text-secondary);
-    border: 1px solid var(--border-default);
-    border-radius: 8px;
+    border: 1.5px solid var(--edge);
+    border-radius: 999px;
     font-size: 0.95rem;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
-    transition: background 0.2s;
+    box-shadow: 2px 2px 0 var(--edge);
+    transition: transform 120ms ease, box-shadow 120ms ease, background 0.15s ease;
 }
 
 .confirm-cancel:hover {
     background: var(--bg-surface-raised);
 }
 
-/* ============================================
-   Fixed Back Button (bottom left)
-   ============================================ */
+.confirm-cancel:active {
+    transform: translate(1px, 1px);
+    box-shadow: 0.5px 0.5px 0 var(--edge);
+}
+
+
+/* ============ 5. Bottom Nav / Back Button / Bug Report ============ */
 
 .back-btn-fixed {
     display: block;
     margin-top: clamp(1rem, 3vw, 1.75rem);
     background: var(--bg-surface);
-    border: 1px solid var(--border-default);
+    border: 1.5px solid var(--edge);
     color: var(--accent-blue);
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 0.95rem;
+    font-weight: 700;
     cursor: pointer;
     padding: 0.625rem 1.25rem;
-    border-radius: 8px;
-    box-shadow: var(--shadow-sm);
-    transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+    border-radius: 999px;
+    box-shadow: var(--press-shadow-sm);
+    transition: transform 120ms ease, box-shadow 120ms ease, background 0.15s ease;
 }
 
 .back-btn-fixed:hover {
     background: var(--bg-surface-alt);
-    border-color: var(--accent-blue);
-    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+}
+
+.back-btn-fixed:active {
+    transform: translate(1px, 1px);
+    box-shadow: var(--press-shadow-active);
 }
 
 .bottom-nav-row {
@@ -687,54 +792,73 @@ header .header-top-row {
 
 .bug-report-btn {
     background: var(--bg-surface);
-    border: 1px solid var(--border-default);
+    border: 1.5px solid var(--edge);
     color: var(--color-incorrect);
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 0.95rem;
+    font-weight: 700;
     cursor: pointer;
     padding: 10px 20px;
-    border-radius: 8px;
-    box-shadow: var(--shadow-sm);
-    transition: background 0.2s, border-color 0.2s;
+    border-radius: 999px;
+    box-shadow: var(--press-shadow-sm);
+    transition: transform 120ms ease, box-shadow 120ms ease, background 0.15s ease;
 }
 
 .bug-report-btn:hover {
     background: var(--color-incorrect-bg);
-    border-color: var(--color-incorrect);
+    border-color: var(--color-incorrect-border);
 }
 
-/* ============================================
-   Difficulty Labels (inline after title)
-   ============================================ */
+.bug-report-btn:active {
+    transform: translate(1px, 1px);
+    box-shadow: var(--press-shadow-active);
+}
+
+
+/* ============ 6. Difficulty Labels ============ */
 
 .difficulty-label {
-    font-size: 0.82rem;
-    font-weight: 600;
-    text-transform: capitalize;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 2px 8px;
+    border-radius: 999px;
 }
 
 .difficulty-easy {
     color: var(--color-correct-text);
+    background: var(--color-correct-bg);
 }
 
 .difficulty-medium {
     color: var(--color-partial-text);
+    background: var(--color-partial-bg);
 }
 
 .difficulty-hard {
     color: var(--color-incorrect-text);
+    background: var(--color-incorrect-bg);
 }
+/* ============================================================
+   PART 3 — QUESTION DISPLAY, INPUTS & MARKING
+   Design: "Pressable Slate"
+   Accent: var(--accent-blue): #5b6abf
+   Edge: var(--edge): #2d3348
+   Radii: var(--press-radius): 16px / var(--press-radius-sm): 12px
+   Transitions: 120ms snappy
+   ============================================================ */
 
-/* ============================================
-   Question Display
-   ============================================ */
+
+/* ------------------------------------------------------------
+   1. QUESTION DISPLAY CONTAINER
+   ------------------------------------------------------------ */
 
 #question-container {
     background: var(--bg-surface);
     padding: clamp(1.25rem, 4vw, 2.25rem);
-    border-radius: 12px;
-    border: 1px solid var(--border-default);
-    box-shadow: var(--shadow-md);
+    border-radius: var(--press-radius);
+    border: 1.5px solid var(--edge);
+    box-shadow: var(--press-shadow);
 }
 
 .question-header {
@@ -745,21 +869,22 @@ header .header-top-row {
 
 .question-header h2 {
     color: var(--text-primary);
-    font-size: 1.4rem;
-    font-weight: 700;
+    font-size: 1.35rem;
+    font-weight: 800;
     margin-bottom: 6px;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
 }
 
 .question-header .total-marks {
     color: var(--accent-blue);
-    font-size: 1.05rem;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 700;
 }
 
-/* ============================================
-   Tables in Question Text
-   ============================================ */
+
+/* ------------------------------------------------------------
+   2. TABLES IN QUESTION TEXT
+   ------------------------------------------------------------ */
 
 .part-text table,
 .mark-scheme table,
@@ -768,42 +893,45 @@ header .header-top-row {
     border-collapse: collapse;
     margin: 12px 0;
     font-size: 0.95rem;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-.part-text th,
-.mark-scheme th,
-.self-marking-question-text th {
+.part-text table th,
+.mark-scheme table th,
+.self-marking-question-text table th {
     background: var(--bg-surface-alt);
     color: var(--text-primary);
-    font-weight: 600;
+    font-weight: 700;
     text-align: left;
     padding: 10px 14px;
     border: 1px solid var(--border-default);
 }
 
-.part-text td,
-.mark-scheme td,
-.self-marking-question-text td {
+.part-text table td,
+.mark-scheme table td,
+.self-marking-question-text table td {
     padding: 8px 14px;
     border: 1px solid var(--border-default);
     color: var(--text-primary);
 }
 
-.part-text tr:nth-child(even),
-.mark-scheme tr:nth-child(even),
-.self-marking-question-text tr:nth-child(even) {
+.part-text table tbody tr:nth-child(even),
+.mark-scheme table tbody tr:nth-child(even),
+.self-marking-question-text table tbody tr:nth-child(even) {
     background: var(--bg-surface-alt);
 }
 
-.part-text tr:nth-child(odd),
-.mark-scheme tr:nth-child(odd),
-.self-marking-question-text tr:nth-child(odd) {
+.part-text table tbody tr:nth-child(odd),
+.mark-scheme table tbody tr:nth-child(odd),
+.self-marking-question-text table tbody tr:nth-child(odd) {
     background: var(--bg-surface);
 }
 
-/* ============================================
-   Question Parts
-   ============================================ */
+
+/* ------------------------------------------------------------
+   3. QUESTION PARTS
+   ------------------------------------------------------------ */
 
 .question-part {
     margin-bottom: clamp(1.5rem, 4vw, 2.25rem);
@@ -817,18 +945,18 @@ header .header-top-row {
 }
 
 .part-label {
-    font-weight: 700;
+    font-weight: 800;
     color: var(--accent-blue);
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     letter-spacing: -0.01em;
 }
 
 .part-label-standalone {
-    font-weight: 700;
+    font-weight: 800;
     color: var(--accent-blue);
-    font-size: 1.15rem;
-    margin-bottom: 12px;
+    font-size: 1.1rem;
     letter-spacing: -0.01em;
+    margin-bottom: 12px;
 }
 
 .part-text {
@@ -838,11 +966,16 @@ header .header-top-row {
 
 .part-marks {
     color: var(--text-secondary);
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 0.88rem;
+    font-weight: 600;
     margin-top: 12px;
     text-align: right;
 }
+
+
+/* ------------------------------------------------------------
+   4. DIAGRAMS
+   ------------------------------------------------------------ */
 
 .part-diagrams-grid {
     display: flex;
@@ -866,8 +999,8 @@ header .header-top-row {
 
 .part-diagram-caption {
     text-align: center;
-    font-size: 0.8rem;
-    font-weight: 600;
+    font-size: 0.78rem;
+    font-weight: 700;
     color: var(--text-secondary);
     margin-top: 4px;
 }
@@ -882,7 +1015,11 @@ header .header-top-row {
     box-shadow: var(--shadow-md);
 }
 
-/* Inline tables (part.tables field) */
+
+/* ------------------------------------------------------------
+   5. INLINE TABLES (part.tables)
+   ------------------------------------------------------------ */
+
 .part-tables-grid {
     margin-bottom: 16px;
 }
@@ -890,7 +1027,7 @@ header .header-top-row {
 .part-table-block {
     margin-bottom: 12px;
     border: 1px solid var(--border-subtle);
-    border-radius: 8px;
+    border-radius: var(--press-radius-sm);
     overflow: hidden;
     background: var(--bg-surface);
 }
@@ -906,8 +1043,8 @@ header .header-top-row {
 }
 
 .part-table-label {
-    font-size: 0.8rem;
-    font-weight: 600;
+    font-size: 0.78rem;
+    font-weight: 700;
     color: var(--text-secondary);
     padding: 6px 10px;
     background: var(--bg-surface-alt);
@@ -929,7 +1066,7 @@ header .header-top-row {
 
 .part-inline-table th {
     background: var(--bg-surface-alt);
-    font-weight: 600;
+    font-weight: 700;
     font-size: 0.85rem;
 }
 
@@ -937,11 +1074,11 @@ header .header-top-row {
     background: var(--bg-surface-alt);
 }
 
-/* ============================================
-   Figure Sidebar + Viewer
-   ============================================ */
 
-/* Layout: sidebar beside question content */
+/* ------------------------------------------------------------
+   6. FIGURE SIDEBAR
+   ------------------------------------------------------------ */
+
 #question-container.has-figure-sidebar {
     display: grid;
     grid-template-columns: 1fr 180px;
@@ -957,7 +1094,6 @@ body:has(.has-figure-sidebar) {
     max-width: 1120px;
 }
 
-/* Sidebar */
 .figure-sidebar {
     position: sticky;
     top: 1rem;
@@ -965,7 +1101,7 @@ body:has(.has-figure-sidebar) {
     padding: 12px;
     border-left: 1px solid var(--border-subtle);
     background: var(--bg-surface-alt);
-    border-radius: 0 12px 12px 0;
+    border-radius: 0 var(--press-radius) var(--press-radius) 0;
     max-height: calc(100vh - 2rem);
     overflow-y: auto;
     display: flex;
@@ -974,17 +1110,17 @@ body:has(.has-figure-sidebar) {
 }
 
 .figure-sidebar-title {
-    font-size: 0.7rem;
-    font-weight: 700;
+    font-size: 0.68rem;
+    font-weight: 800;
     color: var(--text-secondary);
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.06em;
     margin-bottom: 2px;
 }
 
 .figure-thumb {
     cursor: pointer;
-    border-radius: 6px;
+    border-radius: 8px;
     border: 2px solid transparent;
     padding: 4px;
     background: var(--bg-surface);
@@ -1014,13 +1150,12 @@ body:has(.has-figure-sidebar) {
 }
 
 .figure-thumb-label {
-    font-size: 0.7rem;
-    font-weight: 600;
+    font-size: 0.68rem;
+    font-weight: 700;
     color: var(--text-secondary);
     margin-top: 3px;
 }
 
-/* Table sidebar buttons */
 .sidebar-title-tables {
     margin-top: 6px;
     padding-top: 8px;
@@ -1029,7 +1164,7 @@ body:has(.has-figure-sidebar) {
 
 .table-thumb {
     cursor: pointer;
-    border-radius: 6px;
+    border-radius: 8px;
     border: 2px solid transparent;
     padding: 8px;
     background: var(--bg-surface);
@@ -1059,41 +1194,45 @@ body:has(.has-figure-sidebar) {
 }
 
 .table-thumb-label {
-    font-size: 0.75rem;
-    font-weight: 600;
+    font-size: 0.73rem;
+    font-weight: 700;
     color: var(--text-secondary);
 }
 
-/* Mobile trigger (hidden on desktop) */
 .figure-sidebar-mobile-trigger {
     display: none;
 }
 
-/* Viewer overlay */
+
+/* ------------------------------------------------------------
+   7. FIGURE VIEWER OVERLAY
+   ------------------------------------------------------------ */
+
 .figure-viewer-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.55);
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 100;
     cursor: pointer;
+    backdrop-filter: blur(4px);
 }
 
 [data-theme="dark"] .figure-viewer-overlay {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.75);
 }
 
 .figure-viewer-content {
     position: relative;
     background: var(--bg-surface);
-    border: 1px solid var(--border-default);
-    border-radius: 12px;
+    border: 1.5px solid var(--edge);
+    border-radius: var(--press-radius);
     padding: 20px;
     max-width: 90vw;
     max-height: 90vh;
-    box-shadow: var(--shadow-lg, 0 10px 40px rgba(0, 0, 0, 0.15));
+    box-shadow: 6px 6px 0 var(--edge);
     cursor: default;
     display: flex;
     flex-direction: column;
@@ -1111,11 +1250,10 @@ body:has(.has-figure-sidebar) {
 .figure-viewer-caption {
     margin-top: 10px;
     font-size: 0.95rem;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--text-secondary);
 }
 
-/* Table in viewer */
 .figure-viewer-content-table {
     max-width: 90vw;
     overflow-x: auto;
@@ -1137,7 +1275,7 @@ body:has(.has-figure-sidebar) {
 
 .viewer-table th {
     background: var(--bg-surface-alt);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .viewer-table tbody tr:nth-child(even) {
@@ -1149,7 +1287,7 @@ body:has(.has-figure-sidebar) {
     top: 8px;
     right: 8px;
     background: var(--bg-surface-alt);
-    border: 1px solid var(--border-default);
+    border: 1.5px solid var(--edge);
     border-radius: 50%;
     width: 32px;
     height: 32px;
@@ -1159,8 +1297,9 @@ body:has(.has-figure-sidebar) {
     cursor: pointer;
     font-size: 1.2rem;
     color: var(--text-secondary);
-    transition: background 0.2s, color 0.2s;
+    transition: background 0.15s, color 0.15s;
     font-family: inherit;
+    box-shadow: 1px 1px 0 var(--edge);
 }
 
 .figure-viewer-close:hover {
@@ -1173,7 +1312,7 @@ body:has(.has-figure-sidebar) {
     top: 50%;
     transform: translateY(-50%);
     background: var(--bg-surface);
-    border: 1px solid var(--border-default);
+    border: 1.5px solid var(--edge);
     border-radius: 50%;
     width: 36px;
     height: 36px;
@@ -1183,14 +1322,19 @@ body:has(.has-figure-sidebar) {
     cursor: pointer;
     font-size: 1.4rem;
     color: var(--text-secondary);
-    box-shadow: var(--shadow-sm);
-    transition: background 0.2s, color 0.2s;
+    box-shadow: 2px 2px 0 var(--edge);
+    transition: transform 120ms, box-shadow 120ms, background 0.15s;
     font-family: inherit;
 }
 
 .figure-viewer-nav:hover {
     background: var(--bg-surface-alt);
     color: var(--text-primary);
+}
+
+.figure-viewer-nav:active {
+    transform: translateY(-50%) translate(1px, 1px);
+    box-shadow: 0.5px 0.5px 0 var(--edge);
 }
 
 .figure-viewer-prev {
@@ -1201,14 +1345,10 @@ body:has(.has-figure-sidebar) {
     right: -18px;
 }
 
-/* Disable body scroll when viewer is open */
-html:has(.figure-viewer-overlay) {
-    overflow: hidden;
-}
 
-/* ============================================
-   Multiple Choice / Single Choice
-   ============================================ */
+/* ------------------------------------------------------------
+   8. MULTIPLE CHOICE / SINGLE CHOICE
+   ------------------------------------------------------------ */
 
 .mc-options {
     display: flex;
@@ -1219,18 +1359,24 @@ html:has(.figure-viewer-overlay) {
 .mc-option {
     display: flex;
     align-items: center;
-    padding: 13px 16px;
+    padding: 12px 16px;
     background: var(--bg-surface);
-    border: 2px solid var(--border-input);
-    border-radius: 8px;
+    border: 1.5px solid var(--edge);
+    border-radius: var(--press-radius-sm);
     cursor: pointer;
-    transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+    box-shadow: var(--press-shadow-sm);
+    transition: transform 120ms, box-shadow 120ms, background 0.15s, border-color 0.15s;
+    user-select: none;
 }
 
 .mc-option:hover {
-    border-color: var(--accent-blue-muted);
     background: var(--bg-surface-alt);
-    box-shadow: var(--shadow-sm);
+    transform: translateY(-1px);
+}
+
+.mc-option:active {
+    transform: translate(1px, 1px);
+    box-shadow: var(--press-shadow-active);
 }
 
 .mc-option input[type="radio"],
@@ -1241,26 +1387,29 @@ html:has(.figure-viewer-overlay) {
     accent-color: var(--accent-blue);
 }
 
-.mc-option input[type="radio"]:disabled,
-.mc-option input[type="checkbox"]:disabled {
+.mc-option input:disabled {
     cursor: not-allowed;
 }
 
 .mc-option.correct {
     background: var(--color-correct-bg);
     border-color: var(--color-correct-border);
+    box-shadow: none;
+    transform: none;
 }
 
 .mc-option.incorrect {
     background: var(--color-incorrect-bg);
     border-color: var(--color-incorrect-border);
+    box-shadow: none;
+    transform: none;
 }
 
 .mc-option.selected {
     border-color: var(--accent-blue);
+    background: var(--accent-blue-muted);
 }
 
-/* Image options grid layout */
 .mc-options-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1290,7 +1439,6 @@ html:has(.figure-viewer-overlay) {
     border: 1px solid var(--border-subtle);
 }
 
-/* Review panel image options */
 .review-options-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1313,22 +1461,25 @@ html:has(.figure-viewer-overlay) {
     border: 1px solid var(--border-subtle);
 }
 
-/* ============================================
-   Mark Scheme (inline box)
-   ============================================ */
+
+/* ------------------------------------------------------------
+   9. MARK SCHEME
+   ------------------------------------------------------------ */
 
 .mark-scheme {
     margin-top: 20px;
     padding: 16px 18px;
     background: var(--color-mark-scheme-bg);
-    border: 1px solid var(--color-mark-scheme-border);
-    border-radius: 8px;
+    border: 1.5px solid var(--color-mark-scheme-border);
+    border-radius: var(--press-radius-sm);
+    box-shadow: 2px 2px 0 var(--color-mark-scheme-border);
 }
 
 .mark-scheme h4 {
     color: var(--color-mark-scheme-text);
     margin-bottom: 10px;
     font-size: 0.95rem;
+    font-weight: 700;
 }
 
 .mark-scheme ul {
@@ -1340,9 +1491,10 @@ html:has(.figure-viewer-overlay) {
     margin-bottom: 5px;
 }
 
-/* ============================================
-   Self Marking
-   ============================================ */
+
+/* ------------------------------------------------------------
+   10. SELF MARKING / AUTO MARK
+   ------------------------------------------------------------ */
 
 .self-mark {
     margin-top: 15px;
@@ -1352,7 +1504,7 @@ html:has(.figure-viewer-overlay) {
 }
 
 .self-mark label {
-    font-weight: 500;
+    font-weight: 600;
     color: var(--text-secondary);
 }
 
@@ -1360,7 +1512,7 @@ html:has(.figure-viewer-overlay) {
     width: 60px;
     padding: 8px;
     border: 2px solid var(--border-input);
-    border-radius: 6px;
+    border-radius: 8px;
     font-size: 1rem;
     text-align: center;
     background: var(--bg-input);
@@ -1379,23 +1531,26 @@ html:has(.figure-viewer-overlay) {
 .auto-mark-result {
     margin-top: 15px;
     padding: 10px 15px;
-    border-radius: 6px;
-    font-weight: 500;
+    border-radius: 8px;
+    font-weight: 600;
 }
 
 .auto-mark-result.correct {
     background: var(--color-correct-bg);
     color: var(--color-correct-text);
+    border: 1px solid var(--color-correct-border);
 }
 
 .auto-mark-result.incorrect {
     background: var(--color-incorrect-bg);
     color: var(--color-incorrect-text);
+    border: 1px solid var(--color-incorrect-border);
 }
 
-/* ============================================
-   Submit Button
-   ============================================ */
+
+/* ------------------------------------------------------------
+   11. SUBMIT / LOCK BUTTON
+   ------------------------------------------------------------ */
 
 .submit-btn {
     display: block;
@@ -1403,68 +1558,86 @@ html:has(.figure-viewer-overlay) {
     padding: 16px;
     margin-top: 24px;
     font-size: 1.1rem;
-    font-weight: 600;
+    font-weight: 700;
     background: var(--accent-blue);
     color: var(--text-on-accent);
-    border: none;
-    border-radius: 10px;
+    border: 1.5px solid rgba(0, 0, 0, 0.15);
+    border-radius: 999px;
     cursor: pointer;
-    transition: background 0.2s, box-shadow 0.2s;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+    transition: transform 120ms ease, box-shadow 120ms ease, background 0.15s;
+    user-select: none;
+    touch-action: manipulation;
+    letter-spacing: 0.01em;
 }
 
 .submit-btn:hover {
     background: var(--accent-blue-hover);
-    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+}
+
+.submit-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0.5px 0.5px 0 rgba(0, 0, 0, 0.3);
 }
 
 .submit-btn:disabled {
     background: var(--bg-surface-alt);
     color: var(--text-tertiary);
     cursor: not-allowed;
-    border: 1px solid var(--border-default);
+    border: 1.5px solid var(--border-default);
     box-shadow: none;
+    transform: none;
 }
 
-/* ============================================
-   Marking Summary
-   ============================================ */
+
+/* ------------------------------------------------------------
+   12. MARKING SUMMARY
+   ------------------------------------------------------------ */
 
 .marking-summary {
     margin-top: clamp(1rem, 3vw, 1.75rem);
     padding: clamp(1rem, 3vw, 1.75rem);
     background: var(--bg-surface);
-    border-radius: 12px;
+    border-radius: var(--press-radius);
     text-align: center;
-    border: 1px solid var(--border-default);
-    box-shadow: var(--shadow-md);
+    border: 1.5px solid var(--edge);
+    box-shadow: var(--press-shadow);
 }
 
 .marking-summary h3 {
     color: var(--accent-blue);
     margin-bottom: 10px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
 }
 
 .marking-summary p {
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 800;
     color: var(--text-primary);
 }
 
 .bank-score-btn {
     padding: 12px 30px;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 700;
     background: var(--accent-blue);
     color: var(--text-on-accent);
-    border: none;
-    border-radius: 8px;
+    border: 1.5px solid rgba(0, 0, 0, 0.15);
+    border-radius: 999px;
     cursor: pointer;
-    transition: background 0.2s;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+    transition: transform 120ms, box-shadow 120ms, background 0.15s;
 }
 
 .bank-score-btn:hover {
     background: var(--accent-blue-hover);
+}
+
+.bank-score-btn:active {
+    transform: translate(1px, 1px);
+    box-shadow: 0.5px 0.5px 0 rgba(0, 0, 0, 0.3);
 }
 
 .marking-summary-buttons {
@@ -1477,36 +1650,43 @@ html:has(.figure-viewer-overlay) {
 .reset-question-btn {
     padding: 12px 30px;
     font-size: 1rem;
+    font-weight: 600;
     background: var(--bg-surface-alt);
     color: var(--text-secondary);
-    border: 1px solid var(--border-default);
-    border-radius: 8px;
+    border: 1.5px solid var(--edge);
+    border-radius: 999px;
     cursor: pointer;
-    transition: background 0.2s, border-color 0.2s;
+    box-shadow: var(--press-shadow-sm);
+    transition: transform 120ms, box-shadow 120ms, background 0.15s;
 }
 
 .reset-question-btn:hover {
     background: var(--bg-surface-raised);
-    border-color: var(--text-tertiary);
 }
 
-/* ============================================
-   Marking Mode — Part States
-   ============================================ */
+.reset-question-btn:active {
+    transform: translate(1px, 1px);
+    box-shadow: var(--press-shadow-active);
+}
+
+
+/* ------------------------------------------------------------
+   13. MARKING MODE PART STATES
+   ------------------------------------------------------------ */
 
 .question-part.marking-dimmed {
     opacity: 0.35;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s;
 }
 
 .question-part.marking-active {
     opacity: 1;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s;
 }
 
 .question-part.marking-done {
     opacity: 0.7;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s;
 }
 
 .question-part.marking-alt {
@@ -1516,10 +1696,19 @@ html:has(.figure-viewer-overlay) {
     margin-left: -16px;
     margin-right: -16px;
 }
+/* ============================================================
+   PART 4 — EXTENDED WRITTEN, SELF-MARKING, REVIEW & SCORING
+   Design: "Pressable Slate"
+   Accent: var(--accent-blue): #5b6abf
+   Edge: var(--edge): #2d3348
+   Radii: var(--press-radius): 16px / var(--press-radius-sm): 12px
+   Transitions: 120ms snappy
+   ============================================================ */
 
-/* ============================================
-   Extended Written Textarea
-   ============================================ */
+
+/* ------------------------------------------------------------
+   1. EXTENDED WRITTEN TEXTAREA
+   ------------------------------------------------------------ */
 
 .ew-container {
     display: flex;
@@ -1534,7 +1723,7 @@ html:has(.figure-viewer-overlay) {
     line-height: 1.5;
     padding: 10px 14px;
     background: var(--accent-blue-muted);
-    border-radius: 6px;
+    border-radius: 8px;
     border-left: 3px solid var(--accent-blue);
 }
 
@@ -1548,7 +1737,7 @@ html:has(.figure-viewer-overlay) {
     color: var(--text-primary);
     background: var(--bg-input);
     border: 2px solid var(--border-input);
-    border-radius: 8px;
+    border-radius: var(--press-radius-sm);
     resize: vertical;
     transition: border-color 0.2s, box-shadow 0.2s;
 }
@@ -1580,12 +1769,13 @@ html:has(.figure-viewer-overlay) {
 
 .ew-char-counter.near-limit {
     color: var(--color-incorrect);
-    font-weight: 600;
+    font-weight: 700;
 }
 
-/* ============================================
-   Self-Marking Overlay (full page split panel)
-   ============================================ */
+
+/* ------------------------------------------------------------
+   2. SELF-MARKING OVERLAY (Full Page Split Panel)
+   ------------------------------------------------------------ */
 
 .self-marking-overlay {
     position: fixed;
@@ -1596,11 +1786,14 @@ html:has(.figure-viewer-overlay) {
     background: var(--bg-body);
 }
 
+
+/* --- Self-marking header (frosted glass bar) --- */
+
 .self-marking-header {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    padding: clamp(0.75rem, 2vw, 1.125rem) clamp(1rem, 3vw, 1.75rem);
+    padding: clamp(0.75rem, 2vw, 1rem) clamp(1rem, 3vw, 1.75rem);
     background: var(--bg-surface);
     border-bottom: 1px solid var(--border-default);
     flex-shrink: 0;
@@ -1620,9 +1813,10 @@ html:has(.figure-viewer-overlay) {
 }
 
 .self-marking-title {
-    font-size: 1.2rem;
-    font-weight: 700;
+    font-size: 1.15rem;
+    font-weight: 800;
     color: var(--accent-blue);
+    letter-spacing: -0.02em;
 }
 
 .auto-marked-header .self-marking-title {
@@ -1632,9 +1826,9 @@ html:has(.figure-viewer-overlay) {
 .self-mark-badge {
     display: inline-block;
     padding: 3px 10px;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    font-weight: 700;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-left: 10px;
@@ -1653,8 +1847,8 @@ html:has(.figure-viewer-overlay) {
 }
 
 .self-marking-counter {
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 0.88rem;
+    font-weight: 600;
     color: var(--text-secondary);
 }
 
@@ -1662,9 +1856,12 @@ html:has(.figure-viewer-overlay) {
     margin: 0;
     padding: 4px 12px;
     font-size: 0.8rem;
-    font-weight: 600;
-    border-radius: 6px;
+    font-weight: 700;
+    border-radius: 999px;
 }
+
+
+/* --- Panels --- */
 
 .self-marking-panels {
     flex: 1;
@@ -1709,22 +1906,22 @@ html:has(.figure-viewer-overlay) {
 }
 
 [data-theme="dark"] .self-marking-right::-webkit-scrollbar-track {
-    background: #1e2538;
+    background: #2d3748;
 }
 
 [data-theme="dark"] .self-marking-right::-webkit-scrollbar-thumb {
-    background: #64748b;
+    background: #718096;
 }
 
 [data-theme="dark"] .self-marking-right::-webkit-scrollbar-thumb:hover {
-    background: #94a3b8;
+    background: #a0aec0;
 }
 
 .self-marking-panel-heading {
-    font-size: 1.15rem;
-    font-weight: 700;
+    font-size: 1.1rem;
+    font-weight: 800;
     color: var(--text-primary);
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
     margin-bottom: 20px;
     padding-bottom: 10px;
     border-bottom: 2px solid var(--accent-blue);
@@ -1762,7 +1959,7 @@ html:has(.figure-viewer-overlay) {
     margin-bottom: 20px;
     font-size: 0.9rem;
     color: var(--color-partial-text);
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.5;
 }
 
@@ -1774,7 +1971,7 @@ html:has(.figure-viewer-overlay) {
     margin-bottom: 16px;
     font-size: 0.9rem;
     color: var(--color-correct-text);
-    font-weight: 600;
+    font-weight: 700;
     text-align: center;
 }
 
@@ -1794,12 +1991,12 @@ html:has(.figure-viewer-overlay) {
     align-items: center;
     justify-content: center;
     font-size: clamp(36px, 6vw, 56px);
-    font-weight: 700;
+    font-weight: 800;
     color: var(--text-primary);
     border-top: 2px solid var(--border-subtle);
     margin-top: clamp(0.5rem, 1.5vw, 0.75rem);
     padding-top: clamp(0.75rem, 2vw, 1rem);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
 }
 
 .self-marking-tally.tally-full {
@@ -1821,8 +2018,11 @@ html:has(.figure-viewer-overlay) {
 
 .numerical-display-answer.correct {
     color: var(--color-correct);
-    font-weight: 600;
+    font-weight: 700;
 }
+
+
+/* --- Self-marking nav footer --- */
 
 .self-marking-nav {
     display: flex;
@@ -1843,24 +2043,30 @@ html:has(.figure-viewer-overlay) {
 .self-marking-nav-btn {
     padding: 10px 24px;
     font-size: 0.95rem;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--text-secondary);
     background: var(--bg-surface);
-    border: 1px solid var(--border-default);
-    border-radius: 8px;
+    border: 1.5px solid var(--edge);
+    border-radius: 999px;
     cursor: pointer;
-    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: var(--press-shadow-sm);
+    transition: transform 120ms, box-shadow 120ms, background 0.15s, color 0.15s;
 }
 
 .self-marking-nav-btn:hover:not(:disabled) {
     background: var(--bg-surface-alt);
     color: var(--text-primary);
-    box-shadow: var(--shadow-sm);
+}
+
+.self-marking-nav-btn:active:not(:disabled) {
+    transform: translate(1px, 1px);
+    box-shadow: var(--press-shadow-active);
 }
 
 .self-marking-nav-btn:disabled {
     opacity: 0.35;
     cursor: not-allowed;
+    box-shadow: none;
 }
 
 .self-marking-nav-btn.ready-pulse {
@@ -1871,29 +2077,38 @@ html:has(.figure-viewer-overlay) {
 }
 
 @keyframes readyPulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(59, 89, 152, 0.3); }
-    50% { box-shadow: 0 0 12px 4px rgba(59, 89, 152, 0.15); }
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(91, 106, 191, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 12px 4px rgba(91, 106, 191, 0.15);
+    }
 }
 
 [data-theme="dark"] .self-marking-nav-btn.ready-pulse {
-    animation-name: readyPulseDark;
+    animation: readyPulseDark 1.5s ease-in-out infinite;
 }
 
 @keyframes readyPulseDark {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(107, 155, 210, 0.4); }
-    50% { box-shadow: 0 0 12px 4px rgba(107, 155, 210, 0.25); }
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(139, 149, 214, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 12px 4px rgba(139, 149, 214, 0.15);
+    }
 }
 
 .self-marking-submit {
     padding: 12px 36px;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--text-on-accent);
     background: var(--accent-blue);
-    border: none;
-    border-radius: 8px 0 0 8px;
+    border: 1.5px solid rgba(0, 0, 0, 0.15);
+    border-radius: 999px 0 0 999px;
     cursor: pointer;
-    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+    transition: transform 120ms, box-shadow 120ms, background 0.15s;
 }
 
 .self-marking-submit:hover:not(:disabled) {
@@ -1910,18 +2125,40 @@ html:has(.figure-viewer-overlay) {
     animation: submitPulse 1.5s ease-in-out infinite;
 }
 
+@keyframes submitPulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(91, 106, 191, 0.45);
+    }
+    50% {
+        box-shadow: 0 0 18px 6px rgba(91, 106, 191, 0.25);
+    }
+}
+
+[data-theme="dark"] .self-marking-submit.ready-pulse {
+    animation: submitPulseDark 1.5s ease-in-out infinite;
+}
+
+@keyframes submitPulseDark {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(139, 149, 214, 0.45);
+    }
+    50% {
+        box-shadow: 0 0 18px 6px rgba(139, 149, 214, 0.25);
+    }
+}
+
 .self-marking-score {
     display: flex;
     align-items: center;
     padding: 12px 24px;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 700;
     background: var(--bg-surface);
-    border: 1px solid var(--border-default);
+    border: 1.5px solid var(--edge);
     border-left: none;
-    border-radius: 0 8px 8px 0;
+    border-radius: 0 999px 999px 0;
     color: var(--text-primary);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 2px 2px 0 var(--edge);
     cursor: default;
     user-select: none;
 }
@@ -1938,23 +2175,10 @@ html:has(.figure-viewer-overlay) {
     color: var(--color-partial);
 }
 
-@keyframes submitPulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(59, 89, 152, 0.45); }
-    50% { box-shadow: 0 0 18px 6px rgba(59, 89, 152, 0.25); }
-}
 
-[data-theme="dark"] .self-marking-submit.ready-pulse {
-    animation-name: submitPulseDark;
-}
-
-@keyframes submitPulseDark {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(107, 155, 210, 0.5); }
-    50% { box-shadow: 0 0 18px 6px rgba(107, 155, 210, 0.3); }
-}
-
-/* ============================================
-   Review Mode — Plain Text Answer Display
-   ============================================ */
+/* ------------------------------------------------------------
+   3. REVIEW MODE
+   ------------------------------------------------------------ */
 
 .review-options-list {
     display: flex;
@@ -1967,12 +2191,11 @@ html:has(.figure-viewer-overlay) {
     align-items: center;
     gap: 10px;
     padding: 10px 14px;
-    border-radius: 8px;
+    border-radius: var(--press-radius-sm);
     background: var(--bg-surface-alt);
     border: 1px solid var(--border-subtle);
     font-size: 0.95rem;
     line-height: 1.5;
-    transition: background 0.2s;
 }
 
 .review-option-item.review-correct {
@@ -1992,7 +2215,7 @@ html:has(.figure-viewer-overlay) {
 }
 
 .review-option-letter {
-    font-weight: 700;
+    font-weight: 800;
     color: var(--text-secondary);
     min-width: 24px;
 }
@@ -2003,11 +2226,11 @@ html:has(.figure-viewer-overlay) {
 
 .review-badge {
     font-size: 0.72rem;
-    font-weight: 700;
+    font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.04em;
     padding: 3px 8px;
-    border-radius: 4px;
+    border-radius: 999px;
     white-space: nowrap;
     flex-shrink: 0;
 }
@@ -2036,7 +2259,9 @@ html:has(.figure-viewer-overlay) {
     border: 1px solid var(--color-correct-border);
 }
 
-/* Gap fill review */
+
+/* --- Gap fill review --- */
+
 .review-gap-sentence {
     line-height: 2.2;
     font-size: 1rem;
@@ -2045,8 +2270,8 @@ html:has(.figure-viewer-overlay) {
 .review-gap-answer {
     display: inline-block;
     padding: 2px 10px;
-    border-radius: 4px;
-    font-weight: 600;
+    border-radius: 999px;
+    font-weight: 700;
     margin: 0 2px;
 }
 
@@ -2068,10 +2293,12 @@ html:has(.figure-viewer-overlay) {
     margin-left: 4px;
     font-size: 0.88rem;
     color: var(--color-correct-text);
-    font-weight: 600;
+    font-weight: 700;
 }
 
-/* Tick box table review */
+
+/* --- Tick box table review --- */
+
 .review-tick-table {
     width: 100%;
     border-collapse: collapse;
@@ -2087,7 +2314,7 @@ html:has(.figure-viewer-overlay) {
 
 .review-tick-table th {
     background: var(--bg-surface-alt);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .review-tick-table th:first-child {
@@ -2103,24 +2330,25 @@ html:has(.figure-viewer-overlay) {
 }
 
 .review-tick-selected {
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .review-tick-indicator {
     font-size: 1.1rem;
 }
 
-/* ============================================
-   Part Score Badge (complete phase)
-   ============================================ */
+
+/* ------------------------------------------------------------
+   4. PART SCORE BADGE
+   ------------------------------------------------------------ */
 
 .part-score-badge {
     display: inline-block;
     margin-top: 14px;
     padding: 5px 16px;
-    border-radius: 20px;
-    font-size: 0.88rem;
-    font-weight: 600;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 700;
 }
 
 .part-score-badge.score-full {
@@ -2141,15 +2369,15 @@ html:has(.figure-viewer-overlay) {
     border: 1px solid var(--color-partial-border);
 }
 
-/* Bold keywords in marking points */
 .marking-point-text strong {
     color: var(--accent-blue);
-    font-weight: 700;
+    font-weight: 800;
 }
 
-/* ============================================
-   Marking Point Rows (tick / cross)
-   ============================================ */
+
+/* ------------------------------------------------------------
+   5. MARKING POINT ROWS
+   ------------------------------------------------------------ */
 
 .marking-point-row {
     display: flex;
@@ -2195,9 +2423,18 @@ html:has(.figure-viewer-overlay) {
 }
 
 @keyframes traceDraw {
-    0%   { stroke-dashoffset: 1; opacity: 1; }
-    75%  { stroke-dashoffset: 0; opacity: 1; }
-    100% { stroke-dashoffset: 0; opacity: 0; }
+    0% {
+        stroke-dashoffset: 1;
+        opacity: 1;
+    }
+    75% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        opacity: 0;
+    }
 }
 
 .marking-point-label {
@@ -2205,7 +2442,7 @@ html:has(.figure-viewer-overlay) {
     text-transform: uppercase;
     letter-spacing: 0.06em;
     color: var(--text-tertiary);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .marking-point-awarded {
@@ -2254,11 +2491,14 @@ html:has(.figure-viewer-overlay) {
 
 .mark-btn-label {
     font-size: 0.62rem;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.04em;
     color: var(--text-tertiary);
 }
+
+
+/* --- Mark tick/cross buttons — pressable circles --- */
 
 .mark-tick,
 .mark-cross {
@@ -2267,60 +2507,69 @@ html:has(.figure-viewer-overlay) {
     border-radius: 50%;
     font-size: 1.3rem;
     cursor: pointer;
-    transition: background 0.15s, color 0.15s, box-shadow 0.15s;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 120ms, box-shadow 120ms, background 0.15s, color 0.15s;
 }
 
 .mark-tick {
     border: 2px solid var(--color-correct);
     background: var(--bg-surface);
     color: var(--color-correct);
+    box-shadow: 2px 2px 0 var(--color-correct);
 }
 
 .mark-tick:hover:not(:disabled) {
     background: var(--color-correct-bg);
-    box-shadow: 0 0 0 3px var(--color-correct-bg);
+}
+
+.mark-tick:active:not(:disabled) {
+    transform: translate(1px, 1px);
+    box-shadow: 0.5px 0.5px 0 var(--color-correct);
 }
 
 .mark-tick.selected {
     background: var(--color-correct);
     color: var(--text-on-accent);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
 }
 
 .mark-tick.selected:hover {
     background: var(--color-correct);
-    color: var(--text-on-accent);
 }
 
 .mark-cross {
     border: 2px solid var(--color-incorrect);
     background: var(--bg-surface);
     color: var(--color-incorrect);
+    box-shadow: 2px 2px 0 var(--color-incorrect);
 }
 
 .mark-cross:hover:not(:disabled) {
     background: var(--color-incorrect-bg);
-    box-shadow: 0 0 0 3px var(--color-incorrect-bg);
+}
+
+.mark-cross:active:not(:disabled) {
+    transform: translate(1px, 1px);
+    box-shadow: 0.5px 0.5px 0 var(--color-incorrect);
 }
 
 .mark-cross.selected {
     background: var(--color-incorrect);
     color: var(--text-on-accent);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
 }
 
 .mark-cross.selected:hover {
     background: var(--color-incorrect);
-    color: var(--text-on-accent);
 }
 
 .mark-tick:disabled,
 .mark-cross:disabled {
     cursor: not-allowed;
     opacity: 0.4;
+    box-shadow: none;
 }
 
 .marking-point-locked-note {
@@ -2330,30 +2579,33 @@ html:has(.figure-viewer-overlay) {
     margin-top: 2px;
 }
 
-/* ============================================
-   Final Score Panel
-   ============================================ */
+
+/* ------------------------------------------------------------
+   6. FINAL SCORE PANEL
+   ------------------------------------------------------------ */
 
 .final-score-panel {
     margin-top: clamp(1rem, 3vw, 1.75rem);
     padding: clamp(1rem, 3vw, 1.75rem);
     background: var(--bg-surface);
-    border-radius: 12px;
+    border-radius: var(--press-radius);
     text-align: center;
-    border: 1px solid var(--border-default);
-    box-shadow: var(--shadow-md);
+    border: 1.5px solid var(--edge);
+    box-shadow: var(--press-shadow);
 }
 
 .final-score-panel h3 {
     color: var(--accent-blue);
     margin-bottom: 12px;
     font-size: 1.15rem;
+    font-weight: 800;
 }
 
 .final-score-value {
     font-size: 2.2rem;
-    font-weight: 700;
+    font-weight: 800;
     color: var(--text-primary);
+    letter-spacing: -0.02em;
 }
 
 .final-score-value.score-full {
@@ -2376,12 +2628,13 @@ html:has(.figure-viewer-overlay) {
     margin-top: 20px;
 }
 
-/* ============================================
-   Multi-Choice Selection Info
-   ============================================ */
+
+/* ------------------------------------------------------------
+   7. MULTI-CHOICE INFO
+   ------------------------------------------------------------ */
 
 .mc-selection-info {
-    font-weight: 500;
+    font-weight: 600;
     color: var(--text-secondary);
     margin-bottom: 10px;
     font-size: 0.95rem;
@@ -2391,15 +2644,22 @@ html:has(.figure-viewer-overlay) {
     color: var(--text-tertiary);
     font-weight: 400;
 }
+/* ============================================================
+   PRESSABLE SLATE DESIGN SYSTEM — Part 5
+   Gap Fill, Short Answer, Select & Explain, Table Fill,
+   Tick Box Table, Match-Up, Numerical/Calculation,
+   Calculator Grid, KaTeX, Feedback Modal, Bug Report Modal
+   ============================================================ */
 
-/* ============================================
-   Gap Fill
-   ============================================ */
+
+/* ------------------------------------------------------------
+   1. GAP FILL
+   ------------------------------------------------------------ */
 
 .gf-word-bank {
     border: 2px solid var(--accent-blue-muted);
     padding: 16px 20px;
-    border-radius: 8px;
+    border-radius: var(--press-radius-sm);
     margin-bottom: 16px;
     background: var(--accent-blue-muted);
     font-size: 1.05rem;
@@ -2413,10 +2673,11 @@ html:has(.figure-viewer-overlay) {
     color: var(--accent-blue);
     background: var(--bg-surface);
     padding: 3px 10px;
-    border-radius: 4px;
+    border-radius: 999px;
     border: 1px solid var(--border-default);
     display: inline-block;
     margin-bottom: 4px;
+    font-weight: 700;
 }
 
 .gf-sentence {
@@ -2433,7 +2694,7 @@ html:has(.figure-viewer-overlay) {
     padding: 6px 10px;
     margin: 0 4px;
     border: 2px solid var(--accent-blue);
-    border-radius: 6px;
+    border-radius: 8px;
     background: var(--bg-input);
     font-family: inherit;
     font-size: inherit;
@@ -2478,12 +2739,13 @@ html:has(.figure-viewer-overlay) {
     margin-left: 4px;
     font-size: 0.85rem;
     color: var(--color-correct-text);
-    font-weight: 600;
+    font-weight: 700;
 }
 
-/* ============================================
-   Short Answer
-   ============================================ */
+
+/* ------------------------------------------------------------
+   2. SHORT ANSWER
+   ------------------------------------------------------------ */
 
 .sa-wrapper {
     margin-top: 12px;
@@ -2495,7 +2757,7 @@ html:has(.figure-viewer-overlay) {
     max-width: 360px;
     padding: 8px 12px;
     border: 2px solid var(--accent-blue);
-    border-radius: 6px;
+    border-radius: 8px;
     background: var(--bg-input);
     font-family: inherit;
     font-size: inherit;
@@ -2540,10 +2802,9 @@ html:has(.figure-viewer-overlay) {
     margin-top: 6px;
     font-size: 0.85rem;
     color: var(--color-correct-text);
-    font-weight: 600;
+    font-weight: 700;
 }
 
-/* Short answer review in marking panel */
 .review-short-answer {
     margin-top: 10px;
 }
@@ -2551,8 +2812,8 @@ html:has(.figure-viewer-overlay) {
 .review-sa-value {
     display: inline-block;
     padding: 6px 12px;
-    border-radius: 6px;
-    font-weight: 500;
+    border-radius: 8px;
+    font-weight: 600;
 }
 
 .review-sa-value.review-correct {
@@ -2580,12 +2841,13 @@ html:has(.figure-viewer-overlay) {
     margin-top: 6px;
     font-size: 0.85rem;
     color: var(--color-correct-text);
-    font-weight: 600;
+    font-weight: 700;
 }
 
-/* ============================================
-   Select and Explain
-   ============================================ */
+
+/* ------------------------------------------------------------
+   3. SELECT AND EXPLAIN
+   ------------------------------------------------------------ */
 
 .sae-container {
     display: flex;
@@ -2594,7 +2856,7 @@ html:has(.figure-viewer-overlay) {
 
 .sae-explain-prompt {
     margin-top: 14px;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--text-primary);
     font-size: 0.95rem;
 }
@@ -2603,21 +2865,21 @@ html:has(.figure-viewer-overlay) {
     margin-top: 10px;
 }
 
-/* Select-and-explain review in marking panel */
 .review-sae-explanation {
     margin-top: 14px;
 }
 
 .review-sae-label {
     font-size: 0.85rem;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--text-secondary);
     margin-bottom: 6px;
 }
 
-/* ============================================
-   Table Fill
-   ============================================ */
+
+/* ------------------------------------------------------------
+   4. TABLE FILL
+   ------------------------------------------------------------ */
 
 .tf-wrapper {
     margin-top: 12px;
@@ -2638,7 +2900,7 @@ html:has(.figure-viewer-overlay) {
 
 .tf-table thead th {
     background: var(--bg-surface-alt);
-    font-weight: 600;
+    font-weight: 700;
     text-align: center;
 }
 
@@ -2655,7 +2917,7 @@ html:has(.figure-viewer-overlay) {
     max-width: 160px;
     padding: 6px 10px;
     border: 2px solid var(--accent-blue);
-    border-radius: 6px;
+    border-radius: 8px;
     background: var(--bg-input);
     font-family: inherit;
     font-size: inherit;
@@ -2701,10 +2963,9 @@ html:has(.figure-viewer-overlay) {
     margin-top: 4px;
     font-size: 0.82rem;
     color: var(--color-correct-text);
-    font-weight: 600;
+    font-weight: 700;
 }
 
-/* Table fill review in marking panel */
 .review-table-fill {
     width: 100%;
     border-collapse: collapse;
@@ -2722,7 +2983,7 @@ html:has(.figure-viewer-overlay) {
 
 .review-table-fill thead th {
     background: var(--bg-surface-alt);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .review-tf-correct {
@@ -2734,7 +2995,7 @@ html:has(.figure-viewer-overlay) {
 }
 
 .review-tf-answer {
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .review-tf-misspelt {
@@ -2750,12 +3011,13 @@ html:has(.figure-viewer-overlay) {
     margin-top: 4px;
     font-size: 0.82rem;
     color: var(--color-correct-text);
-    font-weight: 600;
+    font-weight: 700;
 }
 
-/* ============================================
-   Tick Box Table
-   ============================================ */
+
+/* ------------------------------------------------------------
+   5. TICK BOX TABLE
+   ------------------------------------------------------------ */
 
 .tick-box-table {
     width: 100%;
@@ -2773,7 +3035,7 @@ html:has(.figure-viewer-overlay) {
 
 .tick-box-table thead th {
     background: var(--bg-surface-alt);
-    font-weight: 600;
+    font-weight: 700;
     text-align: center;
 }
 
@@ -2783,7 +3045,7 @@ html:has(.figure-viewer-overlay) {
 
 .tick-box-row-label {
     text-align: left;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .tick-box-cell {
@@ -2818,9 +3080,10 @@ html:has(.figure-viewer-overlay) {
     background: var(--color-incorrect-bg);
 }
 
-/* ============================================
-   Match-Up Input
-   ============================================ */
+
+/* ------------------------------------------------------------
+   6. MATCH-UP — Pressable Boxes
+   ------------------------------------------------------------ */
 
 .matchup-container {
     padding: 12px 0;
@@ -2853,11 +3116,12 @@ html:has(.figure-viewer-overlay) {
 
 .matchup-box {
     padding: 10px 18px;
-    border: 2px solid var(--text-secondary);
-    border-radius: 8px;
+    border: 1.5px solid var(--edge);
+    border-radius: var(--press-radius-sm);
     background: var(--card-bg);
     cursor: pointer;
-    transition: border-color 0.15s, background-color 0.15s, box-shadow 0.15s;
+    box-shadow: var(--press-shadow-sm);
+    transition: transform 120ms, box-shadow 120ms, border-color 0.15s, background 0.15s;
     user-select: none;
     min-width: 120px;
     text-align: center;
@@ -2865,11 +3129,18 @@ html:has(.figure-viewer-overlay) {
 
 .matchup-box:hover:not(.disabled):not(.linked):not(.selected) {
     background: var(--matchup-next-hover);
+    transform: translateY(-1px);
+}
+
+.matchup-box:active:not(.disabled):not(.linked) {
+    transform: translate(1px, 1px);
+    box-shadow: var(--press-shadow-active);
 }
 
 .matchup-box.selected {
     box-shadow: 0 0 0 3px var(--matchup-next-bg);
     background: var(--matchup-next-bg);
+    border-color: var(--accent-blue);
 }
 
 .matchup-box.linked {
@@ -2879,16 +3150,19 @@ html:has(.figure-viewer-overlay) {
 .matchup-box.disabled {
     cursor: default;
     opacity: 0.9;
+    box-shadow: none;
 }
 
 .matchup-box.correct {
     border-color: var(--color-correct);
     background: var(--color-correct-bg);
+    box-shadow: none;
 }
 
 .matchup-box.incorrect {
     border-color: var(--color-incorrect);
     background: var(--color-incorrect-bg);
+    box-shadow: none;
 }
 
 .matchup-box-image {
@@ -2900,7 +3174,7 @@ html:has(.figure-viewer-overlay) {
 
 .matchup-cancel-btn {
     background: none;
-    border: 1px solid var(--border);
+    border: 1.5px solid var(--border);
     border-radius: 50%;
     width: 28px;
     height: 28px;
@@ -2910,7 +3184,7 @@ html:has(.figure-viewer-overlay) {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: color 0.15s, border-color 0.15s, background-color 0.15s;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
     flex-shrink: 0;
 }
 
@@ -2928,13 +3202,14 @@ html:has(.figure-viewer-overlay) {
 
 .matchup-reset-btn {
     padding: 5px 14px;
-    border: 1px solid var(--border);
-    border-radius: 6px;
+    border: 1.5px solid var(--border);
+    border-radius: 999px;
     background: var(--card-bg);
     color: var(--border);
     cursor: default;
     font-size: 0.8rem;
-    transition: color 0.15s, border-color 0.15s, background-color 0.15s;
+    box-shadow: var(--press-shadow-sm);
+    transition: transform 120ms, box-shadow 120ms, color 0.15s, border-color 0.15s, background 0.15s;
     opacity: 0.5;
 }
 
@@ -2951,7 +3226,12 @@ html:has(.figure-viewer-overlay) {
     background: var(--color-incorrect-bg);
 }
 
-/* Match-up review in marking view */
+.matchup-reset-btn.active:active {
+    transform: translate(1px, 1px);
+    box-shadow: var(--press-shadow-active);
+}
+
+/* Review Match-Up */
 .review-matchup {
     display: flex;
     flex-direction: column;
@@ -2963,7 +3243,7 @@ html:has(.figure-viewer-overlay) {
     align-items: center;
     gap: 10px;
     padding: 8px 12px;
-    border-radius: 6px;
+    border-radius: 8px;
     font-size: 0.95rem;
 }
 
@@ -2976,7 +3256,7 @@ html:has(.figure-viewer-overlay) {
 }
 
 .review-matchup-left {
-    font-weight: 600;
+    font-weight: 700;
     min-width: 100px;
 }
 
@@ -2996,7 +3276,7 @@ html:has(.figure-viewer-overlay) {
 
 .review-matchup-correction {
     color: var(--color-correct-text);
-    font-weight: 600;
+    font-weight: 700;
     margin-left: 4px;
 }
 
@@ -3008,9 +3288,10 @@ html:has(.figure-viewer-overlay) {
     content: ")";
 }
 
-/* ============================================
-   Short Numerical Input
-   ============================================ */
+
+/* ------------------------------------------------------------
+   7. SHORT NUMERICAL / CALCULATION
+   ------------------------------------------------------------ */
 
 .numerical-container {
     display: flex;
@@ -3044,14 +3325,14 @@ html:has(.figure-viewer-overlay) {
     font-size: 1.1rem;
     color: var(--text-primary);
     background: var(--bg-input);
-    border: 2px solid var(--border-input);
+    border: 2px solid var(--accent-blue);
     border-radius: 8px;
     transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .numerical-final-input:focus {
     outline: none;
-    border-color: var(--border-input-focus);
+    border-color: var(--accent-blue-hover);
     background: var(--bg-input-focus);
     box-shadow: 0 0 0 3px var(--accent-blue-muted);
 }
@@ -3098,7 +3379,7 @@ html:has(.figure-viewer-overlay) {
     color: var(--text-secondary);
     background: var(--bg-surface);
     border: 1px solid var(--border-default);
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
     transition: background 0.2s, color 0.2s;
 }
@@ -3191,7 +3472,7 @@ html:has(.figure-viewer-overlay) {
 
 .numerical-working-input:focus {
     outline: none;
-    border-color: var(--border-input-focus);
+    border-color: var(--accent-blue);
     background: var(--bg-input-focus);
 }
 
@@ -3232,7 +3513,7 @@ html:has(.figure-viewer-overlay) {
 
 .numerical-calc-input:focus {
     outline: none;
-    border-color: var(--border-input-focus);
+    border-color: var(--accent-blue);
     background: var(--bg-input-focus);
 }
 
@@ -3295,14 +3576,20 @@ html:has(.figure-viewer-overlay) {
     border: 1px solid var(--border-subtle);
 }
 
-.numerical-display-answer.incorrect {
-    color: var(--color-incorrect-text);
+.numerical-display-answer.correct {
+    color: var(--color-correct);
     font-weight: 600;
 }
 
-/* ============================================
-   Calculator button grid & step inputs
-   ============================================ */
+.numerical-display-answer.incorrect {
+    color: var(--color-incorrect-text);
+    font-weight: 700;
+}
+
+
+/* ------------------------------------------------------------
+   8. CALCULATOR BUTTON GRID
+   ------------------------------------------------------------ */
 
 /* Step actions row: = button + add step (right-aligned) */
 .calc-step-actions {
@@ -3310,7 +3597,7 @@ html:has(.figure-viewer-overlay) {
     align-items: center;
     gap: 10px;
     margin-top: 2px;
-    padding-left: 56px; /* align with step inputs (48px label + 8px gap) */
+    padding-left: 56px;
 }
 
 .calc-equals-btn {
@@ -3330,7 +3617,6 @@ html:has(.figure-viewer-overlay) {
 .calc-equals-btn:hover {
     background: var(--accent-blue-hover);
 }
-
 
 /* Calculator layout: digits+operators left, symbols right */
 .calc-btn-layout {
@@ -3358,7 +3644,6 @@ html:has(.figure-viewer-overlay) {
     gap: 5px;
 }
 
-
 /* Symbols grid */
 .calc-btn-symbols {
     display: grid;
@@ -3367,7 +3652,6 @@ html:has(.figure-viewer-overlay) {
     align-content: start;
 }
 
-/* How to use help box */
 /* How to use button */
 .calc-help-btn {
     flex-shrink: 0;
@@ -3391,10 +3675,7 @@ html:has(.figure-viewer-overlay) {
 /* How to use modal overlay */
 .calc-help-overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     background: rgba(0, 0, 0, 0.4);
     display: flex;
     align-items: center;
@@ -3404,12 +3685,12 @@ html:has(.figure-viewer-overlay) {
 
 .calc-help-modal {
     background: var(--bg-surface);
-    border: 1px solid var(--border-default);
-    border-radius: 12px;
+    border: 1.5px solid var(--edge);
+    border-radius: var(--press-radius);
     padding: 24px 28px;
     max-width: 520px;
     width: 90%;
-    box-shadow: var(--shadow-lg);
+    box-shadow: 6px 6px 0 var(--edge);
 }
 
 .calc-help-title {
@@ -3465,15 +3746,15 @@ html:has(.figure-viewer-overlay) {
     background: var(--accent-blue-hover);
 }
 
-/* Shared button styles */
+/* Shared calculator button styles */
 .calc-btn-layout button {
     height: 38px;
     font-size: 1rem;
     font-weight: 600;
     color: var(--text-primary);
     background: var(--bg-input);
-    border: 1px solid var(--border-input);
-    border-radius: 6px;
+    border: 1.5px solid var(--border-input);
+    border-radius: 8px;
     cursor: pointer;
     transition: background 0.15s, border-color 0.15s;
     user-select: none;
@@ -3495,7 +3776,7 @@ html:has(.figure-viewer-overlay) {
 
 .calc-btn-layout .calc-btn-operator {
     color: var(--accent-blue);
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .calc-btn-layout .calc-btn-symbol {
@@ -3575,7 +3856,7 @@ html:has(.figure-viewer-overlay) {
     color: var(--text-tertiary);
     background: transparent;
     border: 1px dashed var(--border-subtle);
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
     transition: color 0.2s, background 0.2s, border-color 0.2s;
 }
@@ -3598,7 +3879,7 @@ html:has(.figure-viewer-overlay) {
     color: var(--accent-blue);
     background: transparent;
     border: 1px dashed var(--accent-blue-muted);
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
     transition: background 0.2s, border-color 0.2s;
 }
@@ -3616,7 +3897,7 @@ html:has(.figure-viewer-overlay) {
 .calc-message {
     font-size: 0.8rem;
     padding: 4px 10px;
-    border-radius: 6px;
+    border-radius: 8px;
 }
 
 .calc-message-error {
@@ -3625,34 +3906,34 @@ html:has(.figure-viewer-overlay) {
     border: 1px solid var(--color-incorrect-border);
 }
 
-/* ============================================
-   KaTeX overrides
-   ============================================ */
+
+/* ------------------------------------------------------------
+   9. KATEX
+   ------------------------------------------------------------ */
 
 .katex {
     font-size: 1.1em;
     color: var(--text-primary);
 }
 
-/* ============================================
-   Feedback Modal
-   ============================================ */
+
+/* ------------------------------------------------------------
+   10. FEEDBACK MODAL
+   ------------------------------------------------------------ */
 
 .feedback-overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    backdrop-filter: blur(4px);
 }
 
 [data-theme="dark"] .feedback-overlay {
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .feedback-overlay.hidden {
@@ -3662,18 +3943,19 @@ html:has(.figure-viewer-overlay) {
 .feedback-box {
     background: var(--bg-surface);
     padding: clamp(1.25rem, 4vw, 1.875rem) clamp(1.5rem, 5vw, 2.5rem);
-    border-radius: 14px;
-    border: 1px solid var(--accent-blue);
+    border-radius: var(--press-radius);
+    border: 1.5px solid var(--edge);
     max-width: 500px;
     width: 90%;
-    box-shadow: var(--shadow-lg);
+    box-shadow: 6px 6px 0 var(--edge);
 }
 
 .feedback-box h2 {
     color: var(--accent-blue);
     margin-bottom: 25px;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.25rem;
+    font-weight: 800;
 }
 
 .feedback-question {
@@ -3682,7 +3964,7 @@ html:has(.figure-viewer-overlay) {
 
 .feedback-question label {
     display: block;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 8px;
 }
@@ -3740,71 +4022,84 @@ html:has(.figure-viewer-overlay) {
     flex: 1;
     padding: 12px 20px;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 700;
     background: var(--accent-blue);
     color: var(--text-on-accent);
-    border: none;
-    border-radius: 8px;
+    border: 1.5px solid rgba(0, 0, 0, 0.15);
+    border-radius: 999px;
     cursor: pointer;
-    transition: background 0.2s;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+    transition: transform 120ms, box-shadow 120ms, background 0.15s;
 }
 
 .feedback-submit-btn:hover {
     background: var(--accent-blue-hover);
 }
 
+.feedback-submit-btn:active {
+    transform: translate(1px, 1px);
+    box-shadow: 0.5px 0.5px 0 rgba(0, 0, 0, 0.3);
+}
+
 .feedback-skip-btn {
     flex: 1;
     padding: 12px 20px;
     font-size: 1rem;
+    font-weight: 600;
     background: var(--bg-surface-alt);
     color: var(--text-secondary);
-    border: none;
-    border-radius: 8px;
+    border: 1.5px solid var(--edge);
+    border-radius: 999px;
     cursor: pointer;
-    transition: background 0.2s;
+    box-shadow: var(--press-shadow-sm);
+    transition: transform 120ms, box-shadow 120ms, background 0.15s;
 }
 
 .feedback-skip-btn:hover {
     background: var(--bg-surface-raised);
 }
 
-/* ============================================
-   Bug Report Modal
-   ============================================ */
+.feedback-skip-btn:active {
+    transform: translate(1px, 1px);
+    box-shadow: var(--press-shadow-active);
+}
+
+
+/* ------------------------------------------------------------
+   11. BUG REPORT MODAL
+   ------------------------------------------------------------ */
 
 .bugreport-overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    backdrop-filter: blur(4px);
 }
 
 [data-theme="dark"] .bugreport-overlay {
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .bugreport-box {
     background: var(--bg-surface);
     padding: clamp(1.25rem, 4vw, 1.875rem) clamp(1.5rem, 5vw, 2.5rem);
-    border-radius: 14px;
-    border: 1px solid var(--color-incorrect);
+    border-radius: var(--press-radius);
+    border: 1.5px solid var(--color-incorrect);
     max-width: 500px;
     width: 90%;
-    box-shadow: var(--shadow-lg);
+    box-shadow: 6px 6px 0 var(--edge);
 }
 
 .bugreport-box h2 {
     color: var(--color-incorrect);
     margin-bottom: 25px;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.25rem;
+    font-weight: 800;
 }
 
 .bugreport-field {
@@ -3813,7 +4108,7 @@ html:has(.figure-viewer-overlay) {
 
 .bugreport-field label {
     display: block;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 8px;
 }
@@ -3871,17 +4166,23 @@ html:has(.figure-viewer-overlay) {
     flex: 1;
     padding: 12px 20px;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 700;
     background: var(--color-incorrect);
     color: var(--text-on-accent);
-    border: none;
-    border-radius: 8px;
+    border: 1.5px solid rgba(0, 0, 0, 0.15);
+    border-radius: 999px;
     cursor: pointer;
-    transition: background 0.2s;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+    transition: transform 120ms, box-shadow 120ms, background 0.15s;
 }
 
 .bugreport-submit-btn:hover {
     background: var(--color-incorrect-border);
+}
+
+.bugreport-submit-btn:active {
+    transform: translate(1px, 1px);
+    box-shadow: 0.5px 0.5px 0 rgba(0, 0, 0, 0.3);
 }
 
 .bugreport-submit-btn:disabled {
@@ -3893,21 +4194,31 @@ html:has(.figure-viewer-overlay) {
     flex: 1;
     padding: 12px 20px;
     font-size: 1rem;
+    font-weight: 600;
     background: var(--bg-surface-alt);
     color: var(--text-secondary);
-    border: none;
-    border-radius: 8px;
+    border: 1.5px solid var(--edge);
+    border-radius: 999px;
     cursor: pointer;
-    transition: background 0.2s;
+    box-shadow: var(--press-shadow-sm);
+    transition: transform 120ms, box-shadow 120ms, background 0.15s;
 }
 
 .bugreport-cancel-btn:hover {
     background: var(--bg-surface-raised);
 }
 
-/* ============================================
-   Landing Page
-   ============================================ */
+.bugreport-cancel-btn:active {
+    transform: translate(1px, 1px);
+    box-shadow: var(--press-shadow-active);
+}
+/* ============================================================
+   PRESSABLE SLATE DESIGN SYSTEM — Part 6
+   Landing Page, Score Page Overlay, Responsive Breakpoints
+   ============================================================ */
+
+
+/* ============ 1. Landing Page ============ */
 
 #landing-page {
     display: none;
@@ -3924,15 +4235,20 @@ html:has(.figure-viewer-overlay) {
     text-align: center;
     max-width: 700px;
     width: 100%;
+    transition: transform 0.6s ease;
+}
+
+.landing-content.slid-up {
+    transform: translateY(-60px);
 }
 
 .landing-title {
     font-size: clamp(2rem, 6vw, 3.5rem);
-    font-weight: 700;
+    font-weight: 800;
     color: var(--accent-blue);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.04em;
     margin-bottom: clamp(0.75rem, 2vw, 1rem);
-    line-height: 1.1;
+    line-height: 1.05;
 }
 
 .landing-strapline {
@@ -3940,11 +4256,17 @@ html:has(.figure-viewer-overlay) {
     color: var(--text-secondary);
     margin-bottom: clamp(1.5rem, 4vw, 2rem);
     line-height: 1.6;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.landing-strapline.fade-in {
+    opacity: 1;
 }
 
 .landing-select-label {
-    font-size: 0.88rem;
-    font-weight: 600;
+    font-size: 0.85rem;
+    font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--text-tertiary);
@@ -3959,36 +4281,46 @@ html:has(.figure-viewer-overlay) {
 
 .landing-subjects {
     margin-bottom: clamp(2rem, 6vw, 3.75rem);
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.landing-subjects.fade-in {
+    opacity: 1;
 }
 
 .landing-cta-btn {
     font-size: 1.1rem;
-    font-weight: 600;
+    font-weight: 800;
     color: var(--text-on-accent);
     background: var(--accent-blue);
-    border: none;
+    border: 1.5px solid rgba(0, 0, 0, 0.15);
     padding: 14px 48px;
-    border-radius: 10px;
+    border-radius: 999px;
     cursor: pointer;
-    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-    letter-spacing: 0.02em;
-    box-shadow: var(--shadow-md);
+    letter-spacing: 0.01em;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+    transition: transform 120ms ease, box-shadow 120ms ease, background 0.15s;
+    user-select: none;
+    touch-action: manipulation;
 }
 
 .landing-cta-btn:hover {
     background: var(--accent-blue-hover);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-hover);
 }
 
-/* Hide header on landing page */
+.landing-cta-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+}
+
 body.landing-active header {
     display: none;
 }
 
-/* ============================================
-   Landing Page — Feature Cards
-   ============================================ */
+
+/* ============ Landing Feature Cards ============ */
 
 .landing-features {
     display: grid;
@@ -3996,28 +4328,39 @@ body.landing-active header {
     gap: clamp(0.75rem, 2vw, 1.25rem);
     max-width: 700px;
     margin: 0 auto;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.landing-features.fade-in {
+    opacity: 1;
 }
 
 .landing-feature-card {
     background: var(--bg-surface);
-    border: 1px solid var(--border-default);
-    border-radius: 12px;
+    border: 1.5px solid var(--edge);
+    border-radius: var(--press-radius);
     padding: clamp(1rem, 2.5vw, 1.5rem) clamp(0.875rem, 2vw, 1.25rem);
     text-align: left;
-    box-shadow: var(--shadow-sm);
-    transition: box-shadow 0.2s, transform 0.15s;
+    box-shadow: var(--press-shadow-sm);
+    transition: transform 120ms, box-shadow 120ms;
 }
 
 .landing-feature-card:hover {
-    box-shadow: var(--shadow-md);
-    transform: translateY(-1px);
+    transform: translateY(-2px);
+}
+
+.landing-feature-card:active {
+    transform: translate(1px, 1px);
+    box-shadow: 0.5px 0.5px 0 var(--edge);
 }
 
 .landing-feature-card h3 {
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 800;
     color: var(--text-primary);
     margin-bottom: 8px;
+    letter-spacing: -0.01em;
 }
 
 .landing-feature-card p {
@@ -4026,34 +4369,8 @@ body.landing-active header {
     line-height: 1.55;
 }
 
-/* ============================================
-   Landing Page Animations
-   ============================================ */
 
-.landing-strapline,
-.landing-subjects,
-.landing-features {
-    opacity: 0;
-    transition: opacity 0.8s ease;
-}
-
-.landing-strapline.fade-in,
-.landing-subjects.fade-in,
-.landing-features.fade-in {
-    opacity: 1;
-}
-
-.landing-content {
-    transition: transform 0.6s ease;
-}
-
-.landing-content.slid-up {
-    transform: translateY(-60px);
-}
-
-/* ============================================
-   Score Page Overlay
-   ============================================ */
+/* ============ 2. Score Page Overlay ============ */
 
 .score-page-overlay {
     position: fixed;
@@ -4088,9 +4405,9 @@ body.landing-active header {
 
 .score-page-value {
     font-size: clamp(80px, 15vw, 150px);
-    font-weight: 700;
+    font-weight: 800;
     color: var(--text-primary);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
     display: flex;
     align-items: baseline;
     justify-content: center;
@@ -4139,19 +4456,24 @@ body.landing-active header {
 .score-page-btn-primary {
     padding: 0.875rem 2rem;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--text-on-accent);
     background: var(--accent-blue);
-    border: none;
-    border-radius: 10px;
+    border: 1.5px solid rgba(0, 0, 0, 0.15);
+    border-radius: 999px;
     cursor: pointer;
-    transition: background 0.2s, box-shadow 0.2s;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+    transition: transform 120ms, box-shadow 120ms, background 0.15s;
 }
 
 .score-page-btn-primary:hover {
     background: var(--accent-blue-hover);
-    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+}
+
+.score-page-btn-primary:active {
+    transform: translate(1px, 1px);
+    box-shadow: 0.5px 0.5px 0 rgba(0, 0, 0, 0.3);
 }
 
 .score-page-secondary {
@@ -4170,7 +4492,7 @@ body.landing-active header {
     border: none;
     padding: 0.25rem 0.5rem;
     font-size: 0.9rem;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--text-secondary);
     cursor: pointer;
     transition: color 0.2s;
@@ -4181,11 +4503,11 @@ body.landing-active header {
     text-decoration: underline;
 }
 
-/* ============================================
-   Responsive
-   ============================================ */
 
-/* Figure sidebar mobile — collapse to bottom drawer */
+/* ============ 3. Responsive Breakpoints ============ */
+
+/* ---------- Figure sidebar mobile (max-width: 900px) ---------- */
+
 @media (max-width: 900px) {
     body:has(.has-figure-sidebar) {
         max-width: 920px;
@@ -4226,7 +4548,7 @@ body.landing-active header {
         padding: 12px;
         padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
         font-size: 0.9rem;
-        font-weight: 600;
+        font-weight: 700;
         color: var(--accent-blue);
         cursor: pointer;
         gap: 6px;
@@ -4267,14 +4589,16 @@ body.landing-active header {
     }
 }
 
-/* Large desktop — scale up for big monitors */
+/* ---------- Large screens (min-width: 1400px) ---------- */
+
 @media (min-width: 1400px) {
     html {
         zoom: 1.5;
     }
 }
 
-/* Smaller desktop / large laptop — tighten spacing */
+/* ---------- Tablets (max-width: 1024px) ---------- */
+
 @media (max-width: 1024px) {
     body {
         padding: clamp(0.75rem, 3vw, 1rem);
@@ -4346,7 +4670,8 @@ body.landing-active header {
     }
 }
 
-/* Tablet / mobile — sticky score page actions */
+/* ---------- Mobile landscape / small tablets (max-width: 767px) ---------- */
+
 @media (max-width: 767px) {
     .score-page-overlay {
         justify-content: flex-start;
@@ -4404,11 +4729,15 @@ body.landing-active header {
     }
 }
 
+/* ---------- Small tablets (max-width: 768px) ---------- */
+
 @media (max-width: 768px) {
     .landing-features {
         grid-template-columns: 1fr 1fr;
     }
 }
+
+/* ---------- Mobile (max-width: 600px) ---------- */
 
 @media (max-width: 600px) {
     .breadcrumb-link,
@@ -4490,7 +4819,6 @@ body.landing-active header {
         font-size: 1rem;
     }
 
-    /* Self-marking / review footer nav */
     .self-marking-nav-btn {
         padding: 0.375rem 0.625rem;
         font-size: 0.78rem;
@@ -4510,7 +4838,6 @@ body.landing-active header {
         display: none;
     }
 
-    /* Hide title text but keep badges */
     .self-marking-title-text {
         display: none;
     }
@@ -4519,17 +4846,14 @@ body.landing-active header {
         margin-left: 0;
     }
 
-    /* Hide report bug in marking header */
     .self-marking-report-btn {
         display: none;
     }
 
-    /* Hide panel headings and their dividers */
     .self-marking-panel-heading {
         display: none;
     }
 
-    /* Stronger background contrast between panels */
     .self-marking-left {
         background: var(--bg-surface);
     }
@@ -4546,8 +4870,6 @@ body.landing-active header {
         font-size: 0.8rem;
     }
 
-
-    /* Marking summary buttons */
     .marking-summary-buttons {
         flex-direction: column;
         gap: 0.5rem;
@@ -4559,7 +4881,6 @@ body.landing-active header {
         font-size: 0.9rem;
     }
 
-    /* Bottom nav row (back / bug report) */
     .back-btn-fixed {
         padding: 0.5rem 0.875rem;
         font-size: 0.88rem;

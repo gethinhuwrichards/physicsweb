@@ -1,0 +1,764 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>UI Redesign Mock – Inspired Hero + Pressable Cream System</title>
+<style>
+  :root{
+    /* Base */
+    --bg: #f6f2ec;
+    --ink: #221a10;
+    --muted: #6b5a42;
+
+    /* Cream “pressable” system */
+    --cream: #f6eddc;
+    --cream2: #fbf4e8;
+    --edge: #3f2f1b;
+
+    /* Accent palette inspired by reference (green/yellow) but toned */
+    --green: #2fb46e;
+    --green2:#23a360;
+    --yellow:#f4cf55;
+    --blue:  #2e5aa7;
+
+    --radius: 18px;
+    --shadow: 3px 3px 0 var(--edge);
+    --shadowPressed: 1.5px 1.5px 0 var(--edge);
+    --borderSoft: rgba(0,0,0,0.10);
+
+    --max: 72rem;
+  }
+
+  *{ box-sizing:border-box; }
+  html,body{ height:100%; }
+  body{
+    margin:0;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    background: var(--bg);
+    color: var(--ink);
+  }
+
+  /* ===== NAV: keep “in place” (sticky) ===== */
+  .nav{
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(10px);
+    background: rgba(246,242,236,0.92);
+    border-bottom: 1px solid var(--borderSoft);
+  }
+  .navInner{
+    max-width: var(--max);
+    margin-inline:auto;
+    padding: 0.75rem clamp(1rem, 4vw, 2.5rem);
+    display:flex;
+    align-items:center;
+    gap: 0.9rem;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap: 0.7rem;
+    min-width: 12rem;
+  }
+  .logo{
+    width: 36px; height: 36px;
+    border-radius: 14px;
+    background: var(--cream);
+    border: 1.5px solid var(--edge);
+    box-shadow: 2px 2px 0 var(--edge);
+    display:grid;
+    place-items:center;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+  }
+  .brandName{
+    display:flex;
+    flex-direction:column;
+    line-height:1.05;
+  }
+  .brandName strong{ font-size: 1rem; }
+  .brandName span{ font-size: 0.82rem; color: rgba(0,0,0,0.55); }
+
+  .crumb{
+    flex:1;
+    min-width:0;
+    display:flex;
+    align-items:center;
+    gap: 0.5rem;
+    color: rgba(0,0,0,0.62);
+    font-size: 0.92rem;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+  }
+  .crumb a{
+    color: inherit;
+    text-decoration:none;
+    border-bottom: 1px dashed rgba(0,0,0,0.20);
+  }
+  .crumb a:hover{ border-bottom-color: rgba(0,0,0,0.40); }
+  .sep{ opacity: 0.55; }
+
+  .navRight{
+    display:flex;
+    align-items:center;
+    gap: 0.6rem;
+  }
+
+  .pill{
+    display:inline-flex;
+    align-items:center;
+    gap: 0.5rem;
+    padding: 0.45rem 0.75rem;
+    border-radius: 999px;
+    border: 1px solid rgba(0,0,0,0.14);
+    background: rgba(255,255,255,0.65);
+    color: rgba(0,0,0,0.70);
+    font-size: 0.86rem;
+    white-space: nowrap;
+  }
+
+  .btn{
+    appearance:none;
+    border: 1.5px solid var(--edge);
+    border-radius: 999px;
+    background: var(--cream);
+    box-shadow: 2px 2px 0 var(--edge);
+    color: var(--ink);
+    cursor:pointer;
+    padding: 0.55rem 0.9rem;
+    font-weight: 750;
+    font-size: 0.92rem;
+    transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease, filter 120ms ease;
+    user-select:none;
+    touch-action: manipulation;
+  }
+  .btn:hover{ background: var(--cream2); }
+  .btn:active{ transform: translate(1px,1px); box-shadow: 1px 1px 0 var(--edge); }
+
+  .btnLogin{
+    background: linear-gradient(180deg, #39c57b, #26a865);
+    color: #062312;
+    border-color: rgba(0,0,0,0.25);
+    box-shadow: 2px 2px 0 rgba(0,0,0,0.55);
+  }
+  .btnLogin:hover{ filter: brightness(1.03); background: linear-gradient(180deg, #44d487, #2fb46e); }
+
+  /* ===== PAGE ===== */
+  .page{
+    max-width: var(--max);
+    margin-inline:auto;
+    padding: clamp(1rem, 4vw, 2.5rem);
+    padding-block: clamp(1.25rem, 4vw, 2.25rem);
+    display:grid;
+    gap: 1.25rem;
+  }
+
+  /* ===== HERO inspired by reference layout ===== */
+  .hero{
+    display:grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: clamp(1rem, 3vw, 2rem);
+    align-items: center;
+
+    border-radius: 22px;
+    border: 1px solid var(--borderSoft);
+    background: rgba(255,255,255,0.55);
+    padding: clamp(1rem, 3vw, 1.5rem);
+  }
+
+  @media (max-width: 980px){
+    .hero{ grid-template-columns: 1fr; }
+  }
+
+  .heroLeft{
+    display:grid;
+    gap: 1rem;
+    align-content: start;
+  }
+
+  .heroTitle{
+    margin:0;
+    font-size: clamp(2.1rem, 4.6vw, 3.4rem);
+    letter-spacing: -0.04em;
+    line-height: 0.95;
+  }
+
+  .heroSub{
+    margin:0;
+    color: rgba(0,0,0,0.62);
+    max-width: 62ch;
+    line-height: 1.45;
+    font-size: 1.02rem;
+  }
+
+  .heroCTAs{
+    display:flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    align-items:center;
+    margin-top: 0.2rem;
+  }
+
+  .btnPrimary{
+    border-radius: 999px;
+    background: linear-gradient(180deg, #fff0d8, #f4e3c6);
+    box-shadow: 2px 2px 0 var(--edge);
+    padding: 0.65rem 1.05rem;
+  }
+
+  .btnGhost{
+    background: transparent;
+    box-shadow: none;
+    border-color: rgba(0,0,0,0.30);
+  }
+
+  /* little “swatches” like the ref */
+  .swatches{
+    display:flex;
+    gap: 0.35rem;
+    align-items:center;
+  }
+  .dot{
+    width: 28px; height: 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(0,0,0,0.14);
+    background: #fff;
+  }
+  .dot.d1{ background: #111; border-color:#111; }
+  .dot.d2{ background: var(--green); }
+  .dot.d3{ background: var(--yellow); }
+
+  /* ===== HERO RIGHT: “character blob” without photo (stylised) ===== */
+  .heroRight{
+    display:grid;
+    gap: 0.8rem;
+    justify-items: end;
+  }
+
+  .visual{
+    width: min(420px, 100%);
+    aspect-ratio: 1 / 1;
+    position: relative;
+    display:grid;
+    place-items:center;
+  }
+
+  /* blob stack to mimic reference */
+  .blobYellow{
+    position:absolute;
+    inset: 8% 10% 14% 8%;
+    background: var(--yellow);
+    border: 2px solid rgba(0,0,0,0.75);
+    border-radius: 44% 56% 47% 53% / 52% 44% 56% 48%;
+    transform: rotate(-6deg);
+  }
+  .blobGreen{
+    position:absolute;
+    inset: 12% 8% 10% 14%;
+    background: #46d18b;
+    border: 2px solid rgba(0,0,0,0.75);
+    border-radius: 54% 46% 60% 40% / 44% 56% 44% 56%;
+    transform: rotate(8deg);
+  }
+
+  /* placeholder “person card” */
+  .avatarCard{
+    position: relative;
+    width: 62%;
+    height: 68%;
+    background: rgba(255,255,255,0.75);
+    border: 2px solid rgba(0,0,0,0.75);
+    border-radius: 22px;
+    display:grid;
+    place-items:center;
+    box-shadow: 0 14px 24px rgba(0,0,0,0.12);
+    transform: rotate(2deg);
+  }
+  .avatarFace{
+    width: 92px; height: 92px;
+    border-radius: 999px;
+    border: 2px solid rgba(0,0,0,0.75);
+    background: linear-gradient(180deg, #ffd7b8, #ffbf8f);
+    position: relative;
+  }
+  .avatarFace:before, .avatarFace:after{
+    content:"";
+    position:absolute;
+    top: 36px;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.8);
+  }
+  .avatarFace:before{ left: 26px; }
+  .avatarFace:after{ right: 26px; }
+  .smile{
+    position:absolute;
+    left:50%;
+    top: 56px;
+    width: 34px; height: 18px;
+    border: 3px solid rgba(0,0,0,0.7);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0 0 999px 999px;
+    transform: translateX(-50%);
+  }
+
+  /* right-side “pill tags” like reference */
+  .tagStack{
+    display:grid;
+    gap: 0.5rem;
+    justify-items: end;
+  }
+  .tag{
+    display:inline-flex;
+    align-items:center;
+    gap: 0.5rem;
+    padding: 0.45rem 0.75rem;
+    border-radius: 999px;
+    border: 1.5px solid rgba(0,0,0,0.65);
+    background: rgba(255,255,255,0.75);
+    font-size: 0.88rem;
+    font-weight: 720;
+  }
+  .tagHot{
+    background: #fff0d8;
+    border-color: rgba(0,0,0,0.75);
+  }
+  .tagDot{
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--green);
+    border: 1px solid rgba(0,0,0,0.35);
+  }
+
+  /* callout bubble */
+  .callout{
+    width: min(420px, 100%);
+    background: rgba(255,255,255,0.75);
+    border: 2px solid rgba(0,0,0,0.75);
+    border-radius: 18px;
+    padding: 0.75rem 0.85rem;
+    display:flex;
+    gap: 0.75rem;
+    align-items:flex-start;
+    justify-self: end;
+    box-shadow: 0 12px 22px rgba(0,0,0,0.12);
+  }
+  .badge{
+    width: 34px; height: 34px;
+    border-radius: 12px;
+    background: #fff0d8;
+    border: 2px solid rgba(0,0,0,0.75);
+    display:grid;
+    place-items:center;
+    font-weight: 900;
+  }
+  .callout h3{
+    margin:0;
+    font-size: 0.98rem;
+    letter-spacing: -0.01em;
+  }
+  .callout p{
+    margin:0.15rem 0 0;
+    color: rgba(0,0,0,0.62);
+    font-size: 0.9rem;
+    line-height: 1.35;
+  }
+
+  /* ===== MAIN CONTENT: topic cards in redesigned language ===== */
+  .layout{
+    display:grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 1.25rem;
+    align-items:start;
+  }
+  @media (max-width: 980px){
+    .layout{ grid-template-columns: 1fr; }
+  }
+
+  .panel{
+    border-radius: 22px;
+    border: 1px solid var(--borderSoft);
+    background: rgba(255,255,255,0.55);
+    padding: 1rem;
+  }
+
+  .panelHeader{
+    display:flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 0.9rem;
+  }
+  .panelHeader h2{
+    margin:0;
+    font-size: 1.05rem;
+    letter-spacing: -0.01em;
+  }
+  .panelHeader .small{
+    font-size: 0.88rem;
+    color: rgba(0,0,0,0.62);
+  }
+
+  .topicGrid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 0.95rem;
+  }
+
+  .topicCard{
+    background: var(--cream);
+    border: 1.5px solid var(--edge);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    color: var(--ink);
+    cursor:pointer;
+
+    display:flex;
+    flex-direction:column;
+    gap: 0.35rem;
+    padding: 1rem 1.15rem;
+    text-align:left;
+
+    transition: transform 120ms ease, box-shadow 120ms ease, background-color 120ms ease, filter 120ms ease;
+    user-select:none;
+    touch-action: manipulation;
+    min-height: 112px;
+  }
+  .topicCard:hover{
+    background: var(--cream2);
+    transform: translateY(-2px);
+  }
+  .topicCard:active{
+    box-shadow: var(--shadowPressed);
+    transform: translate(1.5px, 1.5px);
+  }
+
+  .topicTop{
+    display:flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+  .topicTitle{
+    font-weight: 800;
+    font-size: 1.05rem;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+  }
+  .chip{
+    font-size: 0.78rem;
+    font-weight: 780;
+    color: rgba(34,26,16,0.86);
+    background: rgba(255,255,255,0.55);
+    border: 1px solid rgba(63,47,27,0.25);
+    padding: 0.18rem 0.55rem;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .chipNew{ background: rgba(244,207,85,0.35); border-color: rgba(63,47,27,0.30); }
+  .chipMix{ background: rgba(47,180,110,0.18); border-color: rgba(63,47,27,0.25); }
+  .topicMeta{
+    font-size: 0.9rem;
+    color: var(--muted);
+    line-height: 1.25;
+  }
+  .topicFooter{
+    margin-top:auto;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding-top: 0.25rem;
+  }
+  .topicProgress{
+    font-size: 0.82rem;
+    color: rgba(34,26,16,0.72);
+  }
+  .chev{
+    font-size: 1.15rem;
+    opacity: 0.55;
+  }
+
+  /* ===== Sidebar blocks (inspired by reference “stats + video”) ===== */
+  .stack{ display:grid; gap: 0.95rem; }
+
+  .statRow{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+  .stat{
+    border-radius: 18px;
+    border: 1px solid rgba(0,0,0,0.10);
+    background: rgba(255,255,255,0.70);
+    padding: 0.85rem;
+  }
+  .stat strong{
+    display:block;
+    font-size: 1.25rem;
+    letter-spacing: -0.02em;
+  }
+  .stat span{
+    color: rgba(0,0,0,0.60);
+    font-size: 0.88rem;
+  }
+
+  .video{
+    border-radius: 22px;
+    border: 1px solid rgba(0,0,0,0.10);
+    background: rgba(255,255,255,0.70);
+    padding: 0.9rem;
+  }
+  .videoThumb{
+    border-radius: 18px;
+    border: 2px solid rgba(0,0,0,0.75);
+    background:
+      radial-gradient(circle at 30% 30%, rgba(244,207,85,0.55), transparent 45%),
+      radial-gradient(circle at 70% 60%, rgba(47,180,110,0.38), transparent 50%),
+      rgba(255,255,255,0.7);
+    height: 140px;
+    display:grid;
+    place-items:center;
+    box-shadow: 0 14px 22px rgba(0,0,0,0.10);
+  }
+  .play{
+    width: 54px; height: 54px;
+    border-radius: 999px;
+    border: 2px solid rgba(0,0,0,0.75);
+    background: #fff;
+    display:grid;
+    place-items:center;
+    font-weight: 900;
+  }
+  .video p{
+    margin: 0.7rem 0 0;
+    color: rgba(0,0,0,0.62);
+    font-size: 0.92rem;
+    line-height: 1.35;
+  }
+
+  .footer{
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 1.25rem clamp(1rem, 4vw, 2.5rem) 2rem;
+    color: rgba(0,0,0,0.55);
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+
+<body>
+
+<header class="nav">
+  <div class="navInner">
+    <div class="brand">
+      <div class="logo">pp</div>
+      <div class="brandName">
+        <strong>Past Papers</strong>
+        <span>Physics · GCSE</span>
+      </div>
+    </div>
+
+    <div class="crumb" aria-label="Breadcrumb">
+      <a href="#">Home</a><span class="sep">›</span>
+      <a href="#">Physics</a><span class="sep">›</span>
+      <span>Topics</span>
+    </div>
+
+    <div class="navRight">
+      <span class="pill">Streak: <strong>3</strong></span>
+      <button class="btn btnLogin">Login</button>
+    </div>
+  </div>
+</header>
+
+<main class="page">
+
+  <!-- HERO inspired by your reference image -->
+  <section class="hero">
+    <div class="heroLeft">
+      <div class="swatches" aria-hidden="true">
+        <span class="dot d1"></span>
+        <span class="dot d2"></span>
+        <span class="dot d3"></span>
+      </div>
+
+      <h1 class="heroTitle">Past Paper Practice<br/>That Feels Easy</h1>
+
+      <p class="heroSub">
+        A bold, friendly homepage layout inspired by the reference hero — but translated into your
+        “pressable cream” UI so it still feels like a workbook, not a startup template.
+      </p>
+
+      <div class="heroCTAs">
+        <button class="btn btnPrimary">Start a quick set</button>
+        <button class="btn btnGhost">Browse topics</button>
+        <span class="pill">Chromebook-friendly</span>
+      </div>
+    </div>
+
+    <div class="heroRight">
+      <div class="tagStack">
+        <div class="tag tagHot"><span class="tagDot"></span> Calculations</div>
+        <div class="tag"><span class="tagDot" style="background:var(--yellow)"></span> Equations</div>
+        <div class="tag"><span class="tagDot" style="background:var(--blue)"></span> Required Practical</div>
+      </div>
+
+      <div class="visual" aria-hidden="true">
+        <div class="blobGreen"></div>
+        <div class="blobYellow"></div>
+        <div class="avatarCard">
+          <div class="avatarFace"><div class="smile"></div></div>
+          <div style="margin-top:0.65rem; font-weight:800; letter-spacing:-0.02em;">Your next mark</div>
+          <div style="font-size:0.88rem; color:rgba(0,0,0,0.60);">made obvious</div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <div class="badge">★</div>
+        <div>
+          <h3>Interactive marking</h3>
+          <p>Reveal mark points one at a time, and keep the UI calm on small screens.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="layout">
+    <!-- Topics -->
+    <section class="panel">
+      <div class="panelHeader">
+        <h2>Pick a topic</h2>
+        <div class="small">34 topics · 312 questions</div>
+      </div>
+
+      <div class="topicGrid">
+        <button class="topicCard">
+          <div class="topicTop">
+            <div class="topicTitle">Energy Stores</div>
+            <div class="chip chipNew">New</div>
+          </div>
+          <div class="topicMeta">Foundations + calculations</div>
+          <div class="topicFooter">
+            <div class="topicProgress">0% completed</div>
+            <div class="chev">›</div>
+          </div>
+        </button>
+
+        <button class="topicCard">
+          <div class="topicTop">
+            <div class="topicTitle">Forces &amp; Motion</div>
+            <div class="chip chipMix">Recommended</div>
+          </div>
+          <div class="topicMeta">Multi-step problems + graphs</div>
+          <div class="topicFooter">
+            <div class="topicProgress">42% completed</div>
+            <div class="chev">›</div>
+          </div>
+        </button>
+
+        <button class="topicCard">
+          <div class="topicTop">
+            <div class="topicTitle">Electric Circuits</div>
+            <div class="chip">Core</div>
+          </div>
+          <div class="topicMeta">Series/parallel + equations</div>
+          <div class="topicFooter">
+            <div class="topicProgress">22% completed</div>
+            <div class="chev">›</div>
+          </div>
+        </button>
+
+        <button class="topicCard">
+          <div class="topicTop">
+            <div class="topicTitle">Waves</div>
+            <div class="chip">Core</div>
+          </div>
+          <div class="topicMeta">Speed, frequency, wavelength</div>
+          <div class="topicFooter">
+            <div class="topicProgress">5% completed</div>
+            <div class="chev">›</div>
+          </div>
+        </button>
+
+        <button class="topicCard">
+          <div class="topicTop">
+            <div class="topicTitle">Radioactivity</div>
+            <div class="chip">Core</div>
+          </div>
+          <div class="topicMeta">Half-life + safety</div>
+          <div class="topicFooter">
+            <div class="topicProgress">0% completed</div>
+            <div class="chev">›</div>
+          </div>
+        </button>
+
+        <button class="topicCard">
+          <div class="topicTop">
+            <div class="topicTitle">Space Physics</div>
+            <div class="chip">Stretch</div>
+          </div>
+          <div class="topicMeta">Orbits + redshift basics</div>
+          <div class="topicFooter">
+            <div class="topicProgress">100% completed</div>
+            <div class="chev">›</div>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <!-- Sidebar inspired by ref “stats + media” -->
+    <aside class="stack">
+      <section class="panel">
+        <div class="panelHeader">
+          <h2>Today</h2>
+          <div class="small">Keep it short</div>
+        </div>
+
+        <div style="display:flex; gap:0.6rem; flex-wrap:wrap;">
+          <button class="btn btnPrimary">5-question set</button>
+          <button class="btn">2–3 mark focus</button>
+          <button class="btn btnGhost">Random topic</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panelHeader">
+          <h2>Progress</h2>
+          <div class="small">This week</div>
+        </div>
+
+        <div class="statRow">
+          <div class="stat">
+            <strong>24</strong>
+            <span>questions attempted</span>
+          </div>
+          <div class="stat">
+            <strong>78%</strong>
+            <span>avg score</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="video">
+        <div class="videoThumb">
+          <div class="play">▶</div>
+        </div>
+        <p><strong>How to use the site</strong><br/>Short demo: answer → self-mark → repeat.</p>
+      </section>
+    </aside>
+  </section>
+
+</main>
+
+<footer class="footer">
+  Mockup only. This keeps navigation behaviour (sticky, breadcrumb) but rebuilds the “hero + cards” layout inspired by the reference image, translated into your pressable cream aesthetic.
+</footer>
+
+</body>
+</html>
