@@ -22,9 +22,9 @@ Exam papers use specific wording patterns that map to the website's question typ
 | "Draw one line from each..." / "Match each... to..." | `match-up` | Rephrase as "Match each...". Left items → right items with distractors on the right. |
 | "Write down the equation that links..." / select from 4 equations | `equation-choice` | Always 1 mark. 4 LaTeX equation options. |
 | "Calculate..." / "Determine..." / "Work out..." with a numerical answer | `calculation` | 2–4 marks. Identify the correct equation, correct answer, and tolerance. Build mark scheme as substitution → (rearrangement) → final answer. |
-| "Name..." / "State..." / "What is the unit of..." / "What type of..." — 1-mark, one-word or short-phrase answer | `short-answer` | Use when there is a single definitive correct answer (or small set of alternatives). List all accepted spellings/synonyms in `acceptedAnswers`. |
+| "Name..." / "State..." / "What is the unit of..." / "What type of..." — 1-mark, one-word or short-phrase answer | `short-answer` | Use **only** when the answer is a single word or very short phrase (1–3 words) like a unit name, particle name, or quantity name. List all accepted spellings/synonyms in `acceptedAnswers`. |
 | "Which [option]? Tick one box. Give a reason for your answer." / "Choose... and explain..." | `select-and-explain` | Selection is auto-marked (1 mark). Explanation is self-marked (remaining marks). First mark scheme entry = selection, rest = explanation. |
-| "Describe..." / "Explain..." / "Compare..." / "Evaluate..." — 2+ marks, free-text answer | `extended-written` | Use when the answer is open-ended with no single correct response. Use `**keyword**` syntax in mark scheme to highlight key terms. |
+| "Describe..." / "Explain..." / "Compare..." / "Evaluate..." / "Why..." — any marks, free-text answer | `extended-written` | Use when the answer requires a sentence or more, even if only 1 mark. Use `**keyword**` syntax in mark scheme to highlight key terms. |
 
 ### Decision flowchart for ambiguous cases
 
@@ -32,7 +32,8 @@ Some questions could fit multiple types. Use these rules to decide:
 
 1. **Does it have a definitive single correct answer expressible in 1–3 words?**
    - Yes, with options provided → `single-choice`
-   - Yes, no options, 1 mark → `short-answer`
+   - Yes, no options, 1 mark, answer is a single word or short phrase (e.g., a unit, particle name, quantity) → `short-answer`
+   - Yes, no options, but answer requires a short sentence → `extended-written` (even if 1 mark)
    - Yes, no options, 2+ marks → probably `calculation` or `extended-written` depending on whether it's numerical
 
 2. **Does it ask to select AND explain?**
@@ -43,14 +44,18 @@ Some questions could fit multiple types. Use these rules to decide:
    - In a sentence, with a word bank → `gap-fill`
    - In a table, with or without a word bank → `table-fill`
 
-4. **Is it a "describe a method" or "explain a process" question (2+ marks)?**
-   - Always `extended-written`. Do not try to auto-mark these.
+4. **Is it a "describe a method" or "explain a process" question?**
+   - Always `extended-written`, even if only 1 mark. Do not try to auto-mark these.
 
-5. **Does it ask for a numerical calculation?**
+5. **Does the answer require a sentence (e.g., "Why...", "Suggest a reason...", "Give one advantage...")?**
+   - Always `extended-written`, even if only 1 mark. Short-answer auto-marking cannot handle sentence-length responses.
+
+6. **Does it ask for a numerical calculation?**
    - Always `calculation`, even if only 2 marks. Never use `short-answer` for numerical answers.
 
-6. **Does it say "1 mark" and ask for a factual recall word?**
-   - Use `short-answer`. List common alternative phrasings in `acceptedAnswers` (e.g., `["direct current", "DC", "d.c."]`).
+7. **Does it say "1 mark" and ask for a factual recall word?**
+   - Use `short-answer` **only if** the answer is a single word or very short phrase (1–3 words). List common alternative phrasings in `acceptedAnswers` (e.g., `["direct current", "DC", "d.c."]`).
+   - If the expected answer is a short sentence, use `extended-written` instead.
 
 ---
 

@@ -523,10 +523,9 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "short-answer",
+          "type": "extended-written",
           "text": "Hair straighteners contain three heating elements connected in parallel, each with its own switch (S1, S2, S3). Figure 1 shows the hair straighteners. Figure 2 shows the circuit diagram for the hair straighteners. Each resistor represents a heating element. Switch S1 is in the main branch of the circuit that connects to the power supply. Why do the hair straighteners not turn on when only switch S2 is closed?",
           "marks": 1,
-          "acceptedAnswers": ["there is a gap in the circuit", "S1 needs to be closed to complete the circuit", "S1 needs to be closed", "the circuit is not complete", "there is a break in the circuit", "the circuit is incomplete"],
           "markScheme": [
             "1 mark: There is a **gap in the circuit** / S1 needs to be closed to **complete the circuit**"
           ],

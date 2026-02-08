@@ -298,6 +298,7 @@ function reducer(state, action) {
 export default function QuestionView({
   question,
   onBankScore,
+  onBack,
   onReset,
   onSaveAnswers,
   onScoreReady,
@@ -462,7 +463,7 @@ export default function QuestionView({
         ref={containerRef}
         id="question-content-inner"
       >
-        <QuestionHeader title={question.title} totalMarks={totalMarks} />
+        <QuestionHeader title={question.title} totalMarks={totalMarks} onBack={onBack} onReportBug={onReportBug} />
 
         {question.parts.map((part, i) => {
           const diagramOffset = question.parts.slice(0, i).reduce(

@@ -315,6 +315,7 @@ export default function App() {
                 key={questionKey}
                 question={currentQuestion}
                 onBankScore={handleBankScore}
+                onBack={handleBack}
                 onReset={handleReset}
                 onSaveAnswers={handleSaveAnswers}
                 onScoreReady={handleScoreReady}
@@ -323,13 +324,6 @@ export default function App() {
                 subtopicName={subtopic?.name || ''}
                 mainTopicName={mainTopic?.name || ''}
               />
-          </div>
-        )}
-        {view === 'question' && (
-          <div className="bottom-nav-row bottom-nav-row-solo">
-            <button className="bug-report-btn" onClick={() => setBugReportOpen(true)}>
-              Report Bug
-            </button>
           </div>
         )}
       </main>

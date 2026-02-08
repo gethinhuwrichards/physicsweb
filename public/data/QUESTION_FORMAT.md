@@ -213,6 +213,8 @@ The `text` field serves as an introductory instruction (e.g., "Complete the sent
 
 Student writes a free-text answer in a textarea. Self-marked by the student during marking mode via a full-page split-panel view (student's answer on the left, mark scheme on the right).
 
+Use this type for any question where the answer requires a sentence or more, **even if it is only 1 mark**. Questions like "Why does X happen?" or "Give one reason..." should be `extended-written`, not `short-answer`, because auto-marking cannot reliably evaluate sentence-length responses.
+
 **No additional fields** beyond the common Part fields. No `options`, `correctAnswer`, `correctAnswers`, etc.
 
 | Field | Type | Required | Description |
@@ -519,6 +521,8 @@ Right items can be images instead of text. Use an object with an `image` field r
 ### 9. Short Answer (`type: "short-answer"`)
 
 Student types a short answer (1 word or short phrase) into a text input. Auto-marked via case-insensitive matching against an array of accepted answers, with fuzzy matching for minor misspellings.
+
+**Important:** Only use `short-answer` when the expected answer is a single word or very short phrase (1–3 words), such as a unit name, particle name, or quantity. If the answer requires a sentence (e.g., "Why does...", "Give a reason..."), use `extended-written` instead, even for 1-mark questions.
 
 **Additional fields:**
 
