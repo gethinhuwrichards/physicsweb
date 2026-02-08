@@ -301,16 +301,29 @@
       "topic": "Pressure in a Gas",
       "title": "Helium balloon density",
       "difficulty": "medium",
-      "source": "original",
+      "source": "pastpaper",
       "examBoard": "AQA",
-      "tier": "combined",
+      "tier": "separate",
       "subject": "physics",
       "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
+          "type": "extended-written",
+          "text": "The figure below shows a balloon filled with helium gas.<br><br>Describe the movement of the particles of helium gas inside the balloon.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: The particles move with a **range of speeds**",
+            "1 mark: The particles move in different / **random directions**"
+          ],
+          "diagrams": [
+            "gas-pressure-helium-balloon.png"
+          ]
+        },
+        {
+          "partLabel": "b",
           "type": "single-choice",
-          "text": "The figure below shows a balloon filled with helium gas.<br><br>What name is given to the total kinetic energy and potential energy of all the particles of helium gas in the balloon?",
+          "text": "What name is given to the total kinetic energy and potential energy of all the particles of helium gas in the balloon?",
           "marks": 1,
           "options": [
             "External energy",
@@ -321,12 +334,10 @@
           "markScheme": [
             "Answer: B – Internal energy"
           ],
-          "diagrams": [
-            "gas-pressure-helium-balloon.png"
-          ]
+          "diagrams": []
         },
         {
-          "partLabel": "b",
+          "partLabel": "c",
           "type": "equation-choice",
           "text": "Write down the equation which links density, mass and volume.",
           "marks": 1,
@@ -343,7 +354,7 @@
           "diagrams": []
         },
         {
-          "partLabel": "c",
+          "partLabel": "d",
           "type": "single-choice",
           "text": "The helium in the balloon has a mass of 0.00254 kg and a volume of 0.0141 m³.<br><br>Choose the correct unit for density.",
           "marks": 1,
@@ -359,7 +370,7 @@
           "diagrams": []
         },
         {
-          "partLabel": "d",
+          "partLabel": "e",
           "type": "calculation",
           "text": "Calculate the density of helium.<br><br>Mass of helium = 0.00254 kg<br>Volume of balloon = 0.0141 m³",
           "marks": 2,
@@ -382,11 +393,11 @@
     {
       "id": "gas-pressure5",
       "topic": "Pressure in a Gas",
-      "title": "Balloon compression",
-      "difficulty": "medium",
-      "source": "original",
+      "title": "Balloon compression and temperature",
+      "difficulty": "hard",
+      "source": "pastpaper",
       "examBoard": "AQA",
-      "tier": "combined",
+      "tier": "separate",
       "subject": "physics",
       "level": "GCSE",
       "parts": [
@@ -436,6 +447,19 @@
             "1 mark: Final answer: **120 000 Pa**"
           ],
           "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "The temperature of the helium in the balloon was increased. The mass and volume of helium in the balloon remained constant.<br><br>Explain why the pressure exerted by the helium inside the balloon would increase.",
+          "marks": 4,
+          "markScheme": [
+            "1 mark: Particles would have a higher (mean) **kinetic energy** (accept higher mean **speed**)",
+            "1 mark: Increased number of **collisions** with the walls of the balloon per second (accept greater **frequency** of collisions)",
+            "1 mark: Greater **forces** exerted in collisions between particles and balloon walls",
+            "1 mark: Greater force exerted on the same **area** (accept description using $P = F/A$)"
+          ],
+          "diagrams": []
         }
       ]
     },
@@ -443,10 +467,10 @@
       "id": "gas-pressure6",
       "topic": "Pressure in a Gas",
       "title": "Syringe with weights",
-      "difficulty": "medium",
-      "source": "original",
+      "difficulty": "hard",
+      "source": "pastpaper",
       "examBoard": "AQA",
-      "tier": "combined",
+      "tier": "separate",
       "subject": "physics",
       "level": "GCSE",
       "parts": [
@@ -491,6 +515,18 @@
             "1 mark: Final answer: **67.5 kPa**"
           ],
           "diagrams": []
+        },
+        {
+          "partLabel": "d",
+          "type": "extended-written",
+          "text": "When the volume of gas in the syringe increased, the pressure on the inside walls of the syringe decreased.<br><br>Explain why.",
+          "marks": 3,
+          "markScheme": [
+            "1 mark: There is **more time** between collisions of particles and the walls of the syringe (or there are **less frequent** collisions)",
+            "1 mark: Causing a **lower** (average) force on the walls of the syringe",
+            "1 mark: Pressure is the total **force per unit area**"
+          ],
+          "diagrams": []
         }
       ]
     },
@@ -499,9 +535,9 @@
       "topic": "Pressure in a Gas",
       "title": "Fire piston temperature change",
       "difficulty": "hard",
-      "source": "original",
+      "source": "pastpaper",
       "examBoard": "AQA",
-      "tier": "combined",
+      "tier": "separate",
       "subject": "physics",
       "level": "GCSE",
       "parts": [
@@ -532,18 +568,55 @@
     {
       "id": "gas-pressure8",
       "topic": "Pressure in a Gas",
-      "title": "Gas pressure-volume calculation",
+      "title": "Gas compression investigation",
       "difficulty": "hard",
-      "source": "original",
+      "source": "pastpaper",
       "examBoard": "AQA",
-      "tier": "combined",
+      "tier": "separate",
       "subject": "physics",
       "level": "GCSE",
       "parts": [
         {
           "partLabel": "a",
+          "type": "extended-written",
+          "text": "A student investigated how the pressure exerted by a gas varied with the volume of the gas. Figure 1 shows the equipment the student used. A pump was used to compress the gas in a tube. As the volume of the gas decreases, the pressure of the gas increases.<br><br>The student only recorded one set of results. Give two reasons why taking repeat readings could provide more accurate data.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Can calculate a **mean** (or reduces the effect of **random errors**)",
+            "1 mark: Can identify / remove **anomalies** (accept: assess the **repeatability** of the data)"
+          ],
+          "diagrams": [
+            "pressure-gas-q6-fig1.jpeg"
+          ]
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "Figure 2 shows the position of the student's eye when taking volume measurements.<br><br>Explain what type of error would be caused if the student's eye was not in line with the level of the liquid in the tube.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: **Random** error (accept a **parallax** error)",
+            "1 mark: Because eye position would **not be the same** each time relative to the liquid"
+          ],
+          "diagrams": [
+            "pressure-gas-q6-fig2.jpeg"
+          ]
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "If the gas is compressed too quickly the temperature of the gas increases.<br><br>Explain how the temperature increase would affect the pressure exerted by the gas.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: A temperature increase would **increase** the pressure in the tube (even if the volume was constant)",
+            "1 mark: Because a higher temperature means higher (average) **kinetic energy** / **speed** of molecules"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "d",
           "type": "calculation",
-          "text": "A student investigated how the pressure exerted by a gas varied with the volume of the gas.<br><br>One of the student's results is given below.<br>Pressure = $1.6 \\times 10^5$ Pa<br>Volume = 9.0 cm³<br><br>Calculate the volume of the gas when the pressure was $1.8 \\times 10^5$ Pa. The temperature of the gas was constant.",
+          "text": "One of the student's results is given below.<br>Pressure = $1.6 \\times 10^5$ Pa<br>Volume = 9.0 cm³<br><br>Calculate the volume of the gas when the pressure was $1.8 \\times 10^5$ Pa. The temperature of the gas was constant.",
           "marks": 3,
           "correctAnswer": 8,
           "tolerance": 0.01,
@@ -557,6 +630,169 @@
             "1 mark: Correct substitution: $1.6 \\times 10^5 \\times 9.0 = 1.8 \\times 10^5 \\times V$",
             "1 mark: Correct rearrangement: $V = \\frac{1.6 \\times 10^5 \\times 9.0}{1.8 \\times 10^5}$",
             "1 mark: Final answer: **8.0 cm³**"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "e",
+          "type": "extended-written",
+          "text": "Figure 3 shows a person using a bicycle pump to inflate a tyre. The internal energy of the air increases as the tyre is inflated.<br><br>Explain why.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: **Work is done** on the air (in the tyre)",
+            "1 mark: So the **temperature** of the air increases (accept the average **kinetic energy** of the particles increases)"
+          ],
+          "diagrams": [
+            "pressure-gas-q6-fig3.jpeg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gas-pressure9",
+      "topic": "Pressure in a Gas",
+      "title": "Kinetic theory of solids and gases",
+      "difficulty": "hard",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "separate",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written-levels",
+          "text": "The information in the box is about the properties of solids and gases.<br><br><strong>Solids:</strong> have a fixed shape; are difficult to compress (to squash).<br><strong>Gases:</strong> will spread and fill the entire container; are easy to compress (to squash).<br><br>Use your knowledge of kinetic theory to explain the information given in the box.<br><br>You should consider: the spacing between the particles, the movement of individual particles, and the forces between the particles.",
+          "marks": 6,
+          "markScheme": [
+            "1 mark: In solids, particles are **close together**",
+            "1 mark: So there is **no room** for particles to move closer (so hard to compress)",
+            "1 mark: In solids, particles **vibrate** about a fixed point",
+            "1 mark: There are **strong forces** of attraction between particles in a solid (the forces become repulsive if particles get closer)",
+            "1 mark: Particles are strongly held together / not free to move around (so shape is **fixed**)",
+            "1 mark: In gases, particles are **far apart**",
+            "1 mark: There is **space** between particles (so easy to compress)",
+            "1 mark: In gases, particles move **randomly**",
+            "1 mark: There are **negligible** / no forces of attraction between gas particles",
+            "1 mark: Particles **spread out** in all directions to fill the container"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "gas-pressure10",
+      "topic": "Pressure in a Gas",
+      "title": "Car tyre pressure",
+      "difficulty": "hard",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "separate",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "gap-fill",
+          "text": "The image below shows air being pumped into a car tyre.<br><br>Complete the sentence.",
+          "marks": 1,
+          "segments": [
+            "Air particles in the tyre move quickly in ",
+            {
+              "blank": 0
+            },
+            " directions."
+          ],
+          "wordBank": [
+            "random",
+            "circular",
+            "the same",
+            "predictable"
+          ],
+          "correctAnswers": [
+            "random"
+          ],
+          "markScheme": [
+            "1 mark: **random**"
+          ],
+          "diagrams": [
+            "pressure-gas-q9-fig1.jpeg"
+          ]
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "When the tyre is at the correct pressure, pumping more air into the tyre causes the pressure to increase further. The volume and temperature of the air in the tyre do not change.<br><br>Explain why the pressure increases as more air is pumped into the tyre.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: More (air) **particles** in the tyre",
+            "1 mark: Greater number of **collisions** with tyre walls per second (accept collisions are more **frequent**)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "The air pressure in a car tyre changes if the temperature of the air in the tyre increases.<br><br>Explain why.",
+          "marks": 4,
+          "markScheme": [
+            "1 mark: As temperature increases, air particles have greater (mean) **kinetic energy** (accept particles move with greater **speeds** on average)",
+            "1 mark: More **collisions** with tyre walls per second (accept collisions are more **frequent**)",
+            "1 mark: Greater **force** in each collision (accept greater rate of change of **momentum**)",
+            "1 mark: Greater (mean) force per square metre causes greater **pressure** on the wall of the tyre"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "gas-pressure11",
+      "topic": "Pressure in a Gas",
+      "title": "Syringe resolution and pressure explanation",
+      "difficulty": "hard",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "separate",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "short-answer",
+          "text": "A student investigated how the pressure of a gas varied with the volume of the gas. The mass and temperature of the gas were constant. Figure 1 shows the equipment the student used.<br><br>What is the resolution of the syringe?",
+          "marks": 1,
+          "acceptedAnswers": ["1", "1 cm3", "1 cm³", "1cm3", "1cm³"],
+          "markScheme": [
+            "1 mark: **1** (cm³)"
+          ],
+          "diagrams": [
+            "pressure-gas-q10-fig1.jpeg"
+          ]
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "The student compressed the gas in the syringe and read the pressure from the pressure gauge. Figure 2 shows the student's results.<br><br>What conclusion can the student make from the data in Figure 2? Use data from Figure 2 in your answer. Give the reason for your answer.",
+          "marks": 3,
+          "markScheme": [
+            "1 mark: Pressure is **inversely proportional** to volume",
+            "1 mark: Data to prove relationship, e.g. $8 \\times 200 = 1600$",
+            "1 mark: And $10 \\times 160 = 1600$ (both products are the **same**)"
+          ],
+          "diagrams": [
+            "pressure-gas-q10-fig2.jpeg"
+          ]
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "Explain why the pressure in the gas increases as the gas is compressed.",
+          "marks": 4,
+          "markScheme": [
+            "1 mark: As the gas is compressed, the **volume** of gas decreases",
+            "1 mark: So there are **more frequent** collisions of gas particles with container walls",
+            "1 mark: Each particle collision with the wall causes a **force**",
+            "1 mark: So there is a **greater force** on the walls"
           ],
           "diagrams": []
         }

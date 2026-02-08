@@ -26,6 +26,26 @@
         },
         {
           "partLabel": "b",
+          "type": "single-choice",
+          "text": "Which switch must always be closed for the hair dryer to work?",
+          "marks": 1,
+          "options": ["S1", "S2", "S3"],
+          "correctAnswer": 0,
+          "markScheme": ["1 mark: Answer: A \u2014 S1"],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "single-choice",
+          "text": "Which switches must be closed for the hair dryer to work at maximum power output?",
+          "marks": 1,
+          "options": ["S1 and S2", "S1 and S3", "S1, S2 and S3"],
+          "correctAnswer": 2,
+          "markScheme": ["1 mark: Answer: C \u2014 S1, S2 and S3"],
+          "diagrams": []
+        },
+        {
+          "partLabel": "d",
           "type": "equation-choice",
           "text": "Write down the equation which links energy transferred (E), power (P) and time (t).",
           "marks": 1,
@@ -37,12 +57,12 @@
           ],
           "correctAnswer": 0,
           "markScheme": [
-            "Answer: A – $E = P \\times t$"
+            "Answer: A \u2013 $E = P \\times t$"
           ],
           "diagrams": []
         },
         {
-          "partLabel": "c",
+          "partLabel": "e",
           "type": "calculation",
           "text": "The heating elements have a maximum power output of 1200 W. The energy transferred to the heating elements to reach normal operating temperature is 3600 J. Calculate the time taken for the heating elements to reach normal operating temperature at maximum power output.",
           "marks": 3,
@@ -59,6 +79,21 @@
             "1 mark: Correct rearrangement: $t = \\frac{3600}{1200}$",
             "1 mark: Correct final answer: **3 s**"
           ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "f",
+          "type": "single-choice",
+          "text": "The hair dryer has LEDs to indicate the power setting. What is the circuit symbol for an LED?",
+          "marks": 1,
+          "options": [
+            {"image": "sp-circuits-q1-opt-a.jpeg"},
+            {"image": "sp-circuits-q1-opt-b.jpeg"},
+            {"image": "sp-circuits-q1-opt-c.jpeg"},
+            {"image": "sp-circuits-q1-opt-d.jpeg"}
+          ],
+          "correctAnswer": 0,
+          "markScheme": ["1 mark: Answer: A \u2014 LED symbol (triangle with arrow pointing away)"],
           "diagrams": []
         }
       ]
@@ -234,17 +269,31 @@
         },
         {
           "partLabel": "d",
+          "type": "single-choice",
+          "text": "The graph shows the results of the investigation. How do the results show that the total resistance is directly proportional to the number of resistors?",
+          "marks": 1,
+          "options": [
+            "The results give a line with a positive gradient.",
+            "The results give a straight line that would go through the origin.",
+            "The results show a linear relationship."
+          ],
+          "correctAnswer": 1,
+          "markScheme": ["1 mark: Answer: B \u2014 The results give a straight line that would go through the origin"],
+          "diagrams": ["sp-circuits-q3-fig2.jpeg"]
+        },
+        {
+          "partLabel": "e",
           "type": "short-answer",
-          "text": "The graph below shows the results. Using the mean resistance of one resistor (12.0 Ω), predict the mean total resistance of 7 resistors connected in series. Use the graph.",
+          "text": "Predict the mean total resistance of 7 resistors connected in series. Use the graph.",
           "marks": 1,
           "acceptedAnswers": ["84", "84 Ω", "84.0", "84.0 Ω"],
           "markScheme": [
             "1 mark: **84 Ω** (accept 83–85 Ω)"
           ],
-          "diagrams": ["sp-circuits-q3-fig2.jpeg"]
+          "diagrams": []
         },
         {
-          "partLabel": "e",
+          "partLabel": "f",
           "type": "gap-fill",
           "text": "Some resistors are connected in series with a battery. When more resistors are added in series, the total resistance increases. Complete the sentences. Choose answers from the box. Each answer may be used once, more than once or not at all.",
           "marks": 2,
@@ -268,7 +317,7 @@
     {
       "id": "sp-circuits4",
       "topic": "Series and parallel circuits",
-      "title": "Series circuit calculations",
+      "title": "Series and parallel circuit calculations",
       "difficulty": "medium",
       "source": "pastpaper",
       "examBoard": "AQA",
@@ -278,8 +327,18 @@
       "parts": [
         {
           "partLabel": "a",
+          "type": "single-choice",
+          "text": "Figure 1 shows a circuit diagram with two lamps and a battery. In which position could a switch be placed so that both lamps can be switched on or off at the same time?",
+          "marks": 1,
+          "options": ["J", "K", "L", "M"],
+          "correctAnswer": 3,
+          "markScheme": ["1 mark: Answer: D \u2014 M"],
+          "diagrams": ["sp-circuits-q4-fig1.jpeg"]
+        },
+        {
+          "partLabel": "b",
           "type": "calculation",
-          "text": "Figure 1 shows a circuit diagram. In 30 seconds, 24 coulombs of charge flow through the battery. Calculate the current in the battery. Use the equation: $Q = I \\times t$",
+          "text": "In 30 seconds, 24 coulombs of charge flow through the battery. Calculate the current in the battery. Use the equation: $Q = I \\times t$",
           "marks": 2,
           "equations": [
             "$Q = I \\times t$",
@@ -296,7 +355,7 @@
           "diagrams": ["sp-circuits-q4-fig1.jpeg"]
         },
         {
-          "partLabel": "b",
+          "partLabel": "c",
           "type": "calculation",
           "text": "There is a potential difference of 3.6 V across the battery. Calculate the energy transferred by the battery when 60 coulombs of charge flows through the battery. Use the equation: $E = Q \\times V$",
           "marks": 2,
@@ -315,7 +374,7 @@
           "diagrams": []
         },
         {
-          "partLabel": "c",
+          "partLabel": "d",
           "type": "equation-choice",
           "text": "Write down the equation which links current, potential difference and resistance.",
           "marks": 1,
@@ -332,7 +391,7 @@
           "diagrams": []
         },
         {
-          "partLabel": "d",
+          "partLabel": "e",
           "type": "calculation",
           "text": "Figure 2 shows another circuit built by the student. There is a potential difference of 3.6 V across the lamp in Figure 2. The current through the lamp is 0.80 A. Calculate the resistance of the lamp.",
           "marks": 3,
@@ -350,6 +409,26 @@
             "1 mark: Correct final answer: **4.5 Ω**"
           ],
           "diagrams": ["sp-circuits-q4-fig4.jpeg"]
+        },
+        {
+          "partLabel": "f",
+          "type": "single-choice",
+          "text": "A student built Circuit X and Circuit Y shown in Figure 3. The components used in each circuit were identical.\n\nHow would the reading on the ammeter in Circuit Y compare to the reading on the ammeter in Circuit X?",
+          "marks": 1,
+          "options": ["The reading in Y would be higher.", "The reading in Y would be lower.", "The readings would be the same."],
+          "correctAnswer": 1,
+          "markScheme": ["1 mark: Answer: B \u2014 The reading in Y would be lower"],
+          "diagrams": ["sp-circuits-q4-fig3.jpeg"]
+        },
+        {
+          "partLabel": "g",
+          "type": "single-choice",
+          "text": "How does the total resistance of Circuit Y compare with the total resistance of Circuit X?",
+          "marks": 1,
+          "options": ["The total resistance of Y is greater.", "The total resistance of Y is less.", "The total resistance is the same."],
+          "correctAnswer": 0,
+          "markScheme": ["1 mark: Answer: A \u2014 The total resistance of Y is greater"],
+          "diagrams": []
         }
       ]
     },
@@ -505,6 +584,67 @@
             "1 mark: Potential difference across X — Stay the same (parallel circuit, p.d. equals battery p.d.)",
             "1 mark: Current in X — Decrease (resistance increases so current decreases)",
             "1 mark: Total current in the circuit — Decrease (less current through X, same through Y)"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "sp-circuits8",
+      "topic": "Series and parallel circuits",
+      "title": "Battery pack and potential divider",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "select-and-explain",
+          "text": "Figure 1 shows how two lamps may be connected in series or in parallel to the 230 volt mains supply. Figure 2 shows a variable resistor and a fixed value resistor connected in series in a circuit. Figure 3 shows how the reading on voltmeter V1 and the reading on voltmeter V2 change as the resistance of the variable resistor changes.\n\nHow could the potential difference of the battery be calculated from Figure 3?",
+          "marks": 2,
+          "options": ["9 + 3 = 12 V", "9 \u2013 3 = 6 V", "9 \u00f7 3 = 3 V"],
+          "correctAnswer": 0,
+          "explanationPrompt": "Give the reason for your answer.",
+          "markScheme": [
+            "1 mark: Correct answer: **9 + 3 = 12 V**",
+            "1 mark: The p.d. of the battery is **shared** between the variable resistor and fixed resistor (accept: V1 + V2 = p.d. of the battery / p.d. is shared in a **series** circuit)"
+          ],
+          "diagrams": ["sp-circuits-q5-fig3.png", "sp-circuits-q5-fig4.png"]
+        },
+        {
+          "partLabel": "b",
+          "type": "select-and-explain",
+          "text": "Use Figure 3 to determine the resistance of the fixed resistor, R.\n\nThe variable resistor can be adjusted to have any value from 200 ohms to 600 ohms.",
+          "marks": 2,
+          "options": ["200 \u03a9", "400 \u03a9", "600 \u03a9", "800 \u03a9"],
+          "correctAnswer": 2,
+          "explanationPrompt": "Give the reason for your answer.",
+          "markScheme": [
+            "1 mark: Correct answer: **600 \u03a9**",
+            "1 mark: The p.d. of the supply is shared **equally** when the resistors have the **same value** (accept: ratio of p.d. is the same as the ratio of the resistance)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "calculation",
+          "text": "Calculate the current through the circuit when the resistance of the variable resistor equals 200 \u03a9. The fixed resistor R = 600 \u03a9 and the battery provides 12 V.",
+          "marks": 3,
+          "equations": [
+            "$V = I \\times R$",
+            "$P = I \\times V$",
+            "$Q = I \\times t$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 0.015,
+          "tolerance": 0.02,
+          "markScheme": [
+            "1 mark: Correct calculation of total resistance: $R_{\\text{total}} = 200 + 600 = $ **800 \u03a9**",
+            "1 mark: Correct equation selected + correct substitution: $12 = I \\times 800$",
+            "1 mark: Correct final answer: **0.015 A**"
           ],
           "diagrams": []
         }

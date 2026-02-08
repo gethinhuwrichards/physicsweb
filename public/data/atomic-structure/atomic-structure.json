@@ -248,12 +248,27 @@
           "tables": [
             {
               "caption": "Four discoveries about atoms",
-              "headers": ["Discovery", "Description"],
+              "headers": [
+                "Discovery",
+                "Description"
+              ],
               "rows": [
-                ["A", "Atoms contain a small, dense, positively charged nucleus"],
-                ["B", "Atoms contain electrons"],
-                ["C", "Atoms contain neutrons"],
-                ["D", "Electrons orbit the nucleus at specific distances"]
+                [
+                  "A",
+                  "Atoms contain a small, dense, positively charged nucleus"
+                ],
+                [
+                  "B",
+                  "Atoms contain electrons"
+                ],
+                [
+                  "C",
+                  "Atoms contain neutrons"
+                ],
+                [
+                  "D",
+                  "Electrons orbit the nucleus at specific distances"
+                ]
               ]
             }
           ]
@@ -289,6 +304,136 @@
           "correctAnswer": 0,
           "markScheme": [
             "Answer: A - Reproducible means other scientists can repeat the experiment and obtain the same results"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "atomic-struct11",
+      "topic": "Atomic Structure",
+      "title": "Helium atomic number",
+      "difficulty": "easy",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "short-answer",
+          "text": "A helium atom has 2 protons, 2 neutrons and 2 electrons. Which two types of particle in the atom have the same mass?",
+          "marks": 1,
+          "acceptedAnswers": [
+            "neutron and proton",
+            "proton and neutron",
+            "neutrons and protons",
+            "protons and neutrons"
+          ],
+          "markScheme": [
+            "1 mark: **neutron** and **proton**"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "b",
+          "type": "select-and-explain",
+          "text": "What is the atomic number of a helium atom?",
+          "marks": 2,
+          "options": [
+            "2",
+            "4",
+            "6"
+          ],
+          "correctAnswer": 0,
+          "explanationPrompt": "Give a reason for your answer.",
+          "markScheme": [
+            "1 mark: Correct answer: **2**",
+            "1 mark: The atomic number is the number of **protons** in the nucleus"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "atomic-struct12",
+      "topic": "Atomic Structure",
+      "title": "Neutron discovery",
+      "difficulty": "easy",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "In 1931 scientists thought that atoms contained only protons and electrons. Suggest what happened in 1932 to change the idea that atoms contained only protons and electrons.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: The **neutron** was discovered"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "b",
+          "type": "table-fill",
+          "text": "The table gives information about the particles in an atom. Complete the table by adding the names of the particles.",
+          "marks": 3,
+          "headers": [
+            "Particle",
+            "Relative Mass",
+            "Relative Charge"
+          ],
+          "rows": [
+            {
+              "cells": [
+                {
+                  "blank": 0
+                },
+                "1",
+                "0"
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "blank": 1
+                },
+                "very small",
+                "−1"
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "blank": 2
+                },
+                "1",
+                "+1"
+              ]
+            }
+          ],
+          "correctAnswers": [
+            [
+              "neutron",
+              "Neutron"
+            ],
+            [
+              "electron",
+              "Electron"
+            ],
+            [
+              "proton",
+              "Proton"
+            ]
+          ],
+          "markScheme": [
+            "1 mark: **neutron** (relative mass 1, relative charge 0)",
+            "1 mark: **electron** (very small relative mass, relative charge −1)",
+            "1 mark: **proton** (relative mass 1, relative charge +1)"
           ],
           "diagrams": []
         }
@@ -469,11 +614,31 @@
           "tables": [
             {
               "caption": "Particles in three atoms",
-              "headers": ["Atom", "Protons", "Neutrons", "Electrons"],
+              "headers": [
+                "Atom",
+                "Protons",
+                "Neutrons",
+                "Electrons"
+              ],
               "rows": [
-                ["A", "6", "6", "6"],
-                ["B", "7", "7", "7"],
-                ["C", "6", "7", "6"]
+                [
+                  "A",
+                  "6",
+                  "6",
+                  "6"
+                ],
+                [
+                  "B",
+                  "7",
+                  "7",
+                  "7"
+                ],
+                [
+                  "C",
+                  "6",
+                  "7",
+                  "6"
+                ]
               ]
             }
           ]
@@ -516,11 +681,23 @@
           "tables": [
             {
               "caption": "Half-lives of three radiation sources",
-              "headers": ["Radiation source", "Half-life"],
+              "headers": [
+                "Radiation source",
+                "Half-life"
+              ],
               "rows": [
-                ["Carbon-11", "20 minutes"],
-                ["Nitrogen-13", "10 minutes"],
-                ["Oxygen-15", "2 minutes"]
+                [
+                  "Carbon-11",
+                  "20 minutes"
+                ],
+                [
+                  "Nitrogen-13",
+                  "10 minutes"
+                ],
+                [
+                  "Oxygen-15",
+                  "2 minutes"
+                ]
               ]
             }
           ]
@@ -548,6 +725,111 @@
           "marks": 1,
           "markScheme": [
             "1 mark: The radiation may **damage** / destroy / kill / mutate / ionise healthy body cells"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "atomic-struct13",
+      "topic": "Atomic Structure",
+      "title": "Particle discovery timeline",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "match-up",
+          "text": "Match each particle to the year it was discovered.",
+          "marks": 3,
+          "leftItems": [
+            "Electron",
+            "Nucleus",
+            "Proton"
+          ],
+          "rightItems": [
+            "1897",
+            "1911",
+            "1920",
+            "1932"
+          ],
+          "correctLinks": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "markScheme": [
+            "1 mark: Electron --> 1897",
+            "1 mark: Nucleus --> 1911",
+            "1 mark: Proton --> 1920"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "b",
+          "type": "table-fill",
+          "text": "Complete the table to show the relative mass and charge of a neutron and an electron. The relative mass and charge of a proton have already been done for you.<table><tr><th>Particle</th><th>Relative mass</th><th>Relative charge</th></tr><tr><td>Proton</td><td>1</td><td>+1</td></tr><tr><td>Neutron</td><td>?</td><td>?</td></tr><tr><td>Electron</td><td>?</td><td>?</td></tr></table>",
+          "marks": 2,
+          "headers": [
+            "Particle",
+            "Relative mass",
+            "Relative charge"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "Neutron",
+                {
+                  "blank": 0
+                },
+                {
+                  "blank": 1
+                }
+              ]
+            },
+            {
+              "cells": [
+                "Electron",
+                {
+                  "blank": 2
+                },
+                {
+                  "blank": 3
+                }
+              ]
+            }
+          ],
+          "correctAnswers": [
+            [
+              "1"
+            ],
+            [
+              "0"
+            ],
+            [
+              "very small"
+            ],
+            [
+              "-1",
+              "−1"
+            ]
+          ],
+          "markScheme": [
+            "1 mark: Neutron — relative mass **1**, relative charge **0**",
+            "1 mark: Electron — relative mass **very small**, relative charge **−1**"
           ],
           "diagrams": []
         }
@@ -630,6 +912,80 @@
           "markScheme": [
             "1 mark: To move to a higher energy level, an electron must **absorb** electromagnetic radiation (or a specific amount of energy / a photon)",
             "1 mark: To move to a lower energy level, an electron **emits** electromagnetic radiation (or releases energy as a photon)"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "atomic-struct14",
+      "topic": "Atomic Structure",
+      "title": "Plum pudding model and alpha paths",
+      "difficulty": "hard",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "Figure 1 shows the paths of two alpha particles A and B into and out of a thin piece of metal foil. Describe the model of the atom which is used to explain the paths of alpha particles aimed at thin sheets of metal foil.",
+          "marks": 3,
+          "markScheme": [
+            "1 mark: The **nucleus** has a **positive** charge (or contains protons)",
+            "1 mark: **Electrons** (negative charges) orbit the nucleus",
+            "1 mark: Most of the atom is **empty space**"
+          ],
+          "diagrams": [
+            "atomic-struct-q11-fig1.png"
+          ]
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "Scientists used to believe that atoms were made up of negative charges embedded in a positive 'dough'. This is called the 'plum pudding' model of the atom. Figure 2 shows a model of such an atom. Explain how the plum pudding model can explain why alpha particle A is deflected through a very small angle.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Positive 'dough' **repels** the positive alpha particles",
+            "1 mark: The force is **small** because the positive charge is spread out"
+          ],
+          "diagrams": [
+            "atomic-struct-q11-fig2.png"
+          ]
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "Explain why the plum pudding model of the atom cannot explain the large deflection of alpha particle B.",
+          "marks": 3,
+          "markScheme": [
+            "1 mark: A large deflection requires a large **force**",
+            "1 mark: In the plum pudding model, the positive charge is **spread out** (not concentrated)",
+            "1 mark: So there cannot be a strong enough force to cause a large deflection; the positive charge must be **concentrated** in a small nucleus"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "d",
+          "type": "extended-written",
+          "text": "Four different atoms A, B, C and D are shown. A has 3 protons and 3 neutrons. B has 3 protons and 4 neutrons. C has 4 protons and 4 neutrons. D has 4 protons and 5 neutrons. State the mass number of C.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **8** (4 protons + 4 neutrons)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "e",
+          "type": "extended-written",
+          "text": "Which two of atoms A, B, C and D (described in the previous part) are isotopes of the same element? Explain your answer. (A: 3p 3n, B: 3p 4n, C: 4p 4n, D: 4p 5n)",
+          "marks": 3,
+          "markScheme": [
+            "1 mark: **A** and **B** are isotopes (or **C** and **D** are isotopes)",
+            "1 mark: They have the same number of **protons** (same atomic number)",
+            "1 mark: They have different numbers of **neutrons** (different mass numbers)"
           ],
           "diagrams": []
         }

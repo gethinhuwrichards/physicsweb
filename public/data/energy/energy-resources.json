@@ -65,6 +65,189 @@
       ]
     },
     {
+      "id": "energy-resources4",
+      "topic": "Fossil fuels, renewables and demand",
+      "title": "Reducing fossil fuels and power station response",
+      "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "The wind is a renewable energy source. Name one more renewable energy source used to generate electricity.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Any one from solar, hydroelectric, tidal, wave, biofuel/biomass, geothermal."
+          ],
+          "diagrams": [
+            "q4_fig_demand-winter.png"
+          ]
+        },
+        {
+          "partLabel": "b",
+          "type": "single-choice",
+          "text": "Using less fossil fuels to generate electricity will ______ the amount of carbon dioxide emitted into the atmosphere.",
+          "marks": 1,
+          "options": [
+            "decrease",
+            "not change",
+            "increase"
+          ],
+          "correctAnswer": 0,
+          "markScheme": [
+            "Answer: A — burning fewer fossil fuels releases less CO₂."
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "Describe how the demand for electricity varied between 4.00 am and 10.00 am (use the graph).",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Demand increases from 4.00 am to about 8.00 am.",
+            "1 mark: Then demand remains approximately constant from about 8.00 am to 10.00 am."
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "d",
+          "type": "single-choice",
+          "text": "Which type of power station has the fastest start-up time?",
+          "marks": 1,
+          "options": [
+            "coal",
+            "natural gas",
+            "nuclear",
+            "oil"
+          ],
+          "correctAnswer": 1,
+          "markScheme": [
+            "Answer: B — natural gas power stations can start up quickly."
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "energy-resources6",
+      "topic": "Solar power and efficiency",
+      "title": "Solar cells charging a battery",
+      "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "The solar cells on the roof of a house always face in the same direction. Explain one disadvantage caused by the solar cells only facing in one direction.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Solar cells are not always pointed directly at the Sun / do not track the Sun.",
+            "1 mark: So they do not always receive maximum light intensity / generate maximum electricity."
+          ],
+          "diagrams": [
+            "q6_house-solar-battery.jpeg"
+          ]
+        },
+        {
+          "partLabel": "b",
+          "type": "calculation",
+          "text": "The mean current from the solar cells to the battery is 3.5 A. Calculate the charge flow in 3600 s.",
+          "marks": 2,
+          "correctAnswer": 12600,
+          "tolerance": 0,
+          "equations": [
+            "$Q = I t$",
+            "$E = P t$",
+            "$P = \\frac{E}{t}$"
+          ],
+          "correctEquation": 0,
+          "markScheme": [
+            "1 mark: Substitution: $Q = 3.5 \\times 3600$",
+            "1 mark: $Q = 12\\,600\\,\\text{C}$"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "equation-choice",
+          "text": "Write down the equation which links efficiency, total power input and useful power output.",
+          "marks": 1,
+          "options": [
+            "$\\text{efficiency} = \\frac{\\text{useful power output}}{\\text{total power input}}$",
+            "$E = P t$",
+            "$Q = I t$",
+            "$E_k = \\tfrac{1}{2} m v^2$"
+          ],
+          "correctAnswer": 0,
+          "markScheme": [
+            "Answer: A – $\\text{efficiency} = \\frac{\\text{useful power output}}{\\text{total power input}}$"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "d",
+          "type": "calculation",
+          "text": "At one time, the total power input to the solar cells was 7500 W and the efficiency was 0.16. Calculate the useful power output.",
+          "marks": 3,
+          "correctAnswer": 1200,
+          "tolerance": 0.02,
+          "equations": [
+            "$\\text{efficiency} = \\frac{\\text{useful output}}{\\text{total input}}$",
+            "$E = P t$",
+            "$P = \\frac{E}{t}$"
+          ],
+          "correctEquation": 0,
+          "markScheme": [
+            "1 mark: Correct substitution: useful power = 0.16 × 7500",
+            "1 mark: Correct rearrangement: useful power = efficiency × total power input",
+            "1 mark: Final answer: **1200 W**"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "e",
+          "type": "single-choice",
+          "text": "Energy that is dissipated is less useful. What happens to energy that has been dissipated?",
+          "marks": 1,
+          "options": [
+            "The energy becomes less useful.",
+            "The energy is destroyed.",
+            "The energy is used to generate electricity."
+          ],
+          "correctAnswer": 0,
+          "markScheme": [
+            "Answer: A — dissipated energy is spread out and becomes less useful."
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "f",
+          "type": "single-choice",
+          "text": "Why is it unlikely that all the UK's electricity needs could be met by solar power systems?",
+          "marks": 1,
+          "options": [
+            "A very large area would need to be covered with solar cells.",
+            "Solar power is a non-renewable energy resource.",
+            "The efficiency of solar cells is too high."
+          ],
+          "correctAnswer": 0,
+          "markScheme": [
+            "Answer: A — the required area would be very large."
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
       "id": "energy-resources2",
       "topic": "Electricity generation mix and demand",
       "title": "UK electricity generation and daily demand",
@@ -91,7 +274,7 @@
         {
           "partLabel": "b",
           "type": "extended-written",
-          "text": "Give two renewable energy resources that could make up the ‘Other’ energy resources shown in Figure 1.",
+          "text": "Give two renewable energy resources that could make up the 'Other' energy resources shown in Figure 1.",
           "marks": 2,
           "markScheme": [
             "2 marks: Any two from wind, tidal, wave, hydroelectric, geothermal, biofuel/biomass."
@@ -225,75 +408,6 @@
       ]
     },
     {
-      "id": "energy-resources4",
-      "topic": "Fossil fuels, renewables and demand",
-      "title": "Reducing fossil fuels and power station response",
-      "difficulty": "easy",
-      "source": "original",
-      "examBoard": "AQA",
-      "tier": "combined",
-      "subject": "physics",
-      "level": "GCSE",
-      "parts": [
-        {
-          "partLabel": "a",
-          "type": "extended-written",
-          "text": "The wind is a renewable energy source. Name one more renewable energy source used to generate electricity.",
-          "marks": 1,
-          "markScheme": [
-            "1 mark: Any one from solar, hydroelectric, tidal, wave, biofuel/biomass, geothermal."
-          ],
-          "diagrams": [
-            "q4_fig_demand-winter.png"
-          ]
-        },
-        {
-          "partLabel": "b",
-          "type": "single-choice",
-          "text": "Using less fossil fuels to generate electricity will ______ the amount of carbon dioxide emitted into the atmosphere.",
-          "marks": 1,
-          "options": [
-            "decrease",
-            "not change",
-            "increase"
-          ],
-          "correctAnswer": 0,
-          "markScheme": [
-            "Answer: A — burning fewer fossil fuels releases less CO₂."
-          ],
-          "diagrams": []
-        },
-        {
-          "partLabel": "c",
-          "type": "extended-written",
-          "text": "Describe how the demand for electricity varied between 4.00 am and 10.00 am (use the graph).",
-          "marks": 2,
-          "markScheme": [
-            "1 mark: Demand increases from 4.00 am to about 8.00 am.",
-            "1 mark: Then demand remains approximately constant from about 8.00 am to 10.00 am."
-          ],
-          "diagrams": []
-        },
-        {
-          "partLabel": "d",
-          "type": "single-choice",
-          "text": "Which type of power station has the fastest start-up time?",
-          "marks": 1,
-          "options": [
-            "coal",
-            "natural gas",
-            "nuclear",
-            "oil"
-          ],
-          "correctAnswer": 1,
-          "markScheme": [
-            "Answer: B — natural gas power stations can start up quickly."
-          ],
-          "diagrams": []
-        }
-      ]
-    },
-    {
       "id": "energy-resources5",
       "topic": "National Grid and transformers",
       "title": "Renewable classification and transformer roles",
@@ -415,120 +529,6 @@
       ]
     },
     {
-      "id": "energy-resources6",
-      "topic": "Solar power and efficiency",
-      "title": "Solar cells charging a battery",
-      "difficulty": "easy",
-      "source": "original",
-      "examBoard": "AQA",
-      "tier": "combined",
-      "subject": "physics",
-      "level": "GCSE",
-      "parts": [
-        {
-          "partLabel": "a",
-          "type": "extended-written",
-          "text": "The solar cells on the roof of a house always face in the same direction. Explain one disadvantage caused by the solar cells only facing in one direction.",
-          "marks": 2,
-          "markScheme": [
-            "1 mark: Solar cells are not always pointed directly at the Sun / do not track the Sun.",
-            "1 mark: So they do not always receive maximum light intensity / generate maximum electricity."
-          ],
-          "diagrams": [
-            "q6_house-solar-battery.jpeg"
-          ]
-        },
-        {
-          "partLabel": "b",
-          "type": "calculation",
-          "text": "The mean current from the solar cells to the battery is 3.5 A. Calculate the charge flow in 3600 s.",
-          "marks": 2,
-          "correctAnswer": 12600,
-          "tolerance": 0,
-          "equations": [
-            "$Q = I t$",
-            "$E = P t$",
-            "$P = \\frac{E}{t}$"
-          ],
-          "correctEquation": 0,
-          "markScheme": [
-            "1 mark: Substitution: $Q = 3.5 \\times 3600$",
-            "1 mark: $Q = 12\\,600\\,\\text{C}$"
-          ],
-          "diagrams": []
-        },
-        {
-          "partLabel": "c",
-          "type": "equation-choice",
-          "text": "Write down the equation which links efficiency, total power input and useful power output.",
-          "marks": 1,
-          "options": [
-            "$\\text{efficiency} = \\frac{\\text{useful power output}}{\\text{total power input}}$",
-            "$E = P t$",
-            "$Q = I t$",
-            "$E_k = \\tfrac{1}{2} m v^2$"
-          ],
-          "correctAnswer": 0,
-          "markScheme": [
-            "Answer: A – $\\text{efficiency} = \\frac{\\text{useful power output}}{\\text{total power input}}$"
-          ],
-          "diagrams": []
-        },
-        {
-          "partLabel": "d",
-          "type": "calculation",
-          "text": "At one time, the total power input to the solar cells was 7500 W and the efficiency was 0.16. Calculate the useful power output.",
-          "marks": 3,
-          "correctAnswer": 1200,
-          "tolerance": 0.02,
-          "equations": [
-            "$\\text{efficiency} = \\frac{\\text{useful output}}{\\text{total input}}$",
-            "$E = P t$",
-            "$P = \\frac{E}{t}$"
-          ],
-          "correctEquation": 0,
-          "markScheme": [
-            "1 mark: Correct substitution: useful power = 0.16 × 7500",
-            "1 mark: Correct rearrangement: useful power = efficiency × total power input",
-            "1 mark: Final answer: **1200 W**"
-          ],
-          "diagrams": []
-        },
-        {
-          "partLabel": "e",
-          "type": "single-choice",
-          "text": "Energy that is dissipated is less useful. What happens to energy that has been dissipated?",
-          "marks": 1,
-          "options": [
-            "The energy becomes less useful.",
-            "The energy is destroyed.",
-            "The energy is used to generate electricity."
-          ],
-          "correctAnswer": 0,
-          "markScheme": [
-            "Answer: A — dissipated energy is spread out and becomes less useful."
-          ],
-          "diagrams": []
-        },
-        {
-          "partLabel": "f",
-          "type": "single-choice",
-          "text": "Why is it unlikely that all the UK’s electricity needs could be met by solar power systems?",
-          "marks": 1,
-          "options": [
-            "A very large area would need to be covered with solar cells.",
-            "Solar power is a non-renewable energy resource.",
-            "The efficiency of solar cells is too high."
-          ],
-          "correctAnswer": 0,
-          "markScheme": [
-            "Answer: A — the required area would be very large."
-          ],
-          "diagrams": []
-        }
-      ]
-    },
-    {
       "id": "energy-resources7",
       "topic": "Solar thermal power and storage",
       "title": "Solar thermal station components and stored energy",
@@ -612,66 +612,6 @@
       ]
     },
     {
-      "id": "energy-resources8",
-      "topic": "Hydroelectric stations and meeting demand",
-      "title": "Hydroelectric station equations and limitations",
-      "difficulty": "hard",
-      "source": "original",
-      "examBoard": "AQA",
-      "tier": "combined",
-      "subject": "physics",
-      "level": "GCSE",
-      "parts": [
-        {
-          "partLabel": "a",
-          "type": "equation-choice",
-          "text": "Write down the equation which links density (ρ), mass (m) and volume (V).",
-          "marks": 1,
-          "options": [
-            "$\\rho = \\frac{m}{V}$",
-            "$E = P t$",
-            "$Q = I t$",
-            "$E_p = m g h$"
-          ],
-          "correctAnswer": 0,
-          "markScheme": [
-            "Answer: A – $\\rho = \\frac{m}{V}$"
-          ],
-          "diagrams": [
-            "q10_hydro-diagram.jpeg"
-          ]
-        },
-        {
-          "partLabel": "b",
-          "type": "equation-choice",
-          "text": "Write down the equation which links energy transferred (E), power (P) and time (t).",
-          "marks": 1,
-          "options": [
-            "$E = P t$",
-            "$\\rho = \\frac{m}{V}$",
-            "$Q = I t$",
-            "$E_k = \\tfrac{1}{2} m v^2$"
-          ],
-          "correctAnswer": 0,
-          "markScheme": [
-            "Answer: A – $E = P t$"
-          ],
-          "diagrams": []
-        },
-        {
-          "partLabel": "c",
-          "type": "extended-written",
-          "text": "The graph shows UK demand for electricity over one day. The hydroelectric power station can provide 1.5 × 10^9 W for a maximum of 5 hours. Give two reasons why this power station cannot meet the increase in demand between 04:00 and 16:00.",
-          "marks": 2,
-          "markScheme": [
-            "1 mark: The increase/variation in demand is greater than the station’s maximum power output.",
-            "1 mark: Demand remains high for longer than 5 hours (04:00 to 16:00 is 12 hours)."
-          ],
-          "diagrams": []
-        }
-      ]
-    },
-    {
       "id": "energy-resources9",
       "topic": "Micro-hydroelectricity and efficiency",
       "title": "Energy transfers, efficiency and the National Grid",
@@ -747,6 +687,66 @@
           "markScheme": [
             "1 mark: Less energy is wasted/ lost as heat in the cables.",
             "1 mark: Because the cables are shorter (so lower resistance/less heating)."
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "energy-resources8",
+      "topic": "Hydroelectric stations and meeting demand",
+      "title": "Hydroelectric station equations and limitations",
+      "difficulty": "hard",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "equation-choice",
+          "text": "Write down the equation which links density (ρ), mass (m) and volume (V).",
+          "marks": 1,
+          "options": [
+            "$\\rho = \\frac{m}{V}$",
+            "$E = P t$",
+            "$Q = I t$",
+            "$E_p = m g h$"
+          ],
+          "correctAnswer": 0,
+          "markScheme": [
+            "Answer: A – $\\rho = \\frac{m}{V}$"
+          ],
+          "diagrams": [
+            "q10_hydro-diagram.jpeg"
+          ]
+        },
+        {
+          "partLabel": "b",
+          "type": "equation-choice",
+          "text": "Write down the equation which links energy transferred (E), power (P) and time (t).",
+          "marks": 1,
+          "options": [
+            "$E = P t$",
+            "$\\rho = \\frac{m}{V}$",
+            "$Q = I t$",
+            "$E_k = \\tfrac{1}{2} m v^2$"
+          ],
+          "correctAnswer": 0,
+          "markScheme": [
+            "Answer: A – $E = P t$"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "The graph shows UK demand for electricity over one day. The hydroelectric power station can provide 1.5 × 10^9 W for a maximum of 5 hours. Give two reasons why this power station cannot meet the increase in demand between 04:00 and 16:00.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: The increase/variation in demand is greater than the station's maximum power output.",
+            "1 mark: Demand remains high for longer than 5 hours (04:00 to 16:00 is 12 hours)."
           ],
           "diagrams": []
         }

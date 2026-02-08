@@ -178,6 +178,162 @@
       ]
     },
     {
+      "id": "heat-thermal5",
+      "topic": "Power and energy transfer",
+      "title": "Laptop-powered mug heater",
+      "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "single-choice",
+          "text": "A heater uses energy from a laptop computer to keep a drink hot (image). The laptop is operating on battery power. How would connecting the heater affect the time the laptop would operate for before needing to be recharged?",
+          "marks": 1,
+          "options": [
+            "It would decrease the time.",
+            "It would not affect the time.",
+            "It would increase the time."
+          ],
+          "correctAnswer": 0,
+          "markScheme": [
+            "Answer: A — Extra power demand drains the battery faster."
+          ],
+          "diagrams": [
+            "heat-thermal5_mug.png"
+          ]
+        },
+        {
+          "partLabel": "b",
+          "type": "calculation",
+          "text": "The power output from the heater is 12 W. Calculate the energy transferred to the metal mug in 60 seconds.",
+          "marks": 2,
+          "correctAnswer": 720,
+          "tolerance": 0.01,
+          "equations": [
+            "$E = P t$",
+            "$P = \\frac{E}{t}$",
+            "$E = m c \\Delta \\theta$"
+          ],
+          "correctEquation": 0,
+          "markScheme": [
+            "1 mark: Correct substitution: $E = 12 \\times 60$",
+            "1 mark: Final answer: **720 J**"
+          ],
+          "diagrams": [
+            "heat-thermal5_mug.png"
+          ]
+        },
+        {
+          "partLabel": "c",
+          "type": "multi-choice",
+          "text": "The table lists changes that may affect the energy transfer per second from the heater to the liquid. Select the three changes that would decrease the energy transfer per second to the liquid.",
+          "marks": 3,
+          "options": [
+            "Use a mug with a smaller base",
+            "Use a lower power heater",
+            "Use a plastic mug instead of a metal mug",
+            "Use a mug with a larger base",
+            "Use a higher power heater"
+          ],
+          "correctAnswers": [
+            0,
+            1,
+            2
+          ],
+          "selectCount": 3,
+          "scoring": "partial",
+          "markScheme": [
+            "1 mark: Use a mug with a smaller base (less contact area)",
+            "1 mark: Use a lower power heater (less energy per second)",
+            "1 mark: Use a plastic mug instead of a metal mug (poorer conduction)"
+          ],
+          "diagrams": [
+            "heat-thermal5_mug.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "heat-thermal6",
+      "topic": "Work done",
+      "title": "Units for force, distance and work done",
+      "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "gap-fill",
+          "text": "When you transfer energy to a shopping trolley, the amount of work done depends on the force used and the distance moved. Complete the statements using units from the box.",
+          "marks": 3,
+          "segments": [
+            "Force is measured in ",
+            {
+              "blank": 0
+            },
+            ". Distance moved is measured in ",
+            {
+              "blank": 1
+            },
+            ". Work done is measured in ",
+            {
+              "blank": 2
+            },
+            "."
+          ],
+          "wordBank": [
+            "joule (J)",
+            "metre (m)",
+            "newton (N)"
+          ],
+          "correctAnswers": [
+            "newton (N)",
+            "metre (m)",
+            "joule (J)"
+          ],
+          "markScheme": [
+            "1 mark: **newton (N)**",
+            "1 mark: **metre (m)**",
+            "1 mark: **joule (J)**"
+          ],
+          "diagrams": [
+            "heat-thermal6_trolley.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "heat-thermal10",
+      "topic": "Specific heat capacity",
+      "title": "Meaning of specific heat capacity",
+      "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "What is meant by specific heat capacity?",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Energy required to raise the temperature of a substance by **1 °C**.",
+            "1 mark: Per **1 kg** of the substance (unit mass)."
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
       "id": "heat-thermal3",
       "topic": "Energy transfer and specific heat capacity",
       "title": "Can-chiller energy transfer and cooling fins",
@@ -406,138 +562,6 @@
       ]
     },
     {
-      "id": "heat-thermal5",
-      "topic": "Power and energy transfer",
-      "title": "Laptop-powered mug heater",
-      "difficulty": "easy",
-      "source": "original",
-      "examBoard": "AQA",
-      "tier": "combined",
-      "subject": "physics",
-      "level": "GCSE",
-      "parts": [
-        {
-          "partLabel": "a",
-          "type": "single-choice",
-          "text": "A heater uses energy from a laptop computer to keep a drink hot (image). The laptop is operating on battery power. How would connecting the heater affect the time the laptop would operate for before needing to be recharged?",
-          "marks": 1,
-          "options": [
-            "It would decrease the time.",
-            "It would not affect the time.",
-            "It would increase the time."
-          ],
-          "correctAnswer": 0,
-          "markScheme": [
-            "Answer: A — Extra power demand drains the battery faster."
-          ],
-          "diagrams": [
-            "heat-thermal5_mug.png"
-          ]
-        },
-        {
-          "partLabel": "b",
-          "type": "calculation",
-          "text": "The power output from the heater is 12 W. Calculate the energy transferred to the metal mug in 60 seconds.",
-          "marks": 2,
-          "correctAnswer": 720,
-          "tolerance": 0.01,
-          "equations": [
-            "$E = P t$",
-            "$P = \\frac{E}{t}$",
-            "$E = m c \\Delta \\theta$"
-          ],
-          "correctEquation": 0,
-          "markScheme": [
-            "1 mark: Correct substitution: $E = 12 \\times 60$",
-            "1 mark: Final answer: **720 J**"
-          ],
-          "diagrams": [
-            "heat-thermal5_mug.png"
-          ]
-        },
-        {
-          "partLabel": "c",
-          "type": "multi-choice",
-          "text": "The table lists changes that may affect the energy transfer per second from the heater to the liquid. Select the three changes that would decrease the energy transfer per second to the liquid.",
-          "marks": 3,
-          "options": [
-            "Use a mug with a smaller base",
-            "Use a lower power heater",
-            "Use a plastic mug instead of a metal mug",
-            "Use a mug with a larger base",
-            "Use a higher power heater"
-          ],
-          "correctAnswers": [
-            0,
-            1,
-            2
-          ],
-          "selectCount": 3,
-          "scoring": "partial",
-          "markScheme": [
-            "1 mark: Use a mug with a smaller base (less contact area)",
-            "1 mark: Use a lower power heater (less energy per second)",
-            "1 mark: Use a plastic mug instead of a metal mug (poorer conduction)"
-          ],
-          "diagrams": [
-            "heat-thermal5_mug.png"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "heat-thermal6",
-      "topic": "Work done",
-      "title": "Units for force, distance and work done",
-      "difficulty": "easy",
-      "source": "original",
-      "examBoard": "AQA",
-      "tier": "combined",
-      "subject": "physics",
-      "level": "GCSE",
-      "parts": [
-        {
-          "partLabel": "a",
-          "type": "gap-fill",
-          "text": "When you transfer energy to a shopping trolley, the amount of work done depends on the force used and the distance moved. Complete the statements using units from the box.",
-          "marks": 3,
-          "segments": [
-            "Force is measured in ",
-            {
-              "blank": 0
-            },
-            ". Distance moved is measured in ",
-            {
-              "blank": 1
-            },
-            ". Work done is measured in ",
-            {
-              "blank": 2
-            },
-            "."
-          ],
-          "wordBank": [
-            "joule (J)",
-            "metre (m)",
-            "newton (N)"
-          ],
-          "correctAnswers": [
-            "newton (N)",
-            "metre (m)",
-            "joule (J)"
-          ],
-          "markScheme": [
-            "1 mark: **newton (N)**",
-            "1 mark: **metre (m)**",
-            "1 mark: **joule (J)**"
-          ],
-          "diagrams": [
-            "heat-thermal6_trolley.png"
-          ]
-        }
-      ]
-    },
-    {
       "id": "heat-thermal7",
       "topic": "Solar heating",
       "title": "Measuring solar power with water heating",
@@ -584,32 +608,6 @@
             "$E_e = \\tfrac{1}{2} k e^2$"
           ],
           "correctAnswer": 0
-        }
-      ]
-    },
-    {
-      "id": "heat-thermal8",
-      "topic": "Heating and insulation",
-      "title": "Room temperature reaches a steady value",
-      "difficulty": "hard",
-      "source": "original",
-      "examBoard": "AQA",
-      "tier": "combined",
-      "subject": "physics",
-      "level": "GCSE",
-      "parts": [
-        {
-          "partLabel": "a",
-          "type": "extended-written",
-          "text": "The graph shows how the temperature of a room changes during the 1½ hours that an electric heater is used. After 1 hour, the temperature of the room becomes constant, even though the heater is still switched on. Explain why.",
-          "marks": 2,
-          "markScheme": [
-            "1 mark: The room is losing thermal energy to the surroundings.",
-            "1 mark: The rate of heat loss equals the rate of heat supplied (so temperature stays constant)."
-          ],
-          "diagrams": [
-            "heat-thermal8_graph.png"
-          ]
         }
       ]
     },
@@ -665,30 +663,6 @@
       ]
     },
     {
-      "id": "heat-thermal10",
-      "topic": "Specific heat capacity",
-      "title": "Meaning of specific heat capacity",
-      "difficulty": "easy",
-      "source": "original",
-      "examBoard": "AQA",
-      "tier": "combined",
-      "subject": "physics",
-      "level": "GCSE",
-      "parts": [
-        {
-          "partLabel": "a",
-          "type": "extended-written",
-          "text": "What is meant by specific heat capacity?",
-          "marks": 2,
-          "markScheme": [
-            "1 mark: Energy required to raise the temperature of a substance by **1 °C**.",
-            "1 mark: Per **1 kg** of the substance (unit mass)."
-          ],
-          "diagrams": []
-        }
-      ]
-    },
-    {
       "id": "heat-thermal11",
       "topic": "Insulation and cooling",
       "title": "Identifying variables and thermometer errors",
@@ -734,6 +708,32 @@
           ],
           "diagrams": [
             "heat-thermal11_fig2.jpeg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "heat-thermal8",
+      "topic": "Heating and insulation",
+      "title": "Room temperature reaches a steady value",
+      "difficulty": "hard",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "The graph shows how the temperature of a room changes during the 1½ hours that an electric heater is used. After 1 hour, the temperature of the room becomes constant, even though the heater is still switched on. Explain why.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: The room is losing thermal energy to the surroundings.",
+            "1 mark: The rate of heat loss equals the rate of heat supplied (so temperature stays constant)."
+          ],
+          "diagrams": [
+            "heat-thermal8_graph.png"
           ]
         }
       ]

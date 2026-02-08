@@ -11,28 +11,31 @@
     },
     { "id": "electricity", "name": "Electricity", "subtopics": [
         { "id": "static-elec", "name": "Static Electricity", "file": "electricity/static-electricity.json", "questionCount": 9 },
-        { "id": "sp-circuits", "name": "Series and Parallel Circuits", "file": "electricity/series-parallel-circuits.json", "questionCount": 7 },
-        { "id": "cpdr", "name": "Current, Potential Difference and Resistance", "file": "electricity/current-pd-resistance.json", "questionCount": 11 },
-        { "id": "dom-elec", "name": "Domestic Uses of Electricity", "file": "electricity/domestic-electricity.json", "questionCount": 9 }
+        { "id": "sp-circuits", "name": "Series and Parallel Circuits", "file": "electricity/series-parallel-circuits.json", "questionCount": 8 },
+        { "id": "cpdr", "name": "Current, Potential Difference and Resistance", "file": "electricity/current-pd-resistance.json", "questionCount": 12 },
+        { "id": "dom-elec", "name": "Domestic Uses of Electricity", "file": "electricity/domestic-electricity.json", "questionCount": 9 },
+        { "id": "elec-calc", "name": "Electrical Calculations", "file": "electricity/electrical-calculations.json", "questionCount": 5 },
+        { "id": "elec-work-power", "name": "Electrical Work and Power", "file": "electricity/electrical-work-and-power.json", "questionCount": 1 },
+        { "id": "simple-circuits", "name": "Simple Circuits", "file": "electricity/simple-circuits.json", "questionCount": 6 }
       ] },
     { "id": "particle-model", "name": "Particle Model", "subtopics": [
-        { "id": "pressure-gas", "name": "Pressure in a Gas", "file": "particle-model/pressure-in-a-gas.json", "questionCount": 8 },
+        { "id": "pressure-gas", "name": "Pressure in a Gas", "file": "particle-model/pressure-in-a-gas.json", "questionCount": 11 },
         { "id": "density-cs", "name": "Density and Changes of State", "file": "particle-model/density-and-changes-of-state.json", "questionCount": 11 }
     ] },
     { "id": "atomic-structure", "name": "Atomic Structure", "subtopics": [
-        { "id": "atomic-struct", "name": "Atomic Structure", "file": "atomic-structure/atomic-structure.json", "questionCount": 10 },
-        { "id": "nuclear-radiation", "name": "Nuclear Radiation", "file": "atomic-structure/nuclear-radiation.json", "questionCount": 17 },
-        { "id": "nuc-fission-fusion", "name": "Nuclear Fission and Fusion", "file": "atomic-structure/nuclear-fission-and-fusion.json", "questionCount": 12 }
+        { "id": "atomic-struct", "name": "Atomic Structure", "file": "atomic-structure/atomic-structure.json", "questionCount": 14 },
+        { "id": "nuclear-radiation", "name": "Nuclear Radiation", "file": "atomic-structure/nuclear-radiation.json", "questionCount": 25 },
+        { "id": "nuc-fission-fusion", "name": "Nuclear Fission and Fusion", "file": "atomic-structure/nuclear-fission-and-fusion.json", "questionCount": 16 }
     ] },
     { "id": "forces", "name": "Forces", "subtopics": [
-        { "id": "scalar-vector", "name": "Scalars and Vectors", "file": "/forces/scalars-and-vectors.json", "questionCount": 4},
-        { "id": "types-of-forces", "name": "Types of Forces", "file": "/forces/types-of-forces.json", "questionCount": 4},
-        { "id": "resolving-forces", "name": "Resolving Forces", "file": "/forces/types-of-forces.json", "questionCount": 6},
-        { "id": "forces-motion", "name": "Forces and Motion", "file": "forces/forces-and-motion.json", "questionCount": 15}
+        { "id": "scalar-vector", "name": "Scalars and Vectors", "file": "forces/scalars-and-vectors.json", "questionCount": 4},
+        { "id": "types-of-forces", "name": "Types of Forces", "file": "forces/types-of-forces.json", "questionCount": 4},
+        { "id": "resolving-forces", "name": "Resolving Forces", "file": "forces/resolving-forces.json", "questionCount": 6},
+        { "id": "forces-motion", "name": "Forces and Motion", "file": "forces/forces-and-motion.json", "questionCount": 28}
     ] },
     { "id": "waves", "name": "Waves", "subtopics": [
         { "id": "basic-waves", "name": "Basic Properties of Waves", "file": "waves/basic-properties-of-waves.json", "questionCount": 13 },
-        { "id": "em-waves", "name": "Electromagnetic Waves", "file": "waves/electromagnetic-waves.json", "questionCount": 14 }
+        { "id": "em-waves", "name": "Electromagnetic Waves", "file": "waves/electromagnetic-waves.json", "questionCount": 22 }
     ] },
     { "id": "magnetism", "name": "Magnetism", "subtopics": [] },
     { "id": "space", "name": "Space", "subtopics": [] }

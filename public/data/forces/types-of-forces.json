@@ -135,6 +135,59 @@
       ]
     },
     {
+      "id": "forces-3",
+      "topic": "Forces and units",
+      "title": "Gravity, newtons and balanced forces",
+      "difficulty": "easy",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "gap-fill",
+          "text": "Choose words from the list to complete the sentences.",
+          "marks": 3,
+          "segments": [
+            "When you drop something it falls. This is because it is pulled to the Earth by ",
+            {
+              "blank": 0
+            },
+            ".<br>We measure forces in units called ",
+            {
+              "blank": 1
+            },
+            ".<br>When a falling object reaches the ground, it stops moving. This means that the forces acting on it are now ",
+            {
+              "blank": 2
+            },
+            "."
+          ],
+          "wordBank": [
+            "balanced",
+            "electricity",
+            "gravity",
+            "joules",
+            "magnetism",
+            "newtons"
+          ],
+          "correctAnswers": [
+            "gravity",
+            "newtons",
+            "balanced"
+          ],
+          "markScheme": [
+            "1 mark: **gravity**",
+            "1 mark: **newtons**",
+            "1 mark: **balanced**"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
       "id": "forces-2",
       "topic": "Forces, moments and motion",
       "title": "Cyclist: balanced forces, moments and acceleration",
@@ -307,59 +360,6 @@
           ],
           "markScheme": [
             "1 mark: **deceleration**"
-          ],
-          "diagrams": []
-        }
-      ]
-    },
-    {
-      "id": "forces-3",
-      "topic": "Forces and units",
-      "title": "Gravity, newtons and balanced forces",
-      "difficulty": "easy",
-      "source": "original",
-      "examBoard": "AQA",
-      "tier": "combined",
-      "subject": "physics",
-      "level": "GCSE",
-      "parts": [
-        {
-          "partLabel": "a",
-          "type": "gap-fill",
-          "text": "Choose words from the list to complete the sentences.",
-          "marks": 3,
-          "segments": [
-            "When you drop something it falls. This is because it is pulled to the Earth by ",
-            {
-              "blank": 0
-            },
-            ".<br>We measure forces in units called ",
-            {
-              "blank": 1
-            },
-            ".<br>When a falling object reaches the ground, it stops moving. This means that the forces acting on it are now ",
-            {
-              "blank": 2
-            },
-            "."
-          ],
-          "wordBank": [
-            "balanced",
-            "electricity",
-            "gravity",
-            "joules",
-            "magnetism",
-            "newtons"
-          ],
-          "correctAnswers": [
-            "gravity",
-            "newtons",
-            "balanced"
-          ],
-          "markScheme": [
-            "1 mark: **gravity**",
-            "1 mark: **newtons**",
-            "1 mark: **balanced**"
           ],
           "diagrams": []
         }

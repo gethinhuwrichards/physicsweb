@@ -242,6 +242,60 @@
       ]
     },
     {
+      "id": "nuc-ff13",
+      "topic": "Nuclear Fission and Fusion",
+      "title": "Fission and fusion fuels",
+      "difficulty": "easy",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "separate",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "match-up",
+          "text": "Match each process to its fuel.",
+          "marks": 2,
+          "leftItems": [
+            "Nuclear fission",
+            "Nuclear fusion"
+          ],
+          "rightItems": [
+            "Hydrogen",
+            "Iron",
+            "Lead",
+            "Uranium"
+          ],
+          "correctLinks": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "markScheme": [
+            "1 mark: Nuclear fission --> Uranium",
+            "1 mark: Nuclear fusion --> Hydrogen"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "The table compares the energy released from 1 kg of coal and 1 kg of uranium.<table><tr><th>Fuel</th><th>Energy from 1 kg</th></tr><tr><td>Coal</td><td>29 MJ</td></tr><tr><td>Uranium</td><td>580 000 MJ</td></tr></table>State one benefit to the environment of using a concentrated fuel like uranium to generate electricity rather than using the energy from coal.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Less **pollution** from transporting the fuel (or less fuel needed so less mining / less waste / less CO$_2$ emissions)"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
       "id": "nuc-ff5",
       "topic": "Nuclear Fission and Fusion",
       "title": "Atomic particles and isotopes",
@@ -533,6 +587,74 @@
       ]
     },
     {
+      "id": "nuc-ff14",
+      "topic": "Nuclear Fission and Fusion",
+      "title": "CO2 and temperature trends",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "separate",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "gap-fill",
+          "text": "Nuclear fission is used in nuclear power stations. An unstable nucleus absorbs a particle and splits into two parts. Complete the sentences about this process using words from the box.",
+          "marks": 3,
+          "segments": [
+            "An unstable nucleus absorbs ",
+            {
+              "blank": 0
+            },
+            " and splits into two parts. Two or three neutrons are released, as well as ",
+            {
+              "blank": 1
+            },
+            " and ",
+            {
+              "blank": 2
+            },
+            "."
+          ],
+          "wordBank": [
+            "a neutron",
+            "a proton",
+            "an electron",
+            "cosmic rays",
+            "energy",
+            "gamma rays",
+            "X-rays"
+          ],
+          "correctAnswers": [
+            "a neutron",
+            "energy",
+            "gamma rays"
+          ],
+          "markScheme": [
+            "1 mark: a neutron",
+            "1 mark: energy",
+            "1 mark: gamma rays"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "The UK currently generates a lot of electricity by burning natural gas. This process releases carbon dioxide into the atmosphere. Figure 1 shows how the concentration of carbon dioxide in the atmosphere has changed over the past 115 years. Figure 2 shows how the global temperature has changed over the past 115 years. Give one similarity and one difference between the data in Figure 1 and Figure 2.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Similarity: both carbon dioxide concentration and global temperature have **increased** over the 115-year period (or both show a positive correlation)",
+            "1 mark: Difference: the carbon dioxide concentration continues to **increase** steadily whereas the temperature increase **levels off** (or CO$_2$ increases more quickly than temperature)"
+          ],
+          "diagrams": [
+            "nuc-fission-q2-fig1.jpeg",
+            "nuc-fission-q2-fig2.jpeg"
+          ]
+        }
+      ]
+    },
+    {
       "id": "nuc-ff10",
       "topic": "Nuclear Fission and Fusion",
       "title": "Alpha and gamma radiation",
@@ -648,6 +770,89 @@
             "1 mark: Correct substitution: $2000 \\to 1000 \\to 500 \\to 250 \\to 125$ = 4 half-lives",
             "1 mark: Correct rearrangement: $4 \\times 6$",
             "1 mark: Final answer: **24 seconds**"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "nuc-ff15",
+      "topic": "Nuclear Fission and Fusion",
+      "title": "Describing fission from an equation",
+      "difficulty": "hard",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "separate",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "Figure 1 shows a nuclear equation representing the fission of uranium-235 (U-235). The equation shows U-235 being hit by a neutron, forming barium (Ba) and krypton (Kr), and releasing further neutrons. Use the information in the equation to describe the process of nuclear fission.",
+          "marks": 4,
+          "markScheme": [
+            "1 mark: A **neutron** is absorbed by the uranium-235 **nucleus**",
+            "1 mark: This forms a **larger** (unstable) nucleus",
+            "1 mark: The nucleus **splits** into two smaller nuclei (barium and krypton)",
+            "1 mark: Releasing three **neutrons** and **energy**"
+          ],
+          "diagrams": [
+            "nuc-fission-q6-fig1.png"
+          ]
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "Explain why nuclear fusion reactors are not currently used to produce energy in power stations, even though scientists continue trying to develop them.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Currently only **experimental** / the reaction does not last long enough / they use more **energy** than they produce",
+            "1 mark: But would provide another source of energy / **unlimited** fuel / would not produce **radioactive waste**"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "nuc-ff16",
+      "topic": "Nuclear Fission and Fusion",
+      "title": "Mass loss in nuclear fusion",
+      "difficulty": "hard",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "separate",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "calculation",
+          "text": "At the very high temperatures in the Sun, hydrogen is converted into helium. It takes four hydrogen nuclei to produce one helium nucleus. The mass of one hydrogen nucleus is 1.007825 u and the mass of one helium nucleus is 4.002602 u. Calculate the loss in mass when four hydrogen nuclei produce one helium nucleus. Give your answer in atomic mass units (u).",
+          "marks": 3,
+          "correctAnswer": 0.028698,
+          "tolerance": 0.02,
+          "equations": [
+            "$\\text{mass loss} = (4 \\times \\text{mass of H}) - \\text{mass of He}$",
+            "$A = Z + N$",
+            "$E = m c^2$"
+          ],
+          "correctEquation": 0,
+          "markScheme": [
+            "1 mark: Correct substitution: $4 \\times 1.007825 = 4.031300$ u",
+            "1 mark: Correct rearrangement: $4.031300 - 4.002602$",
+            "1 mark: Final answer: **0.0287 u** (accept 0.028698 u)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "Use your answer to the calculation above to explain how the Sun has been able to radiate huge amounts of energy for billions of years.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: The loss of **mass** results in the release of **energy** (via $E = mc^2$)",
+            "1 mark: Even a **small** loss of mass produces a **huge** amount of energy"
           ],
           "diagrams": []
         }

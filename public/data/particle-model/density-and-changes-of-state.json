@@ -59,9 +59,17 @@
           "tables": [
             {
               "caption": "Volume measurements for the metal ring",
-              "headers": ["Volume of water in cm³", "Volume of water and ring in cm³", "Volume of ring in cm³"],
+              "headers": [
+                "Volume of water in cm³",
+                "Volume of water and ring in cm³",
+                "Volume of ring in cm³"
+              ],
               "rows": [
-                ["5.0", "5.4", "X"]
+                [
+                  "5.0",
+                  "5.4",
+                  "X"
+                ]
               ]
             }
           ]
@@ -319,8 +327,8 @@
       "id": "density-cs4",
       "topic": "Density and Changes of State",
       "title": "Internal energy and particle model",
-      "difficulty": "easy",
-      "source": "original",
+      "difficulty": "medium",
+      "source": "pastpaper",
       "examBoard": "AQA",
       "tier": "combined",
       "subject": "physics",
@@ -329,13 +337,15 @@
         {
           "partLabel": "a",
           "type": "extended-written",
-          "text": "A Bunsen burner is heating some water in a beaker.<br><br>Explain how the internal energy of the water changes as it is heated from 20 °C to 25 °C.",
+          "text": "Figure 1 shows a Bunsen burner heating some water in a beaker. Eventually the water changes into steam.<br><br>Explain how the internal energy of the water changes as it is heated from 20 °C to 25 °C.",
           "marks": 2,
           "markScheme": [
             "1 mark: The (mean) **kinetic energy** of the particles increases (accept the mean speed of the particles increases)",
             "1 mark: Which increases the **internal energy** of the water"
           ],
-          "diagrams": []
+          "diagrams": [
+            "density-cs-q11-fig1.jpeg"
+          ]
         },
         {
           "partLabel": "b",
@@ -351,6 +361,19 @@
           "correctAnswer": 1,
           "markScheme": [
             "Answer: B – Particles in a gas have more potential energy than particles in a liquid"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "A student measured the mass of boiling water that was turned into steam in five minutes.<br><br>Explain how the student could use this information to estimate the power output of the Bunsen burner in watts.",
+          "marks": 4,
+          "markScheme": [
+            "1 mark: Energy given to water $E = m L$ with **quantities defined**",
+            "1 mark: Use the specific latent heat of vaporisation to calculate the **energy transferred**",
+            "1 mark: Use the equation $P = \\frac{E}{t}$ (or equivalent in words)",
+            "1 mark: Time should be converted to **seconds** (300 s)"
           ],
           "diagrams": []
         }
@@ -407,152 +430,6 @@
       ]
     },
     {
-      "id": "density-cs6",
-      "topic": "Density and Changes of State",
-      "title": "Fruit density investigation",
-      "difficulty": "medium",
-      "source": "original",
-      "examBoard": "AQA",
-      "tier": "combined",
-      "subject": "physics",
-      "level": "GCSE",
-      "parts": [
-        {
-          "partLabel": "a",
-          "type": "calculation",
-          "text": "A student investigated the density of different fruits. The student measured the volume of each fruit three times and then calculated a mean value.<br><br>The three measurements for a grape were 2.1 cm³, 2.1 cm³ and 2.4 cm³.<br><br>Calculate the mean value.",
-          "marks": 2,
-          "correctAnswer": 2.2,
-          "tolerance": 0.01,
-          "equations": [
-            "$\\text{mean} = \\frac{\\text{sum of values}}{\\text{number of values}}$",
-            "$\\rho = \\frac{m}{V}$",
-            "$E = m L$"
-          ],
-          "correctEquation": 0,
-          "markScheme": [
-            "1 mark: Correct substitution: $(2.1 + 2.1 + 2.4) \\div 3$",
-            "1 mark: Final answer: **2.2 cm³**"
-          ],
-          "diagrams": []
-        },
-        {
-          "partLabel": "b",
-          "type": "multi-choice",
-          "text": "What are the advantages of taking three measurements and calculating a mean value?",
-          "marks": 2,
-          "options": [
-            "Allows anomalous results to be identified and ignored.",
-            "Improves the resolution of the volume measurement.",
-            "Increases the precision of the measured volumes.",
-            "Reduces the effect of random errors when using the equipment.",
-            "Stops all types of error when using the equipment."
-          ],
-          "correctAnswers": [
-            0,
-            3
-          ],
-          "selectCount": 2,
-          "scoring": "partial",
-          "markScheme": [
-            "1 mark: Allows anomalous results to be identified and ignored",
-            "1 mark: Reduces the effect of random errors when using the equipment"
-          ],
-          "diagrams": []
-        },
-        {
-          "partLabel": "c",
-          "type": "calculation",
-          "text": "The mass of an apple was 84.0 g. The volume of the apple was 120 cm³.<br><br>Calculate the density of the apple. Give your answer in g/cm³.",
-          "marks": 2,
-          "correctAnswer": 0.7,
-          "tolerance": 0.02,
-          "equations": [
-            "$\\rho = \\frac{m}{V}$",
-            "$E = m L$",
-            "$\\Delta E = m c \\Delta \\theta$"
-          ],
-          "correctEquation": 0,
-          "markScheme": [
-            "1 mark: Correct substitution: $\\rho = \\frac{84.0}{120}$",
-            "1 mark: Final answer: **0.70 g/cm³**"
-          ],
-          "diagrams": []
-        }
-      ]
-    },
-    {
-      "id": "density-cs7",
-      "topic": "Density and Changes of State",
-      "title": "Rock density",
-      "difficulty": "medium",
-      "source": "original",
-      "examBoard": "AQA",
-      "tier": "combined",
-      "subject": "physics",
-      "level": "GCSE",
-      "parts": [
-        {
-          "partLabel": "a",
-          "type": "calculation",
-          "text": "A student wanted to determine the density of a small piece of rock. The volume of the piece of rock was 18.0 cm³. The student measured the mass of the piece of rock as 48.6 g.<br><br>Calculate the density of the rock in g/cm³.",
-          "marks": 2,
-          "correctAnswer": 2.7,
-          "tolerance": 0.01,
-          "equations": [
-            "$\\rho = \\frac{m}{V}$",
-            "$E = m L$",
-            "$\\Delta E = m c \\Delta \\theta$"
-          ],
-          "correctEquation": 0,
-          "markScheme": [
-            "1 mark: Correct substitution: $\\rho = \\frac{48.6}{18.0}$",
-            "1 mark: Final answer: **2.70 g/cm³**"
-          ],
-          "diagrams": []
-        },
-        {
-          "partLabel": "b",
-          "type": "single-choice",
-          "text": "The graph below shows the densities of different types of rock.<br><br>What is the most likely type of rock that the student had?",
-          "marks": 1,
-          "options": [
-            "Basalt",
-            "Granite",
-            "Limestone",
-            "Sandstone"
-          ],
-          "correctAnswer": 2,
-          "markScheme": [
-            "Answer: C – Limestone (density ≈ 2.71 g/cm³, closest to 2.70)"
-          ],
-          "diagrams": [
-            "density-rock-bar-chart.jpeg"
-          ]
-        },
-        {
-          "partLabel": "c",
-          "type": "extended-written",
-          "text": "Give one source of error that may have occurred when the student measured the volume of the rock.",
-          "marks": 1,
-          "markScheme": [
-            "1 mark: **Eye position** when reading the measuring cylinder (parallax error), or water level in displacement can not at level of spout, or not all displaced water collected"
-          ],
-          "diagrams": []
-        },
-        {
-          "partLabel": "d",
-          "type": "extended-written",
-          "text": "How would the error you described in part (c) affect the measured volume of the rock?",
-          "marks": 1,
-          "markScheme": [
-            "1 mark: Volume would be **lower** or **higher** (depending on the error described)"
-          ],
-          "diagrams": []
-        }
-      ]
-    },
-    {
       "id": "density-cs8",
       "topic": "Density and Changes of State",
       "title": "Fruit density with rearrangement",
@@ -575,12 +452,27 @@
           "tables": [
             {
               "caption": "Density of different fruits",
-              "headers": ["Fruit", "Density in g/cm³"],
+              "headers": [
+                "Fruit",
+                "Density in g/cm³"
+              ],
               "rows": [
-                ["Apple", "0.68"],
-                ["Kiwi", "1.03"],
-                ["Lemon", "0.95"],
-                ["Lime", "1.05"]
+                [
+                  "Apple",
+                  "0.68"
+                ],
+                [
+                  "Kiwi",
+                  "1.03"
+                ],
+                [
+                  "Lemon",
+                  "0.95"
+                ],
+                [
+                  "Lime",
+                  "1.05"
+                ]
               ]
             }
           ]
@@ -635,11 +527,11 @@
       ]
     },
     {
-      "id": "density-cs9",
+      "id": "density-cs6",
       "topic": "Density and Changes of State",
-      "title": "Latent heat of vaporisation",
+      "title": "Fruit density investigation",
       "difficulty": "hard",
-      "source": "original",
+      "source": "pastpaper",
       "examBoard": "AQA",
       "tier": "combined",
       "subject": "physics",
@@ -647,6 +539,196 @@
       "parts": [
         {
           "partLabel": "a",
+          "type": "extended-written-levels",
+          "text": "A student investigated the density of different fruits. To determine the density of each fruit, the student measured the volume of each fruit. Figure 1 shows the equipment the student could have used.<br><br>Describe a method the student could have used to measure the volume of the lime.",
+          "marks": 4,
+          "markScheme": [
+            "1 mark: Use a **eureka/displacement can** (or a **measuring cylinder**)",
+            "1 mark: Fill the eureka/displacement can with water (up to the **spout**), or part fill a measuring cylinder with water",
+            "1 mark: Place **lime** in the eureka/displacement can (or measuring cylinder)",
+            "1 mark: Collect water that **overflows** (or record **new volume** of water)",
+            "1 mark: Use a measuring cylinder to measure volume of **displaced water** (or volume of lime = new volume - initial volume)",
+            "1 mark: Measure the **initial volume** of water before adding the lime"
+          ],
+          "diagrams": [
+            "density-cs-q5-fig1.jpeg"
+          ]
+        },
+        {
+          "partLabel": "b",
+          "type": "calculation",
+          "text": "The student measured the volume of each fruit three times and then calculated a mean value.<br><br>The three measurements for a grape were 2.1 cm³, 2.1 cm³ and 2.4 cm³.<br><br>Calculate the mean value.",
+          "marks": 2,
+          "correctAnswer": 2.2,
+          "tolerance": 0.01,
+          "equations": [
+            "$\\text{mean} = \\frac{\\text{sum of values}}{\\text{number of values}}$",
+            "$\\rho = \\frac{m}{V}$",
+            "$E = m L$"
+          ],
+          "correctEquation": 0,
+          "markScheme": [
+            "1 mark: Correct substitution: $(2.1 + 2.1 + 2.4) \\div 3$",
+            "1 mark: Final answer: **2.2 cm³**"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "multi-choice",
+          "text": "What are the advantages of taking three measurements and calculating a mean value?",
+          "marks": 2,
+          "options": [
+            "Allows anomalous results to be identified and ignored.",
+            "Improves the resolution of the volume measurement.",
+            "Increases the precision of the measured volumes.",
+            "Reduces the effect of random errors when using the equipment.",
+            "Stops all types of error when using the equipment."
+          ],
+          "correctAnswers": [
+            0,
+            3
+          ],
+          "selectCount": 2,
+          "scoring": "partial",
+          "markScheme": [
+            "1 mark: Allows anomalous results to be identified and ignored",
+            "1 mark: Reduces the effect of random errors when using the equipment"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "d",
+          "type": "calculation",
+          "text": "The mass of an apple was 84.0 g. The volume of the apple was 120 cm³.<br><br>Calculate the density of the apple. Give your answer in g/cm³.",
+          "marks": 2,
+          "correctAnswer": 0.7,
+          "tolerance": 0.02,
+          "equations": [
+            "$\\rho = \\frac{m}{V}$",
+            "$E = m L$",
+            "$\\Delta E = m c \\Delta \\theta$"
+          ],
+          "correctEquation": 0,
+          "markScheme": [
+            "1 mark: Correct substitution: $\\rho = \\frac{84.0}{120}$",
+            "1 mark: Final answer: **0.70 g/cm³**"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "density-cs7",
+      "topic": "Density and Changes of State",
+      "title": "Rock density investigation",
+      "difficulty": "hard",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written-levels",
+          "text": "A student wanted to determine the density of a small piece of rock.<br><br>Describe how the student could measure the volume of the piece of rock.",
+          "marks": 4,
+          "markScheme": [
+            "1 mark: Part fill a **measuring cylinder** with water (or use a **displacement/eureka can**)",
+            "1 mark: Measure the **initial volume** of water",
+            "1 mark: Place the **rock** in the water",
+            "1 mark: Measure the **final volume** (or collect displaced water)",
+            "1 mark: Volume of rock = **final volume − initial volume** (or measure volume of displaced water using a measuring cylinder)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "b",
+          "type": "calculation",
+          "text": "The volume of the piece of rock was 18.0 cm³. The student measured the mass of the piece of rock as 48.6 g.<br><br>Calculate the density of the rock in g/cm³.",
+          "marks": 2,
+          "correctAnswer": 2.7,
+          "tolerance": 0.01,
+          "equations": [
+            "$\\rho = \\frac{m}{V}$",
+            "$E = m L$",
+            "$\\Delta E = m c \\Delta \\theta$"
+          ],
+          "correctEquation": 0,
+          "markScheme": [
+            "1 mark: Correct substitution: $\\rho = \\frac{48.6}{18.0}$",
+            "1 mark: Final answer: **2.70 g/cm³**"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "single-choice",
+          "text": "The graph below shows the densities of different types of rock.<br><br>What is the most likely type of rock that the student had?",
+          "marks": 1,
+          "options": [
+            "Basalt",
+            "Granite",
+            "Limestone",
+            "Sandstone"
+          ],
+          "correctAnswer": 2,
+          "markScheme": [
+            "Answer: C – Limestone (density ≈ 2.71 g/cm³, closest to 2.70)"
+          ],
+          "diagrams": [
+            "density-rock-bar-chart.jpeg"
+          ]
+        },
+        {
+          "partLabel": "d",
+          "type": "extended-written",
+          "text": "Give one source of error that may have occurred when the student measured the volume of the rock.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **Eye position** when reading the measuring cylinder (parallax error), or water level in displacement can not at level of spout, or not all displaced water collected"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "e",
+          "type": "extended-written",
+          "text": "How would the error you described in part (d) affect the measured volume of the rock?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Volume would be **lower** or **higher** (depending on the error described)"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "density-cs9",
+      "topic": "Density and Changes of State",
+      "title": "States of matter and latent heat",
+      "difficulty": "hard",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "Solid, liquid and gas are three different states of matter.<br><br>Describe the difference between the solid and gas states, in terms of the arrangement and movement of their particles.",
+          "marks": 4,
+          "markScheme": [
+            "1 mark: In a solid, particles **vibrate** about fixed positions",
+            "1 mark: In a solid, particles are **closely packed** (accept regular arrangement)",
+            "1 mark: In a gas, particles move **randomly** (accept freely / faster)",
+            "1 mark: In a gas, particles are **far apart**"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "b",
           "type": "extended-written",
           "text": "What is meant by 'specific latent heat of vaporisation'?",
           "marks": 2,
@@ -657,7 +739,7 @@
           "diagrams": []
         },
         {
-          "partLabel": "b",
+          "partLabel": "c",
           "type": "calculation",
           "text": "While a kettle boils, 0.018 kg of water changes to steam.<br><br>Calculate the amount of energy required for this change.<br><br>Specific latent heat of vaporisation of water = $2.3 \\times 10^6$ J/kg",
           "marks": 2,
@@ -674,6 +756,21 @@
             "1 mark: Final answer: **41 400 J** (accept 41 000 or $4.1 \\times 10^4$)"
           ],
           "diagrams": []
+        },
+        {
+          "partLabel": "d",
+          "type": "extended-written",
+          "text": "Figure 1 shows how temperature varies with time for a substance as it is heated. The graph is not drawn to scale.<br><br>Explain what is happening to the substance in sections AB and BC of the graph.",
+          "marks": 4,
+          "markScheme": [
+            "1 mark: Section AB — the substance is **changing state** from solid to liquid / **melting**",
+            "1 mark: Section AB — the temperature remains **steady** / constant (during the change of state)",
+            "1 mark: Section BC — the **temperature** of the liquid **rises** / increases",
+            "1 mark: Section BC — until it reaches the **boiling point**"
+          ],
+          "diagrams": [
+            "density-cs-q8-fig1.png"
+          ]
         }
       ]
     },
@@ -763,7 +860,7 @@
       "topic": "Density and Changes of State",
       "title": "Road ice and latent heat",
       "difficulty": "hard",
-      "source": "original",
+      "source": "pastpaper",
       "examBoard": "AQA",
       "tier": "combined",
       "subject": "physics",
@@ -771,6 +868,16 @@
       "parts": [
         {
           "partLabel": "a",
+          "type": "extended-written",
+          "text": "A company is developing a system which can heat up and melt ice on roads in the winter. During the summer, the black surface of the road will heat up in the sunshine. This energy will be stored in a large amount of soil deep under the road surface.<br><br>The system could work well because the road surface is black. Suggest why.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Black is a good **absorber** of (infrared) **radiation**"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "b",
           "type": "extended-written",
           "text": "What is meant by specific latent heat of fusion?",
           "marks": 2,
@@ -781,7 +888,7 @@
           "diagrams": []
         },
         {
-          "partLabel": "b",
+          "partLabel": "c",
           "type": "calculation",
           "text": "Calculate the amount of energy required to melt 15 kg of ice at 0 °C.<br><br>Specific latent heat of fusion of ice = $3.4 \\times 10^5$ J/kg",
           "marks": 2,
@@ -800,7 +907,7 @@
           "diagrams": []
         },
         {
-          "partLabel": "c",
+          "partLabel": "d",
           "type": "extended-written",
           "text": "A student investigated how the melting point of ice varies with the mass of salt added. The student added salt to crushed ice and measured the temperature at which the ice melted.<br><br>State one variable that the student should have controlled.",
           "marks": 1,
@@ -812,7 +919,7 @@
           ]
         },
         {
-          "partLabel": "d",
+          "partLabel": "e",
           "type": "multi-choice",
           "text": "During the investigation the student stirred the crushed ice. Suggest two reasons why.",
           "marks": 2,
@@ -836,7 +943,7 @@
           "diagrams": []
         },
         {
-          "partLabel": "e",
+          "partLabel": "f",
           "type": "extended-written",
           "text": "Table 1 shows the data that the student obtained. Describe the pattern shown in Table 1.",
           "marks": 1,
@@ -847,12 +954,59 @@
           "tables": [
             {
               "caption": "Effect of salt on the melting point of ice",
-              "headers": ["Mass of salt added in grams", "0", "10", "20"],
+              "headers": [
+                "Mass of salt added in grams",
+                "0",
+                "10",
+                "20"
+              ],
               "rows": [
-                ["Melting point of ice in °C", "0", "−6", "−16"]
+                [
+                  "Melting point of ice in °C",
+                  "0",
+                  "−6",
+                  "−16"
+                ]
               ]
             }
           ]
+        },
+        {
+          "partLabel": "g",
+          "type": "calculation",
+          "text": "Undersoil electrical heating systems are used in greenhouses. A cable just below the ground carries an electric current. One greenhouse system has a power output of 0.50 kW.<br><br>Calculate the energy transferred in 2 minutes.",
+          "marks": 3,
+          "correctAnswer": 60000,
+          "tolerance": 0.01,
+          "equations": [
+            "$E = P \\times t$",
+            "$P = \\frac{E}{t}$",
+            "$E = m L$"
+          ],
+          "correctEquation": 0,
+          "markScheme": [
+            "1 mark: Correct unit conversions: 0.50 kW = **500 W** and 2 minutes = **120 s**",
+            "1 mark: Correct substitution: $E = 500 \\times 120$",
+            "1 mark: Final answer: **60 000 J** (accept 60 kJ)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "h",
+          "type": "extended-written-levels",
+          "text": "A local council wants to keep a particular section of a road clear of ice in the winter.<br><br>Describe the advantages and disadvantages of keeping the road clear of ice using:<br>- energy storage<br>- salt<br>- undersoil electrical heating.",
+          "marks": 6,
+          "markScheme": [
+            "1 mark: Energy storage advantage — no **fuel costs**",
+            "1 mark: Energy storage advantage — no **environmental effects** (during operation)",
+            "1 mark: Energy storage disadvantage — **expensive** to set up and maintain",
+            "1 mark: Energy storage disadvantage — dependent on **(summer) weather**",
+            "1 mark: Salt advantage — easily **available** / **cheap**",
+            "1 mark: Salt disadvantage — can **damage** trees / plants / drinking water / cars",
+            "1 mark: Undersoil heating advantage — not dependent on **weather** / can be switched **on and off**",
+            "1 mark: Undersoil heating disadvantage — **costly** / bad for the **environment**"
+          ],
+          "diagrams": []
         }
       ]
     }

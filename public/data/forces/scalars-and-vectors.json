@@ -101,52 +101,6 @@
       ]
     },
     {
-      "id": "sv-3",
-      "topic": "Circular motion",
-      "title": "London Eye: acceleration at steady speed",
-      "difficulty": "medium",
-      "source": "original",
-      "examBoard": "AQA",
-      "tier": "combined",
-      "subject": "physics",
-      "level": "GCSE",
-      "parts": [
-        {
-          "partLabel": "a",
-          "type": "extended-written",
-          "text": "The capsules on the London Eye move in a circular path. Explain how the wheel can move at a steady speed and the capsules accelerate at the same time.",
-          "marks": 2,
-          "markScheme": [
-            "1 mark: The **direction** of the capsule’s velocity is changing.",
-            "1 mark: Acceleration is the **rate of change of velocity**, and velocity includes direction."
-          ],
-          "diagrams": [
-            "london-eye.jpeg"
-          ]
-        },
-        {
-          "partLabel": "b",
-          "type": "extended-written",
-          "text": "In which direction is the resultant force on each capsule?",
-          "marks": 1,
-          "markScheme": [
-            "1 mark: **Towards the centre** of the wheel."
-          ],
-          "diagrams": []
-        },
-        {
-          "partLabel": "c",
-          "type": "extended-written",
-          "text": "Name one other factor (besides speed of rotation and total mass) that affects the resultant force on each capsule, and state what effect it has.",
-          "marks": 1,
-          "markScheme": [
-            "1 mark: **Radius** (or diameter): a larger radius gives a **smaller** resultant force."
-          ],
-          "diagrams": []
-        }
-      ]
-    },
-    {
       "id": "sv-4",
       "topic": "Scalars and vectors",
       "title": "Classifying quantities",
@@ -227,6 +181,52 @@
             "1 mark: Distance — Scalar",
             "1 mark: Force — Vector",
             "1 mark: Time — Scalar"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "sv-3",
+      "topic": "Circular motion",
+      "title": "London Eye: acceleration at steady speed",
+      "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "The capsules on the London Eye move in a circular path. Explain how the wheel can move at a steady speed and the capsules accelerate at the same time.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: The **direction** of the capsule’s velocity is changing.",
+            "1 mark: Acceleration is the **rate of change of velocity**, and velocity includes direction."
+          ],
+          "diagrams": [
+            "london-eye.jpeg"
+          ]
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "In which direction is the resultant force on each capsule?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **Towards the centre** of the wheel."
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "Name one other factor (besides speed of rotation and total mass) that affects the resultant force on each capsule, and state what effect it has.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **Radius** (or diameter): a larger radius gives a **smaller** resultant force."
           ],
           "diagrams": []
         }

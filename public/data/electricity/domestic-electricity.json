@@ -3,6 +3,144 @@
   "mainTopic": "Electricity",
   "questions": [
     {
+      "id": "dom-elec3",
+      "topic": "Domestic Uses of Electricity",
+      "title": "Oscilloscope traces and overloaded adaptors",
+      "difficulty": "easy",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "select-and-explain",
+          "text": "The diagram shows the traces produced on an oscilloscope when it is connected across different electricity supplies.\n\nWhich of the traces could have been produced by the mains electricity supply?",
+          "marks": 2,
+          "options": ["A", "B", "C"],
+          "correctAnswer": 0,
+          "explanationPrompt": "Give a reason for your answer.",
+          "markScheme": [
+            "1 mark: Correct answer: **A**",
+            "1 mark: It is **alternating** / a.c. / it changes **direction** / p.d. (accept: because B and C are d.c.)"
+          ],
+          "diagrams": ["dom-elec-q3-fig1.png"]
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "The picture shows two adaptors being used to plug five electrical appliances into the same socket. Explain why it is dangerous to have all five appliances switched on and working at the same time.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Too much **current** flows through the socket / socket is **overloaded**",
+            "1 mark: The wiring / socket gets **hot** / risk of **fire**"
+          ],
+          "diagrams": ["dom-elec-q3-fig2.png"]
+        }
+      ]
+    },
+    {
+      "id": "dom-elec7",
+      "topic": "Domestic Uses of Electricity",
+      "title": "Fuses and RCCBs",
+      "difficulty": "easy",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "gap-fill",
+          "text": "Figure 1 shows a circuit breaker mechanism. Complete the sentence. Choose the correct answer from the box.",
+          "marks": 1,
+          "segments": [
+            "A fuse is connected in the ",
+            { "blank": 0 },
+            " wire."
+          ],
+          "wordBank": ["earth", "live", "neutral"],
+          "correctAnswers": ["live"],
+          "markScheme": [
+            "1 mark: live"
+          ],
+          "diagrams": ["dom-elec-q7-fig1.png"]
+        },
+        {
+          "partLabel": "b",
+          "type": "gap-fill",
+          "text": "Complete the sentence. Choose the correct answer from the box.",
+          "marks": 1,
+          "segments": [
+            "RCCBs are sometimes preferred to fuses because they ",
+            { "blank": 0 },
+            "."
+          ],
+          "wordBank": ["are bigger", "are cheaper", "react faster"],
+          "correctAnswers": ["react faster"],
+          "markScheme": [
+            "1 mark: react faster"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "gap-fill",
+          "text": "RCCBs operate by detecting a difference in the current between two wires. Complete the sentence. Choose the correct answer from the box.",
+          "marks": 1,
+          "segments": [
+            "The two wires are the ",
+            { "blank": 0 },
+            " wires."
+          ],
+          "wordBank": ["earth and live", "earth and neutral", "live and neutral"],
+          "correctAnswers": ["live and neutral"],
+          "markScheme": [
+            "1 mark: live and neutral"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "d",
+          "type": "extended-written",
+          "text": "An RCCB contains an iron rocker and a coil. A student investigated how the force of attraction, between a coil and an iron rocker, varies with the current in the coil. She supported a coil vertically and connected it in an electrical circuit, part of which is shown in the figure below. She put a small mass on the end of the rocker and increased the current in the coil until the rocker balanced. She repeated the procedure for different masses.\n\nTable 1 shows some of her results.\n\nState two extra components that must have been included in the circuit in the figure above to allow the data in the table to be collected. Give reasons for your answers.",
+          "tables": [
+            {
+              "caption": "Mass and current results",
+              "headers": ["Mass in grams", "Current needed for the rocker to balance in amps"],
+              "rows": [
+                ["5", "0.5"],
+                ["10", "1.0"],
+                ["15", "1.5"],
+                ["20", "2.0"]
+              ]
+            }
+          ],
+          "marks": 4,
+          "markScheme": [
+            "1 mark: **Ammeter**",
+            "1 mark: To measure the **current**",
+            "1 mark: **Variable resistor** (accept: variable power supply / switch)",
+            "1 mark: To **vary** the current (accept: to control the current / to stop apparatus getting hot / to reset equipment)"
+          ],
+          "diagrams": ["dom-elec-q7-fig2.png"]
+        },
+        {
+          "partLabel": "e",
+          "type": "extended-written",
+          "text": "A teacher said that the values of current were too high to be safe. Suggest two changes that would allow lower values of current to be used in this investigation.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Use **smaller masses** (accept: smaller weights)",
+            "1 mark: **More turns** on the coil / use an **iron core** in the coil / move the mass **closer to the pivot** / reduce the **gap** between the coil and rocker"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
       "id": "dom-elec1",
       "topic": "Domestic Uses of Electricity",
       "title": "Oscilloscope traces, series and parallel lamps",
@@ -82,12 +220,11 @@
         },
         {
           "partLabel": "e",
-          "type": "short-answer",
+          "type": "extended-written",
           "text": "Give one advantage of connecting the lamps in parallel instead of in series.",
           "marks": 1,
-          "acceptedAnswers": ["if one goes out the other still works", "one can fail without affecting the other", "brighter", "they are brighter", "greater power output", "can be switched independently"],
           "markScheme": [
-            "1 mark: If one goes out the other still works / **brighter** / power output is greater"
+            "1 mark: If one goes out the other still works / lamps are **brighter** / **power** output is greater / can be switched **independently**"
           ],
           "diagrams": []
         },
@@ -128,19 +265,18 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "short-answer",
+          "type": "extended-written",
           "text": "The diagram shows an electric circuit used in a dolls' house. The switches are 2-way switches; this means that each switch has a connecting wire that can be in one of two positions. With the connecting wire in each switch in the position shown in the diagram, the lamp is off. Why?",
           "marks": 1,
-          "acceptedAnswers": ["circuit not complete", "circuit is broken", "circuit is not complete", "the circuit is broken", "the circuit is not complete", "switches are open", "switch is open"],
           "markScheme": [
-            "1 mark: The **circuit is not complete** / circuit is broken / switches are open"
+            "1 mark: The **circuit is not complete** / circuit is **broken** / switches are **open**"
           ],
           "diagrams": ["dom-elec-q2-fig1.png"]
         },
         {
           "partLabel": "b",
           "type": "calculation",
-          "text": "When switched on, the lamp in a dolls' house circuit has a resistance of 18 \u03a9 and draws a current of 0.5 A from the power supply. Use the equation: potential difference = current \u00d7 resistance. Calculate the potential difference of the power supply.",
+          "text": "When switched on, the lamp in a dolls' house circuit has a resistance of 18 Ω and draws a current of 0.5 A from the power supply. Use the equation: potential difference = current × resistance. Calculate the potential difference of the power supply.",
           "marks": 2,
           "equations": [
             "$V = I \\times R$",
@@ -159,7 +295,7 @@
         {
           "partLabel": "c",
           "type": "calculation",
-          "text": "A second, identical lamp (resistance 18 \u03a9) is added to the dolls' house circuit. The two lamps are joined in series. Calculate the total resistance of the two lamps.",
+          "text": "A second, identical lamp (resistance 18 Ω) is added to the dolls' house circuit. The two lamps are joined in series. Calculate the total resistance of the two lamps.",
           "marks": 2,
           "equations": [
             "$R_{\\text{total}} = R_1 + R_2$",
@@ -171,16 +307,15 @@
           "tolerance": 0.01,
           "markScheme": [
             "1 mark: Correct substitution: $R_{\\text{total}} = 18 + 18$",
-            "1 mark: Correct final answer: **36 \u03a9**"
+            "1 mark: Correct final answer: **36 Ω**"
           ],
           "diagrams": []
         },
         {
           "partLabel": "d",
-          "type": "short-answer",
+          "type": "extended-written",
           "text": "Two-way switch circuits are used in real houses, with one switch at the top of the stairs and another at the bottom. What is the advantage of using this circuit rather than a simple circuit with only one switch?",
           "marks": 1,
-          "acceptedAnswers": ["can be switched on or off from top or bottom of stairs", "can switch from either end", "can turn on or off from two locations", "can control the light from two places", "can switch on or off from either switch"],
           "markScheme": [
             "1 mark: Can be switched **on or off** from the **top or bottom** of the stairs"
           ],
@@ -188,12 +323,11 @@
         },
         {
           "partLabel": "e",
-          "type": "short-answer",
+          "type": "extended-written",
           "text": "The diagram shows an old type of metal lamp fitting. The cable has been connected to the lamp fitting in a way that makes the lamp fitting unsafe. What is the possible risk to someone touching the lamp fitting while the lamp is switched on?",
           "marks": 1,
-          "acceptedAnswers": ["electric shock", "shock", "electrocution", "death", "fitting becomes live"],
           "markScheme": [
-            "1 mark: **(Electric) shock** / fitting becomes live / electrocution"
+            "1 mark: **(Electric) shock** / fitting becomes **live** / **electrocution**"
           ],
           "diagrams": ["dom-elec-q2-fig2.png"]
         },
@@ -207,30 +341,6 @@
             "1 mark: Connect the **earth wire**"
           ],
           "diagrams": []
-        }
-      ]
-    },
-    {
-      "id": "dom-elec3",
-      "topic": "Domestic Uses of Electricity",
-      "title": "Overloaded adaptors",
-      "difficulty": "easy",
-      "source": "pastpaper",
-      "examBoard": "AQA",
-      "tier": "combined",
-      "subject": "physics",
-      "level": "GCSE",
-      "parts": [
-        {
-          "partLabel": "a",
-          "type": "extended-written",
-          "text": "The picture shows two adaptors being used to plug five electrical appliances into the same socket. Explain why it is dangerous to have all five appliances switched on and working at the same time.",
-          "marks": 2,
-          "markScheme": [
-            "1 mark: Too much **current** flows through the socket / socket is **overloaded**",
-            "1 mark: The wiring / socket gets **hot** / risk of **fire**"
-          ],
-          "diagrams": ["dom-elec-q3-fig2.png"]
         }
       ]
     },
@@ -433,12 +543,11 @@
         },
         {
           "partLabel": "f",
-          "type": "short-answer",
+          "type": "extended-written",
           "text": "What happens to cause a fuse or circuit breaker to disconnect a circuit?",
           "marks": 1,
-          "acceptedAnswers": ["too great a current flows", "too much current", "a surge of current", "current is too high", "too great a current", "an electrical fault", "current exceeds the rating"],
           "markScheme": [
-            "1 mark: Too great a **current** flows / a surge of current / an electrical fault"
+            "1 mark: Too great a **current** flows / a **surge** of current / an electrical **fault**"
           ],
           "diagrams": []
         },
@@ -450,6 +559,71 @@
           "markScheme": [
             "1 mark: Can be **reset** / does not need replacing",
             "1 mark: Disconnects the circuit **faster**"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "dom-elec8",
+      "topic": "Domestic Uses of Electricity",
+      "title": "Electric shock and lawnmower safety",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "An RCD adaptor is an automatic safety switch that is recommended for use with an electric lawnmower. Suggest two reasons why there is a particular risk of an electric shock when using an electric lawnmower.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Risk of **cutting** through the **cable** / wire",
+            "1 mark: The **grass** may be **wet** / it may rain / risk of touching **exposed** parts"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "If something goes wrong with an electric lawnmower, there will be a difference between the current in the live wire and the current in the neutral wire. Why will there be a difference?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Some current will flow through the lawnmower / user / to **earth**"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "short-answer",
+          "text": "Use the words charge, current and time to write an equation which shows the relationship between them.",
+          "marks": 1,
+          "acceptedAnswers": ["charge = current x time", "charge = current × time", "Q = I x t", "Q = It", "Q = I × t", "I = Q / t", "I = Q/t", "t = Q / I", "t = Q/I"],
+          "markScheme": [
+            "1 mark: **charge = current × time** / $Q = I \\times t$ (or any correct rearrangement)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "d",
+          "type": "calculation",
+          "text": "Calculate how much charge flows when a current of 30 milliamps passes for 40 milliseconds. Give the unit.",
+          "marks": 3,
+          "equations": [
+            "$Q = I \\times t$",
+            "$V = I \\times R$",
+            "$P = I \\times V$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 0.0012,
+          "tolerance": 0.02,
+          "markScheme": [
+            "1 mark: Correct unit conversions: 30 milliamps = **0.03 A** and 40 milliseconds = **0.04 s**",
+            "1 mark: Correct substitution: $Q = 0.03 \\times 0.04$",
+            "1 mark: Correct final answer: **0.0012 C** (coulombs) (accept 1200 μC or 1.2 mC)"
           ],
           "diagrams": []
         }
@@ -570,136 +744,6 @@
       ]
     },
     {
-      "id": "dom-elec7",
-      "topic": "Domestic Uses of Electricity",
-      "title": "Fuses and RCCBs",
-      "difficulty": "easy",
-      "source": "pastpaper",
-      "examBoard": "AQA",
-      "tier": "combined",
-      "subject": "physics",
-      "level": "GCSE",
-      "parts": [
-        {
-          "partLabel": "a",
-          "type": "gap-fill",
-          "text": "Complete the sentence. Choose the correct answer from the box.",
-          "marks": 1,
-          "segments": [
-            "A fuse is connected in the ",
-            { "blank": 0 },
-            " wire."
-          ],
-          "wordBank": ["earth", "live", "neutral"],
-          "correctAnswers": ["live"],
-          "markScheme": [
-            "1 mark: live"
-          ],
-          "diagrams": []
-        },
-        {
-          "partLabel": "b",
-          "type": "gap-fill",
-          "text": "Complete the sentence. Choose the correct answer from the box.",
-          "marks": 1,
-          "segments": [
-            "RCCBs are sometimes preferred to fuses because they ",
-            { "blank": 0 },
-            "."
-          ],
-          "wordBank": ["are bigger", "are cheaper", "react faster"],
-          "correctAnswers": ["react faster"],
-          "markScheme": [
-            "1 mark: react faster"
-          ],
-          "diagrams": []
-        },
-        {
-          "partLabel": "c",
-          "type": "gap-fill",
-          "text": "RCCBs operate by detecting a difference in the current between two wires. Complete the sentence. Choose the correct answer from the box.",
-          "marks": 1,
-          "segments": [
-            "The two wires are the ",
-            { "blank": 0 },
-            " wires."
-          ],
-          "wordBank": ["earth and live", "earth and neutral", "live and neutral"],
-          "correctAnswers": ["live and neutral"],
-          "markScheme": [
-            "1 mark: live and neutral"
-          ],
-          "diagrams": []
-        }
-      ]
-    },
-    {
-      "id": "dom-elec8",
-      "topic": "Domestic Uses of Electricity",
-      "title": "Electric shock and lawnmower safety",
-      "difficulty": "medium",
-      "source": "pastpaper",
-      "examBoard": "AQA",
-      "tier": "combined",
-      "subject": "physics",
-      "level": "GCSE",
-      "parts": [
-        {
-          "partLabel": "a",
-          "type": "extended-written",
-          "text": "An RCD adaptor is an automatic safety switch that is recommended for use with an electric lawnmower. Suggest two reasons why there is a particular risk of an electric shock when using an electric lawnmower.",
-          "marks": 2,
-          "markScheme": [
-            "1 mark: Risk of **cutting** through the **cable** / wire",
-            "1 mark: The **grass** may be **wet** / it may rain / risk of touching **exposed** parts"
-          ],
-          "diagrams": []
-        },
-        {
-          "partLabel": "b",
-          "type": "short-answer",
-          "text": "If something goes wrong with an electric lawnmower, there will be a difference between the current in the live wire and the current in the neutral wire. Why will there be a difference?",
-          "marks": 1,
-          "acceptedAnswers": ["some current will go through the user", "some current flows to earth", "some current goes through the lawnmower to earth", "current flows through the user to earth", "current goes to earth"],
-          "markScheme": [
-            "1 mark: Some current will flow through the lawnmower / user / to **earth**"
-          ],
-          "diagrams": []
-        },
-        {
-          "partLabel": "c",
-          "type": "short-answer",
-          "text": "Use the words charge, current and time to write an equation which shows the relationship between them.",
-          "marks": 1,
-          "acceptedAnswers": ["charge = current x time", "charge = current \u00d7 time", "Q = I x t", "Q = It", "Q = I \u00d7 t", "I = Q / t", "I = Q/t", "t = Q / I", "t = Q/I"],
-          "markScheme": [
-            "1 mark: **charge = current \u00d7 time** / $Q = I \\times t$ (or any correct rearrangement)"
-          ],
-          "diagrams": []
-        },
-        {
-          "partLabel": "d",
-          "type": "calculation",
-          "text": "Calculate how much charge flows when a current of 30 milliamps passes for 40 milliseconds. Give the unit.",
-          "marks": 3,
-          "equations": [
-            "$Q = I \\times t$",
-            "$V = I \\times R$",
-            "$P = I \\times V$"
-          ],
-          "correctEquation": 0,
-          "correctAnswer": 0.0012,
-          "tolerance": 0.02,
-          "markScheme": [
-            "1 mark: Correct unit conversions: 30 milliamps = **0.03 A** and 40 milliseconds = **0.04 s**",
-            "1 mark: Correct substitution: $Q = 0.03 \\times 0.04$",
-            "1 mark: Correct final answer: **0.0012 C** (coulombs) (accept 1200 \u03bcC or 1.2 mC)"
-          ],
-          "diagrams": []
-        }
-      ]
-    },
-    {
       "id": "dom-elec9",
       "topic": "Domestic Uses of Electricity",
       "title": "Undersoil heating circuit",
@@ -734,10 +778,9 @@
         },
         {
           "partLabel": "c",
-          "type": "short-answer",
+          "type": "extended-written",
           "text": "A circuit can also be switched off by the action of a fuse. Give one advantage of using a circuit breaker to switch off a circuit rather than a fuse.",
           "marks": 1,
-          "acceptedAnswers": ["can be reset", "does not need replacing", "it can be reset", "faster acting", "switches circuit off faster", "faster", "reusable"],
           "markScheme": [
             "1 mark: Can be **reset** / does not need replacing / **faster** acting"
           ],

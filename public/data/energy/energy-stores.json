@@ -442,71 +442,6 @@
       ]
     },
     {
-      "id": "energy-stores6",
-      "topic": "Energy transfers in a system",
-      "title": "Bouncing ball velocity-time graph",
-      "difficulty": "hard",
-      "source": "original",
-      "examBoard": "AQA",
-      "tier": "combined",
-      "subject": "physics",
-      "level": "GCSE",
-      "parts": [
-        {
-          "partLabel": "a",
-          "type": "extended-written",
-          "text": "The graph shows velocity against time for a ball that is dropped and then bounces (air resistance ignored). Describe the motion of the ball between points A and B.",
-          "marks": 2,
-          "markScheme": [
-            "1 mark: The ball is **accelerating** (speed increasing).",
-            "1 mark: The acceleration is **uniform/constant** (straight line on v-t graph)."
-          ],
-          "diagrams": [
-            "velocity-time-bounce.jpeg"
-          ]
-        },
-        {
-          "partLabel": "b",
-          "type": "extended-written",
-          "text": "What direction is the ball moving between points C and D on the graph?",
-          "marks": 1,
-          "markScheme": [
-            "1 mark: Upwards."
-          ],
-          "diagrams": []
-        },
-        {
-          "partLabel": "c",
-          "type": "single-choice",
-          "text": "The ball and the Earth form a system. What is meant by ‘a system’?",
-          "marks": 1,
-          "options": [
-            "A group of objects that interact.",
-            "Objects with big differences in mass.",
-            "Objects with gravitational potential energy."
-          ],
-          "correctAnswer": 0,
-          "markScheme": [
-            "Answer: A group of objects that interact."
-          ],
-          "diagrams": []
-        },
-        {
-          "partLabel": "d",
-          "type": "extended-written",
-          "text": "When the ball hits the ground, energy is transferred from the ball to the Earth. Explain how the data in the graph shows this energy transfer.",
-          "marks": 4,
-          "markScheme": [
-            "1 mark: Velocity just after the bounce is **less** than just before.",
-            "1 mark: So the ball has **lost energy**.",
-            "1 mark: Reference to loss of **kinetic energy** / reduced GPE.",
-            "1 mark: Total energy of the ball–Earth system is **conserved**."
-          ],
-          "diagrams": []
-        }
-      ]
-    },
-    {
       "id": "energy-stores7",
       "topic": "Energy stores and power",
       "title": "Drone energy stores and hazards",
@@ -589,6 +524,108 @@
       ]
     },
     {
+      "id": "energy-stores9",
+      "topic": "Energy transfers on a zip wire",
+      "title": "Zip wire: energy losses and different speeds",
+      "difficulty": "medium",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "As the person moves down the zip wire, her increase in kinetic energy is less than her decrease in gravitational potential energy. Explain why.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Work done against air resistance and/or friction (zip line and pulley).",
+            "1 mark: Energy transferred to the surroundings as thermal energy."
+          ],
+          "diagrams": [
+            "zipwire-figure1.jpeg"
+          ]
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "Different people have different speeds at the end of the zip wire. Explain why.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Different surface areas/body positions → different air resistance/drag.",
+            "1 mark: So energy transfer to surroundings differs, giving different final speeds."
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "energy-stores6",
+      "topic": "Energy transfers in a system",
+      "title": "Bouncing ball velocity-time graph",
+      "difficulty": "hard",
+      "source": "original",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "The graph shows velocity against time for a ball that is dropped and then bounces (air resistance ignored). Describe the motion of the ball between points A and B.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: The ball is **accelerating** (speed increasing).",
+            "1 mark: The acceleration is **uniform/constant** (straight line on v-t graph)."
+          ],
+          "diagrams": [
+            "velocity-time-bounce.jpeg"
+          ]
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "What direction is the ball moving between points C and D on the graph?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Upwards."
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "single-choice",
+          "text": "The ball and the Earth form a system. What is meant by ‘a system’?",
+          "marks": 1,
+          "options": [
+            "A group of objects that interact.",
+            "Objects with big differences in mass.",
+            "Objects with gravitational potential energy."
+          ],
+          "correctAnswer": 0,
+          "markScheme": [
+            "Answer: A group of objects that interact."
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "d",
+          "type": "extended-written",
+          "text": "When the ball hits the ground, energy is transferred from the ball to the Earth. Explain how the data in the graph shows this energy transfer.",
+          "marks": 4,
+          "markScheme": [
+            "1 mark: Velocity just after the bounce is **less** than just before.",
+            "1 mark: So the ball has **lost energy**.",
+            "1 mark: Reference to loss of **kinetic energy** / reduced GPE.",
+            "1 mark: Total energy of the ball–Earth system is **conserved**."
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
       "id": "energy-stores8",
       "topic": "Kinetic energy of moving air",
       "title": "Wind turbine and kinetic energy",
@@ -630,43 +667,6 @@
             "1 mark: Mass of air per second is **halved** → KE factor 2 decrease.",
             "1 mark: Wind speed halved → $v^2$ quartered → KE factor **4** decrease.",
             "1 mark: Overall KE (and so power) decreases by a factor of **8**."
-          ],
-          "diagrams": []
-        }
-      ]
-    },
-    {
-      "id": "energy-stores9",
-      "topic": "Energy transfers on a zip wire",
-      "title": "Zip wire: energy losses and different speeds",
-      "difficulty": "medium",
-      "source": "original",
-      "examBoard": "AQA",
-      "tier": "combined",
-      "subject": "physics",
-      "level": "GCSE",
-      "parts": [
-        {
-          "partLabel": "a",
-          "type": "extended-written",
-          "text": "As the person moves down the zip wire, her increase in kinetic energy is less than her decrease in gravitational potential energy. Explain why.",
-          "marks": 2,
-          "markScheme": [
-            "1 mark: Work done against air resistance and/or friction (zip line and pulley).",
-            "1 mark: Energy transferred to the surroundings as thermal energy."
-          ],
-          "diagrams": [
-            "zipwire-figure1.jpeg"
-          ]
-        },
-        {
-          "partLabel": "b",
-          "type": "extended-written",
-          "text": "Different people have different speeds at the end of the zip wire. Explain why.",
-          "marks": 2,
-          "markScheme": [
-            "1 mark: Different surface areas/body positions → different air resistance/drag.",
-            "1 mark: So energy transfer to surroundings differs, giving different final speeds."
           ],
           "diagrams": []
         }

@@ -178,6 +178,196 @@
       ]
     },
     {
+      "id": "em-waves15",
+      "topic": "Electromagnetic Waves",
+      "title": "Oscilloscope wave traces: amplitude and frequency",
+      "difficulty": "easy",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "short-answer",
+          "text": "The diagram shows four oscilloscope wave traces. The controls of the oscilloscope were the same for each wave trace. Which one of the wave traces, A, B, C or D, has the largest amplitude?",
+          "marks": 1,
+          "acceptedAnswers": [
+            "B"
+          ],
+          "markScheme": [
+            "1 mark: **B**"
+          ],
+          "diagrams": [
+            "em-q9-fig1.png"
+          ]
+        },
+        {
+          "partLabel": "b",
+          "type": "short-answer",
+          "text": "Which one of the wave traces has the lowest frequency?",
+          "marks": 1,
+          "acceptedAnswers": [
+            "A"
+          ],
+          "markScheme": [
+            "1 mark: **A**"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "em-waves17",
+      "topic": "Electromagnetic Waves",
+      "title": "Completing the electromagnetic spectrum",
+      "difficulty": "easy",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "table-fill",
+          "text": "Figure 1 shows the electromagnetic spectrum. Three types of wave have been missed out. Use words from the box to complete the table.",
+          "marks": 3,
+          "headers": [
+            "Gamma rays",
+            "?",
+            "Ultraviolet rays",
+            "Visible light",
+            "?",
+            "Microwaves",
+            "?"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "Gamma rays",
+                {
+                  "blank": 0
+                },
+                "Ultraviolet rays",
+                "Visible light",
+                {
+                  "blank": 1
+                },
+                "Microwaves",
+                {
+                  "blank": 2
+                }
+              ]
+            }
+          ],
+          "correctAnswers": [
+            [
+              "X-rays",
+              "x-rays",
+              "X rays",
+              "x rays"
+            ],
+            [
+              "infrared rays",
+              "infrared",
+              "infra red rays",
+              "infra red",
+              "IR"
+            ],
+            [
+              "radio waves",
+              "radio"
+            ]
+          ],
+          "markScheme": [
+            "1 mark: **X-rays** (between gamma rays and ultraviolet)",
+            "1 mark: **Infrared rays** (between visible light and microwaves)",
+            "1 mark: **Radio waves** (after microwaves)"
+          ],
+          "diagrams": [
+            "em-q12-fig1.png"
+          ]
+        },
+        {
+          "partLabel": "b",
+          "type": "single-choice",
+          "text": "Which one of the following gives a use of gamma rays?",
+          "marks": 1,
+          "options": [
+            "To communicate with satellites",
+            "To see objects",
+            "To kill cancer cells"
+          ],
+          "correctAnswer": 2,
+          "markScheme": [
+            "Answer: C – To **kill cancer cells**"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "gap-fill",
+          "text": "Complete the following sentence by choosing the correct word from the box.",
+          "marks": 1,
+          "segments": [
+            "All electromagnetic waves move ",
+            {
+              "blank": 0
+            },
+            " from one place to another."
+          ],
+          "wordBank": [
+            "energy",
+            "gases",
+            "particles"
+          ],
+          "correctAnswers": [
+            "energy"
+          ],
+          "markScheme": [
+            "1 mark: **energy**"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "em-waves18",
+      "topic": "Electromagnetic Waves",
+      "title": "Frequency definition and lower frequency radiation",
+      "difficulty": "easy",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "A wave is said to have a frequency of 25 Hz. Explain what the term frequency means.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: The **number of waves** (passing a point) **each second** (accept: cycles per second; accept: 25 waves pass each second)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "From the electromagnetic spectrum, give the name and use of a radiation of lower frequency than light.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Any valid name, e.g. **microwave**, **radio** (wave), **infrared**",
+            "1 mark: A correct **use** matching the named radiation, e.g. microwave — cooking / communication; radio — communication / entertainment; infrared — cooking / heating / remote control / thermal imaging"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
       "id": "em-waves4",
       "topic": "Electromagnetic Waves",
       "title": "Electromagnetic spectrum wavelengths",
@@ -558,11 +748,23 @@
           "tables": [
             {
               "caption": "X-ray doses for different parts of the body",
-              "headers": ["Part of body X-rayed", "Dose (arbitrary units)"],
+              "headers": [
+                "Part of body X-rayed",
+                "Dose (arbitrary units)"
+              ],
               "rows": [
-                ["Head", "3"],
-                ["Chest", "4"],
-                ["Pelvis", "60"]
+                [
+                  "Head",
+                  "3"
+                ],
+                [
+                  "Chest",
+                  "4"
+                ],
+                [
+                  "Pelvis",
+                  "60"
+                ]
               ]
             }
           ]
@@ -854,6 +1056,285 @@
       ]
     },
     {
+      "id": "em-waves16",
+      "topic": "Electromagnetic Waves",
+      "title": "EM spectrum devices and sunbed dangers",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "match-up",
+          "text": "Match each device to the type of electromagnetic wave that it uses.",
+          "marks": 3,
+          "leftItems": [
+            "Sunbed",
+            "Radio",
+            "TV remote control"
+          ],
+          "rightItems": [
+            "Gamma rays",
+            "X-rays",
+            "Ultraviolet rays",
+            "Visible light",
+            "Infrared rays",
+            "Microwaves",
+            "Radio waves"
+          ],
+          "correctLinks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              4
+            ]
+          ],
+          "markScheme": [
+            "1 mark: Sunbed → **Ultraviolet rays**",
+            "1 mark: Radio → **Radio waves**",
+            "1 mark: TV remote control → **Infrared rays**"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "b",
+          "type": "short-answer",
+          "text": "What serious health problem may be caused by using a sunbed too much?",
+          "marks": 1,
+          "acceptedAnswers": [
+            "skin cancer"
+          ],
+          "markScheme": [
+            "1 mark: **Skin cancer**"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "Figure 1 shows a pie chart comparing deaths caused by too much exposure to the Sun with deaths due to using a sunbed too much. It is difficult for a doctor to be certain that a person has died because of using a sunbed too much. Suggest why.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **Other factors** may be involved (accept: may have been in the Sun too long; both sunbed use and Sun exposure give the **same symptoms**)"
+          ],
+          "diagrams": [
+            "em-q11-fig1.png"
+          ]
+        },
+        {
+          "partLabel": "d",
+          "type": "extended-written",
+          "text": "A spokesperson for a leading cancer charity said: 'We want people, especially young people, to know the possible dangers of using a sunbed.' Why is it important that you know the possible dangers of using a sunbed?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: So you can **assess the risk** / make your own **informed decision** (accept: so you can limit its use / choose not to use one)"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "em-waves19",
+      "topic": "Electromagnetic Waves",
+      "title": "EM wave properties and WiFi frequency",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "Microwaves and visible light are two types of electromagnetic wave. Both can be used for communications. Give two properties that are common to both visible light and microwaves.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Any two from: they travel at the **same speed** (in a vacuum / at the speed of light); they can travel through a **vacuum**; they **transfer energy**; they can be **reflected / refracted / diffracted / absorbed / transmitted**; they are **transverse**.",
+            "1 mark: (Second property from the list above)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "Name two more types of electromagnetic wave that can be used for communications.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Both required — **infrared** and **radio waves** (accept IR for infrared)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "calculation",
+          "text": "Wi-Fi uses microwaves with a wavelength of 12.5 cm to link a computer to a router. Microwaves travel through the air at 300 000 000 m/s. Calculate the frequency of the microwaves used to link the computer to the router.",
+          "marks": 3,
+          "correctAnswer": 2400000000,
+          "tolerance": 0.01,
+          "equations": [
+            "$v = f \\times \\lambda$",
+            "$T = \\frac{1}{f}$",
+            "$v = \\frac{d}{t}$"
+          ],
+          "correctEquation": 0,
+          "markScheme": [
+            "1 mark: Correct unit conversion and substitution: 12.5 cm = 0.125 m; $300\\,000\\,000 = f \\times 0.125$",
+            "1 mark: Correct rearrangement: $f = \\frac{v}{\\lambda}$",
+            "1 mark: Final answer: **2 400 000 000 Hz** (accept 2400 MHz or 2.4 GHz)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "d",
+          "type": "extended-written",
+          "text": "A politician commented on the increasing use of Wi-Fi. He said: 'I believe that these systems may be harmful to children.' Suggest what the politician could have done to persuade people that what he said was not just an opinion.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **Presented (scientific) evidence / data** (doing an experiment/investigation alone is insufficient)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "e",
+          "type": "extended-written",
+          "text": "One group of scientists said that there is no reason why Wi-Fi should not be used in schools. These scientists also suggested that there is a need for further research. Why did the group of scientists suggest that there is a need for further research?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: To find out if there **is a hazard** (or not) / to find out if it is **safe** (accept: not enough evidence to make a decision)"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "em-waves20",
+      "topic": "Electromagnetic Waves",
+      "title": "Satellite communication and EM wave properties",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "short-answer",
+          "text": "Figure 1 shows a transmitter emitting two electromagnetic waves, L and M. Wave L is used to send a signal to a satellite. Which part of the electromagnetic spectrum does wave L belong to?",
+          "marks": 1,
+          "acceptedAnswers": [
+            "microwave",
+            "microwaves"
+          ],
+          "markScheme": [
+            "1 mark: **Microwave(s)**"
+          ],
+          "diagrams": [
+            "em-q22-fig1.png"
+          ]
+        },
+        {
+          "partLabel": "b",
+          "type": "short-answer",
+          "text": "What name is given to the process that occurs as wave L passes into the ionosphere?",
+          "marks": 1,
+          "acceptedAnswers": [
+            "refraction"
+          ],
+          "markScheme": [
+            "1 mark: **Refraction**"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "Give two properties of all electromagnetic waves.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Any two from: they are **transverse**; they travel at the **same speed** through a vacuum (accept speed of light / $3 \\times 10^{8}$ m/s); they can be **reflected / refracted / diffracted / absorbed**; they **transfer energy**; they can travel through a **vacuum**.",
+            "1 mark: (Second property from the list above)"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "em-waves21",
+      "topic": "Electromagnetic Waves",
+      "title": "Seismic P wave frequency and wavelength",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "separate",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "short-answer",
+          "text": "The vibration caused by a P wave travelling at 7.6 km/s has been recorded on a seismic chart. Figure 1 shows the recording over 10 seconds. How many waves are produced in one second?",
+          "marks": 1,
+          "acceptedAnswers": [
+            "0.5"
+          ],
+          "markScheme": [
+            "1 mark: **0.5** (waves per second)"
+          ],
+          "diagrams": [
+            "em-q23-fig1.png"
+          ]
+        },
+        {
+          "partLabel": "b",
+          "type": "equation-choice",
+          "text": "Write down the equation which links frequency, wavelength and wave speed.",
+          "marks": 1,
+          "options": [
+            "$v = f \\times \\lambda$",
+            "$v = \\frac{d}{t}$",
+            "$T = \\frac{1}{f}$",
+            "$F = m \\times a$"
+          ],
+          "correctAnswer": 0,
+          "markScheme": [
+            "Answer: A – $v = f \\times \\lambda$"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "calculation",
+          "text": "The P wave travels at 7.6 km/s. Calculate the wavelength of the P wave.",
+          "marks": 2,
+          "correctAnswer": 15.2,
+          "tolerance": 0.01,
+          "equations": [
+            "$v = f \\times \\lambda$",
+            "$T = \\frac{1}{f}$",
+            "$v = \\frac{d}{t}$"
+          ],
+          "correctEquation": 0,
+          "markScheme": [
+            "1 mark: Correct substitution: $\\lambda = \\frac{7.6}{0.5}$",
+            "1 mark: Final answer: **15.2 km**"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
       "id": "em-waves12",
       "topic": "Electromagnetic Waves",
       "title": "Infrared radiation and temperature",
@@ -883,7 +1364,15 @@
           "tables": [
             {
               "caption": "Positions in the electromagnetic spectrum",
-              "headers": ["A", "Microwaves", "B", "Visible light", "C", "D", "Gamma rays"],
+              "headers": [
+                "A",
+                "Microwaves",
+                "B",
+                "Visible light",
+                "C",
+                "D",
+                "Gamma rays"
+              ],
               "rows": []
             }
           ]
@@ -988,12 +1477,27 @@
           "tables": [
             {
               "caption": "Infrared radiation results for different surfaces",
-              "headers": ["Type of surface", "Temperature in °C"],
+              "headers": [
+                "Type of surface",
+                "Temperature in °C"
+              ],
               "rows": [
-                ["Matt black", "68.0"],
-                ["Matt white", "65.5"],
-                ["Shiny black", "66.3"],
-                ["Shiny silver", "28.0"]
+                [
+                  "Matt black",
+                  "68.0"
+                ],
+                [
+                  "Matt white",
+                  "65.5"
+                ],
+                [
+                  "Shiny black",
+                  "66.3"
+                ],
+                [
+                  "Shiny silver",
+                  "28.0"
+                ]
               ]
             }
           ]
@@ -1083,6 +1587,61 @@
             "1 mark: The **temperature** (increase / change after 10 minutes)"
           ],
           "diagrams": []
+        },
+        {
+          "partLabel": "e",
+          "type": "extended-written-levels",
+          "text": "A student wrote the following hypothesis: 'The black-coloured flask will emit more infrared radiation than the silver-coloured flask during 10 minutes of cooling.' Describe a method to test this hypothesis.",
+          "marks": 6,
+          "markScheme": [
+            "1 mark: **Heat water** / boil water / use a kettle",
+            "1 mark: Add an equal **volume** of hot water to each flask",
+            "1 mark: Insert a **thermometer** into each flask (or place an IR detector near each flask)",
+            "1 mark: Record the **initial temperature** / reading from both flasks",
+            "1 mark: Start a **stop clock** and record temperatures / readings after **10 minutes**",
+            "1 mark: Calculate the **change in temperature** / readings during the 10 minutes",
+            "1 mark: The distance between the IR detector and the flask should be the **same** each time",
+            "1 mark: **Compare** the results to test the hypothesis"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "f",
+          "type": "extended-written",
+          "text": "Table 1 shows the results from the absorption investigation. Give two conclusions that can be made from the results in Table 1.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: **Black** surfaces absorb more infrared than **white** surfaces (accept black surfaces have a greater temperature increase than white surfaces).",
+            "1 mark: **Matt** surfaces absorb more infrared than **shiny** surfaces of the same colour (accept matt surfaces have a greater temperature increase than shiny surfaces)."
+          ],
+          "diagrams": [],
+          "tables": [
+            {
+              "caption": "Temperature increase for different surface colours",
+              "headers": [
+                "Surface colour of the cube",
+                "Temperature increase after 10 minutes in °C"
+              ],
+              "rows": [
+                [
+                  "Matt white",
+                  "3.0"
+                ],
+                [
+                  "Shiny white",
+                  "2.0"
+                ],
+                [
+                  "Matt black",
+                  "6.5"
+                ],
+                [
+                  "Shiny black",
+                  "4.0"
+                ]
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1105,7 +1664,15 @@
           "tables": [
             {
               "caption": "The electromagnetic spectrum",
-              "headers": ["Radio waves", "Microwaves", "Infrared", "Visible light", "Ultraviolet", "X-rays", "Gamma rays"],
+              "headers": [
+                "Radio waves",
+                "Microwaves",
+                "Infrared",
+                "Visible light",
+                "Ultraviolet",
+                "X-rays",
+                "Gamma rays"
+              ],
               "rows": []
             }
           ],
@@ -1189,6 +1756,122 @@
           "marks": 1,
           "markScheme": [
             "1 mark: **Skin cancer** (accept blindness)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "f",
+          "type": "extended-written",
+          "text": "X-rays are used in hospitals for computed tomography (CT) scans. State one other medical use for X-rays.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Any one from: detecting **bone fractures**, detecting **dental** problems, **treating cancer**"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "g",
+          "type": "extended-written",
+          "text": "State a property of X-rays that makes them suitable for the medical use you gave in the previous part.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Any one from: X-rays **affect photographic film**, X-rays are **absorbed by bone**, X-rays are **transmitted by soft tissue**, X-rays can **kill cancer cells** (answer must link to previous part)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "h",
+          "type": "extended-written",
+          "text": "Table 2 shows the X-ray dose resulting from CT scans of various parts of the body, and the time it would take to get the same dose from background radiation. A student suggests that the X-ray dose and the time it would take to get the same dose from background radiation are directly proportional. Use calculations to test this suggestion and state your conclusion.",
+          "marks": 3,
+          "markScheme": [
+            "1 mark: Correct calculation of ratio for one pair, e.g. $\\frac{9.0}{36} = 0.25$ or $\\frac{0.5}{2} = 0.25$ or $\\frac{4.0}{16} = 0.25$",
+            "1 mark: Correct calculation of ratio for a second pair",
+            "1 mark: Valid **conclusion** based on calculations, e.g. the quantities are **directly proportional** because the ratios are the same"
+          ],
+          "diagrams": [],
+          "tables": [
+            {
+              "caption": "X-ray dose from CT scans and equivalent background radiation time",
+              "headers": [
+                "Part of the body",
+                "X-ray dose in mSv",
+                "Time for same dose from background radiation"
+              ],
+              "rows": [
+                [
+                  "Abdomen",
+                  "9.0",
+                  "3 years (36 months)"
+                ],
+                [
+                  "Sinuses",
+                  "0.5",
+                  "2 months"
+                ],
+                [
+                  "Spine",
+                  "4.0",
+                  "16 months"
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "em-waves22",
+      "topic": "Electromagnetic Waves",
+      "title": "Radio waves and gamma rays: similarities and dangers",
+      "difficulty": "hard",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "Radio waves and gamma rays both transfer energy. Give three other similarities between radio waves and gamma rays.",
+          "marks": 3,
+          "markScheme": [
+            "1 mark: They travel at the **same speed** (in a vacuum / at the speed of light).",
+            "1 mark: They can travel through a **vacuum** (accept: they do not need a medium).",
+            "1 mark: They are **transverse** waves (accept: they are electromagnetic waves)."
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "Both radio waves and gamma rays are used in medicine. Give one medical use of gamma rays.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **(Medical) imaging** (accept PET scan, tracer, gamma camera) or **(medical) treatment** (accept radiotherapy, brachytherapy, gamma knife) or **sterilising** medical equipment"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "Explain why exposure to gamma rays can be harmful but exposure to radio waves is not harmful.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Gamma rays are **ionising** but radio waves are not.",
+            "1 mark: So gamma rays can cause **mutations** in genes/DNA or can increase the risk of **cancer** (accept: damages/kills cells)."
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "d",
+          "type": "extended-written",
+          "text": "Some medical scanners produce radio waves at a specific frequency. Explain how radio waves are produced at a specific frequency.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Radio waves are produced by **oscillations** in electrical circuits (accept: alternating current; accept: oscillating electrons in an aerial).",
+            "1 mark: The radio waves have the **same frequency** as the oscillations (dependent on first mark)."
           ],
           "diagrams": []
         }

@@ -236,6 +236,72 @@
       ]
     },
     {
+      "id": "forces-motion16",
+      "topic": "Forces and Motion",
+      "title": "Distance-time graph for a race",
+      "difficulty": "easy",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "match-up",
+          "text": "Figure 1 shows a distance-time graph for an athlete from the moment the race starts. Three parts of the distance-time graph are labelled J, K and L. Match each label to the correct description of the athlete's motion for that part of the graph.",
+          "marks": 3,
+          "leftItems": ["J", "K", "L"],
+          "rightItems": ["not moving", "constant speed", "decreasing speed", "increasing speed"],
+          "correctLinks": [[0, 3], [1, 1], [2, 2]],
+          "markScheme": [
+            "1 mark: J → increasing speed",
+            "1 mark: K → constant speed",
+            "1 mark: L → decreasing speed"
+          ],
+          "diagrams": ["forces-motion-q2-fig1.jpeg"]
+        },
+        {
+          "partLabel": "b",
+          "type": "short-answer",
+          "text": "What distance does the athlete travel after the end of the race before stopping?",
+          "marks": 1,
+          "acceptedAnswers": ["25", "25 m"],
+          "markScheme": [
+            "1 mark: **25** m"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "forces-motion17",
+      "topic": "Forces and Motion",
+      "title": "Distance-time graph for a dog walk",
+      "difficulty": "easy",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "select-and-explain",
+          "text": "Figure 1 shows how the distance from home changes with time during a dog walk. Which part of the graph, A, B, C or D, shows them walking the fastest?",
+          "marks": 2,
+          "options": ["A", "B", "C", "D"],
+          "correctAnswer": 1,
+          "explanationPrompt": "Give a reason for your answer.",
+          "markScheme": [
+            "1 mark: Correct answer: **B**",
+            "1 mark: The gradient/slope is the **steepest** (answers must be comparative)"
+          ],
+          "diagrams": ["forces-motion-q7-fig1.png"]
+        }
+      ]
+    },
+    {
       "id": "forces-motion5",
       "topic": "Forces and Motion",
       "title": "Weight and pressure calculations",
@@ -283,6 +349,31 @@
             "1 mark: Final answer: **40 000 Pa**"
           ],
           "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "forces-motion30",
+      "topic": "Forces and Motion",
+      "title": "Water pressure direction",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "separate",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "single-choice",
+          "text": "There is a force acting on the side of the swimming pool because of the water pressure. Figure 1 shows the side of the swimming pool. Which arrow shows the direction of the force acting on the side of the swimming pool?",
+          "marks": 1,
+          "options": ["A", "B", "C"],
+          "correctAnswer": 1,
+          "markScheme": [
+            "Answer: B – The force due to water pressure acts horizontally outwards (perpendicular to the surface)"
+          ],
+          "diagrams": ["forces-motion-q1-fig1.jpeg"]
         }
       ]
     },
@@ -405,6 +496,33 @@
       ]
     },
     {
+      "id": "forces-motion18",
+      "topic": "Forces and Motion",
+      "title": "Go-kart velocity-time graph",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "select-and-explain",
+          "text": "Figure 1 shows the velocity-time graph for a go-kart during the first 40 seconds of a race. Between which two points did the go-kart have the greatest acceleration?",
+          "marks": 2,
+          "options": ["A–B", "B–C", "C–D"],
+          "correctAnswer": 0,
+          "explanationPrompt": "Give a reason for your answer.",
+          "markScheme": [
+            "1 mark: Correct answer: **A–B**",
+            "1 mark: The gradient/slope is the **steepest** (steeper than the other sections)"
+          ],
+          "diagrams": ["forces-motion-q3-fig1.png"]
+        }
+      ]
+    },
+    {
       "id": "forces-motion8",
       "topic": "Forces and Motion",
       "title": "Force, mass and acceleration",
@@ -474,6 +592,38 @@
       ]
     },
     {
+      "id": "forces-motion19",
+      "topic": "Forces and Motion",
+      "title": "Car velocity-time graph acceleration",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "calculation",
+          "text": "Figure 1 shows the velocity-time graph for a car driven along a straight road. Between A and B the car is accelerating. Calculate the acceleration of the car between A and B. From the graph: at A the velocity is 0 m/s and at B (6 seconds) the velocity is 18 m/s.",
+          "marks": 2,
+          "correctAnswer": 3,
+          "tolerance": 0.01,
+          "equations": [
+            "$a = \\frac{v - u}{t}$",
+            "$v = u + at$",
+            "$F = m \\times a$"
+          ],
+          "correctEquation": 0,
+          "markScheme": [
+            "1 mark: Correct substitution: $a = \\frac{18 - 0}{6}$",
+            "1 mark: Final answer: **3 m/s²**"
+          ],
+          "diagrams": ["forces-motion-q5-fig1.jpeg"]
+        }
+      ]
+    },
+    {
       "id": "forces-motion9",
       "topic": "Forces and Motion",
       "title": "Motorbike forces and acceleration",
@@ -519,6 +669,82 @@
           "correctAnswer": 0,
           "markScheme": [
             "Answer: A – $a = \\frac{\\Delta v}{t}$"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "forces-motion22",
+      "topic": "Forces and Motion",
+      "title": "Motorbike velocity-time graph",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "short-answer",
+          "text": "Figure 1 shows how the velocity of a motorbike changes when it is travelling along a straight road. What was the change in velocity of the motorbike in the first 5 seconds?",
+          "marks": 1,
+          "acceptedAnswers": ["20", "20 m/s"],
+          "markScheme": [
+            "1 mark: **20** (m/s)"
+          ],
+          "diagrams": ["forces-motion-q9-fig1.png"]
+        },
+        {
+          "partLabel": "b",
+          "type": "calculation",
+          "text": "Calculate the acceleration of the motorbike during the first 5 seconds. The change in velocity is 20 m/s over 5 seconds.",
+          "marks": 3,
+          "correctAnswer": 4,
+          "tolerance": 0.01,
+          "equations": [
+            "$a = \\frac{\\Delta v}{t}$",
+            "$v = u + at$",
+            "$F = m \\times a$"
+          ],
+          "correctEquation": 0,
+          "markScheme": [
+            "1 mark: Correct substitution: $a = \\frac{20}{5}$",
+            "1 mark: Final answer: **4** (m/s²)",
+            "1 mark: Correct unit: **m/s²**"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "forces-motion23",
+      "topic": "Forces and Motion",
+      "title": "Athlete acceleration from rest",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "calculation",
+          "text": "An athlete is at the start of a race along a straight track. In the first 2 seconds, the athlete accelerates constantly and reaches a speed of 9 m/s. Calculate the acceleration of the athlete.",
+          "marks": 2,
+          "correctAnswer": 4.5,
+          "tolerance": 0.01,
+          "equations": [
+            "$a = \\frac{v - u}{t}$",
+            "$v = u + at$",
+            "$F = m \\times a$"
+          ],
+          "correctEquation": 0,
+          "markScheme": [
+            "1 mark: Correct substitution: $a = \\frac{9}{2}$",
+            "1 mark: Final answer: **4.5 m/s²**"
           ],
           "diagrams": []
         }
@@ -641,6 +867,287 @@
       ]
     },
     {
+      "id": "forces-motion21",
+      "topic": "Forces and Motion",
+      "title": "Cyclist velocity graph and forces",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "short-answer",
+          "text": "Figure 1 shows how the velocity of a cyclist changes with time. Complete the following sentence: The velocity includes both the speed and the __________ of the cyclist.",
+          "marks": 1,
+          "acceptedAnswers": ["direction"],
+          "markScheme": [
+            "1 mark: **direction**"
+          ],
+          "diagrams": ["forces-motion-q8-fig1.png"]
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "Why has the data for the cyclist been shown as a line graph instead of a bar chart?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Velocity and time are both **continuous** variables (not categoric)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "select-and-explain",
+          "text": "The diagrams show the horizontal forces acting on the cyclist at three different speeds. The length of an arrow represents the size of the force. Which one of the diagrams, A, B or C, represents the forces acting when the cyclist is travelling at a constant 9 m/s?",
+          "marks": 3,
+          "options": ["A", "B", "C"],
+          "correctAnswer": 2,
+          "explanationPrompt": "Explain the reason for your choice.",
+          "markScheme": [
+            "1 mark: Correct answer: **C**",
+            "1 mark: The velocity is not changing / speed is **constant** (accept not accelerating / not decelerating)",
+            "1 mark: The forces must be **balanced** / equal (or the resultant force is **zero**)"
+          ],
+          "diagrams": ["forces-motion-q8-fig2.png", "forces-motion-q8-fig3.png", "forces-motion-q8-fig4.png"]
+        }
+      ]
+    },
+    {
+      "id": "forces-motion24",
+      "topic": "Forces and Motion",
+      "title": "Running shoes and cushioning",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "select-and-explain",
+          "text": "Figure 1 shows the maximum impact force for three different makes of running shoe (A, B and C) used on three different types of surface. Which one of the three makes of running shoe, A, B or C, has the best cushioning system?",
+          "marks": 3,
+          "options": ["A", "B", "C"],
+          "correctAnswer": 1,
+          "explanationPrompt": "Explain the reason for your answer.",
+          "markScheme": [
+            "1 mark: Correct answer: **B**",
+            "1 mark: It has the **smallest** (impact) force",
+            "1 mark: On **all** / every / any surfaces"
+          ],
+          "diagrams": ["forces-motion-q10-fig1.png"]
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "The data needed to draw the bar chart was obtained using a robotic athlete fitted with electronic sensors. Why is this data likely to be more reliable than data obtained using human athletes?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: The conditions can be **repeated** exactly (or difficult to measure forces with human athletes, or human athletes may have different weights/speeds)"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "forces-motion25",
+      "topic": "Forces and Motion",
+      "title": "Trolley acceleration investigation",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "Two students investigated how the acceleration of a trolley depends on the force applied. Student A hypothesised: 'The acceleration of the trolley is directly proportional to the force applied.' Predict what would happen to the acceleration of the trolley if the force applied to the trolley is doubled.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: The acceleration would **double**"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "Student B hypothesised: 'Changing the force applied to the trolley will change the acceleration of the trolley.' Why is it difficult to make a valid prediction using the hypothesis of student B?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: The hypothesis does not say **how** increasing/decreasing the force increases/decreases the acceleration (it does not specify the relationship)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "Figure 1 shows some of the equipment used by the students (a trolley on a sloping runway). Write a list of any other equipment the students will need to complete the investigation.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Appropriate equipment to apply and measure force (e.g. **newton meter** or slotted masses + string + pulley)",
+            "1 mark: Appropriate equipment to measure change in velocity and time (e.g. **ticker timer** + tape or **light gates** + datalogger)"
+          ],
+          "diagrams": ["forces-motion-q11-fig1.jpeg"]
+        },
+        {
+          "partLabel": "d",
+          "type": "single-choice",
+          "text": "Why should the students use a sloping runway?",
+          "marks": 1,
+          "options": [
+            "To reduce the effect of friction on the trolley.",
+            "To decrease the acceleration of the trolley.",
+            "To stop the trolley rolling back up the runway."
+          ],
+          "correctAnswer": 0,
+          "markScheme": [
+            "Answer: A – To reduce the effect of friction on the trolley"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "e",
+          "type": "extended-written-levels",
+          "text": "Describe a method the students could have used for their investigation.",
+          "marks": 6,
+          "markScheme": [
+            "1 mark: Describe a method by which the trolley is to be **accelerated** (e.g. using hanging masses on a string over a pulley)",
+            "1 mark: Describe how the accelerating **force is varied** to give a suitable range of results",
+            "1 mark: Describe how the accelerating force is **measured**",
+            "1 mark: Use suitable apparatus to measure the change in **velocity** of the trolley over a given distance or time",
+            "1 mark: Describe what **data** is to be collected in order to calculate acceleration",
+            "1 mark: Describe how the data required is to be **measured**",
+            "1 mark: Include an appropriate number of **repeat** readings",
+            "1 mark: Describe an appropriate range of forces and a sensible number of **data points**"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "f",
+          "type": "extended-written",
+          "text": "The students used the same trolley throughout the investigation. Suggest why.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: So that the **mass** is constant (a control variable)",
+            "1 mark: As changing mass would change the acceleration produced by a given force (or so there is only one **independent variable**)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "g",
+          "type": "extended-written",
+          "text": "Figure 2 shows the students' results plotted on a graph of acceleration against force. Explain why hypothesis A ('acceleration is directly proportional to force') gives a better explanation of the results.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: The results give a **straight line** that passes through the **origin**",
+            "1 mark: Showing **direct proportionality** (between acceleration and force)"
+          ],
+          "diagrams": ["forces-motion-q11-fig2.jpeg"]
+        }
+      ]
+    },
+    {
+      "id": "forces-motion27",
+      "topic": "Forces and Motion",
+      "title": "Bus distance-time graph",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "short-answer",
+          "text": "Figure 1 shows the distance-time graph for part of a bus journey. How far has the bus travelled in the first 20 seconds?",
+          "marks": 1,
+          "acceptedAnswers": ["100", "100 m"],
+          "markScheme": [
+            "1 mark: **100** (m)"
+          ],
+          "diagrams": ["forces-motion-q14-fig1.png"]
+        },
+        {
+          "partLabel": "b",
+          "type": "short-answer",
+          "text": "Describe the motion of the bus between 20 seconds and 30 seconds.",
+          "marks": 1,
+          "acceptedAnswers": ["stationary", "stopped", "not moving", "at rest"],
+          "markScheme": [
+            "1 mark: **Stationary** (or stopped / not moving)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "single-choice",
+          "text": "Describe the motion of the bus between 30 seconds and 60 seconds.",
+          "marks": 1,
+          "options": [
+            "Accelerating",
+            "Reversing",
+            "Travelling at constant speed"
+          ],
+          "correctAnswer": 0,
+          "markScheme": [
+            "Answer: A – The bus is accelerating (the gradient of the distance-time graph is increasing)"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "forces-motion20",
+      "topic": "Forces and Motion",
+      "title": "Waves on a trolley cord",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "short-answer",
+          "text": "A trolley is attached to two identical springs. When the trolley is pushed and released, a wave travels along an elastic cord fixed to the trolley. What type of wave travels along the cord?",
+          "marks": 1,
+          "acceptedAnswers": ["transverse"],
+          "markScheme": [
+            "1 mark: **Transverse**"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "Give the reason why this type of wave is produced along the cord.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: The oscillation/vibration is **perpendicular** to the direction of energy transfer / wave travel"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "Suggest one change that could be made to the apparatus to produce a wave with a lower frequency.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Use springs with a **smaller spring constant** (weaker springs) or use a trolley with **greater mass**"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
       "id": "forces-motion12",
       "topic": "Forces and Motion",
       "title": "Weight, work and braking force",
@@ -672,6 +1179,17 @@
         },
         {
           "partLabel": "b",
+          "type": "short-answer",
+          "text": "A bus is moving and has 500 000 J of kinetic energy. The brakes are applied and the bus stops. How much work is needed to stop the bus?",
+          "marks": 1,
+          "acceptedAnswers": ["500000", "500 000", "500000 J", "500 000 J"],
+          "markScheme": [
+            "1 mark: **500 000** (J)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
           "type": "calculation",
           "text": "A bus has 500 000 J of kinetic energy and stops in 25 m. Calculate the braking force.",
           "marks": 2,
@@ -690,7 +1208,7 @@
           "diagrams": []
         },
         {
-          "partLabel": "c",
+          "partLabel": "d",
           "type": "extended-written",
           "text": "What happens to the kinetic energy of the bus as it is braking?",
           "marks": 2,
@@ -716,18 +1234,29 @@
         {
           "partLabel": "a",
           "type": "extended-written",
-          "text": "A ball is dropped, hits the ground and bounces. A velocity-time graph shows: section AB where the ball falls with increasing velocity, then after the bounce section CD where the ball moves upward. Describe the motion of the ball between A and B.",
+          "text": "A ball is dropped, hits the ground and bounces. Figure 1 shows the velocity-time graph for the ball from when the ball is dropped until when the ball reaches the top of its first bounce. Air resistance has been ignored. Describe the motion of the ball between points A and B on the graph.",
           "marks": 2,
           "markScheme": [
             "1 mark: The velocity/speed is **increasing**",
             "1 mark: The acceleration is **uniform** / constant / steady"
           ],
-          "diagrams": []
+          "diagrams": ["forces-motion-q6-fig1.jpeg"]
         },
         {
           "partLabel": "b",
+          "type": "short-answer",
+          "text": "What direction is the ball moving between points C and D on the graph?",
+          "marks": 1,
+          "acceptedAnswers": ["up", "upwards", "upward", "up(wards)"],
+          "markScheme": [
+            "1 mark: **Up** / upwards"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
           "type": "extended-written",
-          "text": "When the ball hits the ground, energy is transferred. The velocity-time graph shows the velocity just after the bounce is less than just before. Explain how this shows energy transfer from ball to Earth.",
+          "text": "When the ball hits the ground, energy is transferred from the ball to the Earth. Explain how the data in the graph shows this energy transfer.",
           "marks": 4,
           "markScheme": [
             "1 mark: Velocity just after bounce is **less than** velocity just before bounce",
@@ -752,8 +1281,30 @@
       "parts": [
         {
           "partLabel": "a",
+          "type": "short-answer",
+          "text": "A car driver sees a dog on the road ahead and has to make an emergency stop. Figure 1 shows how the speed of the car changes with time after the driver first sees the dog. Which part of the graph represents the 'reaction time' or 'thinking time' of the driver?",
+          "marks": 1,
+          "acceptedAnswers": ["AB", "A-B", "A to B", "A–B"],
+          "markScheme": [
+            "1 mark: **AB**"
+          ],
+          "diagrams": ["forces-motion-q15-fig1.png"]
+        },
+        {
+          "partLabel": "b",
+          "type": "short-answer",
+          "text": "What is the thinking time of the driver?",
+          "marks": 1,
+          "acceptedAnswers": ["0.7", "0.7 s", "0.7 seconds"],
+          "markScheme": [
+            "1 mark: **0.7** seconds"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
           "type": "calculation",
-          "text": "A car driver sees a dog. The thinking time is 0.7 s and the car travels at 24 m/s. Calculate the thinking distance.",
+          "text": "The thinking time is 0.7 s and the car travels at 24 m/s. Calculate the thinking distance.",
           "marks": 2,
           "correctAnswer": 16.8,
           "tolerance": 0.02,
@@ -770,7 +1321,7 @@
           "diagrams": []
         },
         {
-          "partLabel": "b",
+          "partLabel": "d",
           "type": "calculation",
           "text": "The car decelerates from 24 m/s to 0 in 4 s after braking. Calculate the acceleration.",
           "marks": 2,
@@ -789,7 +1340,26 @@
           "diagrams": []
         },
         {
-          "partLabel": "c",
+          "partLabel": "e",
+          "type": "calculation",
+          "text": "Calculate the distance travelled by the car during braking. The car decelerates from 24 m/s to 0 m/s over 4 seconds.",
+          "marks": 2,
+          "correctAnswer": 48,
+          "tolerance": 0.01,
+          "equations": [
+            "$d = \\frac{v + u}{2} \\times t$",
+            "$d = v \\times t$",
+            "$v^2 = u^2 + 2as$"
+          ],
+          "correctEquation": 0,
+          "markScheme": [
+            "1 mark: Correct substitution: $d = \\frac{24 + 0}{2} \\times 4$ (or area under graph = $\\frac{1}{2} \\times 24 \\times 4$)",
+            "1 mark: Final answer: **48 m**"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "f",
           "type": "calculation",
           "text": "The car has mass 800 kg and decelerates at 6 m/s². Calculate the braking force.",
           "marks": 2,
@@ -804,6 +1374,62 @@
           "markScheme": [
             "1 mark: Correct substitution: $F = 800 \\times 6$",
             "1 mark: Final answer: **4800 N**"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "forces-motion26",
+      "topic": "Forces and Motion",
+      "title": "Terminal velocity and parachutes",
+      "difficulty": "hard",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "separate",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written-levels",
+          "text": "Figure 1 shows the forces acting on a parachutist in free fall. Figure 2 shows how the vertical velocity of the parachutist changes from the moment the parachutist jumps from the aircraft until landing on the ground. Using the idea of forces, explain why the parachutist reaches a terminal velocity and why opening the parachute reduces the terminal velocity.",
+          "marks": 6,
+          "markScheme": [
+            "1 mark: On leaving the plane the only force acting is **weight** (downwards)",
+            "1 mark: As the parachutist falls, **air resistance** acts upwards",
+            "1 mark: Weight is greater than air resistance, so the **resultant force** is downwards",
+            "1 mark: As velocity/speed increases so does **air resistance**",
+            "1 mark: Terminal velocity is reached when air resistance equals **weight** (forces are balanced)",
+            "1 mark: Opening the parachute increases **surface area**",
+            "1 mark: This increases air resistance so it is **greater than** weight",
+            "1 mark: The resultant force acts **upwards** / opposite to motion, so the parachutist decelerates",
+            "1 mark: The lower velocity means reduced air resistance until forces **balance** again at a lower terminal velocity"
+          ],
+          "diagrams": ["forces-motion-q12-fig1.png", "forces-motion-q12-fig2.png"]
+        },
+        {
+          "partLabel": "b",
+          "type": "short-answer",
+          "text": "A student tested model parachutes A, B and C (different sizes, made from one large plastic bag). The student dropped each parachute from the same height and timed how long each took to fall. The height was a control variable. Name one other control variable in this experiment.",
+          "marks": 1,
+          "acceptedAnswers": ["mass", "mass of the modelling clay", "mass of clay", "material", "material of parachute", "number of strings", "length of strings"],
+          "markScheme": [
+            "1 mark: **Mass** of the modelling clay (or material parachute is made from, or number/length of strings)"
+          ],
+          "diagrams": ["forces-motion-q12-fig3.png"]
+        },
+        {
+          "partLabel": "c",
+          "type": "select-and-explain",
+          "text": "The student's hypothesis is: 'The larger the area of a parachute, the slower a parachutist falls.' Use the hypothesis to predict which parachute, A, B or C, will hit the ground first.",
+          "marks": 2,
+          "options": ["A", "B", "C"],
+          "correctAnswer": 2,
+          "explanationPrompt": "Give a reason for your answer.",
+          "markScheme": [
+            "1 mark: Correct answer: **C**",
+            "1 mark: C has the **smallest** area so falls **fastest** (taking the least time)"
           ],
           "diagrams": []
         }

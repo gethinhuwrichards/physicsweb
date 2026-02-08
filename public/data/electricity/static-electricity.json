@@ -45,6 +45,20 @@
         },
         {
           "partLabel": "c",
+          "type": "single-choice",
+          "text": "Which of the following diagrams shows the electric field pattern around the negatively charged metal dome?",
+          "marks": 1,
+          "options": [
+            {"image": "static-elec-q1-opt-a.jpeg"},
+            {"image": "static-elec-q1-opt-b.jpeg"},
+            {"image": "static-elec-q1-opt-c.jpeg"}
+          ],
+          "correctAnswer": 0,
+          "markScheme": ["1 mark: Answer: A — Field lines pointing inwards towards the negatively charged dome"],
+          "diagrams": []
+        },
+        {
+          "partLabel": "d",
           "type": "gap-fill",
           "text": "Figure 3 shows the negatively charged metal dome and an earthed conductor. The air between the dome and the earthed conductor is an insulator. Complete the sentence. Choose the answer from the box.",
           "marks": 1,
@@ -59,7 +73,7 @@
           "diagrams": ["static-elec-q1-fig3.jpeg"]
         },
         {
-          "partLabel": "d",
+          "partLabel": "e",
           "type": "gap-fill",
           "text": "The earthed conductor is moved closer to the metal dome. A spark jumps from the dome to the earthed conductor. Complete the sentence. Choose the answer from the box.",
           "marks": 1,
@@ -74,7 +88,7 @@
           "diagrams": []
         },
         {
-          "partLabel": "e",
+          "partLabel": "f",
           "type": "single-choice",
           "text": "Which particles are transferred when the spark jumps from the negatively charged metal dome to the earthed conductor?",
           "marks": 1,
@@ -84,7 +98,7 @@
           "diagrams": []
         },
         {
-          "partLabel": "f",
+          "partLabel": "g",
           "type": "calculation",
           "text": "The potential difference between the metal dome and earth is $300\\,000 \\, \\text{V}$. When the spark jumps there is a charge flow of $0.000\\,002 \\, \\text{C}$. Calculate the energy transferred by the spark.",
           "marks": 2,
@@ -266,10 +280,9 @@
         },
         {
           "partLabel": "c",
-          "type": "short-answer",
+          "type": "extended-written",
           "text": "What happens to the structure of an atom to change the atom into an ion?",
           "marks": 1,
-          "acceptedAnswers": ["loses or gains electrons", "gains or loses electrons", "loses or gains one or more electrons", "gains or loses one or more electrons", "it loses or gains electrons"],
           "markScheme": ["1 mark: The atom **loses** or **gains** one or more **electrons**"],
           "diagrams": []
         },
@@ -357,7 +370,7 @@
           "tables": [
             {
               "caption": "Charge on driver for different clothing materials",
-              "headers": ["Material", "Humidity", "Temperature in \u00b0C", "Charge on the driver in millicoulombs"],
+              "headers": ["Material", "Humidity", "Temperature in °C", "Charge on the driver in millicoulombs"],
               "rows": [
                 ["Nylon", "48%", "18", "3.0 to 3.2"],
                 ["Wool", "48%", "18", "2.4 to 2.5"],
@@ -404,14 +417,14 @@
         {
           "partLabel": "b",
           "type": "extended-written",
-          "text": "The negatively charged student touches a metal tap and receives an electric shock. Explain why.",
+          "text": "Figure 2 shows the negatively charged dome. The negatively charged student touches a metal tap and receives an electric shock. Explain why.",
           "marks": 3,
           "markScheme": [
             "1 mark: There is a **potential difference** between the student and the tap",
             "1 mark: Which causes **electrons** / charges to transfer from the student to the tap",
             "1 mark: Which **earths** the charge (accept: the tap is **earthed**)"
           ],
-          "diagrams": []
+          "diagrams": ["static-elec-q7-fig2.jpeg"]
         },
         {
           "partLabel": "c",
@@ -423,6 +436,41 @@
             "1 mark: Lower / no build-up of **charge** on the student (accept: smaller / no **potential difference** between student and tap / earth)"
           ],
           "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "static-elec9",
+      "topic": "Static Electricity",
+      "title": "Van de Graaff generator and positive charging",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "separate",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "Figure 1 shows a Van de Graaff generator that is used to investigate static electricity. Before it is switched on, the metal dome has no net charge. After it is switched on, the metal dome becomes positively charged. Explain how an uncharged object may become positively charged.",
+          "marks": 3,
+          "markScheme": [
+            "1 mark: The object was originally **negatively charged** (i.e. had equal positive and negative charges)",
+            "1 mark: **Electrons** are transferred",
+            "1 mark: **From** the (neutral) object (leaving it with a net positive charge)"
+          ],
+          "diagrams": ["static-elec-q9-fig1.png"]
+        },
+        {
+          "partLabel": "b",
+          "type": "single-choice",
+          "text": "Another positively charged object is placed in the electric field. Figure 2 shows the positively charged metal dome and four positions P, Q, R and S at different distances from the dome.\n\nIn which position would the object experience the greatest force?",
+          "marks": 1,
+          "options": ["P", "Q", "R", "S"],
+          "correctAnswer": 1,
+          "markScheme": ["1 mark: Answer: B — Q (closest to the dome, so strongest electric field)"],
+          "diagrams": ["static-elec-q9-fig3.png"]
         }
       ]
     },
@@ -507,31 +555,6 @@
           "correctAnswer": 2,
           "markScheme": ["1 mark: Answer: C — Decreased electrical resistance of air"],
           "diagrams": []
-        }
-      ]
-    },
-    {
-      "id": "static-elec9",
-      "topic": "Static Electricity",
-      "title": "Van de Graaff generator and positive charging",
-      "difficulty": "medium",
-      "source": "pastpaper",
-      "examBoard": "AQA",
-      "tier": "separate",
-      "subject": "physics",
-      "level": "GCSE",
-      "parts": [
-        {
-          "partLabel": "a",
-          "type": "extended-written",
-          "text": "Figure 1 shows a Van de Graaff generator that is used to investigate static electricity. Before it is switched on, the metal dome has no net charge. After it is switched on, the metal dome becomes positively charged. Explain how an uncharged object may become positively charged.",
-          "marks": 3,
-          "markScheme": [
-            "1 mark: The object was originally **negatively charged** (i.e. had equal positive and negative charges)",
-            "1 mark: **Electrons** are transferred",
-            "1 mark: **From** the (neutral) object (leaving it with a net positive charge)"
-          ],
-          "diagrams": ["static-elec-q9-fig1.png"]
         }
       ]
     }

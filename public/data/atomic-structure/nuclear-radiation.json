@@ -323,15 +323,89 @@
           "tables": [
             {
               "caption": "Half-lives of carbon isotopes",
-              "headers": ["Isotope", "Half-life (seconds)"],
+              "headers": [
+                "Isotope",
+                "Half-life (seconds)"
+              ],
               "rows": [
-                ["Carbon-15", "2.45"],
-                ["Carbon-16", "0.75"],
-                ["Carbon-17", "0.19"],
-                ["Carbon-18", "0.09"]
+                [
+                  "Carbon-15",
+                  "2.45"
+                ],
+                [
+                  "Carbon-16",
+                  "0.75"
+                ],
+                [
+                  "Carbon-17",
+                  "0.19"
+                ],
+                [
+                  "Carbon-18",
+                  "0.09"
+                ]
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "nuc-rad18",
+      "topic": "Nuclear Radiation",
+      "title": "Radiation penetration table",
+      "difficulty": "easy",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "separate",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "tick-box-table",
+          "text": "Alpha, beta and gamma radiation penetrate different materials. The experiment takes place in a vacuum. Three different materials are used: a sheet of paper, a 0.5 cm thick sheet of aluminium, and a 10 cm block of lead. For each type of radiation, is most of the radiation stopped by the sheet of paper?",
+          "marks": 3,
+          "columnHeaders": [
+            "Yes",
+            "No"
+          ],
+          "rows": [
+            {
+              "label": "Alpha",
+              "correctColumn": 0
+            },
+            {
+              "label": "Beta",
+              "correctColumn": 1
+            },
+            {
+              "label": "Gamma",
+              "correctColumn": 1
+            }
+          ],
+          "markScheme": [
+            "1 mark: Alpha — Yes (stopped by paper)",
+            "1 mark: Beta — No (passes through paper)",
+            "1 mark: Gamma — No (passes through paper)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "b",
+          "type": "single-choice",
+          "text": "A krypton (Kr) nucleus decays into a rubidium (Rb) nucleus by emitting a beta particle. An alpha particle is the same as a helium nucleus. How does this show that the decay emits a beta particle rather than an alpha particle?",
+          "marks": 1,
+          "options": [
+            "The mass number stays the same",
+            "The mass number decreases by 4",
+            "The atomic number decreases by 2"
+          ],
+          "correctAnswer": 0,
+          "markScheme": [
+            "Answer: A - In beta decay the mass number stays the same; in alpha decay it would decrease by 4"
+          ],
+          "diagrams": []
         }
       ]
     },
@@ -365,13 +439,43 @@
           "tables": [
             {
               "caption": "Count rates from radioactive rocks with different absorbers",
-              "headers": ["", "No material", "Paper", "Aluminium"],
+              "headers": [
+                "",
+                "No material",
+                "Paper",
+                "Aluminium"
+              ],
               "rows": [
-                ["No rock", "21", "20", "22"],
-                ["Rock A", "450", "448", "18"],
-                ["Rock B", "385", "387", "356"],
-                ["Rock C", "870", "21", "20"],
-                ["Rock D", "620", "473", "214"]
+                [
+                  "No rock",
+                  "21",
+                  "20",
+                  "22"
+                ],
+                [
+                  "Rock A",
+                  "450",
+                  "448",
+                  "18"
+                ],
+                [
+                  "Rock B",
+                  "385",
+                  "387",
+                  "356"
+                ],
+                [
+                  "Rock C",
+                  "870",
+                  "21",
+                  "20"
+                ],
+                [
+                  "Rock D",
+                  "620",
+                  "473",
+                  "214"
+                ]
               ]
             }
           ]
@@ -545,11 +649,27 @@
           "tables": [
             {
               "caption": "Risk of lung cancer at different radon exposure levels",
-              "headers": ["Exposure to radon", "Risk of lung cancer (non-smoker)", "Risk of lung cancer (smoker)"],
+              "headers": [
+                "Exposure to radon",
+                "Risk of lung cancer (non-smoker)",
+                "Risk of lung cancer (smoker)"
+              ],
               "rows": [
-                ["No exposure", "0.4%", "10%"],
-                ["Moderate exposure", "1.0%", "14%"],
-                ["Very high exposure", "1.5%", "32%"]
+                [
+                  "No exposure",
+                  "0.4%",
+                  "10%"
+                ],
+                [
+                  "Moderate exposure",
+                  "1.0%",
+                  "14%"
+                ],
+                [
+                  "Very high exposure",
+                  "1.5%",
+                  "32%"
+                ]
               ]
             }
           ]
@@ -734,6 +854,220 @@
           "marks": 1,
           "markScheme": [
             "1 mark: Concrete **absorbs** the gamma radiation"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "nuc-rad19",
+      "topic": "Nuclear Radiation",
+      "title": "Electric field and radiation types",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "separate",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "select-and-explain",
+          "text": "A teacher passed radiation from a source through an electric field. Figure 1 shows the path the radiation took through the electric field. The radiation curved towards the positive plate. What type of radiation was being emitted?",
+          "marks": 3,
+          "options": [
+            "Alpha",
+            "Beta",
+            "Gamma",
+            "Neutron"
+          ],
+          "correctAnswer": 1,
+          "explanationPrompt": "Explain the reason for your answer.",
+          "markScheme": [
+            "1 mark: Correct answer: **Beta**",
+            "1 mark: Beta is **negatively** charged",
+            "1 mark: So is **attracted** to the positive plate (or repelled by the negative plate)"
+          ],
+          "diagrams": [
+            "nuclear-rad-q2-fig1.jpeg"
+          ]
+        },
+        {
+          "partLabel": "b",
+          "type": "single-choice",
+          "text": "Which one of the following questions cannot be answered by scientific study?",
+          "marks": 1,
+          "options": [
+            "Where does background radiation come from?",
+            "What is meant by the half-life of a radioactive source?",
+            "Should radioactive waste be dumped in the oceans?"
+          ],
+          "correctAnswer": 2,
+          "markScheme": [
+            "Answer: C - Whether radioactive waste should be dumped is an ethical/social question, not a scientific one"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "nuc-rad20",
+      "topic": "Nuclear Radiation",
+      "title": "Count rate calculation",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "separate",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "calculation",
+          "text": "A teacher used a Geiger-Muller tube and counter to measure the number of counts in 60 seconds for a radioactive rock. The counter recorded 819 counts in 60 seconds. The background radiation count rate was 0.30 counts per second. Calculate the corrected count rate for the rock in counts per second.",
+          "marks": 3,
+          "correctAnswer": 13.35,
+          "tolerance": 0.02,
+          "equations": [
+            "$\\text{corrected count rate} = \\frac{\\text{total counts}}{\\text{time}} - \\text{background count rate}$",
+            "$\\text{activity} = \\frac{\\text{count}}{\\text{time}}$",
+            "$A = Z + N$"
+          ],
+          "correctEquation": 0,
+          "markScheme": [
+            "1 mark: Correct calculation of count rate: $\\frac{819}{60} = 13.65$ counts per second",
+            "1 mark: Correct subtraction of background: $13.65 - 0.30$",
+            "1 mark: Final answer: **13.35** counts per second"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "Bananas are a source of background radiation. Some people think that the unit of radiation dose should be changed from sieverts to Banana Equivalent Dose. Suggest one reason why the Banana Equivalent Dose may help the public be more aware of radiation risks.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: People can **compare** a radiation dose to something familiar (eating **bananas**), making it easier to understand the risk"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "nuc-rad21",
+      "topic": "Nuclear Radiation",
+      "title": "Irradiation and contamination",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "separate",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "match-up",
+          "text": "Match each term to the correct example.",
+          "marks": 2,
+          "leftItems": [
+            "Radioactive contamination",
+            "Nuclear irradiation"
+          ],
+          "rightItems": [
+            "Exposure to a beam of gamma rays",
+            "Exposure to ultraviolet radiation from the Sun",
+            "Accidental transfer of plutonium onto a human body",
+            "Using a mobile phone"
+          ],
+          "correctLinks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "markScheme": [
+            "1 mark: Radioactive contamination --> Accidental transfer of plutonium onto a human body",
+            "1 mark: Nuclear irradiation --> Exposure to a beam of gamma rays"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "b",
+          "type": "single-choice",
+          "text": "A man-made source of background radiation is radiotherapy. Which of the following is also a man-made source of background radiation?",
+          "marks": 1,
+          "options": [
+            "Cosmic rays",
+            "Radiotherapy",
+            "Rocks",
+            "Stars"
+          ],
+          "correctAnswer": 1,
+          "markScheme": [
+            "Answer: B - Radiotherapy is a man-made source of background radiation"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "nuc-rad22",
+      "topic": "Nuclear Radiation",
+      "title": "Plutonium-239 decay and half-life",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "separate",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "single-choice",
+          "text": "The nuclear equation below represents the decay of plutonium-239. Figure 1 shows the equation. How does the nuclear equation show that alpha radiation is emitted when plutonium-239 decays?",
+          "marks": 1,
+          "options": [
+            "An alpha particle contains 92 protons",
+            "An alpha particle has a mass number of 235",
+            "An alpha particle is the same as a helium nucleus"
+          ],
+          "correctAnswer": 2,
+          "markScheme": [
+            "Answer: C - An alpha particle is the same as a helium nucleus (2 protons, 2 neutrons)"
+          ],
+          "diagrams": [
+            "nuclear-rad-q5-fig1.jpeg"
+          ]
+        },
+        {
+          "partLabel": "b",
+          "type": "short-answer",
+          "text": "Figure 2 shows a graph of how the activity of a sample of plutonium-239 varies with time. How much time will it take for the activity of the sample to fall to half of its initial activity?",
+          "marks": 1,
+          "acceptedAnswers": [
+            "24000 years",
+            "24 000 years",
+            "24000",
+            "24 000"
+          ],
+          "markScheme": [
+            "1 mark: **24 000** years (accept answers between 24 000 and 24 500 years)"
+          ],
+          "diagrams": [
+            "nuclear-rad-q5-fig2.jpeg"
+          ]
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "The radioactive waste from a nuclear power station is buried underground. People are warned to stay away from places where radioactive waste is buried. Suggest one risk of going near the place where radioactive waste is buried.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **Irradiation** / exposure to radiation that could cause **cancer** / genetic damage / mutations / radiation sickness"
           ],
           "diagrams": []
         }
@@ -988,6 +1322,201 @@
             "1 mark: So gamma is not **deflected** / affected by a magnetic field"
           ],
           "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "nuc-rad23",
+      "topic": "Nuclear Radiation",
+      "title": "LNT model and radiation hormesis",
+      "difficulty": "hard",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "separate",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "A study compared the risk of getting lung cancer for cigarette smokers and non-smokers at different levels of radon exposure. People that have had no exposure to radon gas were included in the study. Why were they included?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: To act as a **control** / to compare the effect of exposure with **no exposure**"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "The 'linear no-threshold' (LNT) model and the 'radiation hormesis' model suggest different links between the risk of developing cancer and exposure to low levels of radiation. Figure 1 shows graphs for both models. Describe how the link between the risk of developing cancer and exposure to low levels of radiation suggested by each model is different.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: LNT model: risk **increases** (in proportion) with increasing radiation dose",
+            "1 mark: Radiation hormesis: **low** radiation doses **reduce** the risk of cancer"
+          ],
+          "diagrams": [
+            "nuclear-rad-q8-fig1.png"
+          ]
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "Scientists have conducted experiments in which mice have been exposed to different levels of radiation. Discuss whether it is ethical to use animals in scientific experiments.",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Any valid point against, e.g. animals have no **choice** and so should not be used / should not make animals **suffer**",
+            "1 mark: Any valid point for, e.g. better to experiment on **animals** than humans / experiments may lead to health **improvements** or cures for humans"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "nuc-rad24",
+      "topic": "Nuclear Radiation",
+      "title": "Food irradiation safety",
+      "difficulty": "hard",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "separate",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "extended-written",
+          "text": "A conveyor belt is used to move food past a radioactive source that emits gamma radiation. Suggest one way that the dose of radiation received by the food could be increased, other than by changing the radioactive source.",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: **Slow down** the conveyor belt (or move the food closer to the source / food does more than one circuit)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "What evidence could a food scientist produce to show that food treated with radiation is safe to eat?",
+          "marks": 2,
+          "markScheme": [
+            "1 mark: Test the food on humans or animals / feed it to volunteers",
+            "1 mark: Show no measured **ill effects** / monitor their health / compare radiation levels in treated and untreated food"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "A sign is displayed on food treated with radiation. Why is it important for people to know which foods have been treated with radiation?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: So people can make their own **decision** / **choice** about eating or not eating treated food"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "id": "nuc-rad25",
+      "topic": "Nuclear Radiation",
+      "title": "Background count rate and distance",
+      "difficulty": "hard",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "separate",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "short-answer",
+          "text": "A teacher measured count rate at different distances from a radioactive source. At distances of 1.6 m, 1.8 m and 2.0 m, the count rate was 18 counts per minute and the corrected count rate was 0. What is the value of the background count rate?",
+          "marks": 1,
+          "acceptedAnswers": [
+            "18",
+            "18 counts per minute"
+          ],
+          "markScheme": [
+            "1 mark: **18** counts per minute"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "b",
+          "type": "extended-written",
+          "text": "The corrected count rate is the count rate after subtracting the background count rate. What information does the corrected count rate give?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: The count rate due to the **source** alone (without background radiation)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "extended-written",
+          "text": "Table 1 shows the results. At 1.6 m the corrected count rate is 0, but the source is not an alpha emitter. How can you tell from the data that the source is not an alpha emitter?",
+          "marks": 1,
+          "markScheme": [
+            "1 mark: Alpha radiation would not travel as far as 0.4 m (the source was detected at distances up to 1.4 m, which is too far for **alpha** radiation)"
+          ],
+          "diagrams": [],
+          "tables": [
+            {
+              "caption": "Count rate at different distances from a radioactive source",
+              "headers": [
+                "Distance (m)",
+                "Count rate (counts/min)",
+                "Corrected count rate (counts/min)"
+              ],
+              "rows": [
+                [
+                  "0.4",
+                  "143",
+                  "125"
+                ],
+                [
+                  "0.6",
+                  "74",
+                  "56"
+                ],
+                [
+                  "0.8",
+                  "49",
+                  "31"
+                ],
+                [
+                  "1.0",
+                  "38",
+                  "20"
+                ],
+                [
+                  "1.2",
+                  "32",
+                  "14"
+                ],
+                [
+                  "1.4",
+                  "28",
+                  "10"
+                ],
+                [
+                  "1.6",
+                  "18",
+                  "0"
+                ],
+                [
+                  "1.8",
+                  "18",
+                  "0"
+                ],
+                [
+                  "2.0",
+                  "18",
+                  "0"
+                ]
+              ]
+            }
+          ]
         }
       ]
     }

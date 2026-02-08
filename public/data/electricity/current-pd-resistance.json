@@ -33,11 +33,10 @@
         },
         {
           "partLabel": "c",
-          "type": "short-answer",
+          "type": "extended-written",
           "text": "The student used the data obtained to plot the points for a graph of current against potential difference, as shown in the graph.\n\nWhy has the student plotted the points for a line graph and not drawn a bar chart?",
           "marks": 1,
-          "acceptedAnswers": ["the data is continuous", "the variables are continuous", "the results are continuous", "data is continuous", "variables are continuous", "continuous data", "continuous variables"],
-          "markScheme": ["1 mark: The data / results / variables are **continuous** (accept: data is not categoric / discrete)"],
+          "markScheme": ["1 mark: The data / results / variables are **continuous** (accept: data is not **categoric** / discrete)"],
           "diagrams": ["cpdr-q5-fig2.png"]
         },
         {
@@ -47,6 +46,14 @@
           "marks": 1,
           "acceptedAnswers": ["misreading the ammeter", "misread the ammeter", "incorrectly reading the ammeter", "error reading the ammeter", "reading the ammeter wrong", "ammeter misread"],
           "markScheme": ["1 mark: **Misreading the ammeter**"],
+          "diagrams": []
+        },
+        {
+          "partLabel": "e",
+          "type": "extended-written",
+          "text": "Does the data the student obtained support the hypothesis? Give a reason for your answer.",
+          "marks": 1,
+          "markScheme": ["1 mark: **Yes** — the data supports the prediction / the (straight) line passes through the **origin** (accept: a mathematical argument showing proportionality, e.g. when p.d. went from 2 to 4, the current went from 0.3 to 0.6)"],
           "diagrams": []
         }
       ]
@@ -64,8 +71,17 @@
       "parts": [
         {
           "partLabel": "a",
+          "type": "short-answer",
+          "text": "A student investigated how the current in a filament lamp varies with the potential difference across the lamp. Figure 1 shows the circuit used.\n\nWhat is component P?",
+          "marks": 1,
+          "acceptedAnswers": ["switch", "a switch"],
+          "markScheme": ["1 mark: **switch**"],
+          "diagrams": ["cpdr-q1-fig1.jpeg"]
+        },
+        {
+          "partLabel": "b",
           "type": "gap-fill",
-          "text": "A student investigated how the current in a filament lamp varies with the potential difference across the lamp. Figure 1 shows the circuit used.\n\nComplete the sentences. Choose answers from the box.",
+          "text": "Complete the sentences. Choose answers from the box.",
           "marks": 2,
           "segments": [
             "The ammeter in the circuit measures ",
@@ -80,10 +96,10 @@
             "1 mark: current",
             "1 mark: potential difference"
           ],
-          "diagrams": ["cpdr-q1-fig1.jpeg"]
+          "diagrams": []
         },
         {
-          "partLabel": "b",
+          "partLabel": "c",
           "type": "tick-box-table",
           "text": "How will increasing the resistance of the variable resistor affect each of the following quantities?",
           "marks": 3,
@@ -101,7 +117,7 @@
           "diagrams": []
         },
         {
-          "partLabel": "c",
+          "partLabel": "d",
           "type": "calculation",
           "text": "A charge flow of 15 coulombs passed through the filament lamp in a time of 60 seconds. Calculate the current in the lamp.",
           "marks": 2,
@@ -120,7 +136,7 @@
           "diagrams": []
         },
         {
-          "partLabel": "d",
+          "partLabel": "e",
           "type": "calculation",
           "text": "When the current in the filament lamp is 0.12 A, the potential difference across the lamp is 6.0 V. Calculate the resistance of the filament lamp.",
           "marks": 2,
@@ -139,7 +155,7 @@
           "diagrams": []
         },
         {
-          "partLabel": "e",
+          "partLabel": "f",
           "type": "single-choice",
           "text": "Figure 2 shows an ammeter. The ammeter is not connected to a circuit.\n\nWhat type of error does the ammeter display?",
           "marks": 1,
@@ -173,15 +189,48 @@
         {
           "partLabel": "b",
           "type": "single-choice",
-          "text": "A student investigated how the power output of a kettle affected the time taken to boil a fixed volume of water. What type of variable was the time?",
+          "text": "Figure 1 shows the three kettles used in the investigation. A student investigated how the power output of a kettle affected the time taken to boil a fixed volume of water. What type of variable was the time?",
           "marks": 1,
           "options": ["Control", "Dependent", "Independent"],
           "correctAnswer": 1,
           "markScheme": ["1 mark: Answer: B \u2014 Dependent"],
-          "diagrams": []
+          "diagrams": ["cpdr-q3-fig1.jpeg"]
         },
         {
           "partLabel": "c",
+          "type": "select-and-explain",
+          "text": "Which kettle will boil the water in the shortest time?",
+          "marks": 2,
+          "options": ["Kettle A", "Kettle B", "Kettle C"],
+          "correctAnswer": 2,
+          "explanationPrompt": "Give a reason for your answer.",
+          "markScheme": [
+            "1 mark: Correct answer: **Kettle C** (or 2.8 kW)",
+            "1 mark: It has the **highest power** output"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "d",
+          "type": "calculation",
+          "text": "Figure 2 shows how the amount of energy transferred by a kettle varies with time. The power output of the kettle is given by the gradient of the graph. Calculate the power output of the kettle.",
+          "marks": 2,
+          "equations": [
+            "$P = \\frac{\\Delta E}{\\Delta t}$",
+            "$P = I \\times V$",
+            "$E = Q \\times V$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 2200,
+          "tolerance": 0.05,
+          "markScheme": [
+            "1 mark: Values for gradient calculation shown on graph or on answer lines",
+            "1 mark: Correct final answer: **2200 W** (accept an answer that rounds to 2200)"
+          ],
+          "diagrams": ["cpdr-q3-fig2.jpeg"]
+        },
+        {
+          "partLabel": "e",
           "type": "equation-choice",
           "text": "Write down the equation that links charge flow, current and time.",
           "marks": 1,
@@ -196,7 +245,7 @@
           "diagrams": []
         },
         {
-          "partLabel": "d",
+          "partLabel": "f",
           "type": "calculation",
           "text": "Calculate the current through the kettle when 2400 coulombs of charge flows in 250 seconds.",
           "marks": 3,
@@ -213,7 +262,7 @@
             "1 mark: Correct rearrangement: $I = \\frac{2400}{250}$",
             "1 mark: Correct final answer: **9.6 A**"
           ],
-          "diagrams": []
+          "diagrams": ["cpdr-q3-fig2.jpeg"]
         }
       ]
     },
@@ -311,6 +360,28 @@
       "parts": [
         {
           "partLabel": "a",
+          "type": "extended-written",
+          "text": "Figure 1 shows the current-potential difference graph for three wires, A, B and C.\n\nUsing Figure 1, how can you tell that the temperature of each wire is constant?",
+          "marks": 1,
+          "markScheme": ["1 mark: The p.d. is **directly proportional** to the current / the **gradient** is constant / the lines show constant **resistance** (accept: the lines are straight)"],
+          "diagrams": ["cpdr-q7-fig1.png"]
+        },
+        {
+          "partLabel": "b",
+          "type": "select-and-explain",
+          "text": "Which one of the wires, A, B or C, has the greatest resistance?",
+          "marks": 2,
+          "options": ["A", "B", "C"],
+          "correctAnswer": 2,
+          "explanationPrompt": "Give a reason for your answer.",
+          "markScheme": [
+            "1 mark: Correct answer: **C**",
+            "1 mark: For the same p.d., the **current is the smallest** (accept: lowest gradient and the gradient = 1/R)"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
           "type": "short-answer",
           "text": "A student measured the resistance of four wires. Table 1 shows the data.\n\nThe last column of the table should include the unit of resistance. What is the unit of resistance?",
           "tables": [
@@ -331,7 +402,7 @@
           "diagrams": []
         },
         {
-          "partLabel": "b",
+          "partLabel": "d",
           "type": "select-and-explain",
           "text": "The resistance of a wire depends on many factors. Which two wires from J, K, L and M show that the resistance of a wire depends on the length of the wire? Give a reason for your answer.",
           "marks": 2,
@@ -345,7 +416,7 @@
           "diagrams": []
         },
         {
-          "partLabel": "c",
+          "partLabel": "e",
           "type": "extended-written",
           "text": "A student looked at the data in the table and wrote this conclusion: 'The resistance of a wire depends on the type of metal from which the wire is made.' The student could not be certain that her conclusion is true for all types of metal. Suggest what extra data is needed for the student to be more certain that the conclusion is correct.",
           "marks": 1,
@@ -458,6 +529,89 @@
       ]
     },
     {
+      "id": "cpdr12",
+      "topic": "Current, Potential Difference and Resistance",
+      "title": "Series cells, voltmeters and resistors",
+      "difficulty": "medium",
+      "source": "pastpaper",
+      "examBoard": "AQA",
+      "tier": "combined",
+      "subject": "physics",
+      "level": "GCSE",
+      "parts": [
+        {
+          "partLabel": "a",
+          "type": "short-answer",
+          "text": "The lamps in the circuits drawn below are all identical. Each of the cells has a potential difference of 1.5 volts.\n\nWhat is the potential difference across the 3 cells that are joined in series?",
+          "marks": 1,
+          "acceptedAnswers": ["4.5", "4.5 V", "4.5V"],
+          "markScheme": ["1 mark: **4.5** (V)"],
+          "diagrams": ["cpdr-q2-fig1.png"]
+        },
+        {
+          "partLabel": "b",
+          "type": "short-answer",
+          "text": "Each cell has a potential difference of 1.5 V. Three cells are joined in series giving a total of 4.5 V. There are two lamps in the circuit. What will be the reading on the voltmeter labelled V3?",
+          "marks": 1,
+          "acceptedAnswers": ["2.25", "2.25 V", "2.25V"],
+          "markScheme": ["1 mark: **2.25** (V)"],
+          "diagrams": []
+        },
+        {
+          "partLabel": "c",
+          "type": "single-choice",
+          "text": "Which voltmeter, V1, V2 or V3, will give the highest reading?",
+          "marks": 1,
+          "options": ["V1", "V2", "V3"],
+          "correctAnswer": 1,
+          "markScheme": ["1 mark: Answer: B \u2014 V2"],
+          "diagrams": []
+        },
+        {
+          "partLabel": "d",
+          "type": "short-answer",
+          "text": "The diagram below shows a simple circuit with two resistors (10 \u03a9 and 20 \u03a9) connected in series.\n\nCalculate the total resistance of the two resistors in the circuit.",
+          "marks": 1,
+          "acceptedAnswers": ["30", "30 \u03a9", "30\u03a9"],
+          "markScheme": ["1 mark: **30** (\u03a9)"],
+          "diagrams": ["cpdr-q2-fig2.png"]
+        },
+        {
+          "partLabel": "e",
+          "type": "calculation",
+          "text": "The total resistance of the two resistors in the circuit is 20 \u03a9 and a current of 0.4 A flows through the circuit. Calculate the reading on the voltmeter.\n\nUse the equation: potential difference = current \u00d7 resistance",
+          "marks": 2,
+          "equations": [
+            "$V = I \\times R$",
+            "$P = I \\times V$",
+            "$Q = I \\times t$"
+          ],
+          "correctEquation": 0,
+          "correctAnswer": 8,
+          "tolerance": 0.01,
+          "markScheme": [
+            "1 mark: Correct equation selected + correct substitution: $V = 0.4 \\times 20$",
+            "1 mark: Correct final answer: **8 V**"
+          ],
+          "diagrams": []
+        },
+        {
+          "partLabel": "f",
+          "type": "single-choice",
+          "text": "The current through a resistor at constant temperature changes when the potential difference across the resistor changes. Which one of the graphs, X, Y or Z, shows how the current changes?",
+          "marks": 1,
+          "options": [
+            {"image": "cpdr-q2-opt-x.png"},
+            {"image": "cpdr-q2-opt-y.png"},
+            {"image": "cpdr-q2-opt-z.png"}
+          ],
+          "correctAnswer": 1,
+          "markScheme": ["1 mark: Answer: B \u2014 Graph Y (straight line through origin showing directly proportional relationship)"],
+          "diagrams": []
+        }
+      ]
+    },
+    {
       "id": "cpdr7",
       "topic": "Current, Potential Difference and Resistance",
       "title": "Filament bulb and LED comparison",
@@ -470,11 +624,10 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "short-answer",
+          "type": "extended-written",
           "text": "The diagram shows the circuit used to obtain the data needed to plot the current\u2013potential difference graph for a filament bulb.\n\nWhy is the component labelled 'J' included in the circuit?",
           "marks": 1,
-          "acceptedAnswers": ["to obtain a range of pd values", "to change the current", "to change the potential difference", "to vary the current", "to vary the potential difference", "to change the pd", "to vary the pd", "to control the current", "to control the potential difference", "to increase or decrease the current", "to change the voltage", "to vary the voltage", "to control the voltage"],
-          "markScheme": ["1 mark: To obtain a range of **potential difference** values (accept: to change / vary / control the current or potential difference)"],
+          "markScheme": ["1 mark: To obtain a range of **potential difference** values (accept: to change / vary / control the **current** or potential difference)"],
           "diagrams": ["cpdr-q6-fig1.png"]
         },
         {
@@ -560,7 +713,7 @@
         {
           "partLabel": "a",
           "type": "extended-written-levels",
-          "text": "A student investigated how the resistance of a piece of nichrome wire varies with length. The circuit contains a battery, a switch, the nichrome wire, an ammeter in series with the wire, and a voltmeter connected in parallel across the wire.\n\nDescribe how the student would obtain the data needed for the investigation. Your answer should include a risk assessment for one hazard in the investigation.",
+          "text": "Figure 1 shows the circuit used. A student investigated how the resistance of a piece of nichrome wire varies with length. The circuit contains a battery, a switch, the nichrome wire, an ammeter in series with the wire, and a voltmeter connected in parallel across the wire.\n\nDescribe how the student would obtain the data needed for the investigation. Your answer should include a risk assessment for one hazard in the investigation.",
           "marks": 6,
           "markScheme": [
             "1 mark: **Length** of the wire is measured (e.g. using a ruler / metre rule)",
@@ -574,7 +727,7 @@
             "1 mark: Risk: may cause **burns** to the skin",
             "1 mark: Control: use **low currents** / switch off between readings"
           ],
-          "diagrams": []
+          "diagrams": ["cpdr-q8-fig1.jpeg"]
         },
         {
           "partLabel": "b",
