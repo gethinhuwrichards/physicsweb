@@ -224,7 +224,7 @@ export default function SelfMarkingView({
               <span className="review-option-letter">{letter}.</span>
               {renderReviewOptionContent(opt)}
               {isSelected && isCorrect && <span className="review-badge badge-correct">Correct</span>}
-              {isSelected && !isCorrect && <span className="review-badge badge-incorrect">Your answer</span>}
+              {isSelected && !isCorrect && <span className="review-badge badge-incorrect">Wrong</span>}
               {isCorrect && !isSelected && <span className="review-badge badge-missed">Correct answer</span>}
             </div>
           );
@@ -579,17 +579,19 @@ export default function SelfMarkingView({
         </div>
 
         <div className="self-marking-right">
-          <h3 className="self-marking-panel-heading">Mark Scheme</h3>
+          <div className="self-marking-panel-heading-row">
+            <h3 className="self-marking-panel-heading">Mark Scheme</h3>
+            {capReached && (
+              <span className="levels-cap-badge">
+                Maximum marks reached ({part.marks}/{part.marks})
+              </span>
+            )}
+          </div>
           <div className="self-marking-panel-scroll">
             {!isAutoMarked && isLevelsType && (
-              <div className="self-mark-hint-banner levels-hint">
+              <p className="levels-hint-text">
                 Award up to <strong>{part.marks} marks</strong> from the indicative content below. You do not need to decide every point.
-              </div>
-            )}
-            {capReached && (
-              <div className="levels-cap-banner">
-                Maximum marks reached ({part.marks}/{part.marks})
-              </div>
+              </p>
             )}
             <div className="self-marking-points" ref={pointsContainerRef}>
             {points.map((point, i) => {
