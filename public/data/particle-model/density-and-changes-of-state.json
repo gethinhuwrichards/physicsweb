@@ -49,9 +49,10 @@
         },
         {
           "partLabel": "c",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "Table 1 shows the results. Calculate value X.",
           "marks": 1,
+          "acceptedAnswers": ["0.4", "0.4 cm³", "0.4 cm3", "0.4cm³", "0.4cm3"],
           "markScheme": [
             "1 mark: X = **0.4** (cm³)"
           ],
@@ -203,9 +204,10 @@
         },
         {
           "partLabel": "e",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "Describe one change in the weather which would cause the puddle of water to dry up faster.",
           "marks": 1,
+          "acceptedAnswers": ["windy", "windier", "more windy", "more wind", "temperature increases", "hotter", "warmer", "higher temperature", "sunny", "sunnier", "more sunny", "less humid", "lower humidity", "drier"],
           "markScheme": [
             "1 mark: Any one of: becomes **windy** / temperature **increases** (accept sunny) / less **humid**"
           ],
@@ -442,9 +444,10 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "A student investigated the density of different fruits. Table 1 shows the results. The student determined the volume of each fruit using a displacement can and a measuring cylinder.<br><br>What other piece of equipment would the student need to determine the density of each fruit?",
           "marks": 1,
+          "acceptedAnswers": ["balance", "scales", "a balance", "a scale", "top-pan balance", "top pan balance", "digital balance", "mass balance", "weighing scales"],
           "markScheme": [
             "1 mark: **Balance** / scales"
           ],
@@ -693,9 +696,10 @@
         },
         {
           "partLabel": "e",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "How would the error you described in part (d) affect the measured volume of the rock?",
           "marks": 1,
+          "acceptedAnswers": ["lower", "higher", "too low", "too high", "smaller", "larger", "decreased", "increased"],
           "markScheme": [
             "1 mark: Volume would be **lower** or **higher** (depending on the error described)"
           ],
@@ -825,9 +829,11 @@
         },
         {
           "partLabel": "d",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "The student used a balance to measure the mass of the ring. After the ring was removed from the balance, the reading on the balance was 0.02 g.<br><br>How could the student use the readings from the balance to determine the correct mass of the ring?",
           "marks": 1,
+          "acceptedAnswers": ["subtract 0.02 g", "subtract 0.02g", "subtract 0.02", "take away 0.02 g", "take away 0.02", "minus 0.02 g", "minus 0.02"],
+          "keywords": [["subtract", "take away", "minus", "deduct"], ["0.02"]],
           "markScheme": [
             "1 mark: **Subtract 0.02 g** from the measured value"
           ],
@@ -908,9 +914,11 @@
         },
         {
           "partLabel": "d",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "A student investigated how the melting point of ice varies with the mass of salt added. The student added salt to crushed ice and measured the temperature at which the ice melted.<br><br>State one variable that the student should have controlled.",
           "marks": 1,
+          "acceptedAnswers": ["mass of ice", "volume of ice", "weight of ice", "amount of ice", "quantity of ice", "the mass of ice", "the volume of ice", "the amount of ice"],
+          "keywords": [["mass", "volume", "weight", "amount", "quantity"], ["ice"]],
           "markScheme": [
             "1 mark: **Mass of ice** (accept volume/weight/amount/quantity of ice)"
           ],
@@ -944,9 +952,11 @@
         },
         {
           "partLabel": "f",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "Table 1 shows the data that the student obtained. Describe the pattern shown in Table 1.",
           "marks": 1,
+          "acceptedAnswers": ["melting point decreases as salt increases", "melting point decreases", "negative correlation", "as salt increases melting point decreases"],
+          "keywords": [["melting point", "temperature"], ["decreases", "lowers", "goes down", "reduces", "drops"]],
           "markScheme": [
             "1 mark: **Melting point decreases** as the mass of salt is increased (accept negative correlation)"
           ],

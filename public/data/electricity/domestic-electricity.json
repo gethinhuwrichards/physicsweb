@@ -265,9 +265,11 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "The diagram shows an electric circuit used in a dolls' house. The switches are 2-way switches; this means that each switch has a connecting wire that can be in one of two positions. With the connecting wire in each switch in the position shown in the diagram, the lamp is off. Why?",
           "marks": 1,
+          "acceptedAnswers": ["circuit is not complete", "the circuit is not complete", "circuit is broken", "the circuit is broken", "the circuit is incomplete", "incomplete circuit", "open circuit", "the switches are open", "there is a gap in the circuit", "gap in the circuit"],
+          "keywords": [["circuit", "switches"], ["not complete", "broken", "incomplete", "open", "gap"]],
           "markScheme": [
             "1 mark: The **circuit is not complete** / circuit is **broken** / switches are **open**"
           ],
@@ -323,9 +325,10 @@
         },
         {
           "partLabel": "e",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "The diagram shows an old type of metal lamp fitting. The cable has been connected to the lamp fitting in a way that makes the lamp fitting unsafe. What is the possible risk to someone touching the lamp fitting while the lamp is switched on?",
           "marks": 1,
+          "acceptedAnswers": ["electric shock", "electrocution", "shock", "they could get an electric shock", "they could be electrocuted", "electrical shock", "they would get a shock", "the fitting becomes live"],
           "markScheme": [
             "1 mark: **(Electric) shock** / fitting becomes **live** / **electrocution**"
           ],
@@ -543,9 +546,11 @@
         },
         {
           "partLabel": "f",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "What happens to cause a fuse or circuit breaker to disconnect a circuit?",
           "marks": 1,
+          "acceptedAnswers": ["too much current", "too great a current", "current surge", "a surge of current", "an electrical fault", "too much current flows", "too great a current flows", "the current is too high", "excess current", "overload"],
+          "keywords": [["current", "fault", "overload", "surge"]],
           "markScheme": [
             "1 mark: Too great a **current** flows / a **surge** of current / an electrical **fault**"
           ],
@@ -778,9 +783,10 @@
         },
         {
           "partLabel": "c",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "A circuit can also be switched off by the action of a fuse. Give one advantage of using a circuit breaker to switch off a circuit rather than a fuse.",
           "marks": 1,
+          "acceptedAnswers": ["can be reset", "it can be reset", "does not need replacing", "doesn't need replacing", "reusable", "it is reusable", "faster", "faster acting", "reacts faster", "it reacts faster", "quicker to act", "can be reused"],
           "markScheme": [
             "1 mark: Can be **reset** / does not need replacing / **faster** acting"
           ],

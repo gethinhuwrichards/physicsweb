@@ -60,9 +60,11 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "How is a vector quantity different from a scalar quantity?",
           "marks": 1,
+          "acceptedAnswers": ["magnitude and direction", "it has magnitude and direction", "a vector has magnitude and direction", "has direction", "it has direction"],
+          "keywords": [["direction"]],
           "markScheme": [
             "1 mark: A vector has **magnitude and direction** (a scalar has magnitude only)."
           ],
@@ -70,9 +72,10 @@
         },
         {
           "partLabel": "b",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "Name another vector quantity.",
           "marks": 1,
+          "acceptedAnswers": ["velocity", "force", "weight", "acceleration", "displacement", "momentum"],
           "markScheme": [
             "1 mark: Any one, e.g. **velocity**, **force**, **weight**, **acceleration**, **displacement**."
           ],
@@ -80,9 +83,11 @@
         },
         {
           "partLabel": "c",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "Give the definition of momentum.",
           "marks": 1,
+          "acceptedAnswers": ["mass x velocity", "mass × velocity", "mass times velocity", "mass multiplied by velocity"],
+          "keywords": [["mass"], ["velocity"]],
           "markScheme": [
             "1 mark: Momentum = **mass × velocity**."
           ],
@@ -90,9 +95,10 @@
         },
         {
           "partLabel": "d",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "What is the unit of momentum?",
           "marks": 1,
+          "acceptedAnswers": ["kg m/s", "kg·m/s", "kgm/s", "N s", "Ns", "N·s", "kilogram metre per second"],
           "markScheme": [
             "1 mark: **kg m/s** (accept **N s**)."
           ],
@@ -212,9 +218,11 @@
         },
         {
           "partLabel": "b",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "In which direction is the resultant force on each capsule?",
           "marks": 1,
+          "acceptedAnswers": ["towards the centre", "toward the centre", "towards the center", "toward the center", "inwards", "inward", "to the centre", "to the center"],
+          "keywords": [["centre", "center", "inward", "inwards"]],
           "markScheme": [
             "1 mark: **Towards the centre** of the wheel."
           ],

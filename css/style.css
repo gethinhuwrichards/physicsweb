@@ -2966,7 +2966,8 @@ body:has(.has-figure-sidebar) {
     background: var(--color-incorrect-bg);
 }
 
-.sa-misspelt-note {
+.sa-misspelt-note,
+.sa-keyword-note {
     display: block;
     margin-top: 6px;
     font-size: 0.82rem;

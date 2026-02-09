@@ -124,9 +124,10 @@
         },
         {
           "partLabel": "g",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "What is the direction of the resultant force on the hailstone in the figure?",
           "marks": 1,
+          "acceptedAnswers": ["upwards", "upward", "up"],
           "markScheme": [
             "1 mark: **Upwards**."
           ],
@@ -397,9 +398,10 @@
         },
         {
           "partLabel": "b",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "State the name of the force that provides the centripetal force.",
           "marks": 1,
+          "acceptedAnswers": ["friction", "frictional force"],
           "markScheme": [
             "1 mark: **Friction** (between tyres and road)."
           ],

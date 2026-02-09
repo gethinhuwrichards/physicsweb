@@ -99,9 +99,10 @@
         },
         {
           "partLabel": "b",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "Describe the motion of the sky-diver when force X is equal to force Y.",
           "marks": 1,
+          "acceptedAnswers": ["constant speed", "terminal velocity", "zero acceleration", "constant velocity", "steady speed"],
           "markScheme": [
             "1 mark: Constant speed / terminal velocity / zero acceleration."
           ],
@@ -149,9 +150,10 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "The swimmer moves at constant speed. If force T is 120 N, what is the size of force D?",
           "marks": 1,
+          "acceptedAnswers": ["120", "120 N", "120N"],
           "markScheme": [
             "1 mark: **120 N** (forces are balanced at constant speed)."
           ],

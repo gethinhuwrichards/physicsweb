@@ -369,9 +369,17 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "In 1931 scientists thought that atoms contained only protons and electrons. Suggest what happened in 1932 to change the idea that atoms contained only protons and electrons.",
           "marks": 1,
+          "acceptedAnswers": [
+            "the neutron was discovered",
+            "neutron was discovered",
+            "discovery of the neutron",
+            "neutrons were discovered",
+            "they discovered the neutron"
+          ],
+          "keywords": [["neutron"], ["discovered", "discovery", "found"]],
           "markScheme": [
             "1 mark: The **neutron** was discovered"
           ],
@@ -969,9 +977,12 @@
         },
         {
           "partLabel": "d",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "Four different atoms A, B, C and D are shown. A has 3 protons and 3 neutrons. B has 3 protons and 4 neutrons. C has 4 protons and 4 neutrons. D has 4 protons and 5 neutrons. State the mass number of C.",
           "marks": 1,
+          "acceptedAnswers": [
+            "8"
+          ],
           "markScheme": [
             "1 mark: **8** (4 protons + 4 neutrons)"
           ],

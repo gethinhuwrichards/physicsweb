@@ -61,6 +61,7 @@ Questions are organized hierarchically:
 - `public/data/topics.json` - Index of all topics and subtopics with file paths
 - `public/data/<topic>/<subtopic>.json` - Question files (e.g., `public/data/energy/energy-stores.json`)
 - `public/data/QUESTION_FORMAT.md` - Full schema documentation for LLM parsing
+- `public/data/short-answer-synonyms.json` - Reference synonym groups by topic (particles, waves, forces, etc.). Consult when authoring `acceptedAnswers` and `keywords` for short-answer questions to ensure consistent coverage of abbreviations, spacing variants, and plural forms. Not loaded by app code.
 
 **Legacy (still present but not primary):**
 - `js/app.js` - Original vanilla JS implementation
@@ -77,7 +78,7 @@ Questions are organized hierarchically:
 | `extended-written` | Textarea for free-text answer | Self-marked via split-panel UI |
 | `calculation` | Final answer + step-based working with calculator | Auto-marks final answer; self-mark method if wrong |
 | `match-up` | Colour-coded box pairing (left → right) | Auto-marked (1 mark per correct link) |
-| `short-answer` | Single text input for 1-word/phrase answer | Auto-marked (fuzzy matching) |
+| `short-answer` | Single text input for 1-word/phrase answer | Auto-marked (exact + fuzzy + keyword matching). See `short-answer-synonyms.json` for standard synonym groups. |
 | `select-and-explain` | Radio buttons + textarea for explanation | Auto-marks selection (1 mark); self-mark explanation |
 | `table-fill` | Table with text inputs for blank cells | Auto-marked (1 mark per correct cell) |
 | `extended-written-levels` | Textarea (same as extended-written) | Self-marked; mark scheme has more points than marks; cap at max marks |

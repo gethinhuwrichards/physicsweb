@@ -128,9 +128,10 @@
         },
         {
           "partLabel": "b",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "One hazard in this experiment is the hot water. Give one risk to the student caused by this hazard.",
           "marks": 1,
+          "acceptedAnswers": ["burning", "scalding", "burns", "scalds", "burn", "scald", "burnt skin", "scalded skin", "burning skin"],
           "markScheme": [
             "1 mark: Risk of **burning/scalding** skin from hot water."
           ],
@@ -395,9 +396,10 @@
         },
         {
           "partLabel": "c",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "To calculate the specific heat capacity of a material, the mass of the material needs to be measured. State the name of a measuring instrument used to measure mass.",
           "marks": 1,
+          "acceptedAnswers": ["balance", "scales", "a balance", "a scale", "top-pan balance", "top pan balance", "digital balance", "mass balance", "weighing scales"],
           "markScheme": [
             "1 mark: **(top-pan) balance** / **scales**."
           ],
@@ -688,9 +690,10 @@
         },
         {
           "partLabel": "b",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "The student used two different types of thermometer to measure the temperature changes (Figure 2). What is the resolution of thermometer B?",
           "marks": 1,
+          "acceptedAnswers": ["0.1 °C", "0.1°C", "0.1 degrees", "0.1 degrees celsius", "0.1 C", "0.1"],
           "markScheme": [
             "1 mark: **0.1 °C**"
           ],

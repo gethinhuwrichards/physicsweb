@@ -280,9 +280,11 @@
         },
         {
           "partLabel": "c",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "What happens to the structure of an atom to change the atom into an ion?",
           "marks": 1,
+          "acceptedAnswers": ["gains or loses electrons", "loses or gains electrons", "it gains or loses electrons", "it loses or gains electrons", "gains or loses an electron", "loses or gains an electron", "electron is gained or lost", "electrons are gained or lost", "transfer of electrons"],
+          "keywords": [["gains", "loses", "gain", "lose", "lost", "gained", "transfer"], ["electron", "electrons"]],
           "markScheme": ["1 mark: The atom **loses** or **gains** one or more **electrons**"],
           "diagrams": []
         },

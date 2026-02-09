@@ -177,9 +177,16 @@
         },
         {
           "partLabel": "c",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "Plutonium-239 is used as fuel in some nuclear reactors. Name another substance used as fuel in nuclear reactors.",
           "marks": 1,
+          "acceptedAnswers": [
+            "uranium",
+            "uranium-235",
+            "U-235",
+            "thorium",
+            "MOX"
+          ],
           "markScheme": [
             "1 mark: **Uranium** (accept U-235, thorium, MOX)"
           ],
@@ -319,9 +326,18 @@
         },
         {
           "partLabel": "b",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "Uranium-235 is used as fuel in a nuclear reactor. How is the structure of an atom of uranium-235 different from uranium-238?",
           "marks": 1,
+          "acceptedAnswers": [
+            "fewer neutrons",
+            "3 fewer neutrons",
+            "three fewer neutrons",
+            "less neutrons",
+            "3 less neutrons",
+            "lower mass number"
+          ],
+          "keywords": [["fewer", "less", "lower", "different"], ["neutron", "neutrons", "mass number"]],
           "markScheme": [
             "1 mark: (3) fewer **neutrons** (or lower mass number)"
           ],
@@ -329,9 +345,13 @@
         },
         {
           "partLabel": "c",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "The nucleus of a uranium-235 atom must absorb a particle before it can split. What type of particle is absorbed?",
           "marks": 1,
+          "acceptedAnswers": [
+            "neutron",
+            "a neutron"
+          ],
           "markScheme": [
             "1 mark: **Neutron**"
           ],
@@ -339,9 +359,13 @@
         },
         {
           "partLabel": "d",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "What name is given to the process where a nucleus splits into smaller parts?",
           "marks": 1,
+          "acceptedAnswers": [
+            "nuclear fission",
+            "fission"
+          ],
           "markScheme": [
             "1 mark: Nuclear **fission**"
           ],
@@ -677,9 +701,16 @@
         },
         {
           "partLabel": "b",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "What makes uranium and thorium different elements?",
           "marks": 1,
+          "acceptedAnswers": [
+            "different number of protons",
+            "different atomic number",
+            "they have different numbers of protons",
+            "different protons"
+          ],
+          "keywords": [["different"], ["proton", "protons", "atomic number"]],
           "markScheme": [
             "1 mark: Different number of **protons** in the nucleus (or different atomic number)"
           ],
@@ -710,9 +741,16 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "There are many isotopes of plutonium. What do the nuclei of different plutonium isotopes have in common?",
           "marks": 1,
+          "acceptedAnswers": [
+            "same number of protons",
+            "same atomic number",
+            "they have the same number of protons",
+            "same protons"
+          ],
+          "keywords": [["same", "equal", "identical"], ["proton", "protons", "atomic number"]],
           "markScheme": [
             "1 mark: Same number of **protons** (or same atomic number)"
           ],

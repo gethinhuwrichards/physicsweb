@@ -1,0 +1,117 @@
+{
+  "_description": "Reference file for consistency when authoring acceptedAnswers and keywords arrays. Not consumed by app code.",
+  "general": {
+    "increase": ["increase", "increases", "increased", "increasing", "rise", "rises", "go up", "goes up"],
+    "decrease": ["decrease", "decreases", "decreased", "decreasing", "reduce", "reduces", "go down", "goes down", "fall", "falls"],
+    "double": ["double", "doubles", "doubled", "twice"],
+    "halve": ["halve", "halves", "halved", "half"],
+    "same": ["same", "equal", "identical", "unchanged", "no change", "stays the same"],
+    "different": ["different", "not the same", "varies"]
+  },
+  "particles": {
+    "proton": ["proton", "protons"],
+    "neutron": ["neutron", "neutrons"],
+    "electron": ["electron", "electrons"],
+    "nucleus": ["nucleus", "nuclei"],
+    "ion": ["ion", "ions"],
+    "isotope": ["isotope", "isotopes"],
+    "atom": ["atom", "atoms"]
+  },
+  "waves": {
+    "wavelength": ["wavelength"],
+    "amplitude": ["amplitude"],
+    "frequency": ["frequency"],
+    "period": ["period", "time period"],
+    "ultrasound": ["ultrasound", "ultra sound"],
+    "infrared": ["infrared", "infra red", "infra-red", "IR"],
+    "ultraviolet": ["ultraviolet", "ultra violet", "UV"],
+    "radio": ["radio", "radio wave", "radio waves"],
+    "microwave": ["microwave", "microwaves"],
+    "visible_light": ["visible light", "visible", "light"],
+    "x_ray": ["X-ray", "X-rays", "x ray", "x rays"],
+    "gamma": ["gamma", "gamma ray", "gamma rays"],
+    "transverse": ["transverse"],
+    "longitudinal": ["longitudinal"]
+  },
+  "forces": {
+    "acceleration": ["acceleration"],
+    "deceleration": ["deceleration", "decelerating"],
+    "velocity": ["velocity"],
+    "speed": ["speed"],
+    "direction": ["direction"],
+    "friction": ["friction"],
+    "momentum": ["momentum"],
+    "magnitude": ["magnitude", "size"],
+    "resultant": ["resultant", "net", "overall"],
+    "equilibrium": ["equilibrium", "balanced"],
+    "scalar": ["scalar"],
+    "vector": ["vector"],
+    "terminal_velocity": ["terminal velocity"],
+    "spring_constant": ["spring constant"]
+  },
+  "energy": {
+    "kinetic": ["kinetic", "kinetic energy", "KE"],
+    "thermal": ["thermal", "thermal energy", "heat", "internal energy"],
+    "chemical": ["chemical", "chemical energy"],
+    "elastic": ["elastic", "elastic potential", "elastic potential energy"],
+    "gravitational": ["gravitational", "gravitational potential", "gravitational potential energy", "GPE"],
+    "nuclear": ["nuclear", "nuclear energy"],
+    "electrostatic": ["electrostatic", "electrostatic energy"],
+    "magnetic": ["magnetic", "magnetic energy"]
+  },
+  "electricity": {
+    "current": ["current"],
+    "voltage": ["voltage", "potential difference", "p.d.", "pd"],
+    "resistance": ["resistance"],
+    "ammeter": ["ammeter"],
+    "voltmeter": ["voltmeter"],
+    "series": ["series"],
+    "parallel": ["parallel"],
+    "direct_current": ["direct current", "DC", "d.c."],
+    "alternating_current": ["alternating current", "AC", "a.c."]
+  },
+  "states": {
+    "solid": ["solid"],
+    "liquid": ["liquid"],
+    "gas": ["gas"],
+    "melting": ["melting", "melt", "melts"],
+    "boiling": ["boiling", "boil", "boils", "evaporating", "evaporation"],
+    "condensing": ["condensing", "condensation", "condense", "condenses"],
+    "freezing": ["freezing", "freeze", "freezes"],
+    "sublimation": ["sublimation", "sublimate", "sublimates"]
+  },
+  "nuclear": {
+    "fission": ["fission", "nuclear fission"],
+    "fusion": ["fusion", "nuclear fusion"],
+    "half_life": ["half-life", "half life", "halflife"],
+    "alpha": ["alpha", "alpha particle", "alpha radiation"],
+    "beta": ["beta", "beta particle", "beta radiation"],
+    "gamma_radiation": ["gamma", "gamma ray", "gamma radiation"],
+    "decay": ["decay", "decays", "radioactive decay"],
+    "activity": ["activity"],
+    "count_rate": ["count rate", "count-rate"]
+  },
+  "equipment": {
+    "balance": ["balance", "mass balance", "top-pan balance", "scales"],
+    "thermometer": ["thermometer"],
+    "measuring_cylinder": ["measuring cylinder"],
+    "ruler": ["ruler", "metre ruler", "meter ruler"],
+    "stopwatch": ["stopwatch", "stop watch", "timer"],
+    "protractor": ["protractor"]
+  },
+  "units": {
+    "metres_per_second": ["m/s", "ms⁻¹", "metres per second", "meters per second"],
+    "newtons": ["N", "newtons", "newton"],
+    "joules": ["J", "joules", "joule"],
+    "watts": ["W", "watts", "watt"],
+    "hertz": ["Hz", "hertz"],
+    "kilohertz": ["kHz", "kilohertz"],
+    "ohm": ["Ω", "ohm", "ohms"],
+    "ampere": ["A", "ampere", "amperes", "amp", "amps"],
+    "volt": ["V", "volt", "volts"],
+    "kilogram": ["kg", "kilogram", "kilograms"],
+    "becquerel": ["Bq", "becquerel", "becquerels"],
+    "pascal": ["Pa", "pascal", "pascals"],
+    "newton_second": ["N s", "Ns", "newton second", "newton seconds"]
+  }
+}

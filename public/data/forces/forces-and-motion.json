@@ -101,9 +101,10 @@
         },
         {
           "partLabel": "b",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "What word is used to describe the motion of an object that is slowing down?",
           "marks": 1,
+          "acceptedAnswers": ["deceleration", "decelerating", "decelerate"],
           "markScheme": [
             "1 mark: **Deceleration** (or decelerate)"
           ],
@@ -647,9 +648,11 @@
         },
         {
           "partLabel": "b",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "What happens to the speed of the motorbike if force B (driving force) becomes smaller than force A (resistive force)?",
           "marks": 1,
+          "acceptedAnswers": ["slows down", "decreases", "reduces", "gets slower", "decelerates"],
+          "keywords": [["slows", "slow", "decreases", "decrease", "reduces", "reduce", "decelerates", "decelerate", "less", "lower", "smaller"]],
           "markScheme": [
             "1 mark: The motorbike **slows down**"
           ],
@@ -966,9 +969,11 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "Two students investigated how the acceleration of a trolley depends on the force applied. Student A hypothesised: 'The acceleration of the trolley is directly proportional to the force applied.' Predict what would happen to the acceleration of the trolley if the force applied to the trolley is doubled.",
           "marks": 1,
+          "acceptedAnswers": ["it would double", "double", "doubles", "it doubles", "the acceleration would double", "the acceleration doubles", "twice as much"],
+          "keywords": [["double", "doubles", "doubled", "twice"]],
           "markScheme": [
             "1 mark: The acceleration would **double**"
           ],

@@ -586,9 +586,10 @@
         },
         {
           "partLabel": "b",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "What direction is the ball moving between points C and D on the graph?",
           "marks": 1,
+          "acceptedAnswers": ["upwards", "up", "upward"],
           "markScheme": [
             "1 mark: Upwards."
           ],

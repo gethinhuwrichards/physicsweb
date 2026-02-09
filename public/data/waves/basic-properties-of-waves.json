@@ -133,9 +133,15 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "Complete the following sentence: Sound is produced when an object ___",
           "marks": 1,
+          "acceptedAnswers": [
+            "vibrates",
+            "oscillates",
+            "vibrate",
+            "oscillate"
+          ],
           "markScheme": [
             "1 mark: **vibrates** (or oscillates)."
           ],
@@ -175,9 +181,14 @@
         },
         {
           "partLabel": "c",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "The diagram shows a pre-natal scan. What type of waves are used for pre-natal scanning?",
           "marks": 1,
+          "acceptedAnswers": [
+            "ultrasound",
+            "ultrasonic",
+            "ultra sound"
+          ],
           "markScheme": [
             "1 mark: **Ultrasound** (accept ultrasonic)."
           ],
@@ -280,9 +291,20 @@
         },
         {
           "partLabel": "e",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "Mobile phone communications is only one of the uses for microwaves. Give one other use of microwaves.",
           "marks": 1,
+          "acceptedAnswers": [
+            "cooking",
+            "heating food",
+            "cooking food",
+            "satellite communications",
+            "WiFi",
+            "Wi-Fi",
+            "radar",
+            "heating",
+            "microwave oven"
+          ],
           "markScheme": [
             "1 mark: Any valid use, e.g. **cooking/heating food**, **satellite communications**, **WiFi**."
           ],
@@ -358,9 +380,30 @@
         },
         {
           "partLabel": "d",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "Give one example of a transverse wave that can travel through a vacuum.",
           "marks": 1,
+          "acceptedAnswers": [
+            "light",
+            "visible light",
+            "radio waves",
+            "radio",
+            "microwaves",
+            "microwave",
+            "infrared",
+            "IR",
+            "infra red",
+            "ultraviolet",
+            "UV",
+            "ultra violet",
+            "X-rays",
+            "x-rays",
+            "X rays",
+            "gamma rays",
+            "gamma",
+            "electromagnetic wave",
+            "EM wave"
+          ],
           "markScheme": [
             "1 mark: Any named **electromagnetic wave**, e.g. **light**, **radio waves**, **microwaves**, **infrared**, **ultraviolet**, **X-rays**, **gamma rays**."
           ],
@@ -494,9 +537,15 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "Diagram 1 shows two waves. Name one wave quantity that is the same for the two waves.",
           "marks": 1,
+          "acceptedAnswers": [
+            "wavelength",
+            "frequency",
+            "speed",
+            "wave speed"
+          ],
           "markScheme": [
             "1 mark: **Wavelength** (accept frequency or speed)."
           ],
@@ -506,9 +555,13 @@
         },
         {
           "partLabel": "b",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "Name one wave quantity that is different for the two waves.",
           "marks": 1,
+          "acceptedAnswers": [
+            "amplitude",
+            "energy"
+          ],
           "markScheme": [
             "1 mark: **Amplitude** (accept energy)."
           ],
@@ -691,9 +744,16 @@
         },
         {
           "partLabel": "b",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "An electronic system produces ultrasound with a frequency of 500 kHz. What does the symbol kHz stand for?",
           "marks": 1,
+          "acceptedAnswers": [
+            "kilohertz",
+            "kilo hertz",
+            "1000 hertz",
+            "1000 Hz",
+            "thousand hertz"
+          ],
           "markScheme": [
             "1 mark: **kilohertz** (accept '1000 hertz' or '1000 Hz')."
           ],
@@ -701,9 +761,17 @@
         },
         {
           "partLabel": "c",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "State one industrial use for ultrasound.",
           "marks": 1,
+          "acceptedAnswers": [
+            "cleaning",
+            "quality control",
+            "flaw detection",
+            "crack detection",
+            "sonar",
+            "industrial cleaning"
+          ],
           "markScheme": [
             "1 mark: Any valid industrial use, e.g. **cleaning** (delicate objects), **quality control / flaw detection**, **sonar**."
           ],
@@ -711,9 +779,23 @@
         },
         {
           "partLabel": "d",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "State one medical use for ultrasound.",
           "marks": 1,
+          "acceptedAnswers": [
+            "pre-natal scanning",
+            "prenatal scanning",
+            "pre natal scanning",
+            "baby scanning",
+            "baby scan",
+            "foetal scanning",
+            "fetal scanning",
+            "destruction of kidney stones",
+            "kidney stones",
+            "cleaning teeth",
+            "pregnancy scanning",
+            "pregnancy scan"
+          ],
           "markScheme": [
             "1 mark: **Pre-natal scanning** (accept destruction of kidney stones or cleaning teeth)."
           ],
@@ -721,9 +803,14 @@
         },
         {
           "partLabel": "e",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "An ultrasound detector is connected to an oscilloscope. The diagram shows centimetre squares on an oscilloscope screen. Each horizontal division represents 2 microseconds. Calculate the time, in microseconds, between one peak of one ultrasound pulse and the peak of the next.",
           "marks": 1,
+          "acceptedAnswers": [
+            "8",
+            "8 microseconds",
+            "8 μs"
+          ],
           "markScheme": [
             "1 mark: **8 microseconds** (4 divisions × 2 microseconds)."
           ],
@@ -832,9 +919,14 @@
         },
         {
           "partLabel": "b",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "State the name given to reflected sound waves.",
           "marks": 1,
+          "acceptedAnswers": [
+            "echo",
+            "echoes",
+            "an echo"
+          ],
           "markScheme": [
             "1 mark: **Echo(es)**."
           ],
@@ -885,9 +977,19 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "The diagrams show oscilloscope traces for the same musical note played on two different instruments. The oscilloscope settings are not changed. How can you tell, from the diagrams, that it is the same musical note?",
           "marks": 1,
+          "acceptedAnswers": [
+            "same frequency",
+            "same period",
+            "same pitch",
+            "same wavelength"
+          ],
+          "keywords": [
+            ["same", "equal", "identical"],
+            ["frequency", "period", "pitch", "wavelength"]
+          ],
           "markScheme": [
             "1 mark: Same **frequency / period / pitch / wavelength**."
           ],
@@ -897,9 +999,19 @@
         },
         {
           "partLabel": "b",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "How can you tell, from the diagrams, that the musical note has been played on different instruments?",
           "marks": 1,
+          "acceptedAnswers": [
+            "different waveform",
+            "different shape",
+            "different quality",
+            "different wave shape"
+          ],
+          "keywords": [
+            ["different", "not the same", "not identical"],
+            ["waveform", "shape", "quality", "wave shape", "pattern"]
+          ],
           "markScheme": [
             "1 mark: Differences in **waveform / shape / quality** (the diagrams are not identical)."
           ],
@@ -907,9 +1019,18 @@
         },
         {
           "partLabel": "c",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "Approximately what is the highest frequency that humans can hear? State the number and the unit.",
           "marks": 1,
+          "acceptedAnswers": [
+            "20000 Hz",
+            "20 000 Hz",
+            "20,000 Hz",
+            "20 kHz",
+            "20000Hz",
+            "20000",
+            "20 000"
+          ],
           "markScheme": [
             "1 mark: **20 000 Hz** (accept 20 kHz)."
           ],
@@ -917,9 +1038,15 @@
         },
         {
           "partLabel": "d",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "Ultrasound waves are partially reflected when they meet a boundary between two different media. What does the word 'media' mean when it is used in this context?",
           "marks": 1,
+          "acceptedAnswers": [
+            "materials",
+            "substances",
+            "mediums",
+            "matter"
+          ],
           "markScheme": [
             "1 mark: **Materials / substances** (through which sound travels)."
           ],
@@ -1128,9 +1255,12 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "The diagram shows a microphone being used to detect the output from a loudspeaker. The oscilloscope trace shows the wave pattern produced by the loudspeaker. The total time shown on the screen is 0.0001 s. How many waves are produced by the loudspeaker in 0.0001 seconds?",
           "marks": 1,
+          "acceptedAnswers": [
+            "3"
+          ],
           "markScheme": [
             "1 mark: **3** waves."
           ],
@@ -1140,9 +1270,14 @@
         },
         {
           "partLabel": "b",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "How many waves are produced by the loudspeaker every second? Assume the input to the loudspeaker does not change.",
           "marks": 1,
+          "acceptedAnswers": [
+            "30000",
+            "30 000",
+            "30,000"
+          ],
           "markScheme": [
             "1 mark: **30 000** waves per second (3 waves in 0.0001 s → 3 / 0.0001 = 30 000)."
           ],

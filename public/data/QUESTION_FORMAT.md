@@ -520,15 +520,35 @@ Right items can be images instead of text. Use an object with an `image` field r
 
 ### 9. Short Answer (`type: "short-answer"`)
 
-Student types a short answer (1 word or short phrase) into a text input. Auto-marked via case-insensitive matching against an array of accepted answers, with fuzzy matching for minor misspellings.
+Student types a short answer (1 word or short phrase) into a text input. Auto-marked via case-insensitive matching against an array of accepted answers, with fuzzy matching for minor misspellings, and optional keyword matching for short phrase answers.
 
-**Important:** Only use `short-answer` when the expected answer is a single word or very short phrase (1–3 words), such as a unit name, particle name, or quantity. If the answer requires a sentence (e.g., "Why does...", "Give a reason..."), use `extended-written` instead, even for 1-mark questions.
+**Important:** Use `short-answer` when the expected answer is a single word, very short phrase (1–4 words), or a short phrase containing required technical terms. If the answer requires a full sentence explaining WHY or HOW, use `extended-written` instead.
 
 **Additional fields:**
 
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `acceptedAnswers` | string[] | Yes | Array of accepted correct answers (case-insensitive) |
+| `keywords` | string[][] | No | Array of synonym groups for keyword matching (see below) |
+
+**Keyword matching for phrase answers:**
+
+For short phrase answers where students might express the answer in varied ways, add a `keywords` array. The auto-marker checks that the student's answer contains at least one word from each synonym group.
+
+Schema: `keywords: [ ["synonym1a", "synonym1b"], ["synonym2a"] ]`
+- Inner arrays = synonym groups (OR logic — any word in the group matches)
+- Outer array = required groups (AND logic — all groups must be matched)
+- Multi-word synonyms (e.g., `"spring constant"`) are checked as substring phrases
+- Fuzzy matching (Levenshtein) is applied to each word
+
+Example — "What determines the mass number of an atom?":
+```json
+{
+  "acceptedAnswers": ["protons plus neutrons", "protons and neutrons"],
+  "keywords": [["protons"], ["neutrons"]]
+}
+```
+A student typing "the protons and neutrons" or "number of protons + neutrons" would match.
 
 ```json
 {

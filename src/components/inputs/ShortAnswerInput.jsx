@@ -27,6 +27,11 @@ export default function ShortAnswerInput({ part, value, onChange, disabled, auto
           Misspelt but answer still accepted
         </span>
       )}
+      {autoMarkResult && autoMarkResult.keywordMatched && autoMarkResult.isCorrect && (
+        <span className="sa-keyword-note">
+          Answer accepted (key terms identified)
+        </span>
+      )}
       {autoMarkResult && !autoMarkResult.isCorrect && (
         <span className="sa-correct-answer">
           Correct answer: {autoMarkResult.correctAnswer}

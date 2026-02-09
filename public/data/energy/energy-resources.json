@@ -77,9 +77,10 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "The wind is a renewable energy source. Name one more renewable energy source used to generate electricity.",
           "marks": 1,
+          "acceptedAnswers": ["solar", "hydroelectric", "tidal", "wave", "biofuel", "biomass", "geothermal", "solar power", "hydroelectric power", "tidal power", "wave power", "hydro"],
           "markScheme": [
             "1 mark: Any one from solar, hydroelectric, tidal, wave, biofuel/biomass, geothermal."
           ],

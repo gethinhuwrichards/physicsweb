@@ -84,12 +84,34 @@ function isCloseEnough(input, target) {
   return levenshtein(input, target) <= maxDist;
 }
 
+function isCloseEnoughPhrase(studentWords, phrase) {
+  const phraseWords = phrase.toLowerCase().split(/\s+/);
+  if (phraseWords.length === 1) {
+    return studentWords.some(w => isCloseEnough(w, phraseWords[0]));
+  }
+  // Multi-word phrase: sliding window over student words
+  for (let i = 0; i <= studentWords.length - phraseWords.length; i++) {
+    const allMatch = phraseWords.every((pw, j) => isCloseEnough(studentWords[i + j], pw));
+    if (allMatch) return true;
+  }
+  return false;
+}
+
+function matchesKeywords(rawLower, keywords) {
+  const studentWords = rawLower.split(/\s+/).filter(w => w.length > 0);
+  if (studentWords.length === 0) return false;
+  return keywords.every(synonymGroup =>
+    synonymGroup.some(synonym => isCloseEnoughPhrase(studentWords, synonym.toLowerCase()))
+  );
+}
+
 export function autoMarkShortAnswer(part, userAnswer) {
   const raw = (userAnswer || '').trim();
   const accepted = part.acceptedAnswers || [];
   const rawLower = raw.toLowerCase();
   let isCorrect = false;
   let misspelt = false;
+  let keywordMatched = false;
   if (raw.length > 0) {
     const exactMatch = accepted.some(ans => ans.toLowerCase() === rawLower);
     if (exactMatch) {
@@ -99,6 +121,11 @@ export function autoMarkShortAnswer(part, userAnswer) {
       if (fuzzyMatch) {
         isCorrect = true;
         misspelt = true;
+      } else if (part.keywords && part.keywords.length > 0) {
+        if (matchesKeywords(rawLower, part.keywords)) {
+          isCorrect = true;
+          keywordMatched = true;
+        }
       }
     }
   }
@@ -106,6 +133,7 @@ export function autoMarkShortAnswer(part, userAnswer) {
     score: isCorrect ? part.marks : 0,
     isCorrect,
     misspelt,
+    keywordMatched,
     userAnswer: raw,
     correctAnswer: accepted[0] || '',
   };

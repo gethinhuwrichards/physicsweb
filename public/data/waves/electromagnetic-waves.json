@@ -15,9 +15,21 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "The diagram shows the positions of infrared and microwaves within part of the electromagnetic spectrum. Name one type of electromagnetic radiation which has more energy than infrared.",
           "marks": 1,
+          "acceptedAnswers": [
+            "light",
+            "visible light",
+            "ultraviolet",
+            "UV",
+            "ultra violet",
+            "X-rays",
+            "x-rays",
+            "X rays",
+            "gamma rays",
+            "gamma"
+          ],
           "markScheme": [
             "1 mark: Any one from: **(visible) light**, **ultraviolet**, **X-rays**, **gamma rays**"
           ],
@@ -380,9 +392,20 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "The figure shows the wavelengths of some types of electromagnetic radiation. Suggest one piece of equipment that can be used to detect infrared radiation.",
           "marks": 1,
+          "acceptedAnswers": [
+            "infrared camera",
+            "IR camera",
+            "thermometer",
+            "thermal imaging camera",
+            "thermal camera",
+            "night vision goggles",
+            "infrared detector",
+            "IR detector",
+            "infrared thermometer"
+          ],
           "markScheme": [
             "1 mark: **Infrared camera** (accept thermometer, thermal imaging camera, night vision goggles)"
           ],
@@ -458,9 +481,14 @@
         },
         {
           "partLabel": "e",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "The leaves of the plant reflect light. The leaves have a rough surface. What type of reflection happens at the leaf surface?",
           "marks": 1,
+          "acceptedAnswers": [
+            "diffuse",
+            "diffuse reflection",
+            "scattered"
+          ],
           "markScheme": [
             "1 mark: **Diffuse** (reflection)"
           ],
@@ -481,9 +509,13 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "Figure 1 shows a transmitter emitting two electromagnetic waves, J and K. Wave J is reflected by a layer in the atmosphere called the ionosphere. What is the name given to the dashed line in Figure 1?",
           "marks": 1,
+          "acceptedAnswers": [
+            "normal",
+            "the normal"
+          ],
           "markScheme": [
             "1 mark: **Normal**"
           ],
@@ -581,9 +613,13 @@
         },
         {
           "partLabel": "b",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "What type of electromagnetic wave do our eyes detect?",
           "marks": 1,
+          "acceptedAnswers": [
+            "light",
+            "visible light"
+          ],
           "markScheme": [
             "1 mark: **(Visible) light**"
           ],
@@ -642,9 +678,22 @@
         },
         {
           "partLabel": "f",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "Write the equation which links frequency, wavelength and wave speed.",
           "marks": 1,
+          "acceptedAnswers": [
+            "wave speed = frequency x wavelength",
+            "wave speed = frequency × wavelength",
+            "v = f × λ",
+            "v = fλ",
+            "speed = frequency x wavelength",
+            "speed = frequency × wavelength"
+          ],
+          "keywords": [
+            ["speed", "v"],
+            ["frequency", "f"],
+            ["wavelength", "lambda", "λ"]
+          ],
           "markScheme": [
             "1 mark: **wave speed = frequency × wavelength** (accept $v = f \\lambda$)"
           ],
@@ -719,9 +768,19 @@
         },
         {
           "partLabel": "b",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "Complete the following sentence: The X-rays affect photographic film in the same way that _______ does.",
           "marks": 1,
+          "acceptedAnswers": [
+            "light",
+            "visible light",
+            "ultraviolet",
+            "UV",
+            "infrared",
+            "IR",
+            "gamma",
+            "gamma rays"
+          ],
           "markScheme": [
             "1 mark: **Light** (accept ultraviolet, UV, infrared, IR, gamma)"
           ],
@@ -921,9 +980,30 @@
         },
         {
           "partLabel": "d",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "Give one example of a transverse wave that can travel through a vacuum.",
           "marks": 1,
+          "acceptedAnswers": [
+            "light",
+            "visible light",
+            "radio waves",
+            "radio",
+            "microwaves",
+            "microwave",
+            "infrared",
+            "IR",
+            "infra red",
+            "ultraviolet",
+            "UV",
+            "ultra violet",
+            "X-rays",
+            "x-rays",
+            "X rays",
+            "gamma rays",
+            "gamma",
+            "electromagnetic wave",
+            "EM wave"
+          ],
           "markScheme": [
             "1 mark: Any named **electromagnetic wave** (e.g. light, radio waves, microwaves, infrared, ultraviolet, X-rays, gamma rays)"
           ],
@@ -1167,9 +1247,17 @@
         },
         {
           "partLabel": "b",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "Name two more types of electromagnetic wave that can be used for communications.",
           "marks": 1,
+          "acceptedAnswers": [
+            "infrared and radio waves",
+            "radio waves and infrared"
+          ],
+          "keywords": [
+            ["infrared", "IR", "infra red"],
+            ["radio", "radio waves"]
+          ],
           "markScheme": [
             "1 mark: Both required — **infrared** and **radio waves** (accept IR for infrared)"
           ],
@@ -1423,9 +1511,21 @@
         },
         {
           "partLabel": "d",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "Rescue workers use infrared cameras to search for people trapped under rubble after an earthquake. How does the image of a trapped person change if the person's body temperature drops from 37 °C to 33 °C?",
           "marks": 1,
+          "acceptedAnswers": [
+            "becomes more red",
+            "becomes red",
+            "turns red",
+            "changes to red",
+            "more red",
+            "goes red",
+            "changes from orange to red"
+          ],
+          "keywords": [
+            ["red"]
+          ],
           "markScheme": [
             "1 mark: Becomes (more) **red** (accept: changes from mainly orange to mainly red)"
           ],
@@ -1580,9 +1680,17 @@
         },
         {
           "partLabel": "d",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "Another student investigated the absorption of infrared radiation by different surface colours. The student filled four hollow metal cubes with cold water. Each cube was the same size but had a different surface colour. The cubes were then placed the same distance from an infrared heater. After 10 minutes, the student measured the temperature increase of the water inside each cube. What was the dependent variable in this investigation?",
           "marks": 1,
+          "acceptedAnswers": [
+            "temperature",
+            "temperature increase",
+            "temperature change",
+            "the temperature",
+            "the temperature increase",
+            "the temperature change"
+          ],
           "markScheme": [
             "1 mark: The **temperature** (increase / change after 10 minutes)"
           ],
@@ -1741,9 +1849,14 @@
         },
         {
           "partLabel": "d",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "State one hazard of exposure to infrared radiation.",
           "marks": 1,
+          "acceptedAnswers": [
+            "burns",
+            "skin burns",
+            "burning"
+          ],
           "markScheme": [
             "1 mark: (Skin) **burns**"
           ],
@@ -1751,9 +1864,16 @@
         },
         {
           "partLabel": "e",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "State one hazard of exposure to ultraviolet radiation.",
           "marks": 1,
+          "acceptedAnswers": [
+            "skin cancer",
+            "cancer",
+            "blindness",
+            "eye damage",
+            "sunburn"
+          ],
           "markScheme": [
             "1 mark: **Skin cancer** (accept blindness)"
           ],
@@ -1761,9 +1881,21 @@
         },
         {
           "partLabel": "f",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "X-rays are used in hospitals for computed tomography (CT) scans. State one other medical use for X-rays.",
           "marks": 1,
+          "acceptedAnswers": [
+            "detecting bone fractures",
+            "bone fractures",
+            "broken bones",
+            "detecting broken bones",
+            "dental",
+            "dental problems",
+            "dental X-rays",
+            "treating cancer",
+            "cancer treatment",
+            "radiotherapy"
+          ],
           "markScheme": [
             "1 mark: Any one from: detecting **bone fractures**, detecting **dental** problems, **treating cancer**"
           ],
@@ -1845,9 +1977,26 @@
         },
         {
           "partLabel": "b",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "Both radio waves and gamma rays are used in medicine. Give one medical use of gamma rays.",
           "marks": 1,
+          "acceptedAnswers": [
+            "medical imaging",
+            "imaging",
+            "PET scan",
+            "tracer",
+            "gamma camera",
+            "medical treatment",
+            "treatment",
+            "radiotherapy",
+            "brachytherapy",
+            "gamma knife",
+            "sterilising",
+            "sterilising medical equipment",
+            "sterilization",
+            "killing cancer cells",
+            "cancer treatment"
+          ],
           "markScheme": [
             "1 mark: **(Medical) imaging** (accept PET scan, tracer, gamma camera) or **(medical) treatment** (accept radiotherapy, brachytherapy, gamma knife) or **sterilising** medical equipment"
           ],

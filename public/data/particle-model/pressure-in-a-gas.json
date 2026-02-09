@@ -476,9 +476,10 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "A teacher demonstrated the relationship between the pressure in a gas and the volume of the gas. This is the method used:<br><br>1. Record the initial volume of gas in the syringe and the pressure reading before any weights are attached.<br>2. Attach a 2.0 N weight to the syringe.<br>3. Record the volume of the gas and the reading on the pressure gauge.<br>4. Repeat steps 2 and 3 until a weight of 12.0 N is attached to the syringe.<br><br>What was the range of force used?",
           "marks": 1,
+          "acceptedAnswers": ["0 N to 12 N", "0 to 12 N", "0N to 12N", "0 - 12 N", "0-12 N", "2 N to 12 N", "2 to 12 N", "2N to 12N", "2 - 12 N", "2-12 N"],
           "markScheme": [
             "1 mark: **0 N to 12 N** (accept 2 N to 12 N)"
           ],
@@ -488,9 +489,11 @@
         },
         {
           "partLabel": "b",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "Give one control variable in the investigation.",
           "marks": 1,
+          "acceptedAnswers": ["mass of gas", "temperature", "temperature of the gas", "mass of air", "amount of gas", "the temperature", "the mass of gas"],
+          "keywords": [["mass", "temperature", "amount"]],
           "markScheme": [
             "1 mark: **Mass of gas** in the syringe (or **temperature** of the gas)"
           ],

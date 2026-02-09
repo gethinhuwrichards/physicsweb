@@ -564,9 +564,17 @@
         },
         {
           "partLabel": "c",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "An alpha particle is the same as the nucleus of a helium atom. How is an alpha particle different from a helium atom?",
           "marks": 1,
+          "acceptedAnswers": [
+            "no electrons",
+            "has no electrons",
+            "it has no electrons",
+            "it does not have electrons",
+            "no electrons orbiting"
+          ],
+          "keywords": [["no", "without", "missing", "lacks", "not"], ["electron", "electrons"]],
           "markScheme": [
             "1 mark: Has no **electrons** (or: alpha has a positive charge / helium atom has no overall charge)"
           ],
@@ -771,9 +779,12 @@
         },
         {
           "partLabel": "b",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "Radon-222 has a mass number of 222 and an atomic number of 86. How many protons are in an atom of radon-222?",
           "marks": 1,
+          "acceptedAnswers": [
+            "86"
+          ],
           "markScheme": [
             "1 mark: **86**"
           ],
@@ -781,9 +792,16 @@
         },
         {
           "partLabel": "c",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "When radon-222 emits an alpha particle, it changes to polonium-218. An alpha particle consists of 2 protons and 2 neutrons. How is the nucleus of polonium-218 different from the nucleus of radon-222?",
           "marks": 1,
+          "acceptedAnswers": [
+            "two fewer protons and two fewer neutrons",
+            "2 fewer protons and 2 fewer neutrons",
+            "2 less protons and 2 less neutrons",
+            "84 protons and 134 neutrons"
+          ],
+          "keywords": [["fewer", "less", "2"], ["proton", "protons"], ["neutron", "neutrons"]],
           "markScheme": [
             "1 mark: Two fewer **protons** and two fewer **neutrons** (or: 84 protons and 134 neutrons)"
           ],
@@ -804,9 +822,17 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "What is gamma radiation?",
           "marks": 1,
+          "acceptedAnswers": [
+            "electromagnetic radiation",
+            "electromagnetic wave",
+            "an electromagnetic wave",
+            "EM radiation",
+            "EM wave"
+          ],
+          "keywords": [["electromagnetic", "EM"], ["wave", "radiation"]],
           "markScheme": [
             "1 mark: **Electromagnetic** wave/radiation"
           ],
@@ -849,9 +875,17 @@
         },
         {
           "partLabel": "d",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "The food treatment area has thick concrete walls. How do the concrete walls reduce the radiation hazard to workers outside the area?",
           "marks": 1,
+          "acceptedAnswers": [
+            "concrete absorbs the gamma radiation",
+            "absorbs the radiation",
+            "absorbs the gamma radiation",
+            "the concrete absorbs the radiation",
+            "it absorbs the gamma rays"
+          ],
+          "keywords": [["absorb", "absorbs", "absorbed", "block", "blocks", "stop", "stops"], ["radiation", "gamma"]],
           "markScheme": [
             "1 mark: Concrete **absorbs** the gamma radiation"
           ],
@@ -1146,9 +1180,14 @@
         },
         {
           "partLabel": "b",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "From which part of a uranium-238 atom is the radiation emitted?",
           "marks": 1,
+          "acceptedAnswers": [
+            "nucleus",
+            "the nucleus",
+            "the unstable nucleus"
+          ],
           "markScheme": [
             "1 mark: The (unstable) **nucleus**"
           ],
@@ -1156,9 +1195,17 @@
         },
         {
           "partLabel": "c",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "Uranium-235 is another isotope of uranium. How is an atom of uranium-235 similar to an atom of uranium-238?",
           "marks": 1,
+          "acceptedAnswers": [
+            "same number of protons",
+            "same atomic number",
+            "both have 92 protons",
+            "they have the same number of protons",
+            "same protons"
+          ],
+          "keywords": [["same", "equal", "identical"], ["proton", "protons", "atomic number"]],
           "markScheme": [
             "1 mark: Same number of **protons** (or same atomic number, or both have 92 protons)"
           ],
@@ -1166,9 +1213,16 @@
         },
         {
           "partLabel": "d",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "Uranium-238 has a half-life of 4500 million years. When the Earth was formed, there was twice as much uranium-238 as there is now. What is the age of the Earth?",
           "marks": 1,
+          "acceptedAnswers": [
+            "4500 million years",
+            "4500000000 years",
+            "4.5 billion years",
+            "4500 million",
+            "4.5 billion"
+          ],
           "markScheme": [
             "1 mark: **4500 million years**"
           ],
@@ -1189,9 +1243,18 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "What is the mass number of an atom?",
           "marks": 1,
+          "acceptedAnswers": [
+            "total number of protons and neutrons",
+            "number of protons plus neutrons",
+            "protons plus neutrons",
+            "number of nucleons",
+            "protons and neutrons",
+            "total number of protons plus neutrons"
+          ],
+          "keywords": [["proton", "protons", "nucleon", "nucleons"], ["neutron", "neutrons", "nucleon", "nucleons"]],
           "markScheme": [
             "1 mark: Total number of **protons** plus **neutrons** (or number of nucleons)"
           ],
@@ -1338,9 +1401,18 @@
       "parts": [
         {
           "partLabel": "a",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "A study compared the risk of getting lung cancer for cigarette smokers and non-smokers at different levels of radon exposure. People that have had no exposure to radon gas were included in the study. Why were they included?",
           "marks": 1,
+          "acceptedAnswers": [
+            "to act as a control",
+            "as a control",
+            "control",
+            "control group",
+            "for comparison",
+            "to compare with no exposure"
+          ],
+          "keywords": [["control", "comparison", "compare", "baseline"]],
           "markScheme": [
             "1 mark: To act as a **control** / to compare the effect of exposure with **no exposure**"
           ],
@@ -1443,9 +1515,17 @@
         },
         {
           "partLabel": "b",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "The corrected count rate is the count rate after subtracting the background count rate. What information does the corrected count rate give?",
           "marks": 1,
+          "acceptedAnswers": [
+            "the count rate from the source alone",
+            "count rate from the source",
+            "the count rate due to the source alone",
+            "radiation from the source only",
+            "count rate from just the source"
+          ],
+          "keywords": [["source", "radioactive"], ["alone", "only", "just", "itself"]],
           "markScheme": [
             "1 mark: The count rate due to the **source** alone (without background radiation)"
           ],

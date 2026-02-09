@@ -33,9 +33,11 @@
         },
         {
           "partLabel": "c",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "The student used the data obtained to plot the points for a graph of current against potential difference, as shown in the graph.\n\nWhy has the student plotted the points for a line graph and not drawn a bar chart?",
           "marks": 1,
+          "acceptedAnswers": ["continuous", "the data is continuous", "the variables are continuous", "continuous data", "data is continuous", "results are continuous"],
+          "keywords": [["continuous"]],
           "markScheme": ["1 mark: The data / results / variables are **continuous** (accept: data is not **categoric** / discrete)"],
           "diagrams": ["cpdr-q5-fig2.png"]
         },
@@ -632,9 +634,11 @@
         },
         {
           "partLabel": "b",
-          "type": "extended-written",
+          "type": "short-answer",
           "text": "The resistance of the bulb increases as the potential difference across the bulb increases. Why?",
           "marks": 1,
+          "acceptedAnswers": ["temperature increases", "the temperature increases", "it gets hotter", "the bulb gets hotter", "the filament gets hotter", "temperature of the bulb increases", "temperature of the filament increases"],
+          "keywords": [["temperature", "hotter", "hot", "heats up", "heated"]],
           "markScheme": [
             "1 mark: The **temperature** of the bulb increases (accept: the bulb gets hotter / collisions between free electrons and ions increase)"
           ],
