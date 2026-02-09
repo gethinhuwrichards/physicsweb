@@ -34,6 +34,7 @@ export default function App() {
   const [scores, setScores] = useState(getQuestionScores);
   const [bugReportOpen, setBugReportOpen] = useState(false);
   const isPopstate = useRef(false);
+  const [forwardStack, setForwardStack] = useState([]);
 
   // Load topics data on mount
   useEffect(() => {
@@ -71,39 +72,57 @@ export default function App() {
     setScores(getQuestionScores());
   }, []);
 
-  // Navigation
-  const goToTopics = useCallback(() => setView('topics'), []);
-  const goToLanding = useCallback(() => setView('landing'), []);
+  // Navigation — any "fresh" navigation clears the forward stack
+  const navigateTo = useCallback((target) => {
+    setForwardStack([]);
+    setView(target);
+  }, []);
+
+  const goToTopics = useCallback(() => navigateTo('topics'), [navigateTo]);
+  const goToLanding = useCallback(() => navigateTo('landing'), [navigateTo]);
+
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'instant' });
 
   const handleBack = useCallback(() => {
-    if (view === 'question') {
-      setView('questions');
-      return;
-    }
-    if (view === 'questions') {
-      setView('subtopics');
-      return;
-    }
-    if (view === 'subtopics') {
-      setView('topics');
-      return;
-    }
-    if (view === 'topics') {
-      setView('landing');
-      return;
-    }
+    setForwardStack(prev => [...prev, view]);
+    scrollToTop();
+    if (view === 'question') { setView('questions'); return; }
+    if (view === 'questions') { setView('subtopics'); return; }
+    if (view === 'subtopics') { setView('topics'); return; }
+    if (view === 'topics') { setView('landing'); return; }
     history.back();
   }, [view]);
+
+  const handleForward = useCallback(() => {
+    if (forwardStack.length === 0) return;
+    const next = forwardStack[forwardStack.length - 1];
+    setForwardStack(prev => prev.slice(0, -1));
+    setView(next);
+    scrollToTop();
+  }, [forwardStack]);
+
+  // Arrow-key navigation (only when header arrows are visible)
+  useEffect(() => {
+    const onKeyDown = (e) => {
+      const tag = document.activeElement?.tagName;
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || document.activeElement?.isContentEditable) return;
+      if (view === 'landing' || view === 'question') return;
+      if (e.key === 'ArrowLeft') { e.preventDefault(); handleBack(); }
+      else if (e.key === 'ArrowRight') { e.preventDefault(); handleForward(); }
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [view, handleBack, handleForward]);
 
   const selectTopic = useCallback(
     (topicId) => {
       const topic = topicsData.mainTopics.find((t) => t.id === topicId);
       if (topic) {
         setMainTopic(topic);
-        setView('subtopics');
+        navigateTo('subtopics');
       }
     },
-    [topicsData]
+    [topicsData, navigateTo]
   );
 
   const selectSubtopic = useCallback(
@@ -131,12 +150,12 @@ export default function App() {
           refreshScores();
         }
 
-        setView('questions');
+        navigateTo('questions');
       } catch (err) {
         console.error('Failed to load subtopic questions:', err);
       }
     },
-    [mainTopic, refreshScores]
+    [mainTopic, refreshScores, navigateTo]
   );
 
   const selectQuestion = useCallback(
@@ -145,7 +164,7 @@ export default function App() {
       if (!q) return;
       setCurrentQuestion(q);
       setSavedState(loadQuestionAnswers(q.id));
-      setView('question');
+      navigateTo('question');
       requestAnimationFrame(() => {
         const el = document.getElementById('question-content-inner');
         if (el) {
@@ -155,7 +174,7 @@ export default function App() {
         }
       });
     },
-    [questions]
+    [questions, navigateTo]
   );
 
   // Question callbacks
@@ -169,8 +188,8 @@ export default function App() {
 
   const handleBankScore = useCallback(() => {
     refreshScores();
-    setView('questions');
-  }, [refreshScores]);
+    navigateTo('questions');
+  }, [refreshScores, navigateTo]);
 
   const handleReset = useCallback(() => {
     clearQuestionAnswers(currentQuestion.id);
@@ -232,10 +251,10 @@ export default function App() {
       breadcrumbItems.push({ label: 'Subject', onClick: goToLanding });
       breadcrumbItems.push({ label: 'Topics', onClick: goToTopics });
       if (view === 'question') {
-        breadcrumbItems.push({ label: 'Subtopics', onClick: () => setView('subtopics') });
-        breadcrumbItems.push({ label: 'Questions', onClick: () => setView('questions') });
+        breadcrumbItems.push({ label: 'Subtopics', onClick: () => navigateTo('subtopics') });
+        breadcrumbItems.push({ label: 'Questions', onClick: () => navigateTo('questions') });
       } else {
-        breadcrumbItems.push({ label: 'Subtopics', onClick: () => setView('subtopics') });
+        breadcrumbItems.push({ label: 'Subtopics', onClick: () => navigateTo('subtopics') });
         breadcrumbItems.push({ label: 'Questions' });
       }
     } else {
@@ -269,7 +288,22 @@ export default function App() {
           <div className="header-top-row">
             <Breadcrumb items={breadcrumbItems} />
           </div>
-          {getHeaderTitle() && <h1>{getHeaderTitle()}</h1>}
+          <div className="header-title-row">
+            <button className="header-nav-btn" onClick={handleBack} aria-label="Go back">
+              <svg viewBox="0 0 20 20" fill="none">
+                <path d="M12.5 4L6.5 10l6 6" stroke="currentColor" strokeWidth="2.2"
+                      strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+            {getHeaderTitle() && <h1>{getHeaderTitle()}</h1>}
+            <button className="header-nav-btn" onClick={handleForward}
+                    disabled={forwardStack.length === 0} aria-label="Go forward">
+              <svg viewBox="0 0 20 20" fill="none">
+                <path d="M7.5 4L13.5 10l-6 6" stroke="currentColor" strokeWidth="2.2"
+                      strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+          </div>
         </header>
       )}
 

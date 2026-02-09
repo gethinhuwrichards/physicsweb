@@ -258,6 +258,50 @@ header h1 {
     letter-spacing: -0.03em;
 }
 
+.header-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.header-nav-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: 1.5px solid var(--edge);
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 0;
+    border-radius: 50%;
+    height: 1.8rem;
+    width: 1.8rem;
+    flex-shrink: 0;
+    box-shadow: var(--press-shadow-sm);
+    transition: color 0.15s, background 0.15s, transform 120ms, box-shadow 120ms;
+}
+
+.header-nav-btn svg { width: 60%; height: 60%; }
+
+.header-nav-btn:hover:not(:disabled) {
+    color: var(--accent-blue);
+    background: var(--bg-surface-alt);
+    transform: translateY(-1px);
+}
+
+.header-nav-btn:active:not(:disabled) {
+    transform: translate(1px, 1px);
+    box-shadow: var(--press-shadow-active);
+}
+
+.header-nav-btn:disabled {
+    opacity: 0.3;
+    cursor: default;
+    box-shadow: none;
+    border-color: var(--edge-light);
+}
+
 .content-subtitle {
     color: var(--text-secondary);
     font-size: 0.95rem;
