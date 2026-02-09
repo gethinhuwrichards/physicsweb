@@ -106,13 +106,13 @@ export default function App() {
     const onKeyDown = (e) => {
       const tag = document.activeElement?.tagName;
       if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || document.activeElement?.isContentEditable) return;
-      if (view === 'landing' || view === 'question') return;
-      if (e.key === 'ArrowLeft') { e.preventDefault(); handleBack(); }
-      else if (e.key === 'ArrowRight') { e.preventDefault(); handleForward(); }
+      if (view === 'question') return;
+      if (e.key === 'ArrowLeft' && view !== 'landing') { e.preventDefault(); handleBack(); }
+      else if (e.key === 'ArrowRight' && forwardStack.length > 0) { e.preventDefault(); handleForward(); }
     };
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
-  }, [view, handleBack, handleForward]);
+  }, [view, handleBack, handleForward, forwardStack]);
 
   const selectTopic = useCallback(
     (topicId) => {
@@ -283,19 +283,22 @@ export default function App() {
       <ThemeToggle />
       <FeedbackModal />
 
-      {view !== 'landing' && view !== 'question' && (
+      {(view !== 'landing' || forwardStack.length > 0) && view !== 'question' && (
         <header>
-          <div className="header-top-row">
-            <Breadcrumb items={breadcrumbItems} />
-          </div>
+          {view !== 'landing' && (
+            <div className="header-top-row">
+              <Breadcrumb items={breadcrumbItems} />
+            </div>
+          )}
           <div className="header-title-row">
-            <button className="header-nav-btn" onClick={handleBack} aria-label="Go back">
+            <button className="header-nav-btn" onClick={handleBack}
+                    disabled={view === 'landing'} aria-label="Go back">
               <svg viewBox="0 0 20 20" fill="none">
                 <path d="M12.5 4L6.5 10l6 6" stroke="currentColor" strokeWidth="2.2"
                       strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </button>
-            {getHeaderTitle() && <h1>{getHeaderTitle()}</h1>}
+            {view !== 'landing' && getHeaderTitle() && <h1>{getHeaderTitle()}</h1>}
             <button className="header-nav-btn" onClick={handleForward}
                     disabled={forwardStack.length === 0} aria-label="Go forward">
               <svg viewBox="0 0 20 20" fill="none">
