@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import ErrorBoundary from './components/ErrorBoundary';
 import LandingPage from './components/LandingPage';
 import TopicSelection from './components/TopicSelection';
@@ -372,6 +373,7 @@ export default function App() {
           mainTopicName={mainTopic?.name || ''}
         />
       )}
+      <Analytics />
     </ErrorBoundary>
   );
 }
