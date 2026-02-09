@@ -2023,6 +2023,7 @@ body:has(.has-figure-sidebar) {
 .self-marking-panel-scroll {
     flex: 1;
     overflow-y: auto;
+    padding-top: clamp(0.75rem, 2vw, 1rem);
     padding-bottom: clamp(1rem, 3vw, 1.75rem);
 }
 
