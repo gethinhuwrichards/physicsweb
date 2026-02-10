@@ -996,27 +996,32 @@ header h1 {
     align-items: center;
     justify-content: center;
     background: none;
-    border: none;
+    border: 1.5px solid var(--edge);
     color: var(--text-secondary);
     cursor: pointer;
     padding: 0;
     border-radius: 50%;
-    transition: color 0.15s, background 0.15s;
+    height: 1.8rem;
+    width: 1.8rem;
     flex-shrink: 0;
-    height: 1.35rem;
-    width: 1.35rem;
-    position: relative;
-    top: 0.15rem;
+    box-shadow: var(--press-shadow-sm);
+    transition: color 0.15s, background 0.15s, transform 120ms, box-shadow 120ms;
 }
 
 .question-back-btn svg {
-    width: 1.35rem;
-    height: 1.35rem;
+    width: 60%;
+    height: 60%;
 }
 
 .question-back-btn:hover {
     color: var(--accent-blue);
-    background: var(--bg-secondary);
+    background: var(--bg-surface-alt);
+    transform: translateY(-1px);
+}
+
+.question-back-btn:active {
+    transform: translate(1px, 1px);
+    box-shadow: none;
 }
 
 .question-header {
@@ -2033,7 +2038,7 @@ body:has(.has-figure-sidebar) {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 18%;
+    padding-bottom: 6%;
     background: var(--bg-body);
     pointer-events: none;
 }
@@ -2838,8 +2843,12 @@ body:has(.has-figure-sidebar) {
 }
 
 .marking-point-row.locked {
-    opacity: 0.75;
-    background: var(--bg-surface-alt);
+    background: var(--bg-surface);
+}
+
+.marking-point-row.locked .mark-btn-wrapper:has(.mark-tick:not(.selected)),
+.marking-point-row.locked .mark-btn-wrapper:has(.mark-cross:not(.selected)) {
+    visibility: hidden;
 }
 
 .marking-point-row.trace-border {
@@ -4734,16 +4743,16 @@ body:has(.has-figure-sidebar) {
 }
 
 .landing-cta-btn {
-    font-size: 1.1rem;
-    font-weight: 800;
+    font-size: 1.3rem;
+    font-weight: 700;
     color: var(--text-on-accent);
     background: var(--accent-blue);
-    border: 1.5px solid rgba(0, 0, 0, 0.15);
+    border: 1.5px solid var(--edge);
     padding: 14px 48px;
     border-radius: 999px;
     cursor: pointer;
     letter-spacing: 0.01em;
-    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: var(--press-shadow-sm);
     transition: transform 120ms ease, box-shadow 120ms ease, background 0.15s;
     user-select: none;
     touch-action: manipulation;
@@ -4903,14 +4912,14 @@ body.landing-active header {
     flex: 1;
     white-space: nowrap;
     padding: 0.875rem 2rem;
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: var(--text-on-accent);
     background: var(--accent-blue);
-    border: 1.5px solid rgba(0, 0, 0, 0.15);
+    border: 1.5px solid var(--edge);
     border-radius: 999px;
     cursor: pointer;
-    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: var(--press-shadow-sm);
     transition: transform 120ms, box-shadow 120ms, background 0.15s;
     text-align: center;
 }

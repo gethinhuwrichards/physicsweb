@@ -60,7 +60,7 @@ export default function MarkingPointRow({ point, decision, onDecide, locked, awa
               disabled={isAwardDisabled}
               aria-label="Award"
             >&#10003;</button>
-            <span className="mark-btn-label">Award</span>
+            <span className="mark-btn-label">{isLocked ? 'Correct' : 'Award'}</span>
           </div>
           <div className="mark-btn-wrapper">
             <button
@@ -69,7 +69,7 @@ export default function MarkingPointRow({ point, decision, onDecide, locked, awa
               disabled={isLocked}
               aria-label="Deny"
             >&#10007;</button>
-            <span className="mark-btn-label">Deny</span>
+            <span className="mark-btn-label">{isLocked ? 'Wrong' : 'Deny'}</span>
           </div>
         </div>
       </div>
