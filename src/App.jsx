@@ -263,7 +263,7 @@ export default function App() {
   }
 
   const getHeaderTitle = () => {
-    if (view === 'topics') return 'Physics';
+    if (view === 'topics') return 'GCSE Physics';
     if (view === 'subtopics') return mainTopic?.name || 'Choose a Subtopic';
     if (view === 'questions') return subtopic?.name || 'Choose a Question';
     if (view === 'question') return '';

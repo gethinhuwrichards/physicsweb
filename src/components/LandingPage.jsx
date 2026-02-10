@@ -47,7 +47,7 @@ export default function LandingPage({ onStart }) {
         <p className="landing-select-label" ref={selectLabelRef}>Select a subject</p>
         <div className="landing-subjects" ref={subjectsRef}>
           <button className="landing-cta-btn" onClick={onStart}>
-            Physics
+            GCSE Physics
           </button>
         </div>
         <div className="landing-features" ref={explainerRef}>
