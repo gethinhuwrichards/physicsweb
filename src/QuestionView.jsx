@@ -302,7 +302,6 @@ export default function QuestionView({
   onReset,
   onSaveAnswers,
   onScoreReady,
-  onReportBug,
   savedState,
   subtopicName,
   mainTopicName,
@@ -463,7 +462,7 @@ export default function QuestionView({
         ref={containerRef}
         id="question-content-inner"
       >
-        <QuestionHeader title={question.title} totalMarks={totalMarks} onBack={onBack} onReportBug={onReportBug} />
+        <QuestionHeader title={question.title} totalMarks={totalMarks} onBack={onBack} />
 
         {question.parts.map((part, i) => {
           const diagramOffset = question.parts.slice(0, i).reduce(
@@ -553,7 +552,6 @@ export default function QuestionView({
           onNavigate={handleNavigate}
           onSubmitMarks={handleSubmitMarks}
           allPartsFullyDecided={allPartsFullyDecided}
-          onReportBug={onReportBug}
         />
       )}
 

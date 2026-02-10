@@ -188,8 +188,7 @@ html:has(.score-page-overlay) {
     overflow: hidden;
 }
 
-html:has(.self-marking-overlay) .theme-toggle,
-html:has(.score-page-overlay) .theme-toggle {
+html:has(.score-page-overlay) .top-right-buttons {
     display: none;
 }
 
@@ -334,20 +333,25 @@ header h1 {
 }
 
 
-/* ============ 5. Theme Toggle — Pressable Circle ============ */
+/* ============ 5. Top-Right Buttons (Theme + Bug Report) ============ */
 
-.theme-toggle {
+.top-right-buttons {
     position: fixed;
     top: 16px;
     right: 20px;
     z-index: 1000;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.top-btn {
     width: 42px;
     height: 42px;
     border-radius: 50%;
     border: 1.5px solid var(--edge);
     background: var(--bg-surface);
     color: var(--text-secondary);
-    font-size: 1.2rem;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -359,14 +363,18 @@ header h1 {
     touch-action: manipulation;
 }
 
-.theme-toggle:hover {
+.top-btn:hover {
     background: var(--bg-surface-alt);
     transform: translateY(-1px);
 }
 
-.theme-toggle:active {
+.top-btn:active {
     transform: translate(1px, 1px);
     box-shadow: var(--press-shadow-active);
+}
+
+.theme-btn {
+    font-size: 1.2rem;
 }
 
 
@@ -5034,11 +5042,18 @@ body.landing-active header {
         min-width: unset;
     }
 
-    .theme-toggle {
+    .top-right-buttons {
         top: 12px;
         right: 12px;
+        gap: 8px;
+    }
+
+    .top-btn {
         width: 38px;
         height: 38px;
+    }
+
+    .theme-btn {
         font-size: 1rem;
     }
 

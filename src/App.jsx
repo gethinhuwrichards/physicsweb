@@ -7,7 +7,7 @@ import QuestionList from './components/QuestionList';
 import FeedbackModal from './components/FeedbackModal';
 import BugReportModal from './components/BugReportModal';
 import Breadcrumb from './components/Breadcrumb';
-import ThemeToggle from './components/ThemeToggle';
+import SettingsDropdown from './components/SettingsDropdown';
 import QuestionView from './QuestionView';
 import {
   getQuestionScores,
@@ -280,7 +280,7 @@ export default function App() {
 
   return (
     <ErrorBoundary>
-      <ThemeToggle />
+      <SettingsDropdown onReportBug={view === 'question' && currentQuestion ? () => setBugReportOpen(true) : null} />
       <FeedbackModal />
 
       {(view !== 'landing' || forwardStack.length > 0) && view !== 'question' && (
@@ -356,7 +356,6 @@ export default function App() {
                 onReset={handleReset}
                 onSaveAnswers={handleSaveAnswers}
                 onScoreReady={handleScoreReady}
-                onReportBug={() => setBugReportOpen(true)}
                 savedState={savedState}
                 subtopicName={subtopic?.name || ''}
                 mainTopicName={mainTopic?.name || ''}

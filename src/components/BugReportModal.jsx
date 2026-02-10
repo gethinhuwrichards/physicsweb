@@ -1,10 +1,11 @@
 import React, { useState, useRef } from 'react';
 
 const CATEGORIES = [
-  'Question displays incorrectly',
-  'Mark scheme displays incorrectly',
-  'Question makes no sense',
   'Image or diagram is broken/missing',
+  'Mark scheme is wrong',
+  'Marking evaluates incorrectly',
+  'Question displays incorrectly',
+  'Question makes no sense',
   'Another issue',
 ];
 

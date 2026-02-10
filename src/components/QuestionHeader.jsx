@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function QuestionHeader({ title, totalMarks, onBack, onReportBug }) {
+export default function QuestionHeader({ title, totalMarks, onBack }) {
   return (
     <div className="question-header">
       <div className="question-header-title-row">
@@ -14,11 +14,6 @@ export default function QuestionHeader({ title, totalMarks, onBack, onReportBug 
           )}
           <h2>{title}</h2>
         </div>
-        {onReportBug && (
-          <button className="bug-report-btn" onClick={onReportBug}>
-            Report Bug
-          </button>
-        )}
       </div>
       <p className="total-marks">Total: {totalMarks} mark{totalMarks !== 1 ? 's' : ''}</p>
     </div>

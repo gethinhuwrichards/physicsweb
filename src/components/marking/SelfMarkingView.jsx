@@ -16,7 +16,6 @@ export default function SelfMarkingView({
   onNavigate,
   onSubmitMarks,
   allPartsFullyDecided,
-  onReportBug,
 }) {
   const partIndex = reviewParts[currentSelfMarkIdx];
   const part = question.parts[partIndex];
@@ -115,8 +114,6 @@ export default function SelfMarkingView({
     : totalScore >= totalMarks
       ? 'score-full'
       : 'score-partial';
-
-  const handleReportBug = onReportBug || (() => {});
 
   // Track whether point 1 has ever been decided (prevents trace replay on un-click)
   const [hasDecidedFirst, setHasDecidedFirst] = useState(false);
@@ -560,9 +557,6 @@ export default function SelfMarkingView({
           </span>
         </div>
         <div className="self-marking-header-right">
-          <button className="bug-report-btn self-marking-report-btn" onClick={handleReportBug}>
-            Report Bug
-          </button>
         </div>
       </div>
 
