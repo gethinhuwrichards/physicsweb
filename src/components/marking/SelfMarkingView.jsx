@@ -61,6 +61,21 @@ export default function SelfMarkingView({
     if (isLast) setHasVisitedLast(true);
   }, [isLast]);
 
+  // Animation entry state
+  const [animStage, setAnimStage] = useState(() => {
+    if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return 'ready';
+    return 'intro';
+  });
+
+  useEffect(() => {
+    if (animStage === 'ready') return;
+    const t1 = setTimeout(() => setAnimStage('popping'), 1200);
+    const t2 = setTimeout(() => setAnimStage('blank'), 1800);
+    const t3 = setTimeout(() => setAnimStage('fading'), 2100);
+    const t4 = setTimeout(() => setAnimStage('ready'), 3000);
+    return () => { clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); clearTimeout(t4); };
+  }, []);
+
   // Delayed pulse for auto-marked parts
   const [delayedPulse, setDelayedPulse] = useState(false);
   useEffect(() => {
@@ -78,6 +93,7 @@ export default function SelfMarkingView({
   // Keyboard navigation: left/right arrow keys
   useEffect(() => {
     const handleKey = (e) => {
+      if (animStage !== 'ready') return;
       if (e.key === 'ArrowLeft' && !isFirst) {
         onNavigate('back');
       } else if (e.key === 'ArrowRight' && !isLast && currentAllDecided) {
@@ -86,7 +102,7 @@ export default function SelfMarkingView({
     };
     window.addEventListener('keydown', handleKey);
     return () => window.removeEventListener('keydown', handleKey);
-  }, [isFirst, isLast, currentAllDecided, onNavigate]);
+  }, [isFirst, isLast, currentAllDecided, onNavigate, animStage]);
 
   // Submit button pulse when it becomes available
   const canSubmit = allPartsFullyDecided && hasVisitedLast;
@@ -541,7 +557,14 @@ export default function SelfMarkingView({
   }
 
   return (
-    <div className="self-marking-overlay">
+    <div className="self-marking-overlay" data-anim-stage={animStage}>
+      {animStage !== 'ready' && (
+        <div className="sm-intro-curtain">
+          {(animStage === 'intro' || animStage === 'popping') && (
+            <span className="sm-intro-title">Review Mode</span>
+          )}
+        </div>
+      )}
       <div className={`self-marking-header${isAutoMarked ? ' auto-marked-header' : ''}`}>
         <div className="self-marking-header-left">
           <span className="self-marking-counter">

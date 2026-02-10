@@ -1961,6 +1961,118 @@ body:has(.has-figure-sidebar) {
     background: var(--bg-body);
 }
 
+/* --- Self-marking entry animation --- */
+
+@keyframes smHeaderSlideIn {
+    from { transform: translateY(-100%); opacity: 0; }
+    to   { transform: translateY(0);     opacity: 1; }
+}
+
+@keyframes smNavSlideIn {
+    from { transform: translateY(100%); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
+}
+
+@keyframes smTitleFadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to   { opacity: 1; transform: scale(1);    }
+}
+
+@keyframes smTitlePop {
+    0%   { transform: scale(1);   opacity: 1; }
+    50%  { transform: scale(1.15); opacity: 0.6; }
+    100% { transform: scale(1.3);  opacity: 0; }
+}
+
+@keyframes smCurtainFadeOut {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+@keyframes smPanelsFadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Splash curtain */
+.sm-intro-curtain {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-body);
+    pointer-events: none;
+}
+
+.sm-intro-title {
+    font-family: 'Merriweather', Georgia, 'Times New Roman', serif;
+    font-size: clamp(3rem, 7.5vw, 5.25rem);
+    font-weight: 300;
+    color: #000;
+    letter-spacing: -0.01em;
+}
+
+/* Header/nav above curtain during animation */
+.self-marking-overlay:not([data-anim-stage="ready"]) .self-marking-header,
+.self-marking-overlay:not([data-anim-stage="ready"]) .self-marking-nav {
+    position: relative;
+    z-index: 20;
+}
+
+/* Prevent snap-back when intro animation rule detaches */
+.self-marking-overlay:not([data-anim-stage="intro"]) .self-marking-header,
+.self-marking-overlay:not([data-anim-stage="intro"]) .self-marking-nav {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Stage: intro (0–1200ms) */
+[data-anim-stage="intro"] .self-marking-header {
+    animation: smHeaderSlideIn 1200ms ease both;
+}
+
+[data-anim-stage="intro"] .self-marking-nav {
+    animation: smNavSlideIn 1200ms ease both;
+}
+
+[data-anim-stage="intro"] .sm-intro-title {
+    animation: smTitleFadeIn 1200ms ease both;
+}
+
+[data-anim-stage="intro"] .self-marking-panels {
+    opacity: 0;
+}
+
+/* Stage: popping (1200–1800ms) */
+[data-anim-stage="popping"] .sm-intro-title {
+    animation: smTitlePop 600ms ease-out both;
+}
+
+[data-anim-stage="popping"] .self-marking-panels {
+    opacity: 0;
+}
+
+/* Stage: blank (1800–2100ms) — empty curtain, 300ms pause */
+[data-anim-stage="blank"] .self-marking-panels {
+    opacity: 0;
+}
+
+/* Stage: fading (2100–3000ms) — curtain fades, panels appear */
+[data-anim-stage="fading"] .sm-intro-curtain {
+    animation: smCurtainFadeOut 900ms ease-out both;
+}
+
+[data-anim-stage="fading"] .self-marking-panels {
+    animation: smPanelsFadeIn 900ms ease both;
+}
+
+/* Stage: ready */
+[data-anim-stage="ready"] .self-marking-panels {
+    opacity: 1;
+}
+
 
 /* --- Self-marking header (frosted glass bar) --- */
 
@@ -5001,6 +5113,10 @@ body.landing-active header {
 /* ---------- Mobile (max-width: 600px) ---------- */
 
 @media (max-width: 600px) {
+    .sm-intro-title {
+        font-size: clamp(2.25rem, 12vw, 3.75rem);
+    }
+
     .breadcrumb-link,
     .breadcrumb-current {
         font-size: 0.95rem;
