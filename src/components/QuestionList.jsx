@@ -98,7 +98,7 @@ export default function QuestionList({
                     </div>
                     <button
                       className="question-reset-btn"
-                      onClick={(e) => handleResetClick(e, q.id)}
+                      onClick={(e) => { e.stopPropagation(); setPendingResetId(q.id); setShowResetAll(false); }}
                     >
                       Reset
                     </button>

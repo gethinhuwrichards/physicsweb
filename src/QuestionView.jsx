@@ -505,7 +505,7 @@ export default function QuestionView({
 
         {state.phase === 'answering' && (
           <button className="submit-btn" onClick={handleEnterMarking}>
-            Lock answers and mark
+            Lock Answers & Mark
           </button>
         )}
 
