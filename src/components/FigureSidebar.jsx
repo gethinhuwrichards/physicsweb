@@ -5,8 +5,10 @@ export default function FigureSidebar({
   tables,
   onFigureClick,
   onTableClick,
+  onEquationsClick,
   activeFigure,
   activeTable,
+  activeEquations,
 }) {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -20,6 +22,11 @@ export default function FigureSidebar({
     setDrawerOpen(false);
   };
 
+  const handleEqClick = () => {
+    if (onEquationsClick) onEquationsClick();
+    setDrawerOpen(false);
+  };
+
   useEffect(() => {
     if (!drawerOpen) return;
     const handleKey = (e) => {
@@ -29,12 +36,12 @@ export default function FigureSidebar({
     return () => window.removeEventListener('keydown', handleKey);
   }, [drawerOpen]);
 
-  const totalAssets = figures.length + tables.length;
-  const triggerLabel = figures.length > 0 && tables.length > 0
-    ? `Figures & Tables (${totalAssets})`
-    : figures.length > 0
-      ? `Figures (${figures.length})`
-      : `Tables (${tables.length})`;
+  const totalAssets = figures.length + tables.length + (onEquationsClick ? 1 : 0);
+  const parts = [];
+  if (figures.length > 0) parts.push(`Figures`);
+  if (tables.length > 0) parts.push(`Tables`);
+  if (onEquationsClick) parts.push(`Equations`);
+  const triggerLabel = `${parts.join(' & ')} (${totalAssets})`;
 
   return (
     <div className={`figure-sidebar ${drawerOpen ? 'drawer-open' : ''}`}>
@@ -47,9 +54,27 @@ export default function FigureSidebar({
       </div>
 
       <div className="figure-sidebar-thumbs">
+        {onEquationsClick && (
+          <>
+            <div className="figure-sidebar-title">Equations</div>
+            <button
+              className={`table-thumb ${activeEquations ? 'active' : ''}`}
+              onClick={handleEqClick}
+              aria-label="View Equations Sheet"
+            >
+              <span className="table-thumb-icon">
+                <svg viewBox="0 0 16 16" fill="currentColor" width="14" height="14">
+                  <path d="M2 1.5A1.5 1.5 0 0 1 3.5 0h9A1.5 1.5 0 0 1 14 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-13zM4 4h8v1H4V4zm0 3h8v1H4V7zm0 3h5v1H4v-1z"/>
+                </svg>
+              </span>
+              <span className="table-thumb-label">Equation Sheet</span>
+            </button>
+          </>
+        )}
+
         {figures.length > 0 && (
           <>
-            <div className="figure-sidebar-title">Figures</div>
+            <div className={`figure-sidebar-title${onEquationsClick ? ' sidebar-title-tables' : ''}`}>Figures</div>
             {figures.map((fig) => (
               <button
                 key={fig.src}
@@ -66,7 +91,7 @@ export default function FigureSidebar({
 
         {tables.length > 0 && (
           <>
-            <div className={`figure-sidebar-title${figures.length > 0 ? ' sidebar-title-tables' : ''}`}>Tables</div>
+            <div className={`figure-sidebar-title${figures.length > 0 || onEquationsClick ? ' sidebar-title-tables' : ''}`}>Tables</div>
             {tables.map((tbl) => (
               <button
                 key={tbl.index}

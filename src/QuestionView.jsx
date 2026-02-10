@@ -345,20 +345,31 @@ export default function QuestionView({
 
   const [viewerIndex, setViewerIndex] = useState(null);
   const [tableViewerIndex, setTableViewerIndex] = useState(null);
+  const [eqPage, setEqPage] = useState(null);
+  const EQ_TOTAL_PAGES = 2;
 
   const handleFigureClick = useCallback((figIndex) => {
     setTableViewerIndex(null);
+    setEqPage(null);
     setViewerIndex(figIndex);
   }, []);
 
   const handleTableClick = useCallback((tblIndex) => {
     setViewerIndex(null);
+    setEqPage(null);
     setTableViewerIndex(tblIndex);
+  }, []);
+
+  const handleEquationsClick = useCallback(() => {
+    setViewerIndex(null);
+    setTableViewerIndex(null);
+    setEqPage(1);
   }, []);
 
   const handleViewerClose = useCallback(() => {
     setViewerIndex(null);
     setTableViewerIndex(null);
+    setEqPage(null);
   }, []);
 
   const handleViewerPrev = useCallback(() => {
@@ -382,6 +393,7 @@ export default function QuestionView({
     if (state.phase !== 'answering' && state.phase !== 'complete') {
       setViewerIndex(null);
       setTableViewerIndex(null);
+      setEqPage(null);
     }
   }, [state.phase]);
 
@@ -454,7 +466,7 @@ export default function QuestionView({
   // Calculate total score for final panel
   const totalScore = Object.values(state.partScores).reduce((sum, s) => sum + s, 0);
 
-  const showSidebar = (figures.length > 0 || tables.length > 0) && (state.phase === 'answering' || state.phase === 'complete');
+  const showSidebar = state.phase === 'answering' || state.phase === 'complete';
 
   return (
     <>
@@ -513,8 +525,10 @@ export default function QuestionView({
           tables={tables}
           onFigureClick={handleFigureClick}
           onTableClick={handleTableClick}
+          onEquationsClick={handleEquationsClick}
           activeFigure={viewerIndex}
           activeTable={tableViewerIndex}
+          activeEquations={eqPage !== null}
         />
       )}
 
@@ -535,6 +549,17 @@ export default function QuestionView({
           onClose={handleViewerClose}
           onPrev={tableViewerIndex > 0 ? handleTableViewerPrev : null}
           onNext={tableViewerIndex < tables.length - 1 ? handleTableViewerNext : null}
+        />
+      )}
+
+      {eqPage !== null && (
+        <FigureViewer
+          pdfSrc="/equationssheet.pdf"
+          pdfPage={eqPage}
+          label={`Equation Sheet — Page ${eqPage} of ${EQ_TOTAL_PAGES}`}
+          onClose={handleViewerClose}
+          onPrev={eqPage > 1 ? () => setEqPage(p => p - 1) : null}
+          onNext={eqPage < EQ_TOTAL_PAGES ? () => setEqPage(p => p + 1) : null}
         />
       )}
 
