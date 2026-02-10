@@ -197,7 +197,7 @@ html:has(.figure-viewer-overlay) {
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
         Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     line-height: 1.65;
     color: var(--text-primary);
@@ -206,6 +206,26 @@ body {
     max-width: 920px;
     margin: 0 auto;
     transition: background-color 0.3s, color 0.3s;
+}
+
+h1, h2, h3,
+header h1,
+.breadcrumb-link,
+.breadcrumb-current,
+.landing-title,
+.landing-strapline,
+.landing-select-label,
+.landing-cta-btn,
+.landing-feature-card h3,
+.topic-card-name,
+.subtopic-card-name,
+.question-header h2,
+.score-page-value,
+.score-page-label,
+.self-marking-part-label,
+.content-subtitle {
+    font-family: 'Merriweather', Georgia, 'Times New Roman', serif;
+    font-weight: 300;
 }
 
 /* Scrollbar styling */
@@ -252,7 +272,7 @@ header {
 
 header h1 {
     color: var(--accent-blue);
-    font-size: 1.4rem;
+    font-size: 1.82rem;
     font-weight: 800;
     letter-spacing: -0.03em;
 }
@@ -303,7 +323,7 @@ header h1 {
 
 .content-subtitle {
     color: var(--text-secondary);
-    font-size: 0.95rem;
+    font-size: 1.24rem;
     font-weight: 500;
     margin-bottom: clamp(0.75rem, 2vw, 1.25rem);
 }
@@ -371,6 +391,10 @@ header h1 {
 .top-btn:active {
     transform: translate(1px, 1px);
     box-shadow: var(--press-shadow-active);
+}
+
+.bug-btn {
+    color: #e07070;
 }
 
 .theme-btn {
@@ -460,7 +484,7 @@ header h1 {
 
 .section-header-row h2 {
     margin: 0;
-    font-size: 1.3rem;
+    font-size: 1.69rem;
     font-weight: 800;
     letter-spacing: -0.02em;
 }
@@ -515,15 +539,15 @@ header h1 {
 
 .topic-btn {
     padding: clamp(1.25rem, 3vw, 1.75rem) clamp(1rem, 2.5vw, 1.5rem);
-    font-size: 1.05rem;
+    font-size: 1.37rem;
     background: var(--bg-surface);
     color: var(--text-primary);
     border: 1.5px solid var(--edge);
     border-radius: var(--press-radius);
     cursor: pointer;
     box-shadow: var(--press-shadow);
+    text-align: center;
     transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
-    text-align: left;
     user-select: none;
     touch-action: manipulation;
 }
@@ -570,15 +594,15 @@ header h1 {
 
 .subtopic-btn {
     padding: clamp(1rem, 2.5vw, 1.375rem) clamp(0.875rem, 2vw, 1.25rem);
-    font-size: 1rem;
+    font-size: 1.3rem;
     background: var(--bg-surface);
     color: var(--text-primary);
     border: 1.5px solid var(--edge);
     border-radius: var(--press-radius);
     cursor: pointer;
     box-shadow: var(--press-shadow);
+    text-align: center;
     transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
-    text-align: left;
     user-select: none;
     touch-action: manipulation;
 }
@@ -974,7 +998,7 @@ header h1 {
 
 .question-header h2 {
     color: var(--text-primary);
-    font-size: 1.35rem;
+    font-size: 1.76rem;
     font-weight: 800;
     margin-bottom: 6px;
     letter-spacing: -0.02em;
@@ -1055,6 +1079,7 @@ header h1 {
     color: var(--accent-blue);
     font-size: 1.1rem;
     letter-spacing: -0.01em;
+    margin-right: 0.5em;
 }
 
 .part-label-standalone {
@@ -1403,29 +1428,11 @@ body:has(.has-figure-sidebar) {
     overflow-x: auto;
 }
 
-.figure-viewer-content-pdf {
-    max-width: 90vw;
-    max-height: 90vh;
+.equation-sheet-viewer img {
+    max-width: 80vw;
+    max-height: calc(80vh - 100px);
 }
 
-.pdf-page-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 200px;
-}
-
-.pdf-page-canvas {
-    max-width: 100%;
-    max-height: 78vh;
-    border-radius: 4px;
-}
-
-.pdf-loading {
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    padding: 2rem;
-}
 
 .viewer-table {
     width: 100%;
@@ -4498,7 +4505,7 @@ body:has(.has-figure-sidebar) {
 }
 
 .landing-title {
-    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-size: clamp(2.6rem, 7.8vw, 4.55rem);
     font-weight: 800;
     color: var(--accent-blue);
     letter-spacing: -0.04em;
@@ -4507,7 +4514,7 @@ body:has(.has-figure-sidebar) {
 }
 
 .landing-strapline {
-    font-size: 1.15rem;
+    font-size: 1.5rem;
     color: var(--text-secondary);
     margin-bottom: clamp(1.5rem, 4vw, 2rem);
     line-height: 1.6;
@@ -4611,7 +4618,7 @@ body.landing-active header {
 }
 
 .landing-feature-card h3 {
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: 800;
     color: var(--text-primary);
     margin-bottom: 8px;
@@ -4659,7 +4666,7 @@ body.landing-active header {
 }
 
 .score-page-value {
-    font-size: clamp(80px, 15vw, 150px);
+    font-size: clamp(104px, 19.5vw, 195px);
     font-weight: 800;
     color: var(--text-primary);
     letter-spacing: -0.03em;
@@ -4688,7 +4695,7 @@ body.landing-active header {
 }
 
 .score-page-label {
-    font-size: clamp(40px, 8vw, 75px);
+    font-size: clamp(52px, 10.4vw, 98px);
     color: var(--text-secondary);
     font-weight: 500;
 }
@@ -4898,11 +4905,11 @@ body.landing-active header {
     }
 
     .landing-title {
-        font-size: 2.75rem;
+        font-size: 3.58rem;
     }
 
     .landing-strapline {
-        font-size: 1rem;
+        font-size: 1.3rem;
         margin-bottom: 1.5rem;
     }
 
@@ -4915,7 +4922,7 @@ body.landing-active header {
     }
 
     .landing-feature-card h3 {
-        font-size: 0.95rem;
+        font-size: 1.24rem;
     }
 
     .landing-feature-card p {
@@ -4944,11 +4951,11 @@ body.landing-active header {
     }
 
     .score-page-value {
-        font-size: clamp(60px, 18vw, 100px);
+        font-size: clamp(78px, 23.4vw, 130px);
     }
 
     .score-page-label {
-        font-size: clamp(30px, 10vw, 50px);
+        font-size: clamp(39px, 13vw, 65px);
     }
 
     .score-page-actions {

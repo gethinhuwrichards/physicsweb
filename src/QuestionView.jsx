@@ -346,7 +346,7 @@ export default function QuestionView({
   const [viewerIndex, setViewerIndex] = useState(null);
   const [tableViewerIndex, setTableViewerIndex] = useState(null);
   const [eqPage, setEqPage] = useState(null);
-  const EQ_TOTAL_PAGES = 2;
+  const EQ_PAGES = ['images/equationssheet_page-0001.jpg', 'images/equationssheet_page-0002.jpg'];
 
   const handleFigureClick = useCallback((figIndex) => {
     setTableViewerIndex(null);
@@ -363,7 +363,7 @@ export default function QuestionView({
   const handleEquationsClick = useCallback(() => {
     setViewerIndex(null);
     setTableViewerIndex(null);
-    setEqPage(1);
+    setEqPage(0);
   }, []);
 
   const handleViewerClose = useCallback(() => {
@@ -554,12 +554,12 @@ export default function QuestionView({
 
       {eqPage !== null && (
         <FigureViewer
-          pdfSrc="/equationssheet.pdf"
-          pdfPage={eqPage}
-          label={`Equation Sheet — Page ${eqPage} of ${EQ_TOTAL_PAGES}`}
+          src={EQ_PAGES[eqPage]}
+          className="equation-sheet-viewer"
+          label={`Equation Sheet — Page ${eqPage + 1} of ${EQ_PAGES.length}`}
           onClose={handleViewerClose}
-          onPrev={eqPage > 1 ? () => setEqPage(p => p - 1) : null}
-          onNext={eqPage < EQ_TOTAL_PAGES ? () => setEqPage(p => p + 1) : null}
+          onPrev={eqPage > 0 ? () => setEqPage(p => p - 1) : null}
+          onNext={eqPage < EQ_PAGES.length - 1 ? () => setEqPage(p => p + 1) : null}
         />
       )}
 
