@@ -4657,16 +4657,15 @@ body.landing-active header {
 }
 
 .score-page-score {
-    text-align: center;
     display: flex;
     align-items: baseline;
-    justify-content: center;
-    gap: clamp(1rem, 3vw, 2rem);
+    gap: clamp(1rem, 3vw, 2.5rem);
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .score-page-value {
-    font-size: clamp(104px, 19.5vw, 195px);
+    font-size: clamp(78px, 14.6vw, 146px);
     font-weight: 800;
     color: var(--text-primary);
     letter-spacing: -0.03em;
@@ -4679,7 +4678,8 @@ body.landing-active header {
 .score-page-emoji {
     font-size: 3rem;
     width: 100%;
-    margin-top: -0.5rem;
+    text-align: center;
+    margin-top: -0.25rem;
 }
 
 .score-page-value.score-color-full {
@@ -4695,7 +4695,7 @@ body.landing-active header {
 }
 
 .score-page-label {
-    font-size: clamp(52px, 10.4vw, 98px);
+    font-size: clamp(39px, 7.8vw, 73px);
     color: var(--text-secondary);
     font-weight: 500;
 }
@@ -4947,15 +4947,21 @@ body.landing-active header {
     .score-page-score {
         flex-direction: column;
         align-items: center;
+        flex-wrap: wrap;
         gap: 0;
     }
 
+    .score-page-emoji {
+        width: 100%;
+        margin-top: -0.5rem;
+    }
+
     .score-page-value {
-        font-size: clamp(78px, 23.4vw, 130px);
+        font-size: clamp(58px, 17.5vw, 97px);
     }
 
     .score-page-label {
-        font-size: clamp(39px, 13vw, 65px);
+        font-size: clamp(29px, 9.75vw, 49px);
     }
 
     .score-page-actions {
