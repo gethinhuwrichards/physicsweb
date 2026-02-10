@@ -17,8 +17,8 @@
     --bg-input-focus: #f5f6fa;
 
     /* Text */
-    --text-primary: #1a1d2e;
-    --text-secondary: #5c5f78;
+    --text-primary: #2B2B2B;
+    --text-secondary: #6B6B6B;
     --text-tertiary: #8e92a8;
     --text-on-accent: #ffffff;
 
@@ -73,6 +73,8 @@
     --press-shadow: 3px 3px 0 var(--edge);
     --press-shadow-sm: 2px 2px 0 var(--edge);
     --press-shadow-active: 1px 1px 0 var(--edge);
+    --border-card: #6B6B6B;
+    --press-shadow-card: 3px 3px 0 var(--border-card);
     --press-radius: 16px;
     --press-radius-sm: 12px;
 
@@ -157,6 +159,8 @@
     --press-shadow: 3px 3px 0 var(--edge);
     --press-shadow-sm: 2px 2px 0 var(--edge);
     --press-shadow-active: 1px 1px 0 var(--edge);
+    --border-card: #2a2d3a;
+    --press-shadow-card: 3px 3px 0 var(--border-card);
 
     /* Scrollbar */
     --scrollbar-track: var(--bg-body);
@@ -246,6 +250,15 @@ header h1,
     background: var(--scrollbar-thumb-hover);
 }
 
+/* Instant snap-down on press — no transition delay */
+button:active,
+.question-item:active,
+.landing-feature-card:active,
+.matchup-box:active,
+.self-marking-submit-group:active {
+    transition: none !important;
+}
+
 
 /* ============ 4. Header — Sticky Frosted Glass ============ */
 
@@ -306,12 +319,13 @@ header h1 {
 .header-nav-btn:hover:not(:disabled) {
     color: var(--accent-blue);
     background: var(--bg-surface-alt);
-    transform: translateY(-1px);
+    transform: translate(1px, 1px);
+    box-shadow: none;
 }
 
 .header-nav-btn:active:not(:disabled) {
     transform: translate(1px, 1px);
-    box-shadow: var(--press-shadow-active);
+    box-shadow: none;
 }
 
 .header-nav-btn:disabled {
@@ -390,7 +404,7 @@ header h1 {
 
 .top-btn:active {
     transform: translate(1px, 1px);
-    box-shadow: var(--press-shadow-active);
+    box-shadow: none;
 }
 
 .bug-btn {
@@ -513,7 +527,7 @@ header h1 {
 
 .reset-all-btn:active {
     transform: translate(1px, 1px);
-    box-shadow: var(--press-shadow-active);
+    box-shadow: none;
 }
 /* ============================================================
    PRESSABLE SLATE DESIGN SYSTEM — Part 2
@@ -542,10 +556,10 @@ header h1 {
     font-size: 1.37rem;
     background: var(--bg-surface);
     color: var(--text-primary);
-    border: 1.5px solid var(--edge);
+    border: 1.5px solid var(--border-card);
     border-radius: var(--press-radius);
     cursor: pointer;
-    box-shadow: var(--press-shadow);
+    box-shadow: var(--press-shadow-card);
     text-align: center;
     transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
     user-select: none;
@@ -554,12 +568,13 @@ header h1 {
 
 .topic-btn:hover:not(:disabled) {
     background: var(--bg-surface-alt);
-    transform: translateY(-2px);
+    transform: translate(2px, 2px);
+    box-shadow: none;
 }
 
 .topic-btn:active:not(:disabled) {
     transform: translate(2px, 2px);
-    box-shadow: var(--press-shadow-active);
+    box-shadow: none;
 }
 
 .topic-btn-empty {
@@ -597,10 +612,10 @@ header h1 {
     font-size: 1.3rem;
     background: var(--bg-surface);
     color: var(--text-primary);
-    border: 1.5px solid var(--edge);
+    border: 1.5px solid var(--border-card);
     border-radius: var(--press-radius);
     cursor: pointer;
-    box-shadow: var(--press-shadow);
+    box-shadow: var(--press-shadow-card);
     text-align: center;
     transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
     user-select: none;
@@ -609,12 +624,13 @@ header h1 {
 
 .subtopic-btn:hover:not(:disabled) {
     background: var(--bg-surface-alt);
-    transform: translateY(-2px);
+    transform: translate(2px, 2px);
+    box-shadow: none;
 }
 
 .subtopic-btn:active:not(:disabled) {
     transform: translate(2px, 2px);
-    box-shadow: var(--press-shadow-active);
+    box-shadow: none;
 }
 
 #no-subtopics-message {
@@ -636,8 +652,8 @@ header h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1.5px solid var(--edge);
-    box-shadow: var(--press-shadow-sm);
+    border: 1.5px solid var(--border-card);
+    box-shadow: 2px 2px 0 var(--border-card);
     transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
     user-select: none;
     touch-action: manipulation;
@@ -645,12 +661,13 @@ header h1 {
 
 .question-item:hover {
     background: var(--bg-surface-alt);
-    transform: translateY(-1px);
+    transform: translate(1px, 1px);
+    box-shadow: none;
 }
 
 .question-item:active {
     transform: translate(1px, 1px);
-    box-shadow: var(--press-shadow-active);
+    box-shadow: none;
 }
 
 .question-item .marks {
@@ -734,7 +751,7 @@ header h1 {
 
 .question-reset-btn:active {
     transform: translate(1px, 1px);
-    box-shadow: var(--press-shadow-active);
+    box-shadow: none;
 }
 
 
@@ -798,7 +815,7 @@ header h1 {
 
 .confirm-ok:active {
     transform: translate(1px, 1px);
-    box-shadow: 0.5px 0.5px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: none;
 }
 
 .confirm-cancel {
@@ -820,7 +837,7 @@ header h1 {
 
 .confirm-cancel:active {
     transform: translate(1px, 1px);
-    box-shadow: 0.5px 0.5px 0 var(--edge);
+    box-shadow: none;
 }
 
 
@@ -843,12 +860,13 @@ header h1 {
 
 .back-btn-fixed:hover {
     background: var(--bg-surface-alt);
-    transform: translateY(-1px);
+    transform: translate(1px, 1px);
+    box-shadow: none;
 }
 
 .back-btn-fixed:active {
     transform: translate(1px, 1px);
-    box-shadow: var(--press-shadow-active);
+    box-shadow: none;
 }
 
 .bottom-nav-row {
@@ -893,7 +911,7 @@ header h1 {
 
 .bug-report-btn:active {
     transform: translate(1px, 1px);
-    box-shadow: var(--press-shadow-active);
+    box-shadow: none;
 }
 
 
@@ -940,8 +958,8 @@ header h1 {
     background: var(--bg-surface);
     padding: clamp(1.25rem, 4vw, 2.25rem);
     border-radius: var(--press-radius);
-    border: 1.5px solid var(--edge);
-    box-shadow: var(--press-shadow);
+    border: 1.5px solid var(--border-card);
+    box-shadow: var(--press-shadow-card);
 }
 
 .question-header-title-row {
@@ -1223,9 +1241,9 @@ header h1 {
 #question-container.has-figure-sidebar #question-content-inner {
     padding: clamp(1.25rem, 4vw, 2.25rem);
     background: var(--bg-surface);
-    border: 1.5px solid var(--edge);
+    border: 1.5px solid var(--border-card);
     border-radius: var(--press-radius);
-    box-shadow: var(--press-shadow);
+    box-shadow: var(--press-shadow-card);
 }
 
 body:has(.has-figure-sidebar) {
@@ -1509,7 +1527,7 @@ body:has(.has-figure-sidebar) {
 
 .figure-viewer-nav:active {
     transform: translateY(-50%) translate(1px, 1px);
-    box-shadow: 0.5px 0.5px 0 var(--edge);
+    box-shadow: none;
 }
 
 .figure-viewer-prev {
@@ -1551,7 +1569,7 @@ body:has(.has-figure-sidebar) {
 
 .mc-option:active {
     transform: translate(1px, 1px);
-    box-shadow: var(--press-shadow-active);
+    box-shadow: none;
 }
 
 .mc-option input[type="radio"],
@@ -1753,7 +1771,7 @@ body:has(.has-figure-sidebar) {
 
 .submit-btn:active {
     transform: translate(2px, 2px);
-    box-shadow: 0.5px 0.5px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: none;
 }
 
 .submit-btn:disabled {
@@ -1812,7 +1830,7 @@ body:has(.has-figure-sidebar) {
 
 .bank-score-btn:active {
     transform: translate(1px, 1px);
-    box-shadow: 0.5px 0.5px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: none;
 }
 
 .marking-summary-buttons {
@@ -1841,7 +1859,7 @@ body:has(.has-figure-sidebar) {
 
 .reset-question-btn:active {
     transform: translate(1px, 1px);
-    box-shadow: var(--press-shadow-active);
+    box-shadow: none;
 }
 
 
@@ -2207,9 +2225,9 @@ body:has(.has-figure-sidebar) {
     flex-direction: column;
     padding: 0 clamp(1rem, 3vw, 1.75rem);
     overflow: hidden;
-    border: 1.5px solid var(--edge);
+    border: 1.5px solid var(--border-card);
     border-radius: var(--press-radius);
-    box-shadow: var(--press-shadow);
+    box-shadow: var(--press-shadow-card);
     background: var(--bg-surface);
 }
 
@@ -2414,11 +2432,11 @@ body:has(.has-figure-sidebar) {
 }
 
 .self-marking-submit-group:has(.self-marking-submit:not(:disabled)):active .self-marking-submit {
-    box-shadow: var(--press-shadow-active);
+    box-shadow: none;
 }
 
 .self-marking-submit-group:has(.self-marking-submit:not(:disabled)):active .self-marking-score {
-    box-shadow: var(--press-shadow-active);
+    box-shadow: none;
 }
 
 /* When disabled: flat thin look, no shadows */
@@ -2458,7 +2476,7 @@ body:has(.has-figure-sidebar) {
 
 .self-marking-nav-btn:active:not(:disabled) {
     transform: translate(2px, 2px);
-    box-shadow: var(--press-shadow-active);
+    box-shadow: none;
 }
 
 .self-marking-nav-btn:disabled {
@@ -2940,7 +2958,7 @@ body:has(.has-figure-sidebar) {
 
 .mark-tick:active:not(:disabled) {
     transform: translate(1px, 1px);
-    box-shadow: 0.5px 0.5px 0 var(--color-correct);
+    box-shadow: none;
 }
 
 .mark-tick.selected {
@@ -2966,7 +2984,7 @@ body:has(.has-figure-sidebar) {
 
 .mark-cross:active:not(:disabled) {
     transform: translate(1px, 1px);
-    box-shadow: 0.5px 0.5px 0 var(--color-incorrect);
+    box-shadow: none;
 }
 
 .mark-cross.selected {
@@ -3549,7 +3567,7 @@ body:has(.has-figure-sidebar) {
 
 .matchup-box:active:not(.disabled):not(.linked) {
     transform: translate(1px, 1px);
-    box-shadow: var(--press-shadow-active);
+    box-shadow: none;
 }
 
 .matchup-box.selected {
@@ -3643,7 +3661,7 @@ body:has(.has-figure-sidebar) {
 
 .matchup-reset-btn.active:active {
     transform: translate(1px, 1px);
-    box-shadow: var(--press-shadow-active);
+    box-shadow: none;
 }
 
 /* Review Match-Up */
@@ -4453,7 +4471,7 @@ body:has(.has-figure-sidebar) {
 
 .feedback-submit-btn:active {
     transform: translate(1px, 1px);
-    box-shadow: 0.5px 0.5px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: none;
 }
 
 .feedback-skip-btn {
@@ -4476,7 +4494,7 @@ body:has(.has-figure-sidebar) {
 
 .feedback-skip-btn:active {
     transform: translate(1px, 1px);
-    box-shadow: var(--press-shadow-active);
+    box-shadow: none;
 }
 
 
@@ -4597,7 +4615,7 @@ body:has(.has-figure-sidebar) {
 
 .bugreport-submit-btn:active {
     transform: translate(1px, 1px);
-    box-shadow: 0.5px 0.5px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: none;
 }
 
 .bugreport-submit-btn:disabled {
@@ -4625,7 +4643,7 @@ body:has(.has-figure-sidebar) {
 
 .bugreport-cancel-btn:active {
     transform: translate(1px, 1px);
-    box-shadow: var(--press-shadow-active);
+    box-shadow: none;
 }
 /* ============================================================
    PRESSABLE SLATE DESIGN SYSTEM — Part 6
@@ -4722,12 +4740,13 @@ body:has(.has-figure-sidebar) {
 
 .landing-cta-btn:hover {
     background: var(--accent-blue-hover);
-    transform: translateY(-2px);
+    transform: translate(2px, 2px);
+    box-shadow: none;
 }
 
 .landing-cta-btn:active {
     transform: translate(2px, 2px);
-    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: none;
 }
 
 body.landing-active header {
@@ -4767,7 +4786,7 @@ body.landing-active header {
 
 .landing-feature-card:active {
     transform: translate(1px, 1px);
-    box-shadow: 0.5px 0.5px 0 var(--edge);
+    box-shadow: none;
 }
 
 .landing-feature-card h3 {
@@ -4892,7 +4911,7 @@ body.landing-active header {
 
 .score-page-btn-primary:active {
     transform: translate(1px, 1px);
-    box-shadow: 0.5px 0.5px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: none;
 }
 
 .score-page-secondary {
