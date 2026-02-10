@@ -69,10 +69,10 @@ export default function SelfMarkingView({
 
   useEffect(() => {
     if (animStage === 'ready') return;
-    const t1 = setTimeout(() => setAnimStage('popping'), 1200);
-    const t2 = setTimeout(() => setAnimStage('blank'), 1500);
-    const t3 = setTimeout(() => setAnimStage('fading'), 1700);
-    const t4 = setTimeout(() => setAnimStage('ready'), 3000);
+    const t1 = setTimeout(() => setAnimStage('popping'), 1500);
+    const t2 = setTimeout(() => setAnimStage('blank'), 1800);
+    const t3 = setTimeout(() => setAnimStage('fading'), 2000);
+    const t4 = setTimeout(() => setAnimStage('ready'), 3300);
     return () => { clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); clearTimeout(t4); };
   }, []);
 
@@ -568,7 +568,7 @@ export default function SelfMarkingView({
       <div className={`self-marking-header${isAutoMarked ? ' auto-marked-header' : ''}`}>
         <div className="self-marking-header-left">
           <span className="self-marking-counter">
-            Part ({part.partLabel}) &mdash; {currentSelfMarkIdx + 1} of {reviewParts.length}
+            {currentSelfMarkIdx + 1} of {reviewParts.length}
           </span>
         </div>
         <div className="self-marking-header-center">

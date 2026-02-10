@@ -357,7 +357,7 @@ header h1 {
 
 .top-right-buttons {
     position: fixed;
-    top: 16px;
+    top: 10px;
     right: 20px;
     z-index: 1000;
     display: flex;
@@ -1974,8 +1974,8 @@ body:has(.has-figure-sidebar) {
 }
 
 @keyframes smTitleFadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to   { opacity: 1; transform: translateY(0);    }
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 @keyframes smTitlePop {
@@ -2041,7 +2041,7 @@ body:has(.has-figure-sidebar) {
 }
 
 [data-anim-stage="intro"] .sm-intro-title {
-    animation: smTitleFadeIn 200ms ease both;
+    animation: smTitleFadeIn 400ms ease-out both;
 }
 
 [data-anim-stage="intro"] .self-marking-panels {
@@ -2221,7 +2221,7 @@ body:has(.has-figure-sidebar) {
 }
 
 .self-marking-left {
-    background: var(--bg-surface-alt);
+    background: var(--bg-surface);
 }
 
 .self-marking-right {
@@ -5228,7 +5228,7 @@ body.landing-active header {
     }
 
     .top-right-buttons {
-        top: 12px;
+        top: 6px;
         right: 12px;
         gap: 8px;
     }
