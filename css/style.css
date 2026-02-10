@@ -319,8 +319,7 @@ header h1 {
 .header-nav-btn:hover:not(:disabled) {
     color: var(--accent-blue);
     background: var(--bg-surface-alt);
-    transform: translate(1px, 1px);
-    box-shadow: none;
+    transform: translateY(-1px);
 }
 
 .header-nav-btn:active:not(:disabled) {
@@ -405,6 +404,18 @@ header h1 {
 .top-btn:active {
     transform: translate(1px, 1px);
     box-shadow: none;
+}
+
+.theme-btn:hover {
+    background: #0c0e16;
+    color: #e4e6ef;
+    border-color: #3d4260;
+}
+
+[data-theme="dark"] .theme-btn:hover {
+    background: #eef0f5;
+    color: #2B2B2B;
+    border-color: #6B6B6B;
 }
 
 .bug-btn {
@@ -1750,14 +1761,14 @@ body:has(.has-figure-sidebar) {
     width: 100%;
     padding: 16px;
     margin-top: 24px;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-weight: 700;
     background: var(--accent-blue);
     color: var(--text-on-accent);
-    border: 1.5px solid rgba(0, 0, 0, 0.15);
+    border: 1.5px solid var(--edge);
     border-radius: 999px;
     cursor: pointer;
-    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: var(--press-shadow-sm);
     transition: transform 120ms ease, box-shadow 120ms ease, background 0.15s;
     user-select: none;
     touch-action: manipulation;
