@@ -70,8 +70,8 @@ export default function SelfMarkingView({
   useEffect(() => {
     if (animStage === 'ready') return;
     const t1 = setTimeout(() => setAnimStage('popping'), 1200);
-    const t2 = setTimeout(() => setAnimStage('blank'), 1800);
-    const t3 = setTimeout(() => setAnimStage('fading'), 2100);
+    const t2 = setTimeout(() => setAnimStage('blank'), 1500);
+    const t3 = setTimeout(() => setAnimStage('fading'), 1700);
     const t4 = setTimeout(() => setAnimStage('ready'), 3000);
     return () => { clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); clearTimeout(t4); };
   }, []);
