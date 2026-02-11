@@ -605,6 +605,11 @@ export default function SelfMarkingView({
             )}
           </div>
           <div className="self-marking-panel-scroll">
+            {isAutoMarked && part.type === 'short-answer' && (
+              <div className="self-mark-hint-banner">
+                This question has been automarked. If the mark is incorrect, you may change it below.
+              </div>
+            )}
             {!isAutoMarked && isLevelsType && (
               <p className="levels-hint-text">
                 Award up to <strong>{part.marks} marks</strong> from the indicative content below. You do not need to decide every point.

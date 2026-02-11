@@ -108,6 +108,33 @@ function matchesKeywords(rawLower, keywords) {
 export function autoMarkShortAnswer(part, userAnswer) {
   const raw = (userAnswer || '').trim();
   const accepted = part.acceptedAnswers || [];
+
+  // Numerical short-answer: compare as numbers, skip fuzzy text matching
+  if (part.numerical) {
+    const cleaned = raw.replace(/,/g, '').replace(/\s+/g, '');
+    const student = parseFloat(cleaned);
+    const correct = parseFloat(accepted[0]);
+    let isCorrect = false;
+    if (!isNaN(student) && !isNaN(correct)) {
+      const tol = part.tolerance || 0;
+      if (tol === 0) {
+        isCorrect = student === correct;
+      } else if (correct !== 0) {
+        isCorrect = Math.abs((student - correct) / correct) <= tol;
+      } else {
+        isCorrect = Math.abs(student) <= tol;
+      }
+    }
+    return {
+      score: isCorrect ? part.marks : 0,
+      isCorrect,
+      misspelt: false,
+      keywordMatched: false,
+      userAnswer: raw,
+      correctAnswer: accepted[0] || '',
+    };
+  }
+
   const rawLower = raw.toLowerCase();
   let isCorrect = false;
   let misspelt = false;

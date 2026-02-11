@@ -785,6 +785,7 @@
           "acceptedAnswers": [
             "86"
           ],
+          "numerical": true,
           "markScheme": [
             "1 mark: **86**"
           ],
@@ -1088,6 +1089,7 @@
             "24000",
             "24 000"
           ],
+          "numerical": true,
           "markScheme": [
             "1 mark: **24 000** years (accept answers between 24 000 and 24 500 years)"
           ],
@@ -1508,6 +1510,7 @@
             "18",
             "18 counts per minute"
           ],
+          "numerical": true,
           "markScheme": [
             "1 mark: **18** counts per minute"
           ],

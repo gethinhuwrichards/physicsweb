@@ -213,6 +213,10 @@ function reducer(state, action) {
           }
           case 'short-answer':
             markingDecisions[i] = points.map(() => result.isCorrect);
+            // If incorrect, unlock points so student can override
+            if (!result.isCorrect) {
+              lockedPoints[i] = points.map(() => false);
+            }
             break;
           case 'table-fill': {
             const tfResults = result.results || [];
@@ -229,7 +233,9 @@ function reducer(state, action) {
             markingDecisions[i] = points.map(() => false);
             break;
         }
-        lockedPoints[i] = points.map(() => true);
+        if (!lockedPoints[i]) {
+          lockedPoints[i] = points.map(() => true);
+        }
       });
 
       const reviewParts = question.parts.map((_, i) => i);
@@ -281,6 +287,21 @@ function reducer(state, action) {
           if (d === true) score += points[i].marks;
         });
         nextPartScores[partIdx] = Math.min(score, part.marks);
+      });
+
+      // Recalculate overridden short-answer parts (unlocked auto-marked)
+      question.parts.forEach((part, i) => {
+        if (part.type !== 'short-answer') return;
+        if (state.selfMarkParts.includes(i)) return;
+        const lp = state.lockedPoints[i];
+        if (!lp || lp.every(v => v === true)) return;
+        const decisions = state.markingDecisions[i] || [];
+        const points = parseMarkScheme(part.markScheme);
+        let score = 0;
+        decisions.forEach((d, j) => {
+          if (d === true) score += points[j].marks;
+        });
+        nextPartScores[i] = Math.min(score, part.marks);
       });
 
       return { ...state, phase: 'score', partScores: nextPartScores };
@@ -448,7 +469,8 @@ export default function QuestionView({
     };
   }, []);
 
-  const allPartsFullyDecided = state.selfMarkParts.every(partIdx => {
+  // Check self-mark parts are fully decided
+  const selfPartsDecided = state.selfMarkParts.every(partIdx => {
     const d = state.markingDecisions[partIdx];
     if (!d) return false;
     if (d.every(v => v !== null)) return true;
@@ -462,6 +484,18 @@ export default function QuestionView({
     }
     return false;
   });
+
+  // Check unlocked short-answer parts are fully decided
+  const unlockedShortAnswerDecided = question.parts.every((part, i) => {
+    if (part.type !== 'short-answer') return true;
+    if (state.selfMarkParts.includes(i)) return true;
+    const lp = state.lockedPoints[i];
+    if (!lp || lp.every(v => v === true)) return true;
+    const d = state.markingDecisions[i];
+    return d && d.every(v => v !== null);
+  });
+
+  const allPartsFullyDecided = selfPartsDecided && unlockedShortAnswerDecided;
 
   // Calculate total score for final panel
   const totalScore = Object.values(state.partScores).reduce((sum, s) => sum + s, 0);

@@ -546,6 +546,7 @@
           "type": "short-answer",
           "text": "The lamps in the circuits drawn below are all identical. Each of the cells has a potential difference of 1.5 volts.\n\nWhat is the potential difference across the 3 cells that are joined in series?",
           "marks": 1,
+          "numerical": true,
           "acceptedAnswers": ["4.5", "4.5 V", "4.5V"],
           "markScheme": ["1 mark: **4.5** (V)"],
           "diagrams": ["cpdr-q2-fig1.png"]
@@ -555,6 +556,7 @@
           "type": "short-answer",
           "text": "Each cell has a potential difference of 1.5 V. Three cells are joined in series giving a total of 4.5 V. There are two lamps in the circuit. What will be the reading on the voltmeter labelled V3?",
           "marks": 1,
+          "numerical": true,
           "acceptedAnswers": ["2.25", "2.25 V", "2.25V"],
           "markScheme": ["1 mark: **2.25** (V)"],
           "diagrams": []
@@ -574,6 +576,7 @@
           "type": "short-answer",
           "text": "The diagram below shows a simple circuit with two resistors (10 \u03a9 and 20 \u03a9) connected in series.\n\nCalculate the total resistance of the two resistors in the circuit.",
           "marks": 1,
+          "numerical": true,
           "acceptedAnswers": ["30", "30 \u03a9", "30\u03a9"],
           "markScheme": ["1 mark: **30** (\u03a9)"],
           "diagrams": ["cpdr-q2-fig2.png"]

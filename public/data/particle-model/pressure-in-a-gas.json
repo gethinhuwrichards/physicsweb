@@ -764,6 +764,7 @@
           "type": "short-answer",
           "text": "A student investigated how the pressure of a gas varied with the volume of the gas. The mass and temperature of the gas were constant. Figure 1 shows the equipment the student used.<br><br>What is the resolution of the syringe?",
           "marks": 1,
+          "numerical": true,
           "acceptedAnswers": ["1", "1 cm3", "1 cm³", "1cm3", "1cm³"],
           "markScheme": [
             "1 mark: **1** (cm³)"

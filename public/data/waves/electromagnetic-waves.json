@@ -1374,6 +1374,7 @@
           "type": "short-answer",
           "text": "The vibration caused by a P wave travelling at 7.6 km/s has been recorded on a seismic chart. Figure 1 shows the recording over 10 seconds. How many waves are produced in one second?",
           "marks": 1,
+          "numerical": true,
           "acceptedAnswers": [
             "0.5"
           ],

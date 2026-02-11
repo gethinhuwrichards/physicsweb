@@ -52,6 +52,7 @@
           "type": "short-answer",
           "text": "Table 1 shows the results. Calculate value X.",
           "marks": 1,
+          "numerical": true,
           "acceptedAnswers": ["0.4", "0.4 cm³", "0.4 cm3", "0.4cm³", "0.4cm3"],
           "markScheme": [
             "1 mark: X = **0.4** (cm³)"

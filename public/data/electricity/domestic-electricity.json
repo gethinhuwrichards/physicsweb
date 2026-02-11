@@ -764,6 +764,7 @@
           "type": "short-answer",
           "text": "The diagram shows the structure of a cable. The cable is part of an undersoil heating circuit inside a large greenhouse. The cable is connected to the mains electricity supply through a residual current circuit breaker. What is the frequency of the mains electricity supply in the UK?",
           "marks": 1,
+          "numerical": true,
           "acceptedAnswers": ["50", "50 Hz", "50Hz"],
           "markScheme": [
             "1 mark: **50** (Hz)"

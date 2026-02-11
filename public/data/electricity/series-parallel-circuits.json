@@ -286,6 +286,7 @@
           "type": "short-answer",
           "text": "Predict the mean total resistance of 7 resistors connected in series. Use the graph.",
           "marks": 1,
+          "numerical": true,
           "acceptedAnswers": ["84", "84 Ω", "84.0", "84.0 Ω"],
           "markScheme": [
             "1 mark: **84 Ω** (accept 83–85 Ω)"
@@ -522,6 +523,7 @@
           "type": "short-answer",
           "text": "Figure 2 shows a circuit containing a 6 V battery. Two resistors, X and Y, are connected in parallel. The current in some parts of the circuit is shown. What is the potential difference across resistor X?",
           "marks": 1,
+          "numerical": true,
           "acceptedAnswers": ["6", "6 V", "6V"],
           "markScheme": [
             "1 mark: **6 V** (in a parallel circuit, the potential difference across each branch equals the battery p.d.)"
@@ -552,6 +554,7 @@
           "type": "short-answer",
           "text": "The total current from the battery is 3 A and the current through resistor X is 2 A. What is the current in resistor Y?",
           "marks": 1,
+          "numerical": true,
           "acceptedAnswers": ["1", "1 A", "1A"],
           "markScheme": [
             "1 mark: **1 A** (total current minus current through X: 3 - 2 = 1 A)"
@@ -563,6 +566,7 @@
           "type": "short-answer",
           "text": "The potential difference across resistor Y is 6 V and the current through Y is 1 A. What is the resistance of Y?",
           "marks": 1,
+          "numerical": true,
           "acceptedAnswers": ["6", "6 Ω", "6Ω"],
           "markScheme": [
             "1 mark: **6 Ω** ($R = V \\div I = 6 \\div 1$)"

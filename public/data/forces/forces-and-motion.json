@@ -267,9 +267,10 @@
           "type": "short-answer",
           "text": "What distance does the athlete travel after the end of the race before stopping?",
           "marks": 1,
-          "acceptedAnswers": ["25", "25 m"],
+          "numerical": true,
+          "acceptedAnswers": ["125", "125 m"],
           "markScheme": [
-            "1 mark: **25** m"
+            "1 mark: **125** m"
           ],
           "diagrams": []
         }
@@ -693,6 +694,7 @@
           "type": "short-answer",
           "text": "Figure 1 shows how the velocity of a motorbike changes when it is travelling along a straight road. What was the change in velocity of the motorbike in the first 5 seconds?",
           "marks": 1,
+          "numerical": true,
           "acceptedAnswers": ["20", "20 m/s"],
           "markScheme": [
             "1 mark: **20** (m/s)"
@@ -1073,6 +1075,7 @@
           "type": "short-answer",
           "text": "Figure 1 shows the distance-time graph for part of a bus journey. How far has the bus travelled in the first 20 seconds?",
           "marks": 1,
+          "numerical": true,
           "acceptedAnswers": ["100", "100 m"],
           "markScheme": [
             "1 mark: **100** (m)"
@@ -1187,6 +1190,7 @@
           "type": "short-answer",
           "text": "A bus is moving and has 500 000 J of kinetic energy. The brakes are applied and the bus stops. How much work is needed to stop the bus?",
           "marks": 1,
+          "numerical": true,
           "acceptedAnswers": ["500000", "500 000", "500000 J", "500 000 J"],
           "markScheme": [
             "1 mark: **500 000** (J)"
@@ -1300,6 +1304,7 @@
           "type": "short-answer",
           "text": "What is the thinking time of the driver?",
           "marks": 1,
+          "numerical": true,
           "acceptedAnswers": ["0.7", "0.7 s", "0.7 seconds"],
           "markScheme": [
             "1 mark: **0.7** seconds"

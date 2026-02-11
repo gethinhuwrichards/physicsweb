@@ -806,6 +806,7 @@
           "type": "short-answer",
           "text": "An ultrasound detector is connected to an oscilloscope. The diagram shows centimetre squares on an oscilloscope screen. Each horizontal division represents 2 microseconds. Calculate the time, in microseconds, between one peak of one ultrasound pulse and the peak of the next.",
           "marks": 1,
+          "numerical": true,
           "acceptedAnswers": [
             "8",
             "8 microseconds",
@@ -1022,6 +1023,7 @@
           "type": "short-answer",
           "text": "Approximately what is the highest frequency that humans can hear? State the number and the unit.",
           "marks": 1,
+          "numerical": true,
           "acceptedAnswers": [
             "20000 Hz",
             "20 000 Hz",
@@ -1258,6 +1260,7 @@
           "type": "short-answer",
           "text": "The diagram shows a microphone being used to detect the output from a loudspeaker. The oscilloscope trace shows the wave pattern produced by the loudspeaker. The total time shown on the screen is 0.0001 s. How many waves are produced by the loudspeaker in 0.0001 seconds?",
           "marks": 1,
+          "numerical": true,
           "acceptedAnswers": [
             "3"
           ],
@@ -1273,6 +1276,7 @@
           "type": "short-answer",
           "text": "How many waves are produced by the loudspeaker every second? Assume the input to the loudspeaker does not change.",
           "marks": 1,
+          "numerical": true,
           "acceptedAnswers": [
             "30000",
             "30 000",

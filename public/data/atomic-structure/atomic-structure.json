@@ -983,6 +983,7 @@
           "acceptedAnswers": [
             "8"
           ],
+          "numerical": true,
           "markScheme": [
             "1 mark: **8** (4 protons + 4 neutrons)"
           ],

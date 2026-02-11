@@ -151,6 +151,7 @@
           "type": "short-answer",
           "text": "The swimmer moves at constant speed. If force T is 120 N, what is the size of force D?",
           "marks": 1,
+          "numerical": true,
           "acceptedAnswers": ["120", "120 N", "120N"],
           "markScheme": [
             "1 mark: **120 N** (forces are balanced at constant speed)."

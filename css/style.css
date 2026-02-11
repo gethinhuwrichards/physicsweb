@@ -2345,6 +2345,10 @@ body:has(.has-figure-sidebar) {
     line-height: 1.5;
 }
 
+.self-marking-panel-scroll .self-mark-hint-banner {
+    margin-bottom: 16px;
+}
+
 .levels-cap-badge {
     background: var(--color-correct-bg);
     border: 1px solid var(--color-correct-border);
