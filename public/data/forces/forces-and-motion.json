@@ -28,12 +28,12 @@
           "markScheme": [
             "Answer: C – The resultant force is 6 − 2 = 4 N to the right"
           ],
-          "diagrams": []
+          "diagrams": ["resultant-forces-object.png"]
         },
         {
           "partLabel": "b",
           "type": "gap-fill",
-          "text": "Complete the sentences using words from the box.",
+          "text": "The diagram shows the forces acting on a BASE jumper. Complete the sentences using words from the box.",
           "marks": 2,
           "segments": [
             "A BASE jumper accelerates forwards when force A is ",
@@ -59,7 +59,7 @@
             "1 mark: bigger than",
             "1 mark: equal to"
           ],
-          "diagrams": []
+          "diagrams": ["base-jumper-forces.png"]
         }
       ]
     },
@@ -77,7 +77,7 @@
         {
           "partLabel": "a",
           "type": "gap-fill",
-          "text": "Complete the sentence using words from the box.",
+          "text": "The graph shows how the velocity of a car changes with time. Complete the sentence using words from the box.",
           "marks": 1,
           "segments": [
             "From B to C the car moves at constant velocity. The forward driving force is ",
@@ -97,7 +97,7 @@
           "markScheme": [
             "1 mark: equal to"
           ],
-          "diagrams": []
+          "diagrams": ["forces-motion-q5-fig1.jpeg"]
         },
         {
           "partLabel": "b",
@@ -136,7 +136,7 @@
         {
           "partLabel": "a",
           "type": "gap-fill",
-          "text": "Complete the sentence using words from the box.",
+          "text": "The diagram shows an athlete on starting blocks. Complete the sentence using words from the box.",
           "marks": 1,
           "segments": [
             "The force from the athlete pushing backwards on the starting blocks is ",
@@ -156,7 +156,7 @@
           "markScheme": [
             "1 mark: equal to"
           ],
-          "diagrams": []
+          "diagrams": ["starting-blocks.jpeg"]
         },
         {
           "partLabel": "b",
@@ -767,13 +767,13 @@
         {
           "partLabel": "a",
           "type": "extended-written",
-          "text": "A graph shows how the stopping distance of a car depends on speed. Describe what happens to the stopping distance when the speed doubles.",
+          "text": "The graph shows how the stopping distance of a car depends on speed. Describe what happens to the stopping distance when the speed doubles.",
           "marks": 2,
           "markScheme": [
             "1 mark: The stopping distance **increases**",
             "1 mark: By **more than double**"
           ],
-          "diagrams": []
+          "diagrams": ["stopping-distance-graph.jpeg"]
         },
         {
           "partLabel": "b",

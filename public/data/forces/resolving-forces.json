@@ -66,15 +66,15 @@
         {
           "partLabel": "a",
           "type": "gap-fill",
-          "text": "Complete the sentences by choosing the correct cause.",
+          "text": "A sky-diver is in free fall. Two forces act on the sky-diver: one upward and one downward. Complete the sentences by choosing the correct cause.",
           "marks": 2,
           "segments": [
-            "Force X is caused by ",
+            "The upward force on the sky-diver is caused by ",
             {
               "blank": 0
             },
             ".<br>",
-            "Force Y is caused by ",
+            "The downward force on the sky-diver is caused by ",
             {
               "blank": 1
             },
@@ -93,14 +93,12 @@
             "1 mark: **air resistance**",
             "1 mark: **gravity**"
           ],
-          "diagrams": [
-            "skydiver.png"
-          ]
+          "diagrams": []
         },
         {
           "partLabel": "b",
           "type": "short-answer",
-          "text": "Describe the motion of the sky-diver when force X is equal to force Y.",
+          "text": "Describe the motion of the sky-diver when the upward force is equal to the downward force.",
           "marks": 1,
           "acceptedAnswers": ["constant speed", "terminal velocity", "zero acceleration", "constant velocity", "steady speed"],
           "markScheme": [
@@ -234,7 +232,7 @@
         {
           "partLabel": "a",
           "type": "equation-choice",
-          "text": "Write down the equation which links resultant force, mass and acceleration.",
+          "text": "An aircraft accelerates along a runway before take-off. Write down the equation which links resultant force, mass and acceleration.",
           "marks": 1,
           "options": [
             "$F = m a$",
@@ -246,9 +244,7 @@
           "markScheme": [
             "Answer: A — $F = m a$."
           ],
-          "diagrams": [
-            "aircraft.png"
-          ]
+          "diagrams": []
         }
       ]
     }
