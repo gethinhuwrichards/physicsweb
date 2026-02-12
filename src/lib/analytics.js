@@ -232,6 +232,10 @@ export function trackQuestionAnswer({ questionId, subtopicId, mainTopicId, score
   });
 }
 
+export function getCurrentAnonId() {
+  return anonId || getAnonId();
+}
+
 export function trackQuestionSkip(questionId, subtopicId, mainTopicId, partsTotal, timeSpentSeconds) {
   if (!anonId) return;
   queueEvent({

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { supabase } from '../../lib/supabase';
+import { getCurrentAnonId } from '../../lib/analytics';
 import SummaryCards from './SummaryCards';
 import DailyChart from './DailyChart';
 import SkippedTable from './SkippedTable';
@@ -20,6 +21,8 @@ export default function AnalyticsDashboard() {
   const [daysBack, setDaysBack] = useState(30);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [purging, setPurging] = useState(false);
+  const [purgeResult, setPurgeResult] = useState(null);
 
   const fetchData = useCallback(async (days) => {
     if (!supabase) {
@@ -64,6 +67,25 @@ export default function AnalyticsDashboard() {
     setDaysBack(days);
   };
 
+  const handlePurge = async () => {
+    const myId = getCurrentAnonId();
+    if (!myId || !supabase) return;
+    if (!window.confirm(`Delete all analytics data for your browser?\n\nAnon ID: ${myId.slice(0, 8)}...`)) return;
+
+    setPurging(true);
+    setPurgeResult(null);
+    try {
+      const { error: err } = await supabase.rpc('purge_anon_data', { p_anon_id: myId });
+      if (err) throw err;
+      setPurgeResult('Your test data has been purged.');
+      fetchData(daysBack);
+    } catch (err) {
+      setPurgeResult('Purge failed: ' + (err.message || 'Unknown error'));
+    } finally {
+      setPurging(false);
+    }
+  };
+
   if (error) {
     return (
       <div className="admin-dashboard">
@@ -75,7 +97,25 @@ export default function AnalyticsDashboard() {
 
   return (
     <div className="admin-dashboard">
-      <h1 className="admin-title">Analytics Dashboard</h1>
+      <div className="admin-header-row">
+        <h1 className="admin-title">Analytics Dashboard</h1>
+        <div className="admin-purge-area">
+          <span className="admin-anon-id">ID: {getCurrentAnonId()?.slice(0, 8)}...</span>
+          <button
+            className="admin-purge-btn"
+            onClick={handlePurge}
+            disabled={purging}
+          >
+            {purging ? 'Purging...' : 'Purge my data'}
+          </button>
+        </div>
+      </div>
+
+      {purgeResult && (
+        <div className={`admin-purge-result ${purgeResult.startsWith('Purge failed') ? 'error' : ''}`}>
+          {purgeResult}
+        </div>
+      )}
 
       {loading ? (
         <div className="admin-loading">Loading analytics...</div>

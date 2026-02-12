@@ -5992,6 +5992,68 @@ body.landing-active header {
     margin: 0 0 28px;
 }
 
+.admin-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 28px;
+}
+
+.admin-header-row .admin-title {
+    margin: 0;
+}
+
+.admin-purge-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-anon-id {
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 12px;
+    color: var(--text-tertiary);
+}
+
+.admin-purge-btn {
+    padding: 6px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    border: 1.5px solid var(--color-incorrect-border);
+    border-radius: 999px;
+    background: var(--bg-surface);
+    color: var(--color-incorrect-text);
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.admin-purge-btn:hover {
+    background: var(--color-incorrect-bg);
+}
+
+.admin-purge-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.admin-purge-result {
+    padding: 10px 16px;
+    margin-bottom: 20px;
+    border-radius: var(--press-radius-sm);
+    font-size: 14px;
+    background: var(--color-correct-bg);
+    border: 1.5px solid var(--color-correct-border);
+    color: var(--color-correct-text);
+}
+
+.admin-purge-result.error {
+    background: var(--color-incorrect-bg);
+    border-color: var(--color-incorrect-border);
+    color: var(--color-incorrect-text);
+}
+
 .admin-loading,
 .admin-error {
     text-align: center;

@@ -195,6 +195,19 @@ BEGIN
 END;
 $$;
 
+-- Purge all data for a specific anon_id
+CREATE OR REPLACE FUNCTION purge_anon_data(p_anon_id TEXT)
+RETURNS void
+LANGUAGE plpgsql
+SECURITY DEFINER
+AS $$
+BEGIN
+  DELETE FROM anon_question_events WHERE anon_id = p_anon_id;
+  DELETE FROM anon_sessions WHERE anon_id = p_anon_id;
+  DELETE FROM anon_visitors WHERE anon_id = p_anon_id;
+END;
+$$;
+
 -- Top N most-skipped questions
 CREATE OR REPLACE FUNCTION analytics_most_skipped(lim INTEGER DEFAULT 20)
 RETURNS TABLE(
