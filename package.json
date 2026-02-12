@@ -21,9 +21,11 @@
   },
   "homepage": "https://github.com/gethinhuwrichards/physicsweb#readme",
   "dependencies": {
+    "@supabase/supabase-js": "^2.95.3",
     "@vercel/analytics": "^1.6.1",
     "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "react-dom": "^19.2.4",
+    "recharts": "^3.7.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^5.1.2",

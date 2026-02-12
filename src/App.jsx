@@ -9,21 +9,35 @@ import BugReportModal from './components/BugReportModal';
 import Breadcrumb from './components/Breadcrumb';
 import SettingsDropdown from './components/SettingsDropdown';
 import QuestionView from './QuestionView';
-import {
-  getQuestionScores,
-  saveQuestionScore,
-  clearQuestionScore,
-  clearQuestionAnswers,
-  saveQuestionAnswers,
-  loadQuestionAnswers,
-  setCookie,
-  countAnsweredForSubtopic,
-  clearScoresForSubtopic,
-  clearAllScoresAndAnswers,
-} from './utils/storage';
+import AuthModal from './components/AuthModal';
+import ProfilePage from './components/ProfilePage';
+import AnalyticsDashboard from './components/admin/AnalyticsDashboard';
+import { useAuth } from './contexts/AuthContext';
+import { useProgress } from './contexts/ProgressContext';
+import { setCookie, getQuestionScores } from './utils/storage';
+import { FEATURE_AUTH_UI } from './lib/featureFlags';
+import { trackQuestionView, trackQuestionAnswer, trackQuestionSkip } from './lib/analytics';
 
 export default function App() {
-  const [view, setView] = useState('landing');
+  const { user, profile, loading: authLoading, signOut } = useAuth();
+  const {
+    scores,
+    refreshScores,
+    saveQuestionScore,
+    clearQuestionScore,
+    saveQuestionAnswers,
+    loadQuestionAnswers,
+    clearQuestionAnswers,
+    clearScoresForSubtopic,
+    clearAllScoresAndAnswers,
+    recordAttempt,
+    migrationMessage,
+  } = useProgress();
+
+  const [view, setView] = useState(() => {
+    if (window.location.pathname === '/admin/analytics') return 'admin';
+    return 'landing';
+  });
   const [topicsData, setTopicsData] = useState(null);
   const [mainTopic, setMainTopic] = useState(null);
   const [subtopic, setSubtopic] = useState(null);
@@ -31,10 +45,13 @@ export default function App() {
   const [currentQuestion, setCurrentQuestion] = useState(null);
   const [questionKey, setQuestionKey] = useState(0);
   const [savedState, setSavedState] = useState(null);
-  const [scores, setScores] = useState(getQuestionScores);
   const [bugReportOpen, setBugReportOpen] = useState(false);
   const isPopstate = useRef(false);
   const [forwardStack, setForwardStack] = useState([]);
+  const [authModalVisible, setAuthModalVisible] = useState(false);
+  const [authModalTab, setAuthModalTab] = useState('signin');
+  const [userMenuOpen, setUserMenuOpen] = useState(false);
+  const questionStartTime = useRef(null);
 
   // Load topics data on mount
   useEffect(() => {
@@ -62,17 +79,19 @@ export default function App() {
       isPopstate.current = false;
       return;
     }
-    // Don't push for the initial landing view (already set via replaceState)
     if (view === 'landing') return;
     history.pushState({ view }, '');
   }, [view]);
 
-  // Refresh scores from cookies
-  const refreshScores = useCallback(() => {
-    setScores(getQuestionScores());
-  }, []);
+  // Close user menu on click outside
+  useEffect(() => {
+    if (!userMenuOpen) return;
+    const close = () => setUserMenuOpen(false);
+    window.addEventListener('click', close);
+    return () => window.removeEventListener('click', close);
+  }, [userMenuOpen]);
 
-  // Navigation — any "fresh" navigation clears the forward stack
+  // Navigation
   const navigateTo = useCallback((target) => {
     setForwardStack([]);
     setView(target);
@@ -86,6 +105,7 @@ export default function App() {
   const handleBack = useCallback(() => {
     setForwardStack(prev => [...prev, view]);
     scrollToTop();
+    if (view === 'profile') { setView('landing'); return; }
     if (view === 'question') { setView('questions'); return; }
     if (view === 'questions') { setView('subtopics'); return; }
     if (view === 'subtopics') { setView('topics'); return; }
@@ -101,7 +121,7 @@ export default function App() {
     scrollToTop();
   }, [forwardStack]);
 
-  // Arrow-key navigation (only when header arrows are visible)
+  // Arrow-key navigation
   useEffect(() => {
     const onKeyDown = (e) => {
       const tag = document.activeElement?.tagName;
@@ -113,6 +133,19 @@ export default function App() {
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
   }, [view, handleBack, handleForward, forwardStack]);
+
+  // Track question skip: leaving question view without answering
+  const prevViewRef = useRef(view);
+  useEffect(() => {
+    const prev = prevViewRef.current;
+    prevViewRef.current = view;
+    if (prev === 'question' && view !== 'question' && questionStartTime.current && currentQuestion) {
+      const timeSpent = Math.round((Date.now() - questionStartTime.current) / 1000);
+      const partsTotal = currentQuestion.parts ? currentQuestion.parts.length : 0;
+      trackQuestionSkip(currentQuestion.id, subtopic?.id, mainTopic?.id, partsTotal, timeSpent);
+      questionStartTime.current = null;
+    }
+  }, [view, currentQuestion, subtopic, mainTopic]);
 
   const selectTopic = useCallback(
     (topicId) => {
@@ -159,11 +192,15 @@ export default function App() {
   );
 
   const selectQuestion = useCallback(
-    (questionId) => {
+    async (questionId) => {
       const q = questions.find((q) => q.id === questionId);
       if (!q) return;
       setCurrentQuestion(q);
-      setSavedState(loadQuestionAnswers(q.id));
+      const saved = await loadQuestionAnswers(q.id);
+      setSavedState(saved);
+      questionStartTime.current = Date.now();
+      const partsTotal = q.parts ? q.parts.length : 0;
+      trackQuestionView(q.id, subtopic?.id, mainTopic?.id, partsTotal);
       navigateTo('question');
       requestAnimationFrame(() => {
         const el = document.getElementById('question-content-inner');
@@ -174,16 +211,44 @@ export default function App() {
         }
       });
     },
-    [questions, navigateTo]
+    [questions, navigateTo, loadQuestionAnswers]
   );
 
   // Question callbacks
   const handleScoreReady = useCallback(
-    (score, maxScore) => {
+    (score, maxScore, partsAnswered) => {
       saveQuestionScore(currentQuestion.id, score, maxScore, subtopic.id);
-      refreshScores();
+
+      // Record attempt analytics
+      const timeSpent = questionStartTime.current
+        ? Math.round((Date.now() - questionStartTime.current) / 1000)
+        : null;
+      recordAttempt({
+        questionId: currentQuestion.id,
+        subtopicId: subtopic.id,
+        mainTopicId: mainTopic?.id || '',
+        score,
+        maxScore,
+        difficulty: currentQuestion.difficulty || 'medium',
+        timeSpentSeconds: timeSpent,
+      });
+
+      const partsTotal = currentQuestion.parts ? currentQuestion.parts.length : 0;
+      const partsBlank = partsTotal - (partsAnswered || 0);
+      trackQuestionAnswer({
+        questionId: currentQuestion.id,
+        subtopicId: subtopic?.id,
+        mainTopicId: mainTopic?.id,
+        score,
+        maxScore,
+        partsAnswered: partsAnswered || 0,
+        partsTotal,
+        partsBlank,
+        timeSpentSeconds: timeSpent,
+      });
+      questionStartTime.current = null;
     },
-    [currentQuestion, subtopic, refreshScores]
+    [currentQuestion, subtopic, mainTopic, saveQuestionScore, recordAttempt]
   );
 
   const handleBankScore = useCallback(() => {
@@ -197,13 +262,14 @@ export default function App() {
     refreshScores();
     setSavedState(null);
     setQuestionKey((k) => k + 1);
-  }, [currentQuestion, refreshScores]);
+    questionStartTime.current = Date.now();
+  }, [currentQuestion, refreshScores, clearQuestionAnswers, clearQuestionScore]);
 
   const handleSaveAnswers = useCallback(
     (stateToSave) => {
       saveQuestionAnswers(currentQuestion.id, stateToSave);
     },
-    [currentQuestion]
+    [currentQuestion, saveQuestionAnswers]
   );
 
   const handleResetFromList = useCallback(
@@ -212,7 +278,7 @@ export default function App() {
       clearQuestionScore(questionId);
       refreshScores();
     },
-    [refreshScores]
+    [refreshScores, clearQuestionAnswers, clearQuestionScore]
   );
 
   // Bulk reset handlers
@@ -222,7 +288,7 @@ export default function App() {
       clearQuestionScore(q.id);
     });
     refreshScores();
-  }, [questions, refreshScores]);
+  }, [questions, refreshScores, clearQuestionAnswers, clearQuestionScore]);
 
   const handleResetAllTopic = useCallback(() => {
     if (!mainTopic) return;
@@ -230,16 +296,27 @@ export default function App() {
       clearScoresForSubtopic(sub.id);
     });
     refreshScores();
-  }, [mainTopic, refreshScores]);
+  }, [mainTopic, refreshScores, clearScoresForSubtopic]);
 
   const handleResetAll = useCallback(() => {
     clearAllScoresAndAnswers();
     refreshScores();
-  }, [refreshScores]);
+  }, [refreshScores, clearAllScoresAndAnswers]);
+
+  // Auth helpers
+  const openSignIn = useCallback(() => {
+    setAuthModalTab('signin');
+    setAuthModalVisible(true);
+  }, []);
+
+  const openSignUp = useCallback(() => {
+    setAuthModalTab('signup');
+    setAuthModalVisible(true);
+  }, []);
 
   // Breadcrumb items
   const breadcrumbItems = [];
-  if (view !== 'landing') {
+  if (view !== 'landing' && view !== 'profile') {
     if (view === 'topics') {
       breadcrumbItems.push({ label: 'Subject', onClick: goToLanding });
       breadcrumbItems.push({ label: 'Topics' });
@@ -267,6 +344,7 @@ export default function App() {
     if (view === 'subtopics') return mainTopic?.name || 'Choose a Subtopic';
     if (view === 'questions') return subtopic?.name || 'Choose a Question';
     if (view === 'question') return '';
+    if (view === 'profile') return 'Profile';
     return 'Physics — Exam Questions by Topic';
   };
 
@@ -282,12 +360,51 @@ export default function App() {
     <ErrorBoundary>
       <SettingsDropdown onReportBug={view === 'question' && currentQuestion ? () => setBugReportOpen(true) : null} />
       <FeedbackModal />
+      {FEATURE_AUTH_UI && (
+        <AuthModal
+          visible={authModalVisible}
+          onClose={() => setAuthModalVisible(false)}
+          initialTab={authModalTab}
+        />
+      )}
 
-      {(view !== 'landing' || forwardStack.length > 0) && view !== 'question' && (
+      {migrationMessage && (
+        <div className="migration-toast">{migrationMessage}</div>
+      )}
+
+      {(view !== 'landing' || forwardStack.length > 0) && view !== 'question' && view !== 'admin' && (
         <header>
           {view !== 'landing' && (
             <div className="header-top-row">
               <Breadcrumb items={breadcrumbItems} />
+              {FEATURE_AUTH_UI && (
+                <div className="header-user-area" onClick={(e) => e.stopPropagation()}>
+                  {user ? (
+                    <div className="user-menu-wrapper">
+                      <button
+                        className="user-avatar-btn"
+                        onClick={() => setUserMenuOpen(prev => !prev)}
+                        aria-label="User menu"
+                      >
+                        {profile?.display_name?.[0]?.toUpperCase() || user.email?.[0]?.toUpperCase() || '?'}
+                      </button>
+                      {userMenuOpen && (
+                        <div className="user-dropdown">
+                          <div className="user-dropdown-email">{user.email}</div>
+                          <button onClick={() => { setUserMenuOpen(false); navigateTo('profile'); }}>Profile</button>
+                          <button onClick={() => { setUserMenuOpen(false); signOut(); }}>
+                            Sign Out
+                          </button>
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <button className="header-sign-in-btn" onClick={openSignIn}>
+                      Sign In
+                    </button>
+                  )}
+                </div>
+              )}
             </div>
           )}
           <div className="header-title-row">
@@ -311,7 +428,7 @@ export default function App() {
       )}
 
       <main>
-        {view !== 'landing' && view !== 'question' && getHeaderSubtitle() && (
+        {view !== 'landing' && view !== 'question' && view !== 'profile' && getHeaderSubtitle() && (
           <p className="content-subtitle">{getHeaderSubtitle()}</p>
         )}
         {view === 'landing' && <LandingPage onStart={goToTopics} />}
@@ -343,6 +460,10 @@ export default function App() {
             onSelectQuestion={selectQuestion}
             onResetQuestion={handleResetFromList}
             onResetAll={handleResetAllSubtopic}
+            user={user}
+            profile={profile}
+            subtopicId={subtopic?.id}
+            onSignIn={openSignIn}
           />
         )}
 
@@ -362,6 +483,12 @@ export default function App() {
               />
           </div>
         )}
+
+        {FEATURE_AUTH_UI && view === 'profile' && (
+          <ProfilePage onBack={() => navigateTo('landing')} />
+        )}
+
+        {view === 'admin' && <AnalyticsDashboard />}
       </main>
 
       {view === 'question' && currentQuestion && (

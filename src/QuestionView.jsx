@@ -444,7 +444,11 @@ export default function QuestionView({
 
   useEffect(() => {
     if (state.phase === 'score') {
-      if (onScoreReady) onScoreReady(totalScore, totalMarks);
+      const answeredCount = Object.keys(state.answers).filter(k => {
+        const ans = state.answers[k];
+        return ans !== undefined && ans !== null && ans !== '' && !(Array.isArray(ans) && ans.length === 0);
+      }).length;
+      if (onScoreReady) onScoreReady(totalScore, totalMarks, answeredCount);
       if (onSaveAnswers) {
         onSaveAnswers({
           answers: state.answers,
