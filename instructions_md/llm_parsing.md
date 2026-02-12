@@ -22,7 +22,7 @@ Exam papers use specific wording patterns that map to the website's question typ
 | "Draw one line from each..." / "Match each... to..." | `match-up` | Rephrase as "Match each...". Left items → right items with distractors on the right. |
 | "Write down the equation that links..." / select from 4 equations | `equation-choice` | Always 1 mark. 4 LaTeX equation options. |
 | "Calculate..." / "Determine..." / "Work out..." with a numerical answer | `calculation` | 2–4 marks. Identify the correct equation, correct answer, and tolerance. Build mark scheme as substitution → (rearrangement) → final answer. |
-| "Name..." / "State..." / "What is the unit of..." / "What type of..." — 1-mark, one-word or short-phrase answer | `short-answer` | Use when the answer is a single word, short phrase (1–4 words), or a phrase with required technical terms. List all accepted spellings/synonyms in `acceptedAnswers`. For phrase answers with 2–3 required technical terms, add `keywords` array for flexible matching. Consult `public/data/short-answer-synonyms.json` for standard synonym groups to include. |
+| "Name..." / "State..." / "What is the unit of..." / "What type of..." — 1-mark, one-word or short-phrase answer | `short-answer` | Use when the answer is a single word, short phrase (1–4 words), or a phrase with required technical terms. List all accepted spellings/synonyms in `acceptedAnswers`. For phrase answers with 2–3 required technical terms, add `keywords` array for flexible matching. For simple numerical reads (e.g., reading a value from a graph/table), set `numerical: true` and optionally `tolerance`. Consult `public/data/short-answer-synonyms.json` for standard synonym groups to include. |
 | "Which [option]? Tick one box. Give a reason for your answer." / "Choose... and explain..." | `select-and-explain` | Selection is auto-marked (1 mark). Explanation is self-marked (remaining marks). First mark scheme entry = selection, rest = explanation. |
 | "Describe..." / "Explain..." / "Compare..." / "Evaluate..." / "Why..." — any marks, free-text answer | `extended-written` | Use when the answer requires a sentence or more, even if only 1 mark. Use `**keyword**` syntax in mark scheme to highlight key terms. |
 
@@ -34,6 +34,7 @@ Some questions could fit multiple types. Use these rules to decide:
    - Yes, with options provided → `single-choice`
    - Yes, no options, 1 mark, answer is a single word or short phrase (e.g., a unit, particle name, quantity) → `short-answer`
    - Yes, no options, 1 mark, answer is a short phrase with 2–3 required technical terms (e.g., "protons and neutrons", "magnitude and direction") → `short-answer` with `keywords`
+   - Yes, no options, 1 mark, answer is a simple numerical value that can be read directly (e.g., from a graph or table) with no working required → `short-answer` with `numerical: true`
    - Yes, no options, but answer requires a short sentence explaining WHY/HOW → `extended-written` (even if 1 mark)
    - Yes, no options, 2+ marks → probably `calculation` or `extended-written` depending on whether it's numerical
 
@@ -51,14 +52,18 @@ Some questions could fit multiple types. Use these rules to decide:
 5. **Does the answer require a sentence (e.g., "Why...", "Suggest a reason...", "Give one advantage...")?**
    - Always `extended-written`, even if only 1 mark. Short-answer auto-marking cannot handle sentence-length responses.
 
-6. **Does it ask for a numerical calculation?**
-   - Always `calculation`, even if only 2 marks. Never use `short-answer` for numerical answers.
+6. **Does it ask for a numerical answer?**
+   - If it requires working/method (equation, substitution, rearrangement) → `calculation`, even if only 2 marks.
+   - If it's a simple read-off (e.g., "What is the value at 20 seconds?" from a graph/table) with no working, 1 mark → `short-answer` with `numerical: true` and optionally `tolerance`.
 
 7. **Does it say "1 mark" and ask for a factual recall word or phrase?**
    - Use `short-answer` if the answer is a single word or short phrase (1–4 words). List common alternative phrasings in `acceptedAnswers` (e.g., `["direct current", "DC", "d.c."]`).
    - For phrase answers with required technical terms (e.g., "protons and neutrons"), add `keywords` for flexible matching: `[["protons"], ["neutrons"]]`.
+   - For simple numerical reads (no working needed), set `numerical: true`. Put the numeric value as the first entry in `acceptedAnswers` (e.g., `["125"]`). Optionally set `tolerance` as a relative fraction (e.g., `0.05` for ±5%).
    - **Always consult `public/data/short-answer-synonyms.json`** when building `acceptedAnswers` and `keywords`. It contains standard synonym groups organised by topic (particles, waves, forces, energy, electricity, states, nuclear, equipment, units). Include all relevant variants listed there (abbreviations, spacing variants, plural forms).
    - If the expected answer is a sentence explaining WHY/HOW, use `extended-written` instead.
+
+   **Marking behaviour:** Short-answer questions are auto-marked (exact match → fuzzy/misspelling match → keyword match). If the auto-mark is incorrect, the student can override and self-mark against the mark scheme. This means the auto-marker does not need to be perfect — edge cases are handled by the override.
 
 ---
 
